@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CruiseLine Advisors — Talk to a Licensed Cruise Specialist</title>
+<meta name="description" content="Independent cruise guides — every major line, season timing, cabin advice. Then one call to a licensed cruise specialist at a partner agency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#04121C; --ink:#08243B; --ink2:#0E3A5C; --deep:#123C5A;
+  --lagoon:#1B7A8C; --aqua:#3ECFC9; --foam:#F4F8F9; --mist:#E4EDEF;
+  --line:#D5E0E3; --muted:#556B78; --brass:#D9B25A; --brassd:#B8933D;
+  --coral:#FF6B5A; --marigold:#FFB63D; --plum:#6C5CE7; --paper:#FBFAF7;
+  --w:1180px;              /* desktop container */
+  --wn:660px;              /* narrow reading column */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:68px;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+button{font-family:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 18px;position:relative}
+
+.disc{background:var(--abyss);color:#9FBCCB;font-size:.7rem;text-align:center;padding:.5rem 14px;line-height:1.45}
+.disc b{color:#fff;display:block;font-size:.74rem}
+
+.hdr{position:sticky;top:0;z-index:60;background:rgba(4,18,28,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:54px;max-width:var(--w);margin:0 auto;padding:0 18px}
+.logo{display:flex;align-items:center;gap:.5em;text-decoration:none}
+.logo svg{width:26px;height:26px;flex:none}
+.logo b{font-family:'Fraunces',serif;font-size:1rem;color:#fff;font-weight:600;line-height:1.1;display:block}
+.logo i{display:block;font-style:normal;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);font-weight:800}
+.navmid{display:none;gap:22px}
+.navmid a{color:#B9CFDA;text-decoration:none;font-size:.86rem;font-weight:600}
+.navmid a:hover{color:#fff}
+.navcall{background:var(--brass);color:var(--ink);font-weight:800;text-decoration:none;
+  padding:.5em .95em;border-radius:99px;font-size:.82rem;white-space:nowrap}
+
+/* ═══ HERO ═══ */
+.hero{position:relative;overflow:hidden;isolation:isolate;color:#EAF3F7;padding:26px 0 0;
+  background:
+    radial-gradient(140% 70% at 15% 0%, rgba(108,92,231,.34), transparent 55%),
+    radial-gradient(110% 80% at 88% 12%, rgba(255,182,61,.32), transparent 58%),
+    linear-gradient(178deg,#123C5A 0%,#08243B 55%,#04121C 100%)}
+.hero .wrap{z-index:6;padding-bottom:86px}
+.stars{position:absolute;inset:0;z-index:1;opacity:.5}
+.st{position:absolute;background:#fff;border-radius:50%;animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.9}}
+.sunset{position:absolute;top:34px;right:-40px;width:220px;height:220px;border-radius:50%;z-index:1;
+  background:radial-gradient(circle,rgba(255,182,61,.55),rgba(255,107,90,.2) 42%,transparent 68%);
+  animation:pulse 9s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.09);opacity:1}}
+.gulls{position:absolute;top:17%;left:8%;width:110px;z-index:2;opacity:.45;animation:glide 24s ease-in-out infinite}
+@keyframes glide{0%,100%{transform:translate(0,0)}50%{transform:translate(52px,-22px)}}
+.ship{position:absolute;bottom:96px;left:50%;width:min(330px,76vw);transform:translateX(-50%);z-index:2;
+  animation:sail 7.5s ease-in-out infinite}
+@keyframes sail{0%,100%{transform:translateX(-50%) translateY(0) rotate(-.7deg)}
+  50%{transform:translateX(-50%) translateY(-9px) rotate(.7deg)}}
+.waves{position:absolute;left:0;right:0;bottom:0;height:180px;z-index:3;pointer-events:none}
+.wl{position:absolute;bottom:0;left:0;width:200%;height:100%}
+.wl svg{width:50%;height:100%;float:left}
+.w1{animation:roll 21s linear infinite;opacity:.85}
+.w2{animation:roll 14s linear infinite reverse;opacity:.85;bottom:-14px}
+.w3{animation:roll 9s linear infinite;bottom:-32px}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tagpill{display:inline-flex;align-items:center;gap:.45em;background:rgba(62,207,201,.14);
+  border:1px solid rgba(62,207,201,.4);color:var(--aqua);padding:.38em .9em;border-radius:99px;
+  font-size:.66rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.hero h1{color:#fff;font-size:clamp(2rem,8.6vw,3rem);margin-top:.85rem;max-width:14ch}
+.hero h1 span.g{background:linear-gradient(100deg,var(--marigold),var(--coral));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero p.sub{margin-top:.85rem;font-size:1rem;color:#A9C4D2;max-width:36ch}
+.livebar{display:flex;gap:14px;margin-top:1.2rem;flex-wrap:wrap}
+.livebar div{display:flex;align-items:center;gap:.4em;font-size:.72rem;color:#B9CFDA}
+.blip{width:7px;height:7px;border-radius:50%;background:var(--aqua);animation:blip 1.8s ease-in-out infinite}
+@keyframes blip{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(62,207,201,.6)}50%{opacity:.6;box-shadow:0 0 0 6px rgba(62,207,201,0)}}
+
+/* ═══ INTENT ═══ */
+.intentwrap{max-width:var(--w);margin:0 auto;padding:0 18px;position:relative;z-index:20}
+.intent{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;
+  max-width:560px;margin:-138px auto 0;
+  box-shadow:0 28px 64px rgba(4,18,28,.34),0 4px 14px rgba(4,18,28,.12)}
+.intent h2{font-family:'Inter',sans-serif;font-size:14px;font-weight:800;line-height:1.4;margin-bottom:11px}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.chip{display:flex;align-items:center;gap:.5em;min-height:46px;padding:10px 11px;background:var(--foam);
+  border:1.5px solid var(--line);border-radius:12px;font-size:13.5px;font-weight:700;color:var(--ink);
+  text-align:left;cursor:pointer;transition:.16s;-webkit-tap-highlight-color:transparent}
+.chip i{font-style:normal;font-size:1.1rem;line-height:1;flex:none}
+.chip span{flex:1;min-width:0}
+.chip:hover{border-color:#B9C9CE;background:#fff}
+.chip:active{transform:scale(.97)}
+.chip:focus-visible{outline:3px solid var(--lagoon);outline-offset:2px}
+.chip[aria-pressed="true"]{background:#fff;border-color:var(--brass);box-shadow:inset 0 0 0 2px rgba(217,178,90,.24)}
+.bigcall{display:flex;align-items:center;justify-content:center;gap:.45em;width:100%;margin-top:13px;
+  background:linear-gradient(180deg,var(--brass),var(--brassd));color:var(--ink);font-weight:800;
+  font-size:15.5px;text-decoration:none;padding:15px 12px;border-radius:13px;min-height:54px;
+  box-shadow:0 10px 24px rgba(184,147,61,.36);transition:.14s;word-break:break-word;text-align:center}
+.bigcall:hover{filter:brightness(1.05)}
+.bigcall:active{transform:scale(.985)}
+.cap{font-size:11.5px;color:var(--muted);text-align:center;margin-top:9px;line-height:1.45}
+
+/* ═══ VOYAGE ═══ */
+.voyage{position:relative;padding:44px 0 10px;max-width:var(--w);margin:0 auto;padding-left:18px;padding-right:18px}
+.spine{position:absolute;left:31px;top:0;bottom:0;width:2px;
+  background:repeating-linear-gradient(180deg,var(--line) 0 7px,transparent 7px 15px);z-index:0}
+.spinefill{position:absolute;left:31px;top:0;width:2px;background:linear-gradient(180deg,var(--aqua),var(--brass));z-index:1;height:0}
+.spineship{position:absolute;left:20px;width:24px;z-index:3;top:0}
+.stop{position:relative;padding-left:62px;margin-bottom:38px;z-index:2}
+.stopdot{position:absolute;left:20px;top:2px;width:24px;height:24px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-size:.62rem;font-weight:900;color:var(--muted);transition:.3s}
+.stop.lit .stopdot{border-color:var(--brass);background:var(--brass);color:var(--ink);box-shadow:0 0 0 5px rgba(217,178,90,.18)}
+.stoplabel{font-size:.62rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--lagoon)}
+.stop h2{font-size:clamp(1.35rem,5.4vw,1.75rem);margin:.25rem 0 .45rem}
+.stop p.lede{font-size:.93rem;color:var(--muted);margin-bottom:1rem;max-width:62ch}
+
+/* line matcher */
+.scroller{display:flex;gap:11px;overflow-x:auto;padding:3px 18px 12px 0;margin-right:-18px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.lcard{flex:none;width:212px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);
+  border-radius:17px;padding:15px;position:relative;overflow:hidden;text-decoration:none;display:block;transition:.2s}
+.lcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--ac)}
+.lcard::after{content:"";position:absolute;right:-26px;top:-26px;width:86px;height:86px;border-radius:50%;
+  background:var(--ac);opacity:.09;transition:.35s}
+.lcard:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(8,36,59,.15);border-color:var(--ac)}
+.lcard:hover::after{transform:scale(1.9);opacity:.13}
+.lcard:active{transform:scale(.98)}
+.lcard .emo{font-size:1.5rem;display:block;margin-bottom:.3rem}
+.lcard b.nm{font-family:'Fraunces',serif;font-size:1.02rem;display:block;font-weight:600}
+.lcard .style{font-size:.66rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--ac);display:block;margin-top:.15rem}
+.lcard p{font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.45}
+.lcard .fit{margin-top:.6rem;font-size:.74rem;color:var(--ink)}
+.lcard .fit b{font-weight:800}
+.lcard .go{margin-top:.7rem;font-size:.72rem;font-weight:900;color:var(--brassd)}
+.swipehint{font-size:.7rem;color:var(--muted);margin-top:.3rem}
+
+/* month wheel */
+.seasonwrap{display:grid;gap:14px}
+.months{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.mo{aspect-ratio:1;border:1.5px solid var(--line);background:#fff;border-radius:11px;font-size:.72rem;
+  font-weight:800;color:var(--muted);cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center}
+.mo:hover{border-color:var(--lagoon);color:var(--ink)}
+.mo:active{transform:scale(.94)}
+.mo[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 6px 14px rgba(8,36,59,.28)}
+.mopanel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;min-height:150px}
+.mopanel h3{font-size:1.05rem;margin-bottom:.15rem}
+.mopanel .season{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--lagoon)}
+.regions{display:grid;gap:7px;margin-top:11px}
+.reg{display:flex;align-items:center;gap:.6em;background:var(--foam);border-radius:10px;padding:9px 11px}
+.reg .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.reg b{font-size:.84rem;flex:1;font-weight:700}
+.reg span{font-size:.7rem;color:var(--muted);text-align:right;max-width:52%}
+.warn{background:rgba(255,107,90,.09);border:1px solid rgba(255,107,90,.32);border-radius:11px;
+  padding:10px 12px;margin-top:10px;font-size:.78rem;color:#9C3325;display:flex;gap:.5em;align-items:flex-start}
+
+/* cabin explorer */
+.cabwrap{background:linear-gradient(170deg,var(--ink2),var(--abyss));border-radius:18px;padding:16px;color:#DBE8EE;
+  display:grid;gap:12px}
+.deckviz{border-radius:12px;background:rgba(255,255,255,.04);padding:10px}
+.deckrow{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;cursor:pointer;
+  transition:.16s;border:1.5px solid transparent}
+.deckrow:hover{background:rgba(255,255,255,.06)}
+.deckrow:active{transform:scale(.985)}
+.deckrow[aria-pressed="true"]{background:rgba(62,207,201,.12);border-color:rgba(62,207,201,.5)}
+.deckrow .swatch{width:34px;height:26px;border-radius:5px;flex:none}
+.deckrow b{font-size:.86rem;color:#fff;flex:1;text-align:left;font-weight:700}
+.deckrow .tick{font-size:.66rem;color:#8FADBB}
+.cabinfo{background:rgba(255,255,255,.05);border-radius:11px;padding:14px}
+.cabinfo h4{font-family:'Fraunces',serif;font-size:1.05rem;color:#fff;margin-bottom:.3rem;font-weight:600}
+.cabinfo p{font-size:.83rem;color:#A9C4D2;line-height:1.5}
+.cabinfo ul{list-style:none;margin-top:.6rem;display:grid;gap:.35rem}
+.cabinfo li{font-size:.78rem;color:#C6DAE3;display:flex;gap:.5em}
+.cabinfo li::before{content:"→";color:var(--aqua);font-weight:800;flex:none}
+
+/* compare */
+.cmprow{display:flex;flex-wrap:nowrap;gap:7px;overflow-x:auto;padding-bottom:9px;scrollbar-width:none;margin-bottom:12px}
+.cmprow::-webkit-scrollbar{display:none}
+.cmpchip{flex:none;background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:.48em .9em;
+  font-size:.8rem;font-weight:800;cursor:pointer;transition:.15s;white-space:nowrap}
+.cmpchip:hover{border-color:var(--lagoon)}
+.cmpchip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cmptable{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}
+.cmphead{display:grid;background:var(--mist);font-size:.7rem;font-weight:900;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--muted)}
+.cmphead div,.cmpline div{padding:10px 11px}
+.cmpline{display:grid;border-top:1px solid var(--line);font-size:.83rem;align-items:start}
+.cmpline .k{font-weight:800;color:var(--muted);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}
+.cmpempty{padding:26px 16px;text-align:center;color:var(--muted);font-size:.85rem}
+.pend{color:#9AA7AF;font-style:italic;font-size:.78rem}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--ink2),var(--abyss));border-radius:18px;padding:20px;color:#fff;
+  margin-top:16px;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,178,90,.3),transparent 70%)}
+.cta b.h{font-family:'Fraunces',serif;font-size:1.15rem;display:block;position:relative;font-weight:600}
+.cta p{font-size:.86rem;color:#A9C4D2;margin-top:.35rem;position:relative}
+.cta a{display:flex;align-items:center;justify-content:center;gap:.4em;background:var(--brass);color:var(--ink);
+  font-weight:800;text-decoration:none;padding:.9em;border-radius:12px;margin-top:.95rem;position:relative;font-size:1rem}
+.cta a:hover{filter:brightness(1.05)}
+.cta .fine{font-size:.68rem;color:#8FADBB;text-align:center;margin-top:.55rem;position:relative}
+
+.trust{background:var(--mist);padding:26px 0;margin-top:26px}
+.trustgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tr{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}
+.tr b{display:block;font-family:'Fraunces',serif;font-size:1.25rem;color:var(--ink);font-weight:600}
+.tr span{font-size:.72rem;color:var(--muted);line-height:1.4;display:block;margin-top:.15rem}
+
+.ftr{background:var(--abyss);color:#7E96A6;font-size:.74rem;padding:30px 0 22px;line-height:1.6}
+.flinks{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:14px}
+.flinks a{color:#B9CFDA;text-decoration:none;font-weight:600;font-size:.8rem}
+.flinks a:hover{color:#fff}
+.ftr p{margin-bottom:.65rem;max-width:92ch}
+.ftr b{color:#A9C4D2}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(4,18,28,.97);
+  backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.12);
+  padding:9px 14px calc(9px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
+.sticky .inner{display:flex;gap:10px;align-items:center;width:100%;max-width:var(--w);margin:0 auto}
+.sticky .t{flex:1;min-width:0}
+.sticky .t b{display:block;color:#fff;font-size:.82rem;line-height:1.2}
+.sticky .t span{display:block;color:#8FADBB;font-size:.66rem}
+.sticky a{background:var(--brass);color:var(--ink);font-weight:800;text-decoration:none;
+  padding:.7em 1.2em;border-radius:99px;font-size:.92rem;white-space:nowrap;animation:nudge 3.4s ease-in-out infinite}
+@keyframes nudge{0%,88%,100%{transform:scale(1)}92%{transform:scale(1.06)}}
+
+.ov{position:fixed;inset:0;z-index:100;background:rgba(4,18,28,.76);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;pointer-events:none;transition:.25s}
+.ov.on{opacity:1;pointer-events:auto}
+.modal{background:var(--paper);border-radius:22px;max-width:430px;width:100%;overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.45);transform:translateY(14px) scale(.98);transition:.28s}
+.ov.on .modal{transform:none}
+.mtop{background:linear-gradient(140deg,var(--ink2),var(--abyss));color:#fff;padding:24px 22px 20px;text-align:center;position:relative}
+.mtop h3{color:#fff;font-size:1.4rem;line-height:1.15}
+.mtop h3 em{font-style:italic;color:var(--marigold)}
+.mtop p{color:#A9C4D2;font-size:.87rem;margin-top:.5rem}
+.mx{position:absolute;top:10px;right:12px;background:rgba(255,255,255,.15);border:0;color:#fff;
+  width:30px;height:30px;border-radius:99px;font-size:1.05rem;cursor:pointer;line-height:1}
+.mbody{padding:20px 22px 22px}
+.mbody ul{list-style:none;display:grid;gap:.5rem;margin-bottom:1rem}
+.mbody li{display:flex;gap:.55em;font-size:.87rem}
+.mbody li::before{content:"✓";color:var(--lagoon);font-weight:800}
+.mskip{display:block;width:100%;background:none;border:0;color:var(--muted);font-size:.8rem;
+  margin-top:.7rem;cursor:pointer;text-decoration:underline}
+
+/* ══════════════ TABLET ══════════════ */
+@media(min-width:700px){
+  .trustgrid{grid-template-columns:repeat(4,1fr)}
+  .months{grid-template-columns:repeat(12,1fr)}
+  .cabwrap{grid-template-columns:290px 1fr;align-items:start;padding:20px}
+  .cta{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:24px}
+  .cta a{margin-top:0;padding:.95em 1.8em;white-space:nowrap}
+  .cta .fine{grid-column:1/-1;text-align:left;margin-top:0}
+  .stop p.lede{font-size:1rem}
+}
+
+/* ══════════════ DESKTOP ══════════════ */
+@media(min-width:1000px){
+  body{padding-bottom:0}
+  .navmid{display:flex}
+
+  /* hero becomes two columns: copy left, intent card right */
+  .hero{padding-top:44px}
+  .hero .wrap{padding-bottom:120px;display:grid;grid-template-columns:1.05fr 500px;gap:56px;align-items:center;min-height:460px}
+  .hero h1{font-size:clamp(2.6rem,3.6vw,3.5rem);max-width:15ch}
+  .hero p.sub{font-size:1.1rem;max-width:42ch}
+  .ship{left:22%;bottom:60px;width:340px}
+  .sunset{width:300px;height:300px;top:10px;right:6%}
+  .heroright{position:relative;z-index:20}
+  .intentwrap{max-width:none;margin:0;padding:0;position:static}
+  .intent{margin:0;max-width:none;padding:24px;border-radius:24px}
+  .nvg{margin:0;max-width:none;z-index:30}
+  .intent h2{font-size:16px;margin-bottom:14px}
+  .chips{grid-template-columns:1fr 1fr 1fr}
+  .chip{font-size:14px;padding:12px 12px;min-height:52px}
+  .bigcall{font-size:17px;padding:17px;min-height:58px}
+  .cap{font-size:12.5px}
+
+  /* voyage: wider content, spine stays as the structural anchor */
+  .voyage{padding-top:64px}
+  .spine,.spinefill{left:41px}
+  .spineship{left:30px}
+  .stop{padding-left:86px;margin-bottom:56px}
+  .stopdot{left:30px;width:28px;height:28px;font-size:.68rem}
+  .stop h2{font-size:2rem}
+
+  /* line cards become a grid, not a scroller */
+  .scroller{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;overflow:visible;
+    margin-right:0;padding:3px 0 4px}
+  .lcard{width:auto}
+  .swipehint{display:none}
+
+  /* season: months left, panel right */
+  .seasonwrap{grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+  .months{grid-template-columns:repeat(4,1fr);gap:8px}
+  .mo{aspect-ratio:auto;padding:14px 0;font-size:.8rem}
+  .mopanel{padding:20px}
+  .mopanel h3{font-size:1.25rem}
+
+  .cabwrap{grid-template-columns:320px 1fr;padding:24px}
+  .cabinfo{padding:20px}
+  .cabinfo h4{font-size:1.2rem}
+  .cabinfo p{font-size:.9rem}
+
+  .cmprow{flex-wrap:wrap;overflow:visible}
+  .cmpchip{font-size:.86rem;padding:.55em 1.05em}
+
+  .trustgrid{gap:14px}
+  .tr{padding:18px}
+  .tr b{font-size:1.6rem}
+
+  /* sticky bar becomes a slim desktop banner */
+  .sticky{position:static;background:linear-gradient(120deg,var(--ink2),var(--abyss));
+    border-top:0;padding:18px;justify-content:center}
+  .sticky .t b{font-size:1rem}
+  .sticky .t span{font-size:.78rem}
+  .sticky a{animation:none;padding:.8em 1.6em;font-size:1rem}
+
+  .ftr{padding:40px 0 28px}
+  .flinks{gap:10px 24px}
+}
+@media(min-width:1240px){
+  .hero .wrap{grid-template-columns:1.1fr 540px;gap:70px}
+  .stop h2{font-size:2.2rem}
+}
+@media(max-width:365px){
+  .intent{padding:15px}.chip{font-size:12.5px;padding:9px 8px}.bigcall{font-size:14px}.stop{padding-left:56px}
+}
+
+/* ═══ HOME PORT NAVIGATOR ═══ */
+.nvg{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  position:relative;z-index:30;max-width:560px;margin:-56px auto 0;scroll-margin-top:110px;
+  box-shadow:0 28px 64px rgba(4,18,28,.34),0 4px 14px rgba(4,18,28,.12)}
+.nvghead{background:linear-gradient(120deg,var(--ink2),var(--abyss));color:#fff;padding:16px 18px}
+.nvghead .step{font-size:.62rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua)}
+.nvghead h2{font-family:'Fraunces',serif;color:#fff;font-size:1.15rem;margin-top:.2rem;font-weight:600}
+.nvgbar{height:4px;background:rgba(255,255,255,.16);border-radius:99px;margin-top:11px;overflow:hidden}
+.nvgbar i{display:block;height:100%;background:linear-gradient(90deg,var(--aqua),var(--brass));width:25%;transition:width .4s}
+.nvgbody{padding:16px 18px 18px}
+.nvgq{font-size:.95rem;font-weight:700;margin-bottom:11px}
+.nvgsub{font-size:.8rem;color:var(--muted);margin:-6px 0 11px}
+.opts{display:grid;gap:8px;max-height:340px;overflow-y:auto;padding-right:2px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:.55em;min-height:46px;padding:11px 12px;background:var(--foam);
+  border:1.5px solid var(--line);border-radius:12px;font-size:13.5px;font-weight:700;color:var(--ink);
+  text-align:left;cursor:pointer;transition:.15s;width:100%}
+.opt:hover{border-color:var(--lagoon);background:#fff}
+.opt:active{transform:scale(.98)}
+.opt:focus-visible{outline:3px solid var(--lagoon);outline-offset:2px}
+.opt[aria-pressed="true"]{background:#fff;border-color:var(--brass);box-shadow:inset 0 0 0 2px rgba(217,178,90,.24)}
+.opt i{font-style:normal;font-size:1.05rem;flex:none}
+.opt .txt{flex:1;min-width:0}
+.opt .sm{display:block;font-weight:500;font-size:.72rem;color:var(--muted);line-height:1.3}
+.grp{font-size:.62rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--lagoon);
+  margin:10px 0 4px;grid-column:1/-1}
+.grp:first-child{margin-top:0}
+.nvgnav{display:flex;gap:10px;align-items:center;margin-top:13px}
+.nvgback{background:none;border:0;color:var(--muted);font-size:.82rem;text-decoration:underline;cursor:pointer}
+.nvgnext{margin-left:auto;background:var(--ink);color:#fff;border:0;font-weight:800;font-size:.88rem;
+  padding:.7em 1.3em;border-radius:99px;cursor:pointer}
+.nvgnext:disabled{opacity:.35;cursor:not-allowed}
+
+/* result */
+.res{padding:2px 0}
+.resbadge{display:inline-block;background:linear-gradient(120deg,var(--marigold),var(--coral));color:#5A2A12;
+  font-weight:900;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;padding:.4em 1em;border-radius:99px}
+.res h3{font-family:'Fraunces',serif;font-size:1.3rem;margin:.6rem 0 .3rem;font-weight:600}
+.res .lead{font-size:.88rem;color:var(--muted);margin-bottom:12px}
+.rescard{background:var(--foam);border:1px solid var(--line);border-radius:13px;padding:13px;margin-bottom:9px}
+.rescard .lbl{font-size:.6rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--lagoon)}
+.rescard b.big{display:block;font-family:'Fraunces',serif;font-size:1.08rem;margin-top:.15rem;font-weight:600}
+.rescard p{font-size:.83rem;color:var(--muted);margin-top:.3rem}
+.reslines{display:flex;flex-wrap:wrap;gap:6px;margin-top:.55rem}
+.reslines a,.reslines span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:.32em .75em;
+  font-size:.76rem;font-weight:700;text-decoration:none;color:var(--ink)}
+.reslines a:hover{border-color:var(--brass)}
+.reswarn{background:rgba(255,107,90,.09);border:1px solid rgba(255,107,90,.32);border-radius:12px;
+  padding:11px 13px;margin-bottom:9px;font-size:.8rem;color:#9C3325;display:flex;gap:.5em}
+.resgood{background:rgba(62,207,201,.1);border:1px solid rgba(62,207,201,.35);border-radius:12px;
+  padding:11px 13px;margin-bottom:9px;font-size:.8rem;color:#0F5A63;display:flex;gap:.5em}
+.restart{background:none;border:0;color:var(--lagoon);font-size:.82rem;text-decoration:underline;
+  cursor:pointer;display:block;margin:10px auto 0}
+@media(min-width:1000px){
+  .nvghead{padding:20px 22px}
+  .nvghead h2{font-size:1.3rem}
+  .nvgbody{padding:20px 22px 22px}
+  .opts{max-height:400px}
+  .opt{font-size:14px;min-height:50px}
+}
+
+.navright{display:flex;align-items:center;gap:9px}
+.burger{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;
+  width:38px;height:38px;border-radius:10px;font-size:1.1rem;cursor:pointer;line-height:1}
+.burger:hover{background:rgba(255,255,255,.18)}
+.drawer{background:var(--abyss);border-top:1px solid rgba(255,255,255,.1)}
+.drawerin{max-width:var(--w);margin:0 auto;padding:10px 18px 14px;display:grid;gap:2px}
+.drawerin a{color:#B9CFDA;text-decoration:none;font-weight:600;font-size:.92rem;padding:.6em .2em;
+  border-bottom:1px solid rgba(255,255,255,.06)}
+.drawerin a:hover{color:#fff}
+.explorebtn{display:block;text-align:center;margin-top:12px;background:#fff;border:1.5px solid var(--brass);
+  color:var(--ink);font-weight:800;text-decoration:none;padding:.85em 1em;border-radius:12px;font-size:.92rem;transition:.16s}
+.explorebtn:hover{background:var(--brass);transform:translateY(-2px)}
+.totop{position:fixed;right:16px;bottom:84px;z-index:75;width:44px;height:44px;border-radius:50%;
+  background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.2);font-size:1.1rem;cursor:pointer;
+  opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 20px rgba(4,18,28,.3)}
+.totop.on{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--ink2)}
+@media(min-width:1000px){
+  .navmid{display:none}
+  .drawerin{grid-template-columns:repeat(4,1fr);gap:4px 24px}
+  .totop{bottom:24px;right:24px}
+}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ═══ SITE NAVIGATION FURNITURE ═══ */
+.crumbbar{position:sticky;top:54px;z-index:55;background:var(--mist,#E4EDEF);
+  border-bottom:1px solid var(--line,#D5E0E3)}
+.crumbin{max-width:1180px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;gap:10px;
+  font-size:.78rem;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.crumbin::-webkit-scrollbar{display:none}
+.crumbback{flex:none;display:inline-flex;align-items:center;gap:.35em;background:#fff;
+  border:1px solid var(--line,#D5E0E3);border-radius:99px;padding:.34em .8em;
+  font-size:.76rem;font-weight:800;color:var(--ink,#08243B);text-decoration:none;cursor:pointer}
+.crumbback:hover{border-color:var(--brass,#D9B25A);background:#fff}
+.crumbtrail{display:flex;align-items:center;gap:6px;min-width:0;color:var(--muted,#556B78)}
+.crumbtrail a{color:var(--lagoon,#1B7A8C);text-decoration:none;font-weight:600}
+.crumbtrail a:hover{text-decoration:underline}
+.crumbtrail .sep{opacity:.5}
+.crumbtrail .cur{color:var(--ink,#08243B);font-weight:800;overflow:hidden;text-overflow:ellipsis}
+
+.totop{position:fixed;right:16px;bottom:84px;z-index:75;width:46px;height:46px;border-radius:50%;
+  background:var(--ink,#08243B);color:#fff;border:1px solid rgba(255,255,255,.22);font-size:1.15rem;
+  cursor:pointer;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 20px rgba(4,18,28,.32)}
+.totop.on{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--ink2,#0E3A5C);transform:translateY(-2px)}
+@media(min-width:1000px){.totop{bottom:24px;right:24px;width:50px;height:50px}}
+@media(max-width:999px){.crumbbar{top:54px}}
+
+</style>
+</head>
+<body>
+
+<div class="disc">
+  <b>Independent referral service — not a cruise line, not a travel agency.</b>
+  We connect you with licensed specialists at partner agencies and may be paid a referral fee.
+</div>
+
+<header class="hdr">
+  <div class="nav">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18.5" stroke="#3ECFC9" stroke-width="2"/>
+      <path d="M6 25c3.6 0 3.6 3 7.2 3s3.6-3 7.2-3 3.6 3 7.2 3 3.6-3 6.4-3" stroke="#D9B25A" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M20 7v11M20 7l7 5-7 3" fill="#fff"/></svg>
+      <span><b>CruiseLine Advisors</b><i>Independent · since 2015</i></span>
+    </a>
+    <div class="navright">
+      <a href="tel:+18885550142" class="navcall" onclick="trackCall('header')">☎ +1 (888) 555-0142</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <nav class="drawer" id="drawer" hidden>
+    <div class="drawerin">
+      <a href="cruise-lines.html">Cruise lines</a>
+      <a href="directory.html">Explore all lines</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="guides.html">Guides</a>
+      <a href="compare.html">Compare</a>
+      <a href="updates.html">Policy updates</a>
+      <a href="advisors.html">Our advisor network</a>
+    </div>
+  </nav>
+</header>
+<div class="crumbbar"><div class="crumbin"><nav class="crumbtrail" aria-label="Breadcrumb"><span class="cur">Home</span></nav></div></div>
+
+<section class="hero">
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="sunset" aria-hidden="true"></div>
+  <svg class="gulls" viewBox="0 0 120 40" fill="none" stroke="#EAF3F7" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <path d="M6 16c5-6 9-6 13 0 4-6 8-6 13 0"/><path d="M52 8c4-5 7-5 10 0 3-5 6-5 10 0"/><path d="M84 24c4-5 7-5 10 0 3-5 6-5 10 0"/>
+  </svg>
+
+  <svg class="ship" viewBox="0 0 420 150" fill="none" aria-hidden="true">
+    <path d="M36 104h348c-10 22-30 32-58 32H92c-28 0-46-10-56-32z" fill="#02090F"/>
+    <path d="M36 104h348c-3 7-8 13-14 17H50c-6-4-11-10-14-17z" fill="#0E3A5C"/>
+    <rect x="62" y="80" width="296" height="24" rx="4" fill="#F4F8F9"/>
+    <rect x="86" y="60" width="248" height="21" rx="4" fill="#E4EDEF"/>
+    <rect x="118" y="42" width="184" height="19" rx="4" fill="#F4F8F9"/>
+    <rect x="152" y="27" width="112" height="16" rx="4" fill="#E4EDEF"/>
+    <path d="M196 27h34v-15c0-4-3-7-7-7h-20c-4 0-7 3-7 7z" fill="#1B7A8C"/>
+    <rect x="196" y="7" width="34" height="6" rx="3" fill="#D9B25A"/>
+    <g fill="#FFB63D" opacity=".95">
+      <rect x="74" y="88" width="9" height="7" rx="1.6"/><rect x="90" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="106" y="88" width="9" height="7" rx="1.6"/><rect x="122" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="138" y="88" width="9" height="7" rx="1.6"/><rect x="154" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="170" y="88" width="9" height="7" rx="1.6"/><rect x="186" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="202" y="88" width="9" height="7" rx="1.6"/><rect x="218" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="234" y="88" width="9" height="7" rx="1.6"/><rect x="250" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="266" y="88" width="9" height="7" rx="1.6"/><rect x="282" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="298" y="88" width="9" height="7" rx="1.6"/><rect x="314" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="330" y="88" width="9" height="7" rx="1.6"/>
+      <rect x="100" y="67" width="8" height="7" rx="1.6"/><rect x="116" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="132" y="67" width="8" height="7" rx="1.6"/><rect x="148" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="164" y="67" width="8" height="7" rx="1.6"/><rect x="180" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="196" y="67" width="8" height="7" rx="1.6"/><rect x="212" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="228" y="67" width="8" height="7" rx="1.6"/><rect x="244" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="260" y="67" width="8" height="7" rx="1.6"/><rect x="276" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="292" y="67" width="8" height="7" rx="1.6"/><rect x="308" y="67" width="8" height="7" rx="1.6"/>
+      <rect x="130" y="48" width="8" height="7" rx="1.6"/><rect x="146" y="48" width="8" height="7" rx="1.6"/>
+      <rect x="162" y="48" width="8" height="7" rx="1.6"/><rect x="178" y="48" width="8" height="7" rx="1.6"/>
+      <rect x="194" y="48" width="8" height="7" rx="1.6"/><rect x="210" y="48" width="8" height="7" rx="1.6"/>
+      <rect x="226" y="48" width="8" height="7" rx="1.6"/><rect x="242" y="48" width="8" height="7" rx="1.6"/>
+      <rect x="258" y="48" width="8" height="7" rx="1.6"/><rect x="274" y="48" width="8" height="7" rx="1.6"/>
+    </g>
+  </svg>
+
+  <div class="waves" aria-hidden="true">
+    <div class="wl w1">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 96c160-34 300 22 480 8s320-52 520-28 300 46 440 24v100H0z" fill="#0E3A5C"/></svg>
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 96c160-34 300 22 480 8s320-52 520-28 300 46 440 24v100H0z" fill="#0E3A5C"/></svg>
+    </div>
+    <div class="wl w2">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 118c200-28 340 16 540 6s330-40 520-20 260 34 380 22v74H0z" fill="#0A2C46"/></svg>
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 118c200-28 340 16 540 6s330-40 520-20 260 34 380 22v74H0z" fill="#0A2C46"/></svg>
+    </div>
+    <div class="wl w3">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 140c180-22 320 14 500 8s340-30 520-14 280 26 420 14v52H0z" fill="#04121C"/></svg>
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 140c180-22 320 14 500 8s340-30 520-14 280 26 420 14v52H0z" fill="#04121C"/></svg>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="heroleft">
+      <span class="tagpill">☎ Talk it through with a specialist</span>
+      <h1>Stop comparing. <span class="g">Start sailing.</span></h1>
+      <p class="sub">Independent guides to every major line, season and cabin — then one call to a licensed specialist who does the rest.</p>
+      <div class="livebar">
+        <div><span class="blip"></span> Advisors answering now · 8am–11pm ET daily</div>
+        <div>🇺🇸 Nationwide · EN / ES</div>
+      </div>
+    </div>
+
+    <div class="heroright">
+      <div class="intentwrap">
+<div class="nvg" id="nvg">
+  <div class="nvghead">
+    <div class="step" id="nvgStep">Step 1 of 4</div>
+    <h2 id="nvgTitle">Let's find your cruise</h2>
+    <div class="nvgbar"><i id="nvgBar"></i></div>
+  </div>
+  <div class="nvgbody" id="nvgBody"></div>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="voyage" id="voyage">
+  <div class="spine" aria-hidden="true"></div>
+  <div class="spinefill" id="spinefill" aria-hidden="true"></div>
+  <svg class="spineship" id="spineship" viewBox="0 0 40 34" fill="none" aria-hidden="true">
+    <path d="M3 20h34c-1.5 6-6 10-13 10H16C9 30 4.5 26 3 20z" fill="#08243B"/>
+    <rect x="7" y="13" width="26" height="7" rx="2" fill="#fff"/>
+    <rect x="12" y="8" width="16" height="5" rx="1.6" fill="#E4EDEF"/>
+    <rect x="18" y="3" width="5" height="5" rx="1.4" fill="#D9B25A"/>
+  </svg>
+
+  <section class="stop" id="stop1">
+    <div class="stopdot">01</div>
+    <div class="stoplabel">First stop</div>
+    <h2>Which line actually suits you?</h2>
+    <p class="lede">Eight major lines, eight completely different holidays. Here's who each one is really for — including who it isn't.</p>
+    <div class="scroller" id="lineScroller"></div>
+    <p class="swipehint">← swipe to see all eight</p>
+    <a href="directory.html" class="explorebtn">Explore every line sailing from the Americas →</a>
+    <div class="cta">
+      <div>
+        <b class="h">Still torn between two?</b>
+        <p>That's the exact question a specialist settles in about five minutes.</p>
+      </div>
+      <a href="tel:+18885550142" onclick="trackCall('stop1')">☎ +1 (888) 555-0142</a>
+      <p class="fine">Free · no obligation · we never take payment</p>
+    </div>
+  </section>
+
+  <section class="stop" id="stop2">
+    <div class="stopdot">02</div>
+    <div class="stoplabel">Second stop</div>
+    <h2>When can you actually go?</h2>
+    <p class="lede">Regions run on seasons — picking the right month usually matters more than picking the right ship. Tap your month to see what's actually sailing.</p>
+    <div class="seasonwrap">
+      <div class="months" id="months"></div>
+      <div class="mopanel" id="moPanel"></div>
+    </div>
+    <div class="cta">
+      <div>
+        <b class="h">Your month, your options</b>
+        <p>A specialist matches your dates to the regions genuinely in season — and the ships still available.</p>
+      </div>
+      <a href="tel:+18885550142" onclick="trackCall('stop2')">☎ +1 (888) 555-0142</a>
+      <p class="fine">Free · no obligation</p>
+    </div>
+  </section>
+
+  <section class="stop" id="stop3">
+    <div class="stopdot">03</div>
+    <div class="stoplabel">Third stop</div>
+    <h2>Which cabin, really?</h2>
+    <p class="lede">Same ship, same week, wildly different experience. Choose a category to see what you actually get — and what to watch out for.</p>
+    <div class="cabwrap">
+      <div class="deckviz" id="deckviz"></div>
+      <div class="cabinfo" id="cabinfo"></div>
+    </div>
+    <div class="cta">
+      <div>
+        <b class="h">Which cabin numbers to avoid?</b>
+        <p>That detail isn't published anywhere. It's the single most useful thing a specialist tells you.</p>
+      </div>
+      <a href="tel:+18885550142" onclick="trackCall('stop3')">☎ +1 (888) 555-0142</a>
+      <p class="fine">Free · no obligation</p>
+    </div>
+  </section>
+
+  <section class="stop" id="stop4">
+    <div class="stopdot">04</div>
+    <div class="stoplabel">Fourth stop</div>
+    <h2>Compare them side by side</h2>
+    <p class="lede">Pick two lines. We compare on verified facts — never on price, because that changes daily and any number here would be wrong by the time you read it.</p>
+    <div class="cmprow" id="cmpRow"></div>
+    <div id="cmpOut"></div>
+    <div class="cta">
+      <div>
+        <b class="h">Compared, but still deciding?</b>
+        <p>A specialist checks live availability across both — for your dates, your party, your cabin.</p>
+      </div>
+      <a href="tel:+18885550142" onclick="trackCall('stop4')">☎ +1 (888) 555-0142</a>
+      <p class="fine">Free · no obligation · we never take payment</p>
+    </div>
+  </section>
+
+  <section class="stop" id="stop5">
+    <div class="stopdot">☎</div>
+    <div class="stoplabel">Final stop</div>
+    <h2>Make the call.</h2>
+    <p class="lede">You've done the research. Ten minutes on the phone turns it into a booked trip — or tells you honestly that now isn't the right time.</p>
+    <div class="cta" style="background:linear-gradient(135deg,#1B7A8C,#08243B)">
+      <div>
+        <b class="h">Talk to a licensed cruise specialist</b>
+        <p>Free, no obligation, hang up any time. We never take payment for travel — the partner agency books directly with you.</p>
+      </div>
+      <a href="tel:+18885550142" onclick="trackCall('final')">☎ +1 (888) 555-0142</a>
+      <p class="fine">Mon–Sun · 8am–11pm ET · English &amp; Español</p>
+    </div>
+  </section>
+</div>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="trustgrid">
+      <div class="tr"><b>11 yrs</b><span>operating in travel</span></div>
+      <div class="tr"><b>8</b><span>lines covered in depth</span></div>
+      <div class="tr"><b>$0</b><span>you never pay us</span></div>
+      <div class="tr"><b>EN/ES</b><span>nationwide support</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sticky">
+  <div class="inner">
+    <div class="t"><b>Talk to a cruise specialist</b><span>8am–11pm ET daily · English &amp; Español · no obligation</span></div>
+    <a href="tel:+18885550142" onclick="trackCall('sticky')">☎ Call now</a>
+  </div>
+</div>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="cruise-lines.html">Cruise lines</a><a href="destinations.html">Destinations</a>
+      <a href="guides.html">Guides</a><a href="compare.html">Compare</a><a href="updates.html">Updates</a>
+      <a href="legal/terms.html">Terms</a><a href="legal/privacy.html">Privacy</a>
+      <a href="legal/consent.html">Calling &amp; SMS</a><a href="legal/do-not-sell.html">Do Not Sell</a>
+    </div>
+    <p><b>What we are:</b> a marketing and referral service. We are not a cruise line, travel agency, tour operator or seller of travel. We do not sell, book, ticket or take payment for travel, and we do not set prices or hold inventory. Calls may be connected to one of several independent, licensed third-party travel agencies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p>
+    <p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by or an agent of any cruise line.</p>
+    <p><b>Pricing:</b> This site displays no fares, rates, discounts or savings.</p>
+    <p>© 2026 [Your Company] LLC · Florida</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<div class="ov" id="exit" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="mtop">
+      <button class="mx" onclick="closeExit()" aria-label="Close">✕</button>
+      <h3>Before you go — <em>one question, answered free.</em></h3>
+      <p>A licensed specialist can tell you in minutes which line and month actually fit.</p>
+    </div>
+    <div class="mbody">
+      <ul>
+        <li>Which line suits your travel style</li>
+        <li>Best month to sail for your destination</li>
+        <li>Which cabins to book — and which to avoid</li>
+      </ul>
+      <a href="tel:+18885550142" class="bigcall" onclick="trackCall('exit')">☎ +1 (888) 555-0142</a>
+      <p class="cap">Free call · no obligation · we're an independent referral service, not a cruise line.</p>
+      <button class="mskip" onclick="closeExit()">No thanks, keep reading</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function trackCall(p){
+  window.dataLayer=window.dataLayer||[];
+  window.dataLayer.push({event:'call_click',placement:p,interests:(window.__intent?window.__intent():[])});
+  if(typeof gtag==='function'){gtag('event','call_click',{placement:p});}
+  return true;
+}
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+(function(){var s=document.getElementById('stars');if(!s||RM)return;
+for(var i=0;i<30;i++){var d=document.createElement('span');d.className='st';
+var z=1+Math.random()*2;d.style.width=z+'px';d.style.height=z+'px';
+d.style.left=Math.random()*100+'%';d.style.top=Math.random()*60+'%';
+d.style.animationDelay=(-Math.random()*4)+'s';s.appendChild(d);}})();
+
+/* intent chips replaced by home-port navigator */
+window.__intent=function(){return (window.NVG&&NVG.region)?[NVG.region]:[];};
+
+var LINES=[
+{s:'royal-caribbean',n:'Royal Caribbean',e:'🌊',ac:'#2F7FD6',st:'Big-ship resort',
+ p:'The largest ships afloat — waterparks, ice rinks and shows running all day.',f:'Families who want the ship to be the destination'},
+{s:'carnival',n:'Carnival',e:'🎉',ac:'#FF6B5A',st:'Fun &amp; value',
+ p:'Casual and lively, sailing from more US home ports than anyone else.',f:'Budget-minded families and short getaways'},
+{s:'holland-america',n:'Holland America',e:'🧊',ac:'#3F8F7A',st:'Classic premium',
+ p:'Mid-size ships, quieter decks, and decades of Alaska experience.',f:'Alaska, scenery and a calmer pace'},
+{s:'celebrity',n:'Celebrity',e:'🥂',ac:'#6C5CE7',st:'Premium modern',
+ p:'Design-led ships with the strongest food reputation of the mainstream group.',f:'Couples who care about dining'},
+{s:'princess',n:'Princess',e:'🧭',ac:'#2F9FC4',st:'Balanced',
+ p:'The widest itinerary map at sea — Alaska, Japan, Australia, world segments.',f:'Multi-generation groups'},
+{s:'msc',n:'MSC',e:'🍋',ac:'#E0A458',st:'European style',
+ p:'International crowd, modern fleet, and the ship-within-a-ship Yacht Club.',f:'Value and Mediterranean sailings'},
+{s:'cunard',n:'Cunard',e:'🎩',ac:'#B3543F',st:'Ocean liner',
+ p:'The last genuine transatlantic crossings — ballroom, gala nights, sea days.',f:'Formal travellers who love sea days'},
+{s:'margaritaville-at-sea',n:'Margaritaville',e:'🌴',ac:'#3ECFC9',st:'Short getaways',
+ p:'Two to four nights from Florida to the Bahamas, with almost no agenda.',f:'First-timers testing the format'}
+];
+(function(){var w=document.getElementById('lineScroller');
+w.innerHTML=LINES.map(function(l){return '<a class="lcard" style="--ac:'+l.ac+'" href="lines-deep/'+l.s+'.html">'+
+'<span class="emo">'+l.e+'</span><b class="nm">'+l.n+'</b><span class="style">'+l.st+'</span>'+
+'<p>'+l.p+'</p><div class="fit"><b>Best for:</b> '+l.f+'</div>'+
+'<div class="go">Read the guide →</div></a>';}).join('');})();
+
+var MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var SEASON={
+0:{t:'January',s:'Peak Caribbean season',r:[['Caribbean','#3ECFC9','Prime weather'],['Bahamas','#3ECFC9','Year-round'],['Panama Canal','#FFB63D','Dry season'],['Australia / NZ','#FFB63D','Southern summer']],w:''},
+1:{t:'February',s:'Dry and mild',r:[['Caribbean','#3ECFC9','Prime weather'],['Mexican Riviera','#3ECFC9','Warm and dry'],['Panama Canal','#FFB63D','Dry season']],w:'School-holiday weeks are the busiest of the winter.'},
+2:{t:'March',s:'Shoulder begins',r:[['Caribbean','#3ECFC9','Still excellent'],['Bahamas','#3ECFC9','Year-round'],['Mediterranean','#FFB63D','Season opening']],w:'Spring-break weeks are the busiest of the season.'},
+3:{t:'April',s:'Europe opens',r:[['Mediterranean','#3ECFC9','Season starts'],['Caribbean','#3ECFC9','Still warm'],['Transatlantic','#FFB63D','Repositioning voyages']],w:''},
+4:{t:'May',s:'Alaska opens',r:[['Alaska','#3ECFC9','Season starts'],['Mediterranean','#3ECFC9','Comfortable'],['Northern Europe','#FFB63D','Season starts']],w:'Early Alaska is quieter and drier — but cooler, with less wildlife activity.'},
+5:{t:'June',s:'The best all-round month',r:[['Alaska','#3ECFC9','Long daylight'],['Mediterranean','#3ECFC9','Before peak heat'],['Norway / Baltic','#3ECFC9','Midnight sun']],w:''},
+6:{t:'July',s:'Peak everywhere',r:[['Alaska','#3ECFC9','Warmest, peak whales'],['Baltic','#3ECFC9','Full season'],['Mediterranean','#FFB63D','Very hot, very busy']],w:'Peak crowds across every northern region.'},
+7:{t:'August',s:'Northern peak',r:[['Alaska','#3ECFC9','Still strong'],['Northern Europe','#3ECFC9','Full season'],['Mediterranean','#FFB63D','Hottest month']],w:'Atlantic hurricane season enters its most active stretch.'},
+8:{t:'September',s:'Quieter shoulder',r:[['Mediterranean','#3ECFC9','Warm, quieter'],['Alaska','#FFB63D','Season winding down'],['New England / Canada','#3ECFC9','Foliage begins']],w:'Still within the most active hurricane weeks in the Atlantic.'},
+9:{t:'October',s:'Autumn shoulder',r:[['Mediterranean','#3ECFC9','Excellent'],['New England / Canada','#3ECFC9','Peak foliage'],['Caribbean','#FFB63D','Season returning']],w:'Hurricane risk tapers through the month but has not ended.'},
+10:{t:'November',s:'Caribbean returns',r:[['Caribbean','#3ECFC9','Season resumes'],['Panama Canal','#3ECFC9','Dry season starts'],['Transatlantic','#FFB63D','Repositioning back']],w:''},
+11:{t:'December',s:'Peak holiday demand',r:[['Caribbean','#3ECFC9','Excellent weather'],['Bahamas','#3ECFC9','Year-round'],['Australia / NZ','#FFB63D','Southern summer']],w:'Christmas and New Year sailings are the most in-demand of the year.'}
+};
+(function(){
+var box=document.getElementById('months'),panel=document.getElementById('moPanel');
+box.innerHTML=MO.map(function(m,i){return '<button class="mo" aria-pressed="false" data-i="'+i+'">'+m+'</button>';}).join('');
+function render(i){var d=SEASON[i];
+  panel.innerHTML='<div class="season">'+d.s+'</div><h3>'+d.t+'</h3>'+
+   '<div class="regions">'+d.r.map(function(r){
+     return '<div class="reg"><span class="dot" style="background:'+r[1]+'"></span><b>'+r[0]+'</b><span>'+r[2]+'</span></div>';
+   }).join('')+'</div>'+(d.w?'<div class="warn"><b>⚠</b><span>'+d.w+'</span></div>':'');
+  [].forEach.call(box.children,function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-i')===i));});
+  window.dataLayer=window.dataLayer||[];dataLayer.push({event:'month_select',month:d.t});}
+box.addEventListener('click',function(e){var b=e.target.closest('.mo');if(b)render(+b.getAttribute('data-i'));});
+render(new Date().getMonth());
+})();
+
+var CABS=[
+{n:'Suite',c:'linear-gradient(90deg,#D9B25A,#FFB63D)',t:'Top decks',
+ d:'More space, priority boarding and often a separate restaurant and lounge. On some lines suite class is effectively a different product.',
+ pts:['Best on longer voyages where space matters','Perks can be worth more than the fare gap','Books earliest of any category']},
+{n:'Balcony',c:'linear-gradient(90deg,#3ECFC9,#1B7A8C)',t:'Mid to upper decks',
+ d:'Private outdoor space. The upgrade most travellers say they would repeat — but its value depends heavily on the itinerary.',
+ pts:['Worth far more on Alaska and Norway than the Caribbean','Watch for obstructed views on deck plans','Neighbourhood balconies face inward, not to sea']},
+{n:'Ocean view',c:'linear-gradient(90deg,#6C5CE7,#3D5A8A)',t:'Lower to mid decks',
+ d:'A sealed window rather than a balcony. Daylight and a sense of where you are, without the outdoor-space premium.',
+ pts:['Good middle ground on shorter sailings','Some windows are partly obstructed — check the plan','Steadier ride on lower decks']},
+{n:'Interior',c:'linear-gradient(90deg,#556B78,#2F3E48)',t:'Any deck',
+ d:'No window. Cheapest category and surprisingly restful — genuinely dark for sleeping. Some newer ships add a live ocean-view screen.',
+ pts:['Best value if you spend days out of the cabin','Pitch dark — set an alarm','Mid-ship, lower decks feel steadiest']}
+];
+(function(){
+var viz=document.getElementById('deckviz'),info=document.getElementById('cabinfo');
+viz.innerHTML=CABS.map(function(c,i){
+  return '<div class="deckrow" role="button" tabindex="0" aria-pressed="'+(i===1)+'" data-i="'+i+'">'+
+  '<span class="swatch" style="background:'+c.c+'"></span><b>'+c.n+'</b><span class="tick">'+c.t+'</span></div>';}).join('');
+function render(i){var c=CABS[i];
+  info.innerHTML='<h4>'+c.n+'</h4><p>'+c.d+'</p><ul>'+c.pts.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul>';
+  [].forEach.call(viz.children,function(r){r.setAttribute('aria-pressed',String(+r.getAttribute('data-i')===i));});
+  window.dataLayer=window.dataLayer||[];dataLayer.push({event:'cabin_explore',cabin:c.n});}
+viz.addEventListener('click',function(e){var r=e.target.closest('.deckrow');if(r)render(+r.getAttribute('data-i'));});
+viz.addEventListener('keydown',function(e){var r=e.target.closest('.deckrow');
+  if(r&&(e.key==='Enter'||e.key===' ')){e.preventDefault();render(+r.getAttribute('data-i'));}});
+render(1);
+})();
+
+(function(){
+var row=document.getElementById('cmpRow'),out=document.getElementById('cmpOut'),sel=[];
+row.innerHTML=LINES.map(function(l){return '<button class="cmpchip" aria-pressed="false" data-s="'+l.s+'">'+l.e+' '+l.n+'</button>';}).join('');
+function find(s){for(var i=0;i<LINES.length;i++){if(LINES[i].s===s)return LINES[i];}}
+function render(){
+  if(sel.length<2){out.innerHTML='<div class="cmptable"><div class="cmpempty">Pick <b>two</b> lines above to compare them side by side.</div></div>';return;}
+  var a=find(sel[0]),b=find(sel[1]);
+  var rows=[['Style',a.st,b.st],['Best for',a.f,b.f],['In a sentence',a.p,b.p],
+    ['Fleet size','<span class="pend">verifying</span>','<span class="pend">verifying</span>'],
+    ['Daily gratuity','<span class="pend">verifying</span>','<span class="pend">verifying</span>']];
+  out.innerHTML='<div class="cmptable">'+
+   '<div class="cmphead" style="grid-template-columns:110px 1fr 1fr"><div></div><div>'+a.e+' '+a.n+'</div><div>'+b.e+' '+b.n+'</div></div>'+
+   rows.map(function(r){return '<div class="cmpline" style="grid-template-columns:110px 1fr 1fr"><div class="k">'+r[0]+'</div><div>'+r[1]+'</div><div>'+r[2]+'</div></div>';}).join('')+
+   '</div><p class="cap" style="text-align:left;margin-top:9px">Fields marked <i>verifying</i> are being confirmed against primary sources. We show gaps rather than guesses — and never compare on price.</p>';
+  window.dataLayer=window.dataLayer||[];dataLayer.push({event:'compare_lines',lines:sel.slice()});}
+row.addEventListener('click',function(e){var c=e.target.closest('.cmpchip');if(!c)return;
+  var s=c.getAttribute('data-s'),i=sel.indexOf(s);
+  if(i>-1){sel.splice(i,1);}else{if(sel.length>=2){var drop=sel.shift();
+    var old=row.querySelector('[data-s="'+drop+'"]');if(old)old.setAttribute('aria-pressed','false');}
+    sel.push(s);}
+  c.setAttribute('aria-pressed',String(sel.indexOf(s)>-1));render();});
+render();
+})();
+
+(function(){
+var v=document.getElementById('voyage'),fill=document.getElementById('spinefill'),
+    sh=document.getElementById('spineship'),stops=[].slice.call(document.querySelectorAll('.stop'));
+if(!v)return;
+function upd(){
+  var r=v.getBoundingClientRect(),vh=window.innerHeight,mid=vh*0.45;
+  var prog=Math.min(Math.max((mid-r.top)/r.height,0),1);
+  fill.style.height=(prog*r.height)+'px';
+  sh.style.top=Math.max(0,prog*r.height-12)+'px';
+  for(var i=0;i<stops.length;i++){var b=stops[i].getBoundingClientRect();
+    if(b.top<vh*0.62&&b.bottom>90){stops[i].className='stop lit';}else{stops[i].className='stop';}}
+}
+window.addEventListener('scroll',upd,{passive:true});
+window.addEventListener('resize',upd);upd();
+})();
+
+(function(){
+var shown=false,ov=document.getElementById('exit');
+function show(){if(shown)return;shown=true;ov.className='ov on';
+  window.dataLayer=window.dataLayer||[];dataLayer.push({event:'exit_intent_shown'});}
+window.closeExit=function(){ov.className='ov';};
+ov.addEventListener('click',function(e){if(e.target===ov)closeExit();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeExit();});
+document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0)show();});
+var ly=window.scrollY,lt=Date.now();
+window.addEventListener('scroll',function(){var y=window.scrollY,t=Date.now(),dt=t-lt;
+  if(dt>0&&(ly-y)/dt>1.1&&y<420)show();ly=y;lt=t;},{passive:true});
+setTimeout(show,50000);
+})();
+
+/* ═══ HOME PORT NAVIGATOR ═══ */
+var NP={"miami": {"n": "Miami", "s": "Florida", "r": ["caribbean-east", "caribbean-west", "caribbean-south", "bahamas", "panama", "transatlantic", "cuba-yucatan"], "l": ["royal-caribbean", "carnival", "msc", "norwegian", "celebrity", "virgin-voyages", "disney", "oceania", "explora"], "note": "The busiest cruise port in the world — widest choice of ships and sailing lengths."}, "fort-lauderdale": {"n": "Fort Lauderdale (Port Everglades)", "s": "Florida", "r": ["caribbean-east", "caribbean-west", "caribbean-south", "bahamas", "panama", "transatlantic"], "l": ["royal-caribbean", "celebrity", "princess", "holland-america", "carnival", "msc", "cunard", "silversea", "seabourn", "regent", "oceania"], "note": "Strongest choice for longer and premium sailings, plus most Panama Canal departures."}, "port-canaveral": {"n": "Port Canaveral (Orlando)", "s": "Florida", "r": ["caribbean-east", "caribbean-west", "bahamas"], "l": ["royal-caribbean", "carnival", "disney", "msc", "norwegian"], "note": "Easiest pairing with an Orlando theme-park stay — heavily family-focused."}, "tampa": {"n": "Tampa", "s": "Florida", "r": ["caribbean-west", "cuba-yucatan", "bahamas"], "l": ["royal-caribbean", "carnival", "norwegian", "holland-america"], "note": "Western Caribbean focus. Ships are size-limited by a bridge, so expect mid-size vessels."}, "jacksonville": {"n": "Jacksonville", "s": "Florida", "r": ["bahamas", "caribbean-east"], "l": ["carnival"], "note": "Small terminal, short sailings, very easy drive-up access."}, "palm-beach": {"n": "Palm Beach", "s": "Florida", "r": ["bahamas"], "l": ["margaritaville-at-sea"], "note": "Short Bahamas getaways only — the lowest-commitment cruise in the country."}, "galveston": {"n": "Galveston", "s": "Texas", "r": ["caribbean-west", "cuba-yucatan", "bahamas"], "l": ["royal-caribbean", "carnival", "norwegian", "princess", "disney"], "note": "The main Texas gateway — drive-to for much of the south-central US."}, "new-orleans": {"n": "New Orleans", "s": "Louisiana", "r": ["caribbean-west", "cuba-yucatan"], "l": ["royal-caribbean", "carnival", "norwegian", "disney"], "note": "Pair the sailing with a few nights in the city — most travellers do."}, "mobile": {"n": "Mobile", "s": "Alabama", "r": ["caribbean-west", "cuba-yucatan"], "l": ["carnival"], "note": "Compact terminal with short, value-focused itineraries."}, "new-york": {"n": "New York (Manhattan & Brooklyn)", "s": "New York", "r": ["bermuda", "canada-ne", "caribbean-east", "transatlantic"], "l": ["norwegian", "carnival", "msc", "princess", "cunard", "royal-caribbean"], "note": "The only US port with scheduled transatlantic crossings."}, "cape-liberty": {"n": "Cape Liberty (Bayonne, NJ)", "s": "New Jersey", "r": ["bermuda", "canada-ne", "caribbean-east"], "l": ["royal-caribbean", "celebrity"], "note": "Serves the New York metro area with easier parking than Manhattan."}, "boston": {"n": "Boston", "s": "Massachusetts", "r": ["canada-ne", "bermuda"], "l": ["norwegian", "holland-america", "princess"], "note": "Prime autumn foliage departures in September and October."}, "baltimore": {"n": "Baltimore", "s": "Maryland", "r": ["bahamas", "caribbean-east", "canada-ne", "bermuda"], "l": ["royal-caribbean", "carnival", "norwegian"], "note": "Drive-to for the mid-Atlantic; sailings run longer to reach the Caribbean."}, "norfolk": {"n": "Norfolk", "s": "Virginia", "r": ["bahamas", "caribbean-east", "bermuda", "canada-ne"], "l": ["carnival", "norwegian"], "note": "Seasonal schedule — fewer departures than the larger east coast ports."}, "charleston": {"n": "Charleston", "s": "South Carolina", "r": ["bahamas", "caribbean-east"], "l": ["carnival"], "note": "Limited seasonal programme; historic city worth arriving early for."}, "los-angeles": {"n": "Los Angeles (San Pedro)", "s": "California", "r": ["mexico-riviera", "hawaii", "panama", "california-coast"], "l": ["princess", "carnival", "norwegian", "royal-caribbean", "holland-america", "disney"], "note": "Main Pacific gateway for Mexico and Hawaii sailings."}, "long-beach": {"n": "Long Beach", "s": "California", "r": ["mexico-riviera"], "l": ["carnival"], "note": "Short 3–5 night Baja and Ensenada runs — popular weekend option."}, "san-diego": {"n": "San Diego", "s": "California", "r": ["mexico-riviera", "hawaii", "panama", "california-coast"], "l": ["holland-america", "princess", "celebrity", "disney"], "note": "Relaxed terminal and a good base for a pre-cruise stay."}, "san-francisco": {"n": "San Francisco", "s": "California", "r": ["alaska", "mexico-riviera", "hawaii", "california-coast"], "l": ["princess", "royal-caribbean", "norwegian"], "note": "One of the few Alaska departures that avoids flying to the Pacific Northwest."}, "seattle": {"n": "Seattle", "s": "Washington", "r": ["alaska", "california-coast"], "l": ["royal-caribbean", "norwegian", "princess", "holland-america", "celebrity", "carnival"], "note": "The dominant US Alaska gateway — round-trip Inside Passage sailings."}, "vancouver": {"n": "Vancouver", "s": "British Columbia", "r": ["alaska", "california-coast"], "l": ["holland-america", "princess", "celebrity", "norwegian", "royal-caribbean", "disney", "oceania"], "note": "Best for one-way Gulf of Alaska sailings that pair with a Denali land tour."}, "seward": {"n": "Seward / Whittier", "s": "Alaska", "r": ["alaska"], "l": ["princess", "holland-america", "royal-caribbean", "norwegian"], "note": "Northern end of one-way Alaska sailings — usually combined with a cruisetour."}, "montreal": {"n": "Montreal", "s": "Quebec", "r": ["canada-ne"], "l": ["holland-america", "norwegian", "princess"], "note": "St. Lawrence departures, strongest in the autumn foliage season."}, "quebec-city": {"n": "Quebec City", "s": "Quebec", "r": ["canada-ne"], "l": ["holland-america", "norwegian", "princess", "seabourn"], "note": "Scenic river departure; the old town is worth an extra night."}, "halifax": {"n": "Halifax", "s": "Nova Scotia", "r": ["canada-ne"], "l": ["holland-america", "norwegian"], "note": "More commonly a port of call than a home port — check season."}, "san-juan": {"n": "San Juan", "s": "Puerto Rico", "r": ["caribbean-south", "caribbean-east"], "l": ["royal-caribbean", "carnival", "celebrity", "norwegian", "princess"], "note": "Sailing from within the Caribbean means more islands and less sea time."}, "bridgetown": {"n": "Bridgetown", "s": "Barbados", "r": ["caribbean-south"], "l": ["princess", "celebrity", "seabourn", "windstar", "silversea"], "note": "Deep Southern Caribbean itineraries reaching islands the big ports can't."}, "philipsburg": {"n": "Philipsburg", "s": "St. Maarten", "r": ["caribbean-east", "caribbean-south"], "l": ["windstar", "seabourn", "silversea"], "note": "Mostly small-ship departures — check which seasons operate."}, "cartagena": {"n": "Cartagena", "s": "Colombia", "r": ["caribbean-south", "panama", "amazon"], "l": [], "note": "Usually a port of call; home-port sailings are limited and seasonal."}, "colon": {"n": "Colón", "s": "Panama", "r": ["panama", "caribbean-south"], "l": [], "note": "Gateway for partial Canal transits and Central American itineraries."}, "buenos-aires": {"n": "Buenos Aires", "s": "Argentina", "r": ["south-america", "antarctica"], "l": ["princess", "norwegian", "msc", "celebrity", "oceania", "silversea"], "note": "Southern-summer season only, roughly November to March."}, "ushuaia": {"n": "Ushuaia", "s": "Argentina", "r": ["antarctica", "south-america"], "l": ["quark", "hurtigruten", "ponant", "lindblad", "silversea", "seabourn", "atlas"], "note": "The world's main Antarctica departure point — expedition ships only."}, "santiago": {"n": "Valparaíso / San Antonio (Santiago)", "s": "Chile", "r": ["south-america", "antarctica"], "l": ["princess", "holland-america", "norwegian", "oceania", "silversea"], "note": "Pairs with Patagonia and the Chilean fjords."}, "rio": {"n": "Rio de Janeiro / Santos", "s": "Brazil", "r": ["south-america", "amazon"], "l": ["msc", "costa"], "note": "Brazilian coastal season runs during the southern summer."}, "callao": {"n": "Callao (Lima)", "s": "Peru", "r": ["south-america", "panama"], "l": [], "note": "Usually a port of call on longer South America itineraries."}, "baltra": {"n": "Baltra / San Cristóbal", "s": "Ecuador (Galápagos)", "r": ["galapagos"], "l": ["celebrity", "silversea", "lindblad", "ponant"], "note": "Small expedition ships on fixed government-regulated itineraries."}, "ensenada": {"n": "Ensenada", "s": "Mexico", "r": ["mexico-riviera"], "l": [], "note": "Predominantly a port of call rather than a home port."}}, NR={"caribbean-east": {"name": "Eastern Caribbean", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Dec–Apr", "note": "Beaches, shopping, shorter sea-day count", "warn": "hurricane"}, "caribbean-west": {"name": "Western Caribbean", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Dec–Apr", "note": "Reefs, Maya ruins, diving", "warn": "hurricane"}, "caribbean-south": {"name": "Southern Caribbean", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Dec–Apr", "note": "Drier, longer sailings, fewer crowds", "warn": "hurricane-light"}, "bahamas": {"name": "Bahamas & short getaways", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Year-round", "note": "2–5 nights, private islands", "warn": "hurricane"}, "bermuda": {"name": "Bermuda", "months": [4, 5, 6, 7, 8, 9, 10], "peak": "May–Sep", "note": "Multi-day dockside stays", "warn": "hurricane"}, "mexico-riviera": {"name": "Mexican Riviera", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Nov–Apr", "note": "Cabo, Mazatlán, Puerto Vallarta", "warn": ""}, "alaska": {"name": "Alaska", "months": [5, 6, 7, 8, 9], "peak": "Jun–Aug", "note": "Glaciers, whales, very long daylight", "warn": ""}, "canada-ne": {"name": "Canada & New England", "months": [5, 6, 7, 8, 9, 10], "peak": "Sep–Oct", "note": "Autumn foliage, maritime history", "warn": ""}, "panama": {"name": "Panama Canal", "months": [1, 2, 3, 4, 10, 11, 12], "peak": "Oct–Apr", "note": "Full and partial transits", "warn": ""}, "hawaii": {"name": "Hawaii", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Year-round", "note": "Long sea-day crossings from the mainland", "warn": ""}, "california-coast": {"name": "California coast & Pacific Northwest", "months": [4, 5, 6, 7, 8, 9, 10], "peak": "May–Sep", "note": "Short coastal hops", "warn": ""}, "transatlantic": {"name": "Transatlantic crossings", "months": [4, 5, 9, 10, 11], "peak": "Apr–May, Sep–Nov", "note": "Repositioning voyages and scheduled crossings", "warn": ""}, "south-america": {"name": "South America", "months": [1, 2, 3, 11, 12], "peak": "Nov–Mar", "note": "Southern summer — Brazil, Argentina, Chile", "warn": ""}, "antarctica": {"name": "Antarctica", "months": [11, 12, 1, 2, 3], "peak": "Dec–Feb", "note": "Expedition sailings from Ushuaia", "warn": ""}, "galapagos": {"name": "Galápagos", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Year-round", "note": "Small expedition ships, fixed itineraries", "warn": ""}, "amazon": {"name": "Amazon & Northern South America", "months": [11, 12, 1, 2, 3, 4], "peak": "Dec–Mar", "note": "River-and-ocean itineraries", "warn": ""}, "cuba-yucatan": {"name": "Yucatán & Western Gulf", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "peak": "Nov–Apr", "note": "Cozumel, Costa Maya, Progreso", "warn": "hurricane"}}, NG=[{"g": "Florida & Southeast", "p": ["miami", "fort-lauderdale", "port-canaveral", "tampa", "jacksonville", "palm-beach", "charleston"]}, {"g": "Gulf Coast", "p": ["galveston", "new-orleans", "mobile"]}, {"g": "Northeast", "p": ["new-york", "cape-liberty", "boston", "baltimore", "norfolk"]}, {"g": "West Coast", "p": ["los-angeles", "long-beach", "san-diego", "san-francisco", "seattle"]}, {"g": "Canada", "p": ["vancouver", "montreal", "quebec-city", "halifax"]}, {"g": "Canada & Alaska", "p": ["seward"]}, {"g": "Caribbean", "p": ["san-juan", "bridgetown", "philipsburg"]}, {"g": "Mexico", "p": ["ensenada"]}, {"g": "Latin America", "p": ["cartagena", "colon", "buenos-aires", "ushuaia", "santiago", "rio", "callao", "baltra"]}], NL={"royal-caribbean": {"n": "Royal Caribbean", "e": "🌊", "c": true}, "carnival": {"n": "Carnival", "e": "🎉", "c": true}, "norwegian": {"n": "Norwegian Cruise Line", "e": "🎭", "c": false}, "msc": {"n": "MSC Cruises", "e": "🍋", "c": true}, "princess": {"n": "Princess Cruises", "e": "🧭", "c": true}, "holland-america": {"n": "Holland America Line", "e": "🧊", "c": true}, "celebrity": {"n": "Celebrity Cruises", "e": "🥂", "c": true}, "disney": {"n": "Disney Cruise Line", "e": "🏰", "c": false}, "virgin-voyages": {"n": "Virgin Voyages", "e": "🕶️", "c": false}, "margaritaville-at-sea": {"n": "Margaritaville at Sea", "e": "🌴", "c": true}, "costa": {"n": "Costa Cruises", "e": "🇮🇹", "c": false}, "cunard": {"n": "Cunard", "e": "🎩", "c": true}, "oceania": {"n": "Oceania Cruises", "e": "🍽️", "c": false}, "azamara": {"n": "Azamara", "e": "⚓", "c": false}, "viking-ocean": {"n": "Viking Ocean Cruises", "e": "🛡️", "c": false}, "regent": {"n": "Regent Seven Seas", "e": "💎", "c": false}, "silversea": {"n": "Silversea", "e": "🥈", "c": false}, "seabourn": {"n": "Seabourn", "e": "🦢", "c": false}, "explora": {"n": "Explora Journeys", "e": "✨", "c": false}, "ritz-carlton": {"n": "The Ritz-Carlton Yacht Collection", "e": "🛥️", "c": false}, "windstar": {"n": "Windstar Cruises", "e": "⛵", "c": false}, "crystal": {"n": "Crystal", "e": "💠", "c": false}, "atlas": {"n": "Atlas Ocean Voyages", "e": "🧭", "c": false}, "lindblad": {"n": "Lindblad Expeditions", "e": "🔬", "c": false}, "hurtigruten": {"n": "HX (Hurtigruten Expeditions)", "e": "🧭", "c": false}, "quark": {"n": "Quark Expeditions", "e": "🐧", "c": false}, "ponant": {"n": "Ponant", "e": "🇫🇷", "c": false}, "aurora": {"n": "Aurora Expeditions", "e": "🌊", "c": false}, "uncruise": {"n": "UnCruise Adventures", "e": "🛶", "c": false}, "alaskan-dream": {"n": "Alaskan Dream Cruises", "e": "🐻", "c": false}, "ecoventura": {"n": "Ecoventura", "e": "🐢", "c": false}, "metropolitan-touring": {"n": "Metropolitan Touring", "e": "🦎", "c": false}, "american-cruise-lines": {"n": "American Cruise Lines", "e": "🇺🇸", "c": false}, "viking-mississippi": {"n": "Viking Mississippi", "e": "🌾", "c": false}, "american-queen": {"n": "American Queen Voyages", "e": "🎡", "c": false}, "pearl-seas": {"n": "Pearl Seas Cruises", "e": "🦪", "c": false}};
+var NVG={port:null,region:null,month:null,party:null,step:1};window.NVG=NVG;
+var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function nvgRender(){
+  var body=document.getElementById('nvgBody'),
+      step=document.getElementById('nvgStep'),
+      title=document.getElementById('nvgTitle'),
+      bar=document.getElementById('nvgBar');
+  var s=NVG.step;
+  bar.style.width=(s>=5?100:s*25)+'%';
+  step.textContent = s>=5 ? 'Your result' : ('Step '+s+' of 4');
+
+  if(s===1){
+    title.textContent='Where will you board?';
+    var h='<p class="nvgsub">Sailing from a port you can drive to removes airfares entirely — often the single biggest saving on a cruise.</p><div class="opts">';
+    NG.forEach(function(g){
+      h+='<div class="grp">'+g.g+'</div>';
+      g.p.forEach(function(id){var p=NP[id];
+        h+='<button class="opt" data-port="'+id+'"><i>⚓</i><span class="txt">'+p.n+
+           '<span class="sm">'+p.s+'</span></span></button>';});
+    });
+    body.innerHTML=h+'</div>';
+  }
+
+  else if(s===2){
+    var p=NP[NVG.port];
+    title.textContent='Where do you want to sail?';
+    var h='<p class="nvgsub">These are the regions you can actually reach from <b>'+p.n+'</b>. '+p.note+'</p><div class="opts">';
+    p.r.forEach(function(rid){var r=NR[rid];if(!r)return;
+      h+='<button class="opt" data-region="'+rid+'"><i>🧭</i><span class="txt">'+r.name+
+         '<span class="sm">'+r.note+' · peak '+r.peak+'</span></span></button>';});
+    body.innerHTML=h+'</div>'+navBtns(true,false);
+  }
+
+  else if(s===3){
+    title.textContent='When can you travel?';
+    var r=NR[NVG.region];
+    var h='<p class="nvgsub">'+r.name+' operates in the highlighted months. Anything greyed out simply isn\'t sailing then.</p><div class="opts two">';
+    for(var i=0;i<12;i++){
+      var on=r.months.indexOf(i+1)>-1;
+      h+='<button class="opt" data-month="'+i+'"'+(on?'':' disabled style="opacity:.35"')+'>'+
+         '<i>'+(on?'✅':'—')+'</i><span class="txt">'+MONTHS[i]+
+         '<span class="sm">'+(on?'Sailing':'Out of season')+'</span></span></button>';
+    }
+    body.innerHTML=h+'</div>'+navBtns(true,false);
+  }
+
+  else if(s===4){
+    title.textContent='Who\'s travelling?';
+    var opts=[['family','👨‍👩‍👧','Family with children','Kids club age bands matter most here'],
+              ['couple','💑','Couple','Adult-leaning ships, quieter decks'],
+              ['group','🎊','Group or celebration','Multiple cabins, linked dining'],
+              ['solo','🧳','Solo or friends','Solo cabins and share options vary by line'],
+              ['multigen','👴','Multi-generation','Everyone wants something different'],
+              ['access','♿','Accessibility needs','Accessible cabins sell out earliest']];
+    var h='<p class="nvgsub">This changes which ships genuinely work — more than the destination does.</p><div class="opts">';
+    opts.forEach(function(o){
+      h+='<button class="opt" data-party="'+o[0]+'"><i>'+o[1]+'</i><span class="txt">'+o[2]+
+         '<span class="sm">'+o[3]+'</span></span></button>';});
+    body.innerHTML=h+'</div>'+navBtns(true,false);
+  }
+
+  else { nvgResult(); }
+
+  body.querySelectorAll('[data-port]').forEach(function(b){b.onclick=function(){
+    NVG.port=b.getAttribute('data-port');NVG.step=2;nvgRender();push('nvg_port',{port:NVG.port});};});
+  body.querySelectorAll('[data-region]').forEach(function(b){b.onclick=function(){
+    NVG.region=b.getAttribute('data-region');NVG.step=3;nvgRender();push('nvg_region',{region:NVG.region});};});
+  body.querySelectorAll('[data-month]').forEach(function(b){b.onclick=function(){
+    if(b.disabled)return;NVG.month=+b.getAttribute('data-month');NVG.step=4;nvgRender();push('nvg_month',{month:NVG.month});};});
+  body.querySelectorAll('[data-party]').forEach(function(b){b.onclick=function(){
+    NVG.party=b.getAttribute('data-party');NVG.step=5;nvgRender();push('nvg_party',{party:NVG.party});};});
+  var back=body.querySelector('.nvgback');
+  if(back)back.onclick=function(){NVG.step=Math.max(1,NVG.step-1);nvgRender();};
+  var re=body.querySelector('.restart');
+  if(re)re.onclick=function(){NVG={port:null,region:null,month:null,party:null,step:1};nvgRender();};
+}
+
+function navBtns(back){return '<div class="nvgnav">'+(back?'<button class="nvgback">← Back</button>':'')+'</div>';}
+function push(ev,o){o=o||{};o.event=ev;window.dataLayer=window.dataLayer||[];dataLayer.push(o);}
+
+function nvgResult(){
+  var p=NP[NVG.port],r=NR[NVG.region],m=NVG.month,body=document.getElementById('nvgBody');
+  document.getElementById('nvgTitle').textContent='Here\'s what fits';
+
+  var inSeason=r.months.indexOf(m+1)>-1;
+  var lines=p.l.filter(function(sl){return NL[sl];});
+
+  var h='<div class="res"><span class="resbadge">Based on your answers</span>'+
+    '<h3>'+r.name+' from '+p.n+'</h3>'+
+    '<p class="lead">Sailing in '+MONTHS[m]+', for a '+partyLabel()+'.</p>';
+
+  if(inSeason){
+    h+='<div class="resgood"><b>✓</b><span><b>'+MONTHS[m]+' works.</b> '+r.name+
+       ' is in season — peak demand runs '+r.peak+'.</span></div>';
+  }else{
+    h+='<div class="reswarn"><b>⚠</b><span><b>'+MONTHS[m]+' is outside the season.</b> '+r.name+
+       ' typically sails '+monthRange(r.months)+'. A specialist can suggest an alternative region for your dates.</span></div>';
+  }
+
+  if(r.warn==='hurricane' && m>=5 && m<=10){
+    h+='<div class="reswarn"><b>⚠</b><span><b>Hurricane season.</b> The Atlantic season runs 1 June – 30 November, '+
+       'most active mid-August to mid-October. Sailings still operate and are re-routed when needed — but travel insurance matters more in these months.</span></div>';
+  }
+  if(NVG.party==='access'){
+    h+='<div class="reswarn"><b>⚠</b><span><b>Book accessible cabins early.</b> They are limited per ship and sell out '+
+       'long before general inventory. Some ports also require tendering, which can be difficult with a wheelchair or scooter.</span></div>';
+  }
+  if(NVG.party==='family'){
+    h+='<div class="resgood"><b>✓</b><span><b>Check kids club age bands.</b> They decide whether siblings are together or split '+
+       'across two clubs — the most common family surprise on board.</span></div>';
+  }
+  if(NVG.party==='group'){
+    h+='<div class="resgood"><b>✓</b><span><b>Groups need arranging in advance.</b> Linked dining, adjacent cabins and split '+
+       'payments across households are phone work, not website work.</span></div>';
+  }
+
+  h+='<div class="rescard"><span class="lbl">Your departure port</span><b class="big">'+p.n+'</b>'+
+     '<p>'+p.note+'</p></div>';
+
+  h+='<div class="rescard"><span class="lbl">Lines commonly sailing this route</span>'+
+     '<div class="reslines">'+ (lines.length ? lines.map(function(sl){var L=NL[sl];
+       return L.c ? '<a href="lines-deep/'+sl+'.html">'+L.e+' '+L.n+' →</a>'
+                  : '<span>'+L.e+' '+L.n+'</span>';}).join('')
+       : '<span>Verifying current deployment</span>') +
+     '</div><p style="margin-top:.5rem">Deployments change seasonally — a specialist confirms which ships are actually sailing your dates.</p></div>';
+
+  h+='<a href="tel:'+PHONE_H+'" class="bigcall" onclick="trackCall(\'navigator\')">'+
+     '<span>☎</span><span>Get '+r.name.split(' ')[0]+' options — call now</span></a>'+
+     '<p class="cap">Advisors answer quickly. Free, no obligation, and we never take payment for travel.</p>'+
+     '<button class="restart">Start over</button></div>';
+
+  body.innerHTML=h;
+  var re=body.querySelector('.restart');
+  if(re)re.onclick=function(){NVG={port:null,region:null,month:null,party:null,step:1};nvgRender();};
+  push('nvg_complete',{port:NVG.port,region:NVG.region,month:NVG.month,party:NVG.party});
+}
+
+function partyLabel(){return {family:'family with children',couple:'couple',group:'group',
+  solo:'solo or friends trip',multigen:'multi-generation group',access:'trip with accessibility needs'}[NVG.party]||'trip';}
+function monthRange(ms){var n=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  if(ms.length>=12)return 'year-round';
+  return n[ms[0]-1]+'–'+n[ms[ms.length-1]-1];}
+var PHONE_H='+18885550142';
+nvgRender();
+
+
+/* drawer */
+(function(){var b=document.getElementById('burger'),dr=document.getElementById('drawer');
+if(!b||!dr)return;
+b.addEventListener('click',function(){var open=dr.hidden;dr.hidden=!open;
+b.setAttribute('aria-expanded',String(open));b.textContent=open?'✕':'☰';});})();
+
+/* back to top */
+(function(){var t=document.getElementById('totop');if(!t)return;
+t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+window.addEventListener('scroll',function(){
+t.className=window.scrollY>600?'totop on':'totop';},{passive:true});})();
+</script>
+<script>
+/* back-to-top */
+(function(){var t=document.getElementById('totop');if(!t)return;
+t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+window.addEventListener('scroll',function(){
+  t.className=(window.scrollY>500)?'totop on':'totop';},{passive:true});})();
+/* back control — uses history when available, else the parent section */
+(function(){var b=document.getElementById('crumbback');if(!b)return;
+b.addEventListener('click',function(e){
+  if(window.history.length>1){e.preventDefault();window.history.back();}
+});})();
+</script>
+</body>
+</html>

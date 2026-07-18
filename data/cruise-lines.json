@@ -1,0 +1,3365 @@
+{
+  "_schema": {
+    "version": "1.0",
+    "notes": "Single source of truth for all generated pages. Every factual field carries a source URL and a verified date. Fields with value 'VERIFY' must be filled from a tier-1 source before publishing. Never store prices, fares, discounts or savings.",
+    "refresh_days": {
+      "company": 90,
+      "fleet": 90,
+      "inclusions": 30,
+      "family": 90,
+      "accessibility": 90,
+      "itineraries": 60,
+      "policies": 90
+    }
+  },
+  "lines": [
+    {
+      "slug": "royal-caribbean",
+      "name": "Royal Caribbean",
+      "legal_name": "Royal Caribbean International",
+      "theme": {
+        "c1": "#0b3a6b",
+        "c2": "#1665a8",
+        "accent": "#4fb3f0",
+        "emoji": "🌊"
+      },
+      "positioning": "big-ship-resort",
+      "one_line": "The largest ships at sea, built so the ship itself is the destination.",
+      "company": {
+        "founded": 1968,
+        "headquarters": "Miami, Florida",
+        "parent": "Royal Caribbean Group",
+        "loyalty_program": "Crown & Anchor Society",
+        "loyalty_tiers": [
+          "Gold",
+          "Platinum",
+          "Emerald",
+          "Diamond",
+          "Diamond Plus",
+          "Pinnacle Club"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "https://www.royalcaribbean.com/",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Icon",
+          "ships": [
+            "VERIFY - list ships in service"
+          ],
+          "first_in_service": 2024,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "waterpark",
+            "neighbourhood layout",
+            "multi-level family suites"
+          ],
+          "typical_regions": [
+            "Caribbean"
+          ],
+          "source": "VERIFY - official ship page",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Oasis",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2009,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "Central Park",
+            "Boardwalk",
+            "AquaTheater",
+            "zip line",
+            "carousel"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Mediterranean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Quantum",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2014,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "North Star observation capsule",
+            "RipCord skydiving simulator",
+            "SeaPlex",
+            "bumper cars"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Asia",
+            "Caribbean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Freedom",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2006,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "FlowRider surf simulator",
+            "Royal Promenade",
+            "ice rink"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Bahamas"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Voyager",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 1999,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "Royal Promenade",
+            "ice rink",
+            "rock climbing wall"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Asia",
+            "Europe"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Radiance",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2001,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "extensive glass exteriors",
+            "glass elevators",
+            "self-levelling pool tables"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Panama Canal",
+            "Australia"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Vision",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 1995,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "solarium",
+            "glass-walled public rooms"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Europe"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days — highest-traffic data on the page",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet (Windjammer Marketplace)",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which venues are complimentary on each class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "Reservations recommended",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools, hot tubs, sports courts",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club (Adventure Ocean)",
+            "note": "Core hours; late-night care may cost extra",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice at breakfast",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount and whether suites differ",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte; dining packages exist",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi (VOOM)",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino, arcade, bingo",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select premium activities",
+            "note": "VERIFY which onboard activities carry a fee by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "Interior",
+          "Virtual Balcony Interior",
+          "Ocean View",
+          "Balcony",
+          "Neighbourhood Balcony",
+          "Junior Suite",
+          "Grand Suite",
+          "Owner's Suite",
+          "Star Class suites"
+        ],
+        "virtual_balcony": {
+          "exists": true,
+          "classes": [
+            "Quantum",
+            "Oasis",
+            "Icon"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "neighbourhood_balcony": {
+          "exists": true,
+          "note": "Overlooks Central Park or Boardwalk rather than the sea",
+          "classes": [
+            "Oasis",
+            "Icon"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY count and categories per class",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "Royal Suite Class",
+          "tiers": [
+            "Sea Class",
+            "Sky Class",
+            "Star Class"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "Adventure Ocean",
+        "age_bands": "VERIFY - exact bands as published",
+        "minimum_sailing_age": "VERIFY - typically 6 months, 12 months on transatlantic/remote itineraries",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY - oxygen, dialysis, refrigerated medication",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY - current US home ports"
+        ],
+        "typical_lengths": [
+          "3 night",
+          "4 night",
+          "5 night",
+          "7 night",
+          "8+ night"
+        ],
+        "regions": [
+          {
+            "region": "Caribbean",
+            "months": "Year-round",
+            "note": "Eastern, Western and Southern routes"
+          },
+          {
+            "region": "Bahamas",
+            "months": "Year-round",
+            "note": "Short sailings from Florida"
+          },
+          {
+            "region": "Alaska",
+            "months": "VERIFY season months",
+            "note": "Summer only"
+          },
+          {
+            "region": "Mediterranean",
+            "months": "VERIFY",
+            "note": "Warm months"
+          },
+          {
+            "region": "Northern Europe",
+            "months": "VERIFY",
+            "note": "Summer only"
+          },
+          {
+            "region": "Transatlantic repositioning",
+            "months": "VERIFY",
+            "note": "Spring and autumn"
+          }
+        ],
+        "private_destination": {
+          "name": "Perfect Day at CocoCay",
+          "location": "The Bahamas",
+          "note": "VERIFY which itineraries include it and what is complimentary vs paid",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "onboard_currency": "US dollar",
+        "dress_code": "VERIFY - names and number of formal nights on a 7-night",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose written by us. Never sourced from the cruise line. Safe to edit freely.",
+        "who_its_for": [
+          "Families with children and teenagers",
+          "First-time cruisers who want maximum wow factor",
+          "Groups where everyone wants something different",
+          "Travellers who enjoy structure and activity",
+          "Anyone who wants the ship itself to be the attraction"
+        ],
+        "who_its_not_for": [
+          "Travellers seeking quiet, adults-only calm",
+          "Those who dislike crowds and queuing",
+          "Cruisers who rank gourmet dining above everything",
+          "Anyone wanting small ports that large ships cannot reach"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Sailing month",
+            "detail": "School holidays, Christmas and New Year carry the highest demand of the year. The same itinerary in a shoulder week is a different proposition entirely."
+          },
+          {
+            "factor": "Ship age and class",
+            "detail": "The newest ships command a premium over older tonnage sailing similar routes. If facilities matter less to you than the destination, an older class often delivers the same itinerary."
+          },
+          {
+            "factor": "Cabin category",
+            "detail": "Interior to balcony is usually the single biggest step in the fare. Neighbourhood balconies sit between the two."
+          },
+          {
+            "factor": "Itinerary length",
+            "detail": "Cost per night often falls as sailings get longer, so a 7-night can be better value per day than a 4-night."
+          },
+          {
+            "factor": "What you add",
+            "detail": "Gratuities, drinks, wi-fi, speciality dining and excursions can meaningfully change the all-in total. Compare the total, not the fare."
+          },
+          {
+            "factor": "How far ahead you book",
+            "detail": "Cabin categories sell out unevenly. Accessible and connecting cabins in particular go early regardless of the calendar."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Which Royal Caribbean ship is best for young children?",
+          "a": "The newer and larger classes carry the deepest children's facilities — bigger waterparks, more kids' club capacity with tighter age bands, and more connecting cabin options. The right answer still depends on your children's ages and how long you want to sail, which is why this is worth two minutes on the phone."
+        },
+        {
+          "q": "What is a neighbourhood balcony and should I book one?",
+          "a": "On the largest classes some balconies face inward over Central Park or the Boardwalk rather than the sea. They cost less than an ocean balcony. Some travellers love the atmosphere and the shelter; others find them enclosed and noisy above the Boardwalk. Decide deliberately rather than by price."
+        },
+        {
+          "q": "Do the biggest ships feel crowded?",
+          "a": "They carry more passengers but also far more venues and deck space, so density varies by design and by how you use the ship. Classes with strong neighbourhood separation tend to feel less busy than the headline capacity suggests."
+        },
+        {
+          "q": "Is a drinks package worth buying?",
+          "a": "It depends entirely on how much you actually drink, and packages generally must be bought for all adults in a cabin. The maths is simple once someone walks you through it honestly, which a specialist can do in a couple of minutes."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Royal Caribbean official site",
+          "url": "https://www.royalcaribbean.com/",
+          "used_for": "Ship specs, inclusions, policies, kids club"
+        },
+        {
+          "label": "NOAA National Hurricane Center",
+          "url": "https://www.nhc.noaa.gov/",
+          "used_for": "Hurricane season dates"
+        },
+        {
+          "label": "NPS Glacier Bay",
+          "url": "https://www.nps.gov/glba/",
+          "used_for": "Alaska park access"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "carnival",
+      "name": "Carnival",
+      "legal_name": "Carnival Cruise Line",
+      "theme": {
+        "c1": "#8a1c2b",
+        "c2": "#c8362c",
+        "accent": "#ff8a5c",
+        "emoji": "🎉"
+      },
+      "positioning": "fun-first-value",
+      "one_line": "Casual, high-energy sailings from more US home ports than any other line.",
+      "company": {
+        "founded": 1972,
+        "headquarters": "Miami, Florida",
+        "parent": "Carnival Corporation & plc",
+        "loyalty_program": "VIFP Club",
+        "loyalty_tiers": [
+          "Blue",
+          "Red",
+          "Gold",
+          "Platinum",
+          "Diamond"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Excel",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2020,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "roller coaster at sea",
+            "multiple dining zones",
+            "waterworks"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Bahamas"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Vista",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2016,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "IMAX theatre",
+            "ropes course",
+            "waterworks"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Mediterranean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Dream",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2009,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "waterworks",
+            "large pool decks"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Bahamas"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Conquest",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2002,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "classic layout",
+            "value deployment"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Mexico"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Spirit",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2001,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "smaller footprint",
+            "unusual itineraries"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Hawaii",
+            "Panama Canal"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "Camp Ocean",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Alaska",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Bahamas",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Hawaii",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Mediterranean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Mexico",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Panama Canal",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Budget-conscious families",
+          "First-time cruisers testing the format",
+          "Short 3–5 night getaways",
+          "Travellers who can drive to a home port",
+          "Groups wanting a social atmosphere"
+        ],
+        "who_its_not_for": [
+          "Travellers seeking a refined or quiet atmosphere",
+          "Those prioritising gourmet dining",
+          "Cruisers who dislike party energy",
+          "Anyone wanting extensive enrichment programming"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Home port choice",
+            "detail": "Driving instead of flying removes the largest single variable for most families. Compare drive-to ports before anything else."
+          },
+          {
+            "factor": "Sailing length",
+            "detail": "Short 3–5 night sailings cost less overall but more per night. Seven nights is often better value per day."
+          },
+          {
+            "factor": "Ship age",
+            "detail": "Newer classes command a premium over older tonnage sailing similar routes."
+          },
+          {
+            "factor": "Cabin category",
+            "detail": "Interior to balcony is the biggest single step. Cove balconies sit in between on some ships."
+          },
+          {
+            "factor": "School holiday timing",
+            "detail": "Holiday weeks are the busiest and most expensive of the year."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Gratuities, drinks packages, speciality dining and excursions change the all-in total substantially."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Is Carnival only for young party crowds?",
+          "a": "Not uniformly. Short weekend sailings draw the liveliest crowds; longer itineraries and off-peak dates attract a broader mix including families and older travellers. Choosing the right sailing length matters more than choosing the right ship."
+        },
+        {
+          "q": "Why are so many people driving to their cruise?",
+          "a": "Carnival sails from more US home ports than any other line, including several that competitors ignore. For a family of four, removing four airfares changes the entire budget — worth checking before you assume you need to fly."
+        },
+        {
+          "q": "What is a cove balcony?",
+          "a": "A balcony set lower in the hull, closer to the waterline and more sheltered than a standard balcony. Only some ships have them. It's a distinctive option most booking sites won't explain to you."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Carnival Cruise Line official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "holland-america",
+      "name": "Holland America",
+      "legal_name": "Holland America Line",
+      "theme": {
+        "c1": "#0b3d4f",
+        "c2": "#17708a",
+        "accent": "#6fd0d8",
+        "emoji": "🧊"
+      },
+      "positioning": "classic-premium",
+      "one_line": "Mid-size ships, an unhurried pace, and decades of Alaska experience.",
+      "company": {
+        "founded": 1873,
+        "headquarters": "Seattle, Washington",
+        "parent": "Carnival Corporation & plc",
+        "loyalty_program": "Mariner Society",
+        "loyalty_tiers": [
+          "1-Star",
+          "2-Star",
+          "3-Star",
+          "4-Star",
+          "5-Star"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Pinnacle",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2016,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "music venue complex",
+            "expanded dining",
+            "largest suites"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Caribbean",
+            "Europe"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Signature",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2008,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "traditional design",
+            "modern amenities"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Caribbean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Vista",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2002,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "smaller footprint",
+            "longer itineraries"
+          ],
+          "typical_regions": [
+            "Europe",
+            "World voyages"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "Club HAL",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Alaska",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Europe",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "World voyages",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Alaska and glacier-focused travellers",
+          "Couples and older cruisers",
+          "Music and culinary enthusiasts",
+          "Longer voyages and world cruise segments",
+          "Travellers who want port depth over onboard spectacle"
+        ],
+        "who_its_not_for": [
+          "Families needing extensive children's programming",
+          "Travellers wanting waterslides and thrill rides",
+          "Those seeking nightlife-driven sailings",
+          "Budget-first shoppers"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Alaska season timing",
+            "detail": "May and September sail for less than July but bring cooler, wetter weather and less wildlife activity."
+          },
+          {
+            "factor": "Verandah vs interior",
+            "detail": "On scenic itineraries a verandah earns its cost far more than on a Caribbean sailing — you use it constantly."
+          },
+          {
+            "factor": "Voyage length",
+            "detail": "Longer voyages frequently deliver the lowest cost per night in the fleet."
+          },
+          {
+            "factor": "Cruisetour add-on",
+            "detail": "Land extensions add rail, hotels and transfers — a separate budget line from the sailing."
+          },
+          {
+            "factor": "Ship class",
+            "detail": "The newest class carries a premium over older tonnage on similar routes."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Gratuities, drinks, speciality dining and excursions change the total meaningfully."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Is Holland America genuinely better for Alaska?",
+          "a": "It is one of the longest-operating lines in the region with established glacier access and integrated land programmes. Whether it beats alternatives for your trip depends on your dates, budget and whether you want a land extension."
+        },
+        {
+          "q": "What is a cruisetour?",
+          "a": "A one-way sailing combined with an inland land programme travelling by rail and coach toward the interior national park. More moving parts than a standard cruise, which is why most travellers arrange it by phone."
+        },
+        {
+          "q": "Is the average passenger older?",
+          "a": "Generally yes, particularly on longer voyages and off-peak dates. Alaska summer sailings and holiday periods draw a broader mix."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Holland America Line official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "celebrity",
+      "name": "Celebrity Cruises",
+      "legal_name": "Celebrity Cruises",
+      "theme": {
+        "c1": "#1a2b4a",
+        "c2": "#3d5a8a",
+        "accent": "#a89bd6",
+        "emoji": "🥂"
+      },
+      "positioning": "premium-modern",
+      "one_line": "Design-led ships with a calmer, adult-leaning atmosphere and serious food.",
+      "company": {
+        "founded": 1988,
+        "headquarters": "Miami, Florida",
+        "parent": "Royal Caribbean Group",
+        "loyalty_program": "Captain's Club",
+        "loyalty_tiers": [
+          "Preview",
+          "Classic",
+          "Select",
+          "Elite",
+          "Elite Plus",
+          "Zenith"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Edge",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2018,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "infinite verandah",
+            "cantilevered deck platform",
+            "multiple main restaurants"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Europe",
+            "Alaska"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Solstice",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2008,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "real grass lawn deck",
+            "glass-forward design"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Alaska",
+            "Australia"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Millennium",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2000,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "smaller footprint",
+            "refurbished interiors"
+          ],
+          "typical_regions": [
+            "Europe",
+            "Asia",
+            "Caribbean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "Camp at Sea",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Alaska",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Asia",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Australia",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Europe",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Couples and adult groups",
+          "Food-focused travellers",
+          "Design and architecture enthusiasts",
+          "Alaska, Europe and Caribbean in comfort",
+          "Cruisers upgrading from mainstream lines"
+        ],
+        "who_its_not_for": [
+          "Families wanting large children's programmes",
+          "Travellers seeking waterparks and thrill attractions",
+          "Strict budget shoppers",
+          "Those who prefer traditional formal ocean-liner style"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Promotional inclusions",
+            "detail": "Fares frequently bundle drinks, wi-fi and gratuities. The headline fare alone is a poor comparison tool — compare all-in."
+          },
+          {
+            "factor": "Ship class",
+            "detail": "The newest class and the oldest are very different products at different price points."
+          },
+          {
+            "factor": "Verandah type",
+            "detail": "Infinite verandah, traditional balcony and sunset verandah price differently."
+          },
+          {
+            "factor": "Suite class",
+            "detail": "A separate tier with its own dining and spaces, priced accordingly."
+          },
+          {
+            "factor": "Season",
+            "detail": "European shoulder months cost less than peak summer and are usually more pleasant."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Speciality dining and excursions are the main variables once drinks are bundled."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What exactly is an infinite verandah?",
+          "a": "A cabin design where the living space extends to the ship's edge with a retractable upper window, rather than a separate outdoor balcony. Some travellers prefer it; others miss a traditional open balcony. Understand which you're booking."
+        },
+        {
+          "q": "How is Celebrity different from mainstream lines?",
+          "a": "Quieter atmosphere, stronger food and design, fewer large family attractions, and a higher fare that often includes more. Whether that trade is worth it depends on what you value on board."
+        },
+        {
+          "q": "Is suite class worth it?",
+          "a": "Suite class functions almost as a separate product with its own restaurant, lounge and deck. It's a bigger step up than the equivalent on most lines."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Celebrity Cruises official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "princess",
+      "name": "Princess Cruises",
+      "legal_name": "Princess Cruises",
+      "theme": {
+        "c1": "#0a3550",
+        "c2": "#17679a",
+        "accent": "#5ec6e8",
+        "emoji": "🧭"
+      },
+      "positioning": "premium-mainstream",
+      "one_line": "A balanced middle path with one of the widest itinerary maps at sea.",
+      "company": {
+        "founded": 1965,
+        "headquarters": "Santa Clarita, California",
+        "parent": "Carnival Corporation & plc",
+        "loyalty_program": "Captain's Circle",
+        "loyalty_tiers": [
+          "Gold",
+          "Ruby",
+          "Platinum",
+          "Elite"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Sphere",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2023,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "multi-deck glass atrium",
+            "expanded dining"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Europe"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Royal",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2013,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "balanced layout",
+            "wide deployment"
+          ],
+          "typical_regions": [
+            "Alaska",
+            "Caribbean",
+            "Europe"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Grand",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 1998,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "smaller footprint",
+            "distinctive itineraries"
+          ],
+          "typical_regions": [
+            "Japan",
+            "Australia",
+            "World"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "Camp Discovery",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Alaska",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Australia",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Europe",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Japan",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "World",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Multi-generation groups needing common ground",
+          "Alaska travellers wanting a land extension",
+          "Unusual destinations — Japan, Australia, world segments",
+          "Couples and older travellers",
+          "Cruisers who value itinerary over onboard spectacle"
+        ],
+        "who_its_not_for": [
+          "Travellers wanting waterparks and thrill attractions",
+          "Those seeking nightlife-driven sailings",
+          "Budget-first shoppers",
+          "Anyone wanting a strictly adults-only atmosphere"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Cruisetour vs cruise only",
+            "detail": "Land extensions add rail, hotels and transfers as a separate budget line."
+          },
+          {
+            "factor": "Region",
+            "detail": "Japan, Australia and world segments price very differently from Caribbean sailings."
+          },
+          {
+            "factor": "Balcony value by itinerary",
+            "detail": "On Alaska and Norway a balcony is worth far more than on a Caribbean sailing."
+          },
+          {
+            "factor": "Ship class",
+            "detail": "The fleet spans several generations with meaningfully different facilities."
+          },
+          {
+            "factor": "Voyage length",
+            "detail": "Longer repositioning and world segments often carry the lowest per-night cost."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Gratuities, drinks, speciality dining and excursions change the all-in total."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Why do people choose Princess for Alaska?",
+          "a": "The line pairs one-way sailings with rail-based land tours reaching the interior national park. Assembling that independently is difficult, which is why most travellers book it by phone."
+        },
+        {
+          "q": "Is Princess good for families?",
+          "a": "It works well for multi-generation groups travelling together, but it isn't built around children the way family-focused lines are. If children are the primary consideration, other lines offer more."
+        },
+        {
+          "q": "What does the wearable device actually do?",
+          "a": "Boarding, cabin access, onboard payments and locating your party. It's more useful with a large group — set it up before boarding rather than at the terminal."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Princess Cruises official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "msc",
+      "name": "MSC Cruises",
+      "legal_name": "MSC Cruises",
+      "theme": {
+        "c1": "#0a2f5e",
+        "c2": "#1461a8",
+        "accent": "#f0b64f",
+        "emoji": "🍋"
+      },
+      "positioning": "international-mainstream",
+      "one_line": "European-owned, international on board, and consistently competitive.",
+      "company": {
+        "founded": 1989,
+        "headquarters": "Geneva, Switzerland",
+        "parent": "MSC Group",
+        "loyalty_program": "MSC Voyagers Club",
+        "loyalty_tiers": [
+          "Classic",
+          "Silver",
+          "Gold",
+          "Diamond"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "World",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2022,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "expanded dining districts",
+            "multi-deck entertainment"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Mediterranean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Meraviglia",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2017,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "covered indoor promenade",
+            "digital sky ceiling"
+          ],
+          "typical_regions": [
+            "Caribbean",
+            "Mediterranean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Seaside",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2017,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "waterfront promenades",
+            "extensive outdoor deck"
+          ],
+          "typical_regions": [
+            "Caribbean"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "MSC Kids Clubs",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Mediterranean",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Value-focused travellers",
+          "Those who enjoy an international atmosphere",
+          "Mediterranean and European itineraries",
+          "Yacht Club travellers wanting a boutique experience",
+          "Families comfortable in a multilingual environment"
+        ],
+        "who_its_not_for": [
+          "Travellers wanting a strictly American onboard culture",
+          "Those expecting US-style service norms throughout",
+          "Cruisers seeking extensive enrichment programming",
+          "Anyone who dislikes multilingual announcements"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Yacht Club vs standard",
+            "detail": "A genuinely different product — compare it against a premium line's balcony, not against an MSC balcony."
+          },
+          {
+            "factor": "Drinks package tier",
+            "detail": "Inclusions differ more between tiers than on US lines. Read what each covers."
+          },
+          {
+            "factor": "Region",
+            "detail": "European sailings feel more international than the line's Caribbean deployment and price differently."
+          },
+          {
+            "factor": "Ship age",
+            "detail": "The fleet is modern; newer vessels are notably better equipped."
+          },
+          {
+            "factor": "Season",
+            "detail": "Mediterranean shoulder months cost less and avoid August heat and crowds."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Speciality dining, excursions and wi-fi are the main variables."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Will there be a language barrier?",
+          "a": "Announcements are typically made in several languages and crew speak English, but the atmosphere is noticeably more international than US-based lines. Most travellers adapt quickly; a few find it disorienting."
+        },
+        {
+          "q": "What is the Yacht Club?",
+          "a": "A gated suite area with private restaurant, lounge, pool and dedicated service — effectively a boutique ship inside the larger vessel. It's the line's standout offering and a different product entirely."
+        },
+        {
+          "q": "Is MSC cheaper for a reason?",
+          "a": "Fares reflect scale and European cost structures. Service style differs from US norms rather than being simply lesser — worth setting expectations before you sail."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "MSC Cruises official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "cunard",
+      "name": "Cunard",
+      "legal_name": "Cunard Line",
+      "theme": {
+        "c1": "#3a1518",
+        "c2": "#8a2a26",
+        "accent": "#e0a458",
+        "emoji": "🎩"
+      },
+      "positioning": "classic-luxury",
+      "one_line": "The last line running genuine scheduled transatlantic crossings.",
+      "company": {
+        "founded": 1840,
+        "headquarters": "Southampton, United Kingdom",
+        "parent": "Carnival Corporation & plc",
+        "loyalty_program": "Cunard World Club",
+        "loyalty_tiers": [
+          "Silver",
+          "Gold",
+          "Platinum",
+          "Diamond"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Flagship liner",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2004,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "planetarium at sea",
+            "ballroom",
+            "deeper ocean-liner hull"
+          ],
+          "typical_regions": [
+            "Transatlantic",
+            "World voyages"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        {
+          "class": "Queens class",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2007,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "traditional public rooms",
+            "ballroom",
+            "afternoon tea"
+          ],
+          "typical_regions": [
+            "Europe",
+            "Caribbean",
+            "World"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "The Play Zone",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Caribbean",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Europe",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "Transatlantic",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "World",
+            "months": "VERIFY",
+            "note": ""
+          },
+          {
+            "region": "World voyages",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "Travellers seeking genuine transatlantic crossings",
+          "Lovers of formal dining and ballroom dancing",
+          "Those who enjoy sea days over port days",
+          "Couples and solo travellers wanting classic service",
+          "Anyone who dislikes waterslides and deck parties"
+        ],
+        "who_its_not_for": [
+          "Families with young children",
+          "Travellers who dislike dress codes",
+          "Those wanting maximum port time",
+          "Cruisers seeking casual, high-energy atmospheres"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Cabin grade determines dining",
+            "detail": "Grade sets your restaurant assignment, so the decision carries more weight than price alone suggests."
+          },
+          {
+            "factor": "Crossing vs cruise",
+            "detail": "Scheduled crossings price differently from cruise itineraries and often include one-way air considerations."
+          },
+          {
+            "factor": "Season",
+            "detail": "Summer crossings sail calmer seas; autumn and winter are rougher and priced accordingly."
+          },
+          {
+            "factor": "Balcony value",
+            "detail": "Less useful on North Atlantic crossings where weather often keeps them closed."
+          },
+          {
+            "factor": "Voyage length",
+            "detail": "World voyage segments vary enormously by length and region."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Gratuities, drinks, speciality dining and excursions change the total."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What is a transatlantic crossing actually like?",
+          "a": "Roughly a week of open ocean between New York and Southampton with no port calls. Days are filled with lectures, dancing, dining and the sea. Travellers either find it deeply restorative or extremely long — there's little middle ground."
+        },
+        {
+          "q": "How formal is it really?",
+          "a": "More formal than any other mainstream line. Gala evenings carry real expectations and most passengers observe them enthusiastically. If dressing for dinner sounds like a burden, another line suits you better."
+        },
+        {
+          "q": "Does cabin grade really affect dining?",
+          "a": "Yes — your cabin grade determines your restaurant assignment, with suite guests in separate dining rooms. This makes cabin choice more consequential here than on any other line."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Cunard Line official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    },
+    {
+      "slug": "margaritaville-at-sea",
+      "name": "Margaritaville at Sea",
+      "legal_name": "Margaritaville at Sea",
+      "theme": {
+        "c1": "#0a4a52",
+        "c2": "#12897f",
+        "accent": "#f5c74d",
+        "emoji": "🌴"
+      },
+      "positioning": "island-casual-short",
+      "one_line": "Short, warm Bahamas getaways with almost no agenda.",
+      "company": {
+        "founded": 2022,
+        "headquarters": "Florida",
+        "parent": "VERIFY",
+        "loyalty_program": "VERIFY",
+        "loyalty_tiers": [
+          "VERIFY"
+        ],
+        "fleet_size": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "ship_classes": [
+        {
+          "class": "Getaway vessels",
+          "ships": [
+            "VERIFY"
+          ],
+          "first_in_service": 2022,
+          "capacity_double": "VERIFY",
+          "decks": "VERIFY",
+          "gross_tonnage": "VERIFY",
+          "features": [
+            "multiple bars",
+            "live music venues",
+            "casual dining",
+            "pool decks"
+          ],
+          "typical_regions": [
+            "Bahamas"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      ],
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Main dining room",
+            "note": "Set or flexible seating",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Buffet",
+            "note": "Open most of the day",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Select casual venues",
+            "note": "VERIFY which are complimentary by class",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Main theatre productions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Pools and sports decks",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Fitness centre",
+            "note": "Classes may carry a fee",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Kids club",
+            "note": "VERIFY age bands and hours",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Water, drip coffee, tea, select juice",
+            "note": "VERIFY exact list",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Gratuities",
+            "note": "Auto-added daily per guest; VERIFY current amount",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Alcohol, soda, speciality coffee",
+            "note": "Packages available",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Speciality restaurants",
+            "note": "Cover charge or à la carte",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Wi-fi",
+            "note": "Tiered packages",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Shore excursions",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Spa and salon",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Casino and arcade",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          },
+          {
+            "item": "Laundry and pressing",
+            "note": "",
+            "source": "VERIFY",
+            "verified": "PENDING"
+          }
+        ],
+        "gratuity_per_person_per_day": "VERIFY",
+        "gratuity_suite_rate": "VERIFY",
+        "room_service": {
+          "available": true,
+          "fee": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        }
+      },
+      "cabins": {
+        "categories": [
+          "VERIFY - list the line's own category names"
+        ],
+        "virtual_balcony": {
+          "exists": false
+        },
+        "neighbourhood_balcony": {
+          "exists": false
+        },
+        "connecting_cabins": {
+          "available": true,
+          "note": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "solo_cabins": {
+          "available": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "accessible_cabins_per_ship": "VERIFY",
+        "suite_program": {
+          "name": "VERIFY",
+          "tiers": [
+            "VERIFY"
+          ],
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "decks_to_consider": [
+          {
+            "guidance": "Cabins directly beneath the pool deck, buffet, theatre or nightclub can carry noise",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Mid-ship, lower decks feel steadiest in rough water",
+            "type": "editorial"
+          },
+          {
+            "guidance": "Check deck plans for obstructed-view balconies before booking on price alone",
+            "type": "editorial"
+          }
+        ]
+      },
+      "family": {
+        "kids_club_name": "VERIFY",
+        "age_bands": "VERIFY",
+        "minimum_sailing_age": "VERIFY",
+        "nursery": {
+          "available": "VERIFY",
+          "extra_cost": "VERIFY",
+          "age_range": "VERIFY",
+          "source": "VERIFY",
+          "verified": "PENDING"
+        },
+        "teen_program": "VERIFY",
+        "babysitting": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "accessibility": {
+        "accessible_cabin_categories": "VERIFY",
+        "wheelchair_scooter_policy": "VERIFY",
+        "tender_port_note": "Tender ports can be difficult or impossible with a wheelchair or scooter; the line publishes guidance per itinerary",
+        "service_animal_policy": "VERIFY",
+        "medical_equipment": "VERIFY",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "itineraries": {
+        "home_ports": [
+          "VERIFY"
+        ],
+        "typical_lengths": [
+          "VERIFY"
+        ],
+        "regions": [
+          {
+            "region": "Bahamas",
+            "months": "VERIFY",
+            "note": ""
+          }
+        ],
+        "private_destination": {
+          "name": "",
+          "location": "",
+          "note": "VERIFY"
+        },
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "policies": {
+        "deposit_timing": "VERIFY",
+        "final_payment_days_before": "VERIFY",
+        "cancellation_schedule": "VERIFY",
+        "dress_code": "VERIFY",
+        "onboard_currency": "US dollar",
+        "documentation": "Requirements vary by itinerary and citizenship; closed-loop sailings from US ports may differ from one-way voyages. Confirm with the booking agency and official government sources.",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "editorial": {
+        "_note": "Original prose. Safe to edit freely.",
+        "who_its_for": [
+          "First-time cruisers testing the format",
+          "Long-weekend escapes from Florida",
+          "Groups and celebrations on a budget",
+          "Travellers who want warmth without a long trip",
+          "Anyone who values simplicity over ship facilities"
+        ],
+        "who_its_not_for": [
+          "Travellers wanting extensive ship attractions",
+          "Those seeking long or exotic itineraries",
+          "Cruisers expecting premium dining",
+          "Families needing large children's programmes"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Sailing length",
+            "detail": "Two to four nights keeps the total low but the per-night rate higher than a week-long sailing."
+          },
+          {
+            "factor": "Season",
+            "detail": "Winter and spring bring the driest weather; late summer carries hurricane-season risk."
+          },
+          {
+            "factor": "Cabin category",
+            "detail": "On sailings this short many travellers choose lower categories and live in the public spaces."
+          },
+          {
+            "factor": "Getting to the port",
+            "detail": "Florida departure means drive-to for many travellers, removing airfare entirely."
+          },
+          {
+            "factor": "Group bookings",
+            "detail": "Cabin blocks for celebrations are handled differently from individual bookings."
+          },
+          {
+            "factor": "What you add on",
+            "detail": "Drinks, speciality dining, excursions and gratuities are the main variables."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Is this a good first cruise?",
+          "a": "For many travellers, yes. A short sailing is the cheapest, lowest-risk way to find out whether cruising suits you before committing to a week or more."
+        },
+        {
+          "q": "How does it compare to the big lines?",
+          "a": "Smaller ships and far fewer onboard attractions, offset by lower cost, shorter commitment and a specific relaxed atmosphere. A different product rather than a lesser version of the same one."
+        },
+        {
+          "q": "Can I really do this as a weekend?",
+          "a": "Departure and return timings make it genuinely feasible as a long weekend from many US cities. Worth confirming flight timings against the sailing schedule."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Margaritaville at Sea official site",
+          "url": "VERIFY",
+          "used_for": "Ship specs, inclusions, policies"
+        }
+      ],
+      "last_built": null
+    }
+  ],
+  "destinations": [
+    {
+      "slug": "caribbean",
+      "name": "Caribbean",
+      "season": {
+        "operates": "Year-round",
+        "peak": "December–April",
+        "source": "VERIFY",
+        "verified": "PENDING"
+      },
+      "hurricane_season": {
+        "official": "June 1 – November 30",
+        "most_active": "mid-August – mid-October",
+        "source": "https://www.nhc.noaa.gov/climo/",
+        "verified": "PENDING"
+      },
+      "routes": [
+        {
+          "name": "Eastern",
+          "ports": [
+            "St. Thomas",
+            "St. Maarten",
+            "San Juan"
+          ],
+          "character": "Beaches, shopping, shorter sea-day count"
+        },
+        {
+          "name": "Western",
+          "ports": [
+            "Cozumel",
+            "Grand Cayman",
+            "Falmouth",
+            "Roatán"
+          ],
+          "character": "Reefs, ruins, diving and cave tubing"
+        },
+        {
+          "name": "Southern",
+          "ports": [
+            "Aruba",
+            "Curaçao",
+            "Barbados"
+          ],
+          "character": "Drier climate, longer sailings, fewer crowds"
+        }
+      ],
+      "home_ports": [
+        "Miami",
+        "Fort Lauderdale",
+        "Port Canaveral",
+        "Tampa",
+        "Galveston",
+        "New Orleans",
+        "San Juan"
+      ],
+      "typical_lengths": [
+        "3–5 nights",
+        "7 nights",
+        "10–14 nights (Southern)"
+      ],
+      "monthly_climate": "VERIFY - pull average high/low, rain days and sea temperature from NOAA per month",
+      "tender_ports": "VERIFY - list which ports tender vs dock",
+      "sources_master": [
+        {
+          "label": "NOAA National Hurricane Center climatology",
+          "url": "https://www.nhc.noaa.gov/climo/",
+          "used_for": "Hurricane season timing"
+        }
+      ]
+    }
+  ],
+  "comparison_attributes": [
+    {
+      "key": "founded",
+      "label": "Founded",
+      "type": "year",
+      "compare_safe": true
+    },
+    {
+      "key": "fleet_size",
+      "label": "Ships in fleet",
+      "type": "number",
+      "compare_safe": true
+    },
+    {
+      "key": "positioning",
+      "label": "Style",
+      "type": "text",
+      "compare_safe": true
+    },
+    {
+      "key": "gratuity_per_person_per_day",
+      "label": "Daily gratuity",
+      "type": "currency_fact",
+      "compare_safe": true,
+      "note": "This is a published fee, not a fare — safe to state with a source and date"
+    },
+    {
+      "key": "kids_age_bands",
+      "label": "Kids club ages",
+      "type": "text",
+      "compare_safe": true
+    },
+    {
+      "key": "solo_cabins",
+      "label": "Solo cabins",
+      "type": "boolean",
+      "compare_safe": true
+    },
+    {
+      "key": "accessible_cabins_per_ship",
+      "label": "Accessible cabins",
+      "type": "number",
+      "compare_safe": true
+    },
+    {
+      "key": "private_destination",
+      "label": "Private destination",
+      "type": "text",
+      "compare_safe": true
+    },
+    {
+      "key": "wifi_included",
+      "label": "Wi-fi included",
+      "type": "boolean",
+      "compare_safe": true
+    },
+    {
+      "key": "_never_compare",
+      "label": "PRICE / FARE / DISCOUNT",
+      "compare_safe": false,
+      "reason": "Never display fares, prices, savings or discounts anywhere on this site."
+    }
+  ]
+}
