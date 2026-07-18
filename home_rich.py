@@ -29,14 +29,6 @@ HOME_CSS = """
 .obadge{display:inline-flex;align-items:center;gap:.45em;background:rgba(217,178,90,.16);
   border:1px solid rgba(217,178,90,.38);color:var(--brass);padding:.4em .9em;border-radius:99px;
   font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-.ocall{display:inline-flex;align-items:center;gap:.6em;margin-top:1.4rem;text-decoration:none;
-  background:linear-gradient(180deg,var(--brass),var(--brassd));color:var(--ink);
-  padding:.8em 1.3em;border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.3);transition:filter .14s,transform .14s}
-.ocall:hover{filter:brightness(1.05)}.ocall:active{transform:scale(.985)}
-.ocall__ic{font-size:1.5rem;line-height:1}
-.ocall__t{display:flex;flex-direction:column;line-height:1.16;text-align:left}
-.ocall__t b{font-size:1.16rem;font-weight:800;letter-spacing:.01em}
-.ocall__t small{font-size:.66rem;font-weight:600;opacity:.8;letter-spacing:.02em}
 
 /* intent selector */
 .intent{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;
@@ -190,12 +182,9 @@ def rich_hero(phone_display, phone_href):
 {SHIP_SVG}
 {WAVES_SVG}
 <div class="wrap2">
-<span class="obadge">☎ Talk to a real cruise specialist</span>
-<h1>Skip the endless comparing.<br><em>Sort your cruise in one call.</em></h1>
-<p class="osub">Independent guides to every major line — then a licensed specialist quotes, books and handles the details. Free, and we never take payment.</p>
-<a href="tel:{phone_href}" class="ocall" onclick="trackCall('hero')">
-<span class="ocall__ic" aria-hidden="true">☎</span>
-<span class="ocall__t"><b>{phone_display}</b><small>Advisors 8am–11pm ET daily · EN / ES · no obligation</small></span></a>
+<span class="obadge">☎ Phone-first cruise planning</span>
+<h1>Your cruise, <em>sorted in one call.</em></h1>
+<p class="osub">Independent guides to every major line — then a licensed specialist takes it from there.</p>
 </div></section>
 
 <section class="intent" aria-labelledby="intent-heading">

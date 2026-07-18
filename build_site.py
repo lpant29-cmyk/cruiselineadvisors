@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Builds the full connected site + a single-file navigable preview."""
 import json, os, re, datetime, html
-from build_deep import CSS, build_page, esc, PHONE_DISPLAY, PHONE_HREF, nav_html
+from build_deep import CSS, build_page, esc, PHONE_DISPLAY, PHONE_HREF
 from home_rich import HOME_CSS, HOME_JS, rich_hero, chaos_section, quiz_section
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -149,7 +149,20 @@ def shell(title, desc, body, depth=0, extra_css=""):
   <b>We're an independent referral service — not a cruise line and not a travel agency.</b>
   We connect you with licensed cruise specialists at independent partner agencies and may be paid a referral fee.
 </div>
-{nav_html(up)}
+<header class="hdr">
+  <div class="wrap2 nav2">
+    <a href="{up}index.html" class="brand2">CruiseLine<span>Advisors</span></a>
+    <a href="tel:{PHONE_HREF}" class="hcall2" onclick="trackCall('header')">☎ Call</a>
+  </div>
+</header>
+<nav class="toc"><div class="wrap2 tocrow">
+  <a href="{up}index.html">Home</a>
+  <a href="{up}cruise-lines.html">Cruise lines</a>
+  <a href="{up}destinations.html">Destinations</a>
+  <a href="{up}guides.html">Guides</a>
+  <a href="{up}compare.html">Compare</a>
+  <a href="{up}updates.html">Updates</a>
+</div></nav>
 {body}
 <footer class="ftr">
   <div class="wrap2">

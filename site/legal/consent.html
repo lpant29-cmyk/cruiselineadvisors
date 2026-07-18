@@ -17,64 +17,11 @@ a{color:inherit}
 .wrap2{max-width:940px;margin:0 auto;padding:0 18px}
 .disc{background:var(--ink);color:#C3D6E0;font-size:.73rem;text-align:center;padding:.55rem 16px;line-height:1.45}
 .disc b{color:#fff;display:block}
-.hdr{position:sticky;top:0;z-index:60;background:rgba(251,250,247,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav2{display:flex;align-items:center;gap:12px;height:60px}
-/* ── logo / brand ── */
-.brand2{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;color:var(--ink);flex:none;min-width:0}
-.bmk{display:block;flex:none;border-radius:11px;box-shadow:0 4px 12px rgba(8,36,59,.22)}
-.btxt{display:none;font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;letter-spacing:-.01em;line-height:1;
-  white-space:nowrap;overflow:hidden}
-.btxt span{color:var(--brassd)}
-/* ── primary nav (mobile drawer by default) ── */
-.mainnav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
-  box-shadow:0 22px 44px rgba(8,36,59,.17);padding:8px;display:none;max-height:calc(100dvh - 60px);overflow-y:auto}
-.nvcb:checked~.mainnav{display:block}
-.nvlist{list-style:none;display:flex;flex-direction:column;align-items:stretch;gap:1px;margin:0;padding:0}
-.nvlink{display:flex;align-items:center;gap:.3em;padding:.7em .8em;font-size:.98rem;font-weight:700;
-  color:var(--ink);text-decoration:none;border-radius:9px}
-.nvlink:hover{background:var(--foam)}
-.caret{display:none;font-style:normal;font-size:.6rem;color:var(--muted);transition:transform .16s}
-.nvpanel{display:flex;flex-direction:column;gap:1px;padding:2px 0 6px 14px}
-.nvpanel a{padding:.5em .7em;border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none}
-.nvpanel a:hover{background:var(--foam)}
-.nvpanel .nvp-all{color:var(--brassd);font-weight:800;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase}
-/* ── prominent click-to-call ── */
-.hcall2{display:inline-flex;align-items:center;gap:.5em;margin-left:auto;flex:none;
-  background:linear-gradient(180deg,var(--brass),var(--brassd));color:var(--ink);text-decoration:none;
-  padding:.45em .8em;border-radius:12px;box-shadow:0 6px 16px rgba(184,147,61,.3);transition:filter .14s,transform .14s}
-.hcall2:hover{filter:brightness(1.05)}.hcall2:active{transform:scale(.98)}
-.hcic{font-size:1.15rem;line-height:1}
-.hctxt{display:flex;flex-direction:column;line-height:1.12}
-.hctxt small{display:none;font-size:.58rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.72}
-.hctxt b{font-size:.92rem;font-weight:800;letter-spacing:.01em;white-space:nowrap}
-/* ── hamburger (mobile only) ── */
-.navburger{display:inline-flex;flex:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);
-  background:#fff;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
-.navburger span{display:block;width:19px;height:2px;border-radius:2px;background:var(--ink);transition:.2s}
-.nvcb:checked~.navburger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.nvcb:checked~.navburger span:nth-child(2){opacity:0}
-.nvcb:checked~.navburger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-@media(min-width:560px){.btxt{display:block}.hctxt small{display:block}.hctxt b{font-size:.98rem}}
-/* ── desktop: inline nav + hover dropdowns ── */
-@media(min-width:940px){
-  .navburger{display:none}
-  .mainnav{position:static;display:block;background:none;border:0;box-shadow:none;padding:0;margin-left:8px;
-    max-height:none;overflow:visible}
-  .nvlist{flex-direction:row;align-items:center;gap:2px}
-  .nvitem{position:relative}
-  .nvlink{font-size:.82rem;padding:.6em .7em;border-radius:9px}
-  .nvitem:focus-within>.nvlink{background:var(--foam)}
-  .caret{display:inline}
-  .nvhas:hover .caret,.nvhas:focus-within .caret{transform:rotate(180deg)}
-  .nvpanel{position:absolute;top:calc(100% + 6px);left:0;min-width:236px;background:#fff;border:1px solid var(--line);
-    border-radius:14px;padding:8px;box-shadow:0 20px 44px rgba(8,36,59,.18),0 4px 12px rgba(8,36,59,.08);
-    gap:1px;opacity:0;visibility:hidden;transform:translateY(6px);
-    transition:opacity .16s,transform .16s,visibility .16s;z-index:70}
-  .nvhas:hover .nvpanel,.nvhas:focus-within .nvpanel{opacity:1;visibility:visible;transform:translateY(0)}
-  .nvpanel a{white-space:nowrap;font-size:.84rem}
-  .nvpanel .nvp-all{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0;margin-bottom:2px;padding-bottom:.5em}
-  .hcall2{padding:.5em .9em}
-}
+.hdr{position:sticky;top:0;z-index:60;background:rgba(251,250,247,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav2{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand2{font-family:'Fraunces',serif;font-size:1.08rem;text-decoration:none;color:var(--ink)}
+.brand2 span{color:var(--brassd)}
+.hcall2{background:var(--brass);color:var(--ink);font-weight:800;text-decoration:none;padding:.5em 1em;border-radius:99px;font-size:.85rem}
 .dhero{background:linear-gradient(165deg,var(--l1) 0%,var(--l2) 60%,#05192B 100%);color:#EAF3F7;padding:30px 0 34px}
 .crumb2{font-size:.76rem;color:#8FADBB}
 .crumb2 a{color:#BCD3DE;text-decoration:none}
@@ -86,7 +33,7 @@ a{color:inherit}
 .dcall{display:inline-flex;flex-direction:column;align-items:center;background:var(--brass);color:var(--ink);
   font-weight:800;text-decoration:none;padding:.85em 1.5em;border-radius:13px;margin-top:1.3rem;font-size:1.08rem}
 .dcall small{font-weight:600;font-size:.64rem;opacity:.72;letter-spacing:.04em;text-transform:uppercase;margin-top:.15rem}
-.toc{position:sticky;top:60px;z-index:50;background:var(--mist);border-bottom:1px solid var(--line)}
+.toc{position:sticky;top:56px;z-index:50;background:var(--mist);border-bottom:1px solid var(--line)}
 .tocrow{display:flex;gap:16px;overflow-x:auto;padding:9px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .tocrow::-webkit-scrollbar{display:none}
 .tocrow a{flex:none;font-size:.8rem;font-weight:700;color:var(--muted);text-decoration:none;white-space:nowrap}
@@ -230,33 +177,19 @@ a{color:inherit}
 </div>
 <header class="hdr">
   <div class="wrap2 nav2">
-    <a href="../index.html" class="brand2" aria-label="CruiseLine Advisors — home">
-      <svg class="bmk" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false"><defs><linearGradient id="bmkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12506B"/><stop offset="1" stop-color="#08243B"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#bmkg)"/><circle cx="27" cy="13.5" r="4.4" fill="#D9B25A"/><path d="M6 22.5q3.4-3.2 6.8 0t6.8 0 6.8 0 6.8 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M6 27.6q3.4-3.2 6.8 0t6.8 0 6.8 0 6.8 0" fill="none" stroke="#D9B25A" stroke-width="2" stroke-linecap="round" opacity=".9"/><path d="M6 32.7q3.4-3.2 6.8 0t6.8 0 6.8 0 6.8 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".55"/></svg><span class="btxt">CruiseLine<span>Advisors</span></span>
-    </a>
-    <input type="checkbox" id="navcb" class="nvcb" hidden>
-    <nav class="mainnav" aria-label="Primary">
-      <ul class="nvlist">
-        <li class="nvitem nvhas">
-          <a href="../cruise-lines.html" class="nvlink">Cruise lines<i class="caret" aria-hidden="true">&#9662;</i></a>
-          <div class="nvpanel"><a href="../cruise-lines.html" class="nvp-all">All cruise lines &rarr;</a><a href="../directory.html" class="nvp-all">Full directory (36 lines) &rarr;</a><a href="../lines-deep/royal-caribbean.html">Royal Caribbean</a><a href="../lines-deep/carnival.html">Carnival</a><a href="../lines-deep/princess.html">Princess</a><a href="../lines-deep/celebrity.html">Celebrity</a><a href="../lines-deep/holland-america.html">Holland America</a><a href="../lines-deep/msc.html">MSC Cruises</a><a href="../lines-deep/cunard.html">Cunard</a><a href="../lines-deep/margaritaville-at-sea.html">Margaritaville at Sea</a></div></li>
-        <li class="nvitem nvhas">
-          <a href="../destinations.html" class="nvlink">Destinations<i class="caret" aria-hidden="true">&#9662;</i></a>
-          <div class="nvpanel"><a href="../destinations.html" class="nvp-all">All destinations &rarr;</a><a href="../destinations/caribbean.html">Caribbean</a><a href="../destinations/bahamas.html">Bahamas</a><a href="../destinations/alaska.html">Alaska</a><a href="../destinations/mediterranean.html">Mediterranean</a><a href="../destinations/northern-europe.html">Northern Europe</a><a href="../destinations/panama-canal.html">Panama Canal</a></div></li>
-        <li class="nvitem nvhas">
-          <a href="../guides.html" class="nvlink">Guides<i class="caret" aria-hidden="true">&#9662;</i></a>
-          <div class="nvpanel"><a href="../guides.html" class="nvp-all">All guides &rarr;</a><a href="../guides/first-time-cruisers.html">First-time cruisers</a><a href="../guides/choosing-a-cabin.html">Choosing a cabin</a><a href="../guides/whats-included.html">What's included</a><a href="../guides/when-to-cruise.html">When to cruise</a><a href="../guides/groups-and-families.html">Groups &amp; families</a><a href="../guides/accessibility.html">Accessibility</a></div></li>
-        <li class="nvitem"><a href="../compare.html" class="nvlink">Compare</a></li>
-        <li class="nvitem"><a href="../updates.html" class="nvlink">Updates</a></li>
-      </ul>
-    </nav>
-    <a href="tel:+18885550142" class="hcall2" onclick="trackCall('header')">
-      <span class="hcic" aria-hidden="true">&#9742;</span>
-      <span class="hctxt"><small>Speak to a specialist</small><b>+1 (888) 555-0142</b></span>
-    </a>
-    <label for="navcb" class="navburger" aria-label="Open menu"><span></span><span></span><span></span></label>
+    <a href="../index.html" class="brand2">CruiseLine<span>Advisors</span></a>
+    <a href="tel:+18885550142" class="hcall2" onclick="trackCall('header')">☎ Call</a>
   </div>
 </header>
 <div class="crumbbar"><div class="crumbin"><a class="crumbback" id="crumbback" href="../index.html">← Back</a><nav class="crumbtrail" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Legal</span><span class="sep">›</span><span class="cur">Consent</span></nav></div></div>
+<nav class="toc"><div class="wrap2 tocrow">
+  <a href="../index.html">Home</a>
+  <a href="../cruise-lines.html">Cruise lines</a>
+  <a href="../destinations.html">Destinations</a>
+  <a href="../guides.html">Guides</a>
+  <a href="../compare.html">Compare</a>
+  <a href="../updates.html">Updates</a>
+</div></nav>
 <section class="dhero"><div class="wrap2">
 <span class="dbadge">Legal</span>
 <h1>Calling &amp; SMS Consent Terms</h1>
