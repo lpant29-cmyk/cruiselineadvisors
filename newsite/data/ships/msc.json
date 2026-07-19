@@ -17,7 +17,101 @@
         "2,614 cabins; 22 decks; 413,000+ sq ft of public space"
       ],
       "notes": "Guests = maximum capacity (6,762). Delivered 27 March 2025. Class stated as 'World Class' (second World Class ship).",
-      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-msc-world-america-celebrates-additional-world-class/"
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-msc-world-america-celebrates-additional-world-class/",
+      "exp": {
+        "overview": "MSC World America is MSC Cruises' World-class Miami flagship, delivered in April 2025 — 22 decks and 2,614 staterooms arranged into seven themed districts, with more than 420,000 sq ft of public space, six pools, a water park and 19 dining venues, including the only Eataly at sea. It is built for families and, via the MSC Yacht Club, for guests who want a private ship-within-a-ship.",
+        "neighbourhoods": [
+          "MSC Yacht Club",
+          "Family Aventura",
+          "Aqua Deck",
+          "Zen Area",
+          "Galleria",
+          "The Terraces",
+          "Promenade"
+        ],
+        "dining": [
+          {
+            "name": "Eataly",
+            "type": "Italian",
+            "extra": "The world's only Eataly at sea — authentic Italian market dining."
+          },
+          {
+            "name": "Paxos Greek Restaurant",
+            "type": "Greek",
+            "extra": "Greek and seafood plates in the Promenade district."
+          },
+          {
+            "name": "Kaito Sushi Bar",
+            "type": "Japanese",
+            "extra": "Sushi bar in The Terraces district."
+          },
+          {
+            "name": "Kaito Teppanyaki",
+            "type": "Japanese",
+            "extra": "Teppanyaki grill tables in The Terraces."
+          },
+          {
+            "name": "Butcher's Cut",
+            "type": "Steakhouse",
+            "extra": "American-style steakhouse in The Terraces."
+          },
+          {
+            "name": "Hola! Tacos & Cantina",
+            "type": "Mexican",
+            "extra": "Tacos and cantina fare in The Terraces."
+          },
+          {
+            "name": "MSC Yacht Club Restaurant",
+            "type": "Fine dining",
+            "extra": "Five-star service, exclusive to MSC Yacht Club guests."
+          },
+          {
+            "name": "Top Sail Lounge",
+            "type": "Lounge",
+            "extra": "Yacht Club lounge with canapes, desserts and ocean views."
+          },
+          {
+            "name": "All-Stars Sports Bar",
+            "type": "Sports bar",
+            "extra": "Game-day atmosphere with an ocean terrace and American fare."
+          },
+          {
+            "name": "The Loft",
+            "type": "Comedy & karaoke",
+            "extra": "Adults-only club with dueling pianos and karaoke."
+          },
+          {
+            "name": "Elixir Mixology Bar",
+            "type": "Cocktail bar",
+            "extra": "Craft cocktails with a bourbon focus."
+          },
+          {
+            "name": "Masters of the Seas",
+            "type": "British pub",
+            "extra": "Pub with an onboard microbrewery."
+          },
+          {
+            "name": "The Gin Project",
+            "type": "Gin bar",
+            "extra": "Around 20 craft gins."
+          },
+          {
+            "name": "Sweet Temptations",
+            "type": "Confectionery",
+            "extra": "Ice cream, chocolate, crepes and waffles."
+          },
+          {
+            "name": "Jean Philippe Chocolat & Cafe",
+            "type": "Chocolatier",
+            "extra": "Chocolate and coffee house."
+          }
+        ],
+        "activities": "Six pools and 14 hot tubs; a water park with VR slides; an 11-deck dry slide on the Promenade with ocean views; a high ropes course and playground in The Harbor (Family Aventura); the adults-only Zen Area with twin pools; and the MSC Yacht Club's private bi-level sundeck, pool, hot tub, cabanas and thermal spa access.",
+        "entertainment": "The MSC Luna Park Arena in the Galleria, three venues with live shows, The Loft comedy club with dueling pianos and karaoke, an All-Stars Sports Bar with bar games, and 18 bars and lounges in total.",
+        "kids_family": "Doremiland, with age-appropriate spaces and activities for everyone from infants to teenagers.",
+        "decks": 22,
+        "exp_source": "https://www.mscpressarea.com/en_US/press-releases/ (MSC World America press releases)"
+      }
     },
     {
       "name": "MSC World Europa",

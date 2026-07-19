@@ -390,6 +390,23 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .xdine li{display:flex;align-items:center;gap:.6em;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.7em .9em}
 .xdine li b{color:var(--navy);font-size:.98rem;flex:1;min-width:150px}
 .xdesc{flex-basis:100%;color:var(--muted);font-size:.82rem;line-height:1.4}
+/* Food & dining — appetizing cards */
+.xsub{color:var(--muted);font-size:.98rem;margin:-.2rem 0 1.1rem;font-weight:600}
+.xd-grid{display:grid;gap:14px;grid-template-columns:1fr}
+.xd-card{background:#fff;border:1px solid var(--sand);border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(240,137,31,.06);display:flex;flex-direction:column}
+.xd-top{display:flex;align-items:center;gap:12px;padding:13px 15px;background:linear-gradient(120deg,rgba(255,178,62,.16),rgba(255,107,90,.10))}
+.xd-emoji{font-size:1.7rem;line-height:1;width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;box-shadow:0 3px 8px rgba(10,44,66,.1)}
+.xd-h{flex:1;min-width:0}
+.xd-h h3{font-family:'Fraunces',serif;font-size:1.12rem;color:var(--navy);line-height:1.15;margin:0}
+.xd-cuisine{display:inline-block;margin-top:.25rem;font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--gold2)}
+.xd-pill{flex:none;align-self:flex-start;font-size:.6rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.32em .6em;border-radius:99px}
+.xd-inc{background:rgba(18,145,154,.14);color:var(--sea3)}
+.xd-spec{background:rgba(240,137,31,.16);color:var(--gold2)}
+.xd-b{padding:11px 15px 14px}
+.xd-b:empty{display:none}
+.xd-desc{color:var(--muted);font-size:.9rem;line-height:1.5;margin:0}
+@media(min-width:640px){.xd-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.xd-grid{grid-template-columns:1fr 1fr 1fr}}
 .xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
 .xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
 .xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}

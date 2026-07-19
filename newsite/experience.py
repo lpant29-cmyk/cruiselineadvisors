@@ -48,6 +48,32 @@ def _call(lang, txt):
             f'<span class="ic" aria-hidden="true">☎</span>{c} · {PHONE_DISPLAY}</a></div>')
 
 
+_FOOD_EMOJI = [
+    (("pizza", "pizzeria"), "🍕"), (("burger",), "🍔"),
+    (("sushi", "kaito", "robata"), "🍣"), (("teppanyaki",), "🍤"),
+    (("steak", "butcher", "grill", "prime"), "🥩"), (("taco", "cantina", "mexican", "hola"), "🌮"),
+    (("greek", "paxos"), "🥙"), (("seafood", "fish", "catch", "shack", "lobster"), "🦐"),
+    (("italian", "eataly", "cucina", "pasta", "trattoria", "campo"), "🍝"),
+    (("chicken",), "🍗"), (("coffee", "cafe", "café", "java", "emporium"), "☕"),
+    (("chocolat", "sweet", "confection", "gelato", "ice cream", "dessert", "candy"), "🍫"),
+    (("buffet", "market", "marketplace", "lido", "horizon", "eats"), "🍽️"),
+    (("sports bar", "all-star", "all star"), "🍺"),
+    (("comedy", "karaoke", "loft", "piano"), "🎤"),
+    (("gin", "cocktail", "mixolog", "champagne", "wine", "elixir", "bar", "lounge", "pub", "tavern", "brew"), "🍸"),
+    (("asian", "indochine", "wok", "noodle"), "🥢"), (("bistro", "french", "brasserie", "atelier"), "🥐"),
+    (("tapas", "spanish"), "🥘"), (("bbq", "smoke", "guy"), "🍖"), (("diner", "americana", "americas"), "🥞"),
+    (("tea", "afternoon"), "🫖"),
+]
+
+
+def _food_emoji(name, t):
+    s = f"{name or ''} {t or ''}".lower()
+    for keys, emo in _FOOD_EMOJI:
+        if any(k in s for k in keys):
+            return emo
+    return "🍴"
+
+
 def _chips_or_p(val):
     """Render a string as a paragraph, or a list as chips. Empty → ''."""
     if isinstance(val, str) and val.strip():
@@ -85,29 +111,38 @@ def experience_sections(lang, line_slug, ship):
     if ov:
         out += _sec("overview", lang, f'<p class="intro">{ov}</p>')
 
-    # ── Food & dining ──
-    dining = exp.get("dining") or []
+    # ── Food & dining ── rich, appetizing cards (emoji tile, cuisine, description, included/specialty)
+    dining = [d for d in (exp.get("dining") or []) if d.get("name")]
     if dining:
-        rows = ""
+        inc = sum(1 for d in dining if d.get("extra") is False)
+        spec = sum(1 for d in dining if d.get("extra") is True)
+        if inc or spec:
+            sub = (f"{len(dining)} places to eat — {inc} included in your fare, {spec} specialty."
+                   if lang == "en" else
+                   f"{len(dining)} lugares para comer — {inc} incluidos, {spec} de especialidad.")
+        else:
+            sub = (f"{len(dining)} places to eat on board." if lang == "en"
+                   else f"{len(dining)} lugares para comer a bordo.")
+        cards = ""
         for d in dining:
             nm = d.get("name")
-            if not nm:
-                continue
             t = d.get("type")
-            tb = f'<span class="xtag">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
+            tb = f'<span class="xd-cuisine">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
             ex = d.get("extra")
-            tag, desc = "", ""
+            pill, desc = "", ""
             if ex is True:
-                tag = f'<span class="xtag xtag-x">{_EXT[lang]}</span>'
+                pill = f'<span class="xd-pill xd-spec">{_EXT[lang]}</span>'
             elif ex is False:
-                tag = f'<span class="xtag xtag-i">{_INC[lang]}</span>'
+                pill = f'<span class="xd-pill xd-inc">{_INC[lang]}</span>'
             elif isinstance(ex, str) and ex.strip():
-                desc = f'<span class="xdesc">{ex}</span>'
-            rows += f'<li><b>{nm}</b>{tb}{tag}{desc}</li>'
+                desc = f'<p class="xd-desc">{ex}</p>'
+            cards += (f'<article class="xd-card"><div class="xd-top"><span class="xd-emoji">{_food_emoji(nm, t)}</span>'
+                      f'<div class="xd-h"><h3>{nm}</h3>{tb}</div>{pill}</div>'
+                      f'<div class="xd-b">{desc}</div></article>')
         nudge = (_call(lang, "Want a specialty table booked before you sail? Our team sets it up when you call.")
                  if lang == "en" else
                  _call(lang, "¿Quieres reservar un restaurante de especialidad antes de zarpar? Lo hacemos por teléfono."))
-        out += _sec("dining", lang, f'<ul class="xdine">{rows}</ul>{nudge}')
+        out += _sec("dining", lang, f'<p class="xsub">{sub}</p><div class="xd-grid">{cards}</div>{nudge}')
 
     # ── Drinks & packages (line-wide) ──
     bev = le.get("beverages") or []
