@@ -19,163 +19,113 @@
       "notes": "In service. Sails from Port of Palm Beach to Key West and The Bahamas. Official about-us page: \"Launched in May 2022 with the Margaritaville at Sea Paradise sailing from the Port of Palm Beach.\" Tonnage, guest capacity, decks and class not published on any official page.",
       "spec_source": "https://www.margaritavilleatsea.com/about-us",
       "exp": {
-        "overview": "Award-winning cruise ship described as a 'resort at sea'. Sails from Port of Palm Beach on 2- to 5-night itineraries (3-, 4-, 5-night samples) to The Bahamas and Key West. Destinations named: Key West, Bimini (Bahamas), Nassau (Bahamas), Grand Turk (Turks and Caicos), Cozumel (Mexico).",
+        "overview": "Paradise is the fleet's original, intimate island-in-motion — a laid-back, Jimmy Buffett-inspired ship built for short, no-fuss escapes where the party starts the moment you leave the dock. Signature restaurants, frozen margaritas, live island music and a beach-bar spirit run from the pool deck to the theater, all a quick sail from Florida.",
         "dining": [
           {
             "name": "Fins Dining",
             "type": "main",
-            "extra": "Main dining room; island-inspired signature dishes like Shrimp and Grits and Jimmy's Jambalaya. Complimentary."
+            "extra": false,
+            "desc": "The complimentary sit-down dining room, open for dinner with ocean views and island-inspired signature plates like Shrimp and Grits and Jimmy's Jambalaya."
           },
           {
             "name": "High Tide Market",
             "type": "buffet",
-            "extra": "Market-style included dining with five stations: Mexican Cutie Cantina (street tacos, rice bowls), License to Chill Sandwich Shack (deli sandwiches, paninis), Slice of Paradise (desserts, pastries), Provisions Salads & More (salads), Frank & Lola's Pizzeria (stone-baked pizza). Complimentary."
+            "extra": false,
+            "desc": "A five-station food hall replacing the traditional buffet — Mexican Cutie Cantina (tacos, rice bowls), License to Chill Sandwich Shack, Slice of Paradise (desserts), Provisions Salads & More, and Frank & Lola's Pizzeria."
           },
           {
             "name": "Cheeseburger in Paradise Burger Bar",
             "type": "casual",
-            "extra": "Build-your-own burgers, located at 5 o'Clock Somewhere Bar and Grill. Complimentary."
+            "extra": false,
+            "desc": "Build-your-own burgers and cold drinks at the 5 o'Clock Somewhere Bar and Grill on the pool deck — a nod to the Buffett classic."
           },
           {
             "name": "Margaritaville Coffee Shop",
             "type": "casual",
-            "extra": "All-day cafe serving beverages and grab-and-go items. Complimentary."
-          },
-          {
-            "name": "5 o'Clock Somewhere Bar and Grill",
-            "type": "casual",
-            "extra": "Indoor-outdoor venue with burgers and drinks."
+            "extra": false,
+            "desc": "All-day gourmet coffee, cappuccinos and grab-and-go snacks."
           },
           {
             "name": "JWB Prime Steakhouse",
             "type": "specialty",
-            "extra": "Upscale steakhouse (named after Jimmy Buffett); prime steaks and seafood. Additional charge."
+            "extra": true,
+            "desc": "An upscale, casually elegant a la carte steakhouse serving prime cuts and seafood (extra charge)."
           },
           {
             "name": "Far Side Sushi",
             "type": "specialty",
-            "extra": "Specialty sushi restaurant; inventive sushi rolls, small plates, rice and ramen bowls. Additional charge."
+            "extra": true,
+            "desc": "A la carte sushi rolls, small plates and hearty rice and ramen bowls in a bamboo-trimmed room (extra charge)."
           },
           {
             "name": "In-Room Dining",
             "type": "casual",
-            "extra": "Stateroom meal service; additional cost."
+            "extra": true,
+            "desc": "Meals and bites delivered to your stateroom (extra charge)."
           }
         ],
         "activities": [
           {
+            "name": "License to Chill Pool",
+            "desc": "The main pool deck hub, ringed by cabanas and the License to Chill Bar pouring frozen margaritas."
+          },
+          {
+            "name": "12 Volt Pool & 12 Volt Bar",
+            "desc": "An adults-only pool and refreshed stern bar with ocean views and Electric Margaritas — the quieter, grown-up corner of the deck."
+          },
+          {
+            "name": "St. Somewhere Spa & Salon",
+            "desc": "Fleet-wide spa and salon for massages, treatments and beauty services."
+          },
+          {
             "name": "Margaritaville Casino",
-            "type": "casino",
-            "extra": "Sports betting, slot machines, and table games with various denominations."
+            "desc": "Action-packed gaming with slot machines, classic table games and sports betting, plus a Players Club loyalty program."
           },
           {
-            "name": "Spa & Fitness",
-            "type": "spa",
-            "extra": "Spa services and fitness facilities named on ship overview; individual venue names not officially detailed."
+            "name": "Sun Deck Live Music & Sail Away Party",
+            "desc": "Caribbean bands, steel drums and DJ sets throughout the cruise, kicking off with a sail-away deck party (parrot mascot included)."
           },
           {
-            "name": "12 Volt Bar & Pool",
-            "type": "pool",
-            "extra": "Adults-only poolside bar/pool area."
-          },
-          {
-            "name": "License to Chill Cabanas",
-            "type": "recreation",
-            "extra": "Poolside cabanas."
-          },
-          {
-            "name": "License to Chill Bar",
-            "type": "bar",
-            "extra": "Casual frozen margarita bar by main pool."
-          },
-          {
-            "name": "Wine Tasting",
-            "type": "activity",
-            "extra": "Educational sessions on history, flavor and styles of European wines."
-          },
-          {
-            "name": "Mixology & Flair",
-            "type": "activity",
-            "extra": "Bartending demonstrations with flair techniques."
-          },
-          {
-            "name": "Bingo",
-            "type": "activity",
-            "extra": "Games throughout sailing days."
+            "name": "Games & Enrichment",
+            "desc": "Bingo, trivia, the Love and Marriage show, scavenger hunts, wine tastings and flair-bartending mixology demos."
           }
         ],
         "entertainment": [
           {
+            "name": "Stars on the Water Theater",
+            "desc": "The ship's primary showroom hosting the headline production shows."
+          },
+          {
             "name": "Radio Margaritaville: Live at Sea",
-            "extra": "Signature production; musical celebration of all things Margaritaville spanning genres and decades."
+            "desc": "A live musical celebration of all things Margaritaville, spanning genres and decades."
           },
           {
             "name": "Caribbean Heat",
-            "extra": "Signature production; tropical dance performance with dancers and acrobats."
-          },
-          {
-            "name": "Stars on the Water Theater",
-            "extra": "Main theater venue named on ship overview."
-          },
-          {
-            "name": "Euphoria Lounge",
-            "extra": "Bar/lounge featuring live entertainment and activities."
-          },
-          {
-            "name": "Hemisphere Dancer Craft Spirits",
-            "extra": "Piano lounge with craft cocktails."
-          },
-          {
-            "name": "Hemisphere Nightclub",
-            "extra": "Late-night dance venue on Deck 14."
-          },
-          {
-            "name": "Keys on the Water",
-            "extra": "Karaoke and comedy lounge."
+            "desc": "A high-energy stage show of tropical rhythms, dynamic dancers and jaw-dropping acrobatics."
           },
           {
             "name": "White Hot Neon Nights",
-            "extra": "Theme night with pulsing lights, electrifying drinks and live DJ."
+            "desc": "A glowing deck party with pulsing lights, glow face paint, electrifying drinks and a live DJ."
           },
           {
-            "name": "Sail Away Party",
-            "extra": "Musical celebration as the ship departs."
-          },
-          {
-            "name": "Sun Deck Activities",
-            "extra": "Live music including Caribbean bands, steel drums and DJ sets."
-          },
-          {
-            "name": "Game Shows",
-            "extra": "Trivia, scavenger hunts, and Love and Marriage show."
-          },
-          {
-            "name": "Karaoke",
-            "extra": "Onboard singing performances."
-          },
-          {
-            "name": "Parrot Photos",
-            "extra": "Photo opportunities with Margaritaville's signature parrot."
+            "name": "Hemisphere Nightclub & Keys on the Water",
+            "desc": "Late-night DJ sets spanning every genre, plus karaoke at Keys on the Water; Hemisphere Dancer craft-spirits piano bar for a mellower vibe."
           }
         ],
-        "kids_family": [
+        "kids_family": "Supervised, age-tiered kids programming so parents can slip away to the adults-only deck. Jolly Mon Kid's Club (ages 3-6): ocean-themed arts and crafts, interactive games, mascot visits and mermaid storytelling. Parakeets Kid's Club (ages 6-9): magic workshops, escape-room adventures and mini-DJ sessions. The Teen's Club (ages 13-17): video games, ping pong, dodgeball, scavenger hunts, poolside movie takeovers and exclusive nightclub events.",
+        "exp_source": "https://www.margaritavilleatsea.com/explore-our-ships/paradise ; /paradise/eat-drink-wine-dine ; /paradise/things-to-do ; /experiences ; /experiences/kids-clubs",
+        "who_for": "Casual, fun-first cruisers chasing value: couples, friend groups, first-timers and families who want a short Bahamas or Key West getaway without a big-ship price or pace. Adults get a nightclub, casino, spa and an adults-only pool and bar; families get supervised kids clubs and poolside movies.",
+        "neighbourhoods": [
           {
-            "name": "Jolly Mon Kid's Club",
-            "ages": "3-6",
-            "extra": "Ocean-themed arts and crafts, immersive cultural experiences, interactive games, mascot visits and mermaid storytelling."
+            "name": "5 o'Clock Somewhere pool deck",
+            "desc": "The lively main deck anchored by the License to Chill Pool, 5 o'Clock Somewhere Bar and Grill and Cheeseburger in Paradise."
           },
           {
-            "name": "Parakeets Kid's Club",
-            "ages": "6-9 (tweens 7-12 also join here on Paradise, which has no separate Tween Club)",
-            "extra": "Magic workshops, Mayan temple escape games, DJ Academy activities."
-          },
-          {
-            "name": "The Teen's Club",
-            "ages": "13-17",
-            "extra": "Video games, ping pong, dodgeball, scavenger hunts, poolside movie takeovers, nightclub events."
+            "name": "12 Volt (adults-only)",
+            "desc": "The adults-only stern retreat with its own pool and 12 Volt Bar."
           }
         ],
-        "exp_source": "https://www.margaritavilleatsea.com/explore-our-ships/paradise; https://www.margaritavilleatsea.com/explore-our-ships/paradise/eat-drink-wine-dine; https://www.margaritavilleatsea.com/explore-our-ships/paradise/things-to-do; https://www.margaritavilleatsea.com/experiences/kids-clubs; https://www.margaritavilleatsea.com/explore-our-ships"
+        "deploy_note": "Sails from the Port of Palm Beach, Florida on short getaways to The Bahamas and Key West."
       }
     },
     {
@@ -193,201 +143,162 @@
       "notes": "In service. Official about-us page: \"expanded in June 2024 with the addition of the Margaritaville at Sea Islander, offering cruises from Port Tampa Bay.\" Tonnage, guest capacity, decks and class not published on any official page.",
       "spec_source": "https://www.margaritavilleatsea.com/about-us",
       "exp": {
-        "overview": "Launched 2024. Sails from Port Tampa Bay on 4- to 10-night cruises to Key West, Mexico and the Caribbean. Destinations named: Key West (FL), Cozumel (Mexico), Progreso (Mexico), and Western Caribbean ports (Jamaica, Belize, Grand Cayman, Honduras/Roatan). Features a 14-story tropical atrium, the first three-story poolside LandShark Bar, and 'twice the bars and restaurants' vs Paradise.",
+        "overview": "Islander is the fleet's larger, purpose-built flagship — 12 passenger decks wrapped around a 14-story tropical atrium, home to the world's only three-story LandShark Bar. It layers six new dining concepts, eleven new bars and lounges, three pools, two live production shows and family water play onto the signature Margaritaville beach-bar spirit, so the days at sea are as much the point as the ports.",
         "dining": [
           {
             "name": "Fins Dining",
             "type": "main",
-            "extra": "Main dining room; island-inspired dishes and signature favorites. Complimentary."
+            "extra": false,
+            "desc": "The complimentary main dining room serving all-new island plates like Avocado Lime Mahi Mahi and Deconstructed Cuban alongside signature Shrimp and Grits."
           },
           {
             "name": "Port of Indecision Buffet",
             "type": "buffet",
-            "extra": "Breakfast, lunch and dinner; wide selection of entrees, chef-attended stations, fresh salads, sides, desserts. Complimentary."
+            "extra": false,
+            "desc": "Endless breakfast, lunch and dinner across entrees, chef stations, salads, sides and desserts."
           },
           {
             "name": "Mexican Cutie Cantina",
             "type": "casual",
-            "extra": "Street-style tacos and breakfast burritos near 5 o'Clock Somewhere Pool. Complimentary."
+            "extra": false,
+            "desc": "Build-your-own street tacos and breakfast burritos by the 5 o'Clock Somewhere Pool."
           },
           {
             "name": "Cheeseburger in Paradise Burger Bar",
             "type": "casual",
-            "extra": "Build-your-own burgers at 5 o'Clock Somewhere Pool. Complimentary."
+            "extra": false,
+            "desc": "Customizable burgers and beverages poolside at 5 o'Clock Somewhere."
           },
           {
             "name": "Frank & Lola's Pizzeria",
             "type": "casual",
-            "extra": "Hand-tossed pizza near the buffet; room service option available for additional charge. Complimentary at venue."
+            "extra": false,
+            "desc": "Hand-tossed pizza near the buffet; whole pies can be sent to staterooms for an added charge."
           },
           {
             "name": "Margaritaville Coffee Shop",
             "type": "casual",
-            "extra": "Grab-and-go favorites with gourmet coffee and beverages."
+            "extra": false,
+            "desc": "Cappuccinos, gourmet coffee, seasonal drinks and grab-and-go favorites."
           },
           {
             "name": "JWB Prime Steakhouse",
             "type": "specialty",
-            "extra": "Upscale two-story steakhouse; casual elegance and island charm. Additional charge."
+            "extra": true,
+            "desc": "A two-story a la carte steakhouse with the highest-quality ingredients and island charm (extra charge)."
           },
           {
             "name": "Far Side Sushi",
             "type": "specialty",
-            "extra": "Asian-fusion sushi bar; specialty rolls and sea-cuterie boards. Additional charge."
+            "extra": true,
+            "desc": "A sushi bar of inventive mashups and Signature Sea-Cuterie boards (extra charge)."
           },
           {
             "name": "Island Eats",
-            "type": "specialty",
-            "extra": "Adults-only seafood shack at Tiki Bar; peel-and-eat shrimp, nachos, crab salad. Additional charge."
+            "type": null,
+            "extra": true,
+            "desc": "Adults-only ocean-bar bites — peel-and-eat shrimp, tuna nachos, crab salad (extra charge)."
           },
           {
             "name": "Tiki Grill",
-            "type": "specialty",
-            "extra": "Adults-only venue at Tiki Bar; tropical-inspired dishes with ocean views. Additional charge."
+            "type": "casual",
+            "extra": true,
+            "desc": "Adults-only tropical plates served at The Tiki Bar at the ship's aft (extra charge)."
           },
           {
             "name": "In-Room Dining",
             "type": "casual",
-            "extra": "Service to staterooms; breakfast and light bites."
+            "extra": true,
+            "desc": "Breakfast and bites delivered to your stateroom (extra charge)."
           }
         ],
         "activities": [
           {
-            "name": "Margaritaville Casino",
-            "type": "casino",
-            "extra": "Sports betting, new slot machines, and classic table games."
+            "name": "LandShark Pool & LandShark Bar and Lookout",
+            "desc": "The energetic main pool anchored by the world's only three-story LandShark Bar, with two decks of shaded seating, a lookout tower and outdoor entertainment screens."
           },
           {
-            "name": "LandShark Pool",
-            "type": "pool",
-            "extra": "Energetic party-vibe pool; ship also has the first three-story poolside LandShark Bar."
-          },
-          {
-            "name": "5 o'Clock Somewhere Pool",
-            "type": "pool",
-            "extra": "Laid-back pool with music and bites."
+            "name": "5 O'Clock Somewhere Pool",
+            "desc": "A laid-back pool with cabanas, complimentary poolside food and live island music at the Six String stage."
           },
           {
             "name": "The Tiki Pool",
-            "type": "pool",
-            "extra": "Ultra-relaxed adults-only (18+) retreat."
+            "desc": "An adults-only (18+) tropical retreat at the aft with covered pavilion seating, wake views and sunset dining at the Tiki Bar."
           },
           {
             "name": "Caribbean Amphibian Splash and Slide",
-            "type": "recreation",
-            "extra": "Water slide feature named on ship overview."
-          },
-          {
-            "name": "Dis and Dat Activity Zone",
-            "type": "activity",
-            "extra": "First-ever cornhole-meets-mini-golf course at sea."
+            "desc": "A family water-play area with slide (also referenced as the Caribbean Amphibian Play Pad and Slide)."
           },
           {
             "name": "Paradise Pickleball at Sea",
-            "type": "activity",
-            "extra": "Onboard pickleball for friendly competition."
+            "desc": "Two side-by-side pickleball courts on deck."
           },
           {
-            "name": "Defying Gravity Experience",
-            "type": "activity",
-            "extra": "Family experiences: circus-themed workshops, interactive game shows, scavenger hunts."
+            "name": "Mini-golf & Cornhole",
+            "desc": "A Margaritaville-inspired mini-golf course and cornhole for casual deck play."
           },
           {
-            "name": "Spa & Fitness",
-            "type": "spa",
-            "extra": "Spa services and fitness facilities available fleet-wide; individual Islander venue names not officially detailed."
+            "name": "St. Somewhere Spa & Salon",
+            "desc": "Fleet-wide spa and salon for treatments, massages and beauty services."
           },
           {
-            "name": "Wine Tasting",
-            "type": "activity",
-            "extra": "Educational sessions on history, flavor and styles of wines."
-          },
-          {
-            "name": "Mixology & Flair",
-            "type": "activity",
-            "extra": "Bartending demonstrations on the open deck."
-          },
-          {
-            "name": "Bingo",
-            "type": "activity",
-            "extra": "Games throughout sailing days."
+            "name": "Margaritaville Casino",
+            "desc": "Slots, table games and sports betting, with the adjacent Love and Luck Casino Bar."
           }
         ],
         "entertainment": [
           {
-            "name": "Radio Margaritaville: Live at Sea",
-            "extra": "Musical celebration of all things Margaritaville spanning genres."
+            "name": "Stars On The Water Theater",
+            "desc": "A three-story showroom staging the ship's original live production shows."
+          },
+          {
+            "name": "Conky Tonkin' at Sea",
+            "desc": "A country-themed spectacular with headliners and ensemble blending contemporary and classic country favorites, Nashville-style."
           },
           {
             "name": "Caribbean Heat Remix",
-            "extra": "Tropical music show with dancers and acrobats."
+            "desc": "An amplified take on the Margaritaville favorite — electrifying dance, acrobatics and the beats of Key West and Mexico."
           },
           {
-            "name": "Conky Tonkin' At Sea",
-            "extra": "Country music-themed experience with performances and dancing; part of the Boots and Bubbles theme night."
+            "name": "Radio Margaritaville: Live at Sea",
+            "desc": "A live musical celebration of all things Margaritaville spanning genres and decades."
           },
           {
-            "name": "Boots and Bubbles (theme night)",
-            "extra": "Captain's margarita toast, high-energy entertainment (Conky Tonkin' at Sea), themed dining and cocktail menus (champagne and bourbon), line dancing classes, family activities."
+            "name": "Boots and Bubbles",
+            "desc": "A dress-to-impress coastal-country evening: the Conky Tonkin' show, a captain's margarita toast, line-dancing classes and champagne-and-bourbon dining."
           },
           {
-            "name": "White Hot Neon Nights",
-            "extra": "Theme night with pulsing lights."
+            "name": "Rock the Trop",
+            "desc": "A yacht-rock-meets-tropical celebration with daytime scavenger hunts and character meet-and-greets, then the Caribbean Heat Remix show, DJ and nightclub."
           },
           {
-            "name": "Two new scripted live production shows",
-            "extra": "Two new scripted live production shows unique to Islander (titles not individually named on page)."
-          },
-          {
-            "name": "Sail Away Party",
-            "extra": "Departure celebration with music and dancing."
-          },
-          {
-            "name": "Sun Deck Activities",
-            "extra": "Live music featuring Caribbean bands, steel drums and DJ sets."
-          },
-          {
-            "name": "Game Shows",
-            "extra": "Trivia, scavenger hunts, and Love and Marriage show."
-          },
-          {
-            "name": "Karaoke",
-            "extra": "Onboard singing performances."
-          },
-          {
-            "name": "Parrot Photos",
-            "extra": "Photo opportunity with Margaritaville's signature parrot."
+            "name": "Nightlife venues",
+            "desc": "The two-story Hot, Hot, Hot Night Club, Coral Reef Lounge karaoke, Havana Daydreamin' sports bar and Bubbles Up champagne bar keep the evenings going."
           }
         ],
-        "kids_family": [
-          {
-            "name": "Jolly Mon Kid's Club",
-            "ages": "3-6",
-            "extra": "Ocean-themed arts and crafts, immersive cultural experiences, interactive games, mascot visits and mermaid storytelling."
-          },
-          {
-            "name": "Parakeets Kid's Club",
-            "ages": "6-9",
-            "extra": "Magic workshops, Mayan temple escape games, DJ Academy activities."
-          },
-          {
-            "name": "The Hangout Tween's Club",
-            "ages": "10-12",
-            "extra": "Trivia, board games, jewelry making, DJ Academy, glow parties."
-          },
-          {
-            "name": "The Teen's Club",
-            "ages": "13-17",
-            "extra": "Video games, ping pong, dodgeball, scavenger hunts, poolside movie takeovers, nightclub events."
-          },
-          {
-            "name": "Character Breakfast: Parrots, Pirates and Pancakes",
-            "ages": "family",
-            "extra": "Character breakfast available on Islander."
-          }
-        ],
+        "kids_family": "The most family-loaded ship in the fleet, with a full age ladder of supervised clubs plus a character breakfast. Jolly Mon Kid's Club (ages 3-6): ocean-themed arts and crafts, interactive games, mascot visits and mermaid storytelling. Parakeets Kid's Club (ages 6-9): magic workshops, escape rooms and mini-DJ sessions. The Hangout Tween's Club (ages 10-12): trivia, board games, jewelry making, DJ Academy and glow parties. The Teen's Club (ages 13-17): video games, ping pong, dodgeball, scavenger hunts, poolside movie takeovers and teen nightclub events. Plus the pre-purchase 'Parrots, Pirates and Pancakes' character breakfast.",
         "decks": 12,
-        "exp_source": "https://www.margaritavilleatsea.com/explore-our-ships/islander; https://www.margaritavilleatsea.com/explore-our-ships/islander/restaurants-and-dining; https://www.margaritavilleatsea.com/explore-our-ships/islander/things-to-do; https://www.margaritavilleatsea.com/experiences/kids-clubs; https://www.margaritavilleatsea.com/explore-our-ships"
+        "exp_source": "https://www.margaritavilleatsea.com/explore-our-ships/islander ; /islander/restaurants-and-dining ; /islander/bars-and-lounges ; /islander/things-to-do ; /margaritaville-at-sea-raises-curtain-on-entertainment-aboard-new-islander ; /experiences ; /experiences/kids-clubs",
+        "who_for": "Casual, fun-loving travelers who want more ship and a longer trip at an easygoing pace and price: families drawn to the water slide, tween and teen clubs and character breakfast, and adults who want three pools (one adults-only), a two-story nightclub, a champagne bar and a sports lounge. Great for value-minded cruisers wanting Key West, Mexico and Caribbean sailings out of Tampa.",
+        "neighbourhoods": [
+          {
+            "name": "14-story tropical atrium",
+            "desc": "The soaring central heart of the ship, home to the Flip Flop Atrium Bar and signature cocktails."
+          },
+          {
+            "name": "LandShark Pool deck",
+            "desc": "The lively main pool zone under the three-story LandShark Bar and Lookout."
+          },
+          {
+            "name": "5 O'Clock Somewhere Pool",
+            "desc": "The relaxed poolside zone with the Six String live-music stage and complimentary food."
+          },
+          {
+            "name": "The Tiki (adults-only aft)",
+            "desc": "The 18-and-up aft retreat with the Tiki Pool, Tiki Bar and Tiki Grill overlooking the wake."
+          }
+        ],
+        "deploy_note": "Sails from Port Tampa Bay, Florida on longer voyages to Key West, Mexico and the Caribbean."
       }
     }
   ],

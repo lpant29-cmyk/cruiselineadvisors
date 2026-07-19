@@ -187,13 +187,14 @@ def experience_sections(lang, line_slug, ship):
         for d in dining:
             nm, t, ex = d.get("name"), d.get("type"), d.get("extra")
             meta = f'<span class="xr-meta">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
-            pill, desc = "", ""
+            desc = (d.get("desc") or "").strip()
+            pill = ""
             if ex is True:
                 pill = f'<span class="xr-pill xr-spec">{_EXT[lang]}</span>'
             elif ex is False:
                 pill = f'<span class="xr-pill xr-inc">{_INC[lang]}</span>'
-            elif isinstance(ex, str) and ex.strip():
-                desc = ex
+            elif isinstance(ex, str) and ex.strip() and not desc:
+                desc = ex.strip()
             cards += _card(_food_emoji(nm, t), nm, meta, desc, pill)
         nudge = (_call(lang, "Want a specialty table booked before you sail? Our team sets it up when you call.")
                  if lang == "en" else

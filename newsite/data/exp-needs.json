@@ -637,36 +637,11 @@
   },
   "margaritaville-at-sea": {
     "Margaritaville at Sea Paradise": [
-      {
-        "field": "decks (total passenger deck count)",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise/paradise-deck-plan"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise"
-      },
-      {
-        "field": "named pools list (only 12 Volt Bar & Pool / main pool referenced)",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise/things-to-do"
-      },
-      {
-        "field": "spa named venue / spa brand",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise"
-      }
+      "Paradise passenger deck count (not stated on ship or deck-plan page — requires deck-plan PDF)",
+      "Confirm whether Paradise itineraries currently include Mexico (one source mentioned it; ship main page lists Bahamas and Key West)"
     ],
     "Margaritaville at Sea Islander": [
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander"
-      },
-      {
-        "field": "spa named venue / spa brand",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander/things-to-do"
-      },
-      {
-        "field": "passenger capacity (2,650 seen in press release, not confirmed on ship page)",
-        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander"
-      }
+      "Exact fitness-center naming (only St. Somewhere Spa & Salon confirmed fleet-wide)"
     ]
   }
 }
