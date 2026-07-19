@@ -10,6 +10,7 @@ from compare import compare_tool
 from interactive import when_to_go, cabin_guide, SEASONS
 from updates import all_updates, updates_for, update_cards, get_update
 from directory import directory_section
+from linepage import rich_sections, faq_section
 
 YEAR = datetime.date.today().year
 _L = {L["slug"]: L for L in LINES}
@@ -122,12 +123,14 @@ def p_line(lang, slug):
     upd_h2 = f"Latest {name} updates" if lang == "en" else f"Últimas novedades de {name}"
     return (phero(lang, kick, L["name"], L["tag"][lang], crumb)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
+            + rich_sections(lang, slug)
             + f'<section class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{kick}</span>'
               f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
             + f'<section class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
             + f'<section class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{cmp_kick}</span>'
               f'<h2>{cmp_h2}</h2><p>{cmp_sub}</p></div>{compare_tool(lang, default_a=slug)}</div></section>'
+            + faq_section(lang, slug)
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
 
