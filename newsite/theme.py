@@ -473,6 +473,10 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .ftr a:hover{color:#fff}
 .ftr .foot-brand{grid-column:1/-1;display:flex;flex-direction:column;gap:.6rem;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:8px}
 .ftr .foot-brand p{max-width:52ch;font-size:.86rem}
+.ftr .foot-seal{display:flex;align-items:center;gap:14px;margin-top:6px}
+.ftr .foot-seal .vseal{color:#E7C67B}
+.ftr .foot-seal .vseal svg{width:96px;height:96px}
+.ftr .foot-seal small{color:#C9DBE5;font-size:.75rem;font-weight:700;line-height:1.35;max-width:210px}
 .ftr .disc{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);margin-top:14px;padding-top:16px;font-size:.75rem;line-height:1.6;color:#87B0BA}
 .ftr .disc b{color:#CDE7EB}
 .ftr .disc p{margin-bottom:.6rem}

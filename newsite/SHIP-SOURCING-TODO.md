@@ -1,47 +1,70 @@
-# Ship data — official-source checklist
+# Ship data — what still needs official verification
 
-Rule: **official cruise-line sites only** (no Wikipedia/third party). Anything not on an official
-readable page renders as a "Not yet verified" gap until filled. Each ship page + fleet listing
-carries a "Verified from official sources · checked <date>" stamp.
+Rule: **official cruise-line sites only** (no Wikipedia/third party). Anything not read directly
+from an official page renders as a "Not yet verified" gap and does NOT get the verified seal.
+Everything below is what to confirm/provide from the official site. Send it in any format like:
+`Celebrity Xcel: GT 141,420, guests 3,260, year 2025` and I'll drop it in with today's date.
 
-## ✅ Done — sourced from official sites (live)
+Status date: 2026-07-19
 
-### Celebrity Cruises — 15 ships (celebritycruises.com per-ship pages)
-- Gross tonnage + guest capacity: **official, verified** for 14/15.
-- **Still needed (official):**
-  - `Celebrity Xcel` — gross tonnage + guest capacity (official page is marketing-only so far)
-  - **Year entered service** for all ships except *Beyond* (2022) — Celebrity does not publish
-    year on the ship pages. If you can get the official year per ship, paste it.
+---
 
-### Margaritaville at Sea — 2 ships (margaritavilleatsea.com)
-- Years: **official** (Paradise 2022, Islander 2024).
-- **Still needed (official):** gross tonnage, guest capacity, decks, ship class — for BOTH
-  Paradise and Islander (none published anywhere on the official site).
-- Beachcomber intentionally excluded (upcoming, PortMiami 2027 — not in service).
+## ✅ Complete — nothing needed
+- **Royal Caribbean** — 30 ships, all official (RC "Fast Facts" fact sheets).
+- **Holland America** — 11 ships, all official (HAL Fleet Specifications PDF).
+- **Carnival** — 29 ships: class/year/tonnage/guests all official. *(Optional: on-board venue
+  features — Carnival's fact sheets don't name venues, so features are blank.)*
 
-## ⏳ Pending — official spec pages are JavaScript-locked (session limit hit mid-run)
+## 🟡 Published, small gaps to fill
 
-For these six, the official **fleet pages list the ships** (names, and some show class) but the
-official **ship pages don't expose specs in readable HTML**. I will retry after the limit resets:
-(a) confirm official rosters + class from the fleet pages, (b) hunt official press/media
-**fact-sheet PDFs** for tonnage/guests/year. Whatever still isn't on an official readable page,
-I'll list here for you to paste.
+### Celebrity (15) — need the **year entered service** (only Beyond=2022 is published)
+Edge, Apex, Ascent, Solstice, Equinox, Eclipse, Silhouette, Reflection, Millennium, Infinity,
+Summit, Constellation, Flora — all need year.
+- **Celebrity Xcel** also needs: gross tonnage + guests (official page still marketing-only).
 
-Per ship I need, **from the official site**: `class`, `year entered service`, `gross tonnage`,
-`guest capacity`.
+### Margaritaville at Sea (2) — need class, gross tonnage, guests
+- Paradise (year 2022 ✓) — class, GT, guests
+- Islander (year 2024 ✓) — class, GT, guests
 
-- **Royal Caribbean** (~28 ships) — official fleet list read; specs JS-locked
-- **Holland America** (11 ships) — official roster + class read; "Ships at a Glance" PDF to try
-- **Carnival** (~29 ships) — official fleet list read; specs JS-locked
-- **Princess** (~17 ships) — official fleet page timed out; retry
-- **Cunard** (4 ships: Queen Mary 2, Victoria, Elizabeth, Anne) — retry official "in numbers" pages
-- **MSC** (~23 ships) — official US fleet page 403'd; retry msccruises.com / press area
+### MSC (23) — 11 ships fully official; these 16 need the rest (official site 403's on older ships)
+- MSC Virtuosa: GT, guests · MSC Meraviglia: year, GT · MSC Seascape: GT, guests · MSC Seaview: GT, guests
+- Fantasia, Splendida, Divina, Preziosa, Musica, Orchestra, Poesia, Magnifica, Lirica, Opera,
+  Armonia, Sinfonia: year, GT, guests (all)
+- *(Optional: venue features for the 12 pre-2017 ships.)*
 
-## How to paste (any line)
+## 🔴 Held back — NOT published (official site timed out; figures below came via a search index,
+i.e. a snippet, so they violate the official-only rule). **Confirm each against the official
+site and I'll publish the ship pages.**
 
-Just send lines like:
-```
-Celebrity Xcel: GT 141,420, guests 3,260
-Carnival Mardi Gras: Excel class, 2021, GT 180,800, guests 5,282
-```
-…and I'll drop them straight into `data/ships/<line>.json` with today's verified date.
+### Cunard (4)
+| Ship | class | year | GT | guests |
+|---|---|---|---|---|
+| Queen Mary 2 | Ocean liner | 2004 | 150,000 | 2,691 |
+| Queen Victoria | ? | 2007 | 90,000 | 2,061 |
+| Queen Elizabeth | ? | 2010 | 90,000 | 2,081 |
+| Queen Anne | ? | 2024 | 113,000 | 2,996 |
+
+### Princess (17)
+| Ship | class | year | GT | guests |
+|---|---|---|---|---|
+| Sun Princess | Sphere | 2024 | 175,500 | 4,300 |
+| Star Princess | Sphere | 2025 | 177,800 | 4,300 |
+| Sky Princess | Royal | 2019 | 141,000 | 3,660 |
+| Enchanted Princess | Royal | 2021 | 145,000 | 3,660 |
+| Discovery Princess | Royal | 2022 | 145,000 | 3,660 |
+| Majestic Princess | Royal | ? | 144,650 | 3,660 |
+| Regal Princess | Royal | 2014 | 141,000 | 3,560 |
+| Royal Princess | Royal | 2013 | 142,229 | 3,560 |
+| Crown Princess | Grand | 2006 | 113,561 | 3,090 |
+| Ruby Princess | Grand | ? | 113,561 | 3,080 |
+| Emerald Princess | Grand | ? | 113,561 | 3,080 |
+| Caribbean Princess | Grand | ? | 112,894 | 3,140 |
+| Grand Princess | Grand | 1998 | 107,517 | 2,610 |
+| Sapphire Princess | ? | 2004 | 115,875 | 2,670 |
+| Diamond Princess | ? | 2004 | 115,875 | 2,670 |
+| Coral Princess | Coral | 2003 | 91,627 | 2,000 |
+| Island Princess | Coral | 2003 | 92,000 | 2,200 |
+
+## Notes
+- RC/Carnival guest counts are double-occupancy (RC max-occupancy not published).
+- HAL specs PDF was effective 2020 — fine for existing ships; re-check on next 90-day refresh.

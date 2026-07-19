@@ -3,9 +3,16 @@
 The disclaimers are legally load-bearing; edit with care."""
 from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY
 from i18n import T
+from badges import verified_seal
+from facts import latest_verified_all
 import datetime
 
 YEAR = datetime.date.today().year
+
+_SEAL_CAP = {
+    "en": "All facts &amp; ship data verified from official cruise-line sites",
+    "es": "Todos los datos verificados de sitios oficiales de las líneas",
+}
 
 DISC = {
     "en": [
@@ -59,6 +66,7 @@ def footer(lang):
         <b style="color:#fff;font-family:'Fraunces',serif;font-size:1.2rem">CruiseLine<span style="color:#E0A84E">Advisors</span></b>
         <p>{t['foot_tag']} <b style="color:#C9DBE5">{t['foot_hours']}:</b> {HOURS[lang]}.</p>
         <p><a href="tel:{PHONE_HREF}" style="color:#E0A84E;font-weight:800;display:inline">☎ {PHONE_DISPLAY}</a></p>
+        <div class="foot-seal">{verified_seal(lang, latest_verified_all())}<small>{_SEAL_CAP[lang]}</small></div>
       </div>
       <div>
         <h4>{t['foot_col_lines']}</h4>

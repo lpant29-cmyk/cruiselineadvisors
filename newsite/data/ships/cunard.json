@@ -1,0 +1,14 @@
+{
+  "line": "cunard",
+  "roster_source": "https://www.cunard.com/en-gb/cruise-ships",
+  "specs_source": "https://www.cunard.com/en-gb/cruise-ships/{ship}",
+  "verified": "2026-07-19",
+  "ships": [
+    {"name": "Queen Mary 2", "class": null, "year": null, "tonnage": null, "guests": 2691, "crew": 1173, "length": "1,132 ft", "features": [], "notes": "Cunard's official ship pages publish guests, crew and length only — gross tonnage and entered-service year are not published on the site.", "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-mary-2"},
+    {"name": "Queen Anne", "class": null, "year": null, "tonnage": null, "guests": 2996, "crew": 1225, "length": "1,058 ft", "features": [], "notes": "Cunard publishes guests, crew and length only; tonnage and year not published.", "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-anne"},
+    {"name": "Queen Victoria", "class": null, "year": null, "tonnage": null, "guests": 2061, "crew": 913, "length": "964.5 ft", "features": [], "notes": "Cunard publishes guests, crew and length only; tonnage and year not published.", "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-victoria"},
+    {"name": "Queen Elizabeth", "class": null, "year": null, "tonnage": null, "guests": 2081, "crew": 911, "length": "964.5 ft", "features": [], "notes": "Cunard publishes guests, crew and length only; tonnage and year not published.", "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-elizabeth"}
+  ],
+  "needs_manual": ["gross tonnage + entered-service year for all 4 (Cunard does not publish these)", "ship class (Cunard does not label one)", "on-board features"],
+  "flag": "Guests/crew/length read directly from each official cunard.com ship page (user-confirmed 2026-07-19). Tonnage and year are genuinely not published on Cunard's site."
+}

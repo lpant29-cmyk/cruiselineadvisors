@@ -149,6 +149,8 @@ _SHIP_L = {
     "year": {"en": "Entered service", "es": "En servicio desde"},
     "guests": {"en": "Guests", "es": "Huéspedes"},
     "tonnage": {"en": "Gross tonnage", "es": "Tonelaje bruto"},
+    "crew": {"en": "Crew", "es": "Tripulación"},
+    "length": {"en": "Length", "es": "Eslora"},
 }
 
 
@@ -181,12 +183,16 @@ def p_ship(lang, line_slug, sslug):
         sub = L["name"]
     kick = L["cat"][lang]
 
-    # verified specs
-    specs = (
-        _spec(_SHIP_L["class"][lang], cls, lang, gap)
-        + _spec(_SHIP_L["year"][lang], s.get("year"), lang, gap)
-        + _spec(_SHIP_L["guests"][lang], _num(s["guests"]) if s.get("guests") else None, lang, gap)
-        + _spec(_SHIP_L["tonnage"][lang], _num(s["tonnage"]) if s.get("tonnage") else None, lang, gap))
+    # verified specs — core four always shown (gap if missing); crew/length only when present
+    cells = [(_SHIP_L["class"][lang], cls),
+             (_SHIP_L["year"][lang], s.get("year")),
+             (_SHIP_L["guests"][lang], _num(s["guests"]) if s.get("guests") else None),
+             (_SHIP_L["tonnage"][lang], _num(s["tonnage"]) if s.get("tonnage") else None)]
+    if s.get("crew"):
+        cells.append((_SHIP_L["crew"][lang], _num(s["crew"])))
+    if s.get("length"):
+        cells.append((_SHIP_L["length"][lang], s["length"]))
+    specs = "".join(_spec(lbl, val, lang, gap) for lbl, val in cells)
     feats = "".join(f'<li>{f}</li>' for f in s.get("features", []) if f)
     feats_h = "On board" if lang == "en" else "A bordo"
     feats_block = (f'<h2 class="rsec-h" style="margin-top:36px">{feats_h}</h2>'
