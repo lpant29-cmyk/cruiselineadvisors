@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor / OS
+*.swp
+*.swo
+.DS_Store
+
+# Build artifacts (site/ is the committed, served copy of this)
+newsite/dist/
+# Stray artifact from the old (stale) root generators — never served
+/lines-deep/
