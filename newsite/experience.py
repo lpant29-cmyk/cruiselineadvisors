@@ -20,11 +20,12 @@ _H = {
     "activities": {"en": "Things to do", "es": "Qué hacer"},
     "entertainment": {"en": "Entertainment & nightlife", "es": "Entretenimiento y vida nocturna"},
     "family": {"en": "Kids, teens & families", "es": "Niños, adolescentes y familias"},
+    "zones": {"en": "Districts & zones", "es": "Distritos y zonas"},
     "decks": {"en": "Decks & layout", "es": "Cubiertas y distribución"},
     "cam": {"en": "Bridge cam", "es": "Cámara del puente"},
 }
 _IC = {"overview": "🚢", "dining": "🍽️", "drinks": "🍹", "activities": "🎢",
-       "entertainment": "🎭", "family": "👨‍👩‍👧", "decks": "🛗", "cam": "📷"}
+       "entertainment": "🎭", "family": "👨‍👩‍👧", "zones": "🧭", "decks": "🛗", "cam": "📷"}
 _DTYPE = {
     "main": {"en": "Main dining", "es": "Comedor principal"},
     "buffet": {"en": "Buffet", "es": "Bufé"},
@@ -150,10 +151,16 @@ def experience_sections(lang, line_slug, ship):
         note = ("Photos are illustrative." if lang == "en" else "Fotos ilustrativas.")
         out += _sec("photos", lang, f'<div class="xphotos">{cards}</div><p class="xnote">{note}</p>')
 
-    # ── Overview ──
+    # ── Overview + "Who it's for" ──
     ov = exp.get("overview")
-    if ov:
-        out += _sec("overview", lang, f'<p class="intro">{ov}</p>')
+    wf = exp.get("who_for")
+    if ov or wf:
+        inner = f'<p class="intro">{ov}</p>' if ov else ""
+        if wf:
+            lbl = "Who it's for" if lang == "en" else "Para quién es"
+            inner += (f'<div class="whofor"><span class="whofor-ic" aria-hidden="true">🧭</span>'
+                      f'<div><b>{lbl}</b><p>{wf}</p></div></div>')
+        out += _sec("overview", lang, inner)
 
     # ── Food & dining ──
     dining = [d for d in (exp.get("dining") or []) if d.get("name")]
@@ -220,20 +227,22 @@ def experience_sections(lang, line_slug, ship):
     if grid or ship_kids:
         out += _sec("family", lang, f'{grid}{ship_kids}')
 
+    # ── Districts & zones (own section — described cards when we have descriptions) ──
+    nbh = exp.get("neighbourhoods") or exp.get("neighborhoods") or []
+    if nbh:
+        if isinstance(nbh[0], dict):
+            inner = _item_cards(nbh, _ACT_EMOJI, "📍")
+        else:
+            chips = "".join(f'<span class="ft">{n}</span>' for n in nbh if n)
+            inner = f'<div class="ship-feats">{chips}</div>'
+        out += _sec("zones", lang, inner)
+
     # ── Decks & layout ──
     decks = exp.get("decks")
-    nbh = exp.get("neighbourhoods") or exp.get("neighborhoods") or []
-    if decks or nbh:
-        bits = ""
-        if decks:
-            lbl = "Passenger decks" if lang == "en" else "Cubiertas"
-            bits += f'<div class="glance-cell"><b>{lbl}</b><span>{decks}</span></div>'
-        inner = f'<div class="glance-grid">{bits}</div>' if bits else ""
-        if nbh:
-            lbl = "Neighbourhoods & zones" if lang == "en" else "Zonas y barrios"
-            chips = "".join(f'<span class="ft">{n}</span>' for n in nbh if n)
-            inner += f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b></p><div class="ship-feats">{chips}</div>'
-        out += _sec("decks", lang, inner)
+    if decks:
+        lbl = "Passenger decks" if lang == "en" else "Cubiertas"
+        out += _sec("decks", lang,
+                    f'<div class="glance-grid"><div class="glance-cell"><b>{lbl}</b><span>{decks}</span></div></div>')
 
     # ── Bridge cam ──
     cam = exp.get("bridge_cam")

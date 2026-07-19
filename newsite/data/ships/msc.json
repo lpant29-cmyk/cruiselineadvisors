@@ -21,13 +21,34 @@
       "exp": {
         "overview": "MSC World America is MSC Cruises' World-class Miami flagship, delivered in April 2025 — 22 decks and 2,614 staterooms arranged into seven themed districts, with more than 420,000 sq ft of public space, six pools, a water park and 19 dining venues, including the only Eataly at sea. It is built for families and, via the MSC Yacht Club, for guests who want a private ship-within-a-ship.",
         "neighbourhoods": [
-          "MSC Yacht Club",
-          "Family Aventura",
-          "Aqua Deck",
-          "Zen Area",
-          "Galleria",
-          "The Terraces",
-          "Promenade"
+          {
+            "name": "MSC Yacht Club",
+            "desc": "The ship-within-a-ship: private suites, a keycard-only sundeck with its own pool and hot tub, a members' lounge and restaurant, and butler service throughout."
+          },
+          {
+            "name": "Family Aventura",
+            "desc": "The family heart of the ship — The Harbor's ropes course and playground, kid-friendly pools and room for everyone to burn off energy."
+          },
+          {
+            "name": "Aqua Deck",
+            "desc": "The main pool-and-waterpark deck, where the slides, sun loungers and poolside action all live."
+          },
+          {
+            "name": "Zen Area",
+            "desc": "An adults-only retreat of two calm pools and quiet corners, kept well away from the busier decks."
+          },
+          {
+            "name": "Galleria",
+            "desc": "The buzzing indoor promenade under an LED dome — shops, bars and the Luna Park Arena stage all in one place."
+          },
+          {
+            "name": "The Terraces",
+            "desc": "The dining district, where the specialty restaurants — steakhouse, sushi, teppanyaki, tacos — cluster together."
+          },
+          {
+            "name": "Promenade",
+            "desc": "The outdoor social spine, home to the 11-deck dry slide and ocean-view bars."
+          }
         ],
         "dining": [
           {
@@ -161,7 +182,8 @@
           }
         ],
         "decks": 22,
-        "exp_source": "https://www.mscpressarea.com/en_US/press-releases/ (MSC World America press releases)"
+        "exp_source": "https://www.mscpressarea.com/en_US/press-releases/ (MSC World America press releases)",
+        "who_for": "Families and multi-generational groups who want everything in one place — with a grown-ups-only Zen Area to escape the buzz, and the private MSC Yacht Club for anyone who wants a quiet, butler-served ship-within-a-ship."
       }
     },
     {
