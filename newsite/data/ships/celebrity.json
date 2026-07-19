@@ -1,0 +1,163 @@
+{
+  "line": "celebrity",
+  "roster_source": "https://www.celebritycruises.com/cruise-ships",
+  "specs_source": "official per-ship pages",
+  "verified": "2026-07-19",
+  "ships": [
+    {
+      "name": "Celebrity Edge",
+      "class": "Edge",
+      "year": null,
+      "tonnage": 130818,
+      "guests": 2918,
+      "features": ["Magic Carpet movable platform", "Infinite Verandas Edge staterooms", "29 restaurants, bars and lounges", "The Retreat suite area with private restaurant, lounge and sundeck"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
+    },
+    {
+      "name": "Celebrity Apex",
+      "class": "Edge",
+      "year": null,
+      "tonnage": 130818,
+      "guests": 2910,
+      "features": ["Magic Carpet movable platform", "The Retreat suite area", "Eden outward-facing venue", "Normandie French restaurant"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
+    },
+    {
+      "name": "Celebrity Beyond",
+      "class": "Edge",
+      "year": 2022,
+      "tonnage": 141420,
+      "guests": 3260,
+      "features": ["32 distinct restaurants, bars and lounges", "The Retreat suite area", "Spa and fitness center", "Starlink broadband internet"],
+      "notes": "guests=double occupancy; year 2022 per official naming-ceremony note on page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
+    },
+    {
+      "name": "Celebrity Ascent",
+      "class": "Edge",
+      "year": null,
+      "tonnage": 141420,
+      "guests": 3260,
+      "features": ["32 restaurants, bars and lounges incl. Le Voyage by Daniel Boulud", "Multi-deck Sunset Bar by Nate Berkus", "Rooftop Garden with two cantilevered floating pools", "The Retreat suite area"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
+    },
+    {
+      "name": "Celebrity Xcel",
+      "class": "Edge",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": ["The Bazaar", "Celebrity Pool Club", "The Spa", "IYKYK"],
+      "notes": "tonnage/guests/year not shown on official ship page (marketing page only); features listed are named on page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
+    },
+    {
+      "name": "Celebrity Solstice",
+      "class": "Solstice",
+      "year": null,
+      "tonnage": 121878,
+      "guests": 2852,
+      "features": ["The Retreat Sundeck", "Sunset Park top-deck venue", "Trattoria Rossa and Fine Cut Steakhouse", "Boulevard Lounge"],
+      "notes": "guests=double occupancy; year not on official page (page notes 2026 refurbishment)",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
+    },
+    {
+      "name": "Celebrity Equinox",
+      "class": "Solstice",
+      "year": null,
+      "tonnage": 121878,
+      "guests": 2852,
+      "features": ["The Retreat Sundeck and Lounge", "Luminae restaurant", "Craft Social", "The Lawn Club"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
+    },
+    {
+      "name": "Celebrity Eclipse",
+      "class": "Solstice",
+      "year": null,
+      "tonnage": 121878,
+      "guests": 2852,
+      "features": ["The Lawn Club (half-acre of real grass)", "Blu restaurant for AquaClass", "The Spa", "Daniel Boulud restaurant"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
+    },
+    {
+      "name": "Celebrity Silhouette",
+      "class": "Solstice",
+      "year": null,
+      "tonnage": 122210,
+      "guests": 2902,
+      "features": ["Passport Bar and Craft Social Bar", "The Spa with new treatment rooms", "Lawn Club Grill", "Chef's Table by Chef Daniel Boulud"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
+    },
+    {
+      "name": "Celebrity Reflection",
+      "class": "Solstice",
+      "year": null,
+      "tonnage": 125366,
+      "guests": 3046,
+      "features": ["The Lawn Club (half-acre of real grass)", "Lawn Club Grill", "Chef's Table by Chef Daniel Boulud", "The Retreat suite area"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
+    },
+    {
+      "name": "Celebrity Millennium",
+      "class": "Millennium",
+      "year": null,
+      "tonnage": 91011,
+      "guests": 2218,
+      "features": ["The Retreat Sundeck and Lounge", "Luminae restaurant", "Reimagined main dining room and Oceanview Cafe", "Newly redesigned spa"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
+    },
+    {
+      "name": "Celebrity Infinity",
+      "class": "Millennium",
+      "year": null,
+      "tonnage": 90940,
+      "guests": 2170,
+      "features": ["Chef's Table by Chef Daniel Boulud", "Tuscan Grille", "Le Petit Chef dining experience", "The Spa"],
+      "notes": "guests=double occupancy; year not on official page; page also lists length 965 ft, beam 105 ft",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
+    },
+    {
+      "name": "Celebrity Summit",
+      "class": "Millennium",
+      "year": null,
+      "tonnage": 91003,
+      "guests": 2218,
+      "features": ["Chef's Table by Chef Daniel Boulud", "The Retreat Sundeck and Lounge", "Tuscan Grille and Le Petit Chef", "Newly redesigned spa"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
+    },
+    {
+      "name": "Celebrity Constellation",
+      "class": "Millennium",
+      "year": null,
+      "tonnage": 90940,
+      "guests": 2184,
+      "features": ["Chef's Table by Chef Daniel Boulud", "Tuscan Grille", "The Spa", "The Retreat suite area"],
+      "notes": "guests=double occupancy; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
+    },
+    {
+      "name": "Celebrity Flora",
+      "class": "Expedition",
+      "year": null,
+      "tonnage": 5922,
+      "guests": 100,
+      "features": ["All-suite accommodations", "Infinite Veranda glass-door technology", "Full in-suite room automation", "Certified Galapagos National Park naturalists on board"],
+      "notes": "guests=double occupancy; Galapagos expedition ship; year not on official page",
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+    }
+  ],
+  "needs_manual": [
+    "Celebrity Xcel: gross tonnage, double-occupancy guests, and year entered service not shown on official ship page (marketing-only page)",
+    "Year entered service not published on any of the 15 official ship pages except Celebrity Beyond (2022, from naming-ceremony note)"
+  ],
+  "flag": ""
+}

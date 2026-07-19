@@ -11,12 +11,13 @@ from config import LANGS, DEFAULT_LANG, SITE_URL, BRAND, COMPANY
 from base import page
 from i18n import T
 import page_home
-from pages import (p_lines_hub, p_line, p_compare, p_facts, p_dest_hub, p_region,
+from pages import (p_lines_hub, p_line, p_ship, p_compare, p_facts, p_dest_hub, p_region,
                    p_guides_hub, p_guide, p_updates, p_update_detail, GUIDES)
 from updates import all_updates
 from legal_pages import p_legal, LEGAL
 from data import LINES, DESTINATIONS
 from facts import coverage
+from ships import all_ships, coverage as ship_coverage
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DIST = os.path.join(ROOT, "dist")
@@ -85,6 +86,14 @@ def build():
                  _t(f"{L['name']} Cruises — Guide, Included, Cabins & Timing | CruiseLine Advisors",
                     f"{L['name']}: guía, qué se incluye, camarotes y temporada | CruiseLine Advisors", lang),
                  L["tag"][lang], p_line(lang, L["slug"]))
+        for line_slug, sh in all_ships():
+            from ships import slugify as _sslug
+            emit(lang, f"lines/{line_slug}/ships/{_sslug(sh['name'])}.html",
+                 _t(f"{sh['name']} — Ship Guide, Size, Cabins & Sailings | CruiseLine Advisors",
+                    f"{sh['name']} — guía del barco, tamaño, camarotes y salidas | CruiseLine Advisors", lang),
+                 _t(f"{sh['name']}: verified size, capacity and what's on board — call to book.",
+                    f"{sh['name']}: tamaño y capacidad verificados y qué hay a bordo — llama para reservar.", lang),
+                 p_ship(lang, line_slug, _sslug(sh['name'])))
 
         emit(lang, "compare.html",
              _t("Compare Cruise Lines on What Matters | CruiseLine Advisors",
@@ -162,8 +171,10 @@ def build():
             n_assets += 1
 
     done, total = coverage()
+    sl, sn = ship_coverage()
     print(f"Built {len(written)} pages (+ root, 404, sitemap, robots) into dist/")
     print(f"  facts verified: {done}/{total}")
+    print(f"  ship rosters: {sl} lines, {sn} ships")
     if hits:
         print("  ⚠ BANNED-TERM HITS:", hits)
     else:

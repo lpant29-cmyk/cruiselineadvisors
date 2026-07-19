@@ -416,3 +416,17 @@ def coverage():
     total = len(LINE_FACTS) * len(FACT_KEYS)
     done = sum(1 for s in LINE_FACTS.values() for c in s.values() if c.get("v"))
     return done, total
+
+
+def latest_verified(slug):
+    """Most recent verified date among a line's filled facts (ISO strings compare lexically)."""
+    ds = [c["verified"] for c in LINE_FACTS.get(slug, {}).values()
+          if c.get("v") and c.get("verified")]
+    return max(ds) if ds else None
+
+
+def latest_verified_all():
+    """Most recent verified date across every line — for the shared compare tool stamp."""
+    ds = [c["verified"] for s in LINE_FACTS.values() for c in s.values()
+          if c.get("v") and c.get("verified")]
+    return max(ds) if ds else None

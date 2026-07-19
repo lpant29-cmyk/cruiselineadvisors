@@ -9,6 +9,7 @@ bilingual) — full ES translation of this content is a flagged follow-up."""
 import json
 import os
 from config import PHONE_HREF, PHONE_DISPLAY
+from ships import ships_for, slugify as ship_slug
 
 _CL = {L["slug"]: L for L in json.load(
     open(os.path.join(os.path.dirname(__file__), "data", "cruise-lines.json"), encoding="utf-8"))["lines"]}
@@ -67,7 +68,105 @@ def _nudge(lang, txt):
 
 
 def _sec(cls, key, lang, inner):
-    return (f'<section class="section {cls}"><div class="wrap"><h2 class="rsec-h">{_H[key][lang]}</h2>{inner}</div></section>')
+    return (f'<section id="s-{key}" class="section {cls}"><div class="wrap">'
+            f'<h2 class="rsec-h">{_H[key][lang]}</h2>{inner}</div></section>')
+
+
+# Short bilingual labels for the line-page table of contents (jump nav). Covers the rich sections
+# here plus the facts/updates/compare/faq sections added in pages.py p_line.
+TOC_LABELS = {
+    "glance": {"en": "Overview", "es": "Resumen"},
+    "fit": {"en": "Right for you?", "es": "¿Para ti?"},
+    "fleet": {"en": "Ships", "es": "Barcos"},
+    "incl": {"en": "Included", "es": "Incluido"},
+    "cabins": {"en": "Cabins", "es": "Camarotes"},
+    "family": {"en": "Families", "es": "Familias"},
+    "access": {"en": "Accessibility", "es": "Accesibilidad"},
+    "sails": {"en": "Where & when", "es": "Dónde y cuándo"},
+    "cost": {"en": "Cost", "es": "Costo"},
+    "facts": {"en": "The facts", "es": "Los datos"},
+    "updates": {"en": "Updates", "es": "Novedades"},
+    "compare": {"en": "Compare", "es": "Comparar"},
+    "faq": {"en": "FAQ", "es": "Preguntas"},
+}
+
+
+def line_toc(lang, keys):
+    """Jump nav over the sections that actually render on this line page."""
+    if len(keys) < 3:
+        return ""
+    label = "On this page" if lang == "en" else "En esta página"
+    items = "".join(f'<li><a href="#s-{k}">{TOC_LABELS[k][lang]}</a></li>'
+                    for k in keys if k in TOC_LABELS)
+    return (f'<section class="section" style="padding-top:0"><div class="wrap"><nav class="toc" aria-label="{label}">'
+            f'<p class="toc-h">{label}</p><ul class="toc-list">{items}</ul></nav></div></section>')
+
+
+def _num(n):
+    try:
+        return f"{int(n):,}"
+    except (TypeError, ValueError):
+        return str(n)
+
+
+def _fleet_inner(lang, slug, name, classes):
+    """The fleet section body. Prefers the verified per-ship roster (ships.py) — each ship a card
+    linking to its own page — and only falls back to class-level cards when no roster exists yet."""
+    clsw = "class" if lang == "en" else "clase"
+    guestsw = "guests" if lang == "en" else "huéspedes"
+    view = "View ship" if lang == "en" else "Ver barco"
+    ships = ships_for(slug)
+    if ships:
+        # group by class, preserving first-seen order; null class → "Other"
+        order, groups = [], {}
+        for s in ships:
+            k = s.get("class") or ("Other" if lang == "en" else "Otros")
+            if k not in groups:
+                groups[k] = []
+                order.append(k)
+            groups[k].append(s)
+        blocks = ""
+        for k in order:
+            cards = ""
+            for s in groups[k]:
+                meta = " · ".join(x for x in [
+                    str(s["year"]) if s.get("year") else None,
+                    f'{_num(s["guests"])} {guestsw}' if s.get("guests") else None,
+                ] if x)
+                cards += (
+                    f'<a class="ship-card lk" href="/{lang}/lines/{slug}/ships/{ship_slug(s["name"])}/">'
+                    f'<h3>{s["name"]}</h3>'
+                    f'<p class="ship-ships">{meta or "&nbsp;"}</p>'
+                    f'<span class="ship-more">{view} →</span></a>')
+            head = (f'<h3 class="fleet-class">{k} {clsw}</h3>'
+                    if k not in ("Other", "Otros") else "")
+            blocks += f'{head}<div class="ship-grid">{cards}</div>'
+        nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where — and when."
+                 if lang == "en" else
+                 f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde — y cuándo."))
+        return f'{blocks}{nudge}'
+
+    # fallback: class-level cards from cruise-lines.json
+    if not classes:
+        return ""
+    cards = ""
+    for s in classes:
+        feats = "".join(f'<span class="ft">{f}</span>' for f in s.get("features", []) if not _gap(f))
+        cards += (f'<article class="ship-card"><h3>{_v(s.get("class"), lang)} {clsw}</h3>'
+                  f'<p class="ship-ships"><b>{_L["ships"][lang]}:</b> {_v(s.get("ships"), lang)}</p>'
+                  f'<div class="ship-feats">{feats}</div></article>')
+    nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where — and when."
+             if lang == "en" else
+             f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde — y cuándo."))
+    return f'<div class="ship-grid">{cards}</div>{nudge}'
+
+
+_LAST_SECTIONS = {}
+
+
+def sections_present(slug):
+    """Ordered rich-section keys that rendered for this line (set by rich_sections) — for the TOC."""
+    return _LAST_SECTIONS.get(slug, [])
 
 
 def rich_sections(lang, slug):
@@ -76,6 +175,7 @@ def rich_sections(lang, slug):
         return ""
     name = L["name"]
     out = ""
+    pres = []
 
     # ── At a glance ──
     c = L.get("company", {})
@@ -83,7 +183,7 @@ def rich_sections(lang, slug):
             ("fleet_n", c.get("fleet_size")), ("loyalty", c.get("loyalty_program")),
             ("style", L.get("positioning", "").replace("-", " ").title())]
     grid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in rows)
-    out += _sec("cream", "glance", lang, f'<div class="glance-grid">{grid}</div>')
+    out += _sec("cream", "glance", lang, f'<div class="glance-grid">{grid}</div>'); pres.append("glance")
 
     # ── Who it's for / not for ──
     ed = L.get("editorial", {})
@@ -92,21 +192,12 @@ def rich_sections(lang, slug):
     if yes or no:
         out += _sec("", "fit", lang,
                     f'<div class="fit-grid"><div class="fit-col yes"><h3>✓ {_H["fityes"][lang]}</h3><ul>{yes}</ul></div>'
-                    f'<div class="fit-col no"><h3>✕ {_H["fitno"][lang]}</h3><ul>{no}</ul></div></div>')
+                    f'<div class="fit-col no"><h3>✕ {_H["fitno"][lang]}</h3><ul>{no}</ul></div></div>'); pres.append("fit")
 
-    # ── The fleet ──
-    classes = L.get("ship_classes", [])
-    if classes:
-        cards = ""
-        for s in classes:
-            feats = "".join(f'<span class="ft">{f}</span>' for f in s.get("features", []) if not _gap(f))
-            cards += (f'<article class="ship-card"><h3>{_v(s.get("class"), lang)} {"class" if lang=="en" else "clase"}</h3>'
-                      f'<p class="ship-ships"><b>{_L["ships"][lang]}:</b> {_v(s.get("ships"), lang)}</p>'
-                      f'<div class="ship-feats">{feats}</div></article>')
-        nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where — and when."
-                 if lang == "en" else
-                 f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde — y cuándo."))
-        out += _sec("cream", "fleet", lang, f'<div class="ship-grid">{cards}</div>{nudge}')
+    # ── The fleet ── real per-ship roster (linked) when we have it; else class-level cards.
+    fleet = _fleet_inner(lang, slug, name, L.get("ship_classes", []))
+    if fleet:
+        out += _sec("cream", "fleet", lang, fleet); pres.append("fleet")
 
     # ── What's included ──
     inc = L.get("inclusions", {})
@@ -115,7 +206,7 @@ def rich_sections(lang, slug):
     if yy or nn:
         out += _sec("", "incl", lang,
                     f'<div class="incl-grid"><div class="incl-col yes"><h3>{_H["inclyes"][lang]}</h3><ul>{yy}</ul></div>'
-                    f'<div class="incl-col no"><h3>{_H["inclno"][lang]}</h3><ul>{nn}</ul></div></div>')
+                    f'<div class="incl-col no"><h3>{_H["inclno"][lang]}</h3><ul>{nn}</ul></div></div>'); pres.append("incl")
 
     # ── Cabins ──
     cab = L.get("cabins", {})
@@ -126,26 +217,26 @@ def rich_sections(lang, slug):
                  if lang == "en" else
                  "El camarote correcto — y los números a evitar en cada barco — es justo lo que sabe un asesor."))
         out += _sec("cream", "cabins", lang,
-                    f'<p class="rsec-sub"><b>{_L["cats"][lang]}:</b></p><div class="ship-feats">{chips}</div>{nudge}')
+                    f'<p class="rsec-sub"><b>{_L["cats"][lang]}:</b></p><div class="ship-feats">{chips}</div>{nudge}'); pres.append("cabins")
 
     # ── Families ──
     fam = L.get("family", {})
     frows = [("kidsclub", fam.get("kids_club_name")), ("minage", fam.get("minimum_sailing_age"))]
     fgrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in frows)
-    out += _sec("", "family", lang, f'<div class="glance-grid">{fgrid}</div>')
+    out += _sec("", "family", lang, f'<div class="glance-grid">{fgrid}</div>'); pres.append("family")
 
     # ── Accessibility ──
     acc = L.get("accessibility", {})
     note = acc.get("tender_port_note")
     acc_inner = f'<p class="rsec-sub">{note}</p>' if note and not _gap(note) else f'<p class="rsec-sub cmp-gap">{GAP[lang]}</p>'
-    out += _sec("cream", "access", lang, acc_inner)
+    out += _sec("cream", "access", lang, acc_inner); pres.append("access")
 
     # ── Where & when ──
     it = L.get("itineraries", {})
     regs = [r.get("region") for r in it.get("regions", []) if isinstance(r, dict) and not _gap(r.get("region"))]
     irows = [("regions", regs or None), ("lengths", it.get("typical_lengths")), ("ports", it.get("home_ports"))]
     igrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in irows)
-    out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>')
+    out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>'); pres.append("sails")
 
     # ── Cost drivers ──
     cd = ed.get("cost_drivers", [])
@@ -155,8 +246,9 @@ def rich_sections(lang, slug):
         nudge = (_nudge(lang, "Prices move daily by ship, date and cabin. One call gets you the real number for your trip — and the best rate our partners can offer."
                  if lang == "en" else
                  "Los precios cambian a diario por barco, fecha y camarote. Una llamada te da el número real — y la mejor tarifa que nuestros socios pueden ofrecer."))
-        out += _sec("cream", "cost", lang, f'<div class="cd-list">{items}</div>{nudge}')
+        out += _sec("cream", "cost", lang, f'<div class="cd-list">{items}</div>{nudge}'); pres.append("cost")
 
+    _LAST_SECTIONS[slug] = pres
     return out
 
 

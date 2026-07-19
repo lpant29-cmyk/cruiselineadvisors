@@ -5,12 +5,15 @@ only — no prices, real hours, per-line disclaimers, and unverified facts shown
 import datetime
 from config import PHONE_HREF, PHONE_DISPLAY, HOURS, SINCE_YEAR, BRAND
 from data import LINES, DESTINATIONS
-from facts import FACTS, LINE_FACTS
+from facts import FACTS, LINE_FACTS, latest_verified
+from badges import verified_stamp
 from compare import compare_tool
 from interactive import when_to_go, cabin_guide, SEASONS
 from updates import all_updates, updates_for, update_cards, get_update
 from directory import directory_section
-from linepage import rich_sections, faq_section
+from linepage import rich_sections, faq_section, sections_present, line_toc
+from ships import ships_for, get_ship, sister_ships, slugify as ship_slug, source_of as ship_source
+from shipcompare import ship_compare_tool, has_ship_compare
 
 YEAR = datetime.date.today().year
 _L = {L["slug"]: L for L in LINES}
@@ -121,18 +124,149 @@ def p_line(lang, slug):
                f"Compara {name} con otra línea en los datos que cuestan dinero — luego deja que un asesor los aplique a tu crucero.")
     upd_kick = "Updates" if lang == "en" else "Novedades"
     upd_h2 = f"Latest {name} updates" if lang == "en" else f"Últimas novedades de {name}"
+    rich = rich_sections(lang, slug)  # sets sections_present(slug) as a side effect
+    faq = faq_section(lang, slug)
+    toc_keys = sections_present(slug) + ["facts", "updates", "compare"] + (["faq"] if faq else [])
     return (phero(lang, kick, L["name"], L["tag"][lang], crumb)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
-            + rich_sections(lang, slug)
-            + f'<section class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{kick}</span>'
-              f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
-            + f'<section class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
+            + line_toc(lang, toc_keys)
+            + rich
+            + f'<section id="s-facts" class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{kick}</span>'
+              f'<h2>{facts_h}</h2>{verified_stamp(lang, latest_verified(slug))}<p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
+            + f'<section id="s-updates" class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
-            + f'<section class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{cmp_kick}</span>'
+            + f'<section id="s-compare" class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{cmp_kick}</span>'
               f'<h2>{cmp_h2}</h2><p>{cmp_sub}</p></div>{compare_tool(lang, default_a=slug)}</div></section>'
-            + faq_section(lang, slug)
+            + faq
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
+
+
+# ─────────────────────────── ships ───────────────────────────
+_SHIP_L = {
+    "class": {"en": "Ship class", "es": "Clase"},
+    "year": {"en": "Entered service", "es": "En servicio desde"},
+    "guests": {"en": "Guests", "es": "Huéspedes"},
+    "tonnage": {"en": "Gross tonnage", "es": "Tonelaje bruto"},
+}
+
+
+def _num(n):
+    try:
+        return f"{int(n):,}"
+    except (TypeError, ValueError):
+        return str(n)
+
+
+def _spec(label, val, lang, gap):
+    inner = f"<b>{val}</b>" if val not in (None, "") else f'<span class="cmp-gap">{gap}</span>'
+    return f'<div class="glance-cell"><b>{label}</b><span>{inner}</span></div>'
+
+
+def p_ship(lang, line_slug, sslug):
+    L = _L[line_slug]
+    s = get_ship(line_slug, sslug)
+    name = s["name"]
+    gap = "Not yet verified" if lang == "en" else "No verificado aún"
+    cls = s.get("class")
+    linesw = "Cruise lines" if lang == "en" else "Líneas"
+    crumb = _crumb(lang,
+                   f'<a href="/{lang}/cruise-lines.html">{linesw}</a>',
+                   f'<a href="/{lang}/lines/{line_slug}.html">{L["name"]}</a>', name)
+    if cls:
+        sub = (f'{cls} class · {L["name"]}' if lang == "en" else f'Clase {cls} · {L["name"]}')
+    else:
+        sub = L["name"]
+    kick = L["cat"][lang]
+
+    # verified specs
+    specs = (
+        _spec(_SHIP_L["class"][lang], cls, lang, gap)
+        + _spec(_SHIP_L["year"][lang], s.get("year"), lang, gap)
+        + _spec(_SHIP_L["guests"][lang], _num(s["guests"]) if s.get("guests") else None, lang, gap)
+        + _spec(_SHIP_L["tonnage"][lang], _num(s["tonnage"]) if s.get("tonnage") else None, lang, gap))
+    feats = "".join(f'<li>{f}</li>' for f in s.get("features", []) if f)
+    feats_h = "On board" if lang == "en" else "A bordo"
+    feats_block = (f'<h2 class="rsec-h" style="margin-top:36px">{feats_h}</h2>'
+                   f'<ul class="ship-feat-list">{feats}</ul>') if feats else ""
+
+    if lang == "en":
+        intro = (f"{name} is part of {L['name']}'s fleet"
+                 + (f", built to the {cls} class" if cls else "") + ". "
+                 "Below are the verified basics; sailings, itineraries, cabins and the current rate change "
+                 "constantly — one call to a specialist confirms exactly what's open for your dates and the best "
+                 "rate our partners can offer.")
+        specs_h = "The basics, verified"
+        note = ("Every figure here traces to a published source and is re-checked on our normal schedule. Anything "
+                "we haven't confirmed shows as a gap rather than a guess.")
+        sisters_h = f"Other {cls} ships" if cls else f"More {L['name']} ships"
+        nudge_txt = (f"Want {name} for your dates? A specialist checks live availability and holds the best cabin "
+                     "for you — call now.")
+        cta_t, cta_s = f"Sail on {name}?", "Free, no obligation, and we never take payment for travel."
+        disc = (f"Independent referral service — not affiliated with, sponsored by, endorsed by or an agent of "
+                f"{L['name']}. {L['name']}, {name} and related names and logos are trademarks of their owner, used "
+                f"here descriptively only.")
+    else:
+        intro = (f"{name} forma parte de la flota de {L['name']}"
+                 + (f", de la clase {cls}" if cls else "") + ". "
+                 "Abajo están los datos verificados; las salidas, itinerarios, camarotes y la tarifa actual cambian "
+                 "constantemente — una llamada a un especialista confirma qué hay disponible para tus fechas y la "
+                 "mejor tarifa que nuestros socios pueden ofrecer.")
+        specs_h = "Los datos, verificados"
+        note = ("Cada cifra proviene de una fuente publicada y se revisa en nuestro calendario habitual. Lo que no "
+                "hemos confirmado se muestra como un vacío, no como una suposición.")
+        sisters_h = f"Otros barcos clase {cls}" if cls else f"Más barcos de {L['name']}"
+        nudge_txt = (f"¿Quieres {name} para tus fechas? Un especialista revisa la disponibilidad en vivo y te reserva "
+                     "el mejor camarote — llama ahora.")
+        cta_t, cta_s = f"¿Navegar en {name}?", "Gratis, sin compromiso, y nunca cobramos por el viaje."
+        disc = (f"Servicio de referencia independiente — no afiliado, patrocinado, respaldado ni agente de "
+                f"{L['name']}. {L['name']}, {name} y los nombres y logotipos relacionados son marcas de su "
+                f"propietario, usados aquí solo de forma descriptiva.")
+
+    # sister ships
+    sisters = sister_ships(line_slug, s)
+    sisters_block = ""
+    if sisters:
+        cards = "".join(
+            f'<a class="ship-card lk" href="/{lang}/lines/{line_slug}/ships/{ship_slug(x["name"])}/">'
+            f'<h3>{x["name"]}</h3>'
+            f'<p class="ship-ships">{(str(x["year"]) if x.get("year") else "&nbsp;")}</p>'
+            f'<span class="ship-more">{"View ship" if lang=="en" else "Ver barco"} →</span></a>'
+            for x in sisters)
+        sisters_block = (f'<section class="section"><div class="wrap"><h2 class="rsec-h">{sisters_h}</h2>'
+                         f'<div class="ship-grid">{cards}</div></div></section>')
+
+    back = (f'<a class="ship-back" href="/{lang}/lines/{line_slug}/">'
+            f'← {"All " + L["name"] + " ships" if lang=="en" else "Todos los barcos de " + L["name"]}</a>')
+
+    # compare this ship head-to-head with any other
+    cmp_block = ""
+    if has_ship_compare():
+        cmp_h = f"Compare {name} with another ship" if lang == "en" else f"Compara {name} con otro barco"
+        cmp_kick = "Compare ships" if lang == "en" else "Comparar barcos"
+        cmp_block = (f'<section id="s-shipcmp" class="section foam"><div class="wrap">'
+                     f'<div class="sec-head"><span class="eyebrow">{cmp_kick}</span><h2>{cmp_h}</h2></div>'
+                     f'{ship_compare_tool(lang, default_a=f"{line_slug}::{sslug}")}</div></section>')
+
+    return (phero(lang, kick, name, sub, crumb)
+            + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
+            + f'<section class="section cream"><div class="wrap"><h2 class="rsec-h">{specs_h}</h2>'
+              f'{verified_stamp(lang, ship_source(line_slug)[1])}'
+              f'<div class="glance-grid">{specs}</div>{feats_block}'
+              f'<p class="note-line" style="margin-top:20px">{note}</p>'
+              f'{_ship_nudge(lang, nudge_txt)}</div></section>'
+            + sisters_block
+            + cmp_block
+            + f'<section class="section"><div class="wrap">{back}</div></section>'
+            + cta_band(lang, cta_t, cta_s)
+            + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
+
+
+def _ship_nudge(lang, txt):
+    call = "Call now" if lang == "en" else "Llama ahora"
+    return (f'<div class="nudge"><p>{txt}</p>'
+            f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'ship-nudge\')">'
+            f'<span class="ic" aria-hidden="true">☎</span>{call} · {PHONE_DISPLAY}</a></div>')
 
 
 # ─────────────────────────── compare + facts ───────────────────────────

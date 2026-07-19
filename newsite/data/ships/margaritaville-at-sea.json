@@ -1,0 +1,48 @@
+{
+  "line": "margaritaville-at-sea",
+  "roster_source": "https://www.margaritavilleatsea.com/cruise-ships",
+  "specs_source": "https://www.margaritavilleatsea.com/about-us",
+  "verified": "2026-07-19",
+  "ships": [
+    {
+      "name": "Margaritaville at Sea Paradise",
+      "class": null,
+      "year": 2022,
+      "tonnage": null,
+      "guests": null,
+      "features": [
+        "Cheeseburger in Paradise Burger Bar",
+        "JWB Prime Steakhouse",
+        "5 o'Clock Somewhere Bar and Grill",
+        "Margaritaville Casino"
+      ],
+      "notes": "In service. Sails from Port of Palm Beach to Key West and The Bahamas. Official about-us page: \"Launched in May 2022 with the Margaritaville at Sea Paradise sailing from the Port of Palm Beach.\" Tonnage, guest capacity, decks and class not published on any official page.",
+      "spec_source": "https://www.margaritavilleatsea.com/about-us"
+    },
+    {
+      "name": "Margaritaville at Sea Islander",
+      "class": null,
+      "year": 2024,
+      "tonnage": null,
+      "guests": null,
+      "features": [
+        "Radio Margaritaville: Live at Sea",
+        "Caribbean Heat Remix show",
+        "Margaritaville Casino",
+        "Spa and pool facilities"
+      ],
+      "notes": "In service. Official about-us page: \"expanded in June 2024 with the addition of the Margaritaville at Sea Islander, offering cruises from Port Tampa Bay.\" Tonnage, guest capacity, decks and class not published on any official page.",
+      "spec_source": "https://www.margaritavilleatsea.com/about-us"
+    }
+  ],
+  "needs_manual": [
+    "Paradise gross tonnage — not published on any official margaritavilleatsea.com page",
+    "Paradise guest capacity + basis — not published officially",
+    "Paradise number of decks — not published officially",
+    "Islander gross tonnage — not published officially",
+    "Islander guest capacity + basis — not published officially",
+    "Islander number of decks — not published officially",
+    "Ship class for both vessels — not stated officially"
+  ],
+  "flag": "Beachcomber EXCLUDED from active roster — official cruise-ships page states \"Sailing from PortMiami in 2027\" (about-us: January 2027); upcoming, not yet in service. No tonnage/capacity/deck specs are published anywhere on the official site; all such fields null and flagged needs_manual."
+}

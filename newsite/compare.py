@@ -6,7 +6,8 @@ with a source link once sourced. Bilingual, guarded JS."""
 import json
 from config import PHONE_HREF
 from data import LINES
-from facts import FACTS, FACT_KEYS, LINE_FACTS, coverage
+from facts import FACTS, FACT_KEYS, LINE_FACTS, coverage, latest_verified_all
+from badges import verified_stamp
 
 _NAME = {L["slug"]: L["name"] for L in LINES}
 _EMO = {L["slug"]: L["emo"] for L in LINES}
@@ -50,7 +51,7 @@ def compare_tool(lang, default_a="royal-caribbean", default_b="carnival"):
     <label class="cx-pick cx-pick-b"><span class="cx-tag">{t['b']}</span>
       <select class="cx-sel" id="cmpB" aria-label="{t['b']}">{opts_b}</select></label>
   </div>
-  <div class="cx-flag">{done}/{total} {t['flag']}</div>
+  <div class="cx-flag">{verified_stamp(lang, latest_verified_all())} <span class="cx-count">{done}/{total} {t['flag']}</span></div>
   <div class="cx-cards" id="cmpBody"></div>
   <div class="cx-foot"><p>{t['cta']}</p>
     <a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall('compare')"><span class="ic">☎</span>{t['call']}</a></div>
