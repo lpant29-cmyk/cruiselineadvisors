@@ -236,12 +236,18 @@ def rich_sections(lang, slug):
     acc_inner = f'<p class="rsec-sub">{note}</p>' if note and not _gap(note) else f'<p class="rsec-sub cmp-gap">{GAP[lang]}</p>'
     out += _sec("cream", "access", lang, acc_inner); pres.append("access")
 
-    # ── Where & when ──
+    # ── Where & when ── regions + lengths as cells; home ports as chips (readable for long lists)
     it = L.get("itineraries", {})
     regs = [r.get("region") for r in it.get("regions", []) if isinstance(r, dict) and not _gap(r.get("region"))]
-    irows = [("regions", regs or None), ("lengths", it.get("typical_lengths")), ("ports", it.get("home_ports"))]
+    irows = [("regions", regs or None), ("lengths", it.get("typical_lengths"))]
     igrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in irows)
-    out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>'); pres.append("sails")
+    hp = [x for x in (it.get("home_ports") or []) if not _gap(x)]
+    if hp:
+        chips = "".join(f'<span class="ft">{x}</span>' for x in hp)
+        ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b></p><div class="ship-feats">{chips}</div>'
+    else:
+        ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> <span class="cmp-gap">{GAP[lang]}</span></p>'
+    out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>{ports_html}'); pres.append("sails")
 
     # ── Cost drivers ──
     cd = ed.get("cost_drivers", [])

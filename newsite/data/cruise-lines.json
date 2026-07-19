@@ -315,14 +315,10 @@
       "cabins": {
         "categories": [
           "Interior",
-          "Virtual Balcony Interior",
           "Ocean View",
           "Balcony",
-          "Neighbourhood Balcony",
-          "Junior Suite",
-          "Grand Suite",
-          "Owner's Suite",
-          "Star Class suites"
+          "Suite",
+          "Royal Suite Class (Sea, Sky, Star tiers)"
         ],
         "virtual_balcony": {
           "exists": true,
@@ -384,7 +380,7 @@
       "family": {
         "kids_club_name": "Adventure Ocean",
         "age_bands": "VERIFY - exact bands as published",
-        "minimum_sailing_age": "VERIFY - typically 6 months, 12 months on transatlantic/remote itineraries",
+        "minimum_sailing_age": "6 months; 12 months for transatlantic, transpacific, Hawaii, select South America and any sailing with 3+ consecutive sea days",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -408,7 +404,21 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY - current US home ports"
+          "Miami, FL",
+          "Fort Lauderdale, FL",
+          "Port Canaveral (Orlando), FL",
+          "Tampa, FL",
+          "Galveston, TX",
+          "New Orleans, LA",
+          "Cape Liberty (New York), NJ",
+          "Boston, MA",
+          "Los Angeles, CA",
+          "San Diego, CA",
+          "Seattle, WA",
+          "Honolulu, HI",
+          "Vancouver, BC",
+          "Montreal, QC",
+          "Quebec City, QC"
         ],
         "typical_lengths": [
           "3 night",
@@ -794,7 +804,14 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Interior",
+          "Ocean View",
+          "Balcony",
+          "Suite",
+          "Family Harbor",
+          "Cloud 9 Spa",
+          "Havana",
+          "Terrazza"
         ],
         "virtual_balcony": {
           "exists": false
@@ -840,7 +857,7 @@
       "family": {
         "kids_club_name": "Camp Ocean",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months if the itinerary includes any international port",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -864,7 +881,19 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Baltimore, MD",
+          "Galveston, TX",
+          "Jacksonville, FL",
+          "Long Beach (Los Angeles), CA",
+          "Miami, FL",
+          "Mobile, AL",
+          "New Orleans, LA",
+          "New York, NY",
+          "Norfolk, VA",
+          "Port Canaveral (Orlando), FL",
+          "San Francisco, CA",
+          "Seattle, WA",
+          "Tampa, FL"
         ],
         "typical_lengths": [
           "VERIFY"
@@ -1194,7 +1223,14 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Interior",
+          "Ocean View",
+          "Verandah",
+          "Vista Suite",
+          "Signature Suite",
+          "Neptune Suite",
+          "Neptune Spa Suite",
+          "Pinnacle Suite"
         ],
         "virtual_balcony": {
           "exists": false
@@ -1240,7 +1276,7 @@
       "family": {
         "kids_club_name": "Club HAL",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months for trans-ocean crossings and itineraries with 3+ consecutive sea days",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -1264,7 +1300,11 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Seattle, WA",
+          "Fort Lauderdale, FL",
+          "Boston, MA",
+          "San Diego, CA",
+          "Vancouver, BC"
         ],
         "typical_lengths": [
           "VERIFY"
@@ -1582,7 +1622,14 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Inside",
+          "Ocean View",
+          "Veranda (Balcony)",
+          "Concierge Class",
+          "AquaClass",
+          "The Retreat (Suite Class)",
+          "Single Stateroom",
+          "Infinite Veranda (Edge series)"
         ],
         "virtual_balcony": {
           "exists": false
@@ -1628,7 +1675,7 @@
       "family": {
         "kids_club_name": "Camp at Sea",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months for voyages with 3+ consecutive sea days or longer crossings",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -1652,7 +1699,17 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Fort Lauderdale, FL",
+          "Miami, FL",
+          "Orlando (Port Canaveral), FL",
+          "Tampa, FL",
+          "Boston, MA",
+          "Cape Liberty, NJ",
+          "Seattle, WA",
+          "Los Angeles, CA",
+          "Honolulu, HI",
+          "Seward, AK",
+          "Vancouver, BC"
         ],
         "typical_lengths": [
           "VERIFY"
@@ -2432,7 +2489,10 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Miami, FL",
+          "Port Canaveral, FL",
+          "New York, NY",
+          "Galveston, TX"
         ],
         "typical_lengths": [
           "VERIFY"
@@ -2917,8 +2977,8 @@
       "company": {
         "founded": 2022,
         "headquarters": "Florida",
-        "parent": "VERIFY",
-        "loyalty_program": "VERIFY",
+        "parent": "Classica Cruise Operator Ltd. (under license from Margaritaville Enterprises, LLC)",
+        "loyalty_program": "Players Club (casino rewards)",
         "loyalty_tiers": [
           "VERIFY"
         ],
@@ -3062,7 +3122,12 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Interior",
+          "Ocean View",
+          "Balcony (multiple tiers)",
+          "Junior Suite",
+          "Grand Terrace Suite",
+          "Signature Grand Suite"
         ],
         "virtual_balcony": {
           "exists": false
@@ -3106,7 +3171,7 @@
         ]
       },
       "family": {
-        "kids_club_name": "VERIFY",
+        "kids_club_name": "Jolly Mon, Parakeets, The Hangout Tween's Club & Teen's Club",
         "age_bands": "VERIFY",
         "minimum_sailing_age": "VERIFY",
         "nursery": {
@@ -3132,7 +3197,8 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Port of Palm Beach (Riviera Beach, FL)",
+          "Port Tampa Bay (Tampa, FL)"
         ],
         "typical_lengths": [
           "VERIFY"
