@@ -21,11 +21,12 @@ _H = {
     "entertainment": {"en": "Entertainment & nightlife", "es": "Entretenimiento y vida nocturna"},
     "family": {"en": "Kids, teens & families", "es": "Niños, adolescentes y familias"},
     "zones": {"en": "Districts & zones", "es": "Distritos y zonas"},
+    "route": {"en": "Where & when it sails", "es": "Dónde y cuándo navega"},
     "decks": {"en": "Decks & layout", "es": "Cubiertas y distribución"},
     "cam": {"en": "Bridge cam", "es": "Cámara del puente"},
 }
 _IC = {"overview": "🚢", "dining": "🍽️", "drinks": "🍹", "activities": "🎢",
-       "entertainment": "🎭", "family": "👨‍👩‍👧", "zones": "🧭", "decks": "🛗", "cam": "📷"}
+       "entertainment": "🎭", "family": "👨‍👩‍👧", "zones": "🧭", "route": "🗺️", "decks": "🛗", "cam": "📷"}
 _DTYPE = {
     "main": {"en": "Main dining", "es": "Comedor principal"},
     "buffet": {"en": "Buffet", "es": "Bufé"},
@@ -161,6 +162,14 @@ def experience_sections(lang, line_slug, ship):
             inner += (f'<div class="whofor"><span class="whofor-ic" aria-hidden="true">🧭</span>'
                       f'<div><b>{lbl}</b><p>{wf}</p></div></div>')
         out += _sec("overview", lang, inner)
+
+    # ── Where & when it sails (current-season deployment note) ──
+    route = exp.get("deploy_note")
+    if route:
+        nudge = (_call(lang, "Not sailing your dates or from your port? Call — we'll find the ship that is.")
+                 if lang == "en" else
+                 _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama — encontramos el barco que sí."))
+        out += _sec("route", lang, f'<p class="rsec-sub">{route}</p>{nudge}')
 
     # ── Food & dining ──
     dining = [d for d in (exp.get("dining") or []) if d.get("name")]
