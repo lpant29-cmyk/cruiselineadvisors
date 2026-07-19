@@ -8,7 +8,8 @@ from data import LINES, DESTINATIONS
 from facts import FACTS, LINE_FACTS
 from compare import compare_tool
 from interactive import when_to_go, cabin_guide, SEASONS
-from updates import all_updates, updates_for, update_cards
+from updates import all_updates, updates_for, update_cards, get_update
+from directory import directory_section
 
 YEAR = datetime.date.today().year
 _L = {L["slug"]: L for L in LINES}
@@ -75,6 +76,7 @@ def p_lines_hub(lang):
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
             + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div>'
               f'<p class="note-line">{note}</p></div></section>'
+            + directory_section(lang)
             + cta_band(lang, "Not sure which line fits?" if lang == "en" else "¿No sabes qué línea encaja?",
                        "Tell a specialist what you want — they'll match you to the right ship and sailing." if lang == "en"
                        else "Dile a un especialista qué quieres — te emparejará con el barco y la salida correctos."))
@@ -315,3 +317,25 @@ def p_updates(lang):
             + cta_band(lang, "Need the latest on a policy?" if lang == "en" else "¿Necesitas lo último de una política?",
                        "Call and we'll confirm the current rule from the source." if lang == "en"
                        else "Llama y confirmamos la regla actual desde la fuente."))
+
+
+def p_update_detail(lang, slug):
+    u = get_update(slug)
+    kick = "Update" if lang == "en" else "Novedad"
+    updates_l = "Updates" if lang == "en" else "Novedades"
+    crumb = _crumb(lang, f'<a href="/{lang}/updates/">{updates_l}</a>', u["title"][lang])
+    try:
+        date = datetime.date.fromisoformat(u["date"]).strftime("%B %d, %Y").replace(" 0", " ")
+    except Exception:
+        date = u["date"]
+    tags = ""
+    if u.get("lines"):
+        tags = '<div class="upd-tags" style="margin-bottom:1rem">' + "".join(
+            f'<a class="upd-tag" href="/{lang}/lines/{s}/">{_L[s]["emo"]} {_L[s]["name"]}</a>'
+            for s in u["lines"] if s in _L) + '</div>'
+    body = (u.get("detail") or u["body"])[lang]
+    return (phero(lang, kick, u["title"][lang], date, crumb)
+            + f'<section class="section"><div class="wrap blk">{tags}<p class="intro">{body}</p></div></section>'
+            + cta_band(lang, "Questions about this?" if lang == "en" else "¿Preguntas sobre esto?",
+                       "Call and we'll confirm what it means for your exact sailing." if lang == "en"
+                       else "Llama y confirmamos qué significa para tu crucero exacto."))

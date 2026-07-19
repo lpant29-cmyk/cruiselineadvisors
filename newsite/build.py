@@ -12,7 +12,8 @@ from base import page
 from i18n import T
 import page_home
 from pages import (p_lines_hub, p_line, p_compare, p_facts, p_dest_hub, p_region,
-                   p_guides_hub, p_guide, p_updates, GUIDES)
+                   p_guides_hub, p_guide, p_updates, p_update_detail, GUIDES)
+from updates import all_updates
 from legal_pages import p_legal, LEGAL
 from data import LINES, DESTINATIONS
 from facts import coverage
@@ -120,6 +121,9 @@ def build():
                 "Novedades de políticas de cruceros | CruiseLine Advisors", lang),
              _t("Dated, sourced cruise policy updates.", "Novedades de políticas, fechadas y con fuente.", lang),
              p_updates(lang))
+        for u in all_updates():
+            emit(lang, f"updates/{u['slug']}.html", f"{u['title'][lang]} | CruiseLine Advisors",
+                 u["body"][lang], p_update_detail(lang, u["slug"]))
 
         for k in LEGAL:
             emit(lang, f"legal/{k}.html", f"{LEGAL[k]['title'][lang]} | CruiseLine Advisors",

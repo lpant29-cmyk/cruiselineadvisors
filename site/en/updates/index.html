@@ -36,7 +36,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#082C42; --navy:#0A2C42; --deep:#063A4E;
+  --ink:#082C42; --navy:#0A2C42; --navy2:#123C5A; --deep:#063A4E;
   --sea1:#2FC4C0; --sea2:#12919A; --sea3:#0C6E86;
   --sky1:#8FD9F0; --sky2:#CFF1F8; --horizon:#FFE7A8;
   --gold:#FFB23E; --gold2:#F0891F; --coral:#FF6B5A; --coral2:#E8552E;
@@ -342,7 +342,28 @@ img,svg{max-width:100%}
 .upd-body{color:var(--muted);font-size:.92rem;margin-top:.4rem}
 .upd-src{font-size:.76rem;font-weight:800;color:var(--sea2);text-decoration:none;margin-top:.55rem;display:inline-block}
 .upd-empty{background:var(--foam);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:.9em 1.1em;font-size:.92rem;color:var(--muted);max-width:70ch}
+a.upd-card{color:var(--ink);text-decoration:none;transition:transform .16s,box-shadow .16s,border-color .16s}
+a.upd-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.upd-read{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:800;color:var(--gold2)}
+.upd-tags{display:flex;flex-wrap:wrap;gap:8px}
+a.upd-tag{text-decoration:none}
+a.upd-tag:hover{border-color:var(--gold);color:var(--navy)}
 @media(min-width:720px){.updgrid{grid-template-columns:1fr 1fr}}
+
+/* ═══ full cruise-line directory ═══ */
+.dir-cat{margin-top:24px}
+.dir-cat h3{font-size:1.12rem;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:.4rem;margin-bottom:.8rem}
+.dir-grid{display:grid;gap:10px;grid-template-columns:1fr}
+.dir-line{display:flex;align-items:center;gap:.6em;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.7em .9em;text-decoration:none;color:var(--ink);transition:transform .14s,border-color .14s,box-shadow .14s}
+.dir-line b{flex:1;min-width:0;font-weight:700;font-size:.92rem;color:var(--navy)}
+.dir-emo{font-size:1.2rem;flex:none}
+a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--shadow)}
+.dir-line.soon-row{opacity:.7}
+.dir-tag{font-size:.64rem;font-weight:800;letter-spacing:.03em;flex:none;padding:.32em .7em;border-radius:99px;white-space:nowrap}
+.dir-tag.done{background:rgba(18,145,154,.13);color:var(--sea3)}
+.dir-tag.soon{background:var(--foam);color:var(--muted)}
+@media(min-width:640px){.dir-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.dir-grid{grid-template-columns:1fr 1fr 1fr}}
 
 /* ═══ content pages ═══ */
 .phero{padding:34px 0 40px}
@@ -476,7 +497,7 @@ img,svg{max-width:100%}
   <span class="eyebrow" style="color:#7FD4D0">Updates</span>
   <h1>Cruise policy & industry updates</h1><p class="phero-sub">Dated, sourced changes to cruise-line policies and requirements. We only post what we can verify.</p>
   <a class="btn btn-call" href="tel:+18885550142" onclick="trackCall('phero')"><span class="ic">☎</span>Call now · +1 (888) 555-0142</a>
-</div></section><section class="section"><div class="wrap"><p class="intro">Dated, sourced changes to cruise-line policies and requirements — we only post what we can verify. Each update is also shown on the affected line's page.</p><div style="margin-top:18px"><div class="updgrid"><article class="upd-card"><div class="upd-top"><span class="upd-date">May 11, 2026</span><span class="upd-tag">🌊 MSC Cruises</span></div><h3 class="upd-title">MSC updated its daily service charge for new bookings</h3><p class="upd-body">For cruises booked from 11 May 2026 (US & Caribbean), MSC's daily hotel service charge changed. See the current amount on the MSC guide.</p></article></div></div></div></section><section class="section cream"><div class="wrap"><div class="ctaband">
+</div></section><section class="section"><div class="wrap"><p class="intro">Dated, sourced changes to cruise-line policies and requirements — we only post what we can verify. Each update is also shown on the affected line's page.</p><div style="margin-top:18px"><div class="updgrid"><a class="upd-card" href="/en/updates/msc-daily-service-charge-2026/"><div class="upd-top"><span class="upd-date">May 11, 2026</span><span class="upd-tag">🌊 MSC Cruises</span></div><h3 class="upd-title">MSC updated its daily service charge for new bookings</h3><p class="upd-body">For cruises booked from 11 May 2026 (US & Caribbean), MSC's daily hotel service charge changed.</p><span class="upd-read">Read →</span></a></div></div></div></section><section class="section cream"><div class="wrap"><div class="ctaband">
   <div><h2>Need the latest on a policy?</h2><p>Call and we'll confirm the current rule from the source.</p></div>
   <a class="btn btn-call" href="tel:+18885550142" onclick="trackCall('band')"><span class="ic">☎</span>+1 (888) 555-0142</a>
 </div></div></section></main>
