@@ -402,6 +402,10 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .xphoto figcaption{font-size:.7rem;color:var(--muted);padding:.4em .6em}
 .xnote{font-size:.72rem;color:var(--muted);margin-top:.7rem;font-style:italic}
 @media(min-width:720px){.xpkgs{grid-template-columns:1fr 1fr}}
+/* illustrative ocean banner (self-hosted SVG; not a photo of the real ship) */
+.illus-band{position:relative;line-height:0}
+.illus-band svg{display:block;width:100%;height:clamp(140px,22vw,240px)}
+.illus-tag{position:absolute;right:10px;bottom:8px;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(10,44,66,.5);padding:.28em .7em;border-radius:99px;line-height:1}
 .ship-back:hover{color:var(--gold2)}
 /* line-page table of contents (jump nav) */
 .toc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-top:-8px}

@@ -15,6 +15,7 @@ from linepage import rich_sections, faq_section, sections_present, line_toc
 from ships import ships_for, get_ship, sister_ships, slugify as ship_slug, source_of as ship_source
 from shipcompare import ship_compare_tool, has_ship_compare
 from experience import experience_sections, has_experience
+from illus import ship_banner
 
 YEAR = datetime.date.today().year
 _L = {L["slug"]: L for L in LINES}
@@ -262,6 +263,7 @@ def p_ship(lang, line_slug, sslug):
 
     return (phero(lang, kick, name, sub, crumb)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
+            + ship_banner(lang)
             + f'<section class="section cream{" stamped" if _has_specs else ""}"><div class="wrap">'
               f'{verified_seal(lang, ship_source(line_slug)[1]) if _has_specs else ""}'
               f'<h2 class="rsec-h">{specs_h}</h2>'
