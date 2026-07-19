@@ -412,6 +412,25 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .ship-feat-list{list-style:none;display:grid;gap:.55rem;margin-top:.6rem;max-width:70ch}
 .ship-feat-list li{position:relative;padding-left:1.5em;color:var(--ink);font-size:.95rem;overflow-wrap:anywhere}
 .ship-feat-list li::before{content:"⚓";position:absolute;left:0;color:var(--sea2);font-size:.9em}
+/* rich ship "experience" sections */
+.xsec:nth-of-type(even){background:var(--cream)}
+.xsec .rsec-h .xic{margin-right:.45em;font-size:1em}
+.xdine{list-style:none;display:grid;gap:.5rem;max-width:780px}
+.xdine li{display:flex;align-items:center;gap:.6em;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.7em .9em}
+.xdine li b{color:var(--navy);font-size:.98rem;flex:1;min-width:150px}
+.xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
+.xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
+.xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}
+.xpkgs{display:grid;gap:14px;grid-template-columns:1fr}
+.xpkg{background:#fff;border:1px solid var(--line);border-left:4px solid var(--sea2);border-radius:12px;padding:14px 16px}
+.xpkg h3{color:var(--navy);font-size:1.05rem}
+.xpkg p{color:var(--muted);font-size:.9rem;margin-top:.3rem}
+.xphotos{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.xphoto{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--foam)}
+.xphoto img{display:block;width:100%;height:180px;object-fit:cover}
+.xphoto figcaption{font-size:.7rem;color:var(--muted);padding:.4em .6em}
+.xnote{font-size:.72rem;color:var(--muted);margin-top:.7rem;font-style:italic}
+@media(min-width:720px){.xpkgs{grid-template-columns:1fr 1fr}}
 .ship-back:hover{color:var(--gold2)}
 /* line-page table of contents (jump nav) */
 .toc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-top:-8px}

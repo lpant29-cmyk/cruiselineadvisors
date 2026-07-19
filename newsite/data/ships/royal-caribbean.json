@@ -18,7 +18,17 @@
         "Ultimate Family Townhouse"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage January 27, 2024. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/ICON_Fact_Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/ICON_Fact_Sheet.jpg",
+      "exp": {
+        "overview": "The largest cruise ship afloat, Icon of the Seas entered service in 2024 as the first of Royal Caribbean's Icon class — a 248,663-ton resort at sea built around eight distinct neighbourhoods, the Category 6 waterpark and the glass-domed AquaDome. It is aimed squarely at multi-generational families who want everything in one place.",
+        "activities": [
+          "Surfside",
+          "Category 6 waterpark",
+          "AquaDome",
+          "Crown's Edge",
+          "Ultimate Family Townhouse"
+        ]
+      }
     },
     {
       "name": "Star of the Seas",
@@ -450,8 +460,8 @@
     }
   ],
   "needs_manual": [
-    "ALL ships: maximum (non-double) occupancy \u2014 official fact sheets publish only double-occupancy guest counts.",
-    "Hero of the Seas \u2014 EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
+    "ALL ships: maximum (non-double) occupancy — official fact sheets publish only double-occupancy guest counts.",
+    "Hero of the Seas — EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
   ],
   "flag": "30 in-service '...of the Seas' ships. Roster confirmed against official royalcaribbean.com/cruise-ships fleet page AND the official press-center LoadShips API (which also supplied each ship's class grouping). Per-ship year/tonnage/guests/features read directly from official Royal Caribbean 'Fast Facts' fact-sheet images (royalcaribbeanmedia.com, first-party, one per ship). 'year' is derived from the printed MAIDEN VOYAGE date. All guest figures are DOUBLE OCCUPANCY; no official page publishes max occupancy. Hero of the Seas (Icon class) excluded as not-yet-in-service (maiden voyage Aug 11, 2027). No third-party sources used. No prices present on fact sheets."
 }

@@ -14,6 +14,7 @@ from directory import directory_section
 from linepage import rich_sections, faq_section, sections_present, line_toc
 from ships import ships_for, get_ship, sister_ships, slugify as ship_slug, source_of as ship_source
 from shipcompare import ship_compare_tool, has_ship_compare
+from experience import experience_sections, has_experience
 
 YEAR = datetime.date.today().year
 _L = {L["slug"]: L for L in LINES}
@@ -193,10 +194,13 @@ def p_ship(lang, line_slug, sslug):
     if s.get("length"):
         cells.append((_SHIP_L["length"][lang], s["length"]))
     specs = "".join(_spec(lbl, val, lang, gap) for lbl, val in cells)
+    # When a ship has rich experience content, that carries the on-board detail; otherwise show the
+    # simple features list inside the specs block.
+    _exp = has_experience(line_slug, s)
     feats = "".join(f'<li>{f}</li>' for f in s.get("features", []) if f)
     feats_h = "On board" if lang == "en" else "A bordo"
     feats_block = (f'<h2 class="rsec-h" style="margin-top:36px">{feats_h}</h2>'
-                   f'<ul class="ship-feat-list">{feats}</ul>') if feats else ""
+                   f'<ul class="ship-feat-list">{feats}</ul>') if (feats and not _exp) else ""
 
     if lang == "en":
         intro = (f"{name} is part of {L['name']}'s fleet"
@@ -264,6 +268,7 @@ def p_ship(lang, line_slug, sslug):
               f'<div class="glance-grid">{specs}</div>{feats_block}'
               f'<p class="note-line" style="margin-top:20px">{note}</p>'
               f'{_ship_nudge(lang, nudge_txt)}</div></section>'
+            + experience_sections(lang, line_slug, s)
             + sisters_block
             + cmp_block
             + f'<section class="section"><div class="wrap">{back}</div></section>'

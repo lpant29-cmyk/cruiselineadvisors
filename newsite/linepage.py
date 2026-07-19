@@ -164,6 +164,11 @@ def _fleet_inner(lang, slug, name, classes):
 _LAST_SECTIONS = {}
 
 
+def line_data(slug):
+    """Full cruise-lines.json record for a line (used by experience.py for shared line-wide content)."""
+    return _CL.get(slug, {})
+
+
 def sections_present(slug):
     """Ordered rich-section keys that rendered for this line (set by rich_sections) — for the TOC."""
     return _LAST_SECTIONS.get(slug, [])
