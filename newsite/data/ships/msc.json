@@ -106,9 +106,60 @@
             "extra": "Chocolate and coffee house."
           }
         ],
-        "activities": "Six pools and 14 hot tubs; a water park with VR slides; an 11-deck dry slide on the Promenade with ocean views; a high ropes course and playground in The Harbor (Family Aventura); the adults-only Zen Area with twin pools; and the MSC Yacht Club's private bi-level sundeck, pool, hot tub, cabanas and thermal spa access.",
-        "entertainment": "The MSC Luna Park Arena in the Galleria, three venues with live shows, The Loft comedy club with dueling pianos and karaoke, an All-Stars Sports Bar with bar games, and 18 bars and lounges in total.",
-        "kids_family": "Doremiland, with age-appropriate spaces and activities for everyone from infants to teenagers.",
+        "activities": [
+          {
+            "name": "Six pools & 14 hot tubs",
+            "desc": "Find your spot — a lively family pool for cannonballs and splash-time, or a quiet whirlpool to sink into as the coastline slides past."
+          },
+          {
+            "name": "Water park with VR slides",
+            "desc": "Pull on a headset and drop in: part waterslide, part video game, the racing colours and the rush hitting you at the same moment."
+          },
+          {
+            "name": "11-deck dry slide",
+            "desc": "Climb high on the Promenade, catch the ocean view for one breath, then spiral eleven decks down in a few heart-in-your-mouth seconds."
+          },
+          {
+            "name": "High ropes course & playground",
+            "desc": "Up in The Harbor of Family Aventura, kids — and brave grown-ups — inch across suspended bridges strung high above the deck."
+          },
+          {
+            "name": "Zen Area — adults only",
+            "desc": "Two calm pools kept just for grown-ups, where the loudest sound is the water and the day finally slows down."
+          },
+          {
+            "name": "MSC Yacht Club sundeck",
+            "desc": "Behind the keycard door: a private bi-level sundeck with its own pool, hot tub, shaded cabanas and thermal spa — the ship's quietest, most pampered corner."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "MSC Luna Park Arena",
+            "desc": "The Galleria's showpiece stage, where big-cast productions light up the night just steps from the shops and bars."
+          },
+          {
+            "name": "Live shows across three venues",
+            "desc": "From full-scale productions to intimate late sets, there's a curtain going up somewhere on board most evenings."
+          },
+          {
+            "name": "The Loft — comedy & karaoke",
+            "desc": "Adults-only after dark: dueling pianos, an open mic and the kind of room where the whole bar ends up singing."
+          },
+          {
+            "name": "All-Stars Sports Bar",
+            "desc": "The game on every screen, a cold one in hand and bar games running late — the easy, roll-up-anytime hangout."
+          },
+          {
+            "name": "18 bars & lounges",
+            "desc": "A different mood in every room — champagne and caviar on one deck, a British pub with its own microbrewery on the next."
+          }
+        ],
+        "kids_family": [
+          {
+            "name": "Doremiland",
+            "desc": "MSC's flagship kids' world, with rooms and activities tuned to every age from tiny tots to teens — so everyone has somewhere that feels like theirs."
+          }
+        ],
         "decks": 22,
         "exp_source": "https://www.mscpressarea.com/en_US/press-releases/ (MSC World America press releases)"
       }

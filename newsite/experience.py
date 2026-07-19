@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """Rich per-ship 'experience' sections — Onboard overview, Food & Dining, Drinks & packages,
 Activities, Entertainment, Kids/Teens/Families, Decks & layout, Bridge cam — plus a self-hosted
-photo strip. Data-driven: each section renders ONLY when it has verified content (no fake
-'coming soon' blocks). Per-ship content lives in data/ships/<line>.json under each ship's "exp"
-key; line-wide shared content (drink packages, kids programs) in data/cruise-lines.json under
-"experience".
+photo strip. Each section renders ONLY when it has verified content (no fake placeholders).
 
-Flexible inputs — activities / entertainment / kids_family may be a STRING (rendered as a
-paragraph) or a LIST (rendered as chips); dining "extra" may be a bool (Included/Extra tag) or a
-descriptive string (rendered as a note). NO PRICES. All prose is original — we store facts."""
+Every list section renders as visual CARDS (emoji tile + name + description). Inputs are flexible:
+activities / entertainment / kids_family may be a STRING (prose), a LIST of strings (name-only
+cards), or a LIST of {name, desc} (rich cards). Dining is a LIST of {name, type, extra} where
+`extra` is a bool (Included/Specialty pill) or a descriptive string. Per-ship content lives in
+data/ships/<line>.json under each ship's "exp"; line-wide content in cruise-lines.json
+"experience". NO PRICES. All prose is original — vivid but grounded in verified facts."""
 from config import PHONE_HREF, PHONE_DISPLAY
 from linepage import line_data
 
@@ -17,8 +17,8 @@ _H = {
     "overview": {"en": "The ship at a glance", "es": "El barco en resumen"},
     "dining": {"en": "Food & dining", "es": "Comida y restaurantes"},
     "drinks": {"en": "Drinks & packages", "es": "Bebidas y paquetes"},
-    "activities": {"en": "Activities", "es": "Actividades"},
-    "entertainment": {"en": "Entertainment", "es": "Entretenimiento"},
+    "activities": {"en": "Things to do", "es": "Qué hacer"},
+    "entertainment": {"en": "Entertainment & nightlife", "es": "Entretenimiento y vida nocturna"},
     "family": {"en": "Kids, teens & families", "es": "Niños, adolescentes y familias"},
     "decks": {"en": "Decks & layout", "es": "Cubiertas y distribución"},
     "cam": {"en": "Bridge cam", "es": "Cámara del puente"},
@@ -34,9 +34,60 @@ _DTYPE = {
 _INC = {"en": "Included", "es": "Incluido"}
 _EXT = {"en": "Extra", "es": "Extra"}
 
+_FOOD_EMOJI = [
+    (("pizza", "pizzeria"), "🍕"), (("burger",), "🍔"),
+    (("sushi", "kaito", "robata"), "🍣"), (("teppanyaki",), "🍤"),
+    (("steak", "butcher", "grill", "prime", "chophouse"), "🥩"), (("taco", "cantina", "mexican", "hola"), "🌮"),
+    (("greek", "paxos"), "🥙"), (("seafood", "fish", "catch", "shack", "lobster", "far side"), "🦐"),
+    (("italian", "eataly", "cucina", "pasta", "trattoria", "campo", "giovanni"), "🍝"),
+    (("chicken",), "🍗"), (("coffee", "cafe", "café", "java", "emporium"), "☕"),
+    (("chocolat", "sweet", "confection", "gelato", "ice cream", "dessert", "candy", "creamery"), "🍫"),
+    (("buffet", "market", "marketplace", "lido", "horizon", "eats", "port of"), "🍽️"),
+    (("sports bar", "all-star", "all star"), "🍺"),
+    (("comedy", "karaoke", "loft", "piano"), "🎤"),
+    (("gin", "cocktail", "mixolog", "champagne", "wine", "elixir", "bar", "lounge", "pub", "tavern", "brew", "tiki"), "🍸"),
+    (("asian", "indochine", "wok", "noodle", "chibang"), "🥢"), (("bistro", "french", "brasserie", "atelier"), "🥐"),
+    (("tapas", "spanish"), "🥘"), (("bbq", "smoke", "guy"), "🍖"), (("diner", "americana", "americas", "fins", "panini"), "🥞"),
+    (("tea", "afternoon"), "🫖"), (("steakhouse", "jwb"), "🥩"),
+]
+_ACT_EMOJI = [
+    (("thermal", "spa", "zen", "sanctuary", "aurea", "wellness", "sauna"), "💆"),
+    (("water park", "waterpark", "aqua", "slide", "splash", "flowrider", "surf"), "🛝"),
+    (("hot tub", "whirlpool", "jacuzzi"), "♨️"),
+    (("pool", "swim", "solarium"), "🏊"),
+    (("ropes", "climb", "zip", "sky", "adventure", "harbor", "ropes course", "go-kart", "kart"), "🧗"),
+    (("sport", "court", "basketball", "track", "jog", "golf", "arcade", "bowl"), "⛳"),
+    (("yacht club", "sundeck", "cabana", "retreat", "deck party", "top sail"), "🛥️"),
+    (("gym", "fitness", "technogym", "yoga", "spin"), "🏋️"),
+    (("kids", "playground", "family"), "🎠"),
+    (("shop", "boutique", "retail", "mall"), "🛍️"),
+]
+_ENT_EMOJI = [
+    (("theatre", "theater", "arena", "stage", "show", "production", "dome", "luna park", "cirque", "broadway"), "🎭"),
+    (("comedy", "karaoke", "loft", "improv"), "🎤"),
+    (("music", "band", "live", "jazz", "rock", "billboard", "piano", "big band"), "🎵"),
+    (("casino",), "🎰"),
+    (("sports bar",), "📺"),
+    (("club", "disco", "night", "party", "dance"), "🪩"),
+    (("cinema", "movie", "screen"), "🎬"),
+    (("bar", "lounge", "pub"), "🍸"),
+]
+
+
+def _emoji(name, mapping, default):
+    s = (name or "").lower()
+    for keys, emo in mapping:
+        if any(k in s for k in keys):
+            return emo
+    return default
+
+
+def _food_emoji(name, t):
+    return _emoji(f"{name or ''} {t or ''}", _FOOD_EMOJI, "🍴")
+
 
 def _sec(key, lang, inner):
-    return (f'<section id="x-{key}" class="section xsec"><div class="wrap">'
+    return (f'<section id="x-{key}" class="section xsec xsec-{key}"><div class="wrap">'
             f'<h2 class="rsec-h"><span class="xic" aria-hidden="true">{_IC[key]}</span>{_H[key][lang]}</h2>'
             f'{inner}</div></section>')
 
@@ -48,39 +99,32 @@ def _call(lang, txt):
             f'<span class="ic" aria-hidden="true">☎</span>{c} · {PHONE_DISPLAY}</a></div>')
 
 
-_FOOD_EMOJI = [
-    (("pizza", "pizzeria"), "🍕"), (("burger",), "🍔"),
-    (("sushi", "kaito", "robata"), "🍣"), (("teppanyaki",), "🍤"),
-    (("steak", "butcher", "grill", "prime"), "🥩"), (("taco", "cantina", "mexican", "hola"), "🌮"),
-    (("greek", "paxos"), "🥙"), (("seafood", "fish", "catch", "shack", "lobster"), "🦐"),
-    (("italian", "eataly", "cucina", "pasta", "trattoria", "campo"), "🍝"),
-    (("chicken",), "🍗"), (("coffee", "cafe", "café", "java", "emporium"), "☕"),
-    (("chocolat", "sweet", "confection", "gelato", "ice cream", "dessert", "candy"), "🍫"),
-    (("buffet", "market", "marketplace", "lido", "horizon", "eats"), "🍽️"),
-    (("sports bar", "all-star", "all star"), "🍺"),
-    (("comedy", "karaoke", "loft", "piano"), "🎤"),
-    (("gin", "cocktail", "mixolog", "champagne", "wine", "elixir", "bar", "lounge", "pub", "tavern", "brew"), "🍸"),
-    (("asian", "indochine", "wok", "noodle"), "🥢"), (("bistro", "french", "brasserie", "atelier"), "🥐"),
-    (("tapas", "spanish"), "🥘"), (("bbq", "smoke", "guy"), "🍖"), (("diner", "americana", "americas"), "🥞"),
-    (("tea", "afternoon"), "🫖"),
-]
+def _card(emoji, name, meta="", desc="", pill=""):
+    body = f'<div class="xr-b"><p class="xr-desc">{desc}</p></div>' if desc else ""
+    return (f'<article class="xr-card"><div class="xr-top"><span class="xr-emoji">{emoji}</span>'
+            f'<div class="xr-h"><h3>{name}</h3>{meta}</div>{pill}</div>{body}</article>')
 
 
-def _food_emoji(name, t):
-    s = f"{name or ''} {t or ''}".lower()
-    for keys, emo in _FOOD_EMOJI:
-        if any(k in s for k in keys):
-            return emo
-    return "🍴"
+def _item_cards(items, emoji_map, default_emo):
+    """Render a list of strings or {name,desc} dicts as a grid of rich cards."""
+    cards = ""
+    for it in items:
+        if isinstance(it, dict):
+            nm = it.get("name")
+            if not nm:
+                continue
+            cards += _card(_emoji(nm, emoji_map, default_emo), nm, "", it.get("desc", ""))
+        elif isinstance(it, str) and it.strip():
+            cards += _card(_emoji(it, emoji_map, default_emo), it, "", "")
+    return f'<div class="xr-grid">{cards}</div>' if cards else ""
 
 
-def _chips_or_p(val):
-    """Render a string as a paragraph, or a list as chips. Empty → ''."""
+def _flex(val, emoji_map, default_emo):
+    """String -> prose; list -> rich cards. Returns ('', kind) if empty."""
     if isinstance(val, str) and val.strip():
-        return f'<p class="rsec-sub">{val}</p>'
-    if isinstance(val, (list, tuple)):
-        chips = "".join(f'<span class="ft">{x}</span>' for x in val if x)
-        return f'<div class="ship-feats">{chips}</div>' if chips else ""
+        return f'<p class="xsub xsub-lead">{val}</p>'
+    if isinstance(val, (list, tuple)) and val:
+        return _item_cards(val, emoji_map, default_emo)
     return ""
 
 
@@ -96,7 +140,7 @@ def experience_sections(lang, line_slug, ship):
     name = ship["name"]
     out = ""
 
-    # ── Photo strip (self-hosted, illustrative or licensed) ──
+    # ── Photo strip ──
     photos = exp.get("photos") or []
     if photos:
         cards = "".join(
@@ -111,7 +155,7 @@ def experience_sections(lang, line_slug, ship):
     if ov:
         out += _sec("overview", lang, f'<p class="intro">{ov}</p>')
 
-    # ── Food & dining ── rich, appetizing cards (emoji tile, cuisine, description, included/specialty)
+    # ── Food & dining ──
     dining = [d for d in (exp.get("dining") or []) if d.get("name")]
     if dining:
         inc = sum(1 for d in dining if d.get("extra") is False)
@@ -125,24 +169,20 @@ def experience_sections(lang, line_slug, ship):
                    else f"{len(dining)} lugares para comer a bordo.")
         cards = ""
         for d in dining:
-            nm = d.get("name")
-            t = d.get("type")
-            tb = f'<span class="xd-cuisine">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
-            ex = d.get("extra")
+            nm, t, ex = d.get("name"), d.get("type"), d.get("extra")
+            meta = f'<span class="xr-meta">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
             pill, desc = "", ""
             if ex is True:
-                pill = f'<span class="xd-pill xd-spec">{_EXT[lang]}</span>'
+                pill = f'<span class="xr-pill xr-spec">{_EXT[lang]}</span>'
             elif ex is False:
-                pill = f'<span class="xd-pill xd-inc">{_INC[lang]}</span>'
+                pill = f'<span class="xr-pill xr-inc">{_INC[lang]}</span>'
             elif isinstance(ex, str) and ex.strip():
-                desc = f'<p class="xd-desc">{ex}</p>'
-            cards += (f'<article class="xd-card"><div class="xd-top"><span class="xd-emoji">{_food_emoji(nm, t)}</span>'
-                      f'<div class="xd-h"><h3>{nm}</h3>{tb}</div>{pill}</div>'
-                      f'<div class="xd-b">{desc}</div></article>')
+                desc = ex
+            cards += _card(_food_emoji(nm, t), nm, meta, desc, pill)
         nudge = (_call(lang, "Want a specialty table booked before you sail? Our team sets it up when you call.")
                  if lang == "en" else
-                 _call(lang, "¿Quieres reservar un restaurante de especialidad antes de zarpar? Lo hacemos por teléfono."))
-        out += _sec("dining", lang, f'<p class="xsub">{sub}</p><div class="xd-grid">{cards}</div>{nudge}')
+                 _call(lang, "¿Quieres reservar un restaurante de especialidad? Lo hacemos por teléfono."))
+        out += _sec("dining", lang, f'<p class="xsub">{sub}</p><div class="xr-grid">{cards}</div>{nudge}')
 
     # ── Drinks & packages (line-wide) ──
     bev = le.get("beverages") or []
@@ -152,21 +192,20 @@ def experience_sections(lang, line_slug, ship):
             for b in bev if b.get("name"))
         out += _sec("drinks", lang, f'<div class="xpkgs">{cards}</div>')
 
-    # ── Activities ──
-    acts = exp.get("activities")
-    ai = _chips_or_p(acts)
+    # ── Things to do ──
+    ai = _flex(exp.get("activities"), _ACT_EMOJI, "✨")
     if ai:
-        nudge = (_call(lang, f"A specialist knows which {name} activities book up fast and how to lock them in.")
+        nudge = (_call(lang, f"A specialist knows which {name} experiences book up fast — and locks them in for you.")
                  if lang == "en" else
-                 _call(lang, f"Un especialista sabe qué actividades de {name} se agotan rápido y cómo asegurarlas."))
+                 _call(lang, f"Un especialista sabe qué experiencias de {name} se agotan rápido — y te las asegura."))
         out += _sec("activities", lang, f'{ai}{nudge}')
 
     # ── Entertainment ──
-    ent = _chips_or_p(exp.get("entertainment"))
+    ent = _flex(exp.get("entertainment"), _ENT_EMOJI, "🎭")
     if ent:
         out += _sec("entertainment", lang, ent)
 
-    # ── Kids, teens & families (line-wide dict + any ship note) ──
+    # ── Kids, teens & families ──
     kids = le.get("kids") or {}
     krows = ""
     for k, lbl in (("nursery", {"en": "Nursery", "es": "Guardería"}),
@@ -177,7 +216,7 @@ def experience_sections(lang, line_slug, ship):
         if v:
             krows += f'<div class="glance-cell"><b>{lbl[lang]}</b><span>{v}</span></div>'
     grid = f'<div class="glance-grid">{krows}</div>' if krows else ""
-    ship_kids = _chips_or_p(exp.get("kids_family"))
+    ship_kids = _flex(exp.get("kids_family"), _ACT_EMOJI, "🧒")
     if grid or ship_kids:
         out += _sec("family", lang, f'{grid}{ship_kids}')
 
@@ -196,7 +235,7 @@ def experience_sections(lang, line_slug, ship):
             inner += f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b></p><div class="ship-feats">{chips}</div>'
         out += _sec("decks", lang, inner)
 
-    # ── Bridge cam (availability only) ──
+    # ── Bridge cam ──
     cam = exp.get("bridge_cam")
     if cam is not None:
         if cam:

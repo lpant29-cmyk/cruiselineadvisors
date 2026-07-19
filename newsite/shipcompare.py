@@ -42,6 +42,8 @@ def _sid(line_slug, name):
 def _payload(lang):
     ships = []
     for line_slug, s in all_ships():
+        exp = s.get("exp") or {}
+        acts = exp.get("activities")
         ships.append({
             "id": _sid(line_slug, s["name"]),
             "line": _NAME.get(line_slug, line_slug),
@@ -51,11 +53,26 @@ def _payload(lang):
             "guests": s.get("guests"),
             "tonnage": s.get("tonnage"),
             "features": [f for f in s.get("features", []) if f],
+            "dine": len(exp.get("dining") or []),
+            "acts": len(acts) if isinstance(acts, list) else 0,
         })
     ships.sort(key=lambda x: (x["line"], x["name"]))
+    vd = ({"h": "Which should you pick?", "take": "Our take",
+           "newer": "newer", "bigger": "bigger — more space & more to do",
+           "moredine": "more dining choice",
+           "consider": "Prefer a smaller, calmer, easier-to-navigate ship? Go with {x}.",
+           "tie": "These two are closely matched — the right one really comes down to your dates, party and budget.",
+           "close": "Either way, tell us your dates and party and we'll match the right ship — and the best rate our partners can offer."}
+          if lang == "en" else
+          {"h": "¿Cuál elegir?", "take": "Nuestra recomendación",
+           "newer": "más nuevo", "bigger": "más grande — más espacio y más que hacer",
+           "moredine": "más opciones de comida",
+           "consider": "¿Prefieres un barco más pequeño, tranquilo y fácil de recorrer? Elige {x}.",
+           "tie": "Están muy parejos — la elección depende de tus fechas, grupo y presupuesto.",
+           "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal — y la mejor tarifa que nuestros socios pueden ofrecer."})
     return {"ships": ships, "gap": _T[lang]["gap"],
             "rows": [{"k": k, "label": lbl} for k, lbl in _T[lang]["rows"]],
-            "lineLabel": _T[lang]["line"]}
+            "lineLabel": _T[lang]["line"], "vd": vd}
 
 
 def has_ship_compare():
@@ -98,6 +115,7 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
   </div>
   <div class="cx-flag">{verified_stamp(lang, _latest_roster_date())} <span class="cx-count">{t['flag']}</span></div>
   <div class="cx-cards" id="scmpBody"></div>
+  <div class="cx-verdict" id="scmpVerdict"></div>
   <div class="cx-foot"><p>{t['cta']}</p>
     <a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall('ship-compare')"><span class="ic">☎</span>{t['call']}</a></div>
 </div>
@@ -114,12 +132,30 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
     return (s[k]===null||s[k]===undefined||s[k]==='')?null:String(s[k]);
   }}
   function val(s,k){{var v=fmt(s,k); return v?v:'<span class="cmp-gap">'+D.gap+'</span>';}}
+  function num2(n){{return num(n);}}
+  function verdict(a,b){{
+    var V=D.vd, vd=document.getElementById('scmpVerdict');
+    if(!vd) return;
+    if(!a||!b){{vd.innerHTML='';return;}}
+    var ra=[],rb=[];
+    if(a.year&&b.year){{ if(a.year>b.year)ra.push(V.newer+' ('+a.year+')'); else if(b.year>a.year)rb.push(V.newer+' ('+b.year+')'); }}
+    if(a.guests&&b.guests){{ if(a.guests>b.guests)ra.push(V.bigger); else if(b.guests>a.guests)rb.push(V.bigger); }}
+    if(a.dine&&b.dine){{ if(a.dine>b.dine)ra.push(V.moredine+' ('+a.dine+' vs '+b.dine+')'); else if(b.dine>a.dine)rb.push(V.moredine+' ('+b.dine+' vs '+a.dine+')'); }}
+    var body;
+    if(ra.length===0&&rb.length===0){{ body='<p>'+V.tie+'</p>'; }}
+    else {{
+      var win=ra.length>=rb.length?a:b, lose=win===a?b:a, wr=win===a?ra:rb;
+      body='<p><span class="cx-vwin">'+V.take+': '+win.name+'</span> — '+wr.join(', ')+'. '+V.consider.replace('{{x}}',lose.name)+'</p>';
+    }}
+    vd.innerHTML='<div class="cx-vhead">★ '+V.h+'</div>'+body+'<p class="cx-vclose">'+V.close+'</p>';
+  }}
   function render(){{
     var a=byId[A.value],b=byId[B.value],h='';
     // line row first
     h+=card(D.lineLabel,'',a?a.line:'',b?b.line:'');
     D.rows.forEach(function(r){{ h+=card(r.label,'',val(a,r.k),val(b,r.k)); }});
     body.innerHTML=h;
+    verdict(a,b);
   }}
   function card(label,note,av,bv){{
     return '<div class="cx-card"><div class="cx-fact"><span>'+label+(note?'<small>'+note+'</small>':'')+'</span></div>'
