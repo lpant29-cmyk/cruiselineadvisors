@@ -8,31 +8,74 @@ from config import PHONE_HREF, PHONE_DISPLAY
 from data import LINES
 from ships import all_ships, slugify, SHIPS
 from badges import verified_stamp
+from facts import LINE_FACTS
 
-_HERO = {
-    "en": {"kick": "Compare ships",
-           "h": "Two ships can look identical online — until you see what's actually on board.",
-           "sub": "Put this ship head-to-head with any other, across every line we cover — size, dining, things to do, who it suits. No prices, just what you get. Then one call and we book the right one at the best rate our partners can offer."},
-    "es": {"kick": "Comparar barcos",
-           "h": "Dos barcos pueden parecer idénticos en línea — hasta que ves lo que realmente hay a bordo.",
-           "sub": "Compara este barco con cualquier otro, de todas las líneas que cubrimos — tamaño, restaurantes, qué hacer, para quién es. Sin precios, solo lo que obtienes. Luego una llamada y reservamos el correcto a la mejor tarifa que nuestros socios pueden ofrecer."},
+# Decision rows, grouped. Line-policy rows pull from the verified 12-fact sheet (the confusing
+# money stuff people actually agonise over); ship rows come from specs + enrichment.
+_ROWS = {
+    "en": [
+        {"group": "On board this ship"},
+        {"k": "who", "label": "Best for"}, {"k": "route", "label": "Where it sails"},
+        {"k": "class", "label": "Ship class"}, {"k": "year", "label": "Entered service"},
+        {"k": "guests", "label": "Guests"}, {"k": "tonnage", "label": "Gross tonnage"},
+        {"k": "dine", "label": "Places to eat"}, {"k": "acts", "label": "Things to do"},
+        {"group": "Cost & the fine print (line policy)"},
+        {"k": "gratuities", "label": "Daily gratuities"},
+        {"k": "included", "label": "What's included vs extra"},
+        {"k": "drink_pkg", "label": "Drink-package rule"},
+        {"k": "wifi", "label": "Wi-Fi"},
+        {"k": "deposit", "label": "Deposit & final payment"},
+        {"k": "cancel", "label": "Cancellation & refunds"},
+        {"k": "solo", "label": "Solo traveller supplement"},
+    ],
+    "es": [
+        {"group": "A bordo de este barco"},
+        {"k": "who", "label": "Ideal para"}, {"k": "route", "label": "Dónde navega"},
+        {"k": "class", "label": "Clase"}, {"k": "year", "label": "En servicio desde"},
+        {"k": "guests", "label": "Huéspedes"}, {"k": "tonnage", "label": "Tonelaje bruto"},
+        {"k": "dine", "label": "Dónde comer"}, {"k": "acts", "label": "Qué hacer"},
+        {"group": "Costo y la letra pequeña (política de la línea)"},
+        {"k": "gratuities", "label": "Propinas diarias"},
+        {"k": "included", "label": "Qué se incluye vs extra"},
+        {"k": "drink_pkg", "label": "Regla del paquete de bebidas"},
+        {"k": "wifi", "label": "Wi-Fi"},
+        {"k": "deposit", "label": "Depósito y pago final"},
+        {"k": "cancel", "label": "Cancelación y reembolsos"},
+        {"k": "solo", "label": "Suplemento para viajero solo"},
+    ],
 }
+_FACT_KEYS = ("gratuities", "included", "drink_pkg", "wifi", "deposit", "cancel", "solo")
 
-
-def compare_hero(lang, default_a=None):
-    """Top-of-page 'problem -> compare -> call' band: headline + call on the left, the ship-compare
-    tool on the right (desktop); stacks to one column on mobile."""
-    if not has_ship_compare():
-        return ""
-    t = _HERO[lang]
+def compare_band(lang, kick, headline, sub, tool_html):
+    """Shared top-of-page compare band: headline + call on the left, a compare tool on the right
+    (desktop 2-col); stacks on mobile. Reused by ship pages and line pages."""
     call = "Call now" if lang == "en" else "Llama ahora"
     return (f'<section class="cmphero"><div class="wrap"><div class="cmphero-grid">'
-            f'<div class="cmphero-left"><span class="eyebrow">{t["kick"]}</span>'
-            f'<h2>{t["h"]}</h2><p class="cmphero-sub">{t["sub"]}</p>'
+            f'<div class="cmphero-left"><span class="eyebrow">{kick}</span>'
+            f'<h2>{headline}</h2><p class="cmphero-sub">{sub}</p>'
             f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'cmphero\')">'
             f'<span class="ic" aria-hidden="true">☎</span>{call} · {PHONE_DISPLAY}</a></div>'
-            f'<div class="cmphero-right">{ship_compare_tool(lang, default_a=default_a)}</div>'
+            f'<div class="cmphero-right">{tool_html}</div>'
             f'</div></div></section>')
+
+
+def compare_hero(lang, default_a=None, ship_name=None):
+    """Ship-page compare band with a headline that names the current ship."""
+    if not has_ship_compare():
+        return ""
+    kick = "Compare ships" if lang == "en" else "Comparar barcos"
+    nm = ship_name or ("this ship" if lang == "en" else "este barco")
+    if lang == "en":
+        h = f"Compare {nm} with any other ship — and find the winner in seconds."
+        sub = ("No more digging through hundreds of pages. Line it up against any ship, from any line, on "
+               "what actually matters — size, dining, what's included and the fine print. Then one call gets "
+               "you the best rate our partners can offer.")
+    else:
+        h = f"Compara {nm} con cualquier otro barco — y encuentra al ganador en segundos."
+        sub = ("Sin revisar cientos de páginas. Compáralo con cualquier barco, de cualquier línea, en lo que "
+               "importa — tamaño, restaurantes, qué se incluye y la letra pequeña. Luego una llamada te da la "
+               "mejor tarifa que nuestros socios pueden ofrecer.")
+    return compare_band(lang, kick, h, sub, ship_compare_tool(lang, default_a=default_a))
 
 
 def _latest_roster_date():
@@ -71,7 +114,16 @@ def _payload(lang):
     for line_slug, s in all_ships():
         exp = s.get("exp") or {}
         acts = exp.get("activities")
-        ships.append({
+        lf = LINE_FACTS.get(line_slug, {})
+
+        def fv(key):
+            c = lf.get(key, {})
+            v = c.get("v")
+            if not v:
+                return None
+            return v.get(lang, v.get("en")) if isinstance(v, dict) else v
+
+        row = {
             "id": _sid(line_slug, s["name"]),
             "line": _NAME.get(line_slug, line_slug),
             "name": s["name"],
@@ -79,12 +131,14 @@ def _payload(lang):
             "year": s.get("year"),
             "guests": s.get("guests"),
             "tonnage": s.get("tonnage"),
-            "features": [f for f in s.get("features", []) if f],
             "who": exp.get("who_for"),
             "route": exp.get("deploy_note"),
             "dine": len(exp.get("dining") or []),
             "acts": len(acts) if isinstance(acts, list) else 0,
-        })
+        }
+        for k in _FACT_KEYS:
+            row[k] = fv(k)
+        ships.append(row)
     ships.sort(key=lambda x: (x["line"], x["name"]))
     vd = ({"h": "Which should you pick?", "take": "Our take",
            "newer": "newer", "bigger": "bigger — more space & more to do",
@@ -99,8 +153,7 @@ def _payload(lang):
            "consider": "¿Prefieres un barco más pequeño, tranquilo y fácil de recorrer? Elige {x}.",
            "tie": "Están muy parejos — la elección depende de tus fechas, grupo y presupuesto.",
            "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal — y la mejor tarifa que nuestros socios pueden ofrecer."})
-    return {"ships": ships, "gap": _T[lang]["gap"],
-            "rows": [{"k": k, "label": lbl} for k, lbl in _T[lang]["rows"]],
+    return {"ships": ships, "gap": _T[lang]["gap"], "rows": _ROWS[lang],
             "lineLabel": _T[lang]["line"], "vd": vd}
 
 
@@ -156,8 +209,8 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
   function num(n){{return (n===null||n===undefined||n==='')?null:String(n).replace(/\\B(?=(\\d{{3}})+(?!\\d))/g,',');}}
   function fmt(s,k){{
     if(!s) return null;
-    if(k==='features') return (s.features&&s.features.length)?s.features.join(' · '):null;
     if(k==='guests'||k==='tonnage') return num(s[k]);
+    if(k==='dine'||k==='acts') return s[k]>0?String(s[k]):null;
     return (s[k]===null||s[k]===undefined||s[k]==='')?null:String(s[k]);
   }}
   function val(s,k){{var v=fmt(s,k); return v?v:'<span class="cmp-gap">'+D.gap+'</span>';}}
@@ -180,9 +233,11 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
   }}
   function render(){{
     var a=byId[A.value],b=byId[B.value],h='';
-    // line row first
     h+=card(D.lineLabel,'',a?a.line:'',b?b.line:'');
-    D.rows.forEach(function(r){{ h+=card(r.label,'',val(a,r.k),val(b,r.k)); }});
+    D.rows.forEach(function(r){{
+      if(r.group){{ h+='<div class="cx-group">'+r.group+'</div>'; return; }}
+      h+=card(r.label,'',val(a,r.k),val(b,r.k));
+    }});
     body.innerHTML=h;
     verdict(a,b);
   }}

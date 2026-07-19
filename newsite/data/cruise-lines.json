@@ -2559,7 +2559,80 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": {
+        "summary": "Princess runs a seasonal Americas rotation: Alaska in the northern summer, then Caribbean, Mexican Riviera, California Coast and Panama Canal in the fall-through-spring window. Regions below are drawn from the itineraries shown on each ship's official princess.com page at capture; exact ship-by-season homeport assignments shift year to year and should be confirmed on the official Princess deployment/destination finder before publishing.",
+        "by_port": [
+          {
+            "port": "Seattle, WA",
+            "regions": [
+              "Alaska Inside Passage (roundtrip)"
+            ],
+            "season": "Summer (approx. May-Sep)"
+          },
+          {
+            "port": "Vancouver, BC",
+            "regions": [
+              "Alaska Inside Passage",
+              "Alaska Voyage of the Glaciers (one-way, paired with Whittier)"
+            ],
+            "season": "Summer (approx. May-Sep)"
+          },
+          {
+            "port": "Whittier / Anchorage, AK",
+            "regions": [
+              "Alaska Gulf / Voyage of the Glaciers (one-way, paired with Vancouver)"
+            ],
+            "season": "Summer (approx. May-Sep)"
+          },
+          {
+            "port": "San Francisco, CA",
+            "regions": [
+              "Alaska",
+              "California Coast",
+              "Mexico"
+            ],
+            "season": "Alaska summer; California Coast & Mexico fall-spring"
+          },
+          {
+            "port": "Los Angeles, CA",
+            "regions": [
+              "Mexican Riviera",
+              "California Coast",
+              "Hawaii"
+            ],
+            "season": "Fall-spring"
+          },
+          {
+            "port": "Fort Lauderdale (Port Everglades), FL",
+            "regions": [
+              "Eastern / Western / Southern Caribbean",
+              "Panama Canal"
+            ],
+            "season": "Winter (approx. Oct-Apr)"
+          },
+          {
+            "port": "New York, NY",
+            "regions": [
+              "Caribbean",
+              "Canada & New England",
+              "Bermuda"
+            ],
+            "season": "Seasonal (Canada/New England fall; Caribbean/Bermuda warmer months)"
+          },
+          {
+            "port": "Quebec City, QC",
+            "regions": [
+              "Canada & New England"
+            ],
+            "season": "Fall (approx. Sep-Oct)"
+          }
+        ],
+        "needs": [
+          "Exact ship-to-homeport-to-season assignments for the current/2026-2027 seasons were NOT verified from a single official deployment page; princess.com destination/deployment pages timed out (JS-heavy) and WebSearch budget was exhausted. Verify against https://www.princess.com/en-us/cruise-destinations and the official Cruise Finder before publishing any ship+port+season claim.",
+          "Quebec City, NYC and Whittier assignments are inferred from standard Princess Americas patterns plus ship-page itinerary imagery, not confirmed line-level for the current season."
+        ]
+      }
     },
     {
       "slug": "msc",

@@ -7,7 +7,7 @@ from config import PHONE_HREF, PHONE_DISPLAY, HOURS, SINCE_YEAR, BRAND
 from data import LINES, DESTINATIONS
 from facts import FACTS, LINE_FACTS, latest_verified
 from badges import verified_stamp, verified_seal
-from compare import compare_tool
+from compare import compare_tool, line_compare_hero
 from interactive import when_to_go, cabin_guide, SEASONS
 from updates import all_updates, updates_for, update_cards, get_update
 from directory import directory_section
@@ -128,8 +128,9 @@ def p_line(lang, slug):
     upd_h2 = f"Latest {name} updates" if lang == "en" else f"Últimas novedades de {name}"
     rich = rich_sections(lang, slug)  # sets sections_present(slug) as a side effect
     faq = faq_section(lang, slug)
-    toc_keys = sections_present(slug) + ["facts", "updates", "compare"] + (["faq"] if faq else [])
+    toc_keys = sections_present(slug) + ["facts", "updates"] + (["faq"] if faq else [])
     return (phero(lang, kick, L["name"], L["tag"][lang], crumb)
+            + line_compare_hero(lang, slug, name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + line_toc(lang, toc_keys)
             + rich
@@ -138,8 +139,6 @@ def p_line(lang, slug):
               f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
             + f'<section id="s-updates" class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
-            + f'<section id="s-compare" class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{cmp_kick}</span>'
-              f'<h2>{cmp_h2}</h2><p>{cmp_sub}</p></div>{compare_tool(lang, default_a=slug)}</div></section>'
             + faq
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
@@ -254,7 +253,7 @@ def p_ship(lang, line_slug, sslug):
 
     # the ship-compare tool now lives in the Compare-hero band at the top of the page.
     return (phero(lang, kick, name, sub, crumb)
-            + compare_hero(lang, default_a=f"{line_slug}::{sslug}")
+            + compare_hero(lang, default_a=f"{line_slug}::{sslug}", ship_name=name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + ship_banner(lang)
             + f'<section class="section cream{" stamped" if _has_specs else ""}"><div class="wrap">'

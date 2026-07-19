@@ -734,5 +734,81 @@
         "official_url": "https://www.royalcaribbean.com/cruise-ships/vision-of-the-seas"
       }
     ]
+  },
+  "princess": {
+    "Sun Princess": [
+      "No 'Take Five' jazz lounge is listed among Sun Princess venues on the official fact sheet - unconfirmed for Sphere-Class; verify at https://www.princess.com/en-int/ships-and-experience/ships/su-sun-princess",
+      "The Treehouse / The Lodge / The Beach House youth centers named in the brief are NOT the Sphere-Class youth venues (those are Firefly Park, Neon Grove, The Underground); confirm no such spaces exist at https://www.princess.com/en-int/news/backgrounders-and-fact-sheets/sun-princess-fact-sheet",
+      "A dedicated sports court/track is not itemized on the Sun Princess fact sheet (it is on Star Princess); verify whether Sun has one at https://www.princess.com/en-int/ships-and-experience/ships/su-sun-princess",
+      "Exact current/2026-2027 homeport and itinerary deployment for Sun Princess not confirmed from a single fact sheet; verify at https://www.princess.com/en-int/ships-and-experience/ships/su-sun-princess"
+    ],
+    "Star Princess": [
+      "The Star Princess fact sheet does not explicitly name Cirque Eloize for The Dome (only Sun Princess' does); confirm the Dome's headline show for Star at https://www.princess.com/en-int/ships-and-experience/ships/st-star-princess",
+      "No 'Take Five' jazz lounge appears among Star Princess venues on the official fact sheet - unconfirmed for Sphere-Class; verify at https://www.princess.com/en-int/ships-and-experience/ships/st-star-princess",
+      "The Treehouse / The Lodge / The Beach House youth centers named in the brief are NOT the Sphere-Class youth venues (those are Firefly Park, Neon Grove, The Underground); confirm at https://www.princess.com/en-int/news/backgrounders-and-fact-sheets/star-princess-fact-sheet",
+      "Full current homeport rotation after the 2025-2026 Americas/Panama Canal season not confirmed from a single official page; verify at https://www.princess.com/en-int/ships-and-experience/ships/st-star-princess"
+    ],
+    "Discovery Princess": [
+      "Alfredo's Pizzeria exact charge status not stated on page: https://www.princess.com/en-us/ships-and-experience/ships/xp-discovery-princess"
+    ],
+    "Enchanted Princess": [
+      "Alfredo's Pizzeria exact charge status not stated on page: https://www.princess.com/en-us/ships-and-experience/ships/ex-enchanted-princess"
+    ],
+    "Sky Princess": [
+      "Exact cover-charge/complimentary status of Alfredo's Pizzeria not stated on page (grouped under specialty 'additional charges apply'): https://www.princess.com/en-us/ships-and-experience/ships/yp-sky-princess"
+    ],
+    "Majestic Princess": [
+      "Asian-market venues (La Mer, Harmony, Kai Sushi) are NOT listed on the current US ship page; cannot verify they still operate: https://www.princess.com/en-us/ships-and-experience/ships/mj-majestic-princess",
+      "The Sanctuary adults-only retreat is not listed on the current page (the Hollywood Pool Club appears in its place); confirm whether a separate Sanctuary exists: https://www.princess.com/en-us/ships-and-experience/ships/mj-majestic-princess",
+      "Alfredo's Pizzeria exact charge status not stated on page: https://www.princess.com/en-us/ships-and-experience/ships/mj-majestic-princess"
+    ],
+    "Regal Princess": [
+      "The Catch by Rudi is not listed on the current Regal Princess page (only Crown Grill and Sabatini's shown as headline specialty restaurants): https://www.princess.com/en-us/ships-and-experience/ships/gp-regal-princess",
+      "Alfredo's Pizzeria exact charge status not stated on page: https://www.princess.com/en-us/ships-and-experience/ships/gp-regal-princess"
+    ],
+    "Royal Princess": [
+      "SeaWalk is not mentioned on the current Royal Princess page even though this ship historically has one; confirm before publishing: https://www.princess.com/en-us/ships-and-experience/ships/rp-royal-princess",
+      "The Catch by Rudi is not listed for Royal Princess (page highlights only two specialty restaurants): https://www.princess.com/en-us/ships-and-experience/ships/rp-royal-princess",
+      "Alfredo's Pizzeria exact charge status not stated on page: https://www.princess.com/en-us/ships-and-experience/ships/rp-royal-princess"
+    ],
+    "Caribbean Princess": [
+      "Inaugural cruise date not listed in the ship's 'by numbers' block - https://www.princess.com/en-us/ships-and-experience/ships/cb-caribbean-princess",
+      "The Shops of Princess not listed in Caribbean's entertainment cards (present on sister ships) - confirm - https://www.princess.com/en-us/ships-and-experience/ships/cb-caribbean-princess",
+      "Treehouse/Lodge/Beach House youth-center names not shown on page - https://www.princess.com/en-us/ships-and-experience/kids-teens-and-families"
+    ],
+    "Crown Princess": [
+      "Treehouse/Lodge/Beach House youth-center names not shown on page - https://www.princess.com/en-us/ships-and-experience/kids-teens-and-families",
+      "Passenger-deck count vs total 'Number of Decks: 19' not clarified on page - https://www.princess.com/en-us/ships-and-experience/ships/kp-crown-princess"
+    ],
+    "Emerald Princess": [
+      "Treehouse/Lodge/Beach House youth-center names not shown on page - https://www.princess.com/en-us/ships-and-experience/kids-teens-and-families",
+      "Wheelhouse Bar not listed among Emerald's bars on page (present on most sister ships) - confirm - https://www.princess.com/en-us/ships-and-experience/ships/ep-emerald-princess"
+    ],
+    "Ruby Princess": [
+      "Treehouse/Lodge/Beach House youth-center names not shown on page - https://www.princess.com/en-us/ships-and-experience/kids-teens-and-families"
+    ],
+    "Diamond Princess": [
+      "Deck count, guest capacity and gross tonnage not published on the official Diamond Princess ship page - https://www.princess.com/en-us/ships-and-experience/ships/di-diamond-princess",
+      "Crown Grill / Sterling Steakhouse is NOT shown in the current Diamond Princess dining lineup (page shows Sabatini's as its featured specialty; Sabatini's, Makoto Ocean, Kai Sushi, Churrascaria, Chef's Table, Crab Shack confirmed) - verify before listing a steakhouse - https://www.princess.com/en-us/ships-and-experience/ships/di-diamond-princess",
+      "Kids-area brand names (Treehouse/Lodge/Beach House) not stated - https://www.princess.com/en-us/ships-and-experience/ships/di-diamond-princess"
+    ],
+    "Sapphire Princess": [
+      "Deck count, guest capacity and gross tonnage not published on the official Sapphire Princess ship page - https://www.princess.com/en-us/ships-and-experience/ships/sa-sapphire-princess",
+      "Kai Sushi and Izumi Japanese Bath are NOT shown on the current official Sapphire Princess page (the page presents Makoto Ocean as its Japanese venue); do not assert Kai Sushi/Izumi for this ship without confirmation - https://www.princess.com/en-us/ships-and-experience/ships/sa-sapphire-princess",
+      "Kids-area brand names (Treehouse/Lodge/Beach House) not stated - page uses generic 'Just For Kids/Teens' - https://www.princess.com/en-us/ships-and-experience/ships/sa-sapphire-princess"
+    ],
+    "Grand Princess": [
+      "Treehouse/Lodge/Beach House youth-center names not shown on page - https://www.princess.com/en-us/ships-and-experience/kids-teens-and-families",
+      "'The One5' nightclub description is minimal on page - confirm venue details - https://www.princess.com/en-us/ships-and-experience/ships/ap-grand-princess"
+    ],
+    "Island Princess": [
+      "Deck count, guest capacity and gross tonnage not published on the official Island Princess ship page - https://www.princess.com/en-us/ships-and-experience/ships/ip-island-princess",
+      "Universe Lounge is present on sister ship Coral Princess but was NOT shown in the captured Island Princess entertainment section - confirm before listing it for Island - https://www.princess.com/en-us/ships-and-experience/ships/ip-island-princess",
+      "Kids-area brand names (Treehouse/Lodge/Beach House) not stated - https://www.princess.com/en-us/ships-and-experience/ships/ip-island-princess"
+    ],
+    "Coral Princess": [
+      "Deck count, guest capacity and gross tonnage not published on the official Coral Princess ship page - https://www.princess.com/en-us/ships-and-experience/ships/co-coral-princess",
+      "Kids-area brand names (Treehouse/Lodge/Beach House) not stated - page uses generic 'Just For Kids/Teens' - https://www.princess.com/en-us/ships-and-experience/ships/co-coral-princess"
+    ]
   }
 }
