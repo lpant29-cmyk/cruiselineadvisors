@@ -6,7 +6,7 @@ import datetime
 from config import PHONE_HREF, PHONE_DISPLAY, HOURS, SINCE_YEAR, BRAND
 from data import LINES, DESTINATIONS
 from facts import FACTS, LINE_FACTS, latest_verified
-from badges import verified_stamp
+from badges import verified_stamp, verified_seal
 from compare import compare_tool
 from interactive import when_to_go, cabin_guide, SEASONS
 from updates import all_updates, updates_for, update_cards, get_update
@@ -131,8 +131,9 @@ def p_line(lang, slug):
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + line_toc(lang, toc_keys)
             + rich
-            + f'<section id="s-facts" class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{kick}</span>'
-              f'<h2>{facts_h}</h2>{verified_stamp(lang, latest_verified(slug))}<p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
+            + f'<section id="s-facts" class="section foam stamped"><div class="wrap">{verified_seal(lang, latest_verified(slug))}'
+              f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
+              f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
             + f'<section id="s-updates" class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
             + f'<section id="s-compare" class="section foam"><div class="wrap"><div class="sec-head"><span class="eyebrow">{cmp_kick}</span>'
@@ -167,6 +168,7 @@ def p_ship(lang, line_slug, sslug):
     L = _L[line_slug]
     s = get_ship(line_slug, sslug)
     name = s["name"]
+    _has_specs = bool(s.get("tonnage") or s.get("guests") or s.get("year"))
     gap = "Not yet verified" if lang == "en" else "No verificado aún"
     cls = s.get("class")
     linesw = "Cruise lines" if lang == "en" else "Líneas"
@@ -250,8 +252,9 @@ def p_ship(lang, line_slug, sslug):
 
     return (phero(lang, kick, name, sub, crumb)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
-            + f'<section class="section cream"><div class="wrap"><h2 class="rsec-h">{specs_h}</h2>'
-              f'{verified_stamp(lang, ship_source(line_slug)[1])}'
+            + f'<section class="section cream{" stamped" if _has_specs else ""}"><div class="wrap">'
+              f'{verified_seal(lang, ship_source(line_slug)[1]) if _has_specs else ""}'
+              f'<h2 class="rsec-h">{specs_h}</h2>'
               f'<div class="glance-grid">{specs}</div>{feats_block}'
               f'<p class="note-line" style="margin-top:20px">{note}</p>'
               f'{_ship_nudge(lang, nudge_txt)}</div></section>'

@@ -1,0 +1,176 @@
+{
+  "line": "holland-america",
+  "roster_source": "https://www.hollandamerica.com/en/us/cruise-ships",
+  "specs_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+  "verified": "2026-07-19",
+  "capacity_basis": "double occupancy (HAL Fleet Specifications 'Capacity' row); 'Maximum Passengers' full-occupancy figure recorded in each ship's notes",
+  "ships": [
+    {
+      "name": "Koningsdam",
+      "class": "Pinnacle",
+      "year": 2016,
+      "tonnage": 99500,
+      "guests": 2650,
+      "features": [
+        "World Stage two-deck theater with production shows",
+        "Music Walk: Rolling Stone Lounge, Billboard Onboard, B.B. King's Blues Club",
+        "Rudi's Sel de Mer and Tamarind specialty dining",
+        "Lido Pool with retractable glass roof and adults-only Sea View Pool"
+      ],
+      "notes": "Maiden voyage Apr 8, 2016. Maximum Passengers 3,154. Crew 1,036. First Pinnacle-class ship.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Nieuw Statendam",
+      "class": "Pinnacle",
+      "year": 2018,
+      "tonnage": 99500,
+      "guests": 2666,
+      "features": [
+        "World Stage productions with LED stagecraft",
+        "Rolling Stone Lounge, Billboard Onboard, B.B. King's Blues Club",
+        "Morimoto By Sea, Sel de Mer and Tamarind specialty dining",
+        "Grand Dutch Cafe and Club Orange private dining"
+      ],
+      "notes": "Maiden voyage Dec 5, 2018. Maximum Passengers 3,170. Crew 1,036.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Rotterdam",
+      "class": "Pinnacle",
+      "year": 2021,
+      "tonnage": 99836,
+      "guests": 2668,
+      "features": [
+        "World Stage theater with dynamic production shows",
+        "Rolling Stone Lounge, Billboard Onboard, B.B. King's Blues Club",
+        "Morimoto By Sea, Sel de Mer, Tamarind and Club Orange dining",
+        "Grand Dutch Cafe and Half Moon Bar"
+      ],
+      "notes": "Maiden voyage August 1, 2021 (largest ship in the fleet by tonnage). Maximum Passengers 3,172. Crew 1,048.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Eurodam",
+      "class": "Signature",
+      "year": 2008,
+      "tonnage": 86273,
+      "guests": 2104,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill and Tamarind pan-Asian dining",
+        "Lido Pool with retractable glass roof, adults-only Sea View Pool, Retreat Cabanas"
+      ],
+      "notes": "Maiden voyage Jul 1, 2008. Maximum Passengers 2,731. Crew 876. First Signature-class ship.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Nieuw Amsterdam",
+      "class": "Signature",
+      "year": 2010,
+      "tonnage": 86700,
+      "guests": 2106,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill and Tamarind specialty dining",
+        "Retreat Cabanas and Greenhouse Spa & Salon"
+      ],
+      "notes": "Maiden voyage Jul 4, 2010. Maximum Passengers 2,735. Crew 874.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Noordam",
+      "class": "Vista",
+      "year": 2006,
+      "tonnage": 82318,
+      "guests": 1972,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill, Canaletto and Tamarind (select nights)",
+        "Explorer's Lounge and Library Cafe"
+      ],
+      "notes": "Maiden voyage Feb 22, 2006. Maximum Passengers 2,596. Crew 811.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Oosterdam",
+      "class": "Vista",
+      "year": 2003,
+      "tonnage": 82305,
+      "guests": 1964,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill, Canaletto and Morimoto By Sea",
+        "Lido Pool with retractable glass roof and adults-only Sea View Pool"
+      ],
+      "notes": "Maiden voyage Aug 3, 2003. Maximum Passengers 2,587. Crew 812.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Westerdam",
+      "class": "Vista",
+      "year": 2004,
+      "tonnage": 82348,
+      "guests": 1964,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill, Canaletto and Tamarind pan-Asian dining",
+        "Explorer's Lounge and Hydropool"
+      ],
+      "notes": "Maiden voyage Apr 26, 2004. Maximum Passengers 2,587. Crew 812.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Zuiderdam",
+      "class": "Vista",
+      "year": 2002,
+      "tonnage": 82318,
+      "guests": 1964,
+      "features": [
+        "World Stage productions",
+        "Rolling Stone Lounge, Billboard Onboard and The Dam Band",
+        "Pinnacle Grill, Canaletto and Morimoto By Sea",
+        "Gallery Bar and Explorer's Lounge"
+      ],
+      "notes": "Maiden voyage Dec 14, 2002. Maximum Passengers 2,587. Crew 812. First Vista-class ship.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Volendam",
+      "class": "R Class",
+      "year": 1999,
+      "tonnage": 61214,
+      "guests": 1432,
+      "features": [
+        "Wajang Theater productions and cinematic screenings",
+        "Pinnacle Grill, Canaletto and Morimoto By Sea",
+        "MIX lounge, Piano Bar and Library Cafe",
+        "Lanai staterooms (ocean-view with direct promenade access)"
+      ],
+      "notes": "Maiden voyage Nov 12, 1999. Maximum Passengers 1,839. Crew 604. R-class; uses Wajang Theater rather than World Stage. 21 Lanai staterooms per Fleet Specifications.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    },
+    {
+      "name": "Zaandam",
+      "class": "R Class",
+      "year": 2000,
+      "tonnage": 61396,
+      "guests": 1432,
+      "features": [
+        "Wajang Theater productions and daily movies",
+        "Pinnacle Grill, Canaletto and Morimoto By Sea",
+        "MIX martini & champagne lounge and Piano Bar",
+        "Library Cafe and Thermal Suite"
+      ],
+      "notes": "Maiden voyage May 6, 2000. Maximum Passengers 1,839. Crew 604. R-class; uses Wajang Theater rather than World Stage.",
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+    }
+  ],
+  "needs_manual": [],
+  "flag": "All 11 ships have officially-sourced class, year, tonnage and guests. IMPORTANT: the official fleet-page 'Ships at a Glance' PDF (/content/dam/hal/inventory-assets/ships/at-a-glance/hal-ships-at-a-glance.pdf, updated 11/27/25) is a DINING/AMENITIES/ENTERTAINMENT comparison chart ONLY and contains NO tonnage/guests/year. Specs were instead taken from the official Holland America Line Fleet Specifications fact sheet PDF (newsroom press kit, effective date Nov 17, 2020) - authoritative and first-party, but ~5 years old; capacity/tonnage/year are stable but a fresh official fact sheet should be re-checked before publish. Features were read from each ship's official hollandamerica.com/en/us/cruise-ships/<ship> detail page. No prices recorded. No third-party sources used."
+}

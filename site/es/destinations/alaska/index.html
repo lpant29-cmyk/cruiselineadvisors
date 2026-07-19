@@ -427,6 +427,23 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .vstamp-d{font-weight:700;text-transform:none;letter-spacing:0;opacity:.85;white-space:nowrap}
 .sec-head .vstamp,.rsec-h+.vstamp{margin-top:.5rem}
 @media(max-width:480px){.vstamp{font-size:.64rem;gap:.32em;padding:.3em .6em}.vstamp-t,.vstamp-d{white-space:normal}}
+/* circular rubber-stamp seal (watermarked onto the facts / ship specs) */
+.vseal{display:inline-block;color:var(--sea3);line-height:0;transform:rotate(-8deg)}
+.vseal svg{display:block;width:118px;height:118px}
+.vseal-arc,.vseal-mid,.vseal-di{fill:currentColor;font-family:'Inter',system-ui,sans-serif;text-anchor:middle}
+.vseal-arc{font-weight:800;font-size:14.5px;letter-spacing:1.4px}
+.vseal-mid{font-weight:800;font-size:13px;letter-spacing:2px}
+.vseal-di{font-size:12px}
+.stamped{position:relative}
+.stamped .wrap{position:relative}
+.stamped .vseal{position:absolute;top:8px;right:14px;opacity:.9;pointer-events:none;z-index:3}
+.stamped .sec-head,.stamped>.wrap>.rsec-h{padding-right:150px}
+@media(max-width:760px){
+  .stamped .vseal{position:static;display:block;width:fit-content;margin:0 0 -4px auto;transform:rotate(-6deg)}
+  .stamped .vseal svg{width:96px;height:96px}
+  .stamped .sec-head,.stamped>.wrap>.rsec-h{padding-right:0}
+}
+@media(prefers-reduced-motion:no-preference){.stamped .vseal{transition:transform .2s}.stamped:hover .vseal{transform:rotate(-3deg) scale(1.03)}}
 
 /* ═══ content pages ═══ */
 .phero{padding:34px 0 40px}

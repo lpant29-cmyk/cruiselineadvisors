@@ -1,0 +1,311 @@
+{
+  "line": "msc",
+  "roster_source": "https://www.mscpressarea.com/en_INT/corporate-information/the-fleet/",
+  "specs_source": "",
+  "verified": "2026-07-19",
+  "ships": [
+    {
+      "name": "MSC World America",
+      "class": "World",
+      "year": 2025,
+      "tonnage": 216638,
+      "guests": 6762,
+      "features": [
+        "LNG-powered dual-fuel; first World Class ship for the North American market",
+        "19 dining venues including the only Eataly restaurant at sea",
+        "Seven onboard districts of tailored experiences",
+        "2,614 cabins; 22 decks; 413,000+ sq ft of public space"
+      ],
+      "notes": "Guests = maximum capacity (6,762). Delivered 27 March 2025. Class stated as 'World Class' (second World Class ship).",
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-msc-world-america-celebrates-additional-world-class/"
+    },
+    {
+      "name": "MSC World Europa",
+      "class": "World",
+      "year": 2022,
+      "tonnage": 215863,
+      "guests": 6762,
+      "features": [
+        "First MSC ship powered by LNG",
+        "World's first contemporary cruise ship with solid oxide fuel cell (SOFC) technology",
+        "Shore power connectivity and advanced wastewater treatment",
+        "The Venom Drop @ The Spiral, the longest dry slide at sea"
+      ],
+      "notes": "Guests = capacity figure printed as 6,762. Delivered October 2022; first World Class ship. Basis (max vs double occupancy) not explicitly stated on the fetched page.",
+      "spec_source": "https://www.mscpressarea.com/en_GB/press-releases/msc-world-europa-the-world-s-most-environmentally-high-performing-cruise-ship-sta/"
+    },
+    {
+      "name": "MSC Euribia",
+      "class": "Meraviglia-Plus",
+      "year": 2023,
+      "tonnage": 184011,
+      "guests": 6334,
+      "features": [
+        "LNG-powered with four Wartsila dual-fuel engines",
+        "IMO Energy Efficiency Design Index 55% better than required",
+        "The Carousel Lounge with panoramic ocean views",
+        "Ocean Cay AquaPark with three water slides"
+      ],
+      "notes": "Guests = maximum capacity (6,334); 2,419 cabins. Named 8 June 2023 in Copenhagen. Third Meraviglia-Plus ship.",
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-officially-names-its-newest-flagship-msc-euribia-tonight-in-copenhage/"
+    },
+    {
+      "name": "MSC Grandiosa",
+      "class": "Meraviglia-Plus",
+      "year": 2019,
+      "tonnage": 181000,
+      "guests": 6334,
+      "features": [
+        "Mediterranean-style promenade with 98.5-metre LED Sky screen",
+        "Two exclusive Cirque du Soleil at Sea shows",
+        "ZOE digital personal assistant (MSC for Me)",
+        "L'Atelier Bistrot specialty restaurant"
+      ],
+      "notes": "Guests = maximum capacity (6,334); lower-berth capacity 4,842. Delivered 31 October 2019; first Meraviglia-Plus ship.",
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2365/"
+    },
+    {
+      "name": "MSC Virtuosa",
+      "class": "Meraviglia-Plus",
+      "year": 2021,
+      "tonnage": null,
+      "guests": null,
+      "features": [
+        "91.8-metre promenade with LED sky dome",
+        "Rob, the world's first humanoid robotic bartender at sea",
+        "Hybrid exhaust gas cleaning systems (98% SOx reduction)",
+        "First cruise ship to receive Bureau Veritas BIORISK notation"
+      ],
+      "notes": "Delivered 1 February 2021, entered service 16 April 2021. Second Meraviglia-Plus ship. Gross tonnage and guest capacity NOT printed on the official pages fetched (delivery and christening pages) -> null; needs manual.",
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/3785/"
+    },
+    {
+      "name": "MSC Bellissima",
+      "class": "Meraviglia",
+      "year": 2019,
+      "tonnage": 171598,
+      "guests": 5686,
+      "features": [
+        "Cutting-edge exhaust gas cleaning and advanced wastewater treatment",
+        "ZOE, described as the world's first virtual personal cruise assistant, in every cabin"
+      ],
+      "notes": "Guests = maximum capacity (5,686); lower-berth capacity 4,434. Delivered 27 February 2019; second Meraviglia Class ship.",
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2469/"
+    },
+    {
+      "name": "MSC Meraviglia",
+      "class": "Meraviglia",
+      "year": null,
+      "tonnage": null,
+      "guests": 5700,
+      "features": [
+        "1,034 ft long, 214 ft tall, 19 decks",
+        "First ship with the MSC for Me digital programme",
+        "Flexible dining and world-class entertainment",
+        "Extensive family and children's facilities"
+      ],
+      "notes": "Guests = 5,700 maximum (4,488 at double occupancy), from official christening page. First Meraviglia Class ship. Year entered service and gross tonnage NOT printed on the fetched official christening page -> null; needs manual.",
+      "spec_source": "https://www.mscpressarea.com/en_US/christening/mscmeraviglia/"
+    },
+    {
+      "name": "MSC Seascape",
+      "class": "Seaside EVO",
+      "year": 2022,
+      "tonnage": null,
+      "guests": null,
+      "features": [
+        "Nearly 140,000 sq ft of outdoor space and waterfront promenade",
+        "ROBOTRON thrill ride, a first at sea",
+        "Six swimming pools including an aft infinity pool",
+        "Glass-floored Bridge of Sighs on deck 16"
+      ],
+      "notes": "Second Seaside EVO ship; 2,270 cabins. Entered service 2022. Gross tonnage and guest capacity NOT printed on the fetched official pages (delivery + christening) -> null; needs manual.",
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-new-flagship-fun-filled-msc-seascape/"
+    },
+    {
+      "name": "MSC Seashore",
+      "class": "Seaside EVO",
+      "year": 2021,
+      "tonnage": 170400,
+      "guests": 5877,
+      "features": [
+        "Largest cruise ship built in Italy (at delivery)",
+        "Hybrid exhaust gas cleaning (98% SOx / 90% NOx reduction)",
+        "Safe Air UV-C air sanitation system",
+        "65% of public areas reimagined vs Seaside class"
+      ],
+      "notes": "Guests = 5,877 stated as maximum capacity for short international voyage. Delivered 26 July 2021; first Seaside EVO ship.",
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/4204/"
+    },
+    {
+      "name": "MSC Seaside",
+      "class": "Seaside",
+      "year": 2017,
+      "tonnage": 153516,
+      "guests": 5119,
+      "features": [
+        "Waterfront boardwalk with panoramic glass elevators",
+        "SCR systems, exhaust gas cleaning and advanced waste management",
+        "Homeported in Miami for Caribbean sailings",
+        "MSC Yacht Club with private sun deck"
+      ],
+      "notes": "Guests = 5,119 at double occupancy. Delivered 29 November 2017; first Seaside Class ship. Tonnage printed as 153,516 GRT.",
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/1702/"
+    },
+    {
+      "name": "MSC Seaview",
+      "class": "Seaside",
+      "year": 2018,
+      "tonnage": null,
+      "guests": null,
+      "features": [
+        "'Beach condo' design with generous outdoor public spaces",
+        "Exhaust gas cleaning system and advanced wastewater treatment",
+        "RINA Green Star 3 Design notation",
+        "Among the biggest ships ever built in Italy (with MSC Seaside)"
+      ],
+      "notes": "Delivered 4 June 2018; second Seaside Class ship. Gross tonnage and guest capacity NOT printed on the fetched official delivery page -> null; needs manual.",
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/2002/"
+    },
+    {
+      "name": "MSC Fantasia",
+      "class": "Fantasia",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as first Fantasia Class ship. No official page with year/tonnage/guests was readable (press-area christening section does not cover pre-2017 ships; consumer ship pages and deck-plan PDFs returned 403). needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Splendida",
+      "class": "Fantasia",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as second Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Divina",
+      "class": "Fantasia",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as third Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Preziosa",
+      "class": "Fantasia",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as fourth Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Musica",
+      "class": "Musica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as first Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Orchestra",
+      "class": "Musica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as second Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Poesia",
+      "class": "Musica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as third Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Magnifica",
+      "class": "Musica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as fourth Musica Class ship. Official deck-plan PDF (virtual-tours.msccruises.com) lists 95,128 GT and 3,223 guests but that PDF returned 403 to us and could not be directly read -> tonnage/guests left null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Lirica",
+      "class": "Lirica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as first Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Opera",
+      "class": "Lirica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as second Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Armonia",
+      "class": "Lirica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as third Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    },
+    {
+      "name": "MSC Sinfonia",
+      "class": "Lirica",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Confirmed in fleet as fourth Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
+      "spec_source": ""
+    }
+  ],
+  "needs_manual": [
+    "MSC Virtuosa: gross tonnage + guest capacity (not printed on official delivery/christening pages)",
+    "MSC Meraviglia: year entered service + gross tonnage (christening page gave guests only)",
+    "MSC Seascape: gross tonnage + guest capacity (official pages gave cabins/features only)",
+    "MSC Seaview: gross tonnage + guest capacity (delivery page gave features only)",
+    "MSC Fantasia: year + tonnage + guests (no readable official spec page)",
+    "MSC Splendida: year + tonnage + guests (no readable official spec page)",
+    "MSC Divina: year + tonnage + guests (no readable official spec page)",
+    "MSC Preziosa: year + tonnage + guests (no readable official spec page)",
+    "MSC Musica: year + tonnage + guests (no readable official spec page)",
+    "MSC Orchestra: year + tonnage + guests (no readable official spec page)",
+    "MSC Poesia: year + tonnage + guests (no readable official spec page)",
+    "MSC Magnifica: year + tonnage + guests (official deck-plan PDF exists but returned 403)",
+    "MSC Lirica: year + tonnage + guests (no readable official spec page)",
+    "MSC Opera: year + tonnage + guests (no readable official spec page)",
+    "MSC Armonia: year + tonnage + guests (no readable official spec page)",
+    "MSC Sinfonia: year + tonnage + guests (no readable official spec page)",
+    "Best manual official source for legacy-ship specs: each ship's page on msccruisesusa.com/cruise/ships/<ship> and the deck-plan PDFs at virtual-tours.msccruises.com (both 403 to automated fetch; readable in a normal browser)."
+  ],
+  "flag": "Roster CONFIRMED officially: the MSC press-area 'The Fleet' page (mscpressarea.com/en_INT/corporate-information/the-fleet/) was readable and lists all 23 in-service ships with their class order; it does NOT carry per-ship year/tonnage/guests. Consumer fleet pages (msccruises.com/discover/fleet, msccruisesusa.com, msccruises.com/int/our-cruises/ships) and the virtual-tours deck-plan PDFs all returned HTTP 403 to automated fetch. Per-ship specs were sourced from official MSC press-area press releases and christening pages, which only carry hard specs for Meraviglia-generation-and-newer ships (2017+). All 12 pre-2017 ships (Fantasia, Musica, Lirica classes) have class confirmed but year/tonnage/guests unreadable officially -> null + needs_manual. No third-party sources used."
+}

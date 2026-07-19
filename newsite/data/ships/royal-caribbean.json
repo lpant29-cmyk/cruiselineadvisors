@@ -1,0 +1,457 @@
+{
+  "line": "royal-caribbean",
+  "roster_source": "https://www.royalcaribbean.com/cruise-ships",
+  "specs_source": "https://www.royalcaribbeanpresscenter.com/ (official ship Fact Sheets served from royalcaribbeanmedia.com)",
+  "verified": "2026-07-19",
+  "ships": [
+    {
+      "name": "Icon of the Seas",
+      "class": "Icon",
+      "year": 2024,
+      "tonnage": 248663,
+      "guests": 5610,
+      "features": [
+        "Surfside",
+        "Category 6 waterpark",
+        "AquaDome",
+        "Crown's Edge",
+        "Ultimate Family Townhouse"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage January 27, 2024. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/ICON_Fact_Sheet.jpg"
+    },
+    {
+      "name": "Star of the Seas",
+      "class": "Icon",
+      "year": 2025,
+      "tonnage": 248663,
+      "guests": 5610,
+      "features": [
+        "Surfside",
+        "Category 6",
+        "AquaDome",
+        "Crown's Edge"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage August 31, 2025. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/STAR_Fact_Sheet.jpg"
+    },
+    {
+      "name": "Legend of the Seas",
+      "class": "Icon",
+      "year": 2026,
+      "tonnage": 248663,
+      "guests": 5610,
+      "features": [
+        "Surfside",
+        "Category 6",
+        "AquaDome",
+        "Ultimate Family Townhouse"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 4, 2026. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Mar-2-Mon/1770756033_26-RCC-0561-LE-Ship-Fact-Sheet-DIGITAL-021026.jpg"
+    },
+    {
+      "name": "Utopia of the Seas",
+      "class": "Oasis",
+      "year": 2024,
+      "tonnage": 236473,
+      "guests": 5668,
+      "features": [
+        "Royal Railway - Utopia Station",
+        "Izumi in the Park",
+        "The Ultimate Abyss",
+        "Solarium Suites"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 19, 2024. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/UTOPIA_Fact_Sheet.jpg"
+    },
+    {
+      "name": "Wonder of the Seas",
+      "class": "Oasis",
+      "year": 2022,
+      "tonnage": 235600,
+      "guests": 5734,
+      "features": [
+        "Suite Neighborhood",
+        "Ultimate Family Suite",
+        "Vue Bar",
+        "Wonder Playscape"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage March 4, 2022. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/WONDER_Fact_Sheet.jpg"
+    },
+    {
+      "name": "Harmony of the Seas",
+      "class": "Oasis",
+      "year": 2016,
+      "tonnage": 226963,
+      "guests": 5697,
+      "features": [
+        "Splashaway Bay",
+        "The Ultimate Abyss",
+        "The Perfect Storm",
+        "Ultimate Family Suite"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 29, 2016. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-May-27-Wed/26-RCC-0603_Harmony-Fast_Facts_Update.jpg"
+    },
+    {
+      "name": "Symphony of the Seas",
+      "class": "Oasis",
+      "year": 2018,
+      "tonnage": 228081,
+      "guests": 5518,
+      "features": [
+        "Ultimate Family Suite",
+        "The Ultimate Abyss",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 7, 2018. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0613_Symphony_-Fact_Sheet_Update.jpg"
+    },
+    {
+      "name": "Allure of the Seas",
+      "class": "Oasis",
+      "year": 2010,
+      "tonnage": 225282,
+      "guests": 5718,
+      "features": [
+        "Central Park",
+        "AquaTheater",
+        "Zip Line",
+        "Carousel"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 5, 2010. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0612_Allure_-fast_facts_Update.jpg"
+    },
+    {
+      "name": "Oasis of the Seas",
+      "class": "Oasis",
+      "year": 2009,
+      "tonnage": 226838,
+      "guests": 5602,
+      "features": [
+        "Music Hall",
+        "Portside BBQ",
+        "The Perfect Storm",
+        "The Ultimate Abyss"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 5, 2009. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/OASIS_Fact_Sheet.jpg"
+    },
+    {
+      "name": "Odyssey of the Seas",
+      "class": "Quantum Ultra",
+      "year": 2021,
+      "tonnage": 167704,
+      "guests": 4198,
+      "features": [
+        "SeaPlex",
+        "North Star",
+        "RipCord by iFly",
+        "Playmakers Sports Bar & Arcade"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 31, 2021. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511898_ODYSSEY-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Spectrum of the Seas",
+      "class": "Quantum Ultra",
+      "year": 2019,
+      "tonnage": 169379,
+      "guests": 4246,
+      "features": [
+        "Ultimate Family Suite",
+        "North Star",
+        "RipCord by iFly"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 18, 2019. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513083_SPECTRUM-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Anthem of the Seas",
+      "class": "Quantum",
+      "year": 2015,
+      "tonnage": 168666,
+      "guests": 4180,
+      "features": [
+        "North Star",
+        "RipCord by iFly",
+        "Two70"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 22, 2015. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766431593_ANTHEM-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Ovation of the Seas",
+      "class": "Quantum",
+      "year": 2016,
+      "tonnage": 168666,
+      "guests": 4234,
+      "features": [
+        "RipCord by iFly",
+        "North Star",
+        "Two70",
+        "SeaPlex"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 17, 2016. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-29-Wed/26-RCC-0582_OV_Fast_Facts_Update.jpg"
+    },
+    {
+      "name": "Quantum of the Seas",
+      "class": "Quantum",
+      "year": 2014,
+      "tonnage": 168666,
+      "guests": 4180,
+      "features": [
+        "North Star",
+        "RipCord by iFly",
+        "Two70"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 2, 2014. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766512373_QUANTUM-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Independence of the Seas",
+      "class": "Freedom",
+      "year": 2008,
+      "tonnage": 154407,
+      "guests": 3858,
+      "features": [
+        "Royal Escape Room",
+        "FlowRider",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 2, 2008. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510482_INDEPENDENCE-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Freedom of the Seas",
+      "class": "Freedom",
+      "year": 2006,
+      "tonnage": 156271,
+      "guests": 3926,
+      "features": [
+        "Giovanni's Italian Kitchen",
+        "The Lime & Coconut",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 11, 2006. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-13-Mon/26-rcc-0609_Freedom_Fast_Facts_Update.jpg"
+    },
+    {
+      "name": "Liberty of the Seas",
+      "class": "Freedom",
+      "year": 2007,
+      "tonnage": 154407,
+      "guests": 3948,
+      "features": [
+        "FlowRider",
+        "Rock Climbing Wall",
+        "Splashaway Bay",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 19, 2007. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jun-5-Fri/26-RCC-0605-LB-Fast-Facts-Amplified-Update.jpg"
+    },
+    {
+      "name": "Adventure of the Seas",
+      "class": "Voyager",
+      "year": 2001,
+      "tonnage": 137276,
+      "guests": 3114,
+      "features": [
+        "FlowRider",
+        "Mini Golf",
+        "Rock Climbing Wall",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 18, 2001. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766430914_ADVENTURE-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Explorer of the Seas",
+      "class": "Voyager",
+      "year": 2000,
+      "tonnage": 137308,
+      "guests": 3286,
+      "features": [
+        "FlowRider",
+        "Mini Golf",
+        "Rock Climbing Wall",
+        "Studio B"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage October 28, 2000. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505452_EXPLORER-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Mariner of the Seas",
+      "class": "Voyager",
+      "year": 2003,
+      "tonnage": 139863,
+      "guests": 3344,
+      "features": [
+        "Royal Escape Room",
+        "FlowRider",
+        "The Perfect Storm",
+        "Laser Tag"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 16, 2003. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511547_MARINER-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Navigator of the Seas",
+      "class": "Voyager",
+      "year": 2002,
+      "tonnage": 139999,
+      "guests": 3368,
+      "features": [
+        "Playmakers Sports Bar & Arcade",
+        "The Blaster",
+        "To Dry For"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 14, 2002. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511722_NAVIGATOR-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Voyager of the Seas",
+      "class": "Voyager",
+      "year": 1999,
+      "tonnage": 137276,
+      "guests": 3602,
+      "features": [
+        "FlowRider",
+        "Rock Climbing Wall",
+        "Studio B",
+        "The Perfect Storm"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 21, 1999. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513412_VOYAGER-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Brilliance of the Seas",
+      "class": "Radiance",
+      "year": 2002,
+      "tonnage": 90090,
+      "guests": 2142,
+      "features": [
+        "Mini Golf",
+        "Rock Climbing Wall",
+        "Solarium",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 15, 2002. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736363988_RCC-0367-Ship-Fact-Sheet-BRILLIANCE.jpg"
+    },
+    {
+      "name": "Jewel of the Seas",
+      "class": "Radiance",
+      "year": 2004,
+      "tonnage": 90090,
+      "guests": 2191,
+      "features": [
+        "Mini Golf",
+        "Rock Climbing Wall",
+        "Solarium",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 8, 2004. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766510711_JEWEL-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Radiance of the Seas",
+      "class": "Radiance",
+      "year": 2001,
+      "tonnage": 90090,
+      "guests": 2143,
+      "features": [
+        "Mini Golf",
+        "Rock Climbing Wall",
+        "Solarium",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 7, 2001. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736271411_Ship-Fact-Sheet-RADIANCE.jpg"
+    },
+    {
+      "name": "Serenade of the Seas",
+      "class": "Radiance",
+      "year": 2003,
+      "tonnage": 90090,
+      "guests": 2143,
+      "features": [
+        "Rock Climbing Wall",
+        "Mini Golf",
+        "Vitality Spa & Fitness Center",
+        "Sports Court"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage August 25, 2003. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2024-Sep-13-Fri/1725925138_24-RCC-0343-SR-Fact-Sheet-Update.jpg"
+    },
+    {
+      "name": "Enchantment of the Seas",
+      "class": "Vision",
+      "year": 1997,
+      "tonnage": 82910,
+      "guests": 2252,
+      "features": [
+        "Outdoor Movie Screen",
+        "Rock Climbing Wall",
+        "Royal Theater",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 13, 1997. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505296_Ship-Fact-Sheet-ENCHANTMENT.jpg"
+    },
+    {
+      "name": "Grandeur of the Seas",
+      "class": "Vision",
+      "year": 1996,
+      "tonnage": 73817,
+      "guests": 1992,
+      "features": [
+        "Outdoor Movie Screen",
+        "Rock Climbing Wall",
+        "Royal Theater",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 14, 1996. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510060_GRANDEUR-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Rhapsody of the Seas",
+      "class": "Vision",
+      "year": 1997,
+      "tonnage": 78878,
+      "guests": 2040,
+      "features": [
+        "Outdoor Movie Screen",
+        "Rock Climbing Wall",
+        "Royal Theater",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 19, 1997. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766512717_RHAPSODY-Fact-Sheet.jpg"
+    },
+    {
+      "name": "Vision of the Seas",
+      "class": "Vision",
+      "year": 1998,
+      "tonnage": 78340,
+      "guests": 2050,
+      "features": [
+        "Outdoor Movie Screen",
+        "Rock Climbing Wall",
+        "Royal Theater",
+        "Vitality Spa & Fitness Center"
+      ],
+      "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 2, 1998. Max occupancy not published on official fact sheet.",
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513258_VISION-Fact-Sheet.jpg"
+    }
+  ],
+  "needs_manual": [
+    "ALL ships: maximum (non-double) occupancy \u2014 official fact sheets publish only double-occupancy guest counts.",
+    "Hero of the Seas \u2014 EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
+  ],
+  "flag": "30 in-service '...of the Seas' ships. Roster confirmed against official royalcaribbean.com/cruise-ships fleet page AND the official press-center LoadShips API (which also supplied each ship's class grouping). Per-ship year/tonnage/guests/features read directly from official Royal Caribbean 'Fast Facts' fact-sheet images (royalcaribbeanmedia.com, first-party, one per ship). 'year' is derived from the printed MAIDEN VOYAGE date. All guest figures are DOUBLE OCCUPANCY; no official page publishes max occupancy. Hero of the Seas (Icon class) excluded as not-yet-in-service (maiden voyage Aug 11, 2027). No third-party sources used. No prices present on fact sheets."
+}

@@ -1,0 +1,331 @@
+{
+  "line": "carnival",
+  "roster_source": "https://www.carnival.com/cruise-ships",
+  "specs_source": "https://www.carnival-news.com/ship/ (per-ship official fact sheets)",
+  "verified": "2026-07-19",
+  "ships": [
+    {
+      "name": "Carnival Jubilee",
+      "class": "Excel",
+      "year": 2023,
+      "tonnage": 183521,
+      "guests": 5362,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Excel Class' on official fact sheet. Fact sheet lists no named venues.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-jubilee-fact-sheet"
+    },
+    {
+      "name": "Carnival Firenze",
+      "class": "Venice",
+      "year": 2024,
+      "tonnage": 135156,
+      "guests": 4126,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Official ship page labels class 'Venice Class' (ex-Costa Firenze). Dedicated fact-sheet slug 404'd; specs read from official ship page.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-firenze"
+    },
+    {
+      "name": "Carnival Venezia",
+      "class": "Venice",
+      "year": 2023,
+      "tonnage": 135225,
+      "guests": 4090,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Official ship page labels class 'Venice Class' (ex-Costa Venezia). Dedicated fact-sheet slug 404'd; specs read from official ship page.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-venezia"
+    },
+    {
+      "name": "Carnival Celebration",
+      "class": "Excel",
+      "year": 2022,
+      "tonnage": 183521,
+      "guests": 5362,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Excel Class' on official fact sheet. Fact sheet lists no named venues.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-celebration-fact-sheet"
+    },
+    {
+      "name": "Carnival Luminosa",
+      "class": "Spirit",
+      "year": 2022,
+      "tonnage": 92720,
+      "guests": 2260,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Spirit Class' on official fact sheet. Year is Carnival service entry (2022).",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-luminosa-fact-sheet"
+    },
+    {
+      "name": "Mardi Gras",
+      "class": "Excel",
+      "year": 2021,
+      "tonnage": 180800,
+      "guests": 5270,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Excel Class' on official fact sheet. Built at Meyer Turku.",
+      "spec_source": "https://www.carnival-news.com/ship/mardi-gras-fact-sheet"
+    },
+    {
+      "name": "Carnival Conquest",
+      "class": "Conquest",
+      "year": 2002,
+      "tonnage": 110000,
+      "guests": 2980,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Conquest Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-conquest-fact-sheet"
+    },
+    {
+      "name": "Carnival Dream",
+      "class": "Dream",
+      "year": 2009,
+      "tonnage": 130000,
+      "guests": 3646,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Dream Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-dream-fact-sheet"
+    },
+    {
+      "name": "Carnival Panorama",
+      "class": "Vista",
+      "year": 2019,
+      "tonnage": 133500,
+      "guests": 4008,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Vista Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-panorama-fact-sheet"
+    },
+    {
+      "name": "Carnival Legend",
+      "class": "Spirit",
+      "year": 2002,
+      "tonnage": 88500,
+      "guests": 2124,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Spirit Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-legend-fact-sheet"
+    },
+    {
+      "name": "Carnival Glory",
+      "class": "Conquest",
+      "year": 2003,
+      "tonnage": 110000,
+      "guests": 2980,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Conquest Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-glory-fact-sheet"
+    },
+    {
+      "name": "Carnival Radiance",
+      "class": "Sunshine",
+      "year": 2021,
+      "tonnage": 101509,
+      "guests": 2984,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Sunshine Class' on official fact sheet. Year reflects post-conversion Carnival Radiance service (ex-Carnival Victory).",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-radiance-fact-sheet"
+    },
+    {
+      "name": "Carnival Spirit",
+      "class": "Spirit",
+      "year": 2001,
+      "tonnage": 88500,
+      "guests": 2124,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Spirit Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet"
+    },
+    {
+      "name": "Carnival Horizon",
+      "class": "Vista",
+      "year": 2018,
+      "tonnage": 133500,
+      "guests": 3960,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Vista Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet"
+    },
+    {
+      "name": "Carnival Sunrise",
+      "class": "Sunshine",
+      "year": 1999,
+      "tonnage": 101509,
+      "guests": 2984,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Sunshine Class'. Official fact sheet lists entered service 1999 (original vessel, ex-Carnival Triumph; refurbished/renamed Carnival Sunrise 2019).",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet"
+    },
+    {
+      "name": "Carnival Miracle",
+      "class": "Spirit",
+      "year": 2004,
+      "tonnage": 88500,
+      "guests": 2124,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Spirit Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-miracle-fact-sheet"
+    },
+    {
+      "name": "Carnival Vista",
+      "class": "Vista",
+      "year": 2016,
+      "tonnage": 133500,
+      "guests": 3934,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Vista Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-vista-fact-sheet"
+    },
+    {
+      "name": "Carnival Magic",
+      "class": "Dream",
+      "year": 2011,
+      "tonnage": 130000,
+      "guests": 3690,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Dream Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-magic-fact-sheet"
+    },
+    {
+      "name": "Carnival Breeze",
+      "class": "Dream",
+      "year": 2012,
+      "tonnage": 130000,
+      "guests": 3690,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Dream Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-breeze-fact-sheet"
+    },
+    {
+      "name": "Carnival Freedom",
+      "class": "Conquest",
+      "year": 2007,
+      "tonnage": 110000,
+      "guests": 2980,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Conquest Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-freedom-fact-sheet"
+    },
+    {
+      "name": "Carnival Paradise",
+      "class": "Fantasy",
+      "year": 1998,
+      "tonnage": 71925,
+      "guests": 2124,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Fantasy Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet"
+    },
+    {
+      "name": "Carnival Elation",
+      "class": "Fantasy",
+      "year": 1998,
+      "tonnage": 71909,
+      "guests": 2190,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Fantasy Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-elation-fact-sheet"
+    },
+    {
+      "name": "Carnival Sunshine",
+      "class": "Sunshine",
+      "year": 2013,
+      "tonnage": 102853,
+      "guests": 3002,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Sunshine Class' on official fact sheet (ex-Carnival Destiny). Year reflects Carnival Sunshine service.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-sunshine-fact-sheet"
+    },
+    {
+      "name": "Carnival Valor",
+      "class": "Conquest",
+      "year": 2004,
+      "tonnage": 110000,
+      "guests": 2980,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Conquest Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-valor-fact-sheet"
+    },
+    {
+      "name": "Carnival Liberty",
+      "class": "Conquest",
+      "year": 2005,
+      "tonnage": 110000,
+      "guests": 2974,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Conquest Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-liberty-fact-sheet"
+    },
+    {
+      "name": "Carnival Pride",
+      "class": "Spirit",
+      "year": 2002,
+      "tonnage": 88500,
+      "guests": 2134,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Spirit Class' on official fact sheet.",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-pride-fact-sheet"
+    },
+    {
+      "name": "Carnival Splendor",
+      "class": "Splendor",
+      "year": 2008,
+      "tonnage": 113300,
+      "guests": 3012,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Splendor Class' on official fact sheet (single-ship class).",
+      "spec_source": "https://www.carnival-news.com/ship/carnival-splendor-fact-sheet"
+    },
+    {
+      "name": "Carnival Adventure",
+      "class": "Adventure",
+      "year": 2001,
+      "tonnage": 108865,
+      "guests": 2636,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Adventure Class' on official fact sheet (ex-P&O Australia Pacific Adventure). Fact sheet at /news/ path.",
+      "spec_source": "https://www.carnival-news.com/news/carnival-adventure-fact-sheet"
+    },
+    {
+      "name": "Carnival Encounter",
+      "class": "Adventure",
+      "year": 2002,
+      "tonnage": 108865,
+      "guests": 2600,
+      "guests_basis": "double occupancy",
+      "features": [],
+      "notes": "Class labeled 'Adventure Class' on official fact sheet (ex-P&O Australia Pacific Encounter). Fact sheet at /news/ path.",
+      "spec_source": "https://www.carnival-news.com/news/carnival-encounter-fact-sheet"
+    }
+  ],
+  "needs_manual": [
+    "features: Official fact sheets list no named onboard venues/features for any ship; per-ship features left empty. Named features would need to be read from each carnival.com/cruise-ships/<ship> page if desired."
+  ],
+  "flag": "All 29 in-service ships have official specs (name/class/year/tonnage/guests) from Carnival newsroom fact sheets. Roster confirmed against carnival.com/cruise-ships; excluded not-yet-in-service Carnival Tropicale (2028) and Carnival Festivale (2027). Class labels are Carnival's official fact-sheet wording (e.g. 'Venice Class' for Firenze/Venezia, 'Adventure Class' for Adventure/Encounter, 'Splendor Class', 'Sunshine Class'). Carnival Sunrise year (1999) is the vessel's original service entry per its official fact sheet; renamed 2019."
+}
