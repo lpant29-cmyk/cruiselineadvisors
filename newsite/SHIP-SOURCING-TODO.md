@@ -32,38 +32,12 @@ Summit, Constellation, Flora — all need year.
   Armonia, Sinfonia: year, GT, guests (all)
 - *(Optional: venue features for the 12 pre-2017 ships.)*
 
-## 🔴 Held back — NOT published (official site timed out; figures below came via a search index,
-i.e. a snippet, so they violate the official-only rule). **Confirm each against the official
-site and I'll publish the ship pages.**
-
-### Cunard (4)
-| Ship | class | year | GT | guests |
-|---|---|---|---|---|
-| Queen Mary 2 | Ocean liner | 2004 | 150,000 | 2,691 |
-| Queen Victoria | ? | 2007 | 90,000 | 2,061 |
-| Queen Elizabeth | ? | 2010 | 90,000 | 2,081 |
-| Queen Anne | ? | 2024 | 113,000 | 2,996 |
-
-### Princess (17)
-| Ship | class | year | GT | guests |
-|---|---|---|---|---|
-| Sun Princess | Sphere | 2024 | 175,500 | 4,300 |
-| Star Princess | Sphere | 2025 | 177,800 | 4,300 |
-| Sky Princess | Royal | 2019 | 141,000 | 3,660 |
-| Enchanted Princess | Royal | 2021 | 145,000 | 3,660 |
-| Discovery Princess | Royal | 2022 | 145,000 | 3,660 |
-| Majestic Princess | Royal | ? | 144,650 | 3,660 |
-| Regal Princess | Royal | 2014 | 141,000 | 3,560 |
-| Royal Princess | Royal | 2013 | 142,229 | 3,560 |
-| Crown Princess | Grand | 2006 | 113,561 | 3,090 |
-| Ruby Princess | Grand | ? | 113,561 | 3,080 |
-| Emerald Princess | Grand | ? | 113,561 | 3,080 |
-| Caribbean Princess | Grand | ? | 112,894 | 3,140 |
-| Grand Princess | Grand | 1998 | 107,517 | 2,610 |
-| Sapphire Princess | ? | 2004 | 115,875 | 2,670 |
-| Diamond Princess | ? | 2004 | 115,875 | 2,670 |
-| Coral Princess | Coral | 2003 | 91,627 | 2,000 |
-| Island Princess | Coral | 2003 | 92,000 | 2,200 |
+## ✅ Cunard + Princess — NOW PUBLISHED (user confirmed direct official reads 2026-07-19)
+- **Cunard** (4): guests/crew/length official. Gaps (not published by Cunard): gross tonnage,
+  entered-service year, ship class — for all 4.
+- **Princess** (17): guests/crew/tonnage/length/entered-service official. Gaps: ship class (not
+  on the official ship pages) for all 17; entered-service year for Caribbean, Island, Coral.
+- Optional to fill later: on-board features for both fleets.
 
 ## Notes
 - RC/Carnival guest counts are double-occupancy (RC max-occupancy not published).

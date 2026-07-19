@@ -179,8 +179,13 @@ def rich_sections(lang, slug):
 
     # ── At a glance ──
     c = L.get("company", {})
+    # Ships-in-fleet is derived from our verified ship roster when the JSON field is unset.
+    fleet_v = c.get("fleet_size")
+    if _gap(fleet_v):
+        _n = len(ships_for(slug))
+        fleet_v = str(_n) if _n else None
     rows = [("founded", c.get("founded")), ("hq", c.get("headquarters")), ("parent", c.get("parent")),
-            ("fleet_n", c.get("fleet_size")), ("loyalty", c.get("loyalty_program")),
+            ("fleet_n", fleet_v), ("loyalty", c.get("loyalty_program")),
             ("style", L.get("positioning", "").replace("-", " ").title())]
     grid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in rows)
     out += _sec("cream", "glance", lang, f'<div class="glance-grid">{grid}</div>'); pres.append("glance")
