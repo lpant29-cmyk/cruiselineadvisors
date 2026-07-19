@@ -8,6 +8,7 @@ from data import LINES, DESTINATIONS
 from facts import FACTS, LINE_FACTS, latest_verified
 from badges import verified_stamp, verified_seal
 from compare import compare_tool, line_compare_hero
+from metasearch import metasearch_tool
 from interactive import when_to_go, cabin_guide, SEASONS
 from updates import all_updates, updates_for, update_cards, get_update
 from directory import directory_section
@@ -278,14 +279,18 @@ def _ship_nudge(lang, txt):
 
 # ─────────────────────────── compare + facts ───────────────────────────
 def p_compare(lang):
-    kick = "Compare" if lang == "en" else "Comparar"
-    h1 = "Compare cruise lines on what matters" if lang == "en" else "Compara líneas de crucero en lo que importa"
-    sub = ("Pick any two lines and see the money-and-complexity facts side by side — then let an advisor apply "
-           "them to your exact sailing." if lang == "en"
-           else "Elige dos líneas y ve los datos de dinero y complejidad lado a lado — luego deja que un asesor "
-                "los aplique a tu crucero exacto.")
+    kick = "Find a cruise" if lang == "en" else "Encuentra tu crucero"
+    h1 = "Find your cruise — then call to book it" if lang == "en" else "Encuentra tu crucero — luego llama para reservar"
+    sub = ("Skip scrolling hundreds of pages. Tell us where and when — we'll line up the ships that fit, and one "
+           "call books the right one at the best rate our partners can offer." if lang == "en"
+           else "Sin revisar cientos de páginas. Dinos dónde y cuándo — alineamos los barcos que encajan, y una "
+                "llamada reserva el correcto a la mejor tarifa que nuestros socios pueden ofrecer.")
+    also = ("Prefer to compare two lines head-to-head? Every line and ship page has its own compare tool at the top."
+            if lang == "en" else
+            "¿Prefieres comparar dos líneas? Cada página de línea y barco tiene su comparador arriba.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
-            + f'<section class="section"><div class="wrap">{compare_tool(lang)}</div></section>')
+            + f'<section class="section"><div class="wrap">{metasearch_tool(lang)}'
+              f'<p class="note-line" style="margin-top:22px">{also}</p></div></section>')
 
 
 def p_facts(lang):

@@ -459,6 +459,37 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
   .cmphero-grid{grid-template-columns:.82fr 1.18fr;align-items:start;gap:36px}
   .cmphero-left{position:sticky;top:84px}
 }
+/* ═══ Find-your-cruise metasearch ═══ */
+.ms-form{display:grid;gap:12px;grid-template-columns:1fr;background:linear-gradient(120deg,rgba(18,145,154,.08),rgba(255,178,62,.1));border:1px solid var(--line);border-radius:18px;padding:18px}
+.ms-field{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.ms-field>span{font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--sea3)}
+.ms-field select{width:100%;padding:.7em .8em;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:.95rem;font-weight:600;color:var(--navy)}
+.ms-go{justify-content:center;align-self:end;height:46px}
+.ms-note{margin:16px 0 4px;color:var(--navy);font-size:1rem}
+.ms-warn{display:block;margin-top:.35rem;color:var(--coral2);font-weight:600;font-size:.92rem}
+.ms-filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.ms-flabel{font-size:.78rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-right:2px}
+.ms-chip{background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:.4em 1em;font-size:.83rem;font-weight:700;color:var(--navy);cursor:pointer;transition:.12s}
+.ms-chip:hover{border-color:var(--sea2)}
+.ms-chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ms-count{font-size:.8rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ms-grid{display:grid;gap:16px;grid-template-columns:1fr}
+.ms-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 4px 14px rgba(10,44,66,.05);display:flex;flex-direction:column;gap:.6rem}
+.ms-card.top{border-color:var(--gold);box-shadow:0 10px 26px rgba(240,137,31,.14)}
+.ms-badge{position:absolute;top:-11px;left:16px;background:linear-gradient(180deg,var(--gold),var(--gold2));color:var(--navy);font-size:.66rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.3em .8em;border-radius:99px}
+.ms-card-h{display:flex;align-items:center;gap:12px}
+.ms-emo{font-size:1.7rem;width:48px;height:48px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--foam);border-radius:12px}
+.ms-card-h h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--navy);line-height:1.1;margin:0}
+.ms-line{font-size:.78rem;font-weight:800;color:var(--gold2);text-transform:uppercase;letter-spacing:.03em}
+.ms-who{color:var(--muted);font-size:.92rem;line-height:1.5;margin:0}
+.ms-meta{font-size:.85rem;font-weight:700;color:var(--sea3)}
+.ms-sails{font-size:.85rem;color:var(--ink);background:var(--soft);border-radius:8px;padding:.4em .7em;width:fit-content}
+.ms-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:.3rem}
+.ms-view{font-weight:800;color:var(--sea3);text-decoration:none;font-size:.9rem}
+.ms-bk{padding:.5em .95em;font-size:.9rem}
+.ms-none{background:var(--foam);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--navy);font-weight:600}
+@media(min-width:620px){.ms-form{grid-template-columns:1fr 1fr}.ms-go{grid-column:1/-1}}
+@media(min-width:900px){.ms-form{grid-template-columns:1.3fr 1.3fr 1fr 1.2fr auto}.ms-go{grid-column:auto}.ms-grid{grid-template-columns:1fr 1fr}}
 .xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
 .xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
 .xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}
