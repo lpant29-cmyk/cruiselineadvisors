@@ -1194,7 +1194,16 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": {
+        "note": "Carnival sails year-round from ~20 North American home ports plus Australia; regions vary by season.",
+        "caribbean_and_bahamas": "Year-round from Florida (Miami, Port Canaveral, Jacksonville, Tampa), the Gulf (Galveston, New Orleans, Mobile) and East-Coast ports (Charleston, Norfolk, Baltimore, New York) to the Bahamas and Eastern/Western/Southern Caribbean.",
+        "mexican_riviera": "Year-round from Long Beach and Los Angeles (Carnival Panorama, Carnival Radiance, Carnival Firenze) to the Mexican Riviera.",
+        "alaska": "Summer season (roughly May–September) from Seattle (Carnival Luminosa, Carnival Spirit).",
+        "bermuda": "Spring–fall from Northeast U.S. ports.",
+        "hawaii_panama_pacific": "Seasonal longer voyages to Hawaii, through the Panama Canal and along the Pacific coast, mainly on Spirit-class ships and repositioning sailings.",
+        "australia_south_pacific": "Year-round from Sydney/Brisbane (Carnival Splendor, Carnival Adventure, Carnival Encounter) with seasonal Carnival Luminosa; South Pacific islands, New Zealand and Queensland."
+      }
     },
     {
       "slug": "holland-america",
@@ -1590,7 +1599,77 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": [
+        {
+          "region": "Alaska",
+          "season": "Late April–September (summer)",
+          "ports": [
+            "Seattle, WA",
+            "Vancouver, BC",
+            "Whittier / Anchorage (Gulf of Alaska cruisetours)"
+          ],
+          "ships": [
+            "Koningsdam",
+            "Eurodam",
+            "Nieuw Amsterdam",
+            "Noordam",
+            "Westerdam",
+            "Zaandam"
+          ],
+          "note": "Confirmed from the official Alaska cruises page: six ships, roundtrip Seattle and Vancouver plus one-way Gulf of Alaska sailings via Whittier, with cruisetour extensions from Anchorage and Fairbanks. This is Holland America's flagship seasonal program.",
+          "source": "https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises"
+        },
+        {
+          "region": "Caribbean & Panama Canal",
+          "season": "October–April (winter)",
+          "ports": [
+            "Fort Lauderdale (Port Everglades), FL"
+          ],
+          "ships": [
+            "Nieuw Statendam",
+            "Rotterdam",
+            "Zuiderdam",
+            "Volendam",
+            "Eurodam"
+          ],
+          "note": "Typical winter Caribbean and partial/full Panama Canal deployment out of Fort Lauderdale. Ship assignments rotate year to year — verify against the current published schedule.",
+          "source": "needs-verification"
+        },
+        {
+          "region": "Mexican Riviera & Pacific Coastal",
+          "season": "Fall–Spring",
+          "ports": [
+            "San Diego, CA",
+            "Seattle, WA",
+            "Vancouver, BC"
+          ],
+          "ships": [
+            "Koningsdam",
+            "Zaandam",
+            "Zuiderdam"
+          ],
+          "note": "Mexican Riviera out of San Diego in winter; Pacific Coastal repositioning voyages between California and the Pacific Northwest in spring and fall. Verify ship assignments per season.",
+          "source": "needs-verification"
+        },
+        {
+          "region": "Canada & New England",
+          "season": "September–October (fall foliage)",
+          "ports": [
+            "Boston, MA",
+            "Quebec City / Montreal, QC",
+            "New York, NY"
+          ],
+          "ships": [
+            "Zaandam",
+            "Volendam",
+            "Zuiderdam",
+            "Rotterdam"
+          ],
+          "note": "Fall foliage sailings along the St. Lawrence and Atlantic Canada out of Boston, New York and the Canadian ports. Verify ship assignments against the current schedule.",
+          "source": "needs-verification"
+        }
+      ]
     },
     {
       "slug": "celebrity",

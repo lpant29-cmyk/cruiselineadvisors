@@ -1,266 +1,127 @@
 {
   "carnival": {
     "Carnival Jubilee": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-jubilee"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-jubilee"
-      }
+      "decks not stated on fetched official page"
     ],
     "Carnival Firenze": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-firenze"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Venezia": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-venezia"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page"
     ],
     "Carnival Celebration": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-celebration"
-      }
+      "decks not stated on fetched official page"
     ],
     "Carnival Luminosa": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-luminosa"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-luminosa"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Mardi Gras": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/mardi-gras"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/mardi-gras"
-      }
+      "decks not stated on fetched official page"
     ],
     "Carnival Conquest": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-conquest"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-conquest"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page"
     ],
     "Carnival Dream": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-dream"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-dream"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Panorama": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-panorama"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Legend": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-legend"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-legend"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Glory": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-glory"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-glory"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Radiance": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-radiance"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-radiance"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Spirit": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-spirit"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-spirit"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page"
     ],
     "Carnival Horizon": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-horizon"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Sunrise": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunrise"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunrise"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Miracle": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-miracle"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-miracle"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Vista": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-vista"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page"
     ],
     "Carnival Magic": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-magic"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-magic"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Breeze": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-breeze"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Freedom": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-freedom"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-freedom"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Paradise": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-paradise"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-paradise"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Elation": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-elation"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-elation"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Sunshine": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunshine"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunshine"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page"
     ],
     "Carnival Valor": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-valor"
-      },
-      {
-        "field": "kids_family (Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-valor"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Liberty": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-liberty"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-liberty"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Pride": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-pride"
-      }
-    ],
-    "Carnival Splendor": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-splendor"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-splendor"
-      }
-    ],
-    "Carnival Adventure": [
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-adventure"
-      },
-      {
-        "field": "ship_class",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-adventure"
-      }
+      "decks not stated on fetched official page",
+      "current-season home port/region not captured from official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ],
     "Carnival Encounter": [
-      {
-        "field": "decks",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
-      },
-      {
-        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
-      },
-      {
-        "field": "ship_class",
-        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
-      }
+      "decks not stated on fetched official page",
+      "venue descriptions applied from Carnival's fleet-wide official venue definitions; confirm this ship's official page"
     ]
   },
   "celebrity": {
@@ -331,146 +192,64 @@
   },
   "holland-america": {
     "Koningsdam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
-      },
-      {
-        "field": "tonnage / guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
-      }
+      "Confirm current Music Walk line-up post-2026 dry dock (Rolling Stone Rock Room renamed Rolling Stone Lounge; Lincoln Center Stage appears removed; Morimoto By Sea added as a newer specialty venue not in the requested list).",
+      "Confirm winter deployment/home port."
     ],
     "Nieuw Statendam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
-      },
-      {
-        "field": "tonnage / guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
-      }
+      "Confirm current Music Walk venues (Lincoln Center Stage appears removed; Morimoto By Sea added). ",
+      "Confirm deck count (deck plan runs 1–12 and 14, skipping 13 = 13 physical decks).",
+      "Confirm US/Canada seasonal home ports."
     ],
     "Rotterdam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
-      },
-      {
-        "field": "tonnage / guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
-      }
+      "Deck count NOT verified — no Rotterdam-specific official deck plan located; do not fill with sister-ship Nieuw Statendam's number.",
+      "Confirm current Music Walk venues (Lincoln Center Stage present at 2021 launch, appears removed in refresh; Morimoto By Sea added).",
+      "Confirm US/Canada seasonal home ports."
     ],
     "Eurodam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
-      },
-      {
-        "field": "tonnage / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
-      }
+      "Confirm whether B.B. King's Blues Club / Lincoln Center Stage exist on this ship (deck plan shows only Rolling Stone + Billboard; historically Signature class carried more).",
+      "Confirm Morimoto By Sea presence (listed on marketing page).",
+      "Confirm winter deployment."
     ],
     "Nieuw Amsterdam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
-      },
-      {
-        "field": "tonnage / guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
-      }
+      "Confirm whether B.B. King's / Lincoln Center Stage exist (deck plan shows only Rolling Stone + Billboard).",
+      "Confirm Morimoto By Sea presence.",
+      "Confirm winter deployment."
     ],
     "Noordam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
-      },
-      {
-        "field": "guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
-      }
+      "Deck plan omits Tamarind and New York Deli & Pizza (marketing text once implied Tamarind 'certain nights'); treat as not a fixed venue.",
+      "Confirm B.B. King's / Lincoln Center Stage absence.",
+      "Confirm Morimoto By Sea presence.",
+      "Confirm winter deployment."
     ],
     "Oosterdam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
-      },
-      {
-        "field": "guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
-      }
+      "Deck plan omits Tamarind and New York Deli & Pizza — not fixed venues here.",
+      "Confirm B.B. King's / Lincoln Center Stage absence.",
+      "Confirm Morimoto By Sea presence.",
+      "Confirm US/Canada deployment (may sail mostly non-Americas)."
     ],
     "Westerdam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
-      },
-      {
-        "field": "guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
-      }
+      "Deck plan shows only Rolling Stone as a Music Walk room (no Billboard, B.B. King's or Lincoln Center Stage).",
+      "No Tamarind, Rudi's or New York Deli & Pizza.",
+      "Culinary-arts/ATK venue not confirmed.",
+      "Confirm winter deployment."
     ],
     "Zuiderdam": [
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zuiderdam"
-      }
+      "Deck plan shows Rolling Stone + Billboard only (no B.B. King's or Lincoln Center Stage).",
+      "No Tamarind, Rudi's or New York Deli & Pizza (Rudi's runs fleetwide only as an occasional Pinnacle Grill pop-up).",
+      "Culinary-arts/ATK venue not confirmed.",
+      "Confirm current US home ports."
     ],
     "Volendam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
-      },
-      {
-        "field": "guest capacity / year built",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
-      }
+      "No Music Walk rooms at all (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage) — R-Class limited music offering confirmed on deck plan.",
+      "No Tamarind, Rudi's or New York Deli & Pizza.",
+      "Floral design theme from marketing page not independently verified.",
+      "Confirm current home ports."
     ],
     "Zaandam": [
-      {
-        "field": "decks",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam"
-      }
+      "No Music Walk rooms (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage) — R-Class limited music offering.",
+      "No Tamarind, Rudi's or New York Deli & Pizza.",
+      "Music-themed decor from marketing page not independently verified.",
+      "Confirm non-Alaska seasonal home ports."
     ]
   },
   "margaritaville-at-sea": {
