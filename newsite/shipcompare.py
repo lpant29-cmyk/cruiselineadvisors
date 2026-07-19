@@ -4,10 +4,35 @@ side by side — class, year, guests, tonnage, features. Same card UI as the lin
 (A = teal, B = gold), mobile-first, guarded IIFE JS. Unverified specs show a 'Not yet verified'
 gap. Data comes from ships.py (official-sourced). NO PRICES."""
 import json
-from config import PHONE_HREF
+from config import PHONE_HREF, PHONE_DISPLAY
 from data import LINES
 from ships import all_ships, slugify, SHIPS
 from badges import verified_stamp
+
+_HERO = {
+    "en": {"kick": "Compare ships",
+           "h": "Two ships can look identical online — until you see what's actually on board.",
+           "sub": "Put this ship head-to-head with any other, across every line we cover — size, dining, things to do, who it suits. No prices, just what you get. Then one call and we book the right one at the best rate our partners can offer."},
+    "es": {"kick": "Comparar barcos",
+           "h": "Dos barcos pueden parecer idénticos en línea — hasta que ves lo que realmente hay a bordo.",
+           "sub": "Compara este barco con cualquier otro, de todas las líneas que cubrimos — tamaño, restaurantes, qué hacer, para quién es. Sin precios, solo lo que obtienes. Luego una llamada y reservamos el correcto a la mejor tarifa que nuestros socios pueden ofrecer."},
+}
+
+
+def compare_hero(lang, default_a=None):
+    """Top-of-page 'problem -> compare -> call' band: headline + call on the left, the ship-compare
+    tool on the right (desktop); stacks to one column on mobile."""
+    if not has_ship_compare():
+        return ""
+    t = _HERO[lang]
+    call = "Call now" if lang == "en" else "Llama ahora"
+    return (f'<section class="cmphero"><div class="wrap"><div class="cmphero-grid">'
+            f'<div class="cmphero-left"><span class="eyebrow">{t["kick"]}</span>'
+            f'<h2>{t["h"]}</h2><p class="cmphero-sub">{t["sub"]}</p>'
+            f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'cmphero\')">'
+            f'<span class="ic" aria-hidden="true">☎</span>{call} · {PHONE_DISPLAY}</a></div>'
+            f'<div class="cmphero-right">{ship_compare_tool(lang, default_a=default_a)}</div>'
+            f'</div></div></section>')
 
 
 def _latest_roster_date():

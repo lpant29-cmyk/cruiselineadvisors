@@ -432,6 +432,18 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .cx-verdict p{color:var(--navy);font-size:.98rem;line-height:1.55;margin:0}
 .cx-vwin{font-weight:800;color:var(--sea3)}
 .cx-vclose{margin-top:.6rem !important;color:var(--muted) !important;font-size:.9rem !important}
+/* Compare-hero band (problem headline + call left, compare tool right; stacks on mobile) */
+.cmphero{background:linear-gradient(180deg,#fff,var(--foam));border-bottom:1px solid var(--line);padding:28px 0 32px}
+.cmphero-grid{display:grid;gap:22px;grid-template-columns:1fr}
+.cmphero-left .eyebrow{color:var(--gold2)}
+.cmphero-left h2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,4.4vw,2.15rem);color:var(--navy);line-height:1.13;margin:.35rem 0 .6rem;text-wrap:balance}
+.cmphero-sub{color:var(--muted);font-size:1rem;line-height:1.55;max-width:54ch;margin-bottom:1.05rem}
+.cmphero-left .btn-call{margin-top:.1rem}
+.cmphero-right{min-width:0}
+@media(min-width:940px){
+  .cmphero-grid{grid-template-columns:.82fr 1.18fr;align-items:start;gap:36px}
+  .cmphero-left{position:sticky;top:84px}
+}
 .xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
 .xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
 .xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}

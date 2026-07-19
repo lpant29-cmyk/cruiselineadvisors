@@ -13,7 +13,7 @@ from updates import all_updates, updates_for, update_cards, get_update
 from directory import directory_section
 from linepage import rich_sections, faq_section, sections_present, line_toc
 from ships import ships_for, get_ship, sister_ships, slugify as ship_slug, source_of as ship_source
-from shipcompare import ship_compare_tool, has_ship_compare
+from shipcompare import ship_compare_tool, has_ship_compare, compare_hero
 from experience import experience_sections, has_experience
 from illus import ship_banner
 
@@ -252,16 +252,9 @@ def p_ship(lang, line_slug, sslug):
     back = (f'<a class="ship-back" href="/{lang}/lines/{line_slug}/">'
             f'← {"All " + L["name"] + " ships" if lang=="en" else "Todos los barcos de " + L["name"]}</a>')
 
-    # compare this ship head-to-head with any other
-    cmp_block = ""
-    if has_ship_compare():
-        cmp_h = f"Compare {name} with another ship" if lang == "en" else f"Compara {name} con otro barco"
-        cmp_kick = "Compare ships" if lang == "en" else "Comparar barcos"
-        cmp_block = (f'<section id="s-shipcmp" class="section foam"><div class="wrap">'
-                     f'<div class="sec-head"><span class="eyebrow">{cmp_kick}</span><h2>{cmp_h}</h2></div>'
-                     f'{ship_compare_tool(lang, default_a=f"{line_slug}::{sslug}")}</div></section>')
-
+    # the ship-compare tool now lives in the Compare-hero band at the top of the page.
     return (phero(lang, kick, name, sub, crumb)
+            + compare_hero(lang, default_a=f"{line_slug}::{sslug}")
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + ship_banner(lang)
             + f'<section class="section cream{" stamped" if _has_specs else ""}"><div class="wrap">'
@@ -272,7 +265,6 @@ def p_ship(lang, line_slug, sslug):
               f'{_ship_nudge(lang, nudge_txt)}</div></section>'
             + experience_sections(lang, line_slug, s)
             + sisters_block
-            + cmp_block
             + f'<section class="section"><div class="wrap">{back}</div></section>'
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
