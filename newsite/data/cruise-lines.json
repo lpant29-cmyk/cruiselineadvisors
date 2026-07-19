@@ -2028,7 +2028,13 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Interior",
+          "Oceanview",
+          "Balcony",
+          "Mini-Suite",
+          "Suite",
+          "Reserve Collection (premium tier, 15 ships)",
+          "Sanctuary Collection (Sun & Star Princess)"
         ],
         "virtual_balcony": {
           "exists": false
@@ -2072,9 +2078,9 @@
         ]
       },
       "family": {
-        "kids_club_name": "Camp Discovery",
+        "kids_club_name": "The Treehouse (3–7), The Lodge (8–12), The Beach House (13–17)",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months for transatlantic crossings and remote itineraries (Cruisetours 5 years). Guests under 21 must share a stateroom with someone 21+.",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -2098,7 +2104,19 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "Anchorage (Whittier), AK",
+          "Boston, MA",
+          "Fort Lauderdale, FL",
+          "Honolulu, HI",
+          "Los Angeles, CA",
+          "Miami, FL",
+          "New York, NY",
+          "Port Canaveral, FL",
+          "San Diego, CA",
+          "San Francisco, CA",
+          "Seattle, WA",
+          "Vancouver, BC",
+          "Quebec City, QC"
         ],
         "typical_lengths": [
           "VERIFY"
@@ -2777,7 +2795,10 @@
       },
       "cabins": {
         "categories": [
-          "VERIFY - list the line's own category names"
+          "Britannia",
+          "Britannia Club",
+          "Princess Grill",
+          "Queens Grill"
         ],
         "virtual_balcony": {
           "exists": false
@@ -2823,7 +2844,7 @@
       "family": {
         "kids_club_name": "The Play Zone",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months for World Voyages, transatlantic crossings and longer/remote itineraries. Children under 16 must share a stateroom with a passenger aged 16+.",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -2847,7 +2868,15 @@
       },
       "itineraries": {
         "home_ports": [
-          "VERIFY"
+          "New York, NY",
+          "Fort Lauderdale, FL",
+          "Miami, FL",
+          "Los Angeles, CA",
+          "San Francisco, CA",
+          "Seattle, WA",
+          "Quebec City, QC",
+          "Vancouver, BC",
+          "Victoria, BC"
         ],
         "typical_lengths": [
           "VERIFY"

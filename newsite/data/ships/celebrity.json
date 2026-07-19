@@ -10,9 +10,83 @@
       "year": null,
       "tonnage": 130818,
       "guests": 2918,
-      "features": ["Magic Carpet movable platform", "Infinite Verandas Edge staterooms", "29 restaurants, bars and lounges", "The Retreat suite area with private restaurant, lounge and sundeck"],
+      "features": [
+        "Magic Carpet movable platform",
+        "Infinite Verandas Edge staterooms",
+        "29 restaurants, bars and lounges",
+        "The Retreat suite area with private restaurant, lounge and sundeck"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge",
+      "exp": {
+        "overview": "First ship in the Edge Series; 2,918 guests (double occupancy), 130,818 GT, 1,004 ft; Forbes Travel Guide Recommended (2024); 29 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "Magic Carpet",
+          "Resort Deck",
+          "Eden",
+          "The Club"
+        ],
+        "dining": [
+          {
+            "name": "Four complimentary main restaurants (regionally themed)",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Eden Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Mast Grill",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Eden Restaurant",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Grand Bistro",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Raw on 5",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Cafe al Bacio",
+            "type": "casual",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "The Spa & Fitness Center",
+          "Resort Deck terraced pool",
+          "Magic Carpet movable platform",
+          "Rooftop Garden"
+        ],
+        "entertainment": [
+          "The Theatre (main stage productions)",
+          "Eden",
+          "The Club",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge, https://www.celebritycruises.com/cruise-ships/celebrity-edge/eat-and-drink, https://www.celebritycruises.com/things-to-do-onboard/entertainment, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Apex",
@@ -20,9 +94,53 @@
       "year": null,
       "tonnage": 130818,
       "guests": 2910,
-      "features": ["Magic Carpet movable platform", "The Retreat suite area", "Eden outward-facing venue", "Normandie French restaurant"],
+      "features": [
+        "Magic Carpet movable platform",
+        "The Retreat suite area",
+        "Eden outward-facing venue",
+        "Normandie French restaurant"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex",
+      "exp": {
+        "overview": "Second ship in the Edge Series; 2,910 guests (double occupancy), 130,818 GT, 1,004 ft; Forbes Travel Guide Four-Star rated; 29 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "Grand Plaza (three-story Italian piazza-inspired)",
+          "Magic Carpet",
+          "Rooftop Garden",
+          "Eden"
+        ],
+        "dining": [
+          {
+            "name": "Normandie Restaurant (contemporary French, main restaurant)",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Multiple specialty dining venues",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa & Fitness Center",
+          "Multiple pools",
+          "Rooftop Garden",
+          "Magic Carpet"
+        ],
+        "entertainment": [
+          "The Theatre (contemporary performance space)",
+          "Eden",
+          "Grand Plaza",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Beyond",
@@ -30,9 +148,48 @@
       "year": 2022,
       "tonnage": 141420,
       "guests": 3260,
-      "features": ["32 distinct restaurants, bars and lounges", "The Retreat suite area", "Spa and fitness center", "Starlink broadband internet"],
+      "features": [
+        "32 distinct restaurants, bars and lounges",
+        "The Retreat suite area",
+        "Spa and fitness center",
+        "Starlink broadband internet"
+      ],
       "notes": "guests=double occupancy; year 2022 per official naming-ceremony note on page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond",
+      "exp": {
+        "overview": "Third ship in the Edge Series (extended); 3,260 guests (double occupancy), 141,420 GT, 1,073 ft; godmother Simone Biles; 32 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "Resort Deck",
+          "Sunset Bar",
+          "Rooftop Garden",
+          "Eden",
+          "Grand Plaza"
+        ],
+        "dining": [
+          {
+            "name": "32 distinct restaurants, bars and lounges (specific names not detailed on overview)",
+            "type": "main",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Spa and Fitness Center",
+          "Expanded open-air spaces / Resort Deck pool",
+          "Sunset Bar"
+        ],
+        "entertainment": [
+          "The Theatre and shows",
+          "Eden",
+          "Grand Plaza",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Ascent",
@@ -40,9 +197,52 @@
       "year": null,
       "tonnage": 141420,
       "guests": 3260,
-      "features": ["32 restaurants, bars and lounges incl. Le Voyage by Daniel Boulud", "Multi-deck Sunset Bar by Nate Berkus", "Rooftop Garden with two cantilevered floating pools", "The Retreat suite area"],
+      "features": [
+        "32 restaurants, bars and lounges incl. Le Voyage by Daniel Boulud",
+        "Multi-deck Sunset Bar by Nate Berkus",
+        "Rooftop Garden with two cantilevered floating pools",
+        "The Retreat suite area"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent",
+      "exp": {
+        "overview": "Fourth ship in the Edge Series; 3,260 guests; 32 distinctive restaurants, bars and lounges; Sunset Bar designed by Nate Berkus; Rooftop Garden with two cantilevered floating pools extending six feet over the ship's edge.",
+        "neighbourhoods": [
+          "The Retreat",
+          "Sunset Bar (Nate Berkus design)",
+          "Rooftop Garden",
+          "Eden",
+          "Grand Plaza"
+        ],
+        "dining": [
+          {
+            "name": "Le Voyage by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Additional 31 restaurants, bars and lounges (names not detailed on overview)",
+            "type": "main",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Spa & Fitness Center",
+          "Rooftop Garden floating pools",
+          "AquaClass spa-inspired staterooms"
+        ],
+        "entertainment": [
+          "The Theatre and shows",
+          "Eden",
+          "Grand Plaza",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Xcel",
@@ -50,9 +250,59 @@
       "year": null,
       "tonnage": null,
       "guests": null,
-      "features": ["The Bazaar", "Celebrity Pool Club", "The Spa", "IYKYK"],
+      "features": [
+        "The Bazaar",
+        "Celebrity Pool Club",
+        "The Spa",
+        "IYKYK"
+      ],
       "notes": "tonnage/guests/year not shown on official ship page (marketing page only); features listed are named on page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel",
+      "exp": {
+        "overview": "Newest ship in Celebrity's fleet; part of the Edge Series; introduces seven new spaces with new dining and drink concepts.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Bazaar",
+          "Bora",
+          "Attic At The Club",
+          "Celebrity Pool Club",
+          "Celebrity Flagship",
+          "The Spa",
+          "IYKYK",
+          "Magic Carpet",
+          "Grand Plaza",
+          "Sunset Bar",
+          "The Club"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Different restaurants to try every night (names not detailed on overview)",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Celebrity Pool Club (poptails, Caribbean-inspired live music)",
+          "The Spa",
+          "Sunset Bar",
+          "Magic Carpet"
+        ],
+        "entertainment": [
+          "The Theatre",
+          "Casino",
+          "Shine the Night party (DJ/dance events)"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Solstice",
@@ -60,9 +310,54 @@
       "year": null,
       "tonnage": 121878,
       "guests": 2852,
-      "features": ["The Retreat Sundeck", "Sunset Park top-deck venue", "Trattoria Rossa and Fine Cut Steakhouse", "Boulevard Lounge"],
+      "features": [
+        "The Retreat Sundeck",
+        "Sunset Park top-deck venue",
+        "Trattoria Rossa and Fine Cut Steakhouse",
+        "Boulevard Lounge"
+      ],
       "notes": "guests=double occupancy; year not on official page (page notes 2026 refurbishment)",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice",
+      "exp": {
+        "overview": "Solstice Series; refurbished 2026 with all-new experiences; 2,852 guests, 121,878 GT; sails Alaska and Asia.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Retreat Sundeck",
+          "Sunset Park (top-deck glacier viewing)"
+        ],
+        "dining": [
+          {
+            "name": "Trattoria Rossa",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Fine Cut Steakhouse",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "The Spa (treatments, massages, fitness classes)",
+          "New Relaxation Lounge"
+        ],
+        "entertainment": [
+          "Boulevard Lounge (new; dueling pianos, trivia)",
+          "The Parlor (billiards, darts, board games)",
+          "The Theatre",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Programming available (no dedicated Teen facility onboard per official Camp at Sea page)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Equinox",
@@ -70,9 +365,64 @@
       "year": null,
       "tonnage": 121878,
       "guests": 2852,
-      "features": ["The Retreat Sundeck and Lounge", "Luminae restaurant", "Craft Social", "The Lawn Club"],
+      "features": [
+        "The Retreat Sundeck and Lounge",
+        "Luminae restaurant",
+        "Craft Social",
+        "The Lawn Club"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox",
+      "exp": {
+        "overview": "Solstice Series; 2,852 guests, 121,878 GT, 1,041 ft; ten dining venues; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Retreat Sundeck",
+          "The Retreat Lounge",
+          "Lawn Club"
+        ],
+        "dining": [
+          {
+            "name": "Luminae (Retreat suite restaurant)",
+            "type": "specialty",
+            "extra": false
+          },
+          {
+            "name": "Tuscan Grille",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Craft Social (craft beer, comfort food)",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Slush (poolside frozen cocktails)",
+            "type": "casual",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Spa & Fitness",
+          "Pool deck",
+          "Lawn Club (real-grass lawn)"
+        ],
+        "entertainment": [
+          "The Theatre / shows",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Eclipse",
@@ -80,9 +430,54 @@
       "year": null,
       "tonnage": 121878,
       "guests": 2852,
-      "features": ["The Lawn Club (half-acre of real grass)", "Blu restaurant for AquaClass", "The Spa", "Daniel Boulud restaurant"],
+      "features": [
+        "The Lawn Club (half-acre of real grass)",
+        "Blu restaurant for AquaClass",
+        "The Spa",
+        "Daniel Boulud restaurant"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse",
+      "exp": {
+        "overview": "Solstice Series; 2,852 guests, 121,878 GT, 1,041 ft; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Lawn Club (half-acre of real grass, outdoor games)",
+          "The Retreat",
+          "The Spa"
+        ],
+        "dining": [
+          {
+            "name": "Blu (AquaClass exclusive)",
+            "type": "specialty",
+            "extra": false
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud (five-course)",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Passport Bar / Martini Bar / World Class Bar (bars)",
+            "type": "casual",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Spa and Fitness Center",
+          "The Lawn Club (outdoor games, grass area)",
+          "Hot Glass classes",
+          "Shopping boutiques"
+        ],
+        "entertainment": [
+          "Theatrical events (The Theatre)",
+          "Bars and lounges throughout"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Silhouette",
@@ -90,9 +485,48 @@
       "year": null,
       "tonnage": 122210,
       "guests": 2902,
-      "features": ["Passport Bar and Craft Social Bar", "The Spa with new treatment rooms", "Lawn Club Grill", "Chef's Table by Chef Daniel Boulud"],
+      "features": [
+        "Passport Bar and Craft Social Bar",
+        "The Spa with new treatment rooms",
+        "Lawn Club Grill",
+        "Chef's Table by Chef Daniel Boulud"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette",
+      "exp": {
+        "overview": "Solstice Series (extended); 2,902 guests, 122,210 GT, 1,047 ft; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "Lawn Club",
+          "Solarium",
+          "Passport Bar (reimagined)",
+          "Craft Social Bar (new)"
+        ],
+        "dining": [
+          {
+            "name": "Lawn Club Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "The Spa on Silhouette (new treatment rooms)",
+          "Lawn Club",
+          "Solarium",
+          "Fitness / holistic wellness",
+          "Shopping boutiques"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Reflection",
@@ -100,9 +534,49 @@
       "year": null,
       "tonnage": 125366,
       "guests": 3046,
-      "features": ["The Lawn Club (half-acre of real grass)", "Lawn Club Grill", "Chef's Table by Chef Daniel Boulud", "The Retreat suite area"],
+      "features": [
+        "The Lawn Club (half-acre of real grass)",
+        "Lawn Club Grill",
+        "Chef's Table by Chef Daniel Boulud",
+        "The Retreat suite area"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection",
+      "exp": {
+        "overview": "Solstice Series (extended); 3,046 guests, 125,366 GT, 1,047 ft; 'most awarded wine collection at sea'; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Lawn Club (half-acre of real grass)",
+          "The Spa"
+        ],
+        "dining": [
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Lawn Club Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa and wellness",
+          "Lawn Club (outdoor games, grass area)",
+          "Luxury boutiques"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Millennium",
@@ -110,9 +584,75 @@
       "year": null,
       "tonnage": 91011,
       "guests": 2218,
-      "features": ["The Retreat Sundeck and Lounge", "Luminae restaurant", "Reimagined main dining room and Oceanview Cafe", "Newly redesigned spa"],
+      "features": [
+        "The Retreat Sundeck and Lounge",
+        "Luminae restaurant",
+        "Reimagined main dining room and Oceanview Cafe",
+        "Newly redesigned spa"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium",
+      "exp": {
+        "overview": "Millennium (M-class) Series; 2,218 guests; among first cruise ships globally with Forbes Travel Guide Four-Star rating; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Retreat Sundeck",
+          "The Retreat Lounge"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room (reimagined)",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Luminae (Retreat suite restaurant)",
+            "type": "specialty",
+            "extra": false
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tuscan Grille",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Sunset Bar (reimagined)",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Rendezvous Lounge (reimagined)",
+            "type": "casual",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Redesigned spa",
+          "Gym and fitness classes",
+          "Pools",
+          "Retail boutiques"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Infinity",
@@ -120,9 +660,71 @@
       "year": null,
       "tonnage": 90940,
       "guests": 2170,
-      "features": ["Chef's Table by Chef Daniel Boulud", "Tuscan Grille", "Le Petit Chef dining experience", "The Spa"],
+      "features": [
+        "Chef's Table by Chef Daniel Boulud",
+        "Tuscan Grille",
+        "Le Petit Chef dining experience",
+        "The Spa"
+      ],
       "notes": "guests=double occupancy; year not on official page; page also lists length 965 ft, beam 105 ft",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity",
+      "exp": {
+        "overview": "Millennium (M-class) Series; 2,170 guests, 90,940 GT, 965 ft.",
+        "neighbourhoods": [
+          "The Retreat"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Blu (AquaClass exclusive)",
+            "type": "specialty",
+            "extra": false
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tuscan Grille",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Rendezvous Lounge",
+            "type": "casual",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "The Spa (treatments and therapies)",
+          "Fitness equipment and classes",
+          "Shopping boutiques"
+        ],
+        "entertainment": [
+          "Le Petit Chef (entertainment dining)",
+          "The Theatre and lounges"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Summit",
@@ -130,9 +732,78 @@
       "year": null,
       "tonnage": 91003,
       "guests": 2218,
-      "features": ["Chef's Table by Chef Daniel Boulud", "The Retreat Sundeck and Lounge", "Tuscan Grille and Le Petit Chef", "Newly redesigned spa"],
+      "features": [
+        "Chef's Table by Chef Daniel Boulud",
+        "The Retreat Sundeck and Lounge",
+        "Tuscan Grille and Le Petit Chef",
+        "Newly redesigned spa"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit",
+      "exp": {
+        "overview": "Millennium (M-class) Series; 2,218 guests, 91,003 GT, 965 ft; Forbes Travel Guide Recommended rating; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Retreat Sundeck",
+          "The Retreat Lounge"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room (reimagined)",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Oceanview Cafe (reimagined)",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Luminae (Retreat suite restaurant)",
+            "type": "specialty",
+            "extra": false
+          },
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tuscan Grille",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Sunset Bar (reimagined)",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Rendezvous Lounge (reimagined)",
+            "type": "casual",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Newly redesigned spa",
+          "Gym and fitness classes",
+          "Retail boutiques"
+        ],
+        "entertainment": [
+          "The Theatre",
+          "Casino"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Constellation",
@@ -140,9 +811,61 @@
       "year": null,
       "tonnage": 90940,
       "guests": 2184,
-      "features": ["Chef's Table by Chef Daniel Boulud", "Tuscan Grille", "The Spa", "The Retreat suite area"],
+      "features": [
+        "Chef's Table by Chef Daniel Boulud",
+        "Tuscan Grille",
+        "The Spa",
+        "The Retreat suite area"
+      ],
       "notes": "guests=double occupancy; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation",
+      "exp": {
+        "overview": "Millennium (M-class) Series; 2,184 guests, 90,940 GT, 965 ft; award-winning wine collection; equipped with Starlink satellite internet.",
+        "neighbourhoods": [
+          "The Retreat",
+          "The Spa",
+          "Solarium"
+        ],
+        "dining": [
+          {
+            "name": "Chef's Table by Chef Daniel Boulud",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tuscan Grille",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Blu (AquaClass exclusive)",
+            "type": "specialty",
+            "extra": false
+          }
+        ],
+        "activities": [
+          "Spa treatments and therapies",
+          "Fitness equipment and classes",
+          "Archery",
+          "Silent Disco",
+          "STEM activities",
+          "Cooking classes",
+          "Shopping boutiques"
+        ],
+        "entertainment": [
+          "Theatrical events (The Theatre)"
+        ],
+        "kids_family": [
+          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
+          "Teen Club (13-17)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+      }
     },
     {
       "name": "Celebrity Flora",
@@ -150,9 +873,27 @@
       "year": null,
       "tonnage": 5922,
       "guests": 100,
-      "features": ["All-suite accommodations", "Infinite Veranda glass-door technology", "Full in-suite room automation", "Certified Galapagos National Park naturalists on board"],
+      "features": [
+        "All-suite accommodations",
+        "Infinite Veranda glass-door technology",
+        "Full in-suite room automation",
+        "Certified Galapagos National Park naturalists on board"
+      ],
       "notes": "guests=double occupancy; Galapagos expedition ship; year not on official page",
-      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora",
+      "exp": {
+        "overview": "Galapagos expedition ship, all-suite; 100 guests, 5,922 GT, 333 ft; Forbes Travel Guide Four-Star rating; outward-facing design so the destination is the focus; sustainable tech (dynamic positioning, solar panels).",
+        "neighbourhoods": [
+          "The Retreat (suite class)"
+        ],
+        "activities": [
+          "Spa/wellness (available)",
+          "Outdoor spa tub access on certain suites",
+          "Certified naturalists from the Galapagos National Park on board",
+          "Zodiac excursions (destination-focused)"
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      }
     }
   ],
   "needs_manual": [

@@ -18,7 +18,112 @@
         "Lido Pool with retractable glass roof and adults-only Sea View Pool"
       ],
       "notes": "Maiden voyage Apr 8, 2016. Maximum Passengers 3,154. Crew 1,036. First Pinnacle-class ship.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Pinnacle Class flagship, blessed by Queen Maxima of the Netherlands. Returned from a 2026 dry dock with more space for multigenerational travel (new ocean-view staterooms, 22 upgraded Vista Suites, connecting-stateroom options), an expanded casino, and refreshed Music Walk entertainment venues.",
+        "neighbourhoods": [
+          "Music Walk (connects Billboard Onboard and Rolling Stone Lounge)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "New York Deli & Pizza",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Grand Dutch Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Gelato & Juice Bar",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Sel de Mer",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Club Orange",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Lido Pool",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Fitness Center",
+          "Casino (expanded in 2026 dry dock)",
+          "Art Studio",
+          "Ocean-view pickleball court",
+          "Sports Court",
+          "Library",
+          "Game Room",
+          "Effy jewelry / The Shops"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "B.B. King's Blues Club"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)",
+          "High Score game room",
+          "New staterooms accommodating up to four guests for multigenerational travel"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam/3; https://www.hollandamerica.com/en/us/news/2026/march/news-03302026-koningsdam-cruise-ship-drydock"
+      }
     },
     {
       "name": "Nieuw Statendam",
@@ -33,7 +138,110 @@
         "Grand Dutch Cafe and Club Orange private dining"
       ],
       "notes": "Maiden voyage Dec 5, 2018. Maximum Passengers 3,170. Crew 1,036.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Pinnacle Class ship whose design is inspired by the curves of musical instruments, fitting for a ship with many entertainment venues.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard, B.B. King's Blues Club)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "New York Deli & Pizza",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Grand Dutch Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Gelato & Juice Bar",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Sel de Mer",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Club Orange",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Lido Pool",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Fitness Center",
+          "Casino",
+          "Art Studio",
+          "Pickleball court",
+          "Sports Court",
+          "Library",
+          "Game Room"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "B.B. King's Blues Club"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)",
+          "High Score game room"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam/1"
+      }
     },
     {
       "name": "Rotterdam",
@@ -48,7 +256,109 @@
         "Grand Dutch Cafe and Half Moon Bar"
       ],
       "notes": "Maiden voyage August 1, 2021 (largest ship in the fleet by tonnage). Maximum Passengers 3,172. Crew 1,048.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Holland America Line's flagship, an award-winning Pinnacle Class ship with world-class dining and entertainment.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard, B.B. King's Blues Club)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "New York Deli & Pizza",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Grand Dutch Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Gelato & Juice Bar",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Sel de Mer",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Club Orange",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Lido Pool (retractable glass roof)",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Fitness Center",
+          "Ocean-view pickleball court",
+          "Sports Court",
+          "Casino",
+          "Game Room",
+          "Library",
+          "The Shops / Art Gallery / Photo Gallery / Portrait Studio"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "B.B. King's Blues Club"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam/0"
+      }
     },
     {
       "name": "Eurodam",
@@ -63,7 +373,88 @@
         "Lido Pool with retractable glass roof, adults-only Sea View Pool, Retreat Cabanas"
       ],
       "notes": "Maiden voyage Jul 1, 2008. Maximum Passengers 2,731. Crew 876. First Signature-class ship.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Holland America Line's first Signature Class ship; approximately 2,100 guests; part of the Holland America Evolution revitalization program.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "New York Pizza & Deli",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Fitness Center",
+          "Lido Pool (retractable glass roof)",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Casino",
+          "Art Studio",
+          "Pickleball court",
+          "Game Room"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)",
+          "High Score game room"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam/0"
+      }
     },
     {
       "name": "Nieuw Amsterdam",
@@ -78,7 +469,91 @@
         "Retreat Cabanas and Greenhouse Spa & Salon"
       ],
       "notes": "Maiden voyage Jul 4, 2010. Maximum Passengers 2,735. Crew 874.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Signature Class ship inspired by New York City; part of the Holland America Evolution revitalization program.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "New York Pizza & Deli",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Fitness Center",
+          "Lido Pool (retractable glass roof)",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Art Studio",
+          "Casino",
+          "Game Room",
+          "Ocean-view pickleball court",
+          "Sport Court",
+          "Library",
+          "Retreat Cabanas"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)",
+          "High Score game room"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam/4"
+      }
     },
     {
       "name": "Noordam",
@@ -93,7 +568,92 @@
         "Explorer's Lounge and Library Cafe"
       ],
       "notes": "Maiden voyage Feb 22, 2006. Maximum Passengers 2,596. Crew 811.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Vista Class ship named for the Northern compass point in Dutch, featuring eye-catching decor and museum-quality artwork. Starlink internet available. Scheduled for Holland America Evolution updates (deck plans note pre-/post-December 5, 2027 sailings).",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Library Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa & Salon",
+          "Fitness Center",
+          "Tai Chi classes",
+          "Lido Pool (retractable roof)",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "One ocean-view pickleball court",
+          "Casino",
+          "Art Studio",
+          "Game Room (mahjong)",
+          "Sport Court",
+          "Library",
+          "Meeting Rooms",
+          "Effy Fine Jewelry / The Shops"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17, not all sailings)"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/noordam/7"
+      }
     },
     {
       "name": "Oosterdam",
@@ -108,7 +668,80 @@
         "Lido Pool with retractable glass roof and adults-only Sea View Pool"
       ],
       "notes": "Maiden voyage Aug 3, 2003. Maximum Passengers 2,587. Crew 812.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Vista Class ship; first ship to debut Holland America Evolution upgrades in December 2027.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Fitness Center",
+          "Lido Pool",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Ocean-view pickleball court",
+          "Sport Court (basketball, cornhole)",
+          "Casino",
+          "Art Studio",
+          "Game Room",
+          "Library"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17, not all sailings)",
+          "High Score game room"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam/1"
+      }
     },
     {
       "name": "Westerdam",
@@ -123,7 +756,86 @@
         "Explorer's Lounge and Hydropool"
       ],
       "notes": "Maiden voyage Apr 26, 2004. Maximum Passengers 2,587. Crew 812.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Vista Class ship (Best Cruise Ship Award recognition per HAL page).",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Tamarind",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa & Salon",
+          "Fitness Center",
+          "Tai Chi classes",
+          "Thermal Suite with Hydropool",
+          "Lido Pool (retractable roof)",
+          "Sea View Pool (adults-only)",
+          "Hot Tubs",
+          "Ocean-view pickleball court",
+          "Sport Court (basketball, cornhole)",
+          "Art Studio",
+          "Casino",
+          "Game Room",
+          "Library",
+          "The Shops / Effy Fine Jewelry / Art Gallery / Photo Gallery / Portrait Studio"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam/8"
+      }
     },
     {
       "name": "Zuiderdam",
@@ -138,7 +850,82 @@
         "Gallery Bar and Explorer's Lounge"
       ],
       "notes": "Maiden voyage Dec 14, 2002. Maximum Passengers 2,587. Crew 812. First Vista-class ship.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Vista Class ship; approximately 1,918 guests; entered service 2002; 11 decks. Part of the Holland America Evolution revitalization program.",
+        "neighbourhoods": [
+          "Music Walk (Rolling Stone Lounge, Billboard Onboard)"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Greenhouse Spa & Salon",
+          "Fitness Center (group classes)",
+          "Lido Pool (retractable glass roof)",
+          "Sea View Pool (adults-only)",
+          "Hydropool",
+          "Hot Tubs",
+          "Ocean-view pickleball court",
+          "Sport Court (basketball, cornhole)",
+          "Casino",
+          "Art Studio",
+          "Game Room (mahjong)",
+          "Library",
+          "The Shops / Effy Jewelry / Photo Gallery / Portrait Studio",
+          "Meeting Rooms"
+        ],
+        "entertainment": [
+          "World Stage",
+          "Rolling Stone Lounge",
+          "Billboard Onboard",
+          "The Dam Band"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17)"
+        ],
+        "decks": 11,
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/zuiderdam/7"
+      }
     },
     {
       "name": "Volendam",
@@ -153,7 +940,85 @@
         "Lanai staterooms (ocean-view with direct promenade access)"
       ],
       "notes": "Maiden voyage Nov 12, 1999. Maximum Passengers 1,839. Crew 604. R-class; uses Wajang Theater rather than World Stage. 21 Lanai staterooms per Fleet Specifications.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Garden-inspired R Class ship, perfectly sized for Grand Voyages, with public spaces accented by floral fabrics, tapestries and warm decor. Premier 1,290 sq ft Pinnacle Suite.",
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Library Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa & Salon",
+          "Fitness Center",
+          "Tai Chi classes",
+          "Thermal Suite",
+          "Lido Pool (retractable roof)",
+          "Sea View Pool (adults-only)",
+          "Hot Tubs",
+          "One ocean-view pickleball court",
+          "Sports Court",
+          "Casino",
+          "Art Studio",
+          "Game Room",
+          "Library",
+          "The Shops (duty-free, Effy Jewelry) / Captain's Collection / Art Gallery / Photo Gallery / Portrait Studio"
+        ],
+        "entertainment": [
+          "Wajang Theater (main showroom, shows and afternoon films)",
+          "Piano Bar",
+          "Ocean Bar",
+          "Crow's Nest Bar",
+          "MIX lounge",
+          "Explorer's Lounge"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17, select sailings)"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/volendam/7"
+      }
     },
     {
       "name": "Zaandam",
@@ -168,7 +1033,85 @@
         "Library Cafe and Thermal Suite"
       ],
       "notes": "Maiden voyage May 6, 2000. Maximum Passengers 1,839. Crew 604. R-class; uses Wajang Theater rather than World Stage.",
-      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf"
+      "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
+      "exp": {
+        "overview": "Elegant R Class ship, ideal for Grand Voyages, with a music theme (decor includes guitars signed by Eric Clapton, Iggy Pop and Rolling Stones members); approximately 1,432 guests; entered service 2000.",
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": false
+          },
+          {
+            "name": "Lido Market",
+            "type": "buffet",
+            "extra": false
+          },
+          {
+            "name": "Dive-In",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Crow's Nest Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Library Cafe",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "24-Hour Room Service",
+            "type": "casual",
+            "extra": false
+          },
+          {
+            "name": "Pinnacle Grill",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Canaletto",
+            "type": "specialty",
+            "extra": true
+          },
+          {
+            "name": "Morimoto By Sea",
+            "type": "specialty",
+            "extra": true
+          }
+        ],
+        "activities": [
+          "Spa & Salon",
+          "Fitness Center",
+          "Tai Chi classes",
+          "Thermal Suite",
+          "Lido Pool (retractable roof)",
+          "Sea View Pool (adults-only)",
+          "Hot Tubs",
+          "One ocean-view pickleball court",
+          "Sports Court (basketball, cornhole)",
+          "Casino",
+          "Art Studio",
+          "Game Room",
+          "Library",
+          "Art Gallery / Fine Jewelry / Photo Gallery / Captain's Collection"
+        ],
+        "entertainment": [
+          "Wajang Theater (main showroom, production shows and movies)",
+          "Piano Bar",
+          "Ocean Bar",
+          "Crow's Nest Bar",
+          "MIX lounge",
+          "Explorer's Lounge"
+        ],
+        "kids_family": [
+          "Club HAL / Kids Club (ages 3-17, when available)"
+        ],
+        "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam/7"
+      }
     }
   ],
   "needs_manual": [],

@@ -13,7 +13,123 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Excel Class' on official fact sheet. Fact sheet lists no named venues.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-jubilee-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-jubilee-fact-sheet",
+      "exp": {
+        "overview": "Excel-class (third in class after Mardi Gras and Celebration), LNG-powered",
+        "neighbourhoods": [
+          "Grand Central",
+          "Currents",
+          "The Shores",
+          "Summer Landing",
+          "Lido",
+          "The Ultimate Playground",
+          "Havana",
+          "Cloud 9 Spa",
+          "Family Harbor",
+          "Loft 19"
+        ],
+        "dining": [
+          {
+            "name": "Cucina del Capitano",
+            "type": "casual",
+            "extra": "first meal free (additional charge)"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Big Chicken",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Coastal Slice",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Street Eats",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Beach Buns",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Emeril's Bistro 717",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Rudi's Seagrill",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse | Brewhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "BOLT electric sea coaster",
+          "Carnival WaterWorks (Blue Lightning, Orange Thunder, Twister)",
+          "SportSquare (mini-golf, basketball, ropes, jogging track, soccer, volleyball, foosball, ping-pong)",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa thermal suites",
+          "Havana Bar & Pool",
+          "Loft 19 infinity whirlpool"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Center Stage",
+          "Family Feud Live",
+          "The Punchliner Comedy Club",
+          "Piano Bar 88",
+          "SeaQuest interactive show",
+          "Dr.Inks Ph.D. bar",
+          "The Golden Mermaid bar"
+        ],
+        "kids_family": [
+          "Family Harbor (free kids dining, babysitting)"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-jubilee"
+      }
     },
     {
       "name": "Carnival Firenze",
@@ -24,7 +140,117 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Official ship page labels class 'Venice Class' (ex-Costa Firenze). Dedicated fact-sheet slug 404'd; specs read from official ship page.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-firenze"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-firenze",
+      "exp": {
+        "overview": "135,156 GT; 4,126 guests; 1,061 ft; 1,425 crew; Carnival Fun Italian Style ship",
+        "neighbourhoods": [
+          "Piazza Duomo",
+          "Terrazza Moda",
+          "Tuscan Lounge",
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Michelangelo Restaurant",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Medici Restaurant",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Il Viaggio",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "La Strada Grill",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Il Mercato",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Tomodoro",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks",
+          "SportSquare (ropes course, jogging track, mini golf, fitness)",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)",
+          "Table Games (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions (Teatro)",
+          "Moda Bar and Lounge (live music)",
+          "Piano Bar 88",
+          "Amari cocktail bar",
+          "Rococo",
+          "Frizzante",
+          "Serenity Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Circle C",
+          "Club O2"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-firenze"
+      }
     },
     {
       "name": "Carnival Venezia",
@@ -35,7 +261,107 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Official ship page labels class 'Venice Class' (ex-Costa Venezia). Dedicated fact-sheet slug 404'd; specs read from official ship page.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-venezia"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-venezia",
+      "exp": {
+        "overview": "Carnival Fun Italian Style ship (Venice-inspired theming)",
+        "neighbourhoods": [
+          "Piazza San Marco",
+          "Gondola Lounge",
+          "Terrazza Carnevale",
+          "Terrazza Moda"
+        ],
+        "dining": [
+          {
+            "name": "Marco Polo",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Canal Grande",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "La Strada Grill",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Tomodoro",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Il Viaggio",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks",
+          "SportSquare (ropes course, jogging track, mini golf)",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)",
+          "Table Games (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions (Teatro Rosso)",
+          "Family Feud Live",
+          "Piano Bar 88",
+          "Amari",
+          "Frizzante",
+          "Rococo",
+          "Carnevale Bar & Lounge",
+          "Serenity Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Circle C",
+          "Club O2"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-venezia"
+      }
     },
     {
       "name": "Carnival Celebration",
@@ -46,7 +372,105 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Excel Class' on official fact sheet. Fact sheet lists no named venues.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-celebration-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-celebration-fact-sheet",
+      "exp": {
+        "overview": "Excel-class, LNG-powered; organized into seven themed zones",
+        "neighbourhoods": [
+          "Celebration Central",
+          "The Gateway",
+          "Summer Landing",
+          "820 Biscayne",
+          "Lido",
+          "The Ultimate Playground",
+          "Havana",
+          "Family Harbor",
+          "Cloud 9 Spa",
+          "Loft 19"
+        ],
+        "dining": [
+          {
+            "name": "Cucina del Capitano",
+            "type": "casual",
+            "extra": "first meal free (additional charge)"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Street Eats",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Emeril's Bistro 1397",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Rudi's Seagrill",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse | Brewhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Big Chicken",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "BOLT roller coaster",
+          "Carnival WaterWorks (three spiraling slides)",
+          "SportSquare (mini-golf, basketball, ropes course)",
+          "The Watering Hole",
+          "Havana Pool",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa thermal suites",
+          "Loft 19 infinity whirlpool"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Family Feud Live",
+          "The Punchliner Comedy Club",
+          "Piano Bar 88",
+          "Center Stage",
+          "Alchemy Bar",
+          "RedFrog Tiki Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean (Space Cruisers, ages 2-11)",
+          "Family Harbor Lounge",
+          "Night Owls babysitting"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-celebration"
+      }
     },
     {
       "name": "Carnival Luminosa",
@@ -57,7 +481,84 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Spirit Class' on official fact sheet. Year is Carnival service entry (2022).",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-luminosa-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-luminosa-fact-sheet",
+      "exp": {
+        "overview": "Spirit-class ship (ex-Costa Luminosa)",
+        "neighbourhoods": [
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "The Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Vela Restaurant",
+            "type": "specialty",
+            "extra": "not specified"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Serenity Adult-Only Retreat",
+          "Dive-In Movies",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Piano Bar 88",
+          "The Punchliner Comedy Club",
+          "Family Feud Live",
+          "Alchemy Bar (extra charge)",
+          "RedFrog Rum Bar (extra charge)"
+        ],
+        "kids_family": [
+          "Camp Ocean"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-luminosa"
+      }
     },
     {
       "name": "Mardi Gras",
@@ -68,7 +569,130 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Excel Class' on official fact sheet. Built at Meyer Turku.",
-      "spec_source": "https://www.carnival-news.com/ship/mardi-gras-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/mardi-gras-fact-sheet",
+      "exp": {
+        "overview": "Excel-class ship, LNG-powered, homeports Port Canaveral; organized into six themed zones",
+        "neighbourhoods": [
+          "Grand Central",
+          "French Quarter",
+          "Summer Landing",
+          "La Piazza",
+          "Lido",
+          "The Ultimate Playground",
+          "Havana",
+          "Family Harbor",
+          "Cloud 9 Spa",
+          "Loft 19"
+        ],
+        "dining": [
+          {
+            "name": "Cucina del Capitano",
+            "type": "casual",
+            "extra": "first meal free (additional charge)"
+          },
+          {
+            "name": "Chibang!",
+            "type": "casual",
+            "extra": "first meal free (additional charge)"
+          },
+          {
+            "name": "Street Eats",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Big Chicken",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Piazza Panini",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Emeril's Bistro 1396",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Rudi's Seagrill",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse | Brewhouse",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "BOLT sea roller coaster",
+          "Carnival WaterWorks (Blue Lightning, Orange Thunder, Twister slides)",
+          "SportSquare mini-golf",
+          "full-court basketball",
+          "ropes course",
+          "Havana Bar & Pool",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa thermal suites",
+          "Loft 19 infinity whirlpool"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Family Feud Live",
+          "The Punchliner Comedy Club",
+          "Piano Bar 88",
+          "The Brass Magnolia jazz bar",
+          "Fortune Teller bar",
+          "RedFrog Tiki Bar"
+        ],
+        "kids_family": [
+          "Family Harbor Lounge",
+          "Night Owls babysitting"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/mardi-gras"
+      }
     },
     {
       "name": "Carnival Conquest",
@@ -79,7 +703,80 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Conquest Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-conquest-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-conquest-fact-sheet",
+      "exp": {
+        "overview": "Conquest-class ship",
+        "neighbourhoods": [
+          "Alchemy Bar",
+          "SkyBox Sports Bar"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Serenity Adult-Only Retreat",
+          "Dive-In Movies"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "BlueIguana Tequila Bar",
+          "Heroes Tribute Bar & Lounge",
+          "RedFrog Rum Bar",
+          "Cherry On Top",
+          "Alchemy Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-conquest"
+      }
     },
     {
       "name": "Carnival Dream",
@@ -90,7 +787,87 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Dream Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-dream-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-dream-fact-sheet",
+      "exp": {
+        "overview": "Dream class (lead ship); 130,000 GT; 3,646 guests; 1,004 ft",
+        "neighbourhoods": [
+          "Cloud 9 Spa",
+          "Ocean Plaza"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room (two dual-level rooms)",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Carnival WaterWorks",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "The Punchliner Comedy Club",
+          "Alchemy Bar",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-dream"
+      }
     },
     {
       "name": "Carnival Panorama",
@@ -101,7 +878,85 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Vista Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-panorama-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-panorama-fact-sheet",
+      "exp": {
+        "overview": "Vista-class (sister to Vista and Horizon); 133,500 GT; 4,008 guests; 1,055 ft; 1,450 crew",
+        "neighbourhoods": [
+          "Havana",
+          "Family Harbor",
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse | Brewhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JiJi Asian Kitchen",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Sky Zone trampoline park (extra charge)",
+          "SkyRide",
+          "WaterWorks",
+          "ropes course",
+          "mini-golf",
+          "Dive-In Movies",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa thermal suites"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Family Feud Live",
+          "Heroes Tribute Bar & Lounge (extra charge)"
+        ],
+        "kids_family": [
+          "Camp Ocean (three youth programs)",
+          "Night Owls babysitting"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-panorama"
+      }
     },
     {
       "name": "Carnival Legend",
@@ -112,7 +967,90 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Spirit Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-legend-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-legend-fact-sheet",
+      "exp": {
+        "overview": "Spirit/Legend-class ship",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace (Unicorn Cafe)",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Truffles Restaurant",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Coffee Bar",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks waterslide",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Family Feud Live",
+          "Punchliner Comedy Club",
+          "Billie's Piano Bar",
+          "Medusa's Lair Dance Club",
+          "RedFrog Pub",
+          "Alchemy Bar",
+          "Heroes Tribute Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean (three supervised youth areas)"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-legend"
+      }
     },
     {
       "name": "Carnival Glory",
@@ -123,7 +1061,80 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Conquest Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-glory-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-glory-fact-sheet",
+      "exp": {
+        "overview": "Conquest-class; 110,000 GT; 2,980 guests; 952 ft; 1,150 crew",
+        "neighbourhoods": [
+          "Camel Club Casino"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "The Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Emerald Room Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Carnival WaterWorks (Twister, AquaTunnel, twin racing slides)",
+          "Serenity Adult-Only Retreat"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Dive-In Movies",
+          "White Heat Dance Club",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar",
+          "Alchemy Bar",
+          "Heroes Tribute Bar & Lounge"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-glory"
+      }
     },
     {
       "name": "Carnival Radiance",
@@ -134,7 +1145,85 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Sunshine Class' on official fact sheet. Year reflects post-conversion Carnival Radiance service (ex-Carnival Victory).",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-radiance-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-radiance-fact-sheet",
+      "exp": {
+        "overview": "Sunshine-class (former Carnival Victory, rebuilt)",
+        "dining": [
+          {
+            "name": "Big Chicken",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Bar-B-Que",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "SportSquare (ropes course)",
+          "mini-golf",
+          "Dive-In Movies",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "Alchemy Bar",
+          "Heroes Tribute Bar & Lounge",
+          "RedFrog Pub",
+          "Cherry On Top"
+        ],
+        "kids_family": [
+          "Seuss at Sea",
+          "Three youth spaces (names not stated)",
+          "Zumbini classes",
+          "Build-A-Bear Workshop At Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-radiance"
+      }
     },
     {
       "name": "Carnival Spirit",
@@ -145,7 +1234,101 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Spirit Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-spirit-fact-sheet",
+      "exp": {
+        "overview": "Spirit-class ship; WaterWorks includes Green Thunder slide; domed swimming pool",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Empire Restaurant",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Restaurant",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizza Pirate",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Sweet Spot",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "RedFrog Pub",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Nouveau Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Coffee Bar",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks (Green Thunder slide)",
+          "domed swimming pool",
+          "mini-golf",
+          "two-deck fitness center",
+          "jogging track",
+          "Serenity Adult-Only Retreat",
+          "spa"
+        ],
+        "entertainment": [
+          "live comedy",
+          "musical performances",
+          "piano bar",
+          "casino",
+          "Alchemy Bar"
+        ],
+        "kids_family": [
+          "Three age-appropriate youth programs (names not stated)"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-spirit"
+      }
     },
     {
       "name": "Carnival Horizon",
@@ -156,7 +1339,82 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Vista Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-horizon-fact-sheet",
+      "exp": {
+        "overview": "Vista-class; 133,500 GT; 3,960 guests; 1,055 ft; 1,450 crew",
+        "neighbourhoods": [
+          "Family Harbor",
+          "Havana",
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse | Brewhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Teppanyaki",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JiJi Asian Kitchen",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "SkyRide",
+          "Dr. Seuss WaterWorks",
+          "IMAX Theater (extra charge)",
+          "Havana Bar & Pool (extra charge)",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Family Feud Live"
+        ],
+        "kids_family": [
+          "Camp Ocean (three age-specific youth spaces)",
+          "Night Owls babysitting"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-horizon"
+      }
     },
     {
       "name": "Carnival Sunrise",
@@ -167,7 +1425,87 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Sunshine Class'. Official fact sheet lists entered service 1999 (original vessel, ex-Carnival Triumph; refurbished/renamed Carnival Sunrise 2019).",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-sunrise-fact-sheet",
+      "exp": {
+        "overview": "Sunshine-class (former Carnival Triumph, rebuilt)",
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Bar-B-Que Smokehouse | Brewhouse",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "RedFrog Pub",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Carnival WaterWorks",
+          "SportSquare",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "Piano Bar 88",
+          "Alchemy Bar",
+          "Cherry On Top",
+          "Heroes Tribute Bar"
+        ],
+        "kids_family": [
+          "Three youth spaces (names not stated)",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-sunrise"
+      }
     },
     {
       "name": "Carnival Miracle",
@@ -178,7 +1516,92 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Spirit Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-miracle-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-miracle-fact-sheet",
+      "exp": {
+        "overview": "Spirit-class ship; main dining in Bacchus and Ariadne dining rooms",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Bacchus and Ariadne Dining Rooms",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Horatio's",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizza Pirate",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Nick & Nora's Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks",
+          "Serenity Adult-Only Retreat"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Family Feud Live",
+          "Phantom Lounge",
+          "Dr. Frankenstein's Lab",
+          "Sam's Piano Bar",
+          "RedFrog Rum Bar",
+          "RedFrog Pub",
+          "Alchemy Bar",
+          "Heroes Tribute Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-miracle"
+      }
     },
     {
       "name": "Carnival Vista",
@@ -189,7 +1612,96 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Vista Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-vista-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-vista-fact-sheet",
+      "exp": {
+        "overview": "Vista-class ship (lead ship of class)",
+        "neighbourhoods": [
+          "Family Harbor",
+          "Havana",
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Smokehouse",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "RedFrog Pub & Brewery",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JiJi Asian Kitchen",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "SkyRide (suspended bike course)",
+          "Carnival WaterWorks (Kaleid-O-Slide)",
+          "Havana Bar & Pool",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Family Feud Live",
+          "Heroes Tribute Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Dr. Seuss Bookville"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-vista"
+      }
     },
     {
       "name": "Carnival Magic",
@@ -200,7 +1712,90 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Dream Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-magic-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-magic-fact-sheet",
+      "exp": {
+        "overview": "Dream class; features world's first ropes course at sea",
+        "neighbourhoods": [
+          "Ocean Plaza",
+          "The Lanai (outdoor promenade)",
+          "Cloud 9 Spa"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Bar-B-Que Smokehouse",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "not specified"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks",
+          "SportSquare (world's first ropes course at sea)",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "RedFrog Pub (ThirstyFrog Red beer)",
+          "RedFrog Rum Bar",
+          "Alchemy Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-magic"
+      }
     },
     {
       "name": "Carnival Breeze",
@@ -211,7 +1806,85 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Dream Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-breeze-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-breeze-fact-sheet",
+      "exp": {
+        "overview": "Dream class; WaterWorks features 320-foot Twister Waterslide",
+        "neighbourhoods": [
+          "Cloud 9 Spa"
+        ],
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Pig & Anchor Bar-B-Que Smokehouse",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizza Pirate",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Carnival WaterWorks (320-foot Twister Waterslide)",
+          "SportSquare",
+          "Serenity Adults-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Liquid Nightclub",
+          "Alchemy Bar",
+          "The Punchliner Comedy Club",
+          "RedFrog Rum Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Circle C",
+          "Club O2"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-breeze"
+      }
     },
     {
       "name": "Carnival Freedom",
@@ -222,7 +1895,89 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Conquest Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-freedom-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-freedom-fact-sheet",
+      "exp": {
+        "overview": "Conquest-class ship",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Pizza Pirate",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks waterslide",
+          "multiple pools",
+          "mini-golf",
+          "Serenity Adult-Only Retreat",
+          "Spa Carnival (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Scott's Piano Bar",
+          "70's Nightclub",
+          "Alchemy Bar",
+          "Heroes Tribute Bar & Lounge",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar",
+          "RedFrog Pub",
+          "Cherry On Top"
+        ],
+        "kids_family": [
+          "Camp Ocean"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-freedom"
+      }
     },
     {
       "name": "Carnival Paradise",
@@ -233,7 +1988,78 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Fantasy Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-paradise-fact-sheet",
+      "exp": {
+        "overview": "Fantasy-class ship",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "casual",
+            "extra": "not specified"
+          }
+        ],
+        "activities": [
+          "WaterWorks waterpark with slides",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "piano bar",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-paradise"
+      }
     },
     {
       "name": "Carnival Elation",
@@ -244,7 +2070,86 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Fantasy Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-elation-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-elation-fact-sheet",
+      "exp": {
+        "overview": "Fantasy-class ship",
+        "neighbourhoods": [
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Restaurant",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "casual",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Carnival WaterWorks",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)",
+          "video arcade"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Duke's Piano Bar",
+          "Alchemy Bar",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar",
+          "Cherry On Top"
+        ],
+        "kids_family": [
+          "Three youth spaces (names not stated)",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-elation"
+      }
     },
     {
       "name": "Carnival Sunshine",
@@ -255,7 +2160,81 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Sunshine Class' on official fact sheet (ex-Carnival Destiny). Year reflects Carnival Sunshine service.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-sunshine-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-sunshine-fact-sheet",
+      "exp": {
+        "overview": "Sunshine-class (former Carnival Destiny, rebuilt); WaterWorks includes Speedway Splash slide; three-deck Serenity",
+        "neighbourhoods": [
+          "Cloud 9 Spa",
+          "Serenity"
+        ],
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JiJi Asian Kitchen",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Cucina del Capitano",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "JavaBlue Cafe",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks (Speedway Splash slide)",
+          "SportSquare (jogging track, ropes course)",
+          "Serenity Adult-Only Retreat (three-deck)",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "RedFrog Pub",
+          "BlueIguana Tequila Bar",
+          "SkyBox Sports Bar",
+          "Alchemy Bar",
+          "Havana Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-sunshine"
+      }
     },
     {
       "name": "Carnival Valor",
@@ -266,7 +2245,75 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Conquest Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-valor-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-valor-fact-sheet",
+      "exp": {
+        "overview": "Conquest-class ship",
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Scarlett's Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Thing 1 & Thing 2 Birthday Breakfast",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks",
+          "Serenity Adult-Only Retreat"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "The Punchliner Comedy Club",
+          "Dive-In Movies",
+          "RedFrog Pub",
+          "Alchemy Bar",
+          "BlueIguana Tequila Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-valor"
+      }
     },
     {
       "name": "Carnival Liberty",
@@ -277,7 +2324,81 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Conquest Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-liberty-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-liberty-fact-sheet",
+      "exp": {
+        "overview": "Conquest-class ship",
+        "dining": [
+          {
+            "name": "Dining Room",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "The Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Coffee Bar",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Twister Waterslide",
+          "Serenity Adult-Only Retreat"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "Family Feud Live",
+          "RedFrog Rum Bar",
+          "BlueIguana Tequila Bar",
+          "SkyBox Sports Bar",
+          "Alchemy Bar"
+        ],
+        "kids_family": [
+          "Three youth spaces (names not stated)",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-liberty"
+      }
     },
     {
       "name": "Carnival Pride",
@@ -288,7 +2409,78 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Spirit Class' on official fact sheet.",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-pride-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-pride-fact-sheet",
+      "exp": {
+        "overview": "Spirit-class ship; features Normandie Restaurant main dining",
+        "neighbourhoods": [
+          "Serenity",
+          "Cloud 9 Spa"
+        ],
+        "dining": [
+          {
+            "name": "Dining Room (Normandie Restaurant)",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Lido Marketplace",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "BlueIguana Cantina",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Bonsai Sushi",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "WaterWorks waterpark",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "Family Feud Live",
+          "Carnival Seaside Theater",
+          "Alchemy Bar",
+          "RedFrog Pub",
+          "Heroes Tribute Bar"
+        ],
+        "kids_family": [
+          "Camp Ocean",
+          "Circle C",
+          "Club O2",
+          "Seuss at Sea"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-pride"
+      }
     },
     {
       "name": "Carnival Splendor",
@@ -299,7 +2491,81 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Splendor Class' on official fact sheet (single-ship class).",
-      "spec_source": "https://www.carnival-news.com/ship/carnival-splendor-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/ship/carnival-splendor-fact-sheet",
+      "exp": {
+        "overview": "Splendor-class ship; WaterWorks includes Green Lightning Waterslide",
+        "neighbourhoods": [
+          "Cloud 9 Spa",
+          "Serenity",
+          "El Morocco Lounge"
+        ],
+        "dining": [
+          {
+            "name": "Guy's Burger Joint",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Pizzeria del Capitano",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "The Carnival Deli",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Mongolian Wok",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Seaday Brunch",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Swirls",
+            "type": "casual",
+            "extra": "free"
+          },
+          {
+            "name": "Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Seafood Shack",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "The Chef's Table",
+            "type": "specialty",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "Green Lightning Waterslide",
+          "mini golf",
+          "Dive-In Movies",
+          "Serenity Adult-Only Retreat",
+          "Cloud 9 Spa (extra charge)",
+          "video arcade (extra charge)"
+        ],
+        "entertainment": [
+          "Playlist Productions",
+          "Punchliner Comedy Club",
+          "El Morocco Lounge (comedy, music, karaoke)",
+          "The Cool jazz club",
+          "Royal Flush Casino",
+          "Alchemy Bar",
+          "Sports Bar"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-splendor"
+      }
     },
     {
       "name": "Carnival Adventure",
@@ -310,7 +2576,77 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Adventure Class' on official fact sheet (ex-P&O Australia Pacific Adventure). Fact sheet at /news/ path.",
-      "spec_source": "https://www.carnival-news.com/news/carnival-adventure-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/news/carnival-adventure-fact-sheet",
+      "exp": {
+        "overview": "Ex-P&O Australia (Pacific Adventure), Australia-based; 13 decks; four pools",
+        "neighbourhoods": [
+          "Oasis",
+          "Byron Beach Club",
+          "Cloud 9 Spa"
+        ],
+        "dining": [
+          {
+            "name": "Waterfront",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Angelo's",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Dragon Lady",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "The Pantry",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Trattoria",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "New Zealand Natural",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "waterslides",
+          "four pools",
+          "Edge Adventure Park (ziplining, rock climbing, abseiling)",
+          "Dive-In Movies",
+          "video arcade (extra charge)",
+          "Cloud 9 Spa (extra charge)",
+          "Byron Beach Club (extra charge)"
+        ],
+        "entertainment": [
+          "The Punchliner Comedy Club",
+          "stage shows",
+          "multiple bars"
+        ],
+        "kids_family": [
+          "Kids clubs (names not stated)"
+        ],
+        "decks": 13,
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-adventure"
+      }
     },
     {
       "name": "Carnival Encounter",
@@ -321,7 +2657,76 @@
       "guests_basis": "double occupancy",
       "features": [],
       "notes": "Class labeled 'Adventure Class' on official fact sheet (ex-P&O Australia Pacific Encounter). Fact sheet at /news/ path.",
-      "spec_source": "https://www.carnival-news.com/news/carnival-encounter-fact-sheet"
+      "spec_source": "https://www.carnival-news.com/news/carnival-encounter-fact-sheet",
+      "exp": {
+        "overview": "Ex-P&O Australia (Pacific Encounter), Australia-based; four pools with waterslides",
+        "neighbourhoods": [
+          "Oasis",
+          "Byron Beach Club",
+          "Cloud 9 Spa"
+        ],
+        "dining": [
+          {
+            "name": "Waterfront",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Angelo's",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "Dragon Lady",
+            "type": "main",
+            "extra": "free"
+          },
+          {
+            "name": "The Pantry",
+            "type": "buffet",
+            "extra": "free"
+          },
+          {
+            "name": "Fahrenheit 555 Steakhouse",
+            "type": "specialty",
+            "extra": "extra charge (coming soon)"
+          },
+          {
+            "name": "Bonsai Sushi Express",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "Trattoria",
+            "type": "specialty",
+            "extra": "extra charge"
+          },
+          {
+            "name": "New Zealand Natural",
+            "type": "casual",
+            "extra": "extra charge"
+          }
+        ],
+        "activities": [
+          "four pools with waterslides",
+          "EDGE (ziplining, rock climbing, abseiling; extra charge)",
+          "Dive-In Movies",
+          "video arcade (extra charge)",
+          "Cloud 9 Spa / day spa & salon (extra charge)",
+          "Byron Beach Club (extra charge)"
+        ],
+        "entertainment": [
+          "The Punchliner Comedy Club",
+          "stage shows",
+          "deck parties"
+        ],
+        "kids_family": [
+          "Kids clubs (names not stated)",
+          "teen hangout spaces"
+        ],
+        "bridge_cam": false,
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-encounter"
+      }
     }
   ],
   "needs_manual": [

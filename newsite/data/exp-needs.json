@@ -1,0 +1,672 @@
+{
+  "carnival": {
+    "Carnival Jubilee": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-jubilee"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-jubilee"
+      }
+    ],
+    "Carnival Firenze": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-firenze"
+      }
+    ],
+    "Carnival Venezia": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-venezia"
+      }
+    ],
+    "Carnival Celebration": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-celebration"
+      }
+    ],
+    "Carnival Luminosa": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-luminosa"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-luminosa"
+      }
+    ],
+    "Mardi Gras": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/mardi-gras"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/mardi-gras"
+      }
+    ],
+    "Carnival Conquest": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-conquest"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-conquest"
+      }
+    ],
+    "Carnival Dream": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-dream"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-dream"
+      }
+    ],
+    "Carnival Panorama": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-panorama"
+      }
+    ],
+    "Carnival Legend": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-legend"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-legend"
+      }
+    ],
+    "Carnival Glory": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-glory"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-glory"
+      }
+    ],
+    "Carnival Radiance": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-radiance"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-radiance"
+      }
+    ],
+    "Carnival Spirit": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-spirit"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-spirit"
+      }
+    ],
+    "Carnival Horizon": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-horizon"
+      }
+    ],
+    "Carnival Sunrise": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunrise"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunrise"
+      }
+    ],
+    "Carnival Miracle": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-miracle"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-miracle"
+      }
+    ],
+    "Carnival Vista": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-vista"
+      }
+    ],
+    "Carnival Magic": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-magic"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-magic"
+      }
+    ],
+    "Carnival Breeze": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-breeze"
+      }
+    ],
+    "Carnival Freedom": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-freedom"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-freedom"
+      }
+    ],
+    "Carnival Paradise": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-paradise"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-paradise"
+      }
+    ],
+    "Carnival Elation": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-elation"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-elation"
+      }
+    ],
+    "Carnival Sunshine": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunshine"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-sunshine"
+      }
+    ],
+    "Carnival Valor": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-valor"
+      },
+      {
+        "field": "kids_family (Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-valor"
+      }
+    ],
+    "Carnival Liberty": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-liberty"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-liberty"
+      }
+    ],
+    "Carnival Pride": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-pride"
+      }
+    ],
+    "Carnival Splendor": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-splendor"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-splendor"
+      }
+    ],
+    "Carnival Adventure": [
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-adventure"
+      },
+      {
+        "field": "ship_class",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-adventure"
+      }
+    ],
+    "Carnival Encounter": [
+      {
+        "field": "decks",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
+      },
+      {
+        "field": "kids_family (Camp Ocean / Circle C / Club O2 names)",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
+      },
+      {
+        "field": "ship_class",
+        "official_url": "https://www.carnival.com/cruise-ships/carnival-encounter"
+      }
+    ]
+  },
+  "celebrity": {
+    "Celebrity Edge": [
+      {
+        "field": "main dining venue names (Cosmopolitan/Cyprus/Normandie/Tuscan)",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
+      }
+    ],
+    "Celebrity Apex": [
+      {
+        "field": "full dining venue list",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
+      }
+    ],
+    "Celebrity Beyond": [
+      {
+        "field": "named dining venues",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
+      }
+    ],
+    "Celebrity Ascent": [
+      {
+        "field": "full named dining list",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
+      }
+    ],
+    "Celebrity Xcel": [
+      {
+        "field": "named dining venues",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
+      }
+    ],
+    "Celebrity Solstice": [
+      {
+        "field": "main dining room / buffet names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
+      }
+    ],
+    "Celebrity Equinox": [
+      {
+        "field": "main dining room and buffet names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
+      }
+    ],
+    "Celebrity Eclipse": [
+      {
+        "field": "main dining room / buffet / specialty full list",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
+      }
+    ],
+    "Celebrity Silhouette": [
+      {
+        "field": "entertainment venues/shows",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
+      },
+      {
+        "field": "main dining and buffet names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
+      }
+    ],
+    "Celebrity Reflection": [
+      {
+        "field": "entertainment venues/shows",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
+      },
+      {
+        "field": "main dining and buffet names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
+      }
+    ],
+    "Celebrity Millennium": [
+      {
+        "field": "entertainment venues/shows/casino",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
+      }
+    ],
+    "Celebrity Infinity": [
+      {
+        "field": "casino / production shows",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
+      }
+    ],
+    "Celebrity Summit": [
+      {
+        "field": "production show names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
+      }
+    ],
+    "Celebrity Constellation": [
+      {
+        "field": "casino / main dining and buffet names",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation/eat-and-drink"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
+      }
+    ],
+    "Celebrity Flora": [
+      {
+        "field": "dining venues",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      },
+      {
+        "field": "entertainment",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      },
+      {
+        "field": "kids_family program",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      },
+      {
+        "field": "decks",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+      }
+    ]
+  },
+  "holland-america": {
+    "Koningsdam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
+      },
+      {
+        "field": "tonnage / guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam"
+      }
+    ],
+    "Nieuw Statendam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
+      },
+      {
+        "field": "tonnage / guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam"
+      }
+    ],
+    "Rotterdam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
+      },
+      {
+        "field": "tonnage / guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam"
+      }
+    ],
+    "Eurodam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
+      },
+      {
+        "field": "tonnage / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam"
+      }
+    ],
+    "Nieuw Amsterdam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
+      },
+      {
+        "field": "tonnage / guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam"
+      }
+    ],
+    "Noordam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
+      },
+      {
+        "field": "guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/noordam"
+      }
+    ],
+    "Oosterdam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
+      },
+      {
+        "field": "guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam"
+      }
+    ],
+    "Westerdam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
+      },
+      {
+        "field": "guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam"
+      }
+    ],
+    "Zuiderdam": [
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zuiderdam"
+      }
+    ],
+    "Volendam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
+      },
+      {
+        "field": "guest capacity / year built",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/volendam"
+      }
+    ],
+    "Zaandam": [
+      {
+        "field": "decks",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam"
+      }
+    ]
+  },
+  "margaritaville-at-sea": {
+    "Margaritaville at Sea Paradise": [
+      {
+        "field": "decks (total passenger deck count)",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise/paradise-deck-plan"
+      },
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise"
+      },
+      {
+        "field": "named pools list (only 12 Volt Bar & Pool / main pool referenced)",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise/things-to-do"
+      },
+      {
+        "field": "spa named venue / spa brand",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/paradise"
+      }
+    ],
+    "Margaritaville at Sea Islander": [
+      {
+        "field": "bridge_cam",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander"
+      },
+      {
+        "field": "spa named venue / spa brand",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander/things-to-do"
+      },
+      {
+        "field": "passenger capacity (2,650 seen in press release, not confirmed on ship page)",
+        "official_url": "https://www.margaritavilleatsea.com/explore-our-ships/islander"
+      }
+    ]
+  }
+}

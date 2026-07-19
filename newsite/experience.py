@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 """Rich per-ship 'experience' sections — Onboard overview, Food & Dining, Drinks & packages,
 Activities, Entertainment, Kids/Teens/Families, Decks & layout, Bridge cam — plus a self-hosted
-photo strip. Data-driven: each section renders ONLY when it has verified content (never a fake
-'coming soon' block). Per-ship content lives in data/ships/<line>.json under each ship's "exp"
-key; line-wide shared content (drink packages, kids programs) lives in data/cruise-lines.json
-under "experience". NO PRICES. All prose is original — we store facts, not copied sentences."""
+photo strip. Data-driven: each section renders ONLY when it has verified content (no fake
+'coming soon' blocks). Per-ship content lives in data/ships/<line>.json under each ship's "exp"
+key; line-wide shared content (drink packages, kids programs) in data/cruise-lines.json under
+"experience".
+
+Flexible inputs — activities / entertainment / kids_family may be a STRING (rendered as a
+paragraph) or a LIST (rendered as chips); dining "extra" may be a bool (Included/Extra tag) or a
+descriptive string (rendered as a note). NO PRICES. All prose is original — we store facts."""
 from config import PHONE_HREF, PHONE_DISPLAY
 from linepage import line_data
 
@@ -21,7 +25,7 @@ _H = {
 }
 _IC = {"overview": "🚢", "dining": "🍽️", "drinks": "🍹", "activities": "🎢",
        "entertainment": "🎭", "family": "👨‍👩‍👧", "decks": "🛗", "cam": "📷"}
-_DTYPE = {  # dining venue type labels
+_DTYPE = {
     "main": {"en": "Main dining", "es": "Comedor principal"},
     "buffet": {"en": "Buffet", "es": "Bufé"},
     "casual": {"en": "Casual", "es": "Informal"},
@@ -44,6 +48,16 @@ def _call(lang, txt):
             f'<span class="ic" aria-hidden="true">☎</span>{c} · {PHONE_DISPLAY}</a></div>')
 
 
+def _chips_or_p(val):
+    """Render a string as a paragraph, or a list as chips. Empty → ''."""
+    if isinstance(val, str) and val.strip():
+        return f'<p class="rsec-sub">{val}</p>'
+    if isinstance(val, (list, tuple)):
+        chips = "".join(f'<span class="ft">{x}</span>' for x in val if x)
+        return f'<div class="ship-feats">{chips}</div>' if chips else ""
+    return ""
+
+
 def has_experience(line_slug, ship):
     exp = ship.get("exp") or {}
     le = (line_data(line_slug).get("experience") or {})
@@ -56,7 +70,7 @@ def experience_sections(lang, line_slug, ship):
     name = ship["name"]
     out = ""
 
-    # ── Photo strip (self-hosted, royalty-free/licensed; illustrative) ──
+    # ── Photo strip (self-hosted, illustrative or licensed) ──
     photos = exp.get("photos") or []
     if photos:
         cards = "".join(
@@ -66,7 +80,7 @@ def experience_sections(lang, line_slug, ship):
         note = ("Photos are illustrative." if lang == "en" else "Fotos ilustrativas.")
         out += _sec("photos", lang, f'<div class="xphotos">{cards}</div><p class="xnote">{note}</p>')
 
-    # ── Overview (original prose) ──
+    # ── Overview ──
     ov = exp.get("overview")
     if ov:
         out += _sec("overview", lang, f'<p class="intro">{ov}</p>')
@@ -76,14 +90,21 @@ def experience_sections(lang, line_slug, ship):
     if dining:
         rows = ""
         for d in dining:
-            if not d.get("name"):
+            nm = d.get("name")
+            if not nm:
                 continue
             t = d.get("type")
-            badge = f'<span class="xtag">{_DTYPE[t][lang]}</span>' if t in _DTYPE else ""
-            cost = (f'<span class="xtag xtag-x">{_EXT[lang]}</span>' if d.get("extra")
-                    else f'<span class="xtag xtag-i">{_INC[lang]}</span>')
-            rows += f'<li><b>{d["name"]}</b>{badge}{cost}</li>'
-        nudge = (_call(lang, f"Want a specialty table booked before you sail? Our team sets it up when you call.")
+            tb = f'<span class="xtag">{_DTYPE[t][lang] if t in _DTYPE else t}</span>' if t else ""
+            ex = d.get("extra")
+            tag, desc = "", ""
+            if ex is True:
+                tag = f'<span class="xtag xtag-x">{_EXT[lang]}</span>'
+            elif ex is False:
+                tag = f'<span class="xtag xtag-i">{_INC[lang]}</span>'
+            elif isinstance(ex, str) and ex.strip():
+                desc = f'<span class="xdesc">{ex}</span>'
+            rows += f'<li><b>{nm}</b>{tb}{tag}{desc}</li>'
+        nudge = (_call(lang, "Want a specialty table booked before you sail? Our team sets it up when you call.")
                  if lang == "en" else
                  _call(lang, "¿Quieres reservar un restaurante de especialidad antes de zarpar? Lo hacemos por teléfono."))
         out += _sec("dining", lang, f'<ul class="xdine">{rows}</ul>{nudge}')
@@ -97,21 +118,20 @@ def experience_sections(lang, line_slug, ship):
         out += _sec("drinks", lang, f'<div class="xpkgs">{cards}</div>')
 
     # ── Activities ──
-    acts = exp.get("activities") or []
-    if acts:
-        chips = "".join(f'<span class="ft">{a}</span>' for a in acts if a)
+    acts = exp.get("activities")
+    ai = _chips_or_p(acts)
+    if ai:
         nudge = (_call(lang, f"A specialist knows which {name} activities book up fast and how to lock them in.")
                  if lang == "en" else
                  _call(lang, f"Un especialista sabe qué actividades de {name} se agotan rápido y cómo asegurarlas."))
-        out += _sec("activities", lang, f'<div class="ship-feats">{chips}</div>{nudge}')
+        out += _sec("activities", lang, f'{ai}{nudge}')
 
     # ── Entertainment ──
-    ent = exp.get("entertainment") or []
+    ent = _chips_or_p(exp.get("entertainment"))
     if ent:
-        chips = "".join(f'<span class="ft">{e}</span>' for e in ent if e)
-        out += _sec("entertainment", lang, f'<div class="ship-feats">{chips}</div>')
+        out += _sec("entertainment", lang, ent)
 
-    # ── Kids, teens & families (line-wide, with any ship note) ──
+    # ── Kids, teens & families (line-wide dict + any ship note) ──
     kids = le.get("kids") or {}
     krows = ""
     for k, lbl in (("nursery", {"en": "Nursery", "es": "Guardería"}),
@@ -121,12 +141,14 @@ def experience_sections(lang, line_slug, ship):
         v = kids.get(k)
         if v:
             krows += f'<div class="glance-cell"><b>{lbl[lang]}</b><span>{v}</span></div>'
-    if krows:
-        out += _sec("family", lang, f'<div class="glance-grid">{krows}</div>')
+    grid = f'<div class="glance-grid">{krows}</div>' if krows else ""
+    ship_kids = _chips_or_p(exp.get("kids_family"))
+    if grid or ship_kids:
+        out += _sec("family", lang, f'{grid}{ship_kids}')
 
     # ── Decks & layout ──
     decks = exp.get("decks")
-    nbh = exp.get("neighborhoods") or []
+    nbh = exp.get("neighbourhoods") or exp.get("neighborhoods") or []
     if decks or nbh:
         bits = ""
         if decks:
@@ -139,7 +161,7 @@ def experience_sections(lang, line_slug, ship):
             inner += f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b></p><div class="ship-feats">{chips}</div>'
         out += _sec("decks", lang, inner)
 
-    # ── Bridge cam (availability only — we don't re-host the line's live stream) ──
+    # ── Bridge cam (availability only) ──
     cam = exp.get("bridge_cam")
     if cam is not None:
         if cam:
