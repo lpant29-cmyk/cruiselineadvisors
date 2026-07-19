@@ -30,7 +30,16 @@ def _t(en, es, lang):
     return en if lang == "en" else es
 
 
+def clean_urls(s):
+    """Rewrite links/canonicals to clean directory URLs: /en/index.html -> /en/,
+    /en/lines/carnival.html -> /en/lines/carnival/ . Pages are written as <path>/index.html."""
+    s = re.sub(r'/(en|es)/index\.html', r'/\1/', s)
+    s = re.sub(r'/(en|es)/([A-Za-z0-9/_%-]+?)\.html', r'/\1/\2/', s)
+    return s
+
+
 def build():
+    shutil.rmtree(DIST, ignore_errors=True)  # clean output so no stale files linger
     hits, written = [], []
 
     def write(rel, html):
@@ -54,10 +63,14 @@ def build():
                 hits.append((b, rel))
 
     def emit(lang, path, title, desc, content):
-        html = page(lang, path, title, desc, content)
-        write(f"{lang}/{path}", html)
-        written.append(f"{lang}/{path}")
-        guard(f"{lang}/{path}", html)
+        html = clean_urls(page(lang, path, title, desc, content))
+        if path == "index.html":
+            out, url = f"{lang}/index.html", f"{lang}/"
+        else:
+            out, url = f"{lang}/{path[:-5]}/index.html", f"{lang}/{path[:-5]}/"
+        write(out, html)
+        written.append(url)
+        guard(out, html)
 
     for lang in LANGS:
         emit(lang, "index.html", HOME_TITLE[lang], T[lang]["hero_sub"], page_home.render(lang))
@@ -113,18 +126,18 @@ def build():
                  LEGAL[k]["title"][lang], p_legal(lang, k))
 
     # root → default language
-    write("index.html", f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+    write("index.html", clean_urls(f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="0; url=/{DEFAULT_LANG}/index.html">
 <link rel="canonical" href="{SITE_URL}/{DEFAULT_LANG}/index.html"><title>{BRAND}</title></head>
 <body><script>location.replace('/{DEFAULT_LANG}/index.html')</script>
-<p>Redirecting to <a href="/{DEFAULT_LANG}/index.html">{BRAND}</a>…</p></body></html>""")
+<p>Redirecting to <a href="/{DEFAULT_LANG}/index.html">{BRAND}</a>…</p></body></html>"""))
 
     # 404
     nf = ('<section class="section navy phero"><div class="wrap">'
           '<h1>Page not found</h1><p class="phero-sub">That page has drifted off course. Let\'s get you back on deck.</p>'
           f'<a class="btn btn-call" href="/{DEFAULT_LANG}/index.html">← Back to home</a></div></section>')
-    html404 = page(DEFAULT_LANG, "404.html", "Page not found | CruiseLine Advisors", "Page not found.", nf)
+    html404 = clean_urls(page(DEFAULT_LANG, "404.html", "Page not found | CruiseLine Advisors", "Page not found.", nf))
     html404 = html404.replace('content="index,follow', 'content="noindex,follow')
     write("404.html", html404)
 
