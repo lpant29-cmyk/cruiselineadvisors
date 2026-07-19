@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Site footer — one file. Link columns + the compliance disclaimers (bilingual).
 The disclaimers are legally load-bearing; edit with care."""
-from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND
+from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY
 from i18n import T
 import datetime
 
@@ -82,7 +82,7 @@ def footer(lang):
       <div class="disc">
         {disc}
         <div class="legalrow">{legal}</div>
-        <p style="margin-top:.6rem">© {YEAR} [Your Company] LLC. Florida, USA.</p>
+        <p style="margin-top:.6rem">© {YEAR} {COMPANY}. Florida, USA.</p>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
 Bilingual. Compliance-critical: keep the disclaimers intact. Placeholders in [brackets]
 must be filled before launch ([Your Company] LLC, address, privacy email)."""
 import datetime
-from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, SITE_URL
+from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, SITE_URL, COMPANY, COMPANY_ADDR, PRIVACY_EMAIL
 
 YEAR = datetime.date.today().year
 TODAY = datetime.date.today().isoformat()
@@ -134,6 +134,16 @@ LEGAL = {
                     "privacidad."}),
         ]},
 }
+
+
+# Fill legal placeholders from config (company/address/email) across all legal copy.
+_SUB = {"[Your Company] LLC": COMPANY, "[Street Address]": COMPANY_ADDR,
+        "[Dirección]": COMPANY_ADDR, "[privacy@yourdomain.com]": PRIVACY_EMAIL}
+for _page in LEGAL.values():
+    for _h, _b in _page["sec"]:
+        for _l in ("en", "es"):
+            for _k, _v in _SUB.items():
+                _b[_l] = _b[_l].replace(_k, _v)
 
 
 def p_legal(lang, key):

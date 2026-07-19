@@ -16,6 +16,12 @@ BRAND      = "CruiseLine Advisors"
 SITE_URL   = "https://cruiselineadvisors.com"
 SINCE_YEAR = 2015
 
+# Legal entity (differs from the brand). NOTE: the LLC name contains "cheapest" — a banned
+# marketing term — so build.py exempts this exact string from the guard (it's a proper noun).
+COMPANY       = "BookMeCheapest LLC"
+COMPANY_ADDR  = "6501 Arlington Expressway #2177, Jacksonville, FL 32211, United States"
+PRIVACY_EMAIL = "privacy@cruiselineadvisors.com"  # TODO: confirm this inbox exists
+
 # ── Coverage hours (NEVER "24/7" — Hard Rule 6) ────────────────────────────
 HOURS = {
     "en": "8am–11pm ET, every day",

@@ -7,7 +7,7 @@ import os
 import re
 import shutil
 import datetime
-from config import LANGS, DEFAULT_LANG, SITE_URL, BRAND
+from config import LANGS, DEFAULT_LANG, SITE_URL, BRAND, COMPANY
 from base import page
 from i18n import T
 import page_home
@@ -48,7 +48,7 @@ def build():
         # then scan the remaining visible prose strictly.
         main = re.sub(r"<script\b[^>]*>.*?</script>", "", m.group(1), flags=re.S | re.I)
         main = re.sub(r'<span class="fee">.*?</span>', "", main, flags=re.S | re.I)
-        low = main.lower()
+        low = main.lower().replace(COMPANY.lower(), "")  # legal entity name is a proper noun
         for b in BANNED:
             if b in low:
                 hits.append((b, rel))
