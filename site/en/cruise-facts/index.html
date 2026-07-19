@@ -331,6 +331,16 @@ img,svg{max-width:100%}
 .cx-foot{padding:16px;background:var(--cream);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .cx-foot p{font-size:.95rem;color:var(--navy);font-weight:700}
 @media(min-width:760px){.cx-cards{grid-template-columns:1fr 1fr}}
+/* collapsible accordion rows — compact, tap to expand (one open at a time) */
+.cx-card{padding:0;overflow:hidden}
+.cx-head{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;background:none;border:0;padding:12px 15px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.cx-head:hover{background:rgba(18,145,154,.06)}
+.cx-head:focus-visible{outline:3px solid var(--sea2);outline-offset:-3px}
+.cx-chev{flex:none;color:var(--muted);font-size:.95rem;transition:transform .2s}
+.cx-card.open{background:#fff}
+.cx-card.open .cx-chev{transform:rotate(180deg);color:var(--sea3)}
+.cx-vals{display:none;margin-top:0;padding:0 15px 13px}
+.cx-card.open .cx-vals{display:grid}
 
 /* ═══ updates (page + per-line cards) ═══ */
 .updgrid{display:grid;gap:14px}
@@ -688,14 +698,21 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
   function render(){
     var a=A.value,b=B.value,na=nm(a),nb=nm(b),h='';
     D.facts.forEach(function(f){
-      h+='<div class="cx-card'+(f.imp?' imp':'')+'">'
-        +'<div class="cx-fact">'+(f.imp?'<span class="cx-badge">💰</span>':'')+'<span>'+f.label+'<small>'+f.note+'</small></span></div>'
+      h+='<div class="cx-card'+(f.imp?' imp':'')+'"><button type="button" class="cx-head"><span class="cx-fact">'+(f.imp?'<span class="cx-badge">💰</span>':'')+'<span>'+f.label+'<small>'+f.note+'</small></span></span><span class="cx-chev" aria-hidden="true">\u25BE</span></button>'
         +'<div class="cx-vals">'
         +'<div class="cx-row cx-a"><span class="cx-line">'+na+'</span><span class="cx-val">'+cell(a,f.key)+'</span></div>'
         +'<div class="cx-row cx-b"><span class="cx-line">'+nb+'</span><span class="cx-val">'+cell(b,f.key)+'</span></div>'
         +'</div></div>';
     });
     body.innerHTML=h;
+    var hs=body.querySelectorAll('.cx-head');
+    for(var i=0;i<hs.length;i++){ hs[i].onclick=function(){
+      var c=this.parentNode, was=c.classList.contains('open');
+      var op=body.querySelectorAll('.cx-card.open');
+      for(var j=0;j<op.length;j++) op[j].classList.remove('open');
+      if(!was) c.classList.add('open');
+    }; }
+    var fst=body.querySelector('.cx-card'); if(fst) fst.classList.add('open');
   }
   A.onchange=render; B.onchange=render; render();
 })();</script></div></section><section class="section cream"><div class="wrap"><div class="ctaband">

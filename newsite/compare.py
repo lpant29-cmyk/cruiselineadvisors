@@ -84,14 +84,21 @@ def compare_tool(lang, default_a="royal-caribbean", default_b="carnival"):
   function render(){{
     var a=A.value,b=B.value,na=nm(a),nb=nm(b),h='';
     D.facts.forEach(function(f){{
-      h+='<div class="cx-card'+(f.imp?' imp':'')+'">'
-        +'<div class="cx-fact">'+(f.imp?'<span class="cx-badge">💰</span>':'')+'<span>'+f.label+'<small>'+f.note+'</small></span></div>'
+      h+='<div class="cx-card'+(f.imp?' imp':'')+'"><button type="button" class="cx-head"><span class="cx-fact">'+(f.imp?'<span class="cx-badge">💰</span>':'')+'<span>'+f.label+'<small>'+f.note+'</small></span></span><span class="cx-chev" aria-hidden="true">\\u25BE</span></button>'
         +'<div class="cx-vals">'
         +'<div class="cx-row cx-a"><span class="cx-line">'+na+'</span><span class="cx-val">'+cell(a,f.key)+'</span></div>'
         +'<div class="cx-row cx-b"><span class="cx-line">'+nb+'</span><span class="cx-val">'+cell(b,f.key)+'</span></div>'
         +'</div></div>';
     }});
     body.innerHTML=h;
+    var hs=body.querySelectorAll('.cx-head');
+    for(var i=0;i<hs.length;i++){{ hs[i].onclick=function(){{
+      var c=this.parentNode, was=c.classList.contains('open');
+      var op=body.querySelectorAll('.cx-card.open');
+      for(var j=0;j<op.length;j++) op[j].classList.remove('open');
+      if(!was) c.classList.add('open');
+    }}; }}
+    var fst=body.querySelector('.cx-card'); if(fst) fst.classList.add('open');
   }}
   A.onchange=render; B.onchange=render; render();
 }})();</script>"""

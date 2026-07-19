@@ -239,10 +239,18 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
       h+=card(r.label,'',val(a,r.k),val(b,r.k));
     }});
     body.innerHTML=h;
+    var hs=body.querySelectorAll('.cx-head');
+    for(var i=0;i<hs.length;i++){{ hs[i].onclick=function(){{
+      var c=this.parentNode, was=c.classList.contains('open');
+      var op=body.querySelectorAll('.cx-card.open');
+      for(var j=0;j<op.length;j++) op[j].classList.remove('open');
+      if(!was) c.classList.add('open');
+    }}; }}
+    var f=body.querySelector('.cx-card'); if(f) f.classList.add('open');
     verdict(a,b);
   }}
   function card(label,note,av,bv){{
-    return '<div class="cx-card"><div class="cx-fact"><span>'+label+(note?'<small>'+note+'</small>':'')+'</span></div>'
+    return '<div class="cx-card"><button type="button" class="cx-head"><span class="cx-fact"><span>'+label+(note?'<small>'+note+'</small>':'')+'</span></span><span class="cx-chev" aria-hidden="true">\\u25BE</span></button>'
       +'<div class="cx-vals">'
       +'<div class="cx-row cx-a"><span class="cx-line">'+(byId[A.value]?byId[A.value].name:'')+'</span><span class="cx-val">'+av+'</span></div>'
       +'<div class="cx-row cx-b"><span class="cx-line">'+(byId[B.value]?byId[B.value].name:'')+'</span><span class="cx-val">'+bv+'</span></div>'
