@@ -556,7 +556,185 @@
           "used_for": "Alaska park access"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": {
+        "note": "US/Canada home-port deployment by season, from official Royal Caribbean press center releases and royalcaribbean.com ship pages. Florida/Gulf ports run year-round Caribbean; warm-weather assignments are listed under winter. Deployments rotate season to season.",
+        "sources": [
+          "https://www.royalcaribbeanpresscenter.com/press-release/1760/royal-caribbean-brings-the-action-with-2026-27-caribbean-and-northeast-lineup/",
+          "https://www.royalcaribbeanpresscenter.com/press-release/1774/royal-caribbean-maximizes-every-minute-of-short-caribbean-getaways-in-2026-27/",
+          "https://www.royalcaribbeanpresscenter.com/press-release/1823/royal-caribbean-reveals-summer-2027-adventures-to-alaska/",
+          "https://www.royalcaribbeanpresscenter.com/press-release/1755/royal-caribbeans-next-bold-adventures-in-europe-to-headline-summer-2026/"
+        ],
+        "summer": [
+          {
+            "port": "Seattle, WA",
+            "regions": [
+              "Alaska"
+            ],
+            "ships": [
+              "Quantum of the Seas",
+              "Voyager of the Seas"
+            ],
+            "note": "7-night Alaska (summer 2027); Juneau, Skagway, Sitka, Endicott Arm/Dawes Glacier."
+          },
+          {
+            "port": "Seward, AK",
+            "regions": [
+              "Alaska"
+            ],
+            "ships": [
+              "Anthem of the Seas"
+            ],
+            "note": "7-night Alaska with overnight Cruisetour options (summer 2027)."
+          },
+          {
+            "port": "Vancouver, BC (Canada)",
+            "regions": [
+              "Alaska",
+              "Inside Passage"
+            ],
+            "ships": [
+              "Anthem of the Seas",
+              "Serenade of the Seas"
+            ],
+            "note": "7-night Inside Passage; Sitka, Icy Strait Point, Ketchikan, Hubbard Glacier (summer 2027)."
+          },
+          {
+            "port": "Cape Liberty (Bayonne), NJ",
+            "regions": [
+              "The Bahamas",
+              "Bermuda",
+              "Canada & New England"
+            ],
+            "ships": [],
+            "note": "Summer 2026 Bahamas 7- & 9-night plus Northeast itineraries (press center 2026-27 Northeast lineup)."
+          }
+        ],
+        "winter": [
+          {
+            "port": "Miami, FL",
+            "regions": [
+              "Caribbean (year-round)"
+            ],
+            "ships": [
+              "Icon of the Seas"
+            ],
+            "note": "Year-round 7-night alternating Eastern & Western Caribbean; every sailing calls Perfect Day at CocoCay."
+          },
+          {
+            "port": "Orlando (Port Canaveral), FL",
+            "regions": [
+              "Caribbean (year-round)",
+              "The Bahamas"
+            ],
+            "ships": [
+              "Star of the Seas",
+              "Utopia of the Seas",
+              "Adventure of the Seas",
+              "Harmony of the Seas"
+            ],
+            "note": "Star: year-round 7-night E/W Caribbean. Utopia: 3-/4-night short getaways to CocoCay & Nassau. Adventure: 6-/8-night Caribbean."
+          },
+          {
+            "port": "Fort Lauderdale (Port Everglades), FL",
+            "regions": [
+              "Caribbean (year-round)"
+            ],
+            "ships": [
+              "Allure of the Seas",
+              "Oasis of the Seas",
+              "Legend of the Seas"
+            ],
+            "note": "Legend repositions here for year-round Caribbean from Nov 2026 after its European debut."
+          },
+          {
+            "port": "Galveston, TX",
+            "regions": [
+              "Western Caribbean"
+            ],
+            "ships": [
+              "Symphony of the Seas"
+            ],
+            "note": "2026-27 season; 6-8 night W Caribbean from the zero-energy terminal."
+          },
+          {
+            "port": "Tampa, FL",
+            "regions": [
+              "Western Caribbean"
+            ],
+            "ships": [
+              "Enchantment of the Seas",
+              "Radiance of the Seas"
+            ],
+            "note": "7-night Western Caribbean; Belize, Roatan, Costa Maya, Cozumel (per official ship pages / press center)."
+          },
+          {
+            "port": "New York, NY",
+            "regions": [
+              "Caribbean",
+              "Bermuda"
+            ],
+            "ships": [
+              "Oasis of the Seas"
+            ],
+            "note": "Listed as an Oasis home port on the official ship page."
+          },
+          {
+            "port": "Baltimore, MD",
+            "regions": [
+              "The Bahamas",
+              "Bermuda",
+              "Southern Caribbean",
+              "Canada & New England"
+            ],
+            "ships": [
+              "Vision of the Seas"
+            ],
+            "note": "Per official Vision of the Seas ship page."
+          },
+          {
+            "port": "San Juan, PR",
+            "regions": [
+              "Southern Caribbean"
+            ],
+            "ships": [
+              "Rhapsody of the Seas"
+            ],
+            "note": "Per official Rhapsody of the Seas ship page."
+          },
+          {
+            "port": "Los Angeles, CA",
+            "regions": [
+              "Mexican Riviera"
+            ],
+            "ships": [
+              "Quantum of the Seas",
+              "Ovation of the Seas"
+            ],
+            "note": "West Coast season per official ship pages (ships rotate to Alaska/Australia in other seasons)."
+          },
+          {
+            "port": "San Diego, CA",
+            "regions": [
+              "Mexican Riviera"
+            ],
+            "ships": [
+              "Serenade of the Seas"
+            ],
+            "note": "Per official Serenade of the Seas ship page (rotates to Alaska ex-Vancouver in summer)."
+          }
+        ],
+        "europe_repositioned_summer_2026": {
+          "note": "Ships that leave US home ports for Europe in summer 2026 (per press center), returning to the Americas for winter.",
+          "ships": {
+            "Harmony of the Seas": "ex-Barcelona, Western Mediterranean",
+            "Odyssey of the Seas": "ex-Rome (Civitavecchia), Mediterranean/Greek Isles/Turkey",
+            "Brilliance of the Seas": "ex-Athens/Rome/Ravenna/Barcelona, Mediterranean",
+            "Explorer of the Seas": "ex-Ravenna, Adriatic & Aegean",
+            "Legend of the Seas": "ex-Barcelona, Western Mediterranean (debut) before Fort Lauderdale"
+          }
+        }
+      }
     },
     {
       "slug": "carnival",
@@ -1822,7 +2000,75 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": {
+        "note": "Regions reachable from US/Canada home ports by season, per official ship and destination pages on celebritycruises.com. Europe/Asia/Galapagos/South America sailings depart from non-US ports and are listed for context only.",
+        "spring_summer": [
+          {
+            "region": "Alaska",
+            "us_canada_ports": [
+              "Seattle, WA",
+              "Vancouver, BC"
+            ],
+            "ships_seen": [
+              "Celebrity Edge",
+              "Celebrity Solstice",
+              "Celebrity Summit"
+            ]
+          },
+          {
+            "region": "Bermuda / Canada & New England",
+            "us_canada_ports": [
+              "Cape Liberty (Bayonne), NJ",
+              "Boston, MA"
+            ],
+            "ships_seen": [
+              "Celebrity Silhouette"
+            ]
+          },
+          {
+            "region": "Caribbean (year-round)",
+            "us_canada_ports": [
+              "Fort Lauderdale, FL",
+              "Miami, FL"
+            ],
+            "ships_seen": [
+              "Celebrity Beyond",
+              "Celebrity Reflection"
+            ]
+          }
+        ],
+        "fall_winter": [
+          {
+            "region": "Caribbean",
+            "us_canada_ports": [
+              "Fort Lauderdale, FL",
+              "Miami, FL"
+            ],
+            "ships_seen": [
+              "Celebrity Beyond",
+              "Celebrity Ascent",
+              "Celebrity Reflection",
+              "Celebrity Summit",
+              "Celebrity Constellation",
+              "Celebrity Xcel"
+            ]
+          },
+          {
+            "region": "Panama Canal",
+            "us_canada_ports": [
+              "Fort Lauderdale, FL"
+            ],
+            "ships_seen": [
+              "Celebrity Beyond"
+            ]
+          }
+        ],
+        "exp_source": "https://www.celebritycruises.com/cruise-ships (per-ship itinerary sections)",
+        "needs": [
+          "Exact per-ship home-port + sail-date assignments not fully published on ship overview pages; confirm from official itinerary search before rendering as current."
+        ]
+      }
     },
     {
       "slug": "princess",
@@ -2608,7 +2854,58 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": {
+        "summary": "MSC is a Mediterranean/European line: the core fleet sails the Western Mediterranean, Northern Europe and the Fjords in summer. A rotating group of ships repositions to U.S. home ports for the winter Caribbean/Bahamas season. Winter 2026-2027 places seven ships in the U.S.",
+        "source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-announces-winter-2026-2027-season-with-seven-ships-sailing-in-the-u-s/",
+        "us_home_ports": {
+          "Miami": [
+            {
+              "ship": "MSC World America",
+              "region": "Caribbean",
+              "note": "7-night Western Caribbean and 7-night Eastern Caribbean (year-round Miami flagship)"
+            },
+            {
+              "ship": "MSC Seaside",
+              "region": "Bahamas",
+              "note": "3- and 4-night Bahamas short cruises"
+            },
+            {
+              "ship": "MSC Poesia",
+              "region": "Panama Canal",
+              "note": "20-night Panama Canal repositioning (after an inaugural Alaska season from Seattle)"
+            }
+          ],
+          "Port Canaveral": [
+            {
+              "ship": "MSC Seashore",
+              "region": "Bahamas",
+              "note": "3- and 4-night Bahamas short cruises"
+            },
+            {
+              "ship": "MSC Grandiosa",
+              "region": "Caribbean",
+              "note": "7-night Western Caribbean and 7-night Eastern Caribbean"
+            }
+          ],
+          "New York City": [
+            {
+              "ship": "MSC Meraviglia",
+              "region": "Caribbean & Bahamas",
+              "note": "7-night Caribbean & Bahamas from Manhattan; arrives via a 19-night Grand Voyage from Barcelona"
+            }
+          ],
+          "Galveston": [
+            {
+              "ship": "MSC Seascape",
+              "region": "Western Caribbean",
+              "note": "7-night Western Caribbean"
+            }
+          ]
+        },
+        "summer_note": "In summer the European-based ships (MSC World Europa, MSC Euribia, MSC Virtuosa, MSC Bellissima, MSC Fantasia, MSC Divina, MSC Musica and the classic-fleet ships) sail the Mediterranean and Northern Europe; MSC Poesia debuts in Alaska from Seattle. Most U.S.-deployed ships reposition transatlantic between seasons.",
+        "ocean_cay": "MSC Caribbean and Bahamas itineraries call at MSC's private marine-reserve island, Ocean Cay MSC Marine Reserve, in the Bahamas."
+      }
     },
     {
       "slug": "cunard",
@@ -2989,7 +3286,8 @@
           "used_for": "Ship specs, inclusions, policies"
         }
       ],
-      "last_built": null
+      "last_built": null,
+      "seasonal_deployment": "EDITORIAL FRAMING ONLY — NOT VERIFIED. Cunard's flagship Queen Mary 2 is the fleet's transatlantic ocean liner, regularly sailing the Southampton (UK) to New York crossing; New York is Cunard's principal North American turnaround port, with additional seasonal New England & Canada and Caribbean voyages from New York, and occasional Caribbean sailings from Florida (e.g. Fort Lauderdale). Exact per-ship, per-season US/Canada port deployments must be confirmed from the official Cunard find-a-cruise pages before publishing."
     },
     {
       "slug": "margaritaville-at-sea",

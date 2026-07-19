@@ -11,6 +11,8 @@ import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SC = "/private/tmp/claude-501/-Users-lokesh29-cruiselineadvisors/0816b1d1-576f-4273-9b4b-2cf805325b26/scratchpad"
+# hand-curated showcases we don't want overwritten by the bulk pass
+SKIP = {"MSC World America"}
 
 
 def _price_strip(s):
@@ -99,6 +101,8 @@ def run():
         d = json.load(open(shp, encoding="utf-8"))
         applied = 0
         for s in d["ships"]:
+            if s["name"] in SKIP:
+                continue
             en = by.get(s["name"])
             if not en:
                 continue

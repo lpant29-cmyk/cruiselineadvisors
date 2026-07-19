@@ -200,7 +200,109 @@
         "The Venom Drop @ The Spiral, the longest dry slide at sea"
       ],
       "notes": "Guests = capacity figure printed as 6,762. Delivered October 2022; first World Class ship. Basis (max vs double occupancy) not explicitly stated on the fetched page.",
-      "spec_source": "https://www.mscpressarea.com/en_GB/press-releases/msc-world-europa-the-world-s-most-environmentally-high-performing-cruise-ship-sta/"
+      "spec_source": "https://www.mscpressarea.com/en_GB/press-releases/msc-world-europa-the-world-s-most-environmentally-high-performing-cruise-ship-sta/",
+      "exp": {
+        "overview": "MSC World Europa is the first of MSC's World Class and the first LNG-powered ship in the fleet - an ultramodern 'urban metropolis at sea' of 21 decks, 215,863 GT and 38,000 m2 of public space arranged into seven distinct districts. Its showpiece is The Venom Drop @ The Spiral, an 11-deck-high dry slide billed as the longest at sea, plunging down the half-open World Promenade under a giant LED sky screen.",
+        "who_for": "A flagship for families and design-led travellers who want a huge, futuristic ship with a strong European sensibility - a lively covered promenade of bars and shops on one side, an adults-only Zen district on the other, and a dedicated family district with as many as ten kids facilities. The MSC Yacht Club delivers the private ship-within-a-ship experience for premium guests.",
+        "dining": [
+          {
+            "name": "Chef's Garden Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fresh, seasonal, Nordic-inspired specialty restaurant."
+          },
+          {
+            "name": "Butcher's Cut",
+            "type": "specialty",
+            "extra": true,
+            "desc": "American-style steakhouse and grill."
+          },
+          {
+            "name": "Kaito Sushi Bar & Teppanyaki",
+            "type": null,
+            "extra": true,
+            "desc": "Sushi and teppanyaki, part of the 'Savour the World' culinary journey."
+          },
+          {
+            "name": "Hola! Tacos & Cantina",
+            "type": null,
+            "extra": true,
+            "desc": "Mexican street food and cantina."
+          },
+          {
+            "name": "La Pescaderia",
+            "type": "buffet",
+            "extra": true,
+            "desc": "Fresh seafood served market-style."
+          },
+          {
+            "name": "Luna Park Pizza & Burger",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual buffet-style pizza and burgers."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included multi-course dining rooms and buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Venom Drop @ The Spiral",
+            "desc": "11-deck-high dry slide, promoted as the longest slide at sea, down the World Promenade."
+          },
+          {
+            "name": "Pools & aquapark",
+            "desc": "Multiple pool decks including a family aqua zone and adults-only Zen pools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal area, treatments and a gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, pool, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "World Promenade & LED sky screen",
+            "desc": "Half-open promenade half-covered by a vast LED sky screen with tailor-made displays through the day - the social heart."
+          },
+          {
+            "name": "Theatre",
+            "desc": "Original Broadway-style production shows."
+          },
+          {
+            "name": "Casino & bar concepts",
+            "desc": "Casino plus seven bar concepts including The Gin Project (70+ gins), Elixir Mixology Bar, Fizz Champagne Bar, Masters of the Sea microbrewery pub, Coffee Emporium and Raj Polo Tea House."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "World Promenade",
+            "desc": "Lively covered/open promenade of shops, bars and entertainment under the LED screen."
+          },
+          {
+            "name": "Zen district",
+            "desc": "Tranquil adults-only district of pools and quiet space."
+          },
+          {
+            "name": "Family district",
+            "desc": "Dedicated family zone housing up to ten kids facilities."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          }
+        ],
+        "kids_family": "Family district with up to ten kids facilities - Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, LEGO Experience and the Doremiland world.",
+        "decks": 21,
+        "deploy_note": "Europe-based flagship: sails the Mediterranean; the first World Class and first LNG ship in the fleet.",
+        "exp_source": "https://www.mscpressarea.com/en_INT/christening/msc-world-europa/ ; https://www.mscpressarea.com/en_US/press-releases/msc-world-europa-further-elevates-food-and-beverage-experience-with-new-internati/ ; https://www.mscpressarea.com/en_INT/press-releases/msc-world-europa-the-world-s-most-environmentally-high-performing-cruise-ship-sta/"
+      }
     },
     {
       "name": "MSC Euribia",
@@ -215,7 +317,67 @@
         "Ocean Cay AquaPark with three water slides"
       ],
       "notes": "Guests = maximum capacity (6,334); 2,419 cabins. Named 8 June 2023 in Copenhagen. Third Meraviglia-Plus ship.",
-      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-officially-names-its-newest-flagship-msc-euribia-tonight-in-copenhage/"
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-officially-names-its-newest-flagship-msc-euribia-tonight-in-copenhage/",
+      "exp": {
+        "overview": "MSC Euribia is the third Meraviglia-Plus ship and the second LNG-powered ship in the fleet, named after the ancient goddess Eurybia who mastered the winds, weather and constellations. Her multicoloured hull - a public-vote artwork - and decks full of original art make her 'a unique ship where art meets innovation', sailing with MSC's most sustainable technologies. She keeps the Meraviglia-Plus template: a Mediterranean-style covered promenade under an LED sky dome, the Carousel Lounge, and a full family and Yacht Club offering.",
+        "who_for": "Families and eco-minded European cruisers who want MSC's newest Meraviglia-Plus experience, plus premium guests seeking the private MSC Yacht Club. Strong Mediterranean/Northern-European styling.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Meraviglia-Plus specialty line-up (steakhouse, Asian and seafood venues) along the promenade. Exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included multi-course dining rooms and an extensive buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & aquapark",
+            "desc": "Family pools and water play plus adults-only areas."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Carousel Lounge",
+            "desc": "Purpose-built ~400-seat lounge hosting the Carousel Productions at Sea acrobatic shows (the successor to Cirque du Soleil at Sea on the Meraviglia generation)."
+          },
+          {
+            "name": "Galleria promenade & LED sky dome",
+            "desc": "Covered Mediterranean-style promenade under an LED dome - the ship's social heart."
+          },
+          {
+            "name": "Theatre & casino",
+            "desc": "Original production shows plus a full casino and themed bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites, sundeck and exclusive lounge/restaurant."
+          },
+          {
+            "name": "Galleria promenade",
+            "desc": "Indoor social spine of bars, shops and the LED dome."
+          }
+        ],
+        "kids_family": "Full Doremiland family offering: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, LEGO Experience and the Guinness World Records show.",
+        "decks": 19,
+        "deploy_note": "Europe-based: Mediterranean and Northern Europe.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/msc-euribia/ ; https://www.mscpressarea.com/en_US/press-releases/msc-cruises-reveals-stunning-new-carousel-productions-at-sea-shows-exclusively-on/"
+      }
     },
     {
       "name": "MSC Grandiosa",
@@ -230,7 +392,67 @@
         "L'Atelier Bistrot specialty restaurant"
       ],
       "notes": "Guests = maximum capacity (6,334); lower-berth capacity 4,842. Delivered 31 October 2019; first Meraviglia-Plus ship.",
-      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2365/"
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2365/",
+      "exp": {
+        "overview": "MSC Grandiosa is the first Meraviglia-Plus ship, an enlarged evolution of the Meraviglia design built around the Galleria Grandiosa - a Mediterranean-style indoor promenade under an LED dome ceiling. She carries a full family and entertainment offering, an enhanced MSC Yacht Club, and the purpose-built Carousel Lounge.",
+        "who_for": "Families wanting a large, all-in Mediterranean-style ship, with the enhanced MSC Yacht Club for premium guests seeking a private retreat. Deployed to the U.S. for Caribbean sailings in winter 2026-2027.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Meraviglia-Plus specialty collection; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included multi-course dining and buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & aquapark",
+            "desc": "Family pools and water play plus adults-only areas."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Enhanced MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Carousel Lounge",
+            "desc": "Purpose-built ~400-seat lounge; debuted the Cirque du Soleil at Sea shows COSMOS and EXENTRICKS, now hosting Carousel Productions at Sea."
+          },
+          {
+            "name": "Galleria Grandiosa & LED dome",
+            "desc": "Indoor Mediterranean-style promenade under an LED sky dome - the social heart."
+          },
+          {
+            "name": "Theatre & casino",
+            "desc": "Original production shows plus a full casino and themed bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club (enhanced)",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          },
+          {
+            "name": "Galleria Grandiosa",
+            "desc": "Indoor promenade social spine under the LED dome."
+          }
+        ],
+        "kids_family": "Dedicated kids areas with original activities - Doremiland, Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, plus the Guinness World Records show.",
+        "decks": 19,
+        "deploy_note": "Winter 2026-2027 in the U.S. from Port Canaveral: 7-night Western and Eastern Caribbean.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/MSCGrandiosa/ ; https://www.mscpressarea.com/en_US/press-releases/3077/"
+      }
     },
     {
       "name": "MSC Virtuosa",
@@ -245,7 +467,75 @@
         "First cruise ship to receive Bureau Veritas BIORISK notation"
       ],
       "notes": "Delivered 1 February 2021, entered service 16 April 2021. Second Meraviglia-Plus ship. Gross tonnage and guest capacity NOT printed on the official pages fetched (delivery and christening pages) -> null; needs manual.",
-      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/3785/"
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/3785/",
+      "exp": {
+        "overview": "MSC Virtuosa is the second Meraviglia-Plus ship - 19 decks tall, with a 112-metre indoor promenade crowned by a stunning LED sky dome that acts as the social heart of the ship. She carries 10 restaurants, 21 bars and lounges (including the largest shopping area at sea), 5 pools and an aquapark, and made headlines with the MSC Starship Club, home to Rob, the world's first humanoid robotic bartender.",
+        "who_for": "Families wanting a big, tech-forward Mediterranean-style ship, and premium guests seeking the MSC Yacht Club ship-within-a-ship. Distinctly European in styling with standout entertainment.",
+        "dining": [
+          {
+            "name": "Specialty restaurants (part of 10 venues)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Meraviglia-Plus specialty collection along the promenade; exact names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a large buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Five pools & aquapark",
+            "desc": "Family pools, water play and sun decks."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal area, treatments and gym."
+          },
+          {
+            "name": "Largest shopping area at sea",
+            "desc": "Extensive boutique promenade."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Carousel Lounge",
+            "desc": "Purpose-built lounge for Carousel Productions at Sea acrobatic shows (successor to Cirque du Soleil at Sea)."
+          },
+          {
+            "name": "112-metre promenade & LED sky dome",
+            "desc": "Social heart of the ship under a full LED dome ceiling."
+          },
+          {
+            "name": "MSC Starship Club",
+            "desc": "Futuristic bar with Rob, the world's first humanoid robotic bartender."
+          },
+          {
+            "name": "Theatre & casino",
+            "desc": "Broadway-style production shows plus a full casino."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          },
+          {
+            "name": "Galleria promenade",
+            "desc": "112-metre indoor social spine under the LED dome."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, LEGO Experience.",
+        "decks": 19,
+        "deploy_note": "Europe-based: Mediterranean and Northern Europe.",
+        "exp_source": "https://www.mscpressarea.com/en_GB/christening/msc-virtuosa/"
+      }
     },
     {
       "name": "MSC Bellissima",
@@ -258,7 +548,67 @@
         "ZOE, described as the world's first virtual personal cruise assistant, in every cabin"
       ],
       "notes": "Guests = maximum capacity (5,686); lower-berth capacity 4,434. Delivered 27 February 2019; second Meraviglia Class ship.",
-      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2469/"
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/2469/",
+      "exp": {
+        "overview": "MSC Bellissima is the second Meraviglia-class ship - a near-twin of MSC Meraviglia built around a Mediterranean-style indoor promenade under an LED sky dome, the social heart of the ship. She carries the purpose-built Carousel Lounge, a full family programme and the MSC Yacht Club.",
+        "who_for": "Families and European-style cruisers wanting a big-ship Mediterranean experience, plus premium guests seeking the private MSC Yacht Club.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Meraviglia specialty collection; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & aquapark",
+            "desc": "Family pools and water play plus adults-only areas."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Carousel Lounge",
+            "desc": "Purpose-built lounge; debuted the Cirque du Soleil at Sea shows SYMA and VARELIA, now hosting Carousel Productions at Sea."
+          },
+          {
+            "name": "Galleria promenade & LED sky dome",
+            "desc": "Mediterranean-style indoor promenade under an 80-metre LED dome - the social heart."
+          },
+          {
+            "name": "Theatre & casino",
+            "desc": "Original production shows plus a full casino."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          },
+          {
+            "name": "Galleria promenade",
+            "desc": "Indoor social spine under the LED dome."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, LEGO Experience.",
+        "decks": 19,
+        "deploy_note": "Europe/worldwide-based; Mediterranean and seasonal long-haul.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/MSCBellissima/ ; https://www.mscpressarea.com/en_US/press-releases/2324/"
+      }
     },
     {
       "name": "MSC Meraviglia",
@@ -273,7 +623,67 @@
         "Extensive family and children's facilities"
       ],
       "notes": "Guests = 5,700 maximum (4,488 at double occupancy), from official christening page. First Meraviglia Class ship. Year entered service and gross tonnage NOT printed on the fetched official christening page -> null; needs manual.",
-      "spec_source": "https://www.mscpressarea.com/en_US/christening/mscmeraviglia/"
+      "spec_source": "https://www.mscpressarea.com/en_US/christening/mscmeraviglia/",
+      "exp": {
+        "overview": "MSC Meraviglia is the first Meraviglia-class ship and the vessel that introduced Cirque du Soleil at Sea - a next-generation cruise ship 1,034 ft long, 19 decks tall, carrying up to 5,700 guests (4,488 at double occupancy). Its centrepiece is a two-deck Mediterranean-style indoor promenade beneath a vast LED sky dome, and the purpose-built ~400-seat Carousel Lounge designed specifically for acrobatic productions.",
+        "who_for": "Families wanting a big, entertainment-rich Mediterranean-style ship, and premium guests seeking the MSC Yacht Club. From winter 2026-2027 she sails the Caribbean from New York, making her one of the most accessible MSC ships for U.S. East Coast travellers.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Meraviglia specialty collection along the Galleria; exact venue names not confirmed on the press area (detailed fact sheet is a downloadable PDF)."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Flexible included dining rooms and an extensive buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & aquapark",
+            "desc": "Family pools and water slides plus adults-only areas."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, Balinese-inspired treatments and a gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Carousel Lounge",
+            "desc": "Purpose-built ~400-seat lounge that launched Cirque du Soleil at Sea (VIAGGIO and SONOR); now home to Carousel Productions at Sea shows."
+          },
+          {
+            "name": "Galleria Meraviglia & LED sky dome",
+            "desc": "Two-deck Mediterranean-style indoor promenade under a nearly 80-metre LED dome ceiling - the social heart."
+          },
+          {
+            "name": "Theatre & casino",
+            "desc": "Original production shows plus a full casino and themed bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          },
+          {
+            "name": "Galleria Meraviglia",
+            "desc": "Indoor promenade social spine under the LED dome."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, LEGO Experience and the Guinness World Records show.",
+        "decks": 19,
+        "deploy_note": "Winter 2026-2027 from New York: 7-night Caribbean & Bahamas (arrives via a 19-night Grand Voyage from Barcelona).",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/mscmeraviglia/ ; https://www.mscpressarea.com/en_US/press-releases/749/ ; https://www.mscpressarea.com/en_US/press-releases/1668/"
+      }
     },
     {
       "name": "MSC Seascape",
@@ -288,7 +698,71 @@
         "Glass-floored Bridge of Sighs on deck 16"
       ],
       "notes": "Second Seaside EVO ship; 2,270 cabins. Entered service 2022. Gross tonnage and guest capacity NOT printed on the fetched official pages (delivery + christening) -> null; needs manual.",
-      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-new-flagship-fun-filled-msc-seascape/"
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-takes-delivery-of-new-flagship-fun-filled-msc-seascape/",
+      "exp": {
+        "overview": "MSC Seascape is the second enriched Seaside EVO ship - a sun-and-sea design with a waterfront promenade, 6 pools including a stunning aft infinity pool, 2,270 cabins in 12 types, 11 dining venues and 19 bars and lounges. Her thrill headline is ROBOTRON, a robotic-arm ride making its sea debut for adrenaline-seekers, and the Bridge of Sighs, a glass walkway on deck 16 that juts out over the ocean.",
+        "who_for": "Families and sun-seekers who want an outdoor, ocean-connected ship, with roughly 98 hours of live entertainment per cruise; premium guests get one of the most luxurious MSC Yacht Clubs in the fleet. Deployed to the U.S. from Galveston for the Caribbean.",
+        "dining": [
+          {
+            "name": "Specialty restaurants (part of 11 venues)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Seaside EVO specialty collection along the waterfront; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a large buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "ROBOTRON",
+            "desc": "Robotic-arm thrill ride making its debut at sea, for adrenaline-seekers."
+          },
+          {
+            "name": "Six pools incl. aft infinity pool",
+            "desc": "Pool decks along the waterfront promenade, plus water slides."
+          },
+          {
+            "name": "Bridge of Sighs",
+            "desc": "Glass-floor walkway on deck 16 cantilevered over the sea."
+          },
+          {
+            "name": "MSC Aurea Spa & MSC Yacht Club",
+            "desc": "Thermal spa plus one of the most luxurious Yacht Clubs in the fleet, with private sundeck, lounge and restaurant."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre & live entertainment",
+            "desc": "About 98 hours of live entertainment per cruise, including original production shows."
+          },
+          {
+            "name": "Casino & bars",
+            "desc": "Full casino plus 19 bars and lounges."
+          },
+          {
+            "name": "Guinness World Records show",
+            "desc": "Interactive family show."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "One of the fleet's most luxurious ship-within-a-ship retreats."
+          },
+          {
+            "name": "Waterfront promenade",
+            "desc": "Outdoor ocean-level social spine of bars and dining."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, plus the Guinness World Records show.",
+        "decks": 21,
+        "deploy_note": "Winter 2026-2027 from Galveston: 7-night Western Caribbean.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/msc-seascape/"
+      }
     },
     {
       "name": "MSC Seashore",
@@ -303,7 +777,67 @@
         "65% of public areas reimagined vs Seaside class"
       ],
       "notes": "Guests = 5,877 stated as maximum capacity for short international voyage. Delivered 26 July 2021; first Seaside EVO ship.",
-      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/4204/"
+      "spec_source": "https://www.mscpressarea.com/en_INT/press-releases/4204/",
+      "exp": {
+        "overview": "MSC Seashore is the first enriched Seaside EVO ship - a longer, taller evolution of the Seaside 'beach condo' concept with an ocean-hugging waterfront promenade, expansive outdoor pool and sun decks, water slides and an MSC Aurea Spa. She keeps the Seaside family the closest to the sea of any MSC generation, with a large MSC Yacht Club up top.",
+        "who_for": "Families and warm-weather cruisers who want a modern, outdoor-oriented ship; premium guests get an expanded MSC Yacht Club. Deployed to the U.S. from Port Canaveral for short Bahamas cruises.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Seaside EVO specialty collection along the waterfront; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a large buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & water slides",
+            "desc": "Expansive outdoor pool and sun decks along the waterfront promenade, with slides."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Expanded private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Original Broadway-style production shows."
+          },
+          {
+            "name": "Casino & bars",
+            "desc": "Full casino plus themed bars along the waterfront."
+          },
+          {
+            "name": "Guinness World Records show",
+            "desc": "Interactive family show."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Expanded ship-within-a-ship retreat of suites and exclusive amenities."
+          },
+          {
+            "name": "Waterfront promenade",
+            "desc": "Ocean-level outdoor social spine of bars and dining."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs, plus the Guinness World Records show.",
+        "decks": 20,
+        "deploy_note": "Winter 2026-2027 from Port Canaveral: 3- and 4-night Bahamas.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/msc-seashore/ ; https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Seaside",
@@ -318,7 +852,67 @@
         "MSC Yacht Club with private sun deck"
       ],
       "notes": "Guests = 5,119 at double occupancy. Delivered 29 November 2017; first Seaside Class ship. Tonnage printed as 153,516 GRT.",
-      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/1702/"
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/1702/",
+      "exp": {
+        "overview": "MSC Seaside is the first Seaside-class ship - a prototype inspired by an elegant beach condo, engineered to bring guests closer to the sea than any MSC ship before it. Signature features include a unique waterfront boardwalk that wraps the ship at ocean level, panoramic glass elevators, a 98-foot glass bridge on the top deck, and 76% of cabins on the outside for ocean views. The five-deck MSC Yacht Club crowns the ship with a 5,250-sq-ft private sun deck.",
+        "who_for": "Families and sun-and-sea lovers who want an outdoor-first, ocean-connected ship, with modular family cabins sleeping up to ten; premium guests get a five-deck MSC Yacht Club with two duplex apartment suites. Deployed to the U.S. from Miami for short Bahamas cruises.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Seaside specialty collection along the waterfront boardwalk; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a large buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Waterfront boardwalk",
+            "desc": "Ocean-level promenade wrapping the ship, a Seaside signature."
+          },
+          {
+            "name": "Pools & water slides",
+            "desc": "Outdoor pool and sun decks with slides."
+          },
+          {
+            "name": "Panoramic glass elevators & top-deck glass bridge",
+            "desc": "Glass exterior elevators and a 98-foot bridge for sweeping ocean views."
+          },
+          {
+            "name": "MSC Aurea Spa & five-deck MSC Yacht Club",
+            "desc": "Thermal spa plus a Yacht Club with a 5,250-sq-ft private sundeck and duplex apartment suites."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Original Broadway-style production shows."
+          },
+          {
+            "name": "Casino & bars",
+            "desc": "Full casino plus themed bars along the boardwalk."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Five-deck private retreat: sundeck, private lounge and restaurant, and two apartment suites with living/dining areas and private whirlpools."
+          },
+          {
+            "name": "Waterfront boardwalk",
+            "desc": "Ocean-level outdoor social spine of bars and dining."
+          }
+        ],
+        "kids_family": "Doremiland family programme with modular family cabins for up to ten: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 20,
+        "deploy_note": "Winter 2026-2027 from Miami: 3- and 4-night Bahamas.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/mscseaside/"
+      }
     },
     {
       "name": "MSC Seaview",
@@ -333,7 +927,63 @@
         "Among the biggest ships ever built in Italy (with MSC Seaside)"
       ],
       "notes": "Delivered 4 June 2018; second Seaside Class ship. Gross tonnage and guest capacity NOT printed on the fetched official delivery page -> null; needs manual.",
-      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/2002/"
+      "spec_source": "https://www.mscpressarea.com/en_US/press-releases/2002/",
+      "exp": {
+        "overview": "MSC Seaview is the second Seaside-class ship - a near-twin of MSC Seaside built on the same beach-condo prototype, designed to bring guests as close to the sea as possible with a waterfront boardwalk at ocean level, panoramic glass elevators and a high proportion of outside cabins. She pairs an outdoor, sun-drenched layout with a full family programme and the MSC Yacht Club.",
+        "who_for": "Families and warm-weather cruisers who want an outdoor, ocean-connected ship; premium guests get the MSC Yacht Club ship-within-a-ship. European/Mediterranean-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Seaside specialty collection along the waterfront boardwalk; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a large buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Waterfront boardwalk",
+            "desc": "Ocean-level promenade wrapping the ship, a Seaside signature."
+          },
+          {
+            "name": "Pools & water slides",
+            "desc": "Outdoor pool and sun decks with slides."
+          },
+          {
+            "name": "MSC Aurea Spa & MSC Yacht Club",
+            "desc": "Thermal spa plus a private Yacht Club with sundeck, lounge and restaurant."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Original Broadway-style production shows."
+          },
+          {
+            "name": "Casino & bars",
+            "desc": "Full casino plus themed bars along the boardwalk."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites, sundeck and exclusive lounge/restaurant."
+          },
+          {
+            "name": "Waterfront boardwalk",
+            "desc": "Ocean-level outdoor social spine of bars and dining."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 20,
+        "deploy_note": "Europe-based: Mediterranean.",
+        "exp_source": "https://www.mscpressarea.com/en_US/christening/MSC%20Seaview/ ; https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Fantasia",
@@ -343,7 +993,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as first Fantasia Class ship. No official page with year/tonnage/guests was readable (press-area christening section does not cover pre-2017 ships; consumer ship pages and deck-plan PDFs returned 403). needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Fantasia is the first Fantasia-class ship - the flagship of its generation and the ship that introduced the MSC Yacht Club concept to the fleet. She is a glamorous large ship with Swarovski-crystal staircases, a Formula 1 simulator, a large theatre, extensive pool decks and the MSC Aurea Spa, styled in classic Italian/Mediterranean fashion.",
+        "who_for": "Couples and families wanting a classic, glamorous Mediterranean big-ship; premium guests get the original MSC Yacht Club ship-within-a-ship. Europe-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fantasia-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "The original private ship-within-a-ship of suites, sundeck and exclusive lounge/restaurant."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "The fleet's original private retreat of suites and exclusive amenities."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 18,
+        "deploy_note": "Europe-based: Mediterranean.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Splendida",
@@ -353,7 +1055,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as second Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Splendida is the second Fantasia-class ship - a glamorous large ship twinned with MSC Fantasia, featuring Swarovski-crystal staircases, a large theatre, extensive pool and spa decks and the MSC Yacht Club, all in the classic Italian/Mediterranean MSC style.",
+        "who_for": "Couples and families wanting a glamorous, classic Mediterranean big-ship; premium guests get the MSC Yacht Club. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fantasia-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 18,
+        "deploy_note": "Europe/worldwide-based; Mediterranean and long-haul seasons.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Divina",
@@ -363,7 +1117,63 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as third Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Divina is the third Fantasia-class ship - a glamorous large ship in the classic MSC mould, with sweeping Swarovski-crystal staircases, a two-deck theatre, expansive pool decks and the MSC Aurea Spa. She carries the MSC Yacht Club ship-within-a-ship and a full complement of Mediterranean-style dining and entertainment.",
+        "who_for": "Couples and families who want a glamorous, classic big-ship experience with strong Italian/Mediterranean styling; premium guests get the MSC Yacht Club. Sails the Mediterranean and has previously deployed to the Caribbean.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fantasia-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included multi-course dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, Balinese-inspired treatments and gym."
+          },
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private suites, sundeck, lounge and restaurant with butler service."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Two-deck theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          },
+          {
+            "name": "Guinness World Records show",
+            "desc": "Interactive family show (rolled out to MSC Divina)."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 18,
+        "deploy_note": "Europe/worldwide-based; Mediterranean with past Caribbean seasons.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Preziosa",
@@ -373,7 +1183,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as fourth Fantasia Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Preziosa is the fourth and final Fantasia-class ship - a glamorous large ship famed for the Vertigo dry slide that spirals down its top decks, along with Swarovski-crystal staircases, a large theatre, expansive pool and spa areas and the MSC Yacht Club, in classic Italian/Mediterranean style.",
+        "who_for": "Families and couples wanting a glamorous, classic Mediterranean big-ship with a signature slide; premium guests get the MSC Yacht Club. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fantasia-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Vertigo slide",
+            "desc": "Signature dry slide spiralling down the top decks."
+          },
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & MSC Yacht Club",
+            "desc": "Thermal spa plus the private Yacht Club ship-within-a-ship."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "MSC Yacht Club",
+            "desc": "Private ship-within-a-ship of suites and exclusive amenities."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 18,
+        "deploy_note": "Europe/worldwide-based: Mediterranean and long-haul seasons.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Musica",
@@ -383,7 +1245,63 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as first Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Musica is the first Musica-class ship - a mid-size classic MSC vessel centred on a three-deck atrium with a waterfall and a piano suspended on a glass floor. She offers Mediterranean-style dining, a large theatre, multiple pools, the MSC Aurea Spa and a relaxed, destination-focused feel.",
+        "who_for": "Couples and families who want a traditional mid-size ship with classic Italian/Mediterranean styling and itinerary-led cruising. Europe-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Musica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Atrium & piano bar",
+            "desc": "Three-deck atrium with waterfall and a piano on a glass floor."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe-based: Mediterranean and Northern Europe.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Orchestra",
@@ -393,7 +1311,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as second Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Orchestra is the second Musica-class ship - a mid-size classic MSC vessel with an elegant three-deck atrium, Mediterranean-style dining, a large theatre, multiple pools and the MSC Aurea Spa, well suited to longer destination-focused itineraries.",
+        "who_for": "Couples and families who prefer a traditional mid-size ship with classic Mediterranean styling and immersive itineraries. Europe/worldwide-based, including grand voyages.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Musica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & sun decks",
+            "desc": "Multiple pool decks and whirlpools."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean, Northern Europe and grand voyages.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Poesia",
@@ -403,7 +1373,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as third Musica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Poesia is the third Musica-class ship - a mid-size classic MSC vessel with a three-deck atrium, Mediterranean-style dining, a large theatre, multiple pools (including a retractable-roof pool) and the MSC Aurea Spa. Her compact size suits exploration-style itineraries, including a debut Alaska season.",
+        "who_for": "Couples and families who want a traditional, more intimate ship for destination-rich cruising - Alaska from Seattle in her inaugural season, then a Panama Canal repositioning to Miami. Classic Mediterranean styling.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Musica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools incl. retractable-roof pool",
+            "desc": "Pool decks including a covered pool for cooler climates like Alaska."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Inaugural Alaska season from Seattle, then a 20-night Panama Canal repositioning to Miami (winter 2026-2027).",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/ ; https://www.mscpressarea.com/en_US/press-releases/msc-cruises-announces-winter-2026-2027-season-with-seven-ships-sailing-in-the-u-s/"
+      }
     },
     {
       "name": "MSC Magnifica",
@@ -413,7 +1435,63 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as fourth Musica Class ship. Official deck-plan PDF (virtual-tours.msccruises.com) lists 95,128 GT and 3,223 guests but that PDF returned 403 to us and could not be directly read -> tonnage/guests left null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Magnifica is the fourth Musica-class ship - a mid-size classic MSC ship with an intimate, elegant feel: multiple pool decks (one with a retractable glass roof for all-weather sailing), a large theatre, the MSC Aurea Spa and a full spread of Mediterranean-style dining and lounges.",
+        "who_for": "Couples and families who prefer a more traditional, mid-size ship with strong Mediterranean styling and destination-focused itineraries. Europe/worldwide-based, including long grand voyages.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Musica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools incl. retractable-roof pool",
+            "desc": "Pool decks including one covered by a retractable glass roof."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports & jogging track",
+            "desc": "Sports court and open-deck activities."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Large theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Full casino plus lounges and bars."
+          },
+          {
+            "name": "Guinness World Records show",
+            "desc": "Interactive family show (rolled out to MSC Magnifica)."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean, Northern Europe and grand voyages.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Lirica",
@@ -423,7 +1501,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as first Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Lirica is the first Lirica-class ship - a smaller, classic MSC vessel (lengthened in a 2015 refit) offering an intimate, traditional cruise feel: Mediterranean-style dining, a theatre, pool decks with a spray park added in refit, the MSC Aurea Spa and destination-focused itineraries.",
+        "who_for": "Couples and travellers who prefer a smaller, classic ship with a relaxed pace and immersive itineraries; families are served by MSC's standard kids clubs. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Lirica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & spray park",
+            "desc": "Pool decks with a children's spray park added in the 2015 lengthening refit."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean and seasonal exotic itineraries.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Opera",
@@ -433,7 +1563,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as second Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Opera is the second Lirica-class ship - a smaller, classic MSC vessel (lengthened in refit) with an intimate feel, Mediterranean-style dining, a theatre, pool decks, the MSC Aurea Spa and a focus on destination-rich itineraries.",
+        "who_for": "Couples and travellers who want a smaller, traditional ship with a relaxed atmosphere; families served by MSC's standard kids clubs. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Lirica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Pools & spray park",
+            "desc": "Pool decks with a children's spray park added in refit."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean and seasonal itineraries.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Armonia",
@@ -443,7 +1625,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as third Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Armonia is the third Lirica-class ship - a smaller, classic MSC vessel (lengthened in a 2014 refit that added an aft section and a top-deck water park) offering an intimate, traditional cruise feel with Mediterranean-style dining, a theatre, pool decks, the MSC Aurea Spa and destination-focused itineraries.",
+        "who_for": "Couples and families who prefer a smaller, classic ship with a relaxed pace; the refit water park adds family appeal. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Lirica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Water park & pools",
+            "desc": "Top-deck water park (spray park and slides) added in refit, plus pool decks."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme with a top-deck water park: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean and seasonal itineraries.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     },
     {
       "name": "MSC Sinfonia",
@@ -453,7 +1687,59 @@
       "guests": null,
       "features": [],
       "notes": "Confirmed in fleet as fourth Lirica Class ship. No official spec page readable -> year/tonnage/guests null; needs manual.",
-      "spec_source": ""
+      "spec_source": "",
+      "exp": {
+        "overview": "MSC Sinfonia is the fourth Lirica-class ship - a smaller, classic MSC vessel (lengthened in a 2015 refit that added an aft section and a top-deck water park) with an intimate, traditional atmosphere, Mediterranean-style dining, a theatre, pool decks, the MSC Aurea Spa and destination-focused itineraries.",
+        "who_for": "Couples and families wanting a smaller, classic ship at a relaxed pace, with a refit water park for kids. Europe/worldwide-based.",
+        "dining": [
+          {
+            "name": "Specialty restaurant(s)",
+            "type": null,
+            "extra": true,
+            "desc": "Lirica-class specialty dining; exact venue names not confirmed on the press area."
+          },
+          {
+            "name": "Main restaurants & buffet",
+            "type": null,
+            "extra": false,
+            "desc": "Included dining rooms and a Mediterranean buffet."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Water park & pools",
+            "desc": "Top-deck water park added in refit, plus pool decks."
+          },
+          {
+            "name": "MSC Aurea Spa & fitness",
+            "desc": "Thermal suite, treatments and gym."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Open-deck sports and jogging."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theatre",
+            "desc": "Theatre with original production shows."
+          },
+          {
+            "name": "Casino & lounges",
+            "desc": "Casino plus lounges and bars."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Classic layout",
+            "desc": "Traditional MSC layout - no MSC Yacht Club on this class."
+          }
+        ],
+        "kids_family": "Doremiland family programme with a top-deck water park: Baby Club Chicco, Miniclub/Juniors Club LEGO, Young and Teens clubs.",
+        "decks": 13,
+        "deploy_note": "Europe/worldwide-based: Mediterranean and seasonal itineraries.",
+        "exp_source": "https://www.mscpressarea.com/en_US/corporate-information/the-fleet/"
+      }
     }
   ],
   "needs_manual": [

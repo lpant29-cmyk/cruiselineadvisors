@@ -19,73 +19,139 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge",
       "exp": {
-        "overview": "First ship in the Edge Series; 2,918 guests (double occupancy), 130,818 GT, 1,004 ft; Forbes Travel Guide Recommended (2024); 29 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "overview": "The first ship in Celebrity's revolutionary Edge Series, Celebrity Edge introduced the cantilevered, floating Magic Carpet and an outward-facing design that turns the whole ship toward the sea. It carries about 2,918 guests across 29 distinct restaurants, bars, and lounges.",
         "neighbourhoods": [
-          "The Retreat",
-          "Magic Carpet",
-          "Resort Deck",
-          "Eden",
-          "The Club"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest-only area with the private Luminae restaurant, a private Retreat Lounge, and a Retreat Sundeck."
+          },
+          {
+            "name": "Resort Deck",
+            "desc": "Central open-air pool and lounging deck."
+          },
+          {
+            "name": "Eden",
+            "desc": "Signature three-level indoor/outdoor neighborhood spanning dining, a cafe, a bar, and entertainment."
+          }
         ],
         "dining": [
           {
-            "name": "Four complimentary main restaurants (regionally themed)",
-            "type": "main",
-            "extra": false
+            "name": "Fine Cut Steakhouse",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale steak and seafood venue where service is elevated to an art form."
           },
           {
-            "name": "Oceanview Cafe",
-            "type": "buffet",
-            "extra": false
-          },
-          {
-            "name": "Eden Cafe",
+            "name": "Rooftop Garden Grill",
             "type": "casual",
-            "extra": false
+            "extra": true,
+            "desc": "Open-air corner of the Rooftop Garden serving gourmet backyard-BBQ favorites under open sky with ocean views."
           },
           {
-            "name": "Mast Grill",
-            "type": "casual",
-            "extra": false
+            "name": "Raw on 5",
+            "type": null,
+            "extra": true,
+            "desc": "Sophisticated raw bar showcasing oysters, crab, lobster, and sushi."
+          },
+          {
+            "name": "Dinner on the Edge",
+            "type": null,
+            "extra": true,
+            "desc": "Sky-high open-air dinner served when the Magic Carpet ascends to the top of the ship."
+          },
+          {
+            "name": "Le Grand Bistro",
+            "type": null,
+            "extra": true,
+            "desc": "French bistro with a boulangerie-patisserie ambiance."
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": null,
+            "extra": true,
+            "desc": "Custom 3D table-animation dining choreographed by the Skullmapping artists."
           },
           {
             "name": "Eden Restaurant",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Three-level venue with an open kitchen and innovative dishes inspired by nature and the regions visited."
           },
           {
-            "name": "Le Grand Bistro",
-            "type": "specialty",
-            "extra": true
+            "name": "Main restaurants (four complimentary)",
+            "type": "main",
+            "extra": false,
+            "desc": "Four included main dining rooms including Normandie, which serves contemporary French cuisine in a refined space evoking springtime in Paris."
           },
           {
-            "name": "Raw on 5",
-            "type": "specialty",
-            "extra": true
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant reserved for The Retreat suite guests."
           },
           {
-            "name": "Cafe al Bacio",
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant reserved for AquaClass guests."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet-style venue."
+          },
+          {
+            "name": "Eden Cafe",
             "type": "casual",
-            "extra": true
+            "extra": false,
+            "desc": "Casual daytime cafe within the Eden venue."
           }
         ],
         "activities": [
-          "The Spa & Fitness Center",
-          "Resort Deck terraced pool",
-          "Magic Carpet movable platform",
-          "Rooftop Garden"
+          {
+            "name": "Magic Carpet",
+            "desc": "Cantilevered floating platform reaching 13 stories above the sea, with seating, a bar, and live music; moves between decks to serve different functions."
+          },
+          {
+            "name": "Rooftop Garden",
+            "desc": "Open-air upper-deck garden space for relaxing and outdoor dining."
+          },
+          {
+            "name": "Resort Deck / Pools",
+            "desc": "Reimagined terraced pool deck offering greater sea views."
+          },
+          {
+            "name": "The Spa & Fitness Center",
+            "desc": "Wellness facility for treatments, relaxation, and fitness."
+          }
         ],
         "entertainment": [
-          "The Theatre (main stage productions)",
-          "Eden",
-          "The Club",
-          "Casino"
+          {
+            "name": "Eden",
+            "desc": "Immersive multi-level venue that transforms from calm mornings to playful afternoons to lively evenings of dining and entertainment."
+          },
+          {
+            "name": "The Theatre",
+            "desc": "Contemporary performance space designed to blur the line between audience and stage."
+          },
+          {
+            "name": "Grand Plaza",
+            "desc": "Three-story social hub inspired by the piazzas of Italy, with bars and live music."
+          },
+          {
+            "name": "The Club",
+            "desc": "Nighttime entertainment and social venue."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge, https://www.celebritycruises.com/cruise-ships/celebrity-edge/eat-and-drink, https://www.celebritycruises.com/things-to-do-onboard/entertainment, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers arts, crafts, and family-oriented activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-edge ; https://www.celebritycruises.com/cruise-ships/celebrity-edge/eat-and-drink/specialty-dining ; https://www.celebritycruises.com/things-to-do-onboard",
+        "who_for": "Design-forward couples and travelers who want a modern, resort-style ship with a strong specialty-dining scene, the signature Magic Carpet, and a private suite retreat rather than a big kids-and-waterslides experience.",
+        "deploy_note": "Ship page lists Alaska and Australia & New Zealand itineraries; Alaska sails from US/Canada West Coast ports (Seattle/Vancouver)."
       }
     },
     {
@@ -103,43 +169,118 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex",
       "exp": {
-        "overview": "Second ship in the Edge Series; 2,910 guests (double occupancy), 130,818 GT, 1,004 ft; Forbes Travel Guide Four-Star rated; 29 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "overview": "The second Edge-Series ship, Celebrity Apex carries about 2,910 guests and shares the series' outward-facing design, the Magic Carpet, and 29 distinct restaurants, bars, and lounges. It holds a Forbes Travel Guide Four-Star rating.",
         "neighbourhoods": [
-          "The Retreat",
-          "Grand Plaza (three-story Italian piazza-inspired)",
-          "Magic Carpet",
-          "Rooftop Garden",
-          "Eden"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area with a private restaurant, sundeck, and lounge."
+          },
+          {
+            "name": "Eden",
+            "desc": "Signature multi-level neighborhood for dining and entertainment."
+          }
         ],
         "dining": [
           {
-            "name": "Normandie Restaurant (contemporary French, main restaurant)",
+            "name": "Normandie",
             "type": "main",
-            "extra": false
+            "extra": false,
+            "desc": "One of the four complimentary main restaurants, serving contemporary French cuisine in a modern, refined space evoking springtime in Paris."
           },
           {
-            "name": "Multiple specialty dining venues",
+            "name": "Fine Cut Steakhouse",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Upscale steak and seafood venue."
+          },
+          {
+            "name": "Rooftop Garden Grill",
+            "type": "casual",
+            "extra": true,
+            "desc": "Open-air grill serving gourmet BBQ favorites with ocean views."
+          },
+          {
+            "name": "Raw on 5",
+            "type": null,
+            "extra": true,
+            "desc": "Raw bar of oysters, crab, lobster, and sushi."
+          },
+          {
+            "name": "Le Grand Bistro",
+            "type": null,
+            "extra": true,
+            "desc": "French bistro with boulangerie-patisserie ambiance."
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
+          },
+          {
+            "name": "Eden Restaurant",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Multi-level venue with an open kitchen and nature-inspired dishes."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa & Fitness Center",
-          "Multiple pools",
-          "Rooftop Garden",
-          "Magic Carpet"
+          {
+            "name": "Magic Carpet",
+            "desc": "Signature cantilevered floating platform with a bar and live music."
+          },
+          {
+            "name": "Rooftop Garden",
+            "desc": "Open-air upper-deck garden offering carefree, relaxed pleasures."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          },
+          {
+            "name": "Spa & Fitness Center",
+            "desc": "Wellness and fitness facility."
+          }
         ],
         "entertainment": [
-          "The Theatre (contemporary performance space)",
-          "Eden",
-          "Grand Plaza",
-          "Casino"
+          {
+            "name": "The Theatre",
+            "desc": "Contemporary space designed to blur the line between audience and performance."
+          },
+          {
+            "name": "Eden",
+            "desc": "Immersive venue that transforms from calm mornings to playful afternoons to lively evenings."
+          },
+          {
+            "name": "Grand Plaza",
+            "desc": "Three-story venue inspired by the piazzas of Italy."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers arts, crafts, and family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-apex",
+        "who_for": "Travelers who want the modern Edge-Series experience -- Magic Carpet, Eden, Grand Plaza, and a strong specialty-dining lineup -- in a slightly more intimate ship than the larger Beyond and Ascent."
       }
     },
     {
@@ -157,38 +298,137 @@
       "notes": "guests=double occupancy; year 2022 per official naming-ceremony note on page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond",
       "exp": {
-        "overview": "Third ship in the Edge Series (extended); 3,260 guests (double occupancy), 141,420 GT, 1,073 ft; godmother Simone Biles; 32 distinct restaurants, bars and lounges; equipped with Starlink satellite internet.",
+        "overview": "Celebrity Beyond is the third and larger Edge-Series ship, carrying about 3,260 guests across 32 distinct restaurants, bars, and lounges, and adds Chef Daniel Boulud's first restaurant at sea, Le Voyage. Celebrity calls it the gold-standard ship in the fleet.",
         "neighbourhoods": [
-          "The Retreat",
-          "Resort Deck",
-          "Sunset Bar",
-          "Rooftop Garden",
-          "Eden",
-          "Grand Plaza"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area with a private restaurant (Luminae), sundeck, and lounge."
+          },
+          {
+            "name": "Resort Deck",
+            "desc": "Central open-air pool and lounging deck."
+          },
+          {
+            "name": "Eden",
+            "desc": "Signature multi-level neighborhood for dining and entertainment."
+          }
         ],
         "dining": [
           {
-            "name": "32 distinct restaurants, bars and lounges (specific names not detailed on overview)",
+            "name": "Le Voyage by Daniel Boulud",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Chef Daniel Boulud's first signature restaurant at sea; travel-inspired dishes in an intimate, upscale setting."
+          },
+          {
+            "name": "Fine Cut Steakhouse",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Premium cuts including grass-fed lamb chops and pan-roasted Maine lobster tail."
+          },
+          {
+            "name": "Rooftop Garden Grill",
+            "type": "casual",
+            "extra": true,
+            "desc": "Casual open-air grill with ocean views at the Rooftop Garden."
+          },
+          {
+            "name": "Raw on 5",
+            "type": null,
+            "extra": true,
+            "desc": "Seafood venue with signature lobster roll, shrimp salad, sushi, and sashimi."
+          },
+          {
+            "name": "Le Grand Bistro",
+            "type": null,
+            "extra": true,
+            "desc": "Inspired by classic French bistros with a boulangerie-patisserie atmosphere."
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": null,
+            "extra": true,
+            "desc": "Interactive 3D table-animation dining with a chef-created menu."
+          },
+          {
+            "name": "Eden Restaurant",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Personal culinary journeys with plant-based and international options."
+          },
+          {
+            "name": "Main restaurants (four complimentary)",
             "type": "main",
-            "extra": false
+            "extra": false,
+            "desc": "Four included main dining rooms."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa and Fitness Center",
-          "Expanded open-air spaces / Resort Deck pool",
-          "Sunset Bar"
+          {
+            "name": "Magic Carpet",
+            "desc": "Cantilevered floating platform with bar and live music."
+          },
+          {
+            "name": "Lawn Club",
+            "desc": "Real-grass open-air lawn space on the top deck."
+          },
+          {
+            "name": "Rooftop Garden",
+            "desc": "Expanded open-air garden and lounging space."
+          },
+          {
+            "name": "Resort Deck / Pools",
+            "desc": "Central pool deck with expanded open-air areas."
+          },
+          {
+            "name": "The Spa & Fitness Center",
+            "desc": "Wellness and fitness facility."
+          }
         ],
         "entertainment": [
-          "The Theatre and shows",
-          "Eden",
-          "Grand Plaza",
-          "Casino"
+          {
+            "name": "Eden",
+            "desc": "Immersive multi-level dining and entertainment venue."
+          },
+          {
+            "name": "The Theatre",
+            "desc": "Contemporary main theatre for shows."
+          },
+          {
+            "name": "The Club",
+            "desc": "Nightlife and entertainment venue."
+          },
+          {
+            "name": "Grand Plaza",
+            "desc": "Multi-story central social hub with live music."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers arts, crafts, and family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond ; https://www.celebritycruises.com/cruise-ships/celebrity-beyond/eat-and-drink/specialty-dining",
+        "who_for": "Guests who want the fullest Edge-Series experience -- an expanded Rooftop Garden and Resort Deck, more open-air space, and marquee dining like Le Voyage -- on Caribbean and Panama Canal sailings from Florida.",
+        "deploy_note": "Ship page lists Caribbean and Panama Canal itineraries, including Perfect Day at CocoCay, sailing from Florida."
       }
     },
     {
@@ -206,42 +446,109 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent",
       "exp": {
-        "overview": "Fourth ship in the Edge Series; 3,260 guests; 32 distinctive restaurants, bars and lounges; Sunset Bar designed by Nate Berkus; Rooftop Garden with two cantilevered floating pools extending six feet over the ship's edge.",
+        "overview": "Celebrity Ascent is the fourth Edge-Series ship, carrying about 3,260 guests with 32 distinct restaurants, bars, and lounges, and features Le Voyage by Chef Daniel Boulud plus a Rooftop Garden with two cantilevered floating pools extending six feet over the ship's edge.",
         "neighbourhoods": [
-          "The Retreat",
-          "Sunset Bar (Nate Berkus design)",
-          "Rooftop Garden",
-          "Eden",
-          "Grand Plaza"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area with a private restaurant, lounge, and sundeck."
+          },
+          {
+            "name": "Eden",
+            "desc": "Signature multi-level neighborhood for dining and entertainment."
+          }
         ],
         "dining": [
           {
-            "name": "Le Voyage by Chef Daniel Boulud",
+            "name": "Le Voyage by Daniel Boulud",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Chef Daniel Boulud's signature travel-inspired specialty restaurant."
           },
           {
-            "name": "Additional 31 restaurants, bars and lounges (names not detailed on overview)",
-            "type": "main",
-            "extra": false
+            "name": "Fine Cut Steakhouse",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale steak and seafood venue."
+          },
+          {
+            "name": "Rooftop Garden Grill",
+            "type": "casual",
+            "extra": true,
+            "desc": "Open-air grill with ocean views."
+          },
+          {
+            "name": "Raw on 5",
+            "type": null,
+            "extra": true,
+            "desc": "Raw bar of oysters, crab, lobster, and sushi."
+          },
+          {
+            "name": "Le Petit Chef",
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
+          },
+          {
+            "name": "Eden Restaurant",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Multi-level venue with open kitchen and nature-inspired dishes."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa & Fitness Center",
-          "Rooftop Garden floating pools",
-          "AquaClass spa-inspired staterooms"
+          {
+            "name": "Magic Carpet",
+            "desc": "Cantilevered floating platform with bar and live music."
+          },
+          {
+            "name": "Rooftop Garden",
+            "desc": "Open-air garden with two cantilevered floating pools extending six feet over the ship's edge."
+          },
+          {
+            "name": "Sunset Bar",
+            "desc": "Multi-deck outdoor bar designed by Nate Berkus."
+          },
+          {
+            "name": "The Spa & Fitness Center",
+            "desc": "Wellness and fitness facility."
+          }
         ],
         "entertainment": [
-          "The Theatre and shows",
-          "Eden",
-          "Grand Plaza",
-          "Casino"
+          {
+            "name": "Eden",
+            "desc": "Immersive multi-level dining and entertainment venue."
+          },
+          {
+            "name": "The Theatre",
+            "desc": "Contemporary main theatre for shows."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers arts, crafts, and family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent",
+        "who_for": "Travelers wanting the newest full-size Edge-Series design with signature Boulud dining and dramatic outdoor pools, on Europe and Caribbean itineraries.",
+        "deploy_note": "Ship page lists Europe and Caribbean itineraries; Caribbean sailings depart from Florida."
       }
     },
     {
@@ -259,49 +566,103 @@
       "notes": "tonnage/guests/year not shown on official ship page (marketing page only); features listed are named on page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel",
       "exp": {
-        "overview": "Newest ship in Celebrity's fleet; part of the Edge Series; introduces seven new spaces with new dining and drink concepts.",
+        "overview": "Celebrity Xcel is the fifth and newest Edge-Series ship, introducing fresh concepts such as The Bazaar dining-and-shopping space, the Celebrity Pool Club, and new venues including The Attic at The Club, alongside the signature Magic Carpet and Eden.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Bazaar",
-          "Bora",
-          "Attic At The Club",
-          "Celebrity Pool Club",
-          "Celebrity Flagship",
-          "The Spa",
-          "IYKYK",
-          "Magic Carpet",
-          "Grand Plaza",
-          "Sunset Bar",
-          "The Club"
+          {
+            "name": "The Retreat",
+            "desc": "Premium suite-guest area with private dining, lounge, and sundeck."
+          },
+          {
+            "name": "Eden",
+            "desc": "Signature multi-level neighborhood."
+          }
         ],
         "dining": [
           {
-            "name": "Main Dining",
-            "type": "main",
-            "extra": false
+            "name": "The Bazaar",
+            "type": "buffet",
+            "extra": false,
+            "desc": "New dining-and-shopping concept built around culture, flavors, and destination-inspired food."
           },
           {
-            "name": "Different restaurants to try every night (names not detailed on overview)",
+            "name": "Bora",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Named specialty venue on Xcel."
+          },
+          {
+            "name": "Fine Cut Steakhouse",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale steak and seafood venue (series signature)."
+          },
+          {
+            "name": "Rooftop Garden Grill",
+            "type": "casual",
+            "extra": true,
+            "desc": "Open-air grill with ocean views (series signature)."
+          },
+          {
+            "name": "Eden Restaurant",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Multi-level venue with open kitchen (series signature)."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
           }
         ],
         "activities": [
-          "Celebrity Pool Club (poptails, Caribbean-inspired live music)",
-          "The Spa",
-          "Sunset Bar",
-          "Magic Carpet"
+          {
+            "name": "Celebrity Pool Club",
+            "desc": "Enhanced pool experience ('The Poolest Day Ever') with games, poptails, Caribbean live music, and evening 'Shine the Night' DJ parties."
+          },
+          {
+            "name": "Magic Carpet",
+            "desc": "Signature cantilevered floating platform venue."
+          },
+          {
+            "name": "The Spa",
+            "desc": "New/enhanced spa and wellness facility."
+          },
+          {
+            "name": "Sunset Bar",
+            "desc": "Outdoor social gathering bar."
+          }
         ],
         "entertainment": [
-          "The Theatre",
-          "Casino",
-          "Shine the Night party (DJ/dance events)"
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Eden",
+            "desc": "Immersive multi-level dining and entertainment venue."
+          },
+          {
+            "name": "The Club",
+            "desc": "Nightlife venue, with a new space called The Attic at The Club."
+          },
+          {
+            "name": "Grand Plaza",
+            "desc": "Central multi-story social hub."
+          },
+          {
+            "name": "IYKYK",
+            "desc": "New named venue introduced on Xcel."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers arts, crafts, and family activities; Xcel is programmed for families as well as couples.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel",
+        "who_for": "Guests who want the very latest Edge-Series ship with brand-new social spaces and 'date night, all day long' programming for couples, plus family and destination-focused sailings in the Caribbean and Europe.",
+        "deploy_note": "Ship page lists Caribbean cruises and Europe (Greek Isles, Spain, France, Italy); Caribbean sailings depart from Florida."
       }
     },
     {
@@ -319,44 +680,101 @@
       "notes": "guests=double occupancy; year not on official page (page notes 2026 refurbishment)",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice",
       "exp": {
-        "overview": "Solstice Series; refurbished 2026 with all-new experiences; 2,852 guests, 121,878 GT; sails Alaska and Asia.",
+        "overview": "The lead ship of the Solstice Class, Celebrity Solstice carries about 2,852 guests and features the signature half-acre real-grass Lawn Club on its top deck. It was refurbished in 2026 with new venues including Trattoria Rossa, Fine Cut Steakhouse, and a Chef's Table by Chef Daniel Boulud.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Retreat Sundeck",
-          "Sunset Park (top-deck glacier viewing)"
+          {
+            "name": "The Retreat",
+            "desc": "Reimagined suite accommodations and exclusive area with the Retreat Sundeck and Lounge and private Luminae dining."
+          }
         ],
         "dining": [
           {
             "name": "Trattoria Rossa",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "New Italian specialty restaurant added in the 2026 refurbishment."
           },
           {
             "name": "Fine Cut Steakhouse",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "New specialty steakhouse added in the 2026 refurbishment."
           },
           {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Intimate multi-course dining experience curated by Chef Daniel Boulud."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "The Spa (treatments, massages, fitness classes)",
-          "New Relaxation Lounge"
+          {
+            "name": "Lawn Club",
+            "desc": "Half acre of real grass on the top deck for lounging and outdoor games."
+          },
+          {
+            "name": "Rooftop Garden",
+            "desc": "Open-air garden lounging space."
+          },
+          {
+            "name": "Sunset Park",
+            "desc": "Top-deck viewing area with roof access for glacier-gazing."
+          },
+          {
+            "name": "The Spa",
+            "desc": "Spa with a new Relaxation Lounge added in the refurbishment."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          }
         ],
         "entertainment": [
-          "Boulevard Lounge (new; dueling pianos, trivia)",
-          "The Parlor (billiards, darts, board games)",
-          "The Theatre",
-          "Casino"
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Boulevard Lounge",
+            "desc": "New venue with dueling pianos and trivia."
+          },
+          {
+            "name": "The Parlor",
+            "desc": "New space with billiards, darts, and board games."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Programming available (no dedicated Teen facility onboard per official Camp at Sea page)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice",
+        "who_for": "Couples and travelers who want a mid-size, elegant Celebrity ship with the outdoor Lawn Club, refreshed dining and bars, and long-haul itineraries such as Alaska and Asia.",
+        "deploy_note": "Ship page lists Alaska and Asia itineraries; Alaska sails from US/Canada West Coast ports."
       }
     },
     {
@@ -374,54 +792,85 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox",
       "exp": {
-        "overview": "Solstice Series; 2,852 guests, 121,878 GT, 1,041 ft; ten dining venues; equipped with Starlink satellite internet.",
+        "overview": "A Solstice-Class ship carrying about 2,852 guests, Celebrity Equinox pairs the signature real-grass Lawn Club with an upgraded, boutique-hotel aesthetic and ten dining venues including Tuscan Grille and a Chef's Table by Chef Daniel Boulud.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Retreat Sundeck",
-          "The Retreat Lounge",
-          "Lawn Club"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area including the Retreat Sundeck, Retreat Lounge, and private Luminae restaurant."
+          }
         ],
         "dining": [
           {
-            "name": "Luminae (Retreat suite restaurant)",
-            "type": "specialty",
-            "extra": false
-          },
-          {
             "name": "Tuscan Grille",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Italian-inspired specialty steakhouse."
           },
           {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience by Chef Daniel Boulud."
           },
           {
-            "name": "Craft Social (craft beer, comfort food)",
-            "type": "casual",
-            "extra": false
+            "name": "Craft Social",
+            "type": null,
+            "extra": false,
+            "desc": "Craft beer and comfort-food venue."
           },
           {
-            "name": "Slush (poolside frozen cocktails)",
-            "type": "casual",
-            "extra": false
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Award-winning private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa & Fitness",
-          "Pool deck",
-          "Lawn Club (real-grass lawn)"
+          {
+            "name": "Lawn Club",
+            "desc": "Real-grass top-deck space to feel grass beneath your feet, with games and lounging."
+          },
+          {
+            "name": "Pool deck",
+            "desc": "Pool deck with frozen cocktails at the Slush bar."
+          },
+          {
+            "name": "The Spa & Fitness",
+            "desc": "Spa treatments and fitness facilities."
+          }
         ],
         "entertainment": [
-          "The Theatre / shows",
-          "Casino"
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox",
+        "who_for": "Guests who want a refined mid-size ship with the Lawn Club, strong specialty dining, and varied itineraries across Europe, the Caribbean, and South America.",
+        "deploy_note": "Ship page lists Europe, Caribbean, and South America itineraries."
       }
     },
     {
@@ -439,44 +888,81 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse",
       "exp": {
-        "overview": "Solstice Series; 2,852 guests, 121,878 GT, 1,041 ft; equipped with Starlink satellite internet.",
+        "overview": "A Solstice-Class ship carrying about 2,852 guests, Celebrity Eclipse centers on the half-acre real-grass Lawn Club and a five-course main-dining menu designed by Global Culinary Ambassador Chef Daniel Boulud, with hot-glass art classes among its signature touches.",
         "neighbourhoods": [
-          "The Lawn Club (half-acre of real grass, outdoor games)",
-          "The Retreat",
-          "The Spa"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest sanctuary with private restaurant dining and 24/7 lounge access."
+          }
         ],
         "dining": [
           {
-            "name": "Blu (AquaClass exclusive)",
-            "type": "specialty",
-            "extra": false
+            "name": "Main Dining",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant with a five-course menu designed by Chef Daniel Boulud."
           },
           {
-            "name": "Chef's Table by Chef Daniel Boulud (five-course)",
-            "type": "specialty",
-            "extra": true
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant reserved for AquaClass guests."
           },
           {
-            "name": "Passport Bar / Martini Bar / World Class Bar (bars)",
-            "type": "casual",
-            "extra": false
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Specialty restaurants",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Globally-inspired cuisine in distinctive extra-fee specialty restaurants."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa and Fitness Center",
-          "The Lawn Club (outdoor games, grass area)",
-          "Hot Glass classes",
-          "Shopping boutiques"
+          {
+            "name": "Lawn Club",
+            "desc": "Half acre of real grass for sunbathing and outdoor games."
+          },
+          {
+            "name": "Hot Glass classes",
+            "desc": "Live glass-blowing art classes and demonstrations."
+          },
+          {
+            "name": "The Spa & Fitness Center",
+            "desc": "Soothing treatments and fitness facilities."
+          },
+          {
+            "name": "Boutiques",
+            "desc": "Onboard shopping."
+          }
         ],
         "entertainment": [
-          "Theatrical events (The Theatre)",
-          "Bars and lounges throughout"
+          {
+            "name": "The Theatre",
+            "desc": "Main theatre for theatrical events and shows."
+          },
+          {
+            "name": "Bars & lounges",
+            "desc": "Live-music venues including the Passport Bar, Martini Bar, and World Class Bar."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family-fun activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse",
+        "who_for": "Travelers who want a relaxed, elegant mid-size ship with the Lawn Club, refined dining, and Europe or Caribbean sailings.",
+        "deploy_note": "Ship page lists Europe and North America/Caribbean itineraries."
       }
     },
     {
@@ -494,38 +980,91 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette",
       "exp": {
-        "overview": "Solstice Series (extended); 2,902 guests, 122,210 GT, 1,047 ft; equipped with Starlink satellite internet.",
+        "overview": "A Solstice-Class ship carrying about 2,902 guests, Celebrity Silhouette features the signature Lawn Club with the alfresco Lawn Club Grill, plus a transformed spa and redesigned staterooms rivaling a boutique hotel.",
         "neighbourhoods": [
-          "The Retreat",
-          "Lawn Club",
-          "Solarium",
-          "Passport Bar (reimagined)",
-          "Craft Social Bar (new)"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-class exclusive area with premium amenities and private dining."
+          }
         ],
         "dining": [
           {
             "name": "Lawn Club Grill",
-            "type": "specialty",
-            "extra": true
+            "type": "casual",
+            "extra": true,
+            "desc": "Interactive open-air grill restaurant on the Lawn Club."
           },
           {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Premium curated multi-course dining experience."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "The Spa on Silhouette (new treatment rooms)",
-          "Lawn Club",
-          "Solarium",
-          "Fitness / holistic wellness",
-          "Shopping boutiques"
+          {
+            "name": "Lawn Club",
+            "desc": "Real-grass outdoor recreation and lounging area."
+          },
+          {
+            "name": "The Spa on Silhouette",
+            "desc": "Renovated spa with new treatment rooms."
+          },
+          {
+            "name": "Pools",
+            "desc": "Multiple resort-style pools."
+          },
+          {
+            "name": "Boutiques",
+            "desc": "New onboard designer boutiques."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette",
+        "who_for": "Guests who want an elegant mid-size ship with real-grass outdoor space, upscale dining, and flexible East Coast itineraries -- Caribbean, Bermuda, and Canada & New England.",
+        "entertainment": [
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Passport Bar",
+            "desc": "Newly reimagined bar and lounge."
+          },
+          {
+            "name": "Craft Social",
+            "desc": "Cool, casual bar for craft drinks."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "deploy_note": "Ship page lists Europe, Caribbean, Bermuda, and Canada & New England itineraries; Bermuda and Canada/New England sail from US East Coast ports."
       }
     },
     {
@@ -543,39 +1082,89 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection",
       "exp": {
-        "overview": "Solstice Series (extended); 3,046 guests, 125,366 GT, 1,047 ft; 'most awarded wine collection at sea'; equipped with Starlink satellite internet.",
+        "overview": "The largest Solstice-Class ship, Celebrity Reflection carries about 3,046 guests and features the half-acre real-grass Lawn Club with the alfresco Lawn Club Grill, plus specialty venues such as Le Petit Chef and a Chef's Table by Chef Daniel Boulud.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Lawn Club (half-acre of real grass)",
-          "The Spa"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest sanctuary with private restaurant dining and 24/7 lounge access."
+          }
         ],
         "dining": [
           {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience."
           },
           {
             "name": "Lawn Club Grill",
-            "type": "specialty",
-            "extra": true
+            "type": "casual",
+            "extra": true,
+            "desc": "Open-air grill with ocean views on the Lawn Club."
           },
           {
             "name": "Le Petit Chef",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa and wellness",
-          "Lawn Club (outdoor games, grass area)",
-          "Luxury boutiques"
+          {
+            "name": "Lawn Club",
+            "desc": "Half acre of real grass for outdoor games, lounging, and ocean views."
+          },
+          {
+            "name": "The Spa",
+            "desc": "Spa and wellness services."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool and sun-lounging areas."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection",
+        "who_for": "Travelers who want the biggest Solstice-Class ship, the Lawn Club experience, and warm-weather Caribbean and Bahamas sailings.",
+        "entertainment": [
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Bars & lounges",
+            "desc": "Live-music bars and lounges."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "deploy_note": "Ship page lists Caribbean itineraries, including the Bahamas, sailing from Florida."
       }
     },
     {
@@ -593,65 +1182,97 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium",
       "exp": {
-        "overview": "Millennium (M-class) Series; 2,218 guests; among first cruise ships globally with Forbes Travel Guide Four-Star rating; equipped with Starlink satellite internet.",
+        "overview": "The lead ship of the Millennium Class, Celebrity Millennium carries about 2,218 guests and was modernized with a reimagined Main Dining Room, Oceanview Cafe, and specialty venues, plus a redesigned spa and updated staterooms.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Retreat Sundeck",
-          "The Retreat Lounge"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest exclusive experience including the Retreat Sundeck and Retreat Lounge with private dining."
+          }
         ],
         "dining": [
           {
-            "name": "Main Dining Room (reimagined)",
-            "type": "main",
-            "extra": false
-          },
-          {
-            "name": "Oceanview Cafe",
-            "type": "buffet",
-            "extra": false
-          },
-          {
-            "name": "Luminae (Retreat suite restaurant)",
-            "type": "specialty",
-            "extra": false
-          },
-          {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience."
           },
           {
             "name": "Tuscan Grille",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Italian-inspired specialty steakhouse."
           },
           {
             "name": "Le Petit Chef",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
           },
           {
-            "name": "Sunset Bar (reimagined)",
-            "type": "casual",
-            "extra": false
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Reimagined complimentary main restaurant."
           },
           {
-            "name": "Rendezvous Lounge (reimagined)",
-            "type": "casual",
-            "extra": false
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Reimagined casual buffet venue."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
           }
         ],
         "activities": [
-          "Redesigned spa",
-          "Gym and fitness classes",
-          "Pools",
-          "Retail boutiques"
+          {
+            "name": "The Spa",
+            "desc": "Newly redesigned spa with treatments and therapies."
+          },
+          {
+            "name": "Fitness Center",
+            "desc": "Gym and fitness classes."
+          },
+          {
+            "name": "The Retreat Sundeck",
+            "desc": "Private suite-guest sundeck."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium",
+        "who_for": "Guests who want a smaller, refined Celebrity ship with strong dining and The Retreat, well suited to long, destination-rich itineraries such as Asia.",
+        "entertainment": [
+          {
+            "name": "The Theatre",
+            "desc": "Award-winning main entertainment theatre."
+          },
+          {
+            "name": "Rendezvous Lounge",
+            "desc": "Reimagined social lounge."
+          },
+          {
+            "name": "Sunset Bar",
+            "desc": "Reimagined outdoor bar."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "deploy_note": "Ship page lists Asia itineraries."
       }
     },
     {
@@ -669,61 +1290,93 @@
       "notes": "guests=double occupancy; year not on official page; page also lists length 965 ft, beam 105 ft",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity",
       "exp": {
-        "overview": "Millennium (M-class) Series; 2,170 guests, 90,940 GT, 965 ft.",
+        "overview": "A Millennium-Class ship carrying about 2,170 guests, Celebrity Infinity offers a modernized mix of dining -- from a Chef's Table by Chef Daniel Boulud to Tuscan Grille and Le Petit Chef -- with a wellness-focused spa and The Retreat suite area.",
         "neighbourhoods": [
-          "The Retreat"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area with exclusive private restaurant dining and 24/7 lounge access."
+          }
         ],
         "dining": [
           {
-            "name": "Main Dining Room",
-            "type": "main",
-            "extra": false
-          },
-          {
-            "name": "Oceanview Cafe",
-            "type": "buffet",
-            "extra": false
-          },
-          {
-            "name": "Blu (AquaClass exclusive)",
-            "type": "specialty",
-            "extra": false
-          },
-          {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience."
           },
           {
             "name": "Tuscan Grille",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Italian-inspired specialty steakhouse."
           },
           {
             "name": "Le Petit Chef",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining and entertainment experience."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           },
           {
             "name": "Rendezvous Lounge",
-            "type": "casual",
-            "extra": false
+            "type": null,
+            "extra": false,
+            "desc": "Social lounge space."
           }
         ],
         "activities": [
-          "The Spa (treatments and therapies)",
-          "Fitness equipment and classes",
-          "Shopping boutiques"
+          {
+            "name": "The Spa",
+            "desc": "Spa with treatments and therapies."
+          },
+          {
+            "name": "Fitness Center",
+            "desc": "Fitness equipment and classes."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          },
+          {
+            "name": "Boutiques",
+            "desc": "Onboard retail shopping."
+          }
         ],
         "entertainment": [
-          "Le Petit Chef (entertainment dining)",
-          "The Theatre and lounges"
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Rendezvous Lounge",
+            "desc": "Live-music social lounge."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity",
+        "who_for": "Travelers who prefer a smaller, upscale ship with a wellness focus and destination-rich itineraries such as Europe.",
+        "deploy_note": "Ship page lists Europe itineraries."
       }
     },
     {
@@ -741,68 +1394,97 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit",
       "exp": {
-        "overview": "Millennium (M-class) Series; 2,218 guests, 91,003 GT, 965 ft; Forbes Travel Guide Recommended rating; equipped with Starlink satellite internet.",
+        "overview": "A Millennium-Class ship carrying about 2,218 guests, Celebrity Summit was modernized with a reimagined Main Dining Room and Oceanview Cafe, specialty venues, a redesigned spa, and updated staterooms and bathrooms.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Retreat Sundeck",
-          "The Retreat Lounge"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest exclusive experience including the Retreat Sundeck and Retreat Lounge."
+          }
         ],
         "dining": [
           {
-            "name": "Main Dining Room (reimagined)",
-            "type": "main",
-            "extra": false
-          },
-          {
-            "name": "Oceanview Cafe (reimagined)",
-            "type": "buffet",
-            "extra": false
-          },
-          {
-            "name": "Luminae (Retreat suite restaurant)",
-            "type": "specialty",
-            "extra": false
-          },
-          {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience."
           },
           {
             "name": "Tuscan Grille",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Italian-inspired specialty steakhouse."
           },
           {
             "name": "Le Petit Chef",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
           },
           {
-            "name": "Sunset Bar (reimagined)",
-            "type": "casual",
-            "extra": false
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Reimagined complimentary main restaurant."
           },
           {
-            "name": "Rendezvous Lounge (reimagined)",
-            "type": "casual",
-            "extra": false
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Reimagined casual buffet venue."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
           }
         ],
         "activities": [
-          "Newly redesigned spa",
-          "Gym and fitness classes",
-          "Retail boutiques"
+          {
+            "name": "The Spa",
+            "desc": "Newly redesigned spa with gym and fitness classes."
+          },
+          {
+            "name": "The Retreat Sundeck",
+            "desc": "Private suite-guest sundeck."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          },
+          {
+            "name": "Boutiques",
+            "desc": "Newly redesigned onboard shopping."
+          }
         ],
         "entertainment": [
-          "The Theatre",
-          "Casino"
+          {
+            "name": "The Theatre",
+            "desc": "Main entertainment theatre."
+          },
+          {
+            "name": "Rendezvous Lounge",
+            "desc": "Social lounge."
+          },
+          {
+            "name": "Sunset Bar",
+            "desc": "Outdoor bar and lounge."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-summit",
+        "who_for": "Guests who want a smaller, refined resort-at-sea for shorter Caribbean getaways or scenic Alaska sailings.",
+        "deploy_note": "Ship page lists Caribbean (including quick weekend escapes) and Alaska itineraries."
       }
     },
     {
@@ -820,51 +1502,97 @@
       "notes": "guests=double occupancy; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation",
       "exp": {
-        "overview": "Millennium (M-class) Series; 2,184 guests, 90,940 GT, 965 ft; award-winning wine collection; equipped with Starlink satellite internet.",
+        "overview": "A Millennium-Class ship carrying about 2,184 guests, Celebrity Constellation offers a modernized upscale experience with a Chef's Table by Chef Daniel Boulud, an AquaClass Blu restaurant, The Retreat suite collection, and a varied activity program from archery to cooking classes.",
         "neighbourhoods": [
-          "The Retreat",
-          "The Spa",
-          "Solarium"
+          {
+            "name": "The Retreat",
+            "desc": "Suite-guest area with exclusive amenities, private restaurant dining, and 24/7 lounge access."
+          }
         ],
         "dining": [
           {
             "name": "Chef's Table by Chef Daniel Boulud",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "Curated multi-course dining experience."
           },
           {
             "name": "Tuscan Grille",
             "type": "specialty",
-            "extra": true
+            "extra": true,
+            "desc": "Italian-inspired specialty steakhouse."
           },
           {
             "name": "Le Petit Chef",
-            "type": "specialty",
-            "extra": true
+            "type": null,
+            "extra": true,
+            "desc": "3D table-animation dining experience."
           },
           {
-            "name": "Blu (AquaClass exclusive)",
-            "type": "specialty",
-            "extra": false
+            "name": "Blu",
+            "type": null,
+            "extra": false,
+            "desc": "Clean-cuisine restaurant for AquaClass guests."
+          },
+          {
+            "name": "Luminae",
+            "type": null,
+            "extra": false,
+            "desc": "Private restaurant for The Retreat suite guests."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main restaurant."
+          },
+          {
+            "name": "Oceanview Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet venue."
           }
         ],
         "activities": [
-          "Spa treatments and therapies",
-          "Fitness equipment and classes",
-          "Archery",
-          "Silent Disco",
-          "STEM activities",
-          "Cooking classes",
-          "Shopping boutiques"
+          {
+            "name": "Archery",
+            "desc": "Onboard archery activity."
+          },
+          {
+            "name": "Silent Disco",
+            "desc": "Headphone-based dance party."
+          },
+          {
+            "name": "STEM activities & cooking classes",
+            "desc": "Enrichment activities and hands-on cooking classes."
+          },
+          {
+            "name": "The Spa",
+            "desc": "Spa treatments and rejuvenation therapies with fitness equipment and wellness classes."
+          },
+          {
+            "name": "Pools",
+            "desc": "Resort-style pool deck."
+          }
         ],
         "entertainment": [
-          "Theatrical events (The Theatre)"
+          {
+            "name": "The Theatre",
+            "desc": "Main theatre for theatrical events."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard gaming."
+          },
+          {
+            "name": "Boutiques",
+            "desc": "Onboard shopping."
+          }
         ],
-        "kids_family": [
-          "Camp at Sea youth program: Shipmates (3-5), Cadets (6-9), Captains (10-12)",
-          "Teen Club (13-17)"
-        ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation, https://www.celebritycruises.com/things-to-do-onboard/camp-at-sea"
+        "kids_family": "Camp at Sea offers family activities for children and teens.",
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation",
+        "who_for": "Travelers who want a smaller, wellness-oriented ship with a wide activity slate and Europe or Caribbean itineraries.",
+        "deploy_note": "Ship page lists Europe and Caribbean itineraries."
       }
     },
     {
@@ -882,17 +1610,31 @@
       "notes": "guests=double occupancy; Galapagos expedition ship; year not on official page",
       "spec_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora",
       "exp": {
-        "overview": "Galapagos expedition ship, all-suite; 100 guests, 5,922 GT, 333 ft; Forbes Travel Guide Four-Star rating; outward-facing design so the destination is the focus; sustainable tech (dynamic positioning, solar panels).",
+        "overview": "Celebrity Flora is a purpose-built, all-suite expedition ship designed exclusively for the Galapagos Islands, carrying just 100 guests with certified Galapagos National Park naturalists on board to guide the journey. It holds a Forbes Travel Guide Four-Star rating.",
         "neighbourhoods": [
           "The Retreat (suite class)"
         ],
         "activities": [
-          "Spa/wellness (available)",
-          "Outdoor spa tub access on certain suites",
-          "Certified naturalists from the Galapagos National Park on board",
-          "Zodiac excursions (destination-focused)"
+          {
+            "name": "Naturalist Expeditions",
+            "desc": "Certified naturalists from the Galapagos National Park guide daily excursions and exploration."
+          },
+          {
+            "name": "Suite amenities",
+            "desc": "All suites include full room automation, private verandas, in-room water filtration, a personal suite attendant, and complimentary laundry service twice per cruise."
+          }
         ],
-        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
+        "exp_source": "https://www.celebritycruises.com/cruise-ships/celebrity-flora",
+        "who_for": "Luxury travelers seeking an intimate, all-inclusive, all-suite Galapagos expedition focused on responsible tourism and naturalist-led exploration rather than large-ship amenities.",
+        "dining": [
+          {
+            "name": "All-inclusive dining",
+            "type": null,
+            "extra": false,
+            "desc": "All dining is included in the all-inclusive, all-suite experience; specific venue names are not listed on the official ship overview page."
+          }
+        ],
+        "deploy_note": "Deployed exclusively in the Galapagos Islands (does not sail from US/Canada ports); guests fly to Ecuador to embark."
       }
     }
   ],

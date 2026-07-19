@@ -20,14 +20,288 @@
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage January 27, 2024. Max occupancy not published on official fact sheet.",
       "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/ICON_Fact_Sheet.jpg",
       "exp": {
-        "overview": "The largest cruise ship afloat, Icon of the Seas entered service in 2024 as the first of Royal Caribbean's Icon class — a 248,663-ton resort at sea built around eight distinct neighbourhoods, the Category 6 waterpark and the glass-domed AquaDome. It is aimed squarely at multi-generational families who want everything in one place.",
+        "overview": "The first ship in Royal Caribbean's revolutionary Icon Class, sailing since January 2024 with eight distinct neighborhoods, seven pools and Category 6 — the largest waterpark at sea.",
         "activities": [
-          "Surfside",
-          "Category 6 waterpark",
-          "AquaDome",
-          "Crown's Edge",
-          "Ultimate Family Townhouse"
-        ]
+          {
+            "name": "Category 6",
+            "desc": "The largest waterpark at sea, with six record-breaking waterslides."
+          },
+          {
+            "name": "Frightening Bolt",
+            "desc": "Waterslide billed as the tallest slide at sea."
+          },
+          {
+            "name": "Pressure Drop",
+            "desc": "The first open free-fall slide at sea."
+          },
+          {
+            "name": "Storm Surge & Hurricane Hunter",
+            "desc": "Family raft and mat-racing slides within Category 6."
+          },
+          {
+            "name": "Crown's Edge",
+            "desc": "Part skywalk, part ropes course and part thrill ride, suspended over the ocean off the side of the ship."
+          },
+          {
+            "name": "Adrenaline Peak",
+            "desc": "Rock climbing wall."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Lost Dunes",
+            "desc": "Mini-golf course in Thrill Island."
+          },
+          {
+            "name": "Sports Court",
+            "desc": "Open court for basketball and sports."
+          },
+          {
+            "name": "Royal Bay Pool",
+            "desc": "The largest pool at sea, holding over 40,000 gallons, in the Chill Island neighborhood."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "The first suspended infinity pool at sea, in the adults-only Hideaway neighborhood."
+          },
+          {
+            "name": "Ice Skating",
+            "desc": "Open ice sessions at the Absolute Zero ice arena."
+          }
+        ],
+        "who_for": "Multi-generational families and thrill-seekers above all: Surfside is the line's first neighborhood built end-to-end for young families, while Category 6's six record-breaking slides, Crown's Edge and Adrenaline Peak target adrenaline lovers, and adults get the suspended, adults-only Hideaway pool.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-course dinner across a three-deck dining room."
+          },
+          {
+            "name": "The Windjammer",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary all-you-can-eat buffet."
+          },
+          {
+            "name": "AquaDome Market",
+            "type": "casual",
+            "extra": false,
+            "desc": "Royal Caribbean's first food hall, with five made-to-order stands under the AquaDome."
+          },
+          {
+            "name": "Surfside Eatery",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary family buffet in the Surfside neighborhood."
+          },
+          {
+            "name": "Surfside Bites",
+            "type": "casual",
+            "extra": false,
+            "desc": "Grab-and-go quick bites for families in Surfside."
+          },
+          {
+            "name": "Basecamp",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary casual eatery in Thrill Island."
+          },
+          {
+            "name": "Park Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Bagels, made-to-order salads and classics for breakfast and lunch in Central Park, opening at night for tapas."
+          },
+          {
+            "name": "Sorrento's",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary pizza, including late night."
+          },
+          {
+            "name": "Pearl Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Coffee and toasted sandwiches / bites."
+          },
+          {
+            "name": "Sprinkles",
+            "type": "casual",
+            "extra": false,
+            "desc": "Soft-serve ice cream."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary fresh Mexican."
+          },
+          {
+            "name": "Empire Supper Club",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Swanky eight-course tasting experience with live jazz."
+          },
+          {
+            "name": "The Mason Jar Southern Restaurant & Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Southern comfort food and Southern-style brunch."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Interactive teppanyaki and sushi."
+          },
+          {
+            "name": "Izumi in the Park",
+            "type": "casual",
+            "extra": true,
+            "desc": "All-day walk-up window for fresh sushi in Central Park."
+          },
+          {
+            "name": "Celebration Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Private, exclusive group dining experience."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian dining and wine bar on the Royal Promenade."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar with pub fare and an arcade."
+          },
+          {
+            "name": "Starbucks",
+            "type": "casual",
+            "extra": true,
+            "desc": "Coffee on the Royal Promenade."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "The Wizard of Oz",
+            "desc": "Full Broadway musical production — Royal Caribbean's biggest cast and orchestra ever — with a new 16-piece orchestra, characters soaring above the audience and 600+ costume elements."
+          },
+          {
+            "name": "Aqua Action!",
+            "desc": "High-diving AquaTheater production in the AquaDome with Olympic-level divers, skateboarders, aerialists, slackliners and synchronized swimmers, plus a double 3D flying system and diving-board robots."
+          },
+          {
+            "name": "Absolute Zero",
+            "desc": "Royal Caribbean's biggest ice arena ever, reengineered for bigger skating feats."
+          },
+          {
+            "name": "Starburst: Elemental Beauty",
+            "desc": "Ice show at Absolute Zero interpreting the periodic table of the elements."
+          },
+          {
+            "name": "Once Upon a Time: The King's Royal Ball",
+            "desc": "Family-friendly ice show where fairy-tale icons revisit revamped storylines."
+          },
+          {
+            "name": "Showband! Live. Music. Now.",
+            "desc": "Live music showcase."
+          },
+          {
+            "name": "The Effectors",
+            "desc": "Original stage production."
+          },
+          {
+            "name": "Lou's Jazz 'n Blues",
+            "desc": "Live jazz and blues venue in Central Park."
+          },
+          {
+            "name": "Dueling Pianos",
+            "desc": "Interactive sing-along piano bar."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Multi-level live music and nightlife venue."
+          },
+          {
+            "name": "Spotlight Karaoke",
+            "desc": "Karaoke bar with private and main rooms."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Thrill Island",
+            "desc": "Adventure neighborhood home to Category 6, the largest waterpark at sea, plus Crown's Edge, FlowRider and Lost Dunes mini-golf."
+          },
+          {
+            "name": "Chill Island",
+            "desc": "Multi-deck pool neighborhood with several of the ship's seven pools, including Royal Bay, the largest pool at sea."
+          },
+          {
+            "name": "Surfside",
+            "desc": "The first Royal Caribbean neighborhood designed end-to-end for young families, with a pool, carousel and family dining."
+          },
+          {
+            "name": "Central Park",
+            "desc": "Open-air neighborhood with more than 33,500 real plants, live jazz at Lou's Jazz 'n Blues and al-fresco dining."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "Adults-only retreat centered on the first suspended infinity pool at sea."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "The social heart of the ship with more than 15 restaurants, bars and lounges."
+          },
+          {
+            "name": "Suite Neighborhood",
+            "desc": "Exclusive multi-deck enclave for suite guests, including The Grove suite sun deck and pool."
+          },
+          {
+            "name": "AquaDome",
+            "desc": "Crown of the ship topped by the largest single piece of glass and steel Royal Caribbean has put to sea, home to the AquaDome Market food hall and AquaTheater performances."
+          }
+        ],
+        "kids_family": [
+          {
+            "name": "Surfside",
+            "desc": "Whole neighborhood built for young families, with pool, carousel, eateries and play spaces."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Aquapark play zone for kids with slides and sprayers."
+          },
+          {
+            "name": "Adventure Ocean",
+            "desc": "Kids club with interactive games and programming by age group."
+          },
+          {
+            "name": "Social020",
+            "desc": "Teens-only hangout with gaming, music and events."
+          },
+          {
+            "name": "Once Upon a Bedtime Story",
+            "desc": "Family reading/story program."
+          },
+          {
+            "name": "Steel Pan Family Jam",
+            "desc": "Family music activity."
+          }
+        ],
+        "deploy_note": "Caribbean & The Bahamas, ex-Miami (PortMiami), year-round; alternating 7-night Eastern & Western Caribbean, every sailing calling at Perfect Day at CocoCay.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/icon-of-the-seas, https://www.royalcaribbean.com/cruise-ships/icon-of-the-seas/things-to-do, https://www.royalcaribbeanpresscenter.com/press-release/1688/lions-mermaids-and-pirates-oh-my-royal-caribbeans-icon-of-the-seas-to-debut-show-stopping-entertainment-lineup/, https://www.royalcaribbeanpresscenter.com/press-release/1701/"
       }
     },
     {
@@ -43,7 +317,309 @@
         "Crown's Edge"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage August 31, 2025. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/STAR_Fact_Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/STAR_Fact_Sheet.jpg",
+      "exp": {
+        "overview": "The second Icon Class ship, which debuted from Port Canaveral in August 2025, carrying the class's eight neighborhoods, seven pools and Category 6 waterpark with its own new-to-the-fleet entertainment lineup.",
+        "who_for": "Built as 'the ultimate family vacation' for multi-generational families and thrill-seekers — the family-focused Surfside neighborhood and Splashaway Bay for little ones, Category 6 and Crown's Edge for daredevils, and adults-only Hideaway and Cove pools for grown-ups.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-course dinner."
+          },
+          {
+            "name": "Windjammer",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary all-you-can-eat buffet."
+          },
+          {
+            "name": "Surfside Eatery",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Family buffet in the Surfside neighborhood."
+          },
+          {
+            "name": "Park Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual breakfast and lunch counter in Central Park."
+          },
+          {
+            "name": "AquaDome Market",
+            "type": "casual",
+            "extra": false,
+            "desc": "Food hall with made-to-order stands including sandwiches and crepes."
+          },
+          {
+            "name": "Basecamp",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary casual eatery in Thrill Island."
+          },
+          {
+            "name": "Surfside Bites",
+            "type": "casual",
+            "extra": false,
+            "desc": "Grab-and-go family bites."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary fresh Mexican."
+          },
+          {
+            "name": "Sorrento's",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary pizza."
+          },
+          {
+            "name": "Pearl Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Coffee and toasted sandwiches on the Royal Promenade."
+          },
+          {
+            "name": "Sprinkles",
+            "type": "casual",
+            "extra": false,
+            "desc": "Ice cream and soft serve."
+          },
+          {
+            "name": "Lincoln Park Supper Club",
+            "type": "specialty",
+            "extra": true,
+            "desc": "1930s-inspired multi-course dinner-and-show with live jazz — new to Star of the Seas."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Interactive teppanyaki and sushi."
+          },
+          {
+            "name": "Izumi in the Park",
+            "type": "casual",
+            "extra": true,
+            "desc": "Casual walk-up sushi in Central Park."
+          },
+          {
+            "name": "Hooked Seafood",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale New England-style seafood."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian dining and wine bar."
+          },
+          {
+            "name": "Celebration Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Exclusive private group dining."
+          },
+          {
+            "name": "Desserted",
+            "type": "casual",
+            "extra": true,
+            "desc": "Desserts and shakes in Thrill Island."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar with pub fare and arcade."
+          },
+          {
+            "name": "Pier 7",
+            "type": "casual",
+            "extra": true,
+            "desc": "Boardwalk-style eatery."
+          },
+          {
+            "name": "Coastal Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Suite-guest restaurant."
+          },
+          {
+            "name": "The Grove",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Suite-guest dining and sun-deck venue."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Category 6",
+            "desc": "The largest waterpark at sea, with six record-breaking waterslides."
+          },
+          {
+            "name": "Crown's Edge",
+            "desc": "Skywalk, ropes course and thrill ride combined, 154 feet above the ocean."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Adrenaline Peak",
+            "desc": "Rock climbing wall."
+          },
+          {
+            "name": "Lost Dunes",
+            "desc": "Mini-golf course."
+          },
+          {
+            "name": "Sports Court",
+            "desc": "Basketball and sports court."
+          },
+          {
+            "name": "Laser Tag: Rise of Poseidon",
+            "desc": "Themed laser tag experience."
+          },
+          {
+            "name": "Royal Bay Pool",
+            "desc": "The largest pool at sea, with in-water loungers and a live band, in Chill Island."
+          },
+          {
+            "name": "The Cove Pool",
+            "desc": "Pool with a disappearing edge and in-water loungers."
+          },
+          {
+            "name": "Cloud 17",
+            "desc": "Adults-focused infinity pool."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "Suspended, adults-only infinity pool."
+          },
+          {
+            "name": "Swim & Tonic",
+            "desc": "Swim-up bar in the pool."
+          },
+          {
+            "name": "Ice Skating",
+            "desc": "Open sessions at the Absolute Zero ice arena."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Back to the Future: The Musical",
+            "desc": "Full Broadway production staged in the main theater."
+          },
+          {
+            "name": "Absolute Zero",
+            "desc": "Ice-skating spectacular arena with high-tech productions."
+          },
+          {
+            "name": "AquaTheater show",
+            "desc": "AquaDome production with a 55-foot waterfall and high divers."
+          },
+          {
+            "name": "H2Whoa!",
+            "desc": "High-tech water performance."
+          },
+          {
+            "name": "Lou's Jazz 'n Blues",
+            "desc": "Live jazz and blues ensemble venue."
+          },
+          {
+            "name": "Dueling Pianos",
+            "desc": "Interactive sing-along piano bar."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Multi-deck live-music and nightlife venue."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-themed dance lounge."
+          },
+          {
+            "name": "Comedy Club",
+            "desc": "Stand-up comedy venue."
+          },
+          {
+            "name": "Spotlight Karaoke",
+            "desc": "Karaoke bar."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Thrill Island",
+            "desc": "Adventure neighborhood with Category 6 (the largest waterpark at sea), Crown's Edge 154 feet above the ocean, FlowRider and Lost Dunes mini-golf."
+          },
+          {
+            "name": "Chill Island",
+            "desc": "Three-deck pool neighborhood home to four of the ship's seven pools, including Royal Bay, the largest pool at sea, and the Swim & Tonic swim-up bar."
+          },
+          {
+            "name": "Surfside",
+            "desc": "Family-focused neighborhood with a pool, carousel and family dining."
+          },
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighborhood with live music and al-fresco dining."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "Adults-only retreat built around a suspended infinity pool."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Two-story social hub with floor-to-ceiling ocean views, The Pearl kinetic art sculpture, and 15-plus restaurants, bars and lounges."
+          },
+          {
+            "name": "Suite Neighborhood",
+            "desc": "Exclusive enclave for suite guests with private amenities including The Grove and Coastal Kitchen."
+          },
+          {
+            "name": "AquaDome",
+            "desc": "Glass-and-steel crown of the ship housing the AquaTheater and AquaDome Market food hall."
+          }
+        ],
+        "kids_family": [
+          {
+            "name": "Surfside",
+            "desc": "Family neighborhood with pool, carousel and kid-friendly eateries."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Kids' aquapark with slides and sprayers."
+          },
+          {
+            "name": "Playscape",
+            "desc": "Indoor creative-play space for children."
+          },
+          {
+            "name": "Adventure Ocean",
+            "desc": "Kids club with interactive games and age-based programming."
+          },
+          {
+            "name": "Social020",
+            "desc": "Teens-only lounge with gaming, karaoke and movies."
+          },
+          {
+            "name": "Laser Tag: Rise of Poseidon",
+            "desc": "Family and teen laser-tag arena."
+          }
+        ],
+        "deploy_note": "Caribbean, ex-Orlando (Port Canaveral), year-round since debut Aug 2025; 7-night alternating Eastern & Western Caribbean, every sailing calling at Perfect Day at CocoCay.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/star-of-the-seas/things-to-do, https://www.royalcaribbean.com/cruise-ships/star-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1740/royal-caribbeans-star-of-the-seas-takes-center-stage-to-deliver-ultimate-family-vacation/, https://www.royalcaribbeanpresscenter.com/press-release/1788/royal-caribbean-spotlights-new-entertainment-and-dining-experiences-on-star-of-the-seas/"
+      }
     },
     {
       "name": "Legend of the Seas",
@@ -58,7 +634,173 @@
         "Ultimate Family Townhouse"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 4, 2026. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Mar-2-Mon/1770756033_26-RCC-0561-LE-Ship-Fact-Sheet-DIGITAL-021026.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Mar-2-Mon/1770756033_26-RCC-0561-LE-Ship-Fact-Sheet-DIGITAL-021026.jpg",
+      "exp": {
+        "overview": "The third Icon Class ship, entering service in summer 2026 as the first of the class to sail Europe, carrying the same eight neighborhoods, seven pools and Category 6 — the largest waterpark at sea.",
+        "who_for": "Every type of family and vacationer across eight neighborhoods: families get the stay-all-day Surfside neighborhood, Splashaway Bay and a carousel; thrill-seekers get Category 6 and Crown's Edge; and adults get the adults-only Hideaway with its infinity-style pool.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary three-course nightly menu."
+          },
+          {
+            "name": "Buffets",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Two complimentary all-you-can-eat buffets."
+          },
+          {
+            "name": "AquaDome Market",
+            "type": "casual",
+            "extra": false,
+            "desc": "Food hall with five made-to-order stands."
+          },
+          {
+            "name": "Sorrento's",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary late-night pizza."
+          },
+          {
+            "name": "Pearl Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "24/7 bites and coffee."
+          },
+          {
+            "name": "Sprinkles",
+            "type": "casual",
+            "extra": false,
+            "desc": "Endless soft serve."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian dining and wine bar."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Category 6",
+            "desc": "The largest waterpark at sea, featuring Storm Surge and multiple record-breaking slides."
+          },
+          {
+            "name": "Crown's Edge",
+            "desc": "Part skywalk, part ropes course and part thrill ride, 154 feet above the ocean."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Vertical climbing wall."
+          },
+          {
+            "name": "Mini golf",
+            "desc": "On-deck mini-golf course."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Themed laser-tag arena."
+          },
+          {
+            "name": "Ice skating",
+            "desc": "Open skating at Absolute Zero, the largest ice-skating arena at sea."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Full-size carousel in the Surfside family neighborhood."
+          },
+          {
+            "name": "Royal Bay Pool",
+            "desc": "The largest pool at sea, part of seven pools and ten whirlpools."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "Adults-only retreat with an infinity-style pool."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Charlie and the Chocolate Factory",
+            "desc": "Roald Dahl's tale staged as a full theatrical production."
+          },
+          {
+            "name": "America's Got Talent LIVE on Legend of the Seas",
+            "desc": "Live variety production based on the TV franchise."
+          },
+          {
+            "name": "AquaTheater show",
+            "desc": "High-diving and aerial production in the AquaDome."
+          },
+          {
+            "name": "Ice skating show",
+            "desc": "Production show at Absolute Zero, the largest ice-skating arena at sea."
+          },
+          {
+            "name": "Live music venues",
+            "desc": "Eight live-music venues across the ship."
+          },
+          {
+            "name": "Themed parties",
+            "desc": "10-plus party locations with trivia, game shows and themed nights."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Thrill Island",
+            "desc": "Adventure neighborhood home to Category 6, the largest waterpark at sea."
+          },
+          {
+            "name": "Chill Island",
+            "desc": "Resort-style pool deck with multiple of the ship's seven pools, including Royal Bay, the largest pool at sea."
+          },
+          {
+            "name": "Surfside",
+            "desc": "Family-focused stay-all-day neighborhood with a carousel and family dining."
+          },
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighborhood with dining, live music and 30,000+ real plants."
+          },
+          {
+            "name": "The Hideaway",
+            "desc": "Adults-only retreat with an infinity-style pool."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "The vibrant heart of the ship for dining, shopping and nightlife."
+          },
+          {
+            "name": "Suite Neighborhood",
+            "desc": "Exclusive spaces reserved for suite guests."
+          },
+          {
+            "name": "AquaDome",
+            "desc": "Transformative crowning space with immersive entertainment and panoramic ocean views."
+          }
+        ],
+        "kids_family": [
+          {
+            "name": "Surfside",
+            "desc": "Stay-all-day family neighborhood with a carousel and family dining."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Aquapark for families with slides and sprayers."
+          },
+          {
+            "name": "Kids and teen programs",
+            "desc": "Dedicated youth programming by age group."
+          }
+        ],
+        "deploy_note": "Debuts summer 2026: 7-night Western Mediterranean ex-Barcelona (with calls including Rome/Civitavecchia); then repositions to year-round Caribbean ex-Fort Lauderdale from Nov 2026 on 6-night Western & 8-night Southern Caribbean, calling at Perfect Day at CocoCay.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/legend-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1772/when-icons-become-legends-royal-caribbean-unveils-name-and-lineup-of-the-third-icon-class-vacation/"
+      }
     },
     {
       "name": "Utopia of the Seas",
@@ -73,7 +815,190 @@
         "Solarium Suites"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 19, 2024. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/UTOPIA_Fact_Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/UTOPIA_Fact_Sheet.jpg",
+      "exp": {
+        "overview": "The sixth Oasis-class ship and Royal Caribbean's first Oasis-class vessel powered by liquefied natural gas (LNG), purpose-built as 'the world's biggest weekend' for short getaways.",
+        "who_for": "Weekenders and first-timers who want a full mega-ship experience compressed into 3- and 4-night sailings, plus families drawn to Perfect Day at CocoCay and thrill-seekers after the Ultimate Abyss and Perfect Storm slides.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Multi-deck complimentary main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet with a wide rotating spread."
+          },
+          {
+            "name": "Solarium Bistro",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary Mediterranean mezze-style plates in the adults-focused Solarium."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary Mexican fare with a build-your-own toppings bar."
+          },
+          {
+            "name": "Royal Railway - Utopia Station",
+            "type": "specialty",
+            "extra": true,
+            "desc": "First-of-its-kind immersive dining car simulating a Wild West train journey with HD-screen 'windows' and a five-course menu."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian dining with an alfresco Gio's Terrazza area."
+          },
+          {
+            "name": "The Mason Jar Southern Restaurant & Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Southern comfort cuisine and bar."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Royal Caribbean's signature steakhouse."
+          },
+          {
+            "name": "Hooked Seafood",
+            "type": "specialty",
+            "extra": true,
+            "desc": "New England-style fresh seafood."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese teppanyaki and sushi with six hibachi tables."
+          },
+          {
+            "name": "150 Central Park",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale seasonal gourmet dining in the Central Park neighbourhood."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Intimate multi-course tasting menu with wine pairings."
+          },
+          {
+            "name": "The Spare Tire",
+            "type": "casual",
+            "extra": false,
+            "desc": "Poolside food truck serving taquito-style Tornados."
+          },
+          {
+            "name": "Pesky Parrot",
+            "type": "casual",
+            "extra": true,
+            "desc": "Caribbean-themed bar on the Royal Promenade with fruit-forward and frozen cocktails."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "The longest dry slide at sea, 295 feet long, with zoom-booster rollers and transparent racing windows."
+          },
+          {
+            "name": "The Perfect Storm waterslides",
+            "desc": "A trio of racing/tube waterslides on the top deck."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator using 30,000 gallons of water."
+          },
+          {
+            "name": "Zip line",
+            "desc": "82-foot-high zip line crossing over the Boardwalk."
+          },
+          {
+            "name": "Rock climbing walls",
+            "desc": "Two rock-climbing wall locations."
+          },
+          {
+            "name": "Ice skating rink",
+            "desc": "Full ice rink open for complimentary daytime skating."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Glow-in-the-dark laser tag arena."
+          },
+          {
+            "name": "Escape room",
+            "desc": "Themed puzzle-solving escape room experience."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with dual 30-foot dive towers and high-diving/acrobatic shows."
+          },
+          {
+            "name": "Royal Theater",
+            "desc": "Main theater staging Broadway-style production shows."
+          },
+          {
+            "name": "Studio B ice show",
+            "desc": "Ice-skating production in the Studio B rink."
+          },
+          {
+            "name": "The Attic",
+            "desc": "Comedy club."
+          },
+          {
+            "name": "Spotlight Karaoke",
+            "desc": "Dedicated karaoke venue with private and main-stage rooms."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-music bar with live entertainment."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air neighbourhood with real plantings and upscale dining."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Seaside-themed family neighbourhood anchored by the AquaTheater and carousel."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor bustling promenade of bars, shops and cafes, home to Pesky Parrot."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Top-deck pools, waterslides, FlowRider and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and fitness neighbourhood."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife and shows district including the casino and karaoke."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids and teen spaces."
+          }
+        ],
+        "kids_family": "Adventure Ocean youth programming plus Splashaway Bay aquapark, the carousel and Boardwalk; designed for short family getaways calling at Perfect Day at CocoCay.",
+        "deploy_note": "Home port Port Canaveral (Orlando), Florida; 3-night weekend and 4-night weekday sailings to Perfect Day at CocoCay and Nassau, The Bahamas.",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/36/utopia-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/utopia-of-the-seas, https://www.royalcaribbean.com/guides/things-to-do-on-utopia-of-the-seas, https://www.royalcaribbean.com/guides/best-utopia-of-the-seas-restaurants, https://www.royalcaribbean.com/cruise-dining/royal-railway-utopia-station"
+      }
     },
     {
       "name": "Wonder of the Seas",
@@ -88,7 +1013,181 @@
         "Wonder Playscape"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage March 4, 2022. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/WONDER_Fact_Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/WONDER_Fact_Sheet.jpg",
+      "exp": {
+        "overview": "The fifth Oasis-class ship and, at delivery in early 2022, the world's largest cruise ship, spanning 18 decks and eight neighbourhoods.",
+        "who_for": "Multi-generational families wanting the most amenity-packed Oasis-class ship, including groups needing the two-level Ultimate Family Suite, plus travelers who want an eighth 'Suite Neighborhood' and week-long Caribbean itineraries.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-deck main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet."
+          },
+          {
+            "name": "Solarium Bistro",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary lighter-fare dining in the adults-only Solarium."
+          },
+          {
+            "name": "The Mason Jar Southern Restaurant & Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Southern-style restaurant and bar."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian dining and wine bar."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi."
+          },
+          {
+            "name": "Hooked Seafood",
+            "type": "specialty",
+            "extra": true,
+            "desc": "New England-style seafood."
+          },
+          {
+            "name": "150 Central Park",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale seasonal gourmet dining in Central Park."
+          },
+          {
+            "name": "Johnny Rockets",
+            "type": "casual",
+            "extra": true,
+            "desc": "Classic American diner burgers and shakes."
+          },
+          {
+            "name": "Sugar Beach",
+            "type": "casual",
+            "extra": true,
+            "desc": "Candy and ice-cream shop."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "The tallest dry slide at sea."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Zip line",
+            "desc": "Zip line running ten decks high over the Boardwalk."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Wonder Dunes mini golf",
+            "desc": "Onboard miniature golf course."
+          },
+          {
+            "name": "Ice skating rink",
+            "desc": "Full ice-skating rink."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Handcrafted carousel on the Boardwalk."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Kids aquapark with slides, drench buckets and water cannons."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with high-diving and acrobatic shows."
+          },
+          {
+            "name": "Studio B ice show",
+            "desc": "Ice-skating production in the Studio B rink."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music venue with cover bands."
+          },
+          {
+            "name": "Spotlight Karaoke",
+            "desc": "Dedicated karaoke venue."
+          },
+          {
+            "name": "Vue Bar",
+            "desc": "Cantilevered bar with panoramic ocean views."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-music bar."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighbourhood with living plants and fine dining."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Family neighbourhood with the carousel and AquaTheater."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Top-deck pools, waterslides, FlowRider and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and fitness neighbourhood."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife district with the casino, ice rink and Music Hall."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids areas plus Wonder Playscape and Social100 teen space."
+          },
+          {
+            "name": "Suite Neighborhood",
+            "desc": "Wonder's eighth neighbourhood, an exclusive suites-only area with private amenities."
+          }
+        ],
+        "kids_family": "Adventure Ocean programming, the open-air Wonder Playscape for younger kids, the Social100 teen hangout, Splashaway Bay aquapark, and the two-story Ultimate Family Suite with an in-room slide.",
+        "decks": 18,
+        "deploy_note": "Currently sailing Caribbean itineraries; Royal Caribbean's current ship page lists Miami, Florida as the home port (ship entered service at Port Canaveral in December 2022).",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/34/wonder-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/wonder-of-the-seas"
+      }
     },
     {
       "name": "Harmony of the Seas",
@@ -103,7 +1202,147 @@
         "Ultimate Family Suite"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 29, 2016. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-May-27-Wed/26-RCC-0603_Harmony-Fast_Facts_Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-May-27-Wed/26-RCC-0603_Harmony-Fast_Facts_Update.jpg",
+      "exp": {
+        "overview": "The third Oasis-class ship, blending the class's iconic seven-neighbourhood layout with the debut of the Ultimate Abyss and the Perfect Storm waterslides across 16 guest decks.",
+        "who_for": "Families and active travelers who want the seven-neighbourhood Oasis experience with the tallest slide at sea, a nine-story zip line and the fleet's largest casino, on week-long Caribbean sailings.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-level main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary Mexican fare with a toppings bar."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese teppanyaki and sushi."
+          },
+          {
+            "name": "Samba Grill",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Brazilian-style churrascaria steakhouse."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade with pub food."
+          },
+          {
+            "name": "Pesky Parrot",
+            "type": "casual",
+            "extra": true,
+            "desc": "Tropical bar/lounge."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "The tallest slide at sea, debuting on Harmony."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Two surf simulators."
+          },
+          {
+            "name": "Zip line",
+            "desc": "Zip line running nine stories high over the Boardwalk."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Glow-in-the-dark laser tag."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Ice skating rink",
+            "desc": "Full ice-skating rink."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Handcrafted carousel on the Boardwalk."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with high divers and acrobats."
+          },
+          {
+            "name": "Studio B ice show",
+            "desc": "Ice-skating production."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "The fleet's largest casino, with 37 table games and 500+ slot machines."
+          },
+          {
+            "name": "Main theater production shows",
+            "desc": "Four theatrical shows across the venues."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighbourhood with living plants and fine dining."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Family neighbourhood with the carousel and AquaTheater."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Top-deck pools, three pools, ten whirlpools, waterslides, FlowRiders and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and enhanced adults-only Solarium."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife district with Casino Royale and the ice rink."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids and teen spaces."
+          }
+        ],
+        "kids_family": "Adventure Ocean youth programming, Splashaway Bay aquapark, family dining options and the Ultimate Abyss and waterslides for older kids.",
+        "decks": 16,
+        "deploy_note": "Royal Caribbean's ship page lists Port Canaveral (Orlando), Florida as the home port.",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/29/harmony-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/harmony-of-the-seas"
+      }
     },
     {
       "name": "Symphony of the Seas",
@@ -117,7 +1356,153 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 7, 2018. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0613_Symphony_-Fact_Sheet_Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0613_Symphony_-Fact_Sheet_Update.jpg",
+      "exp": {
+        "overview": "The fourth Oasis-class ship and, when delivered in 2018, the world's largest cruise ship, with seven neighbourhoods across 18 total decks (16 guest decks).",
+        "who_for": "Families and groups wanting a jam-packed big-ship experience with the Ultimate Family Suite, two FlowRiders, laser tag and Broadway-scale entertainment.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary three-level main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet."
+          },
+          {
+            "name": "Solarium Bistro",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary lighter dining in the Solarium."
+          },
+          {
+            "name": "Hooked Seafood",
+            "type": "specialty",
+            "extra": true,
+            "desc": "New England-style fresh seafood."
+          },
+          {
+            "name": "Jamie's Italian",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Jamie Oliver's family-style Italian restaurant."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "150 Central Park",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale seasonal gourmet dining in Central Park."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade with pub-style food."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "Ten-story dry slide, the tallest slide at sea."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Twin surf simulators."
+          },
+          {
+            "name": "Zip line",
+            "desc": "Zip line over the Boardwalk."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Glow-in-the-dark laser tag arena."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Ice skating rink",
+            "desc": "Full ice-skating rink."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Handcrafted carousel on the Boardwalk."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with acrobatic and high-diving shows on water and in the air."
+          },
+          {
+            "name": "Hairspray",
+            "desc": "Full-length Broadway musical staged in the main theater."
+          },
+          {
+            "name": "Studio B ice show",
+            "desc": "Ice-skating production."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-story live-music venue."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighbourhood with living plants and fine dining."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Family neighbourhood with the carousel and AquaTheater."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Top-deck pools, waterslides, FlowRiders and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and fitness neighbourhood."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife district with the casino and ice rink."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids and teen spaces."
+          }
+        ],
+        "kids_family": "Adventure Ocean youth programming, Splashaway Bay aquapark, laser tag, and the multi-level Ultimate Family Suite designed for larger families.",
+        "decks": 18,
+        "deploy_note": "Western Caribbean, ex-Galveston, Texas (Royal Caribbean's zero-energy terminal), 2026-27 season; 6- to 8-night itineraries including Costa Maya, Roatan, Nassau and Perfect Day at CocoCay, per Royal Caribbean press center.",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/31/symphony-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/symphony-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1760/royal-caribbean-brings-the-action-with-2026-27-caribbean-and-northeast-lineup/"
+      }
     },
     {
       "name": "Allure of the Seas",
@@ -132,7 +1517,142 @@
         "Carousel"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 5, 2010. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0612_Allure_-fast_facts_Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-14-Tue/26-RCC-0612_Allure_-fast_facts_Update.jpg",
+      "exp": {
+        "overview": "The second Oasis-class ship, recently given a M-plus amplification, keeping the seven-neighbourhood layout while adding the Ultimate Abyss, Perfect Storm slides and new dining.",
+        "who_for": "Couples and families after one of the most awarded ships at sea, now newly amplified, with the tallest slide, a nine-story zip line and Broadway's Mamma Mia! on Caribbean sailings from Fort Lauderdale.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-level main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Rustic Italian dining."
+          },
+          {
+            "name": "The Mason Jar Southern Restaurant & Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Southern comfort cuisine and bar."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Dog House",
+            "type": "casual",
+            "extra": false,
+            "desc": "Gourmet hot dogs and sausages."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "The tallest slide at sea."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides (Typhoon, Cyclone and Supercell)."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Zip line",
+            "desc": "Zip line running nine stories above the Boardwalk."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Kids aquapark with twin drench buckets, three waterslides, fountains, pools, water cannons and a tots' Splash Pad."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Ice skating rink",
+            "desc": "Full ice-skating rink."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Handcrafted carousel on the Boardwalk."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with high-diving and acrobatic shows."
+          },
+          {
+            "name": "Mamma Mia!",
+            "desc": "The Broadway musical set to ABBA's music, staged in the main theater."
+          },
+          {
+            "name": "Jazz on 4",
+            "desc": "Intimate jazz club in Central Park."
+          },
+          {
+            "name": "On Air Club",
+            "desc": "Karaoke and live-music club."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-music bar."
+          },
+          {
+            "name": "Pesky Parrot",
+            "desc": "Tropical cocktail bar."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighbourhood with living plants, fine dining and Jazz on 4."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Family neighbourhood with the carousel and AquaTheater."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Top-deck pools, waterslides, FlowRider and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and adults-only Solarium."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife district with the casino and ice rink."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids and teen spaces."
+          }
+        ],
+        "kids_family": "Adventure Ocean youth programming and the Splashaway Bay water park with drench buckets, waterslides, water cannons and a tots' Splash Pad.",
+        "deploy_note": "Royal Caribbean's ship page lists Fort Lauderdale, Florida as the home port; ship is described as newly amplified.",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/20/allure-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/allure-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1738/introducing-royal-caribbeans-100m-plus-all-out-glow-up-of-allure-of-the-seas/"
+      }
     },
     {
       "name": "Oasis of the Seas",
@@ -147,7 +1667,147 @@
         "The Ultimate Abyss"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 5, 2009. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/OASIS_Fact_Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-16-Tue/OASIS_Fact_Sheet.jpg",
+      "exp": {
+        "overview": "The original Oasis-class ship that pioneered the seven-neighbourhood concept when it debuted in 2009, since amplified with the Ultimate Abyss, Portside BBQ and a reimagined Caribbean pool deck.",
+        "who_for": "Travelers who want the ship that started the mega-ship era, now updated with 27 dining and drinking spots, laser tag and the Broadway musical CATS, on week-long Caribbean voyages from South Florida and New York.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary three-level main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary buffet."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary Mexican fare with a toppings bar."
+          },
+          {
+            "name": "150 Central Park",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Upscale gourmet dining in Central Park."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Intimate five-course tasting menu with wine pairings."
+          },
+          {
+            "name": "Portside BBQ",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Slow-smoked Texas-style barbecue, unique to Oasis at launch."
+          },
+          {
+            "name": "Teppanyaki",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese hibachi table cooking."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade with pub food."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Ultimate Abyss",
+            "desc": "Ten-deck-high spiraling dry slide, the tallest slide at sea."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Two surf simulators."
+          },
+          {
+            "name": "Zip line",
+            "desc": "Zip line over the Boardwalk."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Glow-in-the-dark laser tag in a frozen-city setting."
+          },
+          {
+            "name": "Royal Escape Room",
+            "desc": "Space-themed puzzle escape room."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Kids aquapark."
+          },
+          {
+            "name": "Carousel",
+            "desc": "Handcrafted carousel on the Boardwalk."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "AquaTheater",
+            "desc": "Open-air aquatic theater with stunt-fueled shows and three-deck-high dives; deepest pool at sea at 17.9 feet."
+          },
+          {
+            "name": "CATS",
+            "desc": "The Tony Award-winning Broadway musical staged in the main theater."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music venue with cover bands."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-music bar with salsa dancing."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Central Park",
+            "desc": "Open-air garden neighbourhood with thousands of living plants and fine dining."
+          },
+          {
+            "name": "Boardwalk",
+            "desc": "Seaside-themed family neighbourhood with the carousel and AquaTheater."
+          },
+          {
+            "name": "Royal Promenade",
+            "desc": "Indoor promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool & Sports Zone",
+            "desc": "Reimagined Caribbean pool deck with 21 pools and whirlpools, waterslides, FlowRiders and sports court."
+          },
+          {
+            "name": "Vitality Spa & Fitness Center",
+            "desc": "Spa and fitness neighbourhood."
+          },
+          {
+            "name": "Entertainment Place",
+            "desc": "Nightlife district with the casino, ice rink and Music Hall."
+          },
+          {
+            "name": "Youth Zone",
+            "desc": "Adventure Ocean kids and teen spaces."
+          }
+        ],
+        "kids_family": "Adventure Ocean age-specific programming for babies, kids and teens, plus the Splashaway Bay aquapark and family activities throughout the neighbourhoods.",
+        "decks": 16,
+        "deploy_note": "Royal Caribbean's ship page lists home ports of Fort Lauderdale, Florida; New York, New York; and Miami, Florida, on Caribbean itineraries.",
+        "exp_source": "https://www.royalcaribbeanpresscenter.com/fact-sheet/21/oasis-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/oasis-of-the-seas"
+      }
     },
     {
       "name": "Odyssey of the Seas",
@@ -162,7 +1822,182 @@
         "Playmakers Sports Bar & Arcade"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 31, 2021. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511898_ODYSSEY-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511898_ODYSSEY-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "The second and final Quantum Ultra-class ship, blending the class's engineering spectacle with the largest SeaPlex in the fleet and a glass North Star observation capsule.",
+        "who_for": "Thrill-seekers and multigenerational families who want big-ship activity in a single day: North Star's 300-foot views, RipCord by iFLY skydiving, the FlowRider surf simulator, and SeaPlex bumper cars, basketball and roller skating.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Multi-deck complimentary dining room serving rotating menus."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual all-day buffet with global stations."
+          },
+          {
+            "name": "Sorrento's",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual pizza counter."
+          },
+          {
+            "name": "Sprinkles",
+            "type": "casual",
+            "extra": false,
+            "desc": "Ice cream and frozen yogurt counter."
+          },
+          {
+            "name": "The Cafe @ Two70",
+            "type": "casual",
+            "extra": false,
+            "desc": "Grab-and-go cafe fare inside the Two70 venue."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual Mexican quick-serve."
+          },
+          {
+            "name": "Cafe Promenade",
+            "type": "casual",
+            "extra": false,
+            "desc": "Coffee and light bites on the Royal Esplanade."
+          },
+          {
+            "name": "Solarium Bistro",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual dining in the adults-oriented Solarium."
+          },
+          {
+            "name": "Coastal Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Mediterranean-inspired restaurant reserved for suite guests."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen & Wine Bar",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian specialty restaurant and wine bar."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese specialty dining with sushi."
+          },
+          {
+            "name": "Teppanyaki",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Interactive Japanese teppanyaki grill."
+          },
+          {
+            "name": "Wonderland",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Imaginative, whimsical multi-course specialty concept."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar with pub food and arcade games."
+          }
+        ],
+        "activities": [
+          {
+            "name": "North Star",
+            "desc": "All-glass observation capsule lifting guests over the edge of the ship, more than 300 feet above sea level."
+          },
+          {
+            "name": "RipCord by iFLY",
+            "desc": "Simulated skydiving in a vertical wind tunnel at sea."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf and bodyboard simulator."
+          },
+          {
+            "name": "SeaPlex bumper cars",
+            "desc": "Bumper cars inside the largest SeaPlex in the fleet."
+          },
+          {
+            "name": "Rock-climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Basketball & sports court",
+            "desc": "Full-size sports court in SeaPlex."
+          },
+          {
+            "name": "Roller skating",
+            "desc": "Roller-skating sessions in SeaPlex."
+          },
+          {
+            "name": "Laser tag",
+            "desc": "Laser tag experience in SeaPlex."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Two70",
+            "desc": "Transformative multidimensional venue with a Vistarama panoramic wall and Roboscreens."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music and nightlife venue."
+          },
+          {
+            "name": "Spectras Cabaret",
+            "desc": "Signature production show staged in Two70."
+          },
+          {
+            "name": "Comedy Club",
+            "desc": "Stand-up comedy venue."
+          },
+          {
+            "name": "Schooner Bar",
+            "desc": "Nautical-themed piano bar."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Full casino with table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "SeaPlex",
+            "desc": "The largest SeaPlex in the fleet - an indoor/outdoor sports and entertainment complex with bumper cars, sports court and roller skating."
+          },
+          {
+            "name": "Two70",
+            "desc": "Multi-level entertainment and dining space with floor-to-ceiling windows by day and a high-tech theater by night."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-oriented indoor/outdoor retreat with pools and loungers."
+          },
+          {
+            "name": "Royal Esplanade",
+            "desc": "Central promenade lined with shops, bars and cafes."
+          },
+          {
+            "name": "Pool Deck",
+            "desc": "Resort-style pool deck with multiple pools."
+          }
+        ],
+        "kids_family": "Adventure-focused family spaces including Splashaway Bay water play area, a dedicated teen space, and the Ultimate Family Suite - a multi-room suite with an in-suite slide and play areas.",
+        "deploy_note": "Per the official ship page, Odyssey sails Mediterranean itineraries from Rome (Civitavecchia) in the summer and Caribbean itineraries in the winter.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/odyssey-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/33/odyssey-of-the-seas/"
+      }
     },
     {
       "name": "Spectrum of the Seas",
@@ -176,7 +2011,82 @@
         "RipCord by iFly"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 18, 2019. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513083_SPECTRUM-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513083_SPECTRUM-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "The first Quantum Ultra-class ship and Royal Caribbean's Asia-based flagship, purpose-built for the region with an enhanced SeaPlex and exclusive venues not found on her sister ships.",
+        "who_for": "Families and adventure-seekers cruising Asia who want high-tech thrills: the Sky Pad virtual-reality bungee-trampoline, North Star observation capsule, RipCord by iFLY skydiving, and an enhanced SeaPlex with bumper cars and augmented-reality sports.",
+        "dining": [
+          {
+            "name": "Sichuan Red",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Spectrum-exclusive authentic Sichuan Chinese specialty restaurant."
+          },
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining room (venue named on official pages; menu detail not captured)."
+          }
+        ],
+        "activities": [
+          {
+            "name": "North Star",
+            "desc": "All-glass observation capsule reaching more than 300 feet above sea level."
+          },
+          {
+            "name": "Sky Pad",
+            "desc": "Virtual-reality bungee-trampoline experience exclusive to Spectrum."
+          },
+          {
+            "name": "RipCord by iFLY",
+            "desc": "Simulated skydiving in a vertical wind tunnel."
+          },
+          {
+            "name": "Enhanced SeaPlex",
+            "desc": "The largest indoor sports and entertainment complex at sea, with bumper cars, basketball, and augmented-reality walls and floors."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Bionic Bar",
+            "desc": "Bar where robotic bartenders mix custom drinks."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Full casino with table games and slots."
+          },
+          {
+            "name": "Broadway-style theater",
+            "desc": "Main theater staging production entertainment."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "SeaPlex",
+            "desc": "Enhanced indoor sports and entertainment complex - the largest at sea - with bumper cars and augmented-reality experiences."
+          },
+          {
+            "name": "Sky Pad",
+            "desc": "Virtual-reality bungee-trampoline attraction unique to Spectrum."
+          },
+          {
+            "name": "Royal Esplanade",
+            "desc": "Central shopping and dining promenade."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-oriented indoor/outdoor retreat."
+          },
+          {
+            "name": "Suite Neighborhood",
+            "desc": "Exclusive suite-class area with private dining, lounge and sundeck access."
+          }
+        ],
+        "kids_family": "Family spaces including the Ultimate Family Suite - a two-level suite with an in-suite slide, private cinema and karaoke - plus SeaPlex activities for all ages.",
+        "deploy_note": "Royal Caribbean's only Asia-based ship, sailing year-round from Shanghai and Hong Kong on 3-9 night getaways around Japan, South Korea, Vietnam and Taiwan (per official press-center materials).",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/spectrum-of-the-seas, https://www.royalcaribbeanpresscenter.com/spectrum/"
+      }
     },
     {
       "name": "Anthem of the Seas",
@@ -190,7 +2100,110 @@
         "Two70"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 22, 2015. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766431593_ANTHEM-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766431593_ANTHEM-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Quantum-class ship built around multidimensional entertainment and first-at-sea thrills, headlined by the North Star observation capsule and the transforming Two70 venue.",
+        "who_for": "Families and couples wanting bold, tech-forward experiences: North Star's 300-foot views, RipCord by iFLY skydiving, FlowRider surfing, SeaPlex bumper cars, and the Roboscreen-driven shows in Two70.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-deck main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual all-day buffet."
+          },
+          {
+            "name": "Wonderland",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Imaginative, whimsical multi-course specialty concept."
+          },
+          {
+            "name": "La Patisserie",
+            "type": "casual",
+            "extra": false,
+            "desc": "Cafe for pastries, desserts and coffee."
+          }
+        ],
+        "activities": [
+          {
+            "name": "North Star",
+            "desc": "All-glass observation capsule on a crane arm, lifting guests more than 300 feet above sea level."
+          },
+          {
+            "name": "RipCord by iFLY",
+            "desc": "Simulated skydiving in a vertical wind tunnel at sea."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf and bodyboard simulator."
+          },
+          {
+            "name": "SeaPlex bumper cars",
+            "desc": "Bumper cars in the indoor sports and entertainment complex."
+          },
+          {
+            "name": "Roller skating",
+            "desc": "Roller-skating in SeaPlex."
+          },
+          {
+            "name": "Rock-climbing wall",
+            "desc": "Outdoor climbing wall."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Two70",
+            "desc": "Transforming venue with the Vistarama panoramic wall and Roboscreens."
+          },
+          {
+            "name": "Spectras Cabaret",
+            "desc": "Signature production show staged in Two70."
+          },
+          {
+            "name": "Two70 Roboshow",
+            "desc": "Show combining aerialists with robotic Roboscreens."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music and nightlife venue."
+          },
+          {
+            "name": "Bionic Bar",
+            "desc": "Bar with robotic bartenders."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Full casino with table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "SeaPlex",
+            "desc": "Indoor/outdoor sports and entertainment complex with bumper cars and roller skating."
+          },
+          {
+            "name": "Two70",
+            "desc": "Multi-level venue with floor-to-ceiling windows, Vistarama and Roboscreens."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-oriented indoor/outdoor retreat."
+          },
+          {
+            "name": "Royal Esplanade",
+            "desc": "Central promenade of shops, bars and cafes."
+          }
+        ],
+        "kids_family": "Family-friendly programming across the ship; specific children's venues (Adventure Ocean, Splashaway Bay) not confirmed on the pages read - see needs.",
+        "deploy_note": "Per the official ship page, Anthem currently sails a mix of regions including Alaska; confirm the specific current-season home port (historically Cape Liberty, Bayonne NJ).",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/26/anthem-of-the-seas/"
+      }
     },
     {
       "name": "Ovation of the Seas",
@@ -205,7 +2218,164 @@
         "SeaPlex"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 17, 2016. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-29-Wed/26-RCC-0582_OV_Fast_Facts_Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-29-Wed/26-RCC-0582_OV_Fast_Facts_Update.jpg",
+      "exp": {
+        "overview": "The third Quantum-class ship, an Amplified vessel packing first-at-sea thrills - North Star, RipCord by iFLY and SeaPlex - into a design built for big-water itineraries.",
+        "who_for": "Active families and couples who want a full day of variety: skydiving, surfing, bumper cars, roller skating and 300-foot observation views, paired with the fleet's signature Virtual Balcony staterooms.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-deck main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual all-day buffet."
+          },
+          {
+            "name": "Sorrento's",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual pizza counter."
+          },
+          {
+            "name": "Sprinkles",
+            "type": "casual",
+            "extra": false,
+            "desc": "Ice cream and frozen yogurt counter."
+          },
+          {
+            "name": "The Cafe @ Two70",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual cafe inside the Two70 venue."
+          },
+          {
+            "name": "Dog House",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual hot-dog counter."
+          },
+          {
+            "name": "Cafe Promenade",
+            "type": "casual",
+            "extra": false,
+            "desc": "Coffee and light bites on the Royal Esplanade."
+          },
+          {
+            "name": "Solarium Bistro",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual dining in the Solarium."
+          },
+          {
+            "name": "Coastal Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Mediterranean-inspired restaurant reserved for suite guests."
+          },
+          {
+            "name": "Izumi Teppanyaki",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese teppanyaki and sushi specialty dining."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian specialty restaurant."
+          }
+        ],
+        "activities": [
+          {
+            "name": "North Star",
+            "desc": "All-glass observation capsule reaching more than 300 feet above sea level."
+          },
+          {
+            "name": "RipCord by iFLY",
+            "desc": "Simulated skydiving in a vertical wind tunnel."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf and bodyboard simulator."
+          },
+          {
+            "name": "SeaPlex bumper cars",
+            "desc": "Bumper car races in the largest indoor activity space at sea."
+          },
+          {
+            "name": "Roller skating",
+            "desc": "Roller-skating rink in SeaPlex."
+          },
+          {
+            "name": "Rock-climbing wall",
+            "desc": "Outdoor climbing wall."
+          },
+          {
+            "name": "Basketball court",
+            "desc": "Full-size sports court."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Two70",
+            "desc": "Transformative venue with a panoramic Vistarama wall and Roboscreens, home to the 'Pixels' show."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music and nightlife venue."
+          },
+          {
+            "name": "Attic Comedy Club",
+            "desc": "Stand-up comedy venue."
+          },
+          {
+            "name": "Spotlight Karaoke",
+            "desc": "Karaoke lounge with public and private rooms."
+          },
+          {
+            "name": "Silent Disco",
+            "desc": "Headphone dance party staged in the Solarium."
+          },
+          {
+            "name": "Bionic Bar",
+            "desc": "Bar with robotic bartenders."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Full casino with table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "SeaPlex",
+            "desc": "The largest indoor activity space at sea, with bumper cars, roller skating and a full-size sports court."
+          },
+          {
+            "name": "Two70",
+            "desc": "Multi-level entertainment and dining venue with high-tech Roboscreens and Vistarama."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-oriented indoor/outdoor retreat with pools."
+          },
+          {
+            "name": "Royal Esplanade",
+            "desc": "Central promenade of shops, bars and cafes."
+          },
+          {
+            "name": "Pool Deck",
+            "desc": "Resort-style pool deck with multiple pools."
+          }
+        ],
+        "kids_family": "Family facilities including Splashaway Bay water play area and SeaPlex activities for kids and teens.",
+        "deploy_note": "Per the official ship page, Ovation is currently marketed sailing from Los Angeles to the Mexican Riviera; it also sails Alaska and Australia/Asia seasons in other periods - confirm the specific current-season deployment.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/ovation-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/28/ovation-of-the-seas/"
+      }
     },
     {
       "name": "Quantum of the Seas",
@@ -219,7 +2389,128 @@
         "Two70"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 2, 2014. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766512373_QUANTUM-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766512373_QUANTUM-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "The lead ship of the Quantum class, the vessel that introduced first-at-sea innovations - RipCord by iFLY skydiving, the North Star capsule, SeaPlex and the robotic Bionic Bar.",
+        "who_for": "Adventure-minded families and couples drawn to genre-defining onboard tech: skydiving and surfing simulators, a 300-foot observation capsule, laser tag and escape-room challenges.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-deck main dining room."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual all-day buffet."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese specialty dining with sushi."
+          },
+          {
+            "name": "Jamie's Italian",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian specialty restaurant by chef Jamie Oliver."
+          },
+          {
+            "name": "Wonderland",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Imaginative, whimsical multi-course specialty concept."
+          },
+          {
+            "name": "The Cafe @ Two70",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual cafe inside the Two70 venue."
+          }
+        ],
+        "activities": [
+          {
+            "name": "North Star",
+            "desc": "All-glass observation capsule reaching more than 300 feet above the ocean."
+          },
+          {
+            "name": "RipCord by iFLY",
+            "desc": "The first skydiving simulator at sea (a vertical wind tunnel)."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf and bodyboard simulator."
+          },
+          {
+            "name": "Laser tag: Clash for the Crystal City",
+            "desc": "Themed laser-tag experience in SeaPlex."
+          },
+          {
+            "name": "Royal Escape Room",
+            "desc": "Onboard puzzle/escape-room challenge."
+          },
+          {
+            "name": "SeaPlex bumper cars & roller skating",
+            "desc": "Bumper cars and roller skating in the largest indoor sports complex at sea."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Two70",
+            "desc": "Transforming production venue with Vistarama and Roboscreens; home to shows including 'Starwater' and 'Sonic Odyssey'."
+          },
+          {
+            "name": "Music Hall",
+            "desc": "Two-level live-music and nightlife venue."
+          },
+          {
+            "name": "Bionic Bar",
+            "desc": "Home of the world's first robotic bartenders."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Full casino with table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "SeaPlex",
+            "desc": "The largest indoor sports and entertainment complex at sea, with bumper cars and roller skating."
+          },
+          {
+            "name": "Two70",
+            "desc": "Multi-level entertainment venue with panoramic windows, Vistarama and Roboscreens."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-oriented indoor/outdoor retreat."
+          },
+          {
+            "name": "North Star",
+            "desc": "Observation-capsule zone at the top of the ship."
+          },
+          {
+            "name": "Bionic Bar",
+            "desc": "Robotic bar venue."
+          },
+          {
+            "name": "Royal Esplanade",
+            "desc": "Central promenade of shops, bars and cafes."
+          }
+        ],
+        "kids_family": "Family programming across the ship; specific children's venue names not confirmed on the pages read - see needs.",
+        "deploy_note": "Per the official ship page, Quantum currently sails 'West Coast' itineraries from Los Angeles to the Mexican Riviera and Alaska; confirm exact current-season deployment.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/quantum-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/27/quantum-of-the-seas/"
+      }
     },
     {
       "name": "Independence of the Seas",
@@ -233,7 +2524,97 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 2, 2008. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510482_INDEPENDENCE-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510482_INDEPENDENCE-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Royal Amplified Freedom-class ship with 13 dining options, four pools and a full lineup of signature thrills.",
+        "who_for": "Active families who want dueling Perfect Storm waterslides, a FlowRider, a rock wall and glow-in-the-dark laser tag, with four pools and casual poolside eats for downtime.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "One of 13 dining options aboard."
+          },
+          {
+            "name": "Fish & Ships",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual pool-adjacent seafood."
+          },
+          {
+            "name": "Sugar Beach",
+            "type": "casual",
+            "extra": true,
+            "desc": "Candy and sweets shop."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian specialty restaurant."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Hibachi and sushi specialty dining."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Perfect Storm",
+            "desc": "Dueling waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Signature climbing wall."
+          },
+          {
+            "name": "Battle for Planet Z",
+            "desc": "Glow-in-the-dark laser tag."
+          },
+          {
+            "name": "Puzzle Room",
+            "desc": "Escape-room-style puzzle challenge."
+          },
+          {
+            "name": "Four pools",
+            "desc": "Four onboard pools."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Theater productions",
+            "desc": "Main-theater stage shows."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin-themed lounge."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard casino."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "The Living Room",
+            "desc": "Reimagined lounge/hangout space."
+          }
+        ],
+        "kids_family": "Family-friendly amenities throughout, including four pools; Battle for Planet Z laser tag and arcade gaming for older kids and teens.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/independence-of-the-seas"
+      }
     },
     {
       "name": "Freedom of the Seas",
@@ -247,7 +2628,81 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 11, 2006. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-13-Mon/26-rcc-0609_Freedom_Fast_Facts_Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jul-13-Mon/26-rcc-0609_Freedom_Fast_Facts_Update.jpg",
+      "exp": {
+        "overview": "A Freedom-class ship reborn through Royal Amplified, packing resort-style pool decks and headline thrills into a lively mid-size Royal Caribbean hull.",
+        "who_for": "Families and thrill-seekers who want The Perfect Storm waterslides, a FlowRider surf simulator and glow-in-the-dark laser tag alongside a relaxed Caribbean pool deck.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Multi-deck main dining serving breakfast, lunch and dinner."
+          },
+          {
+            "name": "Windjammer",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet open for breakfast, lunch and dinner."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual Mexican spot for tacos and burritos."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Specialty restaurant serving Italian classics."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Hand-rolled sushi and tableside teppanyaki."
+          },
+          {
+            "name": "Playmakers Sports Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade for game-day viewing and gaming."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Perfect Storm",
+            "desc": "Three-story dueling waterslide duo."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Wave-riding surf simulator."
+          },
+          {
+            "name": "Glow-in-the-dark laser tag",
+            "desc": "Interactive laser-tag battle experience."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard casino gaming."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Star Lounge",
+            "desc": "Entertainment venue for shows and live acts."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "The Lime and Coconut",
+            "desc": "Two-story Caribbean bar with a rooftop sun deck that converts to a moonlit lounge."
+          }
+        ],
+        "kids_family": "Adventure Ocean reimagined kids' activity space, teen-exclusive hangouts, and a resort-style Caribbean pool deck with the Splashaway Bay kids aqua park.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/freedom-of-the-seas"
+      }
     },
     {
       "name": "Liberty of the Seas",
@@ -262,7 +2717,88 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 19, 2007. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jun-5-Fri/26-RCC-0605-LB-Fast-Facts-Amplified-Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Jun-5-Fri/26-RCC-0605-LB-Fast-Facts-Amplified-Update.jpg",
+      "exp": {
+        "overview": "A Freedom-class ship offering 15 dining destinations and ten types of entertainment, refreshed with new thrills and pool-deck spaces.",
+        "who_for": "Families wanting big-ship variety - Perfect Storm waterslides with a boomerang, a rock-climbing wall and the Splashaway Bay aqua park - plus adults drawn to an expanded casino and Caribbean bar scene.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Part of the ship's 15 dining destinations."
+          },
+          {
+            "name": "Sorrento's Pizza",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual pizza counter."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual Mexican fare."
+          },
+          {
+            "name": "Starbucks",
+            "type": "casual",
+            "extra": true,
+            "desc": "Branded coffee cafe."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Specialty hibachi and sushi dining."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Perfect Storm",
+            "desc": "Trio of waterslides including a boomerang feature."
+          },
+          {
+            "name": "Splashaway Bay",
+            "desc": "Aqua park for families."
+          },
+          {
+            "name": "Rock climbing wall",
+            "desc": "Signature climbing wall."
+          },
+          {
+            "name": "Royal Escape Room",
+            "desc": "Newly added escape-room challenge."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Expanded casino with 400+ slot machines and 35 tables."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Boleros",
+            "desc": "Latin lounge for salsa and Cuban mojitos."
+          },
+          {
+            "name": "Schooner Bar",
+            "desc": "Piano bar with sing-alongs."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "The Lime and Coconut",
+            "desc": "Signature Caribbean cocktail bar."
+          },
+          {
+            "name": "Reimagined pool deck",
+            "desc": "Refreshed pool-deck area."
+          }
+        ],
+        "kids_family": "Splashaway Bay aqua park for families; new Casitas private poolside cabins for adults seeking shade.",
+        "deploy_note": "Western Caribbean; winter 2026-27 4- and 5-night getaways to Costa Maya and Cozumel, Mexico (including Royal Beach Club Cozumel when it opens late 2026), per Royal Caribbean press center.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/liberty-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1774/royal-caribbean-maximizes-every-minute-of-short-caribbean-getaways-in-2026-27/"
+      }
     },
     {
       "name": "Adventure of the Seas",
@@ -277,7 +2813,88 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 18, 2001. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766430914_ADVENTURE-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766430914_ADVENTURE-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Voyager-class ship offering signature thrills, ice-skating shows and a Latin-flavored bar scene under the landmark Viking Crown Lounge.",
+        "who_for": "Families wanting the FlowRider, a rock-climbing wall, twin Perfect Storm racer slides and the Splashaway Bay kids' area, plus couples drawn to steak and Italian specialty dining.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining."
+          },
+          {
+            "name": "Buffet",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet dining."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Tuscan-flavored Italian specialty dining."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Specialty steakhouse."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Sushi and Asian-inspired entrees."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Perfect Storm",
+            "desc": "Dual racer waterslides, Typhoon and Cyclone."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Signature climbing wall."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Ice-skating shows",
+            "desc": "Professional ice-skating performances."
+          },
+          {
+            "name": "Boleros Latin Club",
+            "desc": "Latin club with live band performances."
+          },
+          {
+            "name": "Champagne Bar",
+            "desc": "Bar specializing in sparkling wines."
+          },
+          {
+            "name": "Duck and Dog Pub",
+            "desc": "English-style pub."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard casino."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Blue Moon Viking Crown",
+            "desc": "Elevated Viking Crown lounge venue."
+          }
+        ],
+        "kids_family": "Splashaway Bay children's water-play area and family-friendly pool activities.",
+        "deploy_note": "Caribbean, ex-Orlando (Port Canaveral), summer 2026; 6- and 8-night Caribbean getaways including George Town, Grand Cayman (per Royal Caribbean press center 2026-27 lineup).",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/adventure-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1760/royal-caribbean-brings-the-action-with-2026-27-caribbean-and-northeast-lineup/"
+      }
     },
     {
       "name": "Explorer of the Seas",
@@ -292,7 +2909,88 @@
         "Studio B"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage October 28, 2000. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505452_EXPLORER-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505452_EXPLORER-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Voyager-class ship pairing signature thrills with an adults-only Solarium and a full lineup of bars and lounges.",
+        "who_for": "Families wanting the FlowRider, a rock-climbing wall and twin Perfect Storm slides, plus adults who value a Solarium retreat, a spa and a lively nightlife scene.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining."
+          },
+          {
+            "name": "Cafe Promenade",
+            "type": "casual",
+            "extra": false,
+            "desc": "Deli-style sandwiches, desserts and late-night bites."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Tuscan-style specialty dining."
+          },
+          {
+            "name": "Izumi Hibachi & Sushi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Far East flavors, hibachi and sushi."
+          }
+        ],
+        "activities": [
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Twin waterslides, Typhoon and Cyclone."
+          },
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Signature climbing wall."
+          },
+          {
+            "name": "Outdoor movie nights",
+            "desc": "Films on the pool deck."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Original production shows."
+          },
+          {
+            "name": "Club Twenty",
+            "desc": "Dance venue."
+          },
+          {
+            "name": "Schooner Bar",
+            "desc": "Live piano bar."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Salsa-dancing lounge."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Onboard casino."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool-deck retreat with whirlpool."
+          },
+          {
+            "name": "Vitality Spa",
+            "desc": "Onboard wellness and spa area."
+          }
+        ],
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/explorer-of-the-seas"
+      }
     },
     {
       "name": "Mariner of the Seas",
@@ -307,7 +3005,81 @@
         "Laser Tag"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 16, 2003. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511547_MARINER-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511547_MARINER-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Royal Amplified Voyager-class ship blending signature thrills with an expanded dining and bar lineup.",
+        "who_for": "Families and groups wanting the FlowRider, twin Perfect Storm waterslides (Cyclone and Typhoon), mini golf and laser tag, plus adults drawn to a varied bar and lounge scene.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-deck main dining."
+          },
+          {
+            "name": "Johnny Rockets",
+            "type": "casual",
+            "extra": true,
+            "desc": "American diner classics."
+          },
+          {
+            "name": "Playmakers Bar & Arcade",
+            "type": "casual",
+            "extra": true,
+            "desc": "Sports bar and arcade with game-day favorites."
+          },
+          {
+            "name": "Jamie's Italian by Jamie Oliver",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Jamie Oliver Italian specialty restaurant."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Sushi and sashimi specialty dining."
+          }
+        ],
+        "activities": [
+          {
+            "name": "FlowRider",
+            "desc": "Surf simulator."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Twin waterslides, Cyclone and Typhoon."
+          },
+          {
+            "name": "Battle for Planet Z",
+            "desc": "Laser-tag experience."
+          },
+          {
+            "name": "Mini golf",
+            "desc": "Onboard mini-golf course."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Boleros",
+            "desc": "Latin lounge for salsa and mojitos."
+          },
+          {
+            "name": "Schooner Bar",
+            "desc": "Piano bar with sing-alongs."
+          },
+          {
+            "name": "The Bamboo Room",
+            "desc": "Tiki-style cocktail bar."
+          },
+          {
+            "name": "Barnacle & Barrel English Pub",
+            "desc": "English-style pub."
+          }
+        ],
+        "kids_family": "Family-oriented activities and age-appropriate programming across the ship.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas"
+      }
     },
     {
       "name": "Navigator of the Seas",
@@ -321,7 +3093,86 @@
         "To Dry For"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 14, 2002. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511722_NAVIGATOR-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766511722_NAVIGATOR-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Voyager-class ship transformed by Royal Amplified into a thrills showcase, headlined by The Blaster aqua coaster - billed as the longest waterslide at sea.",
+        "who_for": "Adventure-hungry families and groups who want the Blaster aqua coaster, Riptide mat racer and Perfect Storm slides plus a three-level pool bar - and travelers wanting Royal Caribbean's short getaways.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Multi-deck complimentary main dining."
+          },
+          {
+            "name": "El Loco Fresh",
+            "type": "casual",
+            "extra": false,
+            "desc": "Casual taco venue."
+          },
+          {
+            "name": "Hooked Seafood",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Seafood spot featuring lobster rolls."
+          },
+          {
+            "name": "Jamie's Italian",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Chef Jamie Oliver Italian dining with antipasti."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Blaster",
+            "desc": "Aqua coaster billed as the longest waterslide at sea."
+          },
+          {
+            "name": "Riptide",
+            "desc": "Headfirst mat-racer waterslide."
+          },
+          {
+            "name": "The Perfect Storm",
+            "desc": "Dual waterslide experience."
+          },
+          {
+            "name": "Battle for Planet Z",
+            "desc": "Glow-in-the-dark laser tag."
+          },
+          {
+            "name": "The Observatorium",
+            "desc": "Royal Escape Room challenge."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Basketball and sports court."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Broadway-style entertainment",
+            "desc": "Theater production shows."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Onboard casino gaming."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Lime and Coconut",
+            "desc": "Three-level Caribbean-themed pool bar."
+          },
+          {
+            "name": "Expanded pool deck",
+            "desc": "Pool deck with roughly double the surface area."
+          }
+        ],
+        "kids_family": "Adventure Ocean redesigned with free-play spaces; the Living Room reimagined teen hangout with a backyard hideaway; Splashaway Bay kids' water area.",
+        "deploy_note": "Per Royal Caribbean's official press center, Navigator of the Seas is set for a Singapore debut in the 2026-27 season sailing Southeast and East Asia; confirm current-season Americas home port on the official ship page.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/navigator-of-the-seas, https://www.royalcaribbeanpresscenter.com/press-release/1790/navigator-of-the-seas-set-for-a-standout-singapore-debut-in-2026-27/"
+      }
     },
     {
       "name": "Voyager of the Seas",
@@ -336,7 +3187,77 @@
         "The Perfect Storm"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage November 21, 1999. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513412_VOYAGER-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513412_VOYAGER-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "The original Voyager-class ship, pairing classic Royal Caribbean features - a Studio B ice rink and 40-foot rock wall - with added Perfect Storm waterslides.",
+        "who_for": "Multi-generational families who want ice-skating shows, a FlowRider, a tall rock-climbing wall and Perfect Storm slides, plus varied specialty dining for couples.",
+        "dining": [
+          {
+            "name": "Windjammer Cafe",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Casual buffet with global dishes."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Far East-inspired specialty cuisine."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Rustic Italian dishes with a contemporary flair."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Steakhouse with hand-cut steaks."
+          }
+        ],
+        "activities": [
+          {
+            "name": "The Perfect Storm",
+            "desc": "Two high-speed, three-story waterslides."
+          },
+          {
+            "name": "FlowRider",
+            "desc": "40-foot-long surf simulator."
+          },
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "40-foot-high climbing wall."
+          },
+          {
+            "name": "Battle for Planet Z",
+            "desc": "Laser-tag experience."
+          },
+          {
+            "name": "Sports court",
+            "desc": "Court for basketball and sports."
+          },
+          {
+            "name": "Poolside movie nights",
+            "desc": "Outdoor films by the pool."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Studio B ice rink",
+            "desc": "Ice-skating rink with professional skating shows featuring international skaters."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Voyager Dunes",
+            "desc": "Onboard mini-golf area."
+          }
+        ],
+        "kids_family": "Totally reimagined spaces for every kid and teen, plus family-friendly pools and activities across the ship.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/voyager-of-the-seas"
+      }
     },
     {
       "name": "Brilliance of the Seas",
@@ -351,7 +3272,59 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 15, 2002. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736363988_RCC-0367-Ship-Fact-Sheet-BRILLIANCE.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736363988_RCC-0367-Ship-Fact-Sheet-BRILLIANCE.jpg",
+      "exp": {
+        "overview": "A Radiance-class ship defined by walls of glass, ocean-view glass elevators and a whirlpool-lined Solarium, offering panoramic sailing on a mid-size vessel.",
+        "who_for": "Best for couples and travelers who prize light-filled interiors, sea views and destination cruising over big-ship thrill rides.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary multi-course main dining room."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse serving steaks and Maine lobster."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi from the Far East."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Climbing wall rising about 40 feet above deck."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only Solarium with whirlpools."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Broadway-inspired theatrical productions and live music."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Glass elevators",
+            "desc": "Ocean-view glass elevators and expansive windows, a Radiance-class signature."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only glass-topped pool retreat."
+          }
+        ],
+        "deploy_note": "Royal Caribbean's official ship page references Mediterranean itineraries (Athens, Italy, Croatia) and Bahamas sailings from Fort Lauderdale with a Royal Beach Club Paradise Island call. Confirm the current-season home port on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/brilliance-of-the-seas, https://www.royalcaribbeanpresscenter.com/brilliance/"
+      }
     },
     {
       "name": "Jewel of the Seas",
@@ -366,7 +3339,79 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 8, 2004. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766510711_JEWEL-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-9-Thu/1766510711_JEWEL-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Radiance-class ship wrapped in glass with an indoor-outdoor adults-only Solarium and poolside movies under the stars, blending sea views with a relaxed mid-size feel.",
+        "who_for": "Best for couples and families who want light-filled, view-rich spaces and easygoing sea days rather than large-ship attractions.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining room."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Contemporary American steakhouse."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian cuisine served family-style."
+          },
+          {
+            "name": "Izumi Sushi & Hot Rocks",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese sushi and hot-rock cooking."
+          },
+          {
+            "name": "Vintages",
+            "type": "casual",
+            "extra": true,
+            "desc": "Wine bar for tastings and by-the-glass pours."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "40-foot climbing wall."
+          },
+          {
+            "name": "Adults-only Solarium",
+            "desc": "Indoor-outdoor adult retreat."
+          },
+          {
+            "name": "Poolside Movies",
+            "desc": "Films screened poolside under the stars."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Royal Theater",
+            "desc": "Broadway-style production shows including 'City of Dreams.'"
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Onboard casino for table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Glass-walled interiors",
+            "desc": "Signature Radiance-class glass and ocean views throughout."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool retreat."
+          }
+        ],
+        "deploy_note": "Royal Caribbean's official ship page references sailings from Fort Lauderdale and Tampa to the Bahamas (Perfect Day at CocoCay) and the Caribbean. Confirm current-season home port on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/jewel-of-the-seas"
+      }
     },
     {
       "name": "Radiance of the Seas",
@@ -381,7 +3426,87 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage April 7, 2001. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736271411_Ship-Fact-Sheet-RADIANCE.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Jan-8-Wed/1736271411_Ship-Fact-Sheet-RADIANCE.jpg",
+      "exp": {
+        "overview": "The lead ship of Royal Caribbean's Radiance class, wrapped in acres of glass with ocean-facing windows and glass elevators, and crowned by an adults-only Solarium pool beneath a retractable glass roof.",
+        "who_for": "Best for couples and scenery-seekers who want expansive ocean views and a calmer, mid-size ship built for destination-rich sailings rather than a floating theme park.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Two-level complimentary main dining room, the ship's signature evening venue."
+          },
+          {
+            "name": "Windjammer Marketplace",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary casual buffet with global stations for breakfast, lunch and dinner."
+          },
+          {
+            "name": "Park Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary grab-and-go cafe for salads, sandwiches and snacks."
+          },
+          {
+            "name": "Boardwalk Dog House",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary quick-service spot for hot dogs and sausages."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse serving premium cuts and seafood."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Rustic Italian kitchen with family-style dishes."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Signature climbing wall overlooking the sea."
+          },
+          {
+            "name": "Mini Golf",
+            "desc": "On-deck miniature golf course."
+          },
+          {
+            "name": "Adults-only Solarium",
+            "desc": "Indoor-outdoor adult retreat under a retractable glass roof with a bridge walkway."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Original Royal Caribbean production shows and live performances."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Solarium",
+            "desc": "Glass-roofed adults-only pool sanctuary, a Radiance-class hallmark."
+          },
+          {
+            "name": "Ocean-view glass elevators",
+            "desc": "Glass-walled elevators and sweeping windows that flood the ship with light and sea views."
+          }
+        ],
+        "deploy_note": "Royal Caribbean's official ship page lists Radiance of the Seas sailing 4-5 and 7-night Western Caribbean voyages from Tampa, Florida, calling at Cozumel and Costa Maya, Mexico. Home-port/season assignments rotate, so verify against the current fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/radiance-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/15/radiance-of-the-seas/"
+      }
     },
     {
       "name": "Serenade of the Seas",
@@ -396,7 +3521,98 @@
         "Sports Court"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage August 25, 2003. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2024-Sep-13-Fri/1725925138_24-RCC-0343-SR-Fact-Sheet-Update.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2024-Sep-13-Fri/1725925138_24-RCC-0343-SR-Fact-Sheet-Update.jpg",
+      "exp": {
+        "overview": "A Radiance-class ship spanning acres of glass with panoramic sea views, an adults-only Solarium and a nine-hole mini-golf course, purpose-built for scenic itineraries.",
+        "who_for": "Best for couples, families and view-lovers drawn to glass-walled spaces, self-leveling billiards, mini golf and warm-weather or Alaska scenery on a comfortable mid-size ship.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining room with original productions of the ship's core menu."
+          },
+          {
+            "name": "Windjammer",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary casual buffet."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Intimate multi-course tasting experience with wine pairings."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Signature steakhouse."
+          },
+          {
+            "name": "Giovanni's Italian Kitchen",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Italian kitchen serving family-style fare."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "40-foot signature climbing wall."
+          },
+          {
+            "name": "Mini Golf",
+            "desc": "Nine-hole miniature golf course on deck."
+          },
+          {
+            "name": "Self-leveling Billiards",
+            "desc": "Gyroscopic pool tables that stay level as the ship moves."
+          },
+          {
+            "name": "Adults-only Solarium",
+            "desc": "Adult pool retreat with sun lounging under the glass."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Showstopping original Royal Caribbean productions."
+          },
+          {
+            "name": "Schooner Bar",
+            "desc": "Nautical piano bar with singalongs."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin lounge for mojitos and salsa dancing."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Acres of glass",
+            "desc": "Panoramic windows and glass elevators delivering ocean views across the ship."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only glass-topped pool sanctuary."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Onboard casino for table games and slots."
+          }
+        ],
+        "kids_family": "Adventure Ocean, Royal Caribbean's award-winning youth program, is offered on board.",
+        "deploy_note": "Royal Caribbean's official ship page lists Serenade of the Seas sailing Mexican Riviera voyages from San Diego and Alaska voyages from Vancouver. Confirm current-season dates on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/serenade-of-the-seas"
+      }
     },
     {
       "name": "Enchantment of the Seas",
@@ -411,7 +3627,80 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 13, 1997. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505296_Ship-Fact-Sheet-ENCHANTMENT.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766505296_Ship-Fact-Sheet-ENCHANTMENT.jpg",
+      "exp": {
+        "overview": "A Vision-class ship lengthened in 2005, notable for a Jump Zone bungee-trampoline deck, suspended bridges and an expanded pool deck atop the class's signature glass-and-Solarium design.",
+        "who_for": "Best for active families and value-minded cruisers who want a smaller, quainter ship with standout deck attractions like bungee trampolines and suspension bridges.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining room."
+          },
+          {
+            "name": "Park Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary deli known for its Kummelweck roast beef sandwich."
+          },
+          {
+            "name": "Chops Grille",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Steakhouse featuring prime cuts and seafood."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Jump Zone Bungee Trampolines",
+            "desc": "Four bungee trampolines on Deck 10 where guests harness in for two-minute jump sessions."
+          },
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "40-foot signature climbing wall."
+          },
+          {
+            "name": "Suspension Bridges",
+            "desc": "Elevated bridges spanning the expanded pool deck."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only Solarium with a retractable glass roof (reserved for guests 16 and older)."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Stage to Screen",
+            "desc": "Original Broadway-style production show."
+          },
+          {
+            "name": "Can't Stop the Rock",
+            "desc": "Rock-and-roll themed production show."
+          },
+          {
+            "name": "Boleros",
+            "desc": "Latin lounge with a live six-piece band and salsa dancing."
+          },
+          {
+            "name": "Casino",
+            "desc": "Onboard casino for adults."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Expanded Pool Deck",
+            "desc": "Enlarged pool deck added in the 2005 lengthening, with the suspended bridges and Jump Zone."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Glass-roofed adults-only pool retreat."
+          }
+        ],
+        "kids_family": "Kid-focused spaces include an arcade with basketball and games; the Solarium is reserved for guests 16 and older.",
+        "deploy_note": "Royal Caribbean's official ship page lists Enchantment of the Seas sailing Western Caribbean voyages from Tampa, Florida, calling at Cozumel, Costa Maya, Belize City, Roatan and Perfect Day at CocoCay. Confirm current-season dates on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/enchantment-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/3/enchantment-of-the-seas/"
+      }
     },
     {
       "name": "Grandeur of the Seas",
@@ -426,7 +3715,87 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage December 14, 1996. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510060_GRANDEUR-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766510060_GRANDEUR-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Vision-class ship built around a multi-deck Centrum atrium and glass-walled interiors, offering a more intimate, classic Royal Caribbean experience.",
+        "who_for": "Best for couples and families who prefer a smaller, easygoing ship with a lively pool deck and traditional cruise amenities over big-ship attractions.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary formal main dining room."
+          },
+          {
+            "name": "Windjammer",
+            "type": "buffet",
+            "extra": false,
+            "desc": "Complimentary casual buffet with global dishes."
+          },
+          {
+            "name": "Cafe Latte-tudes",
+            "type": "casual",
+            "extra": true,
+            "desc": "Coffee and specialty-beverage cafe."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Intimate five-course dining experience."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Japanese cuisine and sushi."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Signature climbing wall."
+          },
+          {
+            "name": "Pool Deck",
+            "desc": "Main pool area with DJ entertainment and whirlpools."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool zone."
+          },
+          {
+            "name": "Arcade",
+            "desc": "Games arcade for classic and contemporary play."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Broadway-style production shows such as 'Rhythm & Rhyme.'"
+          },
+          {
+            "name": "Poolside Movies",
+            "desc": "Outdoor film screenings on deck."
+          },
+          {
+            "name": "Casino",
+            "desc": "Vegas-style casino gaming."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Centrum",
+            "desc": "Multi-deck glass-walled atrium at the heart of the ship, a Vision-class signature."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool retreat with the Solarium Bar."
+          }
+        ],
+        "deploy_note": "Royal Caribbean's official ship page references Eastern, Western and Southern Caribbean itineraries from ports including Miami and Fort Lauderdale, with calls at Perfect Day at CocoCay, Curacao and Aruba. Confirm current-season home port on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/grandeur-of-the-seas"
+      }
     },
     {
       "name": "Rhapsody of the Seas",
@@ -441,7 +3810,71 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 19, 1997. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766512717_RHAPSODY-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766512717_RHAPSODY-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "A Vision-class ship centered on a glass-walled Centrum atrium, delivering a compact, classic Royal Caribbean cruise with abundant sea views.",
+        "who_for": "Best for couples and travelers who want an intimate, destination-focused ship with traditional dining and entertainment rather than large-ship thrill features.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary formal main dining room."
+          },
+          {
+            "name": "Park Cafe",
+            "type": "casual",
+            "extra": false,
+            "desc": "Complimentary cafe home to the fleet-famous Kummelweck sandwich."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Intimate epicurean multi-course dining experience."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Climbing wall rising about 40 feet above deck."
+          },
+          {
+            "name": "Pool Deck",
+            "desc": "Main and portside pools with sun lounging."
+          },
+          {
+            "name": "Arcade",
+            "desc": "Games arcade on board."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Broadway-style production shows."
+          },
+          {
+            "name": "Piano Man",
+            "desc": "Live musical show celebrating piano hits."
+          },
+          {
+            "name": "Casino Royale",
+            "desc": "Onboard casino for table games and slots."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Centrum",
+            "desc": "Glass-walled multi-deck atrium at the ship's core, a Vision-class hallmark."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool retreat."
+          }
+        ],
+        "deploy_note": "Royal Caribbean's official ship page references Southern Caribbean sailings from San Juan, Puerto Rico, and Mediterranean itineraries (Greece, including the new Royal Beach Club Santorini). Confirm current-season home port on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/rhapsody-of-the-seas"
+      }
     },
     {
       "name": "Vision of the Seas",
@@ -456,7 +3889,82 @@
         "Vitality Spa & Fitness Center"
       ],
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage May 2, 1998. Max occupancy not published on official fact sheet.",
-      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513258_VISION-Fact-Sheet.jpg"
+      "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Apr-10-Fri/1766513258_VISION-Fact-Sheet.jpg",
+      "exp": {
+        "overview": "The namesake and last-built ship of Royal Caribbean's Vision class, wrapped in glass around a seven-deck Centrum atrium with a Solarium under a sliding glass roof and the signature Viking Crown Lounge perched high above.",
+        "who_for": "Best for couples and travelers seeking a smaller, more intimate glass-walled ship with classic amenities and no big-ship thrill features like a FlowRider or waterslides.",
+        "dining": [
+          {
+            "name": "Main Dining Room",
+            "type": "main",
+            "extra": false,
+            "desc": "Complimentary main dining room."
+          },
+          {
+            "name": "Chef's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Fine-dining tasting menu hosted by the Chef de Cuisine."
+          },
+          {
+            "name": "Giovanni's Table",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Contemporary Italian dining."
+          },
+          {
+            "name": "Izumi",
+            "type": "specialty",
+            "extra": true,
+            "desc": "Far East cuisine specializing in sushi."
+          }
+        ],
+        "activities": [
+          {
+            "name": "Rock Climbing Wall",
+            "desc": "Signature climbing wall."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool area beneath a sliding glass roof."
+          },
+          {
+            "name": "Pools & Whirlpools",
+            "desc": "Multiple deck pools and whirlpools."
+          },
+          {
+            "name": "Arcade",
+            "desc": "Games arcade on board."
+          }
+        ],
+        "entertainment": [
+          {
+            "name": "Main Theater",
+            "desc": "Broadway-style production shows including the 'Boogie Wonderland' revue."
+          },
+          {
+            "name": "R Bar",
+            "desc": "Retro-styled classic cocktail lounge."
+          }
+        ],
+        "neighbourhoods": [
+          {
+            "name": "Centrum",
+            "desc": "Seven-deck glass-walled atrium at the heart of the ship."
+          },
+          {
+            "name": "Viking Crown Lounge",
+            "desc": "Signature glass-walled lounge perched high on the ship with sweeping views."
+          },
+          {
+            "name": "Solarium",
+            "desc": "Adults-only pool sanctuary under a sliding glass roof."
+          }
+        ],
+        "kids_family": "Royal Caribbean's official ship page cites family-friendly programming on board; specific youth-program details need verification against the fact sheet.",
+        "deploy_note": "Royal Caribbean's official pages reference Vision of the Seas sailing from Baltimore to Bermuda, the Bahamas, Canada/New England and the Southern Caribbean. Confirm current-season home port on the fact sheet before publishing.",
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/vision-of-the-seas, https://www.royalcaribbeanpresscenter.com/fact-sheet/22/vision-of-the-seas/"
+      }
     }
   ],
   "needs_manual": [

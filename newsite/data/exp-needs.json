@@ -265,230 +265,68 @@
   },
   "celebrity": {
     "Celebrity Edge": [
-      {
-        "field": "main dining venue names (Cosmopolitan/Cyprus/Normandie/Tuscan)",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-edge"
-      }
+      "Deck count not stated on official page.",
+      "Exact current home port/season not fully specified on overview page."
     ],
     "Celebrity Apex": [
-      {
-        "field": "full dining venue list",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-apex"
-      }
+      "Deck count not stated.",
+      "Current season/home port not specified on overview page."
     ],
     "Celebrity Beyond": [
-      {
-        "field": "named dining venues",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-beyond"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Ascent": [
-      {
-        "field": "full named dining list",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-ascent"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Xcel": [
-      {
-        "field": "named dining venues",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-xcel"
-      }
+      "Newest ship (debuted late 2025); confirm full in-service status and current home port before rendering.",
+      "Deck count not stated.",
+      "Godmother announced but name not stated on page.",
+      "Some new venue functions (IYKYK, Bora) not fully described on page."
     ],
     "Celebrity Solstice": [
-      {
-        "field": "main dining room / buffet names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-solstice"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Equinox": [
-      {
-        "field": "main dining room and buffet names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-equinox"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Eclipse": [
-      {
-        "field": "main dining room / buffet / specialty full list",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-eclipse"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Silhouette": [
-      {
-        "field": "entertainment venues/shows",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
-      },
-      {
-        "field": "main dining and buffet names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-silhouette"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Reflection": [
-      {
-        "field": "entertainment venues/shows",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
-      },
-      {
-        "field": "main dining and buffet names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-reflection"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Millennium": [
-      {
-        "field": "entertainment venues/shows/casino",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-millennium"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Infinity": [
-      {
-        "field": "casino / production shows",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-infinity"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Summit": [
-      {
-        "field": "production show names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-summit"
-      }
+      "Deck count not stated.",
+      "Camp at Sea not explicitly named on this ship page (fleet-wide program).",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Constellation": [
-      {
-        "field": "casino / main dining and buffet names",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation/eat-and-drink"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-constellation"
-      }
+      "Deck count not stated.",
+      "Exact home port not specified on overview page."
     ],
     "Celebrity Flora": [
-      {
-        "field": "dining venues",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
-      },
-      {
-        "field": "entertainment",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
-      },
-      {
-        "field": "kids_family program",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
-      },
-      {
-        "field": "decks",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
-      },
-      {
-        "field": "bridge_cam",
-        "official_url": "https://www.celebritycruises.com/cruise-ships/celebrity-flora"
-      }
+      "Individual dining venue names, spa, and lounge details not listed on official overview page.",
+      "Deck count not stated.",
+      "Galapagos expedition ship, not a mainstream ocean ship; no Camp at Sea/Retreat/Eden structure."
     ]
   },
   "holland-america": {
@@ -642,6 +480,480 @@
     ],
     "Margaritaville at Sea Islander": [
       "Exact fitness-center naming (only St. Somewhere Spa & Salon confirmed fleet-wide)"
+    ]
+  },
+  "cunard": {
+    "Queen Mary 2": [
+      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-dining (expected: Britannia Restaurant, Britannia Club Restaurant, Princess Grill Restaurant, Queens Grill Restaurant, Kings Court, The Verandah / Steakhouse at The Verandah [extra charge], Sir Samuel's, Carinthia Lounge, Godiva chocolate; capture names, included-vs-supplement, descriptions).",
+      "Activities / spa / pools — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 and unique-venues page (expected: Mareel Wellness & Beauty / spa, indoor & outdoor pools, Games Deck, gym, library).",
+      "Entertainment — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-unique-venues (expected: Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Illuminations planetarium [unique to QM2], jazz/live music, Chart Room, Commodore Club).",
+      "Kids/family — verify children's facilities (The Play Zone / kids clubs, The Zone) from official ship pages.",
+      "Decks — verify published deck count from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 or official deck plans.",
+      "Named zones — verify any named onboard zones/districts from official pages."
+    ],
+    "Queen Anne": [
+      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-anne (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Artisans buffet, Aji Wa, Aranya, Sir Thomas, Tramonto [specialty — confirm names & supplements & descriptions]).",
+      "Activities / spa / pools — verify Mareel Wellness & Beauty spa, pools, gym, library, Games Deck from official page.",
+      "Entertainment — verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, live music/jazz venues from https://www.cunard.com/en-us/cruise-ships/queen-anne.",
+      "Kids/family — verify The Play Zone / children's facilities from official page.",
+      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones — verify any named onboard zones."
+    ],
+    "Queen Victoria": [
+      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-victoria (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
+      "Activities / spa / pools — verify Mareel Wellness & Beauty / spa, pools, gym, two-storey library, Games Deck from official page.",
+      "Entertainment — verify Royal Court Theatre (with private boxes), Queens Room ballroom, Golden Lion Pub, Commodore Club, Chart Room, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-victoria.",
+      "Kids/family — verify The Play Zone / children's facilities from official page.",
+      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones — verify any named onboard zones."
+    ],
+    "Queen Elizabeth": [
+      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
+      "Activities / spa / pools — verify Mareel Wellness & Beauty / spa, pools, gym, library, Games Deck (croquet/bowls) from official page.",
+      "Entertainment — verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Commodore Club, Yacht Club, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth.",
+      "Kids/family — verify The Play Zone / children's facilities from official page.",
+      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones — verify any named onboard zones."
+    ]
+  },
+  "msc": {
+    "MSC Euribia": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity specifics not on press area christening page"
+    ],
+    "MSC Grandiosa": [
+      "specialty dining venue names not confirmed on mscpressarea.com"
+    ],
+    "MSC Virtuosa": [
+      "specialty dining venue names not confirmed on mscpressarea.com"
+    ],
+    "MSC Bellissima": [
+      "specialty dining venue names not confirmed on mscpressarea.com"
+    ],
+    "MSC Meraviglia": [
+      "specialty dining venue names not confirmed on mscpressarea.com (fact sheet is a PDF)"
+    ],
+    "MSC Seascape": [
+      "specialty dining venue names not confirmed on mscpressarea.com"
+    ],
+    "MSC Seashore": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity specifics not on press area page"
+    ],
+    "MSC Seaside": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity specifics not on press area christening page"
+    ],
+    "MSC Seaview": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity specifics not on press area christening page"
+    ],
+    "MSC Fantasia": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Splendida": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Divina": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Preziosa": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Musica": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Orchestra": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Poesia": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Magnifica": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page",
+      "MSC Yacht Club presence: Musica class does not have Yacht Club (verify)"
+    ],
+    "MSC Lirica": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Opera": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Armonia": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ],
+    "MSC Sinfonia": [
+      "specialty dining venue names not confirmed on mscpressarea.com",
+      "deck/tonnage/capacity not on press area fleet page"
+    ]
+  },
+  "royal-caribbean": {
+    "Icon of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/35/icon-of-the-seas/"
+      }
+    ],
+    "Star of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/37/star-of-the-seas/"
+      }
+    ],
+    "Legend of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/legend"
+      },
+      {
+        "field": "full_specialty_dining_list",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/legend-of-the-seas/things-to-do"
+      }
+    ],
+    "Utopia of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/36/utopia-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/36/utopia-of-the-seas/"
+      }
+    ],
+    "Wonder of the Seas": [
+      {
+        "field": "guest_capacity",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/34/wonder-of-the-seas/"
+      },
+      {
+        "field": "confirmed_current_home_port",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/wonder-of-the-seas"
+      }
+    ],
+    "Harmony of the Seas": [
+      {
+        "field": "named_broadway_show",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/harmony-of-the-seas"
+      }
+    ],
+    "Allure of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/20/allure-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/20/allure-of-the-seas/"
+      }
+    ],
+    "Odyssey of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/33/odyssey-of-the-seas/"
+      },
+      {
+        "field": "deploy_note (confirm exact 2026-2027 home ports/regions)",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/33/odyssey-of-the-seas/"
+      }
+    ],
+    "Spectrum of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/ship/32/spectrum-of-the-seas/"
+      },
+      {
+        "field": "full dining venue list (buffet/casual/specialty names)",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/spectrum-of-the-seas"
+      },
+      {
+        "field": "deploy_note (confirm current-season home ports)",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/spectrum/"
+      }
+    ],
+    "Anthem of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/26/anthem-of-the-seas/"
+      },
+      {
+        "field": "full dining venue list (specialty and casual names)",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas"
+      },
+      {
+        "field": "kids/family venue names",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas"
+      },
+      {
+        "field": "deploy_note (confirm current-season home port/region)",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/26/anthem-of-the-seas/"
+      }
+    ],
+    "Ovation of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/28/ovation-of-the-seas/"
+      },
+      {
+        "field": "deploy_note (confirm exact current-season home port/region)",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/28/ovation-of-the-seas/"
+      }
+    ],
+    "Quantum of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/27/quantum-of-the-seas/"
+      },
+      {
+        "field": "kids/family venue names",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/quantum-of-the-seas"
+      },
+      {
+        "field": "deploy_note (confirm current-season home port/region)",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/27/quantum-of-the-seas/"
+      }
+    ],
+    "Independence of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/independence-of-the-seas/deck-plans"
+      },
+      {
+        "field": "deploy_note",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/independence-of-the-seas"
+      }
+    ],
+    "Freedom of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/freedom-of-the-seas/deck-plans"
+      },
+      {
+        "field": "deploy_note",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/freedom-of-the-seas"
+      }
+    ],
+    "Liberty of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/liberty-of-the-seas/deck-plans"
+      }
+    ],
+    "Adventure of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/adventure-of-the-seas/deck-plans"
+      }
+    ],
+    "Explorer of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/explorer-of-the-seas/deck-plans"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/explorer-of-the-seas"
+      },
+      {
+        "field": "deploy_note",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/explorer-of-the-seas"
+      }
+    ],
+    "Mariner of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas/deck-plans"
+      },
+      {
+        "field": "zones",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas"
+      },
+      {
+        "field": "deploy_note",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas"
+      }
+    ],
+    "Navigator of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/navigator-of-the-seas/deck-plans"
+      },
+      {
+        "field": "deploy_note_current_americas",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/navigator-of-the-seas"
+      }
+    ],
+    "Voyager of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/voyager-of-the-seas/deck-plans"
+      },
+      {
+        "field": "deploy_note",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/voyager-of-the-seas"
+      }
+    ],
+    "Brilliance of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/brilliance/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/brilliance/"
+      },
+      {
+        "field": "mini_golf",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/brilliance/"
+      },
+      {
+        "field": "self_leveling_billiards",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/brilliance/"
+      },
+      {
+        "field": "buffet_venue",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/brilliance/"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/brilliance-of-the-seas"
+      }
+    ],
+    "Jewel of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/16/jewel-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/16/jewel-of-the-seas/"
+      },
+      {
+        "field": "buffet_venue",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/jewel-of-the-seas"
+      },
+      {
+        "field": "mini_golf",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/16/jewel-of-the-seas/"
+      },
+      {
+        "field": "self_leveling_billiards",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/16/jewel-of-the-seas/"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/jewel-of-the-seas"
+      }
+    ],
+    "Radiance of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/15/radiance-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/15/radiance-of-the-seas/"
+      },
+      {
+        "field": "self_leveling_billiards",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/15/radiance-of-the-seas/"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/radiance-of-the-seas"
+      }
+    ],
+    "Serenade of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/17/serenade-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/17/serenade-of-the-seas/"
+      }
+    ],
+    "Enchantment of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/3/enchantment-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/3/enchantment-of-the-seas/"
+      },
+      {
+        "field": "waterslides",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/3/enchantment-of-the-seas/"
+      },
+      {
+        "field": "adventure_ocean_kids_program",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/enchantment-of-the-seas"
+      }
+    ],
+    "Grandeur of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/4/grandeur-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/4/grandeur-of-the-seas/"
+      },
+      {
+        "field": "viking_crown_lounge",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/4/grandeur-of-the-seas/"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/grandeur-of-the-seas"
+      }
+    ],
+    "Rhapsody of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/14/rhapsody-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/14/rhapsody-of-the-seas/"
+      },
+      {
+        "field": "solarium_confirmation",
+        "official_url": "https://royalcaribbeanpresscenter.com/fact-sheet/14/rhapsody-of-the-seas/"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/rhapsody-of-the-seas"
+      }
+    ],
+    "Vision of the Seas": [
+      {
+        "field": "decks",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/22/vision-of-the-seas/"
+      },
+      {
+        "field": "guest_capacity",
+        "official_url": "https://www.royalcaribbeanpresscenter.com/fact-sheet/22/vision-of-the-seas/"
+      },
+      {
+        "field": "buffet_venue",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/vision-of-the-seas"
+      },
+      {
+        "field": "kids_family",
+        "official_url": "https://www.royalcaribbean.com/cruise-ships/vision-of-the-seas"
+      }
     ]
   }
 }
