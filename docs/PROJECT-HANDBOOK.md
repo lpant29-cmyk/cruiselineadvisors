@@ -215,7 +215,10 @@ and deploy — the snippet then renders on every page automatically. Nothing tra
   itinerary); "who's travelling" ranking made effective; site-wide search; ship directory + nav
   submenu; bigger verified seal; kids sections made rich fleet-wide + Anthem/Quantum sourced;
   per-ship table of contents; rich destination guides + 4 new region pages; Search Console
-  verification live; GTM/GA4/Clarity wiring added (config-driven).
+  verification live; GTM/GA4/Clarity wiring added (config-driven). Later same day: logo tagline
+  ("Verified cruise facts. One call books it."); destination **photo heroes** (12 self-hosted
+  region images — credits in `docs/hero-image-credits.json`, all Pexels License / commercial /
+  no attribution); described ports-of-call cards; "Explore more destinations" cross-link grid.
 - Earlier: initial bilingual rebuild — 8 lines, 131 ships, facts store, compare tools, finder,
   self-hosted port photos, verified seals.
 
