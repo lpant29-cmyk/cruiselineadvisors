@@ -47,6 +47,12 @@ img,svg{max-width:100%}
 .mainnav ul{list-style:none;display:flex;flex-direction:column;gap:2px}
 .mainnav a{display:block;padding:.8em .85em;border-radius:10px;font-size:1rem;font-weight:700;color:var(--navy);text-decoration:none;min-height:44px}
 .mainnav a:hover{background:var(--foam)}
+/* Cruise Lines submenu — mobile drawer: shown indented under the parent */
+.has-sub .sub{list-style:none;margin:2px 0 8px;padding:0 0 0 12px;display:flex;flex-direction:column;gap:1px;border-left:2px solid var(--line)}
+.has-sub .sub a{font-size:.94rem;padding:.6em .7em;color:var(--muted);font-weight:600;min-height:40px}
+.has-sub .sub a:hover{color:var(--navy)}
+.sub-sep{height:1px;background:var(--line);margin:5px 6px;padding:0;min-height:0;pointer-events:none}
+.sub-caret{display:none}
 .hdr-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
 .lang{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 .6em;border:1px solid var(--line);border-radius:10px;font-size:.78rem;font-weight:800;color:var(--navy);text-decoration:none;background:#fff}
 .lang:hover{border-color:var(--sea2);color:var(--sea3)}
@@ -387,6 +393,17 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .incl-col li b{color:var(--navy)}
 .ship-grid{display:grid;gap:14px}
 .ship-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+/* ship directory */
+.ship-jumps{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ship-jump{display:inline-flex;align-items:center;gap:.4em;background:#fff;border:1px solid var(--line);border-radius:99px;padding:.45em .9em;font-size:.85rem;font-weight:700;color:var(--navy);text-decoration:none}
+.ship-jump:hover{border-color:var(--sea2);color:var(--sea3)}
+.ship-jump b{background:var(--foam);border-radius:99px;padding:0 .5em;font-size:.78rem;color:var(--sea3)}
+.shipdir-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.shipdir-head .rsec-h{margin:0}
+.shipdir-n{display:inline-block;background:var(--foam);color:var(--sea3);border-radius:99px;font-size:.9rem;padding:0 .55em;vertical-align:middle;margin-left:.3em}
+.shipdir-all{font-weight:800;font-size:.9rem;white-space:nowrap;text-decoration:none;color:var(--sea3)}
+.shipdir-all:hover{text-decoration:underline}
+section[id^="line-"]{scroll-margin-top:84px}
 .ship-card h3{font-size:1.14rem;color:var(--navy)}
 .ship-ships{font-size:.85rem;color:var(--muted);margin-top:.3rem}
 .ship-feats{display:flex;flex-wrap:wrap;gap:6px;margin-top:.7rem}
@@ -739,5 +756,12 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
   .mainnav{position:static;display:block;background:none;border:0;box-shadow:none;padding:0;max-height:none;overflow:visible;margin-left:10px}
   .mainnav ul{flex-direction:row;align-items:center;gap:2px}
   .mainnav a{font-size:.86rem;padding:.55em .7em;min-height:0;border-radius:9px}
+  /* desktop: Cruise Lines opens a real hover/focus dropdown */
+  .has-sub{position:relative}
+  .sub-caret{display:inline;font-size:.68em;opacity:.65;margin-left:1px}
+  .has-sub>ul.sub{position:absolute;top:100%;left:0;min-width:236px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:6px;margin:0;display:none;z-index:120}
+  .has-sub:hover>ul.sub,.has-sub:focus-within>ul.sub{display:flex}
+  .has-sub .sub a{font-size:.86rem;padding:.5em .7em;min-height:0;white-space:nowrap;color:var(--navy);font-weight:700}
+  .has-sub .sub a:hover{background:var(--foam);color:var(--navy)}
 }
 """

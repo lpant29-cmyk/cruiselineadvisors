@@ -65,6 +65,63 @@ def facts_table(lang, slug):
 
 
 # ─────────────────────────── cruise lines ───────────────────────────
+def p_ships_dir(lang):
+    """Full ship directory — every ship we cover, grouped by line, each linking to its own page.
+    Reached from the Cruise Lines nav submenu and the lines hub."""
+    guestsw = "guests" if lang == "en" else "huéspedes"
+    view = "View ship" if lang == "en" else "Ver barco"
+    kick = "Ship directory" if lang == "en" else "Directorio de barcos"
+    h1 = "Every ship we cover, by line" if lang == "en" else "Cada barco que cubrimos, por línea"
+    sub = ("Jump straight to any ship's verified guide — size, capacity, what's on board and where it "
+           "sails. Then one call books the cabin." if lang == "en"
+           else "Ve directo a la guía verificada de cualquier barco — tamaño, capacidad, qué hay a bordo y "
+                "dónde navega. Luego una llamada reserva el camarote.")
+
+    total = sum(len(ships_for(L["slug"])) for L in LINES)
+    # quick-jump chips to each line's block
+    chips = "".join(
+        f'<a class="ship-jump" href="#line-{L["slug"]}">{L["emo"]} {L["name"]} '
+        f'<b>{len(ships_for(L["slug"]))}</b></a>'
+        for L in LINES if ships_for(L["slug"]))
+    jump = f'<div class="ship-jumps">{chips}</div>'
+
+    blocks = ""
+    for L in LINES:
+        ships = ships_for(L["slug"])
+        if not ships:
+            continue
+        cards = ""
+        for s in ships:
+            meta = " · ".join(x for x in [
+                str(s["year"]) if s.get("year") else None,
+                f'{_num(s["guests"])} {guestsw}' if s.get("guests") else None,
+            ] if x)
+            cards += (
+                f'<a class="ship-card lk" href="/{lang}/lines/{L["slug"]}/ships/{ship_slug(s["name"])}/">'
+                f'<h3>{s["name"]}</h3>'
+                f'<p class="ship-ships">{meta or "&nbsp;"}</p>'
+                f'<span class="ship-more">{view} →</span></a>')
+        allw = f'All {L["name"]} →' if lang == "en" else f'Todo {L["name"]} →'
+        blocks += (
+            f'<section class="section" id="line-{L["slug"]}"><div class="wrap">'
+            f'<div class="shipdir-head"><h2 class="rsec-h">{L["emo"]} {L["name"]} '
+            f'<span class="shipdir-n">{len(ships)}</span></h2>'
+            f'<a class="shipdir-all" href="/{lang}/lines/{L["slug"]}/">{allw}</a></div>'
+            f'<div class="ship-grid">{cards}</div></div></section>')
+
+    intro = (f'<section class="section"><div class="wrap"><p class="note-line">'
+             f'{"We cover " if lang == "en" else "Cubrimos "}<b>{total}</b>'
+             f'{" ships across " if lang == "en" else " barcos en "}<b>{sum(1 for L in LINES if ships_for(L["slug"]))}</b>'
+             f'{" lines." if lang == "en" else " líneas."}</p>{jump}</div></section>')
+
+    return (phero(lang, kick, h1, sub, _crumb(lang,
+                  f'<a href="/{lang}/cruise-lines/">{"Cruise lines" if lang == "en" else "Líneas"}</a>', kick))
+            + intro + blocks
+            + cta_band(lang, "Not sure which ship fits?" if lang == "en" else "¿No sabes qué barco encaja?",
+                       "Tell a specialist your dates and who's travelling — they'll match the right ship." if lang == "en"
+                       else "Dile a un especialista tus fechas y quién viaja — te emparejará con el barco correcto."))
+
+
 def p_lines_hub(lang):
     from page_home import _pcard, ACCENTS
     cards = "".join(

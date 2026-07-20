@@ -17,6 +17,7 @@ T = {
         "nav_lines": "Cruise Lines", "nav_compare": "Compare", "nav_facts": "Cruise Facts",
         "nav_dest": "Destinations", "nav_guides": "Guides", "nav_updates": "Updates",
         "nav_menu": "Menu",
+        "nav_all_lines": "All cruise lines", "nav_ships_dir": "Ship directory",
         # hero
         "hero_badge": "Advisors answering now · 8am–11pm ET",
         "hero_h1a": "Less scrolling.",
@@ -83,6 +84,7 @@ T = {
         "nav_lines": "Líneas de Crucero", "nav_compare": "Comparar", "nav_facts": "Datos de Cruceros",
         "nav_dest": "Destinos", "nav_guides": "Guías", "nav_updates": "Novedades",
         "nav_menu": "Menú",
+        "nav_all_lines": "Todas las líneas", "nav_ships_dir": "Directorio de barcos",
         "hero_badge": "Asesores disponibles ahora · 8am–11pm ET",
         "hero_h1a": "Menos buscar.",
         "hero_h1b": "Más navegar.",

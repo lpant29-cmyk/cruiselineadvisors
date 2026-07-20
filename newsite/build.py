@@ -11,7 +11,7 @@ from config import LANGS, DEFAULT_LANG, SITE_URL, BRAND, COMPANY
 from base import page
 from i18n import T
 import page_home
-from pages import (p_lines_hub, p_line, p_ship, p_compare, p_facts, p_dest_hub, p_region,
+from pages import (p_lines_hub, p_ships_dir, p_line, p_ship, p_compare, p_facts, p_dest_hub, p_region,
                    p_guides_hub, p_guide, p_updates, p_update_detail, GUIDES)
 from updates import all_updates
 from legal_pages import p_legal, LEGAL
@@ -81,6 +81,12 @@ def build():
              _t("Cruise Line Guides — Every Major Line | CruiseLine Advisors",
                 "Guías de líneas de crucero — cada línea principal | CruiseLine Advisors", lang),
              T[lang]["lines_sub"], p_lines_hub(lang))
+        emit(lang, "ships.html",
+             _t("Cruise Ship Directory — Every Ship by Line | CruiseLine Advisors",
+                "Directorio de barcos — cada barco por línea | CruiseLine Advisors", lang),
+             _t("Every cruise ship we cover, grouped by line, each with a verified guide.",
+                "Cada barco de crucero que cubrimos, por línea, cada uno con guía verificada.", lang),
+             p_ships_dir(lang))
         for L in LINES:
             emit(lang, f"lines/{L['slug']}.html",
                  _t(f"{L['name']} Cruises — Guide, Included, Cabins & Timing | CruiseLine Advisors",

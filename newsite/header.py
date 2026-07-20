@@ -5,6 +5,7 @@ from config import PHONE_DISPLAY, PHONE_HREF
 from i18n import T
 from logo import lockup
 from search import search_button, search_panel
+from data import LINES
 
 # (string-key in i18n, page filename)
 NAV = [
@@ -17,10 +18,29 @@ NAV = [
 ]
 
 
+def _lines_submenu(lang, t):
+    """Dropdown under 'Cruise Lines': the hub, the full ship directory, then each line.
+    Pure CSS (hover/focus-within on desktop, expanded in the mobile drawer) — no JS."""
+    items = [
+        f'<li><a href="/{lang}/cruise-lines/">{t["nav_all_lines"]}</a></li>',
+        f'<li><a href="/{lang}/ships/"><span aria-hidden="true">🚢</span> {t["nav_ships_dir"]}</a></li>',
+        '<li class="sub-sep" aria-hidden="true"></li>',
+    ]
+    items += [f'<li><a href="/{lang}/lines/{L["slug"]}/">{L["emo"]} {L["name"]}</a></li>' for L in LINES]
+    return f'<ul class="sub">{"".join(items)}</ul>'
+
+
 def header(lang, page_path="index.html"):
     t = T[lang]
     other = "es" if lang == "en" else "en"
-    nav_links = "".join(f'<li><a href="/{lang}/{href}">{t[key]}</a></li>' for key, href in NAV)
+    nav_links = ""
+    for key, href in NAV:
+        if key == "nav_lines":
+            nav_links += (f'<li class="has-sub"><a href="/{lang}/{href}" aria-haspopup="true">'
+                          f'{t[key]} <span class="sub-caret" aria-hidden="true">▾</span></a>'
+                          f'{_lines_submenu(lang, t)}</li>')
+        else:
+            nav_links += f'<li><a href="/{lang}/{href}">{t[key]}</a></li>'
     return f"""<header class="hdr">
   <div class="wrap nav">
     {lockup(f'/{lang}/index.html')}

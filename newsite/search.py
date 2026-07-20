@@ -49,6 +49,7 @@ def build_index(lang):
     # Hub / section pages
     hubs = [
         (T[lang]["nav_lines"], "cruise-lines", "🚢", ["cruise lines", "brands", "all lines"]),
+        (T[lang]["nav_ships_dir"], "ships", "🚢", ["ships", "ship directory", "all ships", "fleet"]),
         (T[lang]["nav_compare"], "compare", "🧭", ["find a cruise", "finder", "compare ships", "search cruises"]),
         (T[lang]["nav_facts"], "cruise-facts", "🧾", ["fees", "costs", "money", "fine print"]),
         (T[lang]["nav_dest"], "destinations", "🗺️", ["where to cruise", "regions", "itineraries"]),
