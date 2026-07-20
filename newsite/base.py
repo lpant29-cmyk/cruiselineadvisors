@@ -2,11 +2,44 @@
 """The page shell — <head> SEO, fonts, inlined CSS, header, content, footer, sticky call.
 Every page is composed through page(). Bilingual: emits canonical + hreflang alternates."""
 import html, json
-from config import PHONE_HREF, SITE_URL, BRAND, LANGS, DEFAULT_LANG, IS_PLACEHOLDER_PHONE, HOURS
+from config import (PHONE_HREF, SITE_URL, BRAND, LANGS, DEFAULT_LANG, IS_PLACEHOLDER_PHONE, HOURS,
+                    GTM_ID, GA4_ID, CLARITY_ID, GSC_VERIFICATION)
 from theme import CSS
 from header import header
 from footer import footer
 from cta import sticky_callbar
+
+
+def _analytics_head():
+    """GTM + GA4 + Clarity + Search Console verification, each rendered only when its ID is set
+    in config.py. Goes in <head>. dataLayer is created first so trackCall() can push before load."""
+    out = "<script>window.dataLayer=window.dataLayer||[];</script>"
+    if GSC_VERIFICATION:
+        out += f'<meta name="google-site-verification" content="{esc(GSC_VERIFICATION)}">'
+    if GTM_ID:
+        out += ("<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':"
+                "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],"
+                "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;"
+                "j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;"
+                "f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" + GTM_ID + "');</script>")
+    if GA4_ID:
+        out += (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>'
+                "<script>window.gtag=window.gtag||function(){dataLayer.push(arguments);};"
+                "gtag('js',new Date());gtag('config','" + GA4_ID + "');</script>")
+    if CLARITY_ID:
+        out += ("<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[])"
+                ".push(arguments)};t=l.createElement(r);t.async=1;"
+                "t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];"
+                "y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','" + CLARITY_ID + "');</script>")
+    return out
+
+
+def _analytics_body():
+    """GTM <noscript> fallback iframe — must be the first thing after <body>."""
+    if GTM_ID:
+        return (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"'
+                ' height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>')
+    return ""
 
 FONT_URL = ("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;"
             "0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap")
@@ -47,6 +80,7 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{_analytics_head()}
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">

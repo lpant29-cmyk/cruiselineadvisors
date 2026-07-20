@@ -28,6 +28,18 @@ HOURS = {
     "es": "8am–11pm ET, todos los días",
 }
 
+# ── Analytics & tag management ─────────────────────────────────────────────
+# Paste the IDs from each Google/Microsoft property here (account: gocaribbea@gmail.com).
+# Each snippet renders on EVERY page only when its ID is filled in; leave "" to disable.
+# Recommended path: use GTM alone and add GA4 + Clarity as tags INSIDE GTM (then leave
+# GA4_ID / CLARITY_ID blank here). Set them here only if you'd rather hard-code them.
+GTM_ID     = ""   # e.g. "GTM-XXXXXXX"  — Google Tag Manager container
+GA4_ID     = ""   # e.g. "G-XXXXXXXXXX" — GA4 Measurement ID (skip if firing GA4 via GTM)
+CLARITY_ID = ""   # e.g. "abcdef1234"   — Microsoft Clarity project ID
+# Google Search Console: verify by DNS TXT or by the HTML-tag method — paste the token here
+# and it renders a <meta name="google-site-verification"> on every page.
+GSC_VERIFICATION = "riSdvugiyK2ysSxGBWNBloIRKzeSaYWfwZHUQgZF2d4"  # Search Console HTML-tag method; do NOT remove (Google re-checks)
+
 # ── Languages ──────────────────────────────────────────────────────────────
 LANGS        = ["en", "es"]
 DEFAULT_LANG = "en"

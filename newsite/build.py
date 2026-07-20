@@ -145,8 +145,11 @@ def build():
                  LEGAL[k]["title"][lang], p_legal(lang, k))
 
     # root → default language
+    from config import GSC_VERIFICATION
+    _gsc = f'<meta name="google-site-verification" content="{GSC_VERIFICATION}">' if GSC_VERIFICATION else ""
     write("index.html", clean_urls(f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+{_gsc}
 <meta http-equiv="refresh" content="0; url=/{DEFAULT_LANG}/index.html">
 <link rel="canonical" href="{SITE_URL}/{DEFAULT_LANG}/index.html"><title>{BRAND}</title></head>
 <body><script>location.replace('/{DEFAULT_LANG}/index.html')</script>
