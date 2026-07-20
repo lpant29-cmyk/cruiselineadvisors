@@ -4,6 +4,7 @@ language switcher + mobile hamburger drawer. Pure CSS (no JS), so it can never t
 from config import PHONE_DISPLAY, PHONE_HREF
 from i18n import T
 from logo import lockup
+from search import search_button, search_panel
 
 # (string-key in i18n, page filename)
 NAV = [
@@ -26,6 +27,7 @@ def header(lang, page_path="index.html"):
     <input type="checkbox" id="navcb" class="navcb" aria-label="{t['nav_menu']}">
     <nav class="mainnav" aria-label="Primary"><ul>{nav_links}</ul></nav>
     <div class="hdr-right">
+      {search_button(lang)}
       <a class="lang" href="/{other}/{page_path}" hreflang="{other}"
          aria-label="{T[other]['lang_name']}">{t['lang_switch_code']}</a>
       <a class="call-btn" href="tel:{PHONE_HREF}" onclick="trackCall('header')">
@@ -35,4 +37,5 @@ def header(lang, page_path="index.html"):
       <label for="navcb" class="burger" aria-label="{t['nav_menu']}"><span></span><span></span><span></span></label>
     </div>
   </div>
+  {search_panel(lang)}
 </header>"""
