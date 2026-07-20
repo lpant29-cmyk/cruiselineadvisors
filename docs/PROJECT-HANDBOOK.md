@@ -22,6 +22,12 @@ payment, hold inventory, set prices, or hold cruise-line appointments. Traffic i
   **helpdesk@bargainairticket** (bargainairticket.com). See §6 for details.
 
 The authoritative product brief is `docs/BRIEF.md`. The build/agent rules live in `CLAUDE.md`.
+**Day-to-day maintenance — the 30-day fact re-check, publishing updates, monitoring (Google Alerts /
+Feedly), the calendar reminder, and swapping the real phone number — is in `docs/OPERATIONS.md`.**
+
+> All files under `docs/` (this handbook, OPERATIONS, BRIEF, image credits) are **repo-only**. The
+> build never copies `docs/` into `newsite/dist/` or `site/`, so they are **never served and never
+> indexed** — they exist purely for the developer/operator.
 
 ---
 
