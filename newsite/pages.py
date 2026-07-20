@@ -565,8 +565,14 @@ GUIDES = [
      "t": {"en": "When to cruise", "es": "Cuándo hacer un crucero"},
      "d": {"en": "Season by season, region by region, timing beats everything.",
            "es": "Temporada por temporada, región por región, el momento lo es todo."}},
-    # NOTE: groups-and-families and accessibility are intentionally NOT listed here yet. They only
-    # rendered the generic fallback (not written), so they are hidden until upgraded to rich guides.
+    {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
+     "t": {"en": "Groups & families", "es": "Grupos y familias"},
+     "d": {"en": "Connecting cabins, kids' clubs, group dining and split payments, sorted.",
+           "es": "Camarotes conectados, clubes infantiles, comida en grupo y pagos divididos."}},
+    {"slug": "accessibility", "emo": "♿",
+     "t": {"en": "Accessible cruising", "es": "Cruceros accesibles"},
+     "d": {"en": "Accessible cabins, tendering, and what to confirm before you book.",
+           "es": "Camarotes accesibles, transbordos y qué confirmar antes de reservar."}},
 ]
 _G = {g["slug"]: g for g in GUIDES}
 
@@ -764,8 +770,14 @@ def p_guide(lang, slug):
         crumb = _crumb(lang, f'<a href="/{lang}/guides.html">{"Guides" if lang=="en" else "Guías"}</a>', title)
         himg = guide_hero_img(slug, rg.get("hero"))
         hero = _guide_photo_hero(lang, kick, title, dek, crumb, himg) if himg else phero(lang, kick, title, dek, crumb)
+        tool = ""  # keep the interactive explainers embedded on these two rich guides
+        if slug == "choosing-a-cabin":
+            tool = cabin_guide(lang)
+        elif slug == "when-to-cruise":
+            tool = when_to_go(lang)
         return (hero
                 + render_rich_guide(lang, slug)
+                + tool
                 + related_pages_for_guide(lang, slug)
                 + cta_band(lang, "Ready to price a real sailing?" if lang == "en" else "¿Listo para cotizar un crucero real?",
                            "Call a specialist, they'll give you the all-in number for your dates." if lang == "en"

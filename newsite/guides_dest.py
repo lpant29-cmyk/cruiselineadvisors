@@ -156,3 +156,113 @@ register("how-to-choose-a-destination", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("when-to-cruise", {
+    "cat": "dest", "hero": "cruise-ship-sea.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "When to cruise: the best time to sail, by region", "es": "Cuándo hacer un crucero: la mejor época, por región"},
+    "dek": {
+        "en": "The week you sail shapes your trip more than almost anything else: the weather, the "
+              "scenery, the crowds. Here is how each cruise region runs on a season, and how to time "
+              "your trip so everything lines up.",
+        "es": "La semana en que navegas moldea tu viaje más que casi cualquier otra cosa: el clima, el "
+              "paisaje, la gente. Aquí verás cómo cada región tiene su temporada, y cómo programar tu "
+              "viaje para que todo encaje.",
+    },
+    "takeaways": {
+        "en": [
+            "Every region has a season: sail in its window and you get the best weather, calmest seas and the scenery you came for.",
+            "Alaska is a short May to September window; the Caribbean is warm most of the year but overlaps hurricane season in late summer and autumn.",
+            "Shoulder seasons (just before and after peak) bring thinner crowds and better value.",
+            "School holidays are the busiest and priciest weeks; a week either side is often far better.",
+            "Start from your dates and let the season point you to the region that is in its prime.",
+        ],
+        "es": [
+            "Cada región tiene su temporada: navega en su ventana y tendrás el mejor clima, mares más tranquilos y el paisaje por el que fuiste.",
+            "Alaska es una ventana corta de mayo a septiembre; el Caribe es cálido casi todo el año pero coincide con la temporada de huracanes a fin de verano y otoño.",
+            "Las temporadas media (justo antes y después del pico) traen menos gente y mejor valor.",
+            "Las vacaciones escolares son las semanas más ocupadas y caras; una semana antes o después suele ser mucho mejor.",
+            "Empieza por tus fechas y deja que la temporada te señale la región en su mejor momento.",
+        ],
+    },
+    "sections": [
+        {"id": "season-rules", "h2": {"en": "Why season beats everything", "es": "Por qué la temporada le gana a todo"},
+         "html": {
+            "en": "<p>The same destination can be wonderful or washed-out depending only on the month. Sailing in a "
+                  "region's season means warmer, drier weather, calmer seas and the experiences you pictured, whether "
+                  "that is a glacier calving in Alaska or a beach day in the Caribbean.</p>"
+                  + tip("If your dates are flexible, decide the season first and let it choose the region. If your "
+                        "dates are fixed, let them point you to whichever region is at its best that week."),
+            "es": "<p>El mismo destino puede ser maravilloso o deslucido según solo el mes. Navegar en la temporada de "
+                  "una región significa clima más cálido y seco, mares más tranquilos y las experiencias que "
+                  "imaginaste, sea un glaciar desprendiéndose en Alaska o un día de playa en el Caribe.</p>"
+                  + tip("Si tus fechas son flexibles, decide la temporada primero y deja que elija la región. Si tus "
+                        "fechas son fijas, deja que te señalen qué región está en su mejor momento esa semana."),
+         }},
+        {"id": "by-region", "h2": {"en": "Best time to sail, region by region", "es": "Mejor época, región por región"},
+         "html": {
+            "en": vcards([
+                ("🏔️", "Alaska", "May to September only, peak summer is warmest and best for wildlife."),
+                ("🏝️", "Caribbean & Bahamas", "Warm year-round; drier and calmest in winter and spring. Late summer to autumn is Atlantic hurricane season."),
+                ("🏛️", "Mediterranean", "April to October, spring and autumn are pleasant and less crowded than high summer."),
+                ("🍁", "Canada & New England", "May to October, with September to October the classic fall-colour window."),
+                ("🌵", "Mexican Riviera", "Best in the cooler, drier months from autumn to spring."),
+                ("🏰", "Northern Europe", "May to August, for the long-daylight Nordic summer."),
+            ]) + "<p>The " + link("/en/destinations/", "destinations") + " section has the month-by-month picture for "
+            "each region, with the ships that sail it.</p>",
+            "es": vcards([
+                ("🏔️", "Alaska", "Solo de mayo a septiembre, el pico del verano es lo más cálido y mejor para la fauna."),
+                ("🏝️", "Caribe y Bahamas", "Cálido todo el año; más seco y tranquilo en invierno y primavera. De fin de verano a otoño es temporada de huracanes."),
+                ("🏛️", "Mediterráneo", "Abril a octubre, primavera y otoño son agradables y con menos gente que pleno verano."),
+                ("🍁", "Canadá y Nueva Inglaterra", "Mayo a octubre, con septiembre-octubre la ventana clásica del follaje otoñal."),
+                ("🌵", "Riviera Mexicana", "Mejor en los meses más frescos y secos, de otoño a primavera."),
+                ("🏰", "Norte de Europa", "Mayo a agosto, por el verano nórdico de días largos."),
+            ]) + "<p>La sección de " + link("/es/destinations/", "destinos") + " tiene el detalle mes a mes de cada "
+            "región, con los barcos que la navegan.</p>",
+         }},
+        {"id": "crowds-value", "h2": {"en": "Crowds, value and shoulder season", "es": "Gente, valor y temporada media"},
+         "html": {
+            "en": "<p>Within a region's season, timing still matters. <b>School holidays</b>, summer, spring break and "
+                  "the winter holidays, are the busiest and priciest. The <b>shoulder weeks</b> just before and after "
+                  "peak bring thinner crowds, calmer ships and better value, often with weather that is nearly as "
+                  "good.</p>"
+                  + watch("In the Caribbean and Bahamas, late summer through autumn overlaps Atlantic hurricane season. Sailings still operate and reroute when needed, but travel insurance matters more in those months."),
+            "es": "<p>Dentro de la temporada de una región, el momento aún importa. Las <b>vacaciones escolares</b>, "
+                  "verano, Semana Santa y fiestas de invierno, son las más ocupadas y caras. Las <b>semanas de "
+                  "temporada media</b> justo antes y después del pico traen menos gente, barcos más tranquilos y mejor "
+                  "valor, a menudo con clima casi igual de bueno.</p>"
+                  + watch("En el Caribe y Bahamas, de fin de verano a otoño coincide con la temporada de huracanes del Atlántico. Los cruceros operan y se redirigen cuando hace falta, pero el seguro de viaje importa más en esos meses."),
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("When is the best time to cruise?", "It depends on the region, each has a season when the weather and scenery are at their best. Broadly: Alaska May to September, the Caribbean drier in winter and spring, the Mediterranean April to October. Shoulder weeks give the best mix of good weather and value."),
+            ("When is the best time to cruise Alaska?", "May to September only, when the ships are there. Peak summer (June to August) is the warmest and driest and best for wildlife; the shoulder months can be quieter and better value."),
+            ("Is it safe to cruise the Caribbean during hurricane season?", "Sailings operate through Atlantic hurricane season (roughly June to November) and reroute around storms when needed. It is generally fine, but travel insurance matters more, and itineraries can change at short notice."),
+            ("When is the most affordable time to cruise?", "Outside school holidays, in a region's shoulder weeks, tends to offer the best value along with thinner crowds. Being flexible by a week or two makes the biggest difference; see our affordable-cruise guide."),
+            ("How far ahead should I book a cruise?", "For the best cabin choice and dates, book several months to a year ahead, especially for peak weeks, Alaska and holiday sailings. A specialist can tell you whether booking early or late suits the sailing you want."),
+        ],
+        "es": [
+            ("¿Cuándo es la mejor época para un crucero?", "Depende de la región, cada una tiene una temporada cuando el clima y el paisaje están en su mejor momento. En general: Alaska de mayo a septiembre, el Caribe más seco en invierno y primavera, el Mediterráneo de abril a octubre. Las semanas de temporada media dan la mejor mezcla de buen clima y valor."),
+            ("¿Cuándo es la mejor época para Alaska?", "Solo de mayo a septiembre, cuando los barcos están ahí. El pico del verano (junio a agosto) es lo más cálido y seco y mejor para la fauna; los meses de temporada media pueden ser más tranquilos y de mejor valor."),
+            ("¿Es seguro navegar el Caribe en temporada de huracanes?", "Los cruceros operan durante la temporada de huracanes del Atlántico (aproximadamente junio a noviembre) y se redirigen alrededor de las tormentas cuando hace falta. En general está bien, pero el seguro importa más, y los itinerarios pueden cambiar con poco aviso."),
+            ("¿Cuándo es la época más económica para un crucero?", "Fuera de las vacaciones escolares, en las semanas de temporada media de una región, suele ofrecer el mejor valor junto con menos gente. Ser flexible una o dos semanas hace la mayor diferencia; ve nuestra guía de crucero accesible."),
+            ("¿Con cuánta anticipación debo reservar?", "Para la mejor elección de camarote y fechas, reserva de varios meses a un año antes, sobre todo para semanas pico, Alaska y cruceros de fiestas. Un especialista puede decirte si reservar temprano o tarde conviene para el crucero que quieres."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🗺️", "Cruise destinations", "/en/destinations/", "Every region's best season, ports and ships."),
+            ("🗺️", "How to choose a destination", "/en/guides/how-to-choose-a-destination/", "Turn the right season into the right region."),
+            ("💰", "How to find an affordable cruise", "/en/guides/how-to-find-affordable-cruise/", "Timing is the single biggest value lever."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Tell us your dates; we'll match the region in season."),
+        ],
+        "es": [
+            ("🗺️", "Destinos de crucero", "/es/destinations/", "La mejor temporada, puertos y barcos de cada región."),
+            ("🗺️", "Cómo elegir un destino", "/es/guides/how-to-choose-a-destination/", "Convierte la temporada correcta en la región correcta."),
+            ("💰", "Cómo encontrar un crucero accesible", "/es/guides/how-to-find-affordable-cruise/", "El momento es la mayor palanca de valor."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Dinos tus fechas; emparejamos la región en temporada."),
+        ],
+    },
+})

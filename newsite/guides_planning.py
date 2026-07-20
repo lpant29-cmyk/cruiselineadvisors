@@ -426,3 +426,260 @@ register("cruise-embarkation-day", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("first-time-cruisers", {
+    "cat": "planning", "hero": "cruise-deck.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "First-time cruiser guide: everything nobody tells you", "es": "Guía para primer crucero: todo lo que nadie te dice"},
+    "dek": {
+        "en": "Your first cruise is easier than it looks once you know how it works. Here is the whole "
+              "picture, from what your fare covers to boarding day, dining, ports and the handful of "
+              "things that trip newcomers up, so you sail relaxed and confident.",
+        "es": "Tu primer crucero es más fácil de lo que parece una vez que sabes cómo funciona. Aquí "
+              "está el panorama completo, de lo que cubre tu tarifa al día de embarque, la comida, los "
+              "puertos y las pocas cosas que confunden a los nuevos, para que navegues relajado.",
+    },
+    "takeaways": {
+        "en": [
+            "Your fare covers your cabin, most dining, entertainment and the sailing itself; drinks, Wi-Fi, specialty dining and excursions are extra.",
+            "A daily gratuity is added automatically, per guest per day; budget for it from the start.",
+            "Get your documents right: a passport is safest, and names must match your booking exactly.",
+            "On boarding day, check in online, arrive in your time slot, and keep essentials in a carry-on until your bags arrive.",
+            "Book what sells out (specialty dining, popular excursions, spa) early; the rest you can decide on board.",
+        ],
+        "es": [
+            "Tu tarifa cubre el camarote, la mayoría de la comida, el entretenimiento y la navegación; bebidas, Wi-Fi, restaurantes de especialidad y excursiones son aparte.",
+            "Se añade una propina diaria automáticamente, por huésped y por día; presupuéstala desde el principio.",
+            "Ten bien tus documentos: un pasaporte es lo más seguro, y los nombres deben coincidir exactamente con tu reserva.",
+            "El día de embarque, haz el check-in en línea, llega en tu franja, y guarda lo esencial en un equipaje de mano hasta que lleguen tus maletas.",
+            "Reserva pronto lo que se agota (restaurantes de especialidad, excursiones populares, spa); el resto lo decides a bordo.",
+        ],
+    },
+    "sections": [
+        {"id": "how-it-works", "h2": {"en": "How a cruise actually works", "es": "Cómo funciona un crucero"},
+         "html": {
+            "en": "<p>A cruise is a floating hotel that moves between destinations while you sleep. One fare bundles "
+                  "your room, most of your food, the entertainment and the transport between ports, so you unpack once "
+                  "and wake up somewhere new. The extras (drinks, Wi-Fi, specialty restaurants, shore excursions) are "
+                  "optional add-ons billed to your onboard account.</p>"
+                  + tip("The single most useful thing to learn first is the split between what your fare includes and "
+                        "what costs extra. Read " + link("/en/guides/whats-included/", "what is included in a cruise fare") +
+                        " and you are already ahead of most first-timers."),
+            "es": "<p>Un crucero es un hotel flotante que se mueve entre destinos mientras duermes. Una tarifa reúne tu "
+                  "habitación, la mayoría de tu comida, el entretenimiento y el transporte entre puertos, así que "
+                  "desempacas una vez y amaneces en un lugar nuevo. Los extras (bebidas, Wi-Fi, restaurantes de "
+                  "especialidad, excursiones) son opcionales y se cargan a tu cuenta a bordo.</p>"
+                  + tip("Lo más útil que puedes aprender primero es la diferencia entre lo que incluye tu tarifa y lo "
+                        "que cuesta aparte. Lee " + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero") +
+                        " y ya vas por delante de la mayoría de primerizos."),
+         }},
+        {"id": "before-you-go", "h2": {"en": "Before you go: money and documents", "es": "Antes de ir: dinero y documentos"},
+         "html": {
+            "en": vcards([
+                ("🧾", "Gratuities", "A daily service charge, automatic, per guest. Prepay it to keep your onboard account tidy. See the gratuities guide."),
+                ("🪪", "Documents", "A passport is safest; on some closed-loop US sailings a birth certificate plus ID works. Names must match your booking."),
+                ("📆", "Payment timeline", "A deposit holds your cabin; the balance is due by the final-payment date. Do not miss it."),
+                ("🛡️", "Insurance", "Worth considering for non-refundable bookings and hurricane season."),
+            ]) + "<p>Two guides cover the details: " + link("/en/guides/cruise-documents-id/", "cruise documents & ID") +
+            " and " + link("/en/guides/cruise-deposit-payment-cancellation/", "deposits, payment & cancellation") + ".</p>",
+            "es": vcards([
+                ("🧾", "Propinas", "Un cargo por servicio diario, automático, por huésped. Págalo por adelantado para mantener tu cuenta ordenada. Ve la guía de propinas."),
+                ("🪪", "Documentos", "Un pasaporte es lo más seguro; en algunos cruceros closed-loop de EE.UU. sirve un acta de nacimiento más identificación. Los nombres deben coincidir."),
+                ("📆", "Calendario de pago", "Un depósito reserva tu camarote; el saldo vence en la fecha de pago final. No la pierdas."),
+                ("🛡️", "Seguro", "Vale considerarlo en reservas no reembolsables y temporada de huracanes."),
+            ]) + "<p>Dos guías cubren los detalles: " + link("/es/guides/cruise-documents-id/", "documentos e identificación") +
+            " y " + link("/es/guides/cruise-deposit-payment-cancellation/", "depósitos, pago y cancelación") + ".</p>",
+         }},
+        {"id": "boarding-day", "h2": {"en": "Boarding day and life on board", "es": "Día de embarque y vida a bordo"},
+         "html": {
+            "en": "<p>Check in online before you travel, arrive at the terminal in your assigned window, hand your "
+                  "checked bags to the porters, and walk aboard into lunch. Cabins usually open a little later, so "
+                  "explore the ship, then do the short mandatory safety drill before sailaway.</p>"
+                  "<p>Onboard, days are casual and evenings a little smarter. You will find a main dining room, a "
+                  "buffet, pools, shows and kids' clubs all included. The full step-by-step is in "
+                  + link("/en/guides/cruise-embarkation-day/", "cruise embarkation day") + ", and "
+                  + link("/en/guides/what-to-pack-for-a-cruise/", "what to pack") + " gets your bags right.</p>",
+            "es": "<p>Haz el check-in en línea antes de viajar, llega a la terminal en tu franja asignada, entrega tus "
+                  "maletas a los maleteros y sube a almorzar. Los camarotes suelen abrir un poco más tarde, así que "
+                  "explora el barco y luego haz el breve simulacro de seguridad obligatorio antes de zarpar.</p>"
+                  "<p>A bordo, los días son casuales y las noches un poco más elegantes. Encontrarás comedor principal, "
+                  "bufé, piscinas, espectáculos y clubes infantiles, todo incluido. El paso a paso está en "
+                  + link("/es/guides/cruise-embarkation-day/", "día de embarque") + ", y "
+                  + link("/es/guides/what-to-pack-for-a-cruise/", "qué llevar") + " deja tus maletas listas.</p>",
+         }},
+        {"id": "ports", "h2": {"en": "Ports, excursions and sea days", "es": "Puertos, excursiones y días de mar"},
+         "html": {
+            "en": "<p>Some days you are in port, some are relaxing sea days. In port you can take a line-run shore "
+                  "excursion (convenient, and the ship waits for its own tours) or explore independently. Always note "
+                  "the all-aboard time; the ship sails without latecomers.</p>"
+                  + watch("On port days, the ship leaves at its posted all-aboard time and will not wait if you are exploring on your own. Give yourself a generous buffer to get back."),
+            "es": "<p>Algunos días estás en puerto, otros son días de mar para relajarte. En puerto puedes tomar una "
+                  "excursión de la línea (cómoda, y el barco espera a sus propios tours) o explorar por tu cuenta. "
+                  "Anota siempre la hora de all-aboard; el barco zarpa sin los que llegan tarde.</p>"
+                  + watch("En los días de puerto, el barco sale a la hora de all-aboard publicada y no espera si exploras por tu cuenta. Date un margen amplio para volver."),
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Learn the fare-versus-extras split, sort your documents and payment dates, arrive prepared on "
+                  "boarding day, and respect the all-aboard time. Do that and your first cruise runs like clockwork.</p>"
+                  "<p>Nervous about any of it? That is exactly what a specialist is for: they walk you through your "
+                  "specific ship and sailing, in one call, free and with no obligation.</p>",
+            "es": "<p>Aprende la diferencia entre tarifa y extras, arregla tus documentos y fechas de pago, llega "
+                  "preparado el día de embarque, y respeta la hora de all-aboard. Haz eso y tu primer crucero funciona "
+                  "a la perfección.</p>"
+                  "<p>¿Te pone nervioso algo? Para eso está un especialista: te guía por tu barco y crucero "
+                  "específicos, en una llamada, gratis y sin compromiso.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Is a cruise good for first-timers?", "Yes. A cruise is one of the easiest holidays for beginners: you unpack once, most of your food and entertainment is included, and everything is in one place. Warm, short itineraries like the Caribbean or Bahamas are ideal for a first sailing."),
+            ("What is included in a first cruise?", "Your cabin, main dining and the buffet, daytime activities, most entertainment and kids' clubs, and the sailing itself. Drinks, Wi-Fi, specialty restaurants, shore excursions, the spa and photos are extra."),
+            ("Do I need a passport for my first cruise?", "A passport is the safest choice and is required for most sailings that begin or end abroad. On many closed-loop US cruises a birth certificate plus photo ID works, but a passport removes all risk. Names must match your booking exactly."),
+            ("How much should I budget beyond the fare?", "Plan for the near-universal extras: daily gratuities, drinks, Wi-Fi and any shore excursions, plus getting to the port. Decide on packages before you sail and set an onboard spending number."),
+            ("What should I book before I sail versus on board?", "Book anything that sells out early, popular specialty restaurants, in-demand shore excursions and spa slots, before you sail. Casual dining, most activities and relaxing can wait until you are on board."),
+        ],
+        "es": [
+            ("¿Un crucero es bueno para primerizos?", "Sí. Un crucero es una de las vacaciones más fáciles para principiantes: desempacas una vez, la mayoría de tu comida y entretenimiento está incluido, y todo está en un lugar. Itinerarios cálidos y cortos como el Caribe o Bahamas son ideales para el primero."),
+            ("¿Qué incluye un primer crucero?", "Tu camarote, comedor principal y bufé, actividades de día, la mayoría del entretenimiento y clubes infantiles, y la navegación. Bebidas, Wi-Fi, restaurantes de especialidad, excursiones, spa y fotos son aparte."),
+            ("¿Necesito pasaporte para mi primer crucero?", "Un pasaporte es lo más seguro y se exige en la mayoría de cruceros que empiezan o terminan en el extranjero. En muchos cruceros closed-loop de EE.UU. sirve un acta más identificación, pero el pasaporte elimina el riesgo. Los nombres deben coincidir con tu reserva."),
+            ("¿Cuánto debo presupuestar además de la tarifa?", "Planea los extras casi universales: propinas diarias, bebidas, Wi-Fi y excursiones, más llegar al puerto. Decide los paquetes antes de zarpar y fija un monto de gasto a bordo."),
+            ("¿Qué reservo antes de zarpar y qué a bordo?", "Reserva antes lo que se agota: restaurantes de especialidad populares, excursiones muy demandadas y citas de spa. La comida informal, la mayoría de actividades y relajarte pueden esperar hasta estar a bordo."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "The first thing every new cruiser should read."),
+            ("🧳", "What to pack for a cruise", "/en/guides/what-to-pack-for-a-cruise/", "The carry-on and cabin checklist."),
+            ("🛳️", "Cruise embarkation day", "/en/guides/cruise-embarkation-day/", "Exactly what happens on day one."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Tell us you're new; we'll match an easy first sailing."),
+        ],
+        "es": [
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "Lo primero que todo nuevo crucerista debe leer."),
+            ("🧳", "Qué llevar a un crucero", "/es/guides/what-to-pack-for-a-cruise/", "La lista de equipaje de mano y camarote."),
+            ("🛳️", "Día de embarque", "/es/guides/cruise-embarkation-day/", "Exactamente qué pasa el primer día."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Dinos que eres nuevo; emparejamos un primer crucero fácil."),
+        ],
+    },
+})
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("choosing-a-cabin", {
+    "cat": "planning", "hero": "cruise-cabin.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "Choosing a cruise cabin: interior to suite, explained", "es": "Elegir camarote: de interior a suite, explicado"},
+    "dek": {
+        "en": "Your cabin is the one choice that shapes both your budget and your comfort. Here is what "
+              "each type gives you, who each suits, the locations to seek out and the ones to avoid, so "
+              "you pick the right room the first time.",
+        "es": "Tu camarote es la decisión que más moldea tu presupuesto y tu comodidad. Aquí verás qué "
+              "te da cada tipo, para quién es cada uno, las ubicaciones a buscar y las que evitar, para "
+              "que elijas la habitación correcta a la primera.",
+    },
+    "takeaways": {
+        "en": [
+            "Four main types: interior (no window), oceanview (window), balcony (private veranda) and suite (space plus perks).",
+            "Interiors are the best value and you spend little waking time in the room; balconies are the popular sweet spot for the view.",
+            "Location matters: midship is steadiest, higher decks are handier for pools, and cabins near lifts or under busy venues can be noisier.",
+            "A guarantee cabin (you pick the category, the line assigns the room) can come at a friendlier fare in exchange for less control.",
+            "Match the cabin to how you travel: how much time you'll spend in the room, motion sensitivity, and budget.",
+        ],
+        "es": [
+            "Cuatro tipos principales: interior (sin ventana), vista al mar (ventana), balcón (veranda privada) y suite (espacio y beneficios).",
+            "Los interiores son el mejor valor y pasas poco tiempo despierto en la habitación; los balcones son el punto ideal popular por la vista.",
+            "La ubicación importa: el centro del barco es el más estable, las cubiertas altas están cerca de las piscinas, y los camarotes junto a ascensores o bajo lugares concurridos pueden ser más ruidosos.",
+            "Un camarote garantizado (eliges la categoría, la línea asigna la habitación) puede tener una tarifa más amable a cambio de menos control.",
+            "Ajusta el camarote a cómo viajas: cuánto tiempo pasarás en la habitación, sensibilidad al movimiento y presupuesto.",
+        ],
+    },
+    "sections": [
+        {"id": "types", "h2": {"en": "The four cabin types", "es": "Los cuatro tipos de camarote"},
+         "html": {
+            "en": vcards([
+                ("🛏️", "Interior", "No window, the most budget-friendly room. Great if you treat the cabin as a place to sleep and shower."),
+                ("🪟", "Oceanview", "A window or porthole for natural light and a sea view, without a balcony's price."),
+                ("🌅", "Balcony", "A private veranda, the popular sweet spot: your own outdoor space and morning coffee with a view."),
+                ("🛎️", "Suite", "The most space, plus perks that vary by line (priority boarding, a lounge, concierge, better location)."),
+            ]) + "<p>Use the interactive breakdown below to compare them side by side, then read on for how to pick a "
+            "good location.</p>",
+            "es": vcards([
+                ("🛏️", "Interior", "Sin ventana, la habitación más económica. Ideal si usas el camarote solo para dormir y ducharte."),
+                ("🪟", "Vista al mar", "Una ventana u ojo de buey para luz natural y vista al mar, sin el precio de un balcón."),
+                ("🌅", "Balcón", "Una veranda privada, el punto ideal popular: tu propio espacio al aire libre y el café de la mañana con vista."),
+                ("🛎️", "Suite", "El mayor espacio, más beneficios que varían por línea (embarque prioritario, salón, conserjería, mejor ubicación)."),
+            ]) + "<p>Usa el desglose interactivo de abajo para compararlos, y luego sigue leyendo para elegir una buena "
+            "ubicación.</p>",
+         }},
+        {"id": "location", "h2": {"en": "Location: the cabins to seek and avoid", "es": "Ubicación: los camarotes a buscar y evitar"},
+         "html": {
+            "en": "<p>Two cabins of the same type can feel very different depending on where they sit:</p>"
+                  "<ul>"
+                  "<li><b>Midship</b> is the steadiest spot in any motion, and central for getting around, a smart pick if you are prone to seasickness.</li>"
+                  "<li><b>Higher decks</b> are handy for pools and buffet; <b>lower decks</b> feel the least motion and are often gentler on the wallet.</li>"
+                  "<li><b>Avoid</b> cabins directly above or below busy venues (theatres, nightclubs, the pool deck), and rooms right by the lifts, which can be noisier.</li>"
+                  "<li><b>Check the deck plan</b> for anything obstructing a balcony view (lifeboats) or connecting-door cabins if you want quiet.</li>"
+                  "</ul>"
+                  + tip("A guarantee cabin gives the line the final say on your exact room in exchange for a friendlier fare. Fine for flexible travellers; avoid it if location is critical to you."),
+            "es": "<p>Dos camarotes del mismo tipo pueden sentirse muy distintos según dónde estén:</p>"
+                  "<ul>"
+                  "<li>El <b>centro del barco</b> es el punto más estable ante cualquier movimiento, y central para moverte, una elección inteligente si te mareas.</li>"
+                  "<li>Las <b>cubiertas altas</b> están cerca de piscinas y bufé; las <b>bajas</b> sienten menos movimiento y suelen ser más suaves para el bolsillo.</li>"
+                  "<li><b>Evita</b> camarotes justo encima o debajo de lugares concurridos (teatros, discotecas, la cubierta de piscina), y las habitaciones junto a los ascensores, que pueden ser más ruidosas.</li>"
+                  "<li><b>Revisa el plano de cubiertas</b> por si algo obstruye la vista del balcón (botes salvavidas) o por camarotes con puerta conectada si quieres tranquilidad.</li>"
+                  "</ul>"
+                  + tip("Un camarote garantizado deja a la línea la última palabra sobre tu habitación exacta a cambio de una tarifa más amable. Bien para viajeros flexibles; evítalo si la ubicación es crítica para ti."),
+         }},
+        {"id": "which-for-you", "h2": {"en": "Which cabin is right for you?", "es": "¿Qué camarote es para ti?"},
+         "html": {
+            "en": "<p>Answer honestly: how much waking time will you spend in the room?</p>"
+                  "<ul>"
+                  "<li><b>Barely any?</b> An interior stretches your budget furthest, and you will not miss the window.</li>"
+                  "<li><b>Some downtime and love a view?</b> A balcony is the classic sweet spot and the most popular choice.</li>"
+                  "<li><b>Want light without the balcony price?</b> An oceanview splits the difference.</li>"
+                  "<li><b>Celebrating, or want space and perks?</b> A suite delivers, especially for families or a special trip.</li>"
+                  "</ul>"
+                  "<p>Budget-focused? See " + link("/en/guides/how-to-find-affordable-cruise/", "how to find an affordable cruise") +
+                  "; the cabin choice is one of the biggest levers.</p>",
+            "es": "<p>Responde con honestidad: ¿cuánto tiempo despierto pasarás en la habitación?</p>"
+                  "<ul>"
+                  "<li><b>¿Casi nada?</b> Un interior estira más tu presupuesto, y no extrañarás la ventana.</li>"
+                  "<li><b>¿Algo de descanso y te encanta la vista?</b> Un balcón es el punto ideal clásico y la opción más popular.</li>"
+                  "<li><b>¿Quieres luz sin el precio del balcón?</b> Una vista al mar es el punto medio.</li>"
+                  "<li><b>¿Celebras, o quieres espacio y beneficios?</b> Una suite cumple, sobre todo para familias o un viaje especial.</li>"
+                  "</ul>"
+                  "<p>¿Te enfocas en el presupuesto? Ve " + link("/es/guides/how-to-find-affordable-cruise/", "cómo encontrar un crucero accesible") +
+                  "; la elección de camarote es una de las mayores palancas.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Is a balcony cabin worth it on a cruise?", "For many people, yes, a balcony is the popular sweet spot, giving you private outdoor space and a view for a moderate step up from an oceanview. If you will barely be in the room, an interior saves more; on scenic itineraries like Alaska, a balcony shines."),
+            ("What is the most affordable cruise cabin?", "An interior stateroom, with no window, is the most budget-friendly. Since you spend little waking time in the cabin, it is the choice that stretches the trip budget the furthest."),
+            ("What is a guarantee cabin?", "You choose the cabin category and the cruise line assigns your exact room later, often at a friendlier fare in exchange for less control over the location. Good for flexible travellers, not ideal if a specific spot matters."),
+            ("Which deck is best for a cruise cabin?", "Midship cabins feel the steadiest and are central for getting around, ideal if you are prone to seasickness. Higher decks are handy for pools; lower decks feel the least motion. Avoid rooms directly above or below busy venues."),
+            ("How do I avoid a noisy cabin?", "Check the deck plan and steer clear of cabins directly above or below theatres, nightclubs and the pool deck, and rooms right beside the lifts. Midship, mid-deck cabins between other cabins are usually the quietest."),
+        ],
+        "es": [
+            ("¿Vale la pena un camarote con balcón?", "Para muchos, sí, un balcón es el punto ideal popular, con espacio privado al aire libre y vista por un paso moderado sobre la vista al mar. Si casi no estarás en la habitación, un interior ahorra más; en itinerarios escénicos como Alaska, un balcón brilla."),
+            ("¿Cuál es el camarote más económico?", "Un camarote interior, sin ventana, es el más económico. Como pasas poco tiempo despierto en el camarote, es la opción que más estira el presupuesto del viaje."),
+            ("¿Qué es un camarote garantizado?", "Eliges la categoría y la línea asigna tu habitación exacta después, a menudo con una tarifa más amable a cambio de menos control sobre la ubicación. Bien para viajeros flexibles, no ideal si un lugar específico importa."),
+            ("¿Qué cubierta es mejor para el camarote?", "Los camarotes del centro sienten el menor movimiento y son centrales para moverte, ideales si te mareas. Las cubiertas altas están cerca de las piscinas; las bajas sienten menos movimiento. Evita habitaciones justo encima o debajo de lugares concurridos."),
+            ("¿Cómo evito un camarote ruidoso?", "Revisa el plano y evita camarotes justo encima o debajo de teatros, discotecas y la cubierta de piscina, y habitaciones junto a los ascensores. Los camarotes del centro, en cubierta media y entre otros camarotes, suelen ser los más tranquilos."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("💰", "How to find an affordable cruise", "/en/guides/how-to-find-affordable-cruise/", "Cabin choice is one of the biggest budget levers."),
+            ("🚢", "Big ship vs small ship", "/en/guides/big-ship-vs-small-ship/", "The ship you pick shapes the cabins on offer."),
+            ("🧭", "First-time cruisers", "/en/guides/first-time-cruisers/", "Everything else for a smooth first sailing."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "We'll find the right cabin on the right ship for you."),
+        ],
+        "es": [
+            ("💰", "Cómo encontrar un crucero accesible", "/es/guides/how-to-find-affordable-cruise/", "La elección de camarote es una de las mayores palancas de presupuesto."),
+            ("🚢", "Barco grande vs pequeño", "/es/guides/big-ship-vs-small-ship/", "El barco que eliges moldea los camarotes disponibles."),
+            ("🧭", "Primer crucero", "/es/guides/first-time-cruisers/", "Todo lo demás para un primer crucero sin problemas."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Encontramos el camarote correcto en el barco correcto para ti."),
+        ],
+    },
+})
