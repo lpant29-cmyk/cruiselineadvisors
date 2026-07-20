@@ -17,7 +17,9 @@ payment, hold inventory, set prices, or hold cruise-line appointments. Traffic i
 - **Live site:** https://cruiselineadvisors.com
 - **Entity:** BookMeCheapest LLC (Florida), in travel since 2015.
 - **Brand:** CruiseLine Advisors.
-- **Contact inbox / all Google & Microsoft properties:** gocaribbea@gmail.com
+- **Accounts:** Google properties (Search Console, Tag Manager, Analytics/GA4) are under
+  **gocaribbea@gmail.com**. **Microsoft Clarity** is under a *different* account:
+  **helpdesk@bargainairticket** (bargainairticket.com). See §6 for details.
 
 The authoritative product brief is `docs/BRIEF.md`. The build/agent rules live in `CLAUDE.md`.
 
@@ -166,26 +168,27 @@ and deploy — the snippet then renders on every page automatically. Nothing tra
 - **Next steps for the operator:** in Search Console, click Verify; then submit the sitemap
   (`/sitemap.xml`); then use URL Inspection to request indexing of key pages.
 
-### 6b. Google Tag Manager — READY, needs the container ID
-- Create a GTM container for `cruiselineadvisors.com`, copy the `GTM-XXXXXXX` ID.
-- Put it in `config.py → GTM_ID`, rebuild + deploy. The GTM script (head) and `<noscript>` iframe
-  (first thing after `<body>`) then render site-wide.
-- **Recommended:** fire GA4 and Clarity as **tags inside GTM** (then leave `GA4_ID`/`CLARITY_ID`
-  blank in config to avoid double-loading).
-- A custom event **`call_click`** is already pushed to `dataLayer` whenever a phone link is tapped
-  (with `placement` and `lang`). In GTM, create a Custom Event trigger on `call_click` → this is the
-  **primary conversion** (a lead). Mark it as a conversion in GA4/Google Ads.
+### 6b. Google Tag Manager — LIVE
+- **Container ID:** `GTM-NM78WCVF` (account gocaribbea@gmail.com). Set in `config.py → GTM_ID`.
+- Renders the GTM script high in `<head>` and the `<noscript>` iframe immediately after `<body>` on
+  every page. Deployed 2026-07-20 (commit `bd77979`), verified live.
+- **GA4 is fired INSIDE this container** — there is deliberately **no** separate `gtag.js`/GA4
+  snippet anywhere (`GA4_ID` is blank) so events are never double-counted. Do not add one.
+- A custom event **`call_click`** is pushed to `dataLayer` whenever a phone link is tapped (with
+  `placement` and `lang`). In GTM, make a Custom Event trigger on `call_click` → this is the
+  **primary conversion (a lead)**. Send it to GA4 as a key event and import to Google Ads.
 
-### 6c. Google Analytics 4 — READY, needs the Measurement ID
-- Create a GA4 property, copy `G-XXXXXXXXXX`.
-- Either add it as a tag in GTM (preferred), **or** paste it in `config.py → GA4_ID` to hard-code the
-  gtag snippet. The `call_click` event flows through automatically.
-- In GA4: mark `call_click` as a **key event / conversion**. Link GA4 to Google Ads to import it.
+### 6c. Google Analytics 4 — via GTM (no separate snippet)
+- GA4 is configured **entirely inside the GTM container** above. `config.py → GA4_ID` is
+  intentionally left blank; the generator emits no `gtag/js` script. If GA4 ever needs to be
+  hard-coded instead, put the `G-…` ID in `GA4_ID` — but then remove the GA4 tag from GTM first.
+- In GA4, mark `call_click` as a **key event / conversion** and link GA4 to Google Ads.
 
-### 6d. Microsoft Clarity — READY, needs the project ID
-- Create a Clarity project for the site, copy the project ID (e.g. `abcdef1234`).
-- Put it in `config.py → CLARITY_ID` (or add via GTM), rebuild + deploy. Gives heatmaps + session
-  recordings — useful for seeing why mobile visitors do/don't call.
+### 6d. Microsoft Clarity — LIVE
+- **Project ID:** `xpb1uyu7ta`. **Account: helpdesk@bargainairticket** (bargainairticket.com) —
+  NOT the gocaribbea Google account. Set in `config.py → CLARITY_ID`.
+- Renders in `<head>` on every page. Deployed 2026-07-20 (commit `bd77979`), verified live. Gives
+  heatmaps + session recordings — useful for seeing why mobile visitors do/don't call.
 
 ### 6e. Google Ads (context)
 - Traffic is ~100% paid search on brand keywords. The conversion to optimise is the **phone call**

@@ -391,18 +391,22 @@ def p_facts(lang):
 
 # ─────────────────────────── destinations ───────────────────────────
 def p_dest_hub(lang):
-    from page_home import _pcard
-    cards = "".join(
-        _pcard(f"/{lang}/destinations/{d['slug']}.html", d['emo'], d['name'][lang],
-               f"{'Best' if lang=='en' else 'Mejor'}: {d['best'][lang]}", "",
-               ("Explore" if lang == "en" else "Explorar"), i)
-        for i, d in enumerate(DESTINATIONS))
+    from destpage import hero_image
+    cards = ""
+    for d in DESTINATIONS:
+        img = hero_image(d["slug"])
+        media = (f'<img src="/ports/{img}" alt="{d["name"][lang]}" loading="lazy" decoding="async">'
+                 if img else "")
+        best = d.get("best", {}).get(lang, "")
+        best_html = f'<small>{("Best" if lang == "en" else "Mejor")}: {best}</small>' if best else ""
+        cards += (f'<a class="port-card destx-card" href="/{lang}/destinations/{d["slug"]}/">{media}'
+                  f'<span class="port-nm">{d["emo"]} {d["name"][lang]}{best_html}</span></a>')
     kick = "Destinations" if lang == "en" else "Destinos"
     h1 = "Where do you want to sail?" if lang == "en" else "¿A dónde quieres navegar?"
     sub = ("Every region runs on a season. Pick the right month and the whole trip gets better." if lang == "en"
            else "Cada región tiene su temporada. Elige el mes correcto y todo el viaje mejora.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
-            + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div></div></section>'
+            + f'<section class="section"><div class="wrap"><div class="port-grid destx-grid">{cards}</div></div></section>'
             + when_to_go(lang)
             + cta_band(lang, "Not sure when to go?" if lang == "en" else "¿No sabes cuándo ir?",
                        "An advisor matches your dates to the region that's actually in season." if lang == "en"

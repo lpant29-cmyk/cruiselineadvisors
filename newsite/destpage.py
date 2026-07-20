@@ -25,7 +25,7 @@ _MONTHS = {"en": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
 
 
 def has_region_guide(slug):
-    return slug in _DEP
+    return slug in _DEP or slug in INTL
 
 
 def _port_photo(city):
@@ -177,6 +177,41 @@ DEST_COPY = {
             _c("Halifax", "A Nova Scotia gateway on some routings.", "Una puerta de Nueva Escocia en algunas rutas."),
         ],
     },
+    "mediterranean": {
+        "expect": {"en": "Two cruises in one region: the Western Med (Spain, France, Italy) leans to art cities and beaches, while the Eastern Med (Greece and the Adriatic) is all whitewashed islands and ancient ruins. Warm, port-intensive, and almost always round-trip from a European city.",
+                   "es": "Dos cruceros en una región: el Mediterráneo occidental (España, Francia, Italia) se inclina a ciudades de arte y playas, mientras que el oriental (Grecia y el Adriático) es de islas blancas y ruinas antiguas. Cálido, con muchos puertos y casi siempre de ida y vuelta desde una ciudad europea."},
+        "calls": [
+            _c("Barcelona", "A top embarkation city — Gaudí, Las Ramblas and beaches.", "Una de las principales ciudades de embarque — Gaudí, Las Ramblas y playas."),
+            _c("Rome (Civitavecchia)", "The port for Rome and the Vatican.", "El puerto para Roma y el Vaticano."),
+            _c("Naples", "Gateway to Pompeii, the Amalfi Coast and Capri.", "Puerta a Pompeya, la Costa Amalfitana y Capri."),
+            _c("Santorini", "The iconic caldera cliffs and blue domes of the Greek isles.", "Los icónicos acantilados de la caldera y las cúpulas azules de las islas griegas."),
+            _c("Mykonos", "Windmills, whitewashed lanes and beaches.", "Molinos, callejones blancos y playas."),
+            _c("Dubrovnik", "Croatia's walled Adriatic old town.", "La ciudad amurallada del Adriático en Croacia."),
+            _c("Palma de Mallorca", "A Balearic port with a grand cathedral and coves.", "Un puerto balear con una gran catedral y calas."),
+        ],
+    },
+    "northern-europe": {
+        "expect": {"en": "Two flavours: the Norwegian Fjords for waterfalls and mountain scenery, and the Baltic for grand capital cities. Long summer daylight, a short May–September window, and cooler weather than the Med.",
+                   "es": "Dos estilos: los fiordos noruegos por sus cascadas y montañas, y el Báltico por sus grandes capitales. Días de verano muy largos, una ventana corta de mayo a septiembre y clima más fresco que el Mediterráneo."},
+        "calls": [
+            _c("Copenhagen", "A common Baltic home port — harbours, palaces and design.", "Un puerto base habitual del Báltico — puertos, palacios y diseño."),
+            _c("Geiranger (Norwegian Fjords)", "A UNESCO fjord of sheer cliffs and waterfalls.", "Un fiordo declarado por la UNESCO, de acantilados y cascadas."),
+            _c("Stockholm", "A capital spread across islands, reached via a scenic archipelago.", "Una capital repartida en islas, a la que se llega por un archipiélago escénico."),
+            _c("Bergen", "The colourful Bryggen wharf and gateway to the fjords.", "El colorido muelle de Bryggen y la puerta a los fiordos."),
+            _c("Tallinn", "A remarkably intact medieval old town in Estonia.", "Un casco medieval notablemente intacto en Estonia."),
+            _c("Amsterdam", "Canals, museums and a frequent start/end port.", "Canales, museos y un puerto frecuente de inicio/fin."),
+        ],
+    },
+}
+
+# International regions we cover as destination pages but that are NOT boardable from a US/Canada
+# home port (so no "where you sail from" / "ships that sail here" sections). Data drives the hero,
+# best-time strip and which-lines panel; itineraries typically start from Europe.
+INTL = {
+    "mediterranean": {"season": {"en": "April–October", "es": "Abril–Octubre"}, "months": [4, 5, 6, 7, 8, 9, 10],
+                      "lines": ["msc", "celebrity", "princess", "royal-caribbean", "holland-america", "cunard"]},
+    "northern-europe": {"season": {"en": "May–September", "es": "Mayo–Septiembre"}, "months": [5, 6, 7, 8, 9],
+                        "lines": ["princess", "holland-america", "celebrity", "royal-caribbean", "cunard", "msc"]},
 }
 
 
@@ -200,7 +235,72 @@ def _sec(cls, title, emoji, inner):
             f'{inner}</div></section>')
 
 
+def _line_fit_cards(lang, line_slugs):
+    en = lang == "en"
+    cards = ""
+    for line_slug in line_slugs:
+        L = _LINE.get(line_slug)
+        if not L:
+            continue
+        cards += _card(L["emo"], L["name"], L["cat"][lang], L["tag"][lang]
+                       + f' <a class="dest-linelink" href="/{lang}/lines/{line_slug}/">'
+                       + ("Guide →" if en else "Guía →") + "</a>")
+    return cards
+
+
+def _intl_guide(lang, slug, name):
+    """Rich guide for a region NOT boardable from a US/Canada home port (Mediterranean, N. Europe):
+    same look, but no US home-port or ship-itinerary sections — itineraries start from Europe."""
+    r = INTL[slug]
+    copy = DEST_COPY.get(slug, {})
+    en = lang == "en"
+    out = ""
+
+    if copy.get("expect"):
+        out += _sec("", ("What to expect" if en else "Qué esperar"), "🧭",
+                    f'<p class="intro">{copy["expect"][lang]}</p>')
+
+    months = set(r["months"])
+    strip = "".join(f'<span class="whn-m{" on" if (i + 1) in months else ""}">{_MONTHS[lang][i]}</span>' for i in range(12))
+    out += _sec("cream", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
+                f'<p class="rsec-sub">{r["season"][lang]}.</p><div class="whn-months dest-months">{strip}</div>')
+
+    if copy.get("calls"):
+        cards = "".join(_card("📍", c["name"], "", c["desc"][lang]) for c in copy["calls"])
+        pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
+                 if en else "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
+        out += _sec("", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
+                    f'<div class="xr-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
+
+    # getting there (honest: starts from Europe, not a US home port)
+    getting = ("These cruises almost always start and end at a European port, so you'll fly in and often "
+               "add a night before. We help you pick the sailing and plan the routing — call and we'll sort it."
+               if en else
+               "Estos cruceros casi siempre empiezan y terminan en un puerto europeo, así que llegarás en avión y "
+               "a menudo añadirás una noche antes. Te ayudamos a elegir la salida y planear el viaje — llámanos.")
+    out += _sec("cream", ("Getting there" if en else "Cómo llegar"), "✈️", f'<p class="rsec-sub">{getting}</p>')
+
+    out += _sec("", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
+                f'<div class="xr-grid">{_line_fit_cards(lang, r["lines"])}</div>')
+
+    docs = ("A valid passport is required — these itineraries start abroad and visit multiple countries. "
+            "Check visa rules for your nationality and each country on the route before you book."
+            if en else
+            "Se requiere pasaporte vigente — estos itinerarios empiezan en el extranjero y visitan varios países. "
+            "Revisa las reglas de visado para tu nacionalidad y cada país de la ruta antes de reservar.")
+    out += _sec("", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
+                f'<p class="rsec-sub">{docs}</p>')
+
+    call = "Call now" if en else "Llama ahora"
+    out += _sec("cream", ("Plan this trip" if en else "Planea este viaje"), "📞",
+                _call(lang, (f"Tell us your dates for {name} and we'll match the ship, the itinerary and the best rate our partners can offer."
+                             if en else f"Dinos tus fechas para {name} y emparejamos el barco, el itinerario y la mejor tarifa."), "dest-intl-cta"))
+    return out
+
+
 def region_guide(lang, slug, name):
+    if slug in INTL and slug not in _DEP:
+        return _intl_guide(lang, slug, name)
     r = _DEP[slug]
     copy = DEST_COPY.get(slug, {})
     en = lang == "en"
@@ -343,6 +443,7 @@ def dest_hero(lang, slug, name, sub, crumb):
     img = hero_image(slug)
     kick = "Destination" if en else "Destino"
     stats = ""
+    chips = []
     if slug in _DEP:
         r = _DEP[slug]
         n_ships = sum(len(v) for v in _ships_by_line(slug).values())
@@ -351,6 +452,14 @@ def dest_hero(lang, slug, name, sub, crumb):
             (f'{len(r["ports"])} ' + ("home ports" if en else "puertos"), "⚓"),
             (f'{n_ships} ' + ("ships" if en else "barcos"), "🚢"),
         ]
+    elif slug in INTL:
+        r = INTL[slug]
+        chips = [
+            (r["season"][lang], "🗓️"),
+            (f'{len(r["lines"])} ' + ("lines" if en else "líneas"), "🚢"),
+            (("Sails from Europe" if en else "Zarpa desde Europa"), "🌍"),
+        ]
+    if chips:
         stats = '<div class="dhero-stats">' + "".join(
             f'<span class="dhero-stat"><span aria-hidden="true">{e}</span> {t}</span>' for t, e in chips) + '</div>'
     call = "Call now" if en else "Llama ahora"
@@ -388,6 +497,19 @@ def more_destinations(lang, current_slug, dests):
 
 def region_faqs(lang, slug, name):
     """Data-driven FAQ (also emitted as FAQPage JSON-LD by the caller)."""
+    en = lang == "en"
+    if slug in INTL and slug not in _DEP:
+        r = INTL[slug]
+        return [
+            (("When is the best time to cruise " + name + "?" if en else "¿Cuándo es la mejor época para navegar por " + name + "?"),
+             (f"The season runs {r['season'][lang]}." if en else f"La temporada es {r['season'][lang]}.")),
+            (("Do these cruises leave from the US?" if en else "¿Salen estos cruceros desde EE.UU.?"),
+             ("No — " + name + " itineraries almost always start and end at a European port, so you fly in. Call and we'll help plan the routing."
+              if en else "No — los itinerarios de " + name + " casi siempre empiezan y terminan en un puerto europeo, así que llegas en avión. Llámanos y te ayudamos a planear el viaje.")),
+            (("Which cruise lines sail " + name + "?" if en else "¿Qué líneas navegan por " + name + "?"),
+             ((", ".join(_LINE[l]["name"] for l in r["lines"] if l in _LINE) + " all sail this region.")
+              if en else (", ".join(_LINE[l]["name"] for l in r["lines"] if l in _LINE) + " navegan esta región."))),
+        ]
     if slug not in _DEP:
         return []
     r = _DEP[slug]
