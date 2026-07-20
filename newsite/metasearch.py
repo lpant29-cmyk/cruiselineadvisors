@@ -118,18 +118,24 @@ def _payload(lang):
             return v.get(lang, v.get("en")) if isinstance(v, dict) else v
 
         acts = exp.get("activities")
+        cabs = " ".join(str(x) for x in (line_data(line_slug).get("cabins", {}).get("categories") or [])).lower()
+        solo = any(k in cabs for k in ("solo", "single", "studio"))
         ships.append({
             "id": f"{line_slug}::{s['name']}", "name": s["name"], "line": _NAME.get(line_slug, line_slug),
             "emo": _EMO.get(line_slug, "🚢"), "url": f"/{lang}/lines/{line_slug}/ships/{slugify(s['name'])}/",
             "guests": s.get("guests"), "year": s.get("year"), "cls": s.get("class"),
             "who": _who_short(who), "route": exp.get("deploy_note"),
             "dine": len(exp.get("dining") or []), "acts": len(acts) if isinstance(acts, list) else 0,
-            "regions": regs, "fam": fl["fam"], "cpl": fl["cpl"], "lux": fl["lux"], "val": fl["val"],
+            "regions": regs, "fam": fl["fam"], "cpl": fl["cpl"], "lux": fl["lux"], "val": fl["val"], "solo": solo,
             "grat": fv("gratuities"), "incl": fv("included"), "drink": fv("drink_pkg"), "cancel": fv("cancel"),
         })
     regions = [{"id": r["id"], "name": r["name"], "emoji": r["emoji"], "season": r["season"],
                 "months": r["months"], "ports": r["ports"]} for r in _REGIONS]
-    return {"regions": regions, "ships": ships, "months": _MONTHS[lang], "t": _T[lang],
+    fits = ({"family": "Great for families", "couple": "Couples' choice", "solo": "Solo-friendly",
+             "friends": "Good with friends"} if lang == "en" else
+            {"family": "Ideal para familias", "couple": "Para parejas", "solo": "Para viajeros solos",
+             "friends": "Genial con amigos"})
+    return {"regions": regions, "ships": ships, "months": _MONTHS[lang], "t": _T[lang], "fits": fits,
             "phone": PHONE_DISPLAY, "href": PHONE_HREF}
 
 
@@ -171,12 +177,16 @@ def metasearch_tool(lang):
     var r=byRegion[dest.value]; port.innerHTML='<option value="">'+T.anyport+'</option>';
     if(r) r.ports.forEach(function(p){{var o=document.createElement('option');o.value=p;o.textContent=p;port.appendChild(o);}});
   }}
-  function score(s,party){{
-    var sc=0;
-    if(party==='family'&&s.fam)sc+=3; if(party==='couple'&&s.cpl)sc+=3;
-    if(party==='friends'&&(s.val||s.guests>3500))sc+=2; if(party==='solo'&&s.cpl)sc+=1;
+  function bscore(s){{ var sc=0;
     if(s.year)sc+=Math.max(0,(s.year-1995))/30; if(s.guests)sc+=Math.min(1,s.guests/6000)*0.6;
-    if(s.dine)sc+=Math.min(1,s.dine/20)*0.4; return sc;
+    if(s.dine)sc+=Math.min(1,s.dine/20)*0.4; return sc; }}
+  // party is a PRIMARY sort key so the top results actually change with Who's travelling
+  function pmatch(s,party){{
+    if(party==='family')return s.fam?2:0;
+    if(party==='couple')return (s.cpl&&!s.fam)?2:(s.cpl?1:0);
+    if(party==='solo')return s.solo?2:(s.cpl?1:0);
+    if(party==='friends')return (s.val||s.guests>=3800)?2:(s.guests>=3000?1:0);
+    return 0;
   }}
   var FILT={{family:function(s){{return s.fam;}},couple:function(s){{return s.cpl;}},
     luxury:function(s){{return s.lux;}},value:function(s){{return s.val;}},
@@ -188,8 +198,8 @@ def metasearch_tool(lang):
 
   function render(){{
     var r=byRegion[dest.value], party=who.value, mo=month.value?parseInt(month.value):0;
-    var list=base(); list.forEach(function(s){{s._s=score(s,party);}});
-    list.sort(function(a,b){{return b._s-a._s;}});
+    var list=base(); list.forEach(function(s){{s._pm=pmatch(s,party);s._s=bscore(s);}});
+    list.sort(function(a,b){{return (b._pm-a._pm)||(b._s-a._s);}});
     var matched=list.filter(function(s){{return passAll(s,null);}});
     // note
     var note='';
@@ -233,7 +243,8 @@ def metasearch_tool(lang):
       +(top?'<span class="ms-badge">★ '+T.reco+'</span>':'')
       +'<div class="ms-card-h"><span class="ms-emo">'+s.emo+'</span><div><h3>'+esc(s.name)+'</h3><span class="ms-line">'+esc(s.line)+'</span></div>'
       +'<button type="button" class="ms-cmpbtn'+(sel?' on':'')+'" data-cmp="'+s.id+'">'+(sel?'✓ '+T.added:'+ '+T.compare)+'</button></div>'
-      +(s.cls?'<div class="ms-tags"><span class="ms-tag">'+esc(s.cls)+(lang_class(s))+'</span></div>':'')
+      +'<div class="ms-tags">'+(s.cls?'<span class="ms-tag">'+esc(s.cls)+'</span>':'')
+      +((who.value!=='any'&&pmatch(s,who.value)>0&&D.fits[who.value])?'<span class="ms-fit">✓ '+D.fits[who.value]+'</span>':'')+'</div>'
       +(s.who?'<p class="ms-who">'+esc(s.who)+'</p>':'')
       +'<div class="ms-meta">'+meta.join(' · ')+'</div>'
       +(r?'<div class="ms-sails">'+T.sails+' '+r.emoji+' '+r.name+(port.value?(' · '+esc(port.value)):'')+'</div>':'')

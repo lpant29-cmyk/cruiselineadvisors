@@ -85,8 +85,12 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 <main id="main">{content}</main>
 {footer(lang)}
 {sticky_callbar(lang)}
+<button id="toTop" class="totop" aria-label="{'Back to top' if lang=='en' else 'Volver arriba'}">↑</button>
 <script>
 function trackCall(p){{window.dataLayer=window.dataLayer||[];window.dataLayer.push({{event:'call_click',placement:p,lang:'{lang}'}});
 if(typeof gtag==='function'){{gtag('event','call_click',{{placement:p}});}}return true;}}
+(function(){{var b=document.getElementById('toTop');if(!b)return;
+b.onclick=function(){{window.scrollTo({{top:0,behavior:'smooth'}});}};
+addEventListener('scroll',function(){{b.classList.toggle('show',window.scrollY>600);}},{{passive:true}});}})();
 </script>
 </body></html>"""

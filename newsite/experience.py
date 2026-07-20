@@ -9,8 +9,41 @@ cards), or a LIST of {name, desc} (rich cards). Dining is a LIST of {name, type,
 `extra` is a bool (Included/Specialty pill) or a descriptive string. Per-ship content lives in
 data/ships/<line>.json under each ship's "exp"; line-wide content in cruise-lines.json
 "experience". NO PRICES. All prose is original — vivid but grounded in verified facts."""
+import os
 from config import PHONE_HREF, PHONE_DISPLAY
 from linepage import line_data
+
+_PORTS_DIR = os.path.join(os.path.dirname(__file__), "assets", "ports")
+# Pick a scenery image for a ship's "where & when it sails" note — destination region first
+# (what the cruise is about), then the departure city as a fallback.
+_ROUTE_REGION = [
+    (("caribbean", "bahamas", "west indies", "key west", "cozumel", "antilles"), "caribbean.jpg"),
+    (("alaska", "glacier", "inside passage"), "alaska.jpg"),
+    (("hawaii", "hawaiian"), "hawaii.jpg"),
+    (("new england", "canada", "quebec", "maritime", "st. lawrence"), "newengland.jpg"),
+    (("mexican riviera", "mexico", "cabo", "vallarta", "pacific coast"), "california.jpg"),
+    (("panama", "bermuda"), "caribbean.jpg"),
+    (("mediterranean", "europe", "transatlantic", "atlantic crossing"), "gulf.jpg"),
+]
+_ROUTE_PORT = [
+    (("fort lauderdale", "lauderdale"), "fort-lauderdale.jpg"), (("port canaveral", "canaveral"), "port-canaveral.jpg"),
+    (("palm beach",), "palm-beach.jpg"), (("miami",), "miami.jpg"), (("tampa",), "tampa.jpg"),
+    (("galveston",), "galveston.jpg"), (("new orleans",), "new-orleans.jpg"), (("new york",), "new-york.jpg"),
+    (("boston",), "boston.jpg"), (("los angeles", "long beach"), "los-angeles.jpg"), (("san diego",), "san-diego.jpg"),
+    (("seattle",), "seattle.jpg"), (("vancouver",), "vancouver.jpg"), (("honolulu",), "honolulu.jpg"),
+    (("san juan",), "san-juan.jpg"),
+]
+
+
+def _route_img(text):
+    s = (text or "").lower()
+    for keys, img in _ROUTE_REGION:
+        if any(k in s for k in keys):
+            return img
+    for keys, img in _ROUTE_PORT:
+        if any(k in s for k in keys) and os.path.exists(os.path.join(_PORTS_DIR, img)):
+            return img
+    return None
 
 _H = {
     "photos": {"en": "On board", "es": "A bordo"},
@@ -163,13 +196,17 @@ def experience_sections(lang, line_slug, ship):
                       f'<div><b>{lbl}</b><p>{wf}</p></div></div>')
         out += _sec("overview", lang, inner)
 
-    # ── Where & when it sails (current-season deployment note) ──
+    # ── Where & when it sails (current-season deployment note, with a scenery visual) ──
     route = exp.get("deploy_note")
     if route:
+        img = _route_img(route)
+        vis = (f'<figure class="route-img"><img src="/ports/{img}" alt="" loading="lazy" decoding="async">'
+               f'<figcaption class="route-cap">{route}</figcaption></figure>'
+               if img else f'<p class="rsec-sub">{route}</p>')
         nudge = (_call(lang, "Not sailing your dates or from your port? Call — we'll find the ship that is.")
                  if lang == "en" else
                  _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama — encontramos el barco que sí."))
-        out += _sec("route", lang, f'<p class="rsec-sub">{route}</p>{nudge}')
+        out += _sec("route", lang, f'{vis}{nudge}')
 
     # ── Food & dining ──
     dining = [d for d in (exp.get("dining") or []) if d.get("name")]
