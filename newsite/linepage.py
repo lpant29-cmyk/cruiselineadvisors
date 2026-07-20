@@ -203,12 +203,24 @@ def _cabin_card(name, lang):
             f'<div class="cab-b"><h3>{name}</h3><p>{desc[lang]}</p></div></article>')
 
 
-# Self-hosted, Unsplash-licensed regional scenery (free for commercial use, no attribution) — an
-# illustrative photo of the port's region, not a claim about the exact spot.
-_PORT_IMG = [
+# Self-hosted, Unsplash-licensed scenery (free for commercial use, no attribution). A per-port city
+# image is used when available; otherwise a regional photo. Never claimed to be the exact terminal.
+_ASSETS_PORTS = os.path.join(os.path.dirname(__file__), "assets", "ports")
+_PORT_SLUG = [
+    (("fort lauderdale", "lauderdale"), "fort-lauderdale"), (("port canaveral", "canaveral"), "port-canaveral"),
+    (("palm beach",), "palm-beach"), (("miami",), "miami"), (("tampa",), "tampa"), (("jacksonville",), "jacksonville"),
+    (("galveston",), "galveston"), (("new orleans",), "new-orleans"), (("mobile",), "mobile"),
+    (("cape liberty", "new york", "brooklyn", "manhattan"), "new-york"),
+    (("boston",), "boston"), (("baltimore",), "baltimore"), (("norfolk",), "norfolk"),
+    (("long beach", "los angeles", "san pedro"), "los-angeles"), (("san diego",), "san-diego"), (("san francisco",), "san-francisco"),
+    (("seattle",), "seattle"), (("vancouver",), "vancouver"), (("victoria",), "victoria"),
+    (("seward",), "seward"), (("whittier",), "whittier"), (("honolulu",), "honolulu"),
+    (("quebec",), "quebec-city"), (("montreal",), "montreal"), (("san juan",), "san-juan"),
+]
+_PORT_REGION = [
     (("miami", "lauderdale", "canaveral", "tampa", "palm beach", "jacksonville", "orlando"), "florida.jpg"),
     (("san juan", "puerto rico"), "caribbean.jpg"),
-    (("seattle", "vancouver", "seward", "whittier", "alaska"), "alaska.jpg"),
+    (("seattle", "vancouver", "seward", "whittier", "victoria", "alaska"), "alaska.jpg"),
     (("new york", "cape liberty", "brooklyn", "manhattan"), "newyork.jpg"),
     (("los angeles", "long beach", "san diego", "san francisco", "san pedro"), "california.jpg"),
     (("honolulu", "hawaii", "oahu"), "hawaii.jpg"),
@@ -219,7 +231,12 @@ _PORT_IMG = [
 
 def _port_img(port):
     s = port.lower()
-    for keys, img in _PORT_IMG:
+    for keys, slug in _PORT_SLUG:
+        if any(k in s for k in keys):
+            if os.path.exists(os.path.join(_ASSETS_PORTS, slug + ".jpg")):
+                return slug + ".jpg"
+            break
+    for keys, img in _PORT_REGION:
         if any(k in s for k in keys):
             return img
     return "gulf.jpg"

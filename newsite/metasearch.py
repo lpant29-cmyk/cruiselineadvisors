@@ -264,6 +264,8 @@ def metasearch_tool(lang):
       +'<div class="ms-cmp-scroll" style="--n:'+ships.length+'">'+head+rows+'</div>'
       +'<div class="nudge"><p>'+T.cta+'</p><a class="btn btn-call" href="tel:'+D.href+'" onclick="trackCall(\\'ms-cmp-call\\')"><span class="ic">☎</span>'+T.call+' · '+D.phone+'</a></div></div>';
     el.classList.add('show'); document.body.style.overflow='hidden';
+    var x=document.getElementById('msCmpX'); if(x)x.onclick=closeCmp;
+    el.onclick=function(e){{if(e.target===el)closeCmp();}};   // click backdrop to close
   }}
   function closeCmp(){{$('msCmp').classList.remove('show');document.body.style.overflow='';}}
 
