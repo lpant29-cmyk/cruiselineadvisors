@@ -521,6 +521,20 @@ section[id^="d-"]{scroll-margin-top:84px}
 .gd-rel{text-decoration:none}
 .gd-body a{color:var(--sea3);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .gd-body a:hover{color:var(--sea2)}
+/* guide cards (hub categories + contextual "helpful guides") */
+.gcat-h{font-size:clamp(1.2rem,3vw,1.5rem);color:var(--navy);margin:0 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--line)}
+.gcard-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:560px){.gcard-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:920px){.gcard-grid{grid-template-columns:repeat(4,1fr)}}
+.gcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(8,44,66,.18)}
+.gcard-media{display:block;position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,var(--sea3),var(--navy))}
+.gcard-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gcard-emo{display:flex;align-items:center;justify-content:center;font-size:2.2rem}
+.gcard-body{display:flex;flex-direction:column;gap:.35rem;padding:14px 16px 16px}
+.gcard-t{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;color:var(--navy);line-height:1.2}
+.gcard-d{font-size:.86rem;color:var(--muted);line-height:1.5;flex:1}
+.gcard-read{font-size:.82rem;font-weight:800;color:var(--sea3);margin-top:.2rem}
 .gvc-grid{margin:.4rem 0 1.4rem}
 .gvc-card{background:#fff}
 .gvc-card .xr-emoji{font-size:1.5rem}

@@ -220,6 +220,7 @@ def p_line(lang, slug):
             + f'<section id="s-updates" class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
             + faq
+            + related_guides(lang, "line", slug)
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
 
@@ -349,6 +350,7 @@ def p_ship(lang, line_slug, sslug):
               f'{_ship_nudge(lang, nudge_txt)}</div></section>'
             + exp_html
             + sisters_block
+            + related_guides(lang, "ship", sslug)
             + f'<section class="section"><div class="wrap">{back}</div></section>'
             + cta_band(lang, cta_t, cta_s)
             + f'<section class="section"><div class="wrap"><p class="disclaimer">{disc}</p></div></section>')
@@ -454,6 +456,7 @@ def p_region(lang, slug):
                 + dest_toc(lang, extra=toc_extra)
                 + guide
                 + _faq_block(lang, faqs)
+                + related_guides(lang, "dest", slug)
                 + more_destinations(lang, slug, DESTINATIONS))
     s = SEASONS.get(slug, {})
     peak = s.get("peak", {}).get(lang, "") if isinstance(s.get("peak"), dict) else ""
@@ -510,6 +513,14 @@ GUIDES = [
      "t": {"en": "Are drink packages worth it?", "es": "¿Valen la pena los paquetes de bebidas?"},
      "d": {"en": "How to tell, plus the whole-cabin rule that catches people out.",
            "es": "Cómo saberlo, y la regla de todo el camarote que sorprende a muchos."}},
+    {"slug": "cruise-wifi-explained", "emo": "📶",
+     "t": {"en": "Cruise Wi-Fi explained", "es": "Wi-Fi en crucero, explicado"},
+     "d": {"en": "Packages, tiers and what to realistically expect at sea.",
+           "es": "Paquetes, niveles y qué esperar de verdad en el mar."}},
+    {"slug": "refundable-vs-non-refundable", "emo": "🔄",
+     "t": {"en": "Refundable vs non-refundable", "es": "Reembolsable vs no reembolsable"},
+     "d": {"en": "Which fare type fits your plans, and where insurance helps.",
+           "es": "Qué tipo de tarifa encaja con tus planes, y dónde ayuda el seguro."}},
     {"slug": "avoid-cruise-scams", "emo": "🛡️",
      "t": {"en": "Avoid cruise scams & robocalls", "es": "Evitar estafas y llamadas automáticas"},
      "d": {"en": "The red flags behind fake offers and robocalls, and how to stay safe.",
@@ -549,6 +560,106 @@ GUIDES = [
 ]
 _G = {g["slug"]: g for g in GUIDES}
 
+# ── Guide categorisation + contextual interlinking ────────────────────────────────────────────────
+# Categories for the guides hub (ordered). Contexts (ctx) decide where a guide surfaces around the
+# site: "home", "line", "ship", "dest". For a guide about a SPECIFIC line/ship/destination, add its
+# slug to for_lines / for_ships / for_dests and it auto-attaches to that page (future-proofing).
+GUIDE_CATS = [
+    ("costs", {"en": "Cruise costs & money", "es": "Costos y dinero"}),
+    ("planning", {"en": "Planning your cruise", "es": "Planea tu crucero"}),
+    ("who", {"en": "Who's travelling", "es": "Quién viaja"}),
+    ("line", {"en": "Choosing a line & ship", "es": "Elegir línea y barco"}),
+    ("dest", {"en": "Destinations & timing", "es": "Destinos y temporada"}),
+    ("safety", {"en": "Smart & safe booking", "es": "Reserva inteligente y segura"}),
+]
+_CAT_TITLE = dict(GUIDE_CATS)
+
+GUIDE_META = {
+    "first-time-cruisers": {"cat": "planning", "ctx": ["home", "ship", "dest"]},
+    "choosing-a-cabin": {"cat": "planning", "ctx": ["line", "ship"]},
+    "whats-included": {"cat": "costs", "ctx": ["home", "line", "ship", "dest"]},
+    "cruise-gratuities-explained": {"cat": "costs", "ctx": ["line", "ship"]},
+    "how-to-find-affordable-cruise": {"cat": "costs", "ctx": ["home", "line", "dest"]},
+    "cruise-deposit-payment-cancellation": {"cat": "costs", "ctx": ["line"]},
+    "drink-packages-worth-it": {"cat": "costs", "ctx": ["line", "ship"]},
+    "cruise-wifi-explained": {"cat": "costs", "ctx": ["line", "ship"]},
+    "refundable-vs-non-refundable": {"cat": "costs", "ctx": ["line"]},
+    "avoid-cruise-scams": {"cat": "safety", "ctx": ["home"]},
+    "free-cruise-offer-red-flags": {"cat": "safety", "ctx": ["home"]},
+    "cruise-documents-id": {"cat": "planning", "ctx": ["dest"]},
+    "how-to-choose-a-cruise-line": {"cat": "line", "ctx": ["home", "line"]},
+    "solo-cruising": {"cat": "who", "ctx": ["line", "ship"]},
+    "how-to-choose-a-destination": {"cat": "dest", "ctx": ["home", "dest"]},
+    "when-to-cruise": {"cat": "dest", "ctx": ["dest"]},
+    "groups-and-families": {"cat": "who", "ctx": ["ship", "line"]},
+    "accessibility": {"cat": "who", "ctx": ["ship", "line"]},
+}
+_CTX_FORKEY = {"line": "for_lines", "ship": "for_ships", "dest": "for_dests"}
+
+
+def _guide_thumb(slug):
+    """The guide's hero image filename for a thumbnail, or None (then we show an emoji tile)."""
+    import guides_content  # noqa: F401 — ensure RICH_GUIDES (with per-guide hero overrides) is populated
+    from guidepage import RICH_GUIDES, guide_hero_img
+    return guide_hero_img(slug, RICH_GUIDES.get(slug, {}).get("hero"))
+
+
+def guide_card(lang, slug):
+    """A guide card with a self-hosted thumbnail (or emoji tile) + title + one-liner."""
+    g = _G.get(slug)
+    if not g:
+        return ""
+    thumb = _guide_thumb(slug)
+    media = (f'<span class="gcard-media"><img src="/guides/{thumb}" alt="" loading="lazy" decoding="async"></span>'
+             if thumb else f'<span class="gcard-media gcard-emo"><span aria-hidden="true">{g["emo"]}</span></span>')
+    read = "Read guide" if lang == "en" else "Leer guía"
+    return (f'<a class="gcard" href="/{lang}/guides/{slug}/">{media}'
+            f'<span class="gcard-body"><span class="gcard-t">{g["t"][lang]}</span>'
+            f'<span class="gcard-d">{g["d"][lang]}</span>'
+            f'<span class="gcard-read">{read} →</span></span></a>')
+
+
+def guides_hub_grouped(lang):
+    """The Guides hub, grouped by category."""
+    out = ""
+    for key, title in GUIDE_CATS:
+        slugs = [g["slug"] for g in GUIDES if GUIDE_META.get(g["slug"], {}).get("cat") == key]
+        if not slugs:
+            continue
+        cards = "".join(guide_card(lang, s) for s in slugs)
+        out += (f'<section class="section"><div class="wrap">'
+                f'<h2 class="gcat-h">{title[lang]}</h2><div class="gcard-grid">{cards}</div></div></section>')
+    return out
+
+
+def related_guides(lang, ctx, slug=None, heading=None, limit=4):
+    """A 'Helpful guides' section for a page. Includes guides tagged for this context, and any guide
+    targeted at this specific line/ship/destination slug (those come first)."""
+    forkey = _CTX_FORKEY.get(ctx)
+    specific, general = [], []
+    for g in GUIDES:
+        m = GUIDE_META.get(g["slug"], {})
+        if slug and forkey and slug in (m.get(forkey) or []):
+            specific.append(g["slug"])
+        elif ctx in (m.get("ctx") or []):
+            general.append(g["slug"])
+    ordered, seen = [], set()
+    for s in specific + general:
+        if s not in seen:
+            seen.add(s)
+            ordered.append(s)
+    ordered = ordered[:limit]
+    if not ordered:
+        return ""
+    cards = "".join(guide_card(lang, s) for s in ordered)
+    h = heading or ("Helpful guides" if lang == "en" else "Guías útiles")
+    sub = ("Free, factual reading to help you decide, then one call books it." if lang == "en"
+           else "Lectura gratuita y con datos para ayudarte a decidir, luego una llamada reserva.")
+    return (f'<section class="section cream"><div class="wrap">'
+            f'<div class="sec-head"><h2 class="rsec-h">{h}</h2><p class="rsec-sub">{sub}</p></div>'
+            f'<div class="gcard-grid">{cards}</div></div></section>')
+
+
 # Original planning content (general cruise knowledge; compliant, no invented specifics).
 GUIDE_BODY = {
     "first-time-cruisers": {
@@ -577,16 +688,15 @@ _GUIDE_FALLBACK = {
 
 
 def p_guides_hub(lang):
-    from page_home import _pcard
-    cards = "".join(
-        _pcard(f"/{lang}/guides/{g['slug']}.html", g['emo'], g['t'][lang], "", g['d'][lang],
-               ("Read" if lang == "en" else "Leer"), i) for i, g in enumerate(GUIDES))
     kick = "Guides" if lang == "en" else "Guías"
     h1 = "Practical cruise planning guides" if lang == "en" else "Guías prácticas para planear tu crucero"
     sub = ("Cabins, budgets, families, accessibility and timing, the real questions, answered plainly." if lang == "en"
            else "Camarotes, presupuestos, familias, accesibilidad y temporada, las preguntas reales, con claridad.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
-            + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div></div></section>')
+            + guides_hub_grouped(lang)
+            + cta_band(lang, "Still have a question about your trip?" if lang == "en" else "¿Aún tienes una pregunta?",
+                       "Call a specialist, they'll answer it in minutes, free." if lang == "en"
+                       else "Llama a un especialista, te responde en minutos, gratis."))
 
 
 def p_guide(lang, slug):

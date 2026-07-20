@@ -121,7 +121,9 @@ def _final(lang, t):
 
 
 def render(lang):
+    from pages import related_guides  # lazy import avoids a circular import at module load
     t = T[lang]
+    guides_heading = "Cruise guides worth reading" if lang == "en" else "Guías de crucero que vale la pena leer"
     return (_hero(lang, t)
             + wave_divider("white", "var(--sea3)")
             + _why(lang, t)
@@ -130,6 +132,7 @@ def render(lang):
             + _compare(lang, t)
             + _lines(lang, t)
             + _destinations(lang, t)
+            + related_guides(lang, "home", heading=guides_heading, limit=4)
             + wave_divider("sea", "var(--cream)")
             + _final(lang, t)
             + scroll_companions())

@@ -726,3 +726,262 @@ register("drink-packages-worth-it", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("cruise-wifi-explained", {
+    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "Cruise Wi-Fi: packages and what to actually expect",
+              "es": "Wi-Fi en crucero: paquetes y qué esperar de verdad"},
+    "dek": {
+        "en": "Internet at sea has come a long way, but it still works differently from home. Here is "
+              "how cruise Wi-Fi is sold, what the tiers really get you, and how to stay connected "
+              "without paying for more than you need.",
+        "es": "El internet en el mar ha avanzado mucho, pero aún funciona distinto a como lo hace en "
+              "casa. Aquí te explicamos cómo se vende el Wi-Fi de crucero, qué obtienes en cada nivel y "
+              "cómo mantenerte conectado sin pagar de más.",
+    },
+    "takeaways": {
+        "en": [
+            "Wi-Fi is almost never included in the base fare; it is sold as tiered packages, usually per day and often per device.",
+            "Lower tiers cover messaging and basic browsing; higher tiers add streaming and video calls, at a higher price.",
+            "Newer satellite technology has made cruise Wi-Fi far faster on many ships, but coverage still dips in remote areas and some ports.",
+            "Buying online before you sail is usually better value than at the onboard rate.",
+            "One device at a time is common on cheaper tiers; check whether you can share or switch devices.",
+        ],
+        "es": [
+            "El Wi-Fi casi nunca se incluye en la tarifa base; se vende como paquetes por niveles, normalmente por día y a menudo por dispositivo.",
+            "Los niveles bajos cubren mensajería y navegación básica; los altos añaden streaming y videollamadas, a un precio mayor.",
+            "La nueva tecnología satelital ha hecho el Wi-Fi mucho más rápido en muchos barcos, pero la cobertura aún baja en zonas remotas y algunos puertos.",
+            "Comprar en línea antes de zarpar suele ser mejor valor que la tarifa a bordo.",
+            "Un dispositivo a la vez es común en los niveles económicos; revisa si puedes compartir o cambiar de dispositivo.",
+        ],
+    },
+    "sections": [
+        {"id": "how-sold", "h2": {"en": "How cruise Wi-Fi is sold", "es": "Cómo se vende el Wi-Fi de crucero"},
+         "html": {
+            "en": "<p>Unlike a hotel, a cruise ship carries its own internet by satellite, so connectivity is a paid "
+                  "add-on rather than a free amenity. You buy a package for the length of the cruise, and lines "
+                  "usually offer a couple of tiers:</p>"
+                  + vcards([
+                      ("💬", "Basic / surf tier", "Messaging, email, social media and light browsing. Fine for staying in touch."),
+                      ("🎬", "Premium / stream tier", "Adds video streaming and often video calls, for a higher daily price."),
+                      ("📱", "Per device", "Cheaper tiers often cover one device at a time; you may be able to log off one and on with another."),
+                  ])
+                  + "<p>The exact tiers, names and rules differ by line, and we track the current version for each on "
+                  "the " + link("/en/cruise-facts/", "cruise facts") + " page.</p>",
+            "es": "<p>A diferencia de un hotel, un barco lleva su propio internet por satélite, así que la conexión es "
+                  "un extra de pago y no una comodidad gratis. Compras un paquete por la duración del crucero, y las "
+                  "líneas suelen ofrecer un par de niveles:</p>"
+                  + vcards([
+                      ("💬", "Nivel básico", "Mensajería, correo, redes sociales y navegación ligera. Suficiente para mantenerte en contacto."),
+                      ("🎬", "Nivel premium", "Añade streaming de video y a menudo videollamadas, por un precio diario mayor."),
+                      ("📱", "Por dispositivo", "Los niveles económicos suelen cubrir un dispositivo a la vez; quizá puedas desconectar uno y conectar otro."),
+                  ])
+                  + "<p>Los niveles, nombres y reglas exactos difieren por línea, y seguimos la versión actual de cada "
+                  "una en la página de " + link("/es/cruise-facts/", "datos de crucero") + ".</p>",
+         }},
+        {"id": "what-to-expect", "h2": {"en": "What to realistically expect", "es": "Qué esperar de forma realista"},
+         "html": {
+            "en": "<p>On ships with the newest satellite systems, Wi-Fi can feel close to home, fast enough to stream "
+                  "and video-call. On older ships or in remote regions it is slower and can drop out. A few honest "
+                  "expectations:</p>"
+                  + vcards([
+                      ("📶", "It varies by ship", "Newer vessels with modern satellite service are dramatically faster than older ones."),
+                      ("🏔️", "Remote areas dip", "Deep in Alaska or mid-ocean, speeds can slow; some spots have little coverage at all."),
+                      ("⚓", "Ports can differ", "In port your phone may pick up local mobile data; check roaming charges before you rely on it."),
+                  ])
+                  + tip("If you only need to check in occasionally, a basic tier plus free Wi-Fi ashore in port is often all you need."),
+            "es": "<p>En barcos con los sistemas satelitales más nuevos, el Wi-Fi puede sentirse casi como en casa, "
+                  "rápido para transmitir y hacer videollamadas. En barcos más viejos o regiones remotas es más lento "
+                  "y puede cortarse. Unas expectativas honestas:</p>"
+                  + vcards([
+                      ("📶", "Varía por barco", "Los barcos nuevos con servicio satelital moderno son mucho más rápidos que los viejos."),
+                      ("🏔️", "Las zonas remotas bajan", "En lo profundo de Alaska o en medio del océano, la velocidad baja; algunos puntos casi no tienen cobertura."),
+                      ("⚓", "Los puertos varían", "En puerto tu teléfono puede tomar datos móviles locales; revisa el roaming antes de depender de él."),
+                  ])
+                  + tip("Si solo necesitas conectarte de vez en cuando, un nivel básico más el Wi-Fi gratis en puerto suele ser todo lo que necesitas."),
+         }},
+        {"id": "save-tips", "h2": {"en": "Getting connected for less", "es": "Conectarte por menos"},
+         "html": {
+            "en": "<ul>"
+                  "<li><b>Buy before you sail.</b> Pre-cruise online rates are usually better value than the onboard price.</li>"
+                  "<li><b>Match the tier to your need.</b> Do not pay for streaming if all you do is message and email.</li>"
+                  "<li><b>Share where allowed.</b> If a tier covers one device, log off when you are done so someone else can log on.</li>"
+                  "<li><b>Use port Wi-Fi.</b> Cafes and terminals ashore often have free connections for the big uploads.</li>"
+                  "</ul>"
+                  + watch("Turn off automatic app updates and cloud backups before you connect; they can quietly eat a slower connection and your patience."),
+            "es": "<ul>"
+                  "<li><b>Compra antes de zarpar.</b> Las tarifas en línea previas al crucero suelen ser mejor valor que el precio a bordo.</li>"
+                  "<li><b>Ajusta el nivel a tu necesidad.</b> No pagues por streaming si solo mandas mensajes y correos.</li>"
+                  "<li><b>Comparte donde se permita.</b> Si un nivel cubre un dispositivo, desconéctate al terminar para que otro se conecte.</li>"
+                  "<li><b>Usa el Wi-Fi de puerto.</b> Los cafés y terminales en tierra suelen tener conexiones gratis para las cargas grandes.</li>"
+                  "</ul>"
+                  + watch("Apaga las actualizaciones automáticas de apps y las copias en la nube antes de conectarte; pueden consumir en silencio una conexión lenta y tu paciencia."),
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Cruise Wi-Fi is a paid, tiered add-on that has gotten much better on newer ships but still is "
+                  "not quite home broadband. Pick the tier that matches how you actually use the internet, buy it "
+                  "ahead, and lean on port Wi-Fi for the heavy lifting.</p>"
+                  "<p>Want to know how good the Wi-Fi is on a specific ship, and what the current package looks like? "
+                  "A specialist can tell you when you call. It also helps to read "
+                  + link("/en/guides/whats-included/", "what is included in a cruise fare") + " next.</p>",
+            "es": "<p>El Wi-Fi de crucero es un extra de pago por niveles que ha mejorado mucho en barcos nuevos pero "
+                  "aún no es como el internet de casa. Elige el nivel que coincida con cómo usas internet, cómpralo "
+                  "con anticipación y apóyate en el Wi-Fi de puerto para lo pesado.</p>"
+                  "<p>¿Quieres saber qué tan bueno es el Wi-Fi en un barco específico, y cómo es el paquete actual? Un "
+                  "especialista te lo dice cuando llamas. También ayuda leer "
+                  + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero") + " a continuación.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Is Wi-Fi free on a cruise?", "Rarely. Most lines sell tiered internet packages, usually per day and often per device, and a few premium or higher-end fares include a basic tier. Check the current policy for your line before you sail."),
+            ("How much is Wi-Fi on a cruise?", "It varies by line and tier and is sold per day. Buying online before you sail is usually better value than the onboard rate. We track the current package details for each line on our cruise facts page."),
+            ("Can you stream on cruise Wi-Fi?", "On ships with the newest satellite systems, often yes, on a premium/streaming tier. On older ships or in remote regions it can be too slow. Match the tier to what you actually plan to do."),
+            ("Does cruise Wi-Fi work everywhere on the ship?", "Generally yes across the ship, but speeds depend on the satellite coverage in your region. Deep in Alaska or mid-ocean it can slow down or drop; in port your phone may pick up local mobile data instead."),
+            ("Can I use one Wi-Fi package on multiple devices?", "Cheaper tiers often cover one device at a time, though you can usually log one off and another on. Higher tiers or add-ons may allow multiple devices; check the rule for your line."),
+        ],
+        "es": [
+            ("¿El Wi-Fi es gratis en un crucero?", "Casi nunca. La mayoría de líneas venden paquetes de internet por niveles, normalmente por día y a menudo por dispositivo, y algunas tarifas premium incluyen un nivel básico. Revisa la política actual de tu línea antes de zarpar."),
+            ("¿Cuánto cuesta el Wi-Fi en un crucero?", "Varía por línea y nivel y se vende por día. Comprar en línea antes de zarpar suele ser mejor valor que la tarifa a bordo. Seguimos los detalles del paquete de cada línea en nuestra página de datos de crucero."),
+            ("¿Se puede transmitir con el Wi-Fi de crucero?", "En barcos con los sistemas satelitales más nuevos, a menudo sí, en un nivel premium. En barcos viejos o regiones remotas puede ser muy lento. Ajusta el nivel a lo que realmente planeas hacer."),
+            ("¿El Wi-Fi funciona en todo el barco?", "En general sí en todo el barco, pero la velocidad depende de la cobertura satelital de tu región. En lo profundo de Alaska o en medio del océano puede bajar o cortarse; en puerto tu teléfono puede tomar datos móviles locales."),
+            ("¿Puedo usar un paquete de Wi-Fi en varios dispositivos?", "Los niveles económicos suelen cubrir un dispositivo a la vez, aunque normalmente puedes desconectar uno y conectar otro. Los niveles altos o extras pueden permitir varios dispositivos; revisa la regla de tu línea."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "Where Wi-Fi sits among the extras."),
+            ("💸", "The cruise facts that cost you money", "/en/cruise-facts/", "The current Wi-Fi and package details for every line."),
+            ("💰", "How to find an affordable cruise", "/en/guides/how-to-find-affordable-cruise/", "Keep the extras, Wi-Fi included, in check."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Ask us how good the Wi-Fi is on your ship."),
+        ],
+        "es": [
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "Dónde encaja el Wi-Fi entre los extras."),
+            ("💸", "Datos de crucero que cuestan dinero", "/es/cruise-facts/", "Los detalles actuales de Wi-Fi y paquetes de cada línea."),
+            ("💰", "Cómo encontrar un crucero accesible", "/es/guides/how-to-find-affordable-cruise/", "Controla los extras, Wi-Fi incluido."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Pregúntanos qué tan bueno es el Wi-Fi en tu barco."),
+        ],
+    },
+})
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("refundable-vs-non-refundable", {
+    "cat": "costs", "hero": "cruise-ship-sea.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "Refundable vs non-refundable cruise fares", "es": "Tarifas de crucero reembolsables vs no reembolsables"},
+    "dek": {
+        "en": "Many cruise fares come in two flavours: refundable and non-refundable. The non-refundable "
+              "one usually looks friendlier at booking, but it can cost you more if plans change. Here is "
+              "how to choose the right one for your trip.",
+        "es": "Muchas tarifas de crucero vienen en dos versiones: reembolsable y no reembolsable. La no "
+              "reembolsable suele verse más amable al reservar, pero puede costarte más si cambian los "
+              "planes. Aquí te explicamos cómo elegir la correcta para tu viaje.",
+    },
+    "takeaways": {
+        "en": [
+            "A refundable fare or deposit lets you cancel and get money back, up to a point in the cancellation schedule.",
+            "A non-refundable fare usually looks friendlier at booking, but you forfeit the deposit, or pay a change fee, if you cancel or move it.",
+            "Non-refundable can be a fine choice when your dates are locked in; refundable buys flexibility when they are not.",
+            "Either way, the cancellation schedule still applies once you pass final payment.",
+            "Travel insurance can bridge the gap on a non-refundable booking if something unexpected comes up.",
+        ],
+        "es": [
+            "Una tarifa o depósito reembolsable te deja cancelar y recuperar dinero, hasta cierto punto del calendario de cancelación.",
+            "Una tarifa no reembolsable suele verse más amable al reservar, pero pierdes el depósito, o pagas un cargo por cambio, si cancelas o la mueves.",
+            "La no reembolsable puede ser buena opción cuando tus fechas están fijas; la reembolsable compra flexibilidad cuando no lo están.",
+            "En cualquier caso, el calendario de cancelación sigue aplicando una vez pasado el pago final.",
+            "El seguro de viaje puede cubrir la diferencia en una reserva no reembolsable si surge algo inesperado.",
+        ],
+    },
+    "sections": [
+        {"id": "difference", "h2": {"en": "The difference in one minute", "es": "La diferencia en un minuto"},
+         "html": {
+            "en": vcards([
+                ("🔄", "Refundable", "Cancel before the penalty window and get your money back. Costs a little more up front, buys peace of mind."),
+                ("🔒", "Non-refundable", "Friendlier price at booking, but the deposit is forfeited (or you pay a change fee) if you cancel or move the sailing."),
+            ]) + "<p>Neither is a trap; they are two trade-offs. Refundable is insurance against changing your mind; "
+            "non-refundable rewards certainty. The right pick depends entirely on how firm your plans are.</p>",
+            "es": vcards([
+                ("🔄", "Reembolsable", "Cancela antes de la ventana de penalidad y recupera tu dinero. Cuesta un poco más al inicio, compra tranquilidad."),
+                ("🔒", "No reembolsable", "Precio más amable al reservar, pero pierdes el depósito (o pagas un cargo por cambio) si cancelas o mueves el crucero."),
+            ]) + "<p>Ninguna es una trampa; son dos equilibrios. La reembolsable es un seguro contra cambiar de "
+            "opinión; la no reembolsable premia la certeza. La elección correcta depende de qué tan firmes son tus planes.</p>",
+         }},
+        {"id": "when-each", "h2": {"en": "When each one makes sense", "es": "Cuándo conviene cada una"},
+         "html": {
+            "en": "<ul>"
+                  "<li><b>Choose non-refundable when</b> your dates are locked, time off is approved, and you are confident the trip is happening.</li>"
+                  "<li><b>Choose refundable when</b> plans might shift, you are booking far ahead, or you are still deciding between sailings.</li>"
+                  "<li><b>Remember the deadline.</b> Both types still follow the cancellation schedule once you pass final payment, so flexibility narrows as you get closer either way.</li>"
+                  "</ul>"
+                  + tip("Booking early? A refundable fare lets you lock a good cabin now and keep the option to change your mind, then you can often switch to a better arrangement later if one appears."),
+            "es": "<ul>"
+                  "<li><b>Elige no reembolsable cuando</b> tus fechas están fijas, el tiempo libre está aprobado y confías en que el viaje se hará.</li>"
+                  "<li><b>Elige reembolsable cuando</b> los planes podrían cambiar, reservas con mucha anticipación, o aún decides entre cruceros.</li>"
+                  "<li><b>Recuerda el plazo.</b> Ambas siguen el calendario de cancelación una vez pasado el pago final, así que la flexibilidad se reduce al acercarse la fecha.</li>"
+                  "</ul>"
+                  + tip("¿Reservas temprano? Una tarifa reembolsable te deja fijar un buen camarote ahora y conservar la opción de cambiar de idea."),
+         }},
+        {"id": "insurance", "h2": {"en": "Where travel insurance fits", "es": "Dónde encaja el seguro de viaje"},
+         "html": {
+            "en": "<p>If you go non-refundable to get the friendlier price but still want a safety net, travel insurance "
+                  "can cover you for covered reasons if something unexpected happens. It is especially worth considering "
+                  "for non-refundable bookings and sailings during hurricane season. A specialist can walk you through "
+                  "whether it makes sense for your trip.</p>"
+                  "<p>For the full booking timeline, read "
+                  + link("/en/guides/cruise-deposit-payment-cancellation/", "deposits, final payment and cancellation") + ".</p>",
+            "es": "<p>Si eliges no reembolsable por el precio más amable pero aún quieres una red de seguridad, el "
+                  "seguro de viaje puede cubrirte por razones cubiertas si pasa algo inesperado. Vale especialmente la "
+                  "pena en reservas no reembolsables y cruceros en temporada de huracanes. Un especialista puede "
+                  "explicarte si conviene para tu viaje.</p>"
+                  "<p>Para el calendario completo de reserva, lee "
+                  + link("/es/guides/cruise-deposit-payment-cancellation/", "depósitos, pago final y cancelación") + ".</p>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Non-refundable rewards certainty with a friendlier booking price; refundable buys flexibility "
+                  "for a little more. Match it to how firm your plans are, and add travel insurance if you want a net "
+                  "under a non-refundable booking.</p>"
+                  "<p>Not sure which suits your sailing? A specialist lays out both, and the exact cancellation terms, "
+                  "when you call.</p>",
+            "es": "<p>La no reembolsable premia la certeza con un precio más amable; la reembolsable compra "
+                  "flexibilidad por un poco más. Ajústala a qué tan firmes son tus planes, y añade seguro si quieres "
+                  "una red bajo una reserva no reembolsable.</p>"
+                  "<p>¿No sabes cuál conviene a tu crucero? Un especialista te presenta ambas, y los términos exactos "
+                  "de cancelación, cuando llamas.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What is a non-refundable cruise fare?", "A fare or deposit that usually looks friendlier at booking, but you forfeit the deposit (or pay a change fee) if you cancel or move the sailing. It rewards certainty about your dates."),
+            ("Is a refundable cruise fare worth it?", "If your plans might change or you are booking far ahead, yes, it buys the option to cancel and get money back up to a point. If your dates are locked, a non-refundable fare may suit you better."),
+            ("Do I still face cancellation penalties on a refundable fare?", "Yes, once you pass the final-payment date, the cancellation schedule applies to both fare types. Refundable simply gives you more freedom before that point."),
+            ("Can travel insurance cover a non-refundable cruise?", "For covered reasons, often yes. Insurance is especially worth considering on non-refundable bookings and during hurricane season. Read the policy terms, or ask a specialist to explain the options."),
+            ("Which should I choose, refundable or non-refundable?", "Non-refundable if your dates are firm and you want the friendlier price; refundable if plans might shift or you are still deciding. A specialist can confirm the exact terms for your sailing."),
+        ],
+        "es": [
+            ("¿Qué es una tarifa de crucero no reembolsable?", "Una tarifa o depósito que suele verse más amable al reservar, pero pierdes el depósito (o pagas un cargo por cambio) si cancelas o mueves el crucero. Premia la certeza sobre tus fechas."),
+            ("¿Vale la pena una tarifa reembolsable?", "Si tus planes podrían cambiar o reservas con mucha anticipación, sí, compra la opción de cancelar y recuperar dinero hasta cierto punto. Si tus fechas están fijas, una no reembolsable puede convenirte más."),
+            ("¿Aún enfrento penalidades con una tarifa reembolsable?", "Sí, una vez pasada la fecha de pago final, el calendario de cancelación aplica a ambos tipos. La reembolsable solo te da más libertad antes de ese punto."),
+            ("¿El seguro de viaje puede cubrir un crucero no reembolsable?", "Por razones cubiertas, a menudo sí. El seguro vale especialmente la pena en reservas no reembolsables y en temporada de huracanes. Lee los términos, o pide a un especialista que explique las opciones."),
+            ("¿Cuál elijo, reembolsable o no reembolsable?", "No reembolsable si tus fechas son firmes y quieres el precio más amable; reembolsable si los planes podrían cambiar o aún decides. Un especialista puede confirmar los términos exactos de tu crucero."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("📆", "Deposits, payment & cancellation", "/en/guides/cruise-deposit-payment-cancellation/", "The full booking timeline these fares sit inside."),
+            ("💸", "The cruise facts that cost you money", "/en/cruise-facts/", "The verified cancellation terms for every line."),
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "Know the all-in cost before you pick a fare type."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "One call and we'll lay out both options for your sailing."),
+        ],
+        "es": [
+            ("📆", "Depósitos, pago y cancelación", "/es/guides/cruise-deposit-payment-cancellation/", "El calendario completo dentro del que están estas tarifas."),
+            ("💸", "Datos de crucero que cuestan dinero", "/es/cruise-facts/", "Los términos verificados de cancelación de cada línea."),
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "Conoce el costo completo antes de elegir tipo de tarifa."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Una llamada y te presentamos ambas opciones para tu crucero."),
+        ],
+    },
+})
