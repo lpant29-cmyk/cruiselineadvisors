@@ -58,6 +58,16 @@ DESTINATIONS = [
      "best": {"en": "May–Aug", "es": "May–Ago"}},
     {"slug": "hawaii", "emo": "🌺", "name": {"en": "Hawaii", "es": "Hawái"},
      "best": {"en": "Year-round", "es": "Todo el año"}},
+    {"slug": "bermuda", "emo": "🐚", "name": {"en": "Bermuda", "es": "Bermudas"},
+     "best": {"en": "Apr–Oct", "es": "Abr–Oct"}},
+    {"slug": "canada-new-england", "emo": "🍁",
+     "name": {"en": "Canada & New England", "es": "Canadá y Nueva Inglaterra"},
+     "best": {"en": "May–Oct", "es": "May–Oct"}},
+    {"slug": "pacific-coastal", "emo": "🌊",
+     "name": {"en": "Pacific Coastal", "es": "Costa del Pacífico"},
+     "best": {"en": "Spring & fall", "es": "Primavera y otoño"}},
+    {"slug": "transatlantic", "emo": "⛴️", "name": {"en": "Transatlantic", "es": "Transatlántico"},
+     "best": {"en": "Spring–fall", "es": "Primavera–otoño"}},
 ]
 
 # Sample rows for the comparison-tool preview (illustrative, flagged Sample in UI)

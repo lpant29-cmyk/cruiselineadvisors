@@ -409,8 +409,34 @@ def p_dest_hub(lang):
                        else "Un asesor ajusta tus fechas a la región que está en temporada."))
 
 
+def _faq_block(lang, faqs):
+    """Render an FAQ accordion + matching FAQPage JSON-LD for rich results."""
+    if not faqs:
+        return ""
+    import json as _json
+    h = "Common questions" if lang == "en" else "Preguntas frecuentes"
+    items = "".join(
+        f'<details class="faq-item"><summary>{q}</summary><div class="faq-a"><p>{a}</p></div></details>'
+        for q, a in faqs)
+    ld = {"@context": "https://schema.org", "@type": "FAQPage",
+          "mainEntity": [{"@type": "Question", "name": q,
+                          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    script = '<script type="application/ld+json">' + _json.dumps(ld, ensure_ascii=False) + '</script>'
+    return (f'<section class="section"><div class="wrap"><h2 class="rsec-h">{h}</h2>'
+            f'<div class="faq-list">{items}</div>{script}</div></section>')
+
+
 def p_region(lang, slug):
+    from destpage import has_region_guide, region_guide, region_faqs
     d = _D[slug]
+    if has_region_guide(slug):
+        kick = "Destination" if lang == "en" else "Destino"
+        crumb = _crumb(lang, f'<a href="/{lang}/destinations.html">{"Destinations" if lang=="en" else "Destinos"}</a>', d["name"][lang])
+        sub = (f"When to sail, where you leave from, which ships go — and one call to book."
+               if lang == "en" else "Cuándo navegar, desde dónde sales, qué barcos van — y una llamada para reservar.")
+        return (phero(lang, kick, d["name"][lang], sub, crumb)
+                + region_guide(lang, slug, d["name"][lang])
+                + _faq_block(lang, region_faqs(lang, slug, d["name"][lang])))
     s = SEASONS.get(slug, {})
     peak = s.get("peak", {}).get(lang, "") if isinstance(s.get("peak"), dict) else ""
     kick = "Destination" if lang == "en" else "Destino"

@@ -452,6 +452,24 @@ section[id^="x-"],#ship-basics,#ship-sisters{scroll-margin-top:84px}
 .port-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,44,66,0) 38%,rgba(8,44,66,.82))}
 .port-nm{position:relative;z-index:1;color:#fff;font-weight:800;font-size:.9rem;padding:10px 12px;text-shadow:0 1px 4px rgba(0,0,0,.55);line-height:1.2}
+.port-nm small{display:block;font-weight:600;font-size:.72rem;opacity:.88;margin-top:2px}
+/* destination guide bits */
+.dest-facts{grid-template-columns:repeat(2,1fr)}
+@media(min-width:600px){.dest-facts{grid-template-columns:repeat(4,1fr)}}
+.dest-months .whn-m{cursor:default}
+.dest-months .whn-m:hover{border-color:var(--line)}
+.dest-months .whn-m.on:hover{border-color:transparent}
+.dest-calls{margin-top:.4rem}
+.dest-calls .ft{font-size:.82rem}
+.dest-linelink{white-space:nowrap;font-weight:800}
+.faq-list{display:grid;gap:10px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:16px 18px;font-weight:800;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--sea3);flex:none}
+.faq-item[open] summary::after{content:"–"}
+.faq-a{padding:0 18px 16px;color:var(--muted);line-height:1.6}
+.faq-a p{margin:0}
 /* ship "where & when it sails" scenery banner */
 .route-img{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;background:linear-gradient(135deg,var(--sea3),var(--navy));margin:0 0 4px}
 .route-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
