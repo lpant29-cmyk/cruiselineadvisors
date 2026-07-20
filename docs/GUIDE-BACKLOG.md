@@ -7,28 +7,33 @@
 
 **Status legend:** ✅ Published (rich) · 🟡 Live (basic — upgrade to rich) · 🟢 Next up · ⬜ Planned
 **Priority:** P1 build first · P2 next · P3 fill out
-**Counts:** 1 rich · 5 basic-to-upgrade · 33 planned · 3 tools = **42 items**
+**Counts:** 11 rich published/built · 5 basic-to-upgrade · 23 planned · 3 tools = **42 items**
+
+> **Status 2026-07-20:** the full **P1 queue (10 guides) is written, built and validated** (rich,
+> bilingual, photo hero, graphic cards, FAQ schema, 0 em dashes, guard clean). They are wired into
+> the Guides hub locally but **not yet deployed** (awaiting review). `whats-included` and
+> `cruise-gratuities-explained` are already live; the other 9 deploy on approval.
 
 ---
 
-## 🚀 Publishing queue (recommended order)
+## 🚀 Publishing queue (P1 — all written, awaiting deploy)
 
-Do these next unless you tell me otherwise. Each is P1 and reinforces the call-conversion path.
+All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, awaiting deploy.
 
-| # | Topic | Slug | Pillar | Why now |
+| # | Status | Topic | Slug | Pillar |
 |---|---|---|---|---|
-| 1 | Cruise gratuities & daily service charges explained | `cruise-gratuities-explained` | Costs | Our #1 fact; huge search volume |
-| 2 | How to find an affordable cruise (without fake "deals") | `how-to-find-affordable-cruise` | Costs | High intent; leads straight to a call |
-| 3 | Cruise deposits, final payment & cancellation timeline | `cruise-deposit-payment-cancellation` | Costs | Money-at-risk; ties to facts |
-| 4 | How to avoid cruise "deal" scams & robocalls | `avoid-cruise-scams` | Safety | Trust/authority; protects the brand |
-| 5 | Drink packages: are they worth it & the whole-cabin rule | `drink-packages-worth-it` | Costs | The rule that surprises everyone |
-| 6 | Cruise documents & ID (passport vs birth certificate) | `cruise-documents-id` | Planning | High intent; ties to facts |
-| 7 | How to choose a cruise line that fits you | `how-to-choose-a-cruise-line` | Line & ship | Feeds every line page |
-| 8 | Solo cruising & the single supplement | `solo-cruising` | Who | Feeds the finder's Solo persona |
-| 9 | How to choose a cruise destination | `how-to-choose-a-destination` | Destinations | Feeds every destination page |
-| 10 | Is that "free cruise" offer real? red flags | `free-cruise-offer-red-flags` | Safety | Trust; captures scam-check searches |
+| 1 | ✅ live | Cruise gratuities & daily service charges explained | `cruise-gratuities-explained` | Costs |
+| 2 | 🟣 built | How to find an affordable cruise (without fake "deals") | `how-to-find-affordable-cruise` | Costs |
+| 3 | 🟣 built | Cruise deposits, final payment & cancellation timeline | `cruise-deposit-payment-cancellation` | Costs |
+| 4 | 🟣 built | How to avoid cruise "deal" scams & robocalls | `avoid-cruise-scams` | Safety |
+| 5 | 🟣 built | Drink packages: are they worth it & the whole-cabin rule | `drink-packages-worth-it` | Costs |
+| 6 | 🟣 built | Cruise documents & ID (passport vs birth certificate) | `cruise-documents-id` | Planning |
+| 7 | 🟣 built | How to choose a cruise line that fits you | `how-to-choose-a-cruise-line` | Line & ship |
+| 8 | 🟣 built | Solo cruising & the single supplement | `solo-cruising` | Who |
+| 9 | 🟣 built | How to choose a cruise destination | `how-to-choose-a-destination` | Destinations |
+| 10 | 🟣 built | Is that "free cruise" offer real? red flags | `free-cruise-offer-red-flags` | Safety |
 
-*After the queue: upgrade the 5 basic guides to rich, then work the P2 backlog.*
+*Next after these deploy: upgrade the 5 basic guides to rich, then work the P2 backlog.*
 
 ---
 

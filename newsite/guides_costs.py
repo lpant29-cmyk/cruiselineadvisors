@@ -301,7 +301,7 @@ register("how-to-find-affordable-cruise", {
                 "en": vcards([
                     ("🔁", "Repositioning cruises", "When ships move between seasons (say Alaska to Mexico), they run one-way sailings with lots of sea days at very approachable fares."),
                     ("⏱️", "Shorter sailings", "A 3 to 5 night cruise is an easy, lower-commitment way to try a line, and a gentler total than a long voyage."),
-                    ("🚗", "Drive-to home ports", "Sailing from a port you can drive to instead of flying can save the whole cost of airfare for the family."),
+                    ("🚗", "Drive-to home ports", "Sailing from a port you can drive to instead of flying can cut the whole cost of airfare for the family."),
                     ("🏝️", "Quieter weeks & routes", "Less-hyped itineraries and off-peak weeks compete harder for your booking."),
                 ]) + "<p>These are exactly the kinds of options a specialist surfaces that a quick search usually will "
                 "not, because they are matching your flexibility to what is actually open.</p>",
@@ -356,7 +356,7 @@ register("how-to-find-affordable-cruise", {
             ("Is it better to book a cruise early or last minute?", "Both can work. Booking early gives you the best cabin choice and time to pay it off; last-minute can suit a flexible traveller with no fixed dates. A specialist can tell you which is better for the sailing you want."),
             ("What is the most affordable cruise line?", "Casual, contemporary lines keep the base fare approachable and sell extras a la carte, which is great value if you are disciplined about add-ons. The right answer depends on how you travel; compare the lines and what is included."),
             ("How do I cruise on a budget?", "Sail in shoulder season, choose an interior or guarantee cabin, look at repositioning or shorter sailings, leave from a port you can drive to, and plan the extras (gratuities, drinks, excursions) up front."),
-            ("Are those big cruise discounts real?", "Be careful. Real value comes from timing, cabin choice and itinerary, not from countdown timers or offers that pressure you. If something feels too good to be true, it usually is; see our guide on avoiding cruise scams."),
+            ("Are those big cruise 'deals' real?", "Be careful. Real value comes from timing, cabin choice and itinerary, not from countdown timers or offers that pressure you. If something feels too good to be true, it usually is; see our guide on avoiding cruise scams."),
         ],
         "es": [
             ("¿Cuál es la época más accesible para navegar?", "Las temporadas media, las semanas tranquilas justo antes y después del pico de una región, suelen ser el mejor valor, junto con cualquier semana fuera de las vacaciones escolares. Ser flexible una o dos semanas hace la mayor diferencia."),
