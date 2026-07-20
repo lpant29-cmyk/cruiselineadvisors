@@ -162,3 +162,145 @@ register("how-to-choose-a-cruise-line", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("big-ship-vs-small-ship", {
+    "cat": "line", "hero": "cruise-ship-sea.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "Big ship vs small ship: which cruise suits you", "es": "Barco grande vs pequeño: qué crucero te conviene"},
+    "dek": {
+        "en": "One of the biggest choices in cruising is not the destination, it is the size of the "
+              "ship. A floating resort and an intimate vessel are almost different holidays. Here is how "
+              "to tell which one you will love.",
+        "es": "Una de las mayores decisiones en los cruceros no es el destino, es el tamaño del barco. "
+              "Un resort flotante y un barco íntimo son casi vacaciones distintas. Aquí te decimos cuál "
+              "te encantará.",
+    },
+    "takeaways": {
+        "en": [
+            "Big ships are floating resorts: waterslides, shows, many restaurants and non-stop activity, great for families and first-timers.",
+            "Smaller ships are calmer and more intimate, with fewer crowds, a more relaxed pace and easier access to smaller ports.",
+            "Big ships can feel busy and take longer to get on and off; small ships trade some amenities for atmosphere.",
+            "Where you want to go matters: some ports and scenic areas only smaller ships can reach.",
+            "Neither is better, only better for you, your party and the kind of days you want.",
+        ],
+        "es": [
+            "Los barcos grandes son resorts flotantes: toboganes, espectáculos, muchos restaurantes y actividad sin parar, ideales para familias y primerizos.",
+            "Los barcos pequeños son más tranquilos e íntimos, con menos gente, un ritmo más relajado y mejor acceso a puertos pequeños.",
+            "Los grandes pueden sentirse concurridos y tardar más para embarcar y desembarcar; los pequeños cambian algunas comodidades por ambiente.",
+            "A dónde quieres ir importa: algunos puertos y zonas escénicas solo los barcos más pequeños pueden alcanzar.",
+            "Ninguno es mejor, solo mejor para ti, tu grupo y el tipo de días que quieres.",
+        ],
+    },
+    "sections": [
+        {"id": "big", "h2": {"en": "Big ships: the floating resort", "es": "Barcos grandes: el resort flotante"},
+         "html": {
+            "en": "<p>The newest mega-ships carry thousands of guests and pack in more to do than you could finish in "
+                  "a week: waterparks, zip lines, Broadway-style shows, a dozen restaurants and bars, sprawling kids' "
+                  "clubs.</p>"
+                  + vcards([
+                      ("🎢", "Endless activity", "Something for every age and mood, all day, so nobody is ever bored."),
+                      ("👨‍👩‍👧", "Great for families & groups", "Kids' clubs, family cabins and enough variety to keep a mixed group happy."),
+                      ("🍽️", "Choice everywhere", "Many dining venues and entertainment options included in the fare."),
+                  ])
+                  + "<p>The trade-off: more guests means more buzz, busier pools and lines, and longer to board or get "
+                  "off in port. If you love energy and choice, that is a feature, not a flaw.</p>",
+            "es": "<p>Los mega-barcos más nuevos llevan miles de huéspedes y reúnen más que hacer de lo que podrías "
+                  "terminar en una semana: parques acuáticos, tirolesas, espectáculos estilo Broadway, una docena de "
+                  "restaurantes y bares, enormes clubes infantiles.</p>"
+                  + vcards([
+                      ("🎢", "Actividad sin fin", "Algo para cada edad y ánimo, todo el día, así nadie se aburre."),
+                      ("👨‍👩‍👧", "Ideal para familias y grupos", "Clubes infantiles, camarotes familiares y suficiente variedad para un grupo mixto."),
+                      ("🍽️", "Opciones por todas partes", "Muchos restaurantes y opciones de entretenimiento incluidos en la tarifa."),
+                  ])
+                  + "<p>El equilibrio: más huéspedes significa más energía, piscinas y filas más concurridas, y más "
+                  "tiempo para embarcar o bajar en puerto. Si amas la energía y la variedad, eso es una ventaja.</p>",
+         }},
+        {"id": "small", "h2": {"en": "Smaller ships: intimate and relaxed", "es": "Barcos pequeños: íntimos y relajados"},
+         "html": {
+            "en": "<p>Smaller and mid-size ships trade some of the bells and whistles for a calmer, more personal feel. "
+                  "Fewer guests means shorter lines, quieter decks and crew who get to know you.</p>"
+                  + vcards([
+                      ("🧘", "A calmer pace", "Less crowding, more room to unwind, and an adult-leaning atmosphere on many."),
+                      ("⚓", "Reaches more ports", "Smaller ships can dock at smaller, less-touristed harbours the big ships cannot."),
+                      ("🤝", "A personal feel", "Crew recognise you, and the whole experience feels more intimate."),
+                  ])
+                  + "<p>The trade-off: fewer onboard attractions and dining venues. If your idea of a great day is a "
+                  "quiet deck and a characterful port rather than a waterslide, this is your ship.</p>",
+            "es": "<p>Los barcos pequeños y medianos cambian algunas atracciones por una sensación más tranquila y "
+                  "personal. Menos huéspedes significa filas más cortas, cubiertas más tranquilas y una tripulación que "
+                  "te conoce.</p>"
+                  + vcards([
+                      ("🧘", "Un ritmo más tranquilo", "Menos gente, más espacio para relajarte, y un ambiente más adulto en muchos."),
+                      ("⚓", "Alcanza más puertos", "Los barcos pequeños pueden atracar en puertos más pequeños y menos turísticos que los grandes no pueden."),
+                      ("🤝", "Una sensación personal", "La tripulación te reconoce, y toda la experiencia se siente más íntima."),
+                  ])
+                  + "<p>El equilibrio: menos atracciones y restaurantes a bordo. Si tu idea de un gran día es una "
+                  "cubierta tranquila y un puerto con carácter en lugar de un tobogán, este es tu barco.</p>",
+         }},
+        {"id": "how-to-decide", "h2": {"en": "How to decide", "es": "Cómo decidir"},
+         "html": {
+            "en": "<p>Answer three questions and the choice usually makes itself:</p>"
+                  "<ul>"
+                  "<li><b>Who is travelling?</b> Kids and mixed groups usually love a big ship; couples chasing calm often prefer smaller.</li>"
+                  "<li><b>What is a perfect day?</b> Non-stop activity and variety, or space, quiet and character.</li>"
+                  "<li><b>Where do you want to go?</b> If your dream ports are small or off the beaten path, a smaller ship may be the only way in.</li>"
+                  "</ul>"
+                  "<p>Still weighing it up? That is a two-minute conversation. Tell a specialist your party and your "
+                  "ideal day, and read " + link("/en/guides/how-to-choose-a-cruise-line/", "how to choose a cruise line") +
+                  " for the next layer of the decision.</p>",
+            "es": "<p>Responde tres preguntas y la elección suele hacerse sola:</p>"
+                  "<ul>"
+                  "<li><b>¿Quién viaja?</b> Los niños y grupos mixtos suelen amar un barco grande; las parejas que buscan calma prefieren uno más pequeño.</li>"
+                  "<li><b>¿Cómo es un día perfecto?</b> Actividad y variedad sin parar, o espacio, tranquilidad y carácter.</li>"
+                  "<li><b>¿A dónde quieres ir?</b> Si tus puertos soñados son pequeños o fuera de lo común, un barco más pequeño puede ser la única forma de llegar.</li>"
+                  "</ul>"
+                  "<p>¿Aún lo evalúas? Es una conversación de dos minutos. Dile a un especialista tu grupo y tu día "
+                  "ideal, y lee " + link("/es/guides/how-to-choose-a-cruise-line/", "cómo elegir una línea de crucero") +
+                  " para la siguiente capa de la decisión.</p>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Big ships are all-in resorts bursting with activity; smaller ships are calmer, more personal and "
+                  "reach places the giants cannot. Match the size to your party, your ideal day and your dream ports, "
+                  "and you will love the ship you are on.</p>"
+                  "<p>Want us to point you to the right ships either way? Tell the " + link("/en/compare/", "cruise finder") +
+                  " what you are after, or just call.</p>",
+            "es": "<p>Los barcos grandes son resorts completos llenos de actividad; los pequeños son más tranquilos, "
+                  "personales y llegan a lugares que los gigantes no. Ajusta el tamaño a tu grupo, tu día ideal y tus "
+                  "puertos soñados, y amarás el barco en el que estés.</p>"
+                  "<p>¿Quieres que te señalemos los barcos correctos en cualquier caso? Dile al "
+                  + link("/es/compare/", "buscador de cruceros") + " qué buscas, o simplemente llama.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Is a big or small cruise ship better?", "Neither is better overall, only better for you. Big ships are floating resorts packed with activity, ideal for families and first-timers; smaller ships are calmer, more intimate and reach more ports. Match the size to your party and the days you want."),
+            ("Are big cruise ships good for families?", "Yes. Mega-ships have the most kids' clubs, family cabins, waterslides and non-stop activity, which suits families and mixed groups very well. The trade-off is more crowds and longer boarding."),
+            ("Why choose a smaller cruise ship?", "For a calmer, more personal experience: fewer crowds, a relaxed pace, an adult-leaning feel on many, and access to smaller ports the big ships cannot reach. You give up some onboard attractions in return."),
+            ("Do smaller ships visit different ports?", "Often yes. Smaller ships can dock at smaller, less-touristed harbours and scenic areas that mega-ships are too large to enter, which can open up a very different itinerary."),
+            ("How do I choose between a big and small ship?", "Ask who is travelling, what your perfect day looks like, and where you want to go. Kids and activity-lovers lean big; couples wanting calm and off-the-beaten-path ports lean small. A specialist can match you to the right ship."),
+        ],
+        "es": [
+            ("¿Es mejor un barco grande o pequeño?", "Ninguno es mejor en general, solo mejor para ti. Los grandes son resorts flotantes llenos de actividad, ideales para familias y primerizos; los pequeños son más tranquilos, íntimos y alcanzan más puertos. Ajusta el tamaño a tu grupo y los días que quieres."),
+            ("¿Los barcos grandes son buenos para familias?", "Sí. Los mega-barcos tienen los mayores clubes infantiles, camarotes familiares, toboganes y actividad sin parar, lo que conviene muy bien a familias y grupos mixtos. El equilibrio es más gente y embarque más largo."),
+            ("¿Por qué elegir un barco más pequeño?", "Por una experiencia más tranquila y personal: menos gente, ritmo relajado, un ambiente más adulto en muchos, y acceso a puertos pequeños que los grandes no alcanzan. A cambio renuncias a algunas atracciones a bordo."),
+            ("¿Los barcos pequeños visitan puertos distintos?", "A menudo sí. Los barcos pequeños pueden atracar en puertos más pequeños y menos turísticos y zonas escénicas donde los mega-barcos son demasiado grandes para entrar, lo que abre un itinerario muy distinto."),
+            ("¿Cómo elijo entre un barco grande y uno pequeño?", "Pregúntate quién viaja, cómo es tu día perfecto y a dónde quieres ir. Los niños y amantes de la actividad se inclinan por lo grande; las parejas que quieren calma y puertos fuera de lo común, por lo pequeño. Un especialista puede emparejarte con el barco correcto."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🚢", "How to choose a cruise line", "/en/guides/how-to-choose-a-cruise-line/", "The next layer: match the line to how you travel."),
+            ("🛏️", "Choosing a cabin", "/en/guides/choosing-a-cabin/", "Once you have a ship, pick the right room on it."),
+            ("🗺️", "How to choose a destination", "/en/guides/how-to-choose-a-destination/", "Where you sail can decide the ship size for you."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Tell us your ideal day; we'll match the ship."),
+        ],
+        "es": [
+            ("🚢", "Cómo elegir una línea de crucero", "/es/guides/how-to-choose-a-cruise-line/", "La siguiente capa: ajusta la línea a cómo viajas."),
+            ("🛏️", "Elegir camarote", "/es/guides/choosing-a-cabin/", "Cuando tengas barco, elige la habitación correcta."),
+            ("🗺️", "Cómo elegir un destino", "/es/guides/how-to-choose-a-destination/", "A dónde navegas puede decidir el tamaño del barco."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Dinos tu día ideal; emparejamos el barco."),
+        ],
+    },
+})

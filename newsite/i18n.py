@@ -14,7 +14,7 @@ T = {
         # top disclosure bar
         "disc_top": "Independent cruise referral service, not a cruise line and not a travel agency.",
         # nav
-        "nav_lines": "Cruise Lines", "nav_compare": "Compare", "nav_facts": "Cruise Facts",
+        "nav_lines": "Cruise Lines", "nav_compare": "Find a Cruise", "nav_facts": "Cruise Facts",
         "nav_dest": "Destinations", "nav_guides": "Guides", "nav_updates": "Updates",
         "nav_menu": "Menu",
         "nav_all_lines": "All cruise lines", "nav_ships_dir": "Ship directory",
@@ -82,7 +82,7 @@ T = {
         "free_to_call": "Línea gratuita",
         "hours_label": "Asesores",
         "disc_top": "Servicio independiente de referencia de cruceros, no somos una línea de crucero ni una agencia de viajes.",
-        "nav_lines": "Líneas de Crucero", "nav_compare": "Comparar", "nav_facts": "Datos de Cruceros",
+        "nav_lines": "Líneas de Crucero", "nav_compare": "Buscar Crucero", "nav_facts": "Datos de Cruceros",
         "nav_dest": "Destinos", "nav_guides": "Guías", "nav_updates": "Novedades",
         "nav_menu": "Menú",
         "nav_all_lines": "Todas las líneas", "nav_ships_dir": "Directorio de barcos",

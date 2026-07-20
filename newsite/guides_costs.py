@@ -985,3 +985,129 @@ register("refundable-vs-non-refundable", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("hidden-cruise-costs", {
+    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "title": {"en": "Hidden cruise costs first-timers miss", "es": "Costos ocultos que los primerizos pasan por alto"},
+    "dek": {
+        "en": "None of these are truly hidden, they are in the fine print, but first-time cruisers "
+              "rarely budget for them, and together they can reshape the final bill. Here is the "
+              "checklist so nothing catches you out.",
+        "es": "Ninguno está realmente oculto, están en la letra pequeña, pero los primerizos rara vez "
+              "los presupuestan, y juntos pueden cambiar la factura final. Aquí tienes la lista para que "
+              "nada te sorprenda.",
+    },
+    "takeaways": {
+        "en": [
+            "Daily gratuities are the big one: automatic, per guest, per day, for the whole cruise.",
+            "Drinks, Wi-Fi and specialty dining are the classic three that add up fastest.",
+            "Shore excursions, the spa, photos, the casino and laundry are all extra.",
+            "Getting to the port (flights, a pre-cruise hotel, parking or transfers) is a real cost people forget.",
+            "Little things add up: bottled water, room-service late-night fees, mini-bar, and gratuities on bar tabs.",
+        ],
+        "es": [
+            "Las propinas diarias son la grande: automáticas, por huésped, por día, durante todo el crucero.",
+            "Bebidas, Wi-Fi y restaurantes de especialidad son los tres clásicos que más rápido se acumulan.",
+            "Excursiones, spa, fotos, casino y lavandería son todos extra.",
+            "Llegar al puerto (vuelos, hotel previo, estacionamiento o traslados) es un costo real que la gente olvida.",
+            "Las cosas pequeñas suman: agua embotellada, cargos de servicio a la habitación de noche, minibar y propinas en las cuentas de bar.",
+        ],
+    },
+    "sections": [
+        {"id": "onboard", "h2": {"en": "The onboard extras", "es": "Los extras a bordo"},
+         "html": {
+            "en": vcards([
+                ("🧾", "Daily gratuities", "Automatic, per guest, per day. The one nearly everyone pays. See our gratuities guide."),
+                ("🍸", "Drinks", "Alcohol, sodas, specialty coffee and bottled water, unless you buy a package."),
+                ("📶", "Wi-Fi", "Sold as tiered packages, not included in the base fare."),
+                ("🍤", "Specialty dining", "Steakhouses and a la carte venues carry a cover charge."),
+                ("🎰", "Spa, photos, casino, laundry", "All billed separately, easy to dip into without noticing."),
+            ]) + "<p>Read " + link("/en/guides/whats-included/", "what is included in a cruise fare") + " for the full "
+            "split of what your fare covers versus what does not.</p>",
+            "es": vcards([
+                ("🧾", "Propinas diarias", "Automáticas, por huésped, por día. La que casi todos pagan. Ve nuestra guía de propinas."),
+                ("🍸", "Bebidas", "Alcohol, refrescos, café de especialidad y agua embotellada, salvo que compres un paquete."),
+                ("📶", "Wi-Fi", "Se vende por niveles, no incluido en la tarifa base."),
+                ("🍤", "Restaurantes de especialidad", "Parrillas y sitios a la carta con cargo de cubierto."),
+                ("🎰", "Spa, fotos, casino, lavandería", "Todo se cobra aparte, fácil de usar sin darte cuenta."),
+            ]) + "<p>Lee " + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero") + " para el "
+            "desglose completo de lo que cubre tu tarifa y lo que no.</p>",
+         }},
+        {"id": "getting-there", "h2": {"en": "The costs before you board", "es": "Los costos antes de embarcar"},
+         "html": {
+            "en": "<p>These sit outside the cruise fare entirely, and they are the ones first-timers most often "
+                  "forget:</p>"
+                  "<ul>"
+                  "<li><b>Flights or fuel</b> to reach the departure port.</li>"
+                  "<li><b>A pre-cruise hotel</b> night, strongly recommended so a delayed flight never makes you miss the ship.</li>"
+                  "<li><b>Parking or transfers</b> at the port.</li>"
+                  "<li><b>Travel insurance,</b> especially for non-refundable bookings or hurricane season.</li>"
+                  "</ul>"
+                  + tip("Sailing from a port you can drive to removes most of this at a stroke. It is one of the biggest levers in " + link("/en/guides/how-to-find-affordable-cruise/", "finding an affordable cruise") + "."),
+            "es": "<p>Estos quedan totalmente fuera de la tarifa del crucero, y son los que los primerizos más olvidan:</p>"
+                  "<ul>"
+                  "<li><b>Vuelos o combustible</b> para llegar al puerto de salida.</li>"
+                  "<li><b>Una noche de hotel previa</b>, muy recomendada para que un vuelo retrasado nunca te haga perder el barco.</li>"
+                  "<li><b>Estacionamiento o traslados</b> en el puerto.</li>"
+                  "<li><b>Seguro de viaje</b>, sobre todo en reservas no reembolsables o temporada de huracanes.</li>"
+                  "</ul>"
+                  + tip("Zarpar desde un puerto al que llegas en auto elimina casi todo esto de un golpe. Es una de las mayores palancas para " + link("/es/guides/how-to-find-affordable-cruise/", "encontrar un crucero accesible") + "."),
+         }},
+        {"id": "small-stuff", "h2": {"en": "The small stuff that adds up", "es": "Las cosas pequeñas que suman"},
+         "html": {
+            "en": "<p>Individually tiny, collectively real: bottled water and specialty coffees, late-night room-service "
+                  "charges, the mini-bar, gratuities automatically added to bar tabs, and the odd upcharge attraction. "
+                  "None will break the bank, but knowing they exist keeps your onboard account honest.</p>"
+                  + tip("Set an onboard spending number before you sail and check your account halfway through, at guest services or on the app. No end-of-week surprise."),
+            "es": "<p>Individualmente diminutas, en conjunto reales: agua embotellada y cafés de especialidad, cargos de "
+                  "servicio a la habitación de noche, el minibar, propinas añadidas automáticamente a las cuentas de bar "
+                  "y alguna atracción con cargo. Ninguna te arruinará, pero saber que existen mantiene tu cuenta honesta.</p>"
+                  + tip("Fija un monto de gasto a bordo antes de zarpar y revisa tu cuenta a mitad, en recepción o en la app. Sin sorpresas al final."),
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Budget for the near-universal extras (gratuities, drinks, Wi-Fi, excursions), remember the costs "
+                  "of simply getting to the ship, and keep an eye on the small stuff. Do that and the final statement "
+                  "holds no surprises.</p>"
+                  "<p>Want a realistic, all-in picture for a specific sailing before you commit? That is exactly what a "
+                  "specialist gives you on one call.</p>",
+            "es": "<p>Presupuesta los extras casi universales (propinas, bebidas, Wi-Fi, excursiones), recuerda los "
+                  "costos de solo llegar al barco, y vigila las cosas pequeñas. Haz eso y la cuenta final no tendrá "
+                  "sorpresas.</p>"
+                  "<p>¿Quieres una imagen realista y completa de un crucero específico antes de comprometerte? Eso es "
+                  "justo lo que un especialista te da en una llamada.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What are the hidden costs of a cruise?", "The main extras are daily gratuities, drinks, Wi-Fi, specialty dining and shore excursions, plus off-ship costs like flights, a pre-cruise hotel and parking. None are truly hidden, but first-timers rarely budget for them."),
+            ("What is the biggest extra cost on a cruise?", "For most guests it is the combination of daily gratuities, drinks and shore excursions. Plan for those three and there are few surprises left."),
+            ("Do I need to budget for getting to the port?", "Yes. Flights or fuel, a recommended pre-cruise hotel night, and parking or transfers all sit outside the cruise fare. Sailing from a port you can drive to removes most of it."),
+            ("How do I avoid overspending on a cruise?", "Decide on gratuities, drink and Wi-Fi packages and excursions before you sail, set an onboard spending number, and check your account midway through. Lean on what is already included."),
+            ("Are gratuities a hidden cost?", "They are automatic rather than hidden, added per guest, per day to your onboard account, but they surprise more first-timers than anything else. Read our gratuities guide so you can plan for them."),
+        ],
+        "es": [
+            ("¿Cuáles son los costos ocultos de un crucero?", "Los extras principales son propinas diarias, bebidas, Wi-Fi, restaurantes de especialidad y excursiones, más costos fuera del barco como vuelos, un hotel previo y estacionamiento. Ninguno está realmente oculto, pero los primerizos rara vez los presupuestan."),
+            ("¿Cuál es el mayor gasto adicional en un crucero?", "Para la mayoría es la combinación de propinas diarias, bebidas y excursiones. Planea esos tres y quedan pocas sorpresas."),
+            ("¿Debo presupuestar para llegar al puerto?", "Sí. Vuelos o combustible, una recomendada noche de hotel previa, y estacionamiento o traslados quedan fuera de la tarifa. Zarpar desde un puerto al que llegas en auto elimina casi todo."),
+            ("¿Cómo evito gastar de más en un crucero?", "Decide propinas, paquetes de bebidas y Wi-Fi y excursiones antes de zarpar, fija un monto de gasto a bordo, y revisa tu cuenta a mitad. Aprovecha lo que ya está incluido."),
+            ("¿Las propinas son un costo oculto?", "Son automáticas, no ocultas, añadidas por huésped y por día a tu cuenta, pero sorprenden a más primerizos que nada. Lee nuestra guía de propinas para planearlas."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "The full split of fare versus extras."),
+            ("🧾", "Cruise gratuities explained", "/en/guides/cruise-gratuities-explained/", "The biggest near-universal extra, planned for."),
+            ("💰", "How to find an affordable cruise", "/en/guides/how-to-find-affordable-cruise/", "Keep the whole trip good value, extras included."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Get a realistic all-in picture for your sailing."),
+        ],
+        "es": [
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "El desglose completo de tarifa y extras."),
+            ("🧾", "Propinas de crucero explicadas", "/es/guides/cruise-gratuities-explained/", "El mayor extra casi universal, planeado."),
+            ("💰", "Cómo encontrar un crucero accesible", "/es/guides/how-to-find-affordable-cruise/", "Mantén todo el viaje con buen valor, extras incluidos."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Obtén una imagen realista y completa de tu crucero."),
+        ],
+    },
+})

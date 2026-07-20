@@ -521,6 +521,22 @@ GUIDES = [
      "t": {"en": "Refundable vs non-refundable", "es": "Reembolsable vs no reembolsable"},
      "d": {"en": "Which fare type fits your plans, and where insurance helps.",
            "es": "Qué tipo de tarifa encaja con tus planes, y dónde ayuda el seguro."}},
+    {"slug": "hidden-cruise-costs", "emo": "🔍",
+     "t": {"en": "Hidden cruise costs", "es": "Costos ocultos de un crucero"},
+     "d": {"en": "The extras first-timers forget to budget for, in one checklist.",
+           "es": "Los extras que los primerizos olvidan presupuestar, en una lista."}},
+    {"slug": "what-to-pack-for-a-cruise", "emo": "🧳",
+     "t": {"en": "What to pack for a cruise", "es": "Qué llevar a un crucero"},
+     "d": {"en": "The smart carry-on and cabin checklist, plus what not to bring.",
+           "es": "La lista inteligente de equipaje de mano y camarote, y qué no llevar."}},
+    {"slug": "cruise-embarkation-day", "emo": "🛳️",
+     "t": {"en": "Cruise embarkation day", "es": "Día de embarque"},
+     "d": {"en": "What to expect on day one, step by step, from terminal to sailaway.",
+           "es": "Qué esperar el primer día, paso a paso, de la terminal al sailaway."}},
+    {"slug": "big-ship-vs-small-ship", "emo": "🚢",
+     "t": {"en": "Big ship vs small ship", "es": "Barco grande vs pequeño"},
+     "d": {"en": "Floating resort or intimate vessel? How to pick the size that fits.",
+           "es": "¿Resort flotante o barco íntimo? Cómo elegir el tamaño que encaja."}},
     {"slug": "avoid-cruise-scams", "emo": "🛡️",
      "t": {"en": "Avoid cruise scams & robocalls", "es": "Evitar estafas y llamadas automáticas"},
      "d": {"en": "The red flags behind fake offers and robocalls, and how to stay safe.",
@@ -549,14 +565,8 @@ GUIDES = [
      "t": {"en": "When to cruise", "es": "Cuándo hacer un crucero"},
      "d": {"en": "Season by season, region by region, timing beats everything.",
            "es": "Temporada por temporada, región por región, el momento lo es todo."}},
-    {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
-     "t": {"en": "Groups & families", "es": "Grupos y familias"},
-     "d": {"en": "Linked cabins, dining, kids clubs and split payments, the phone-work parts.",
-           "es": "Camarotes conectados, comidas, clubes infantiles y pagos divididos."}},
-    {"slug": "accessibility", "emo": "♿",
-     "t": {"en": "Accessibility", "es": "Accesibilidad"},
-     "d": {"en": "Accessible cabins, tendering, and what to confirm before you book.",
-           "es": "Camarotes accesibles, transbordos y qué confirmar antes de reservar."}},
+    # NOTE: groups-and-families and accessibility are intentionally NOT listed here yet. They only
+    # rendered the generic fallback (not written), so they are hidden until upgraded to rich guides.
 ]
 _G = {g["slug"]: g for g in GUIDES}
 
@@ -584,6 +594,10 @@ GUIDE_META = {
     "drink-packages-worth-it": {"cat": "costs", "ctx": ["line", "ship"]},
     "cruise-wifi-explained": {"cat": "costs", "ctx": ["line", "ship"]},
     "refundable-vs-non-refundable": {"cat": "costs", "ctx": ["line"]},
+    "hidden-cruise-costs": {"cat": "costs", "ctx": ["home", "line", "ship"]},
+    "what-to-pack-for-a-cruise": {"cat": "planning", "ctx": ["ship"]},
+    "cruise-embarkation-day": {"cat": "planning", "ctx": ["ship"]},
+    "big-ship-vs-small-ship": {"cat": "line", "ctx": ["line", "ship"]},
     "avoid-cruise-scams": {"cat": "safety", "ctx": ["home"]},
     "free-cruise-offer-red-flags": {"cat": "safety", "ctx": ["home"]},
     "cruise-documents-id": {"cat": "planning", "ctx": ["dest"]},
@@ -619,6 +633,43 @@ def guide_card(lang, slug):
             f'<span class="gcard-read">{read} →</span></span></a>')
 
 
+def related_pages_for_guide(lang, slug):
+    """Reverse links: if a guide is tagged as being about specific line(s), ship(s) or destination(s)
+    via for_lines / for_ships / for_dests in GUIDE_META, show cards linking to those pages. Renders
+    nothing when a guide isn't tied to a specific entity."""
+    from ships import get_ship, slugify as _sslug
+    m = GUIDE_META.get(slug, {})
+    en = lang == "en"
+    cards = ""
+    for lslug in (m.get("for_lines") or []):
+        L = next((x for x in LINES if x["slug"] == lslug), None)
+        if L:
+            cards += (f'<a class="xr-card gd-rel" href="/{lang}/lines/{lslug}/"><div class="xr-top">'
+                      f'<span class="xr-emoji">{L["emo"]}</span><div class="xr-h"><h3>{L["name"]}</h3></div></div>'
+                      f'<div class="xr-b"><p class="xr-desc">{L["tag"][lang]}</p></div></a>')
+    for pair in (m.get("for_ships") or []):
+        lslug, ss = (pair.split("/", 1) + [""])[:2] if isinstance(pair, str) else pair
+        sh = get_ship(lslug, ss)
+        if sh:
+            L = next((x for x in LINES if x["slug"] == lslug), None)
+            emo = L["emo"] if L else "🚢"
+            cards += (f'<a class="xr-card gd-rel" href="/{lang}/lines/{lslug}/ships/{_sslug(sh["name"])}/">'
+                      f'<div class="xr-top"><span class="xr-emoji">{emo}</span>'
+                      f'<div class="xr-h"><h3>{sh["name"]}</h3></div></div>'
+                      f'<div class="xr-b"><p class="xr-desc">{("Ship guide" if en else "Guía del barco")}</p></div></a>')
+    for dslug in (m.get("for_dests") or []):
+        d = next((x for x in DESTINATIONS if x["slug"] == dslug), None)
+        if d:
+            cards += (f'<a class="xr-card gd-rel" href="/{lang}/destinations/{dslug}/"><div class="xr-top">'
+                      f'<span class="xr-emoji">{d["emo"]}</span><div class="xr-h"><h3>{d["name"][lang]}</h3></div></div>'
+                      f'<div class="xr-b"><p class="xr-desc">{("Destination guide" if en else "Guía del destino")}</p></div></a>')
+    if not cards:
+        return ""
+    h = "Related on CruiseLine Advisors" if en else "Relacionado en CruiseLine Advisors"
+    return (f'<section class="section"><div class="wrap"><h2 class="rsec-h">{h}</h2>'
+            f'<div class="xr-grid">{cards}</div></div></section>')
+
+
 def guides_hub_grouped(lang):
     """The Guides hub, grouped by category."""
     out = ""
@@ -632,9 +683,10 @@ def guides_hub_grouped(lang):
     return out
 
 
-def related_guides(lang, ctx, slug=None, heading=None, limit=4):
-    """A 'Helpful guides' section for a page. Includes guides tagged for this context, and any guide
-    targeted at this specific line/ship/destination slug (those come first)."""
+def related_guides(lang, ctx, slug=None, heading=None, limit=None):
+    """A 'Helpful guides' section for a page. Includes every guide tagged for this context, and any
+    guide targeted at this specific line/ship/destination slug (those come first). limit=None shows
+    all relevant guides so each page connects to its full, relevant set."""
     forkey = _CTX_FORKEY.get(ctx)
     specific, general = [], []
     for g in GUIDES:
@@ -648,7 +700,8 @@ def related_guides(lang, ctx, slug=None, heading=None, limit=4):
         if s not in seen:
             seen.add(s)
             ordered.append(s)
-    ordered = ordered[:limit]
+    if limit:
+        ordered = ordered[:limit]
     if not ordered:
         return ""
     cards = "".join(guide_card(lang, s) for s in ordered)
@@ -713,6 +766,7 @@ def p_guide(lang, slug):
         hero = _guide_photo_hero(lang, kick, title, dek, crumb, himg) if himg else phero(lang, kick, title, dek, crumb)
         return (hero
                 + render_rich_guide(lang, slug)
+                + related_pages_for_guide(lang, slug)
                 + cta_band(lang, "Ready to price a real sailing?" if lang == "en" else "¿Listo para cotizar un crucero real?",
                            "Call a specialist, they'll give you the all-in number for your dates." if lang == "en"
                            else "Llama a un especialista, te da la cifra completa para tus fechas."))

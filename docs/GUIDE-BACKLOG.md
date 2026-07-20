@@ -107,5 +107,11 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 ---
 
 ## Changelog
+- **2026-07-20 (later):** Published 4 more P2 guides (Wi-Fi, refundable-vs-non-refundable, hidden
+  costs, what-to-pack, embarkation day, big-ship-vs-small); total 17 rich guides. Added guide
+  categorisation (grouped hub) + contextual "Helpful guides" cards (full relevant set) on home,
+  line, ship and destination pages, with reverse-linking (for_lines/for_ships/for_dests). Hid the
+  two unwritten basic guides (groups-and-families, accessibility) until upgraded. Renamed nav
+  "Compare" to "Find a Cruise". Real toll-free number live sitewide.
 - **2026-07-20:** Backlog created. `whats-included` published as the first rich flagship guide (photo
   hero, graphic cards, key takeaways, FAQ schema, interlinks).

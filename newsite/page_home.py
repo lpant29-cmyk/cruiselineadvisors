@@ -132,7 +132,7 @@ def render(lang):
             + _compare(lang, t)
             + _lines(lang, t)
             + _destinations(lang, t)
-            + related_guides(lang, "home", heading=guides_heading, limit=4)
+            + related_guides(lang, "home", heading=guides_heading, limit=8)
             + wave_divider("sea", "var(--cream)")
             + _final(lang, t)
             + scroll_companions())
