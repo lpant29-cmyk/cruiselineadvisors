@@ -34,18 +34,37 @@ def pmatch(s, party):
     return 0
 
 
+def spread(arr):
+    """Mirror of the JS 'Just exploring' line-diversity spread."""
+    by, order = {}, []
+    for s in arr:
+        by.setdefault(s["line"], []).append(s)
+        if s["line"] not in order:
+            order.append(s["line"])
+    out, added = [], True
+    while added:
+        added = False
+        for ln in order:
+            if by[ln]:
+                out.append(by[ln].pop(0))
+                added = True
+    return out
+
+
 def ranked(region, party, n=3):
     lst = [s for s in D["ships"] if region in s["regions"]]
     lst.sort(key=lambda s: (pmatch(s, party), bscore(s)), reverse=True)
+    if party == "any":
+        lst = spread(lst)
     return [s["name"] for s in lst[:n]]
 
 
-def test_solo_and_couple_differ_from_default():
-    """Solo and Couple must reorder the top vs 'just exploring' in a big, diverse region."""
+def test_every_persona_differs_from_default():
+    """Family, Couple and Solo must each reorder the top vs 'just exploring' in a diverse region."""
     region = "caribbean"
     default = ranked(region, "any")
-    assert ranked(region, "solo") != default, "Solo did not change the ranking"
-    assert ranked(region, "couple") != default, "Couple did not change the ranking"
+    for party in ("family", "couple", "solo"):
+        assert ranked(region, party) != default, f"{party} did not change the ranking vs default"
 
 
 def test_data_supports_each_persona():
@@ -58,6 +77,6 @@ def test_data_supports_each_persona():
 
 
 if __name__ == "__main__":
-    test_solo_and_couple_differ_from_default()
+    test_every_persona_differs_from_default()
     test_data_supports_each_persona()
     print("test_party: PASS")

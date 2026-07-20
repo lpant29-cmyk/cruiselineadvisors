@@ -230,6 +230,16 @@ def metasearch_tool(lang):
     if(party==='friends')return (s.val||s.guests>=3800)?2:(s.guests>=3000?1:0);
     return 0;
   }}
+  // "Just exploring" shows a spread ACROSS lines (variety), so its top row visibly differs from the
+  // persona rankings — which cluster by fit and can otherwise repeat the same biggest family ships.
+  function spread(arr){{
+    var by={{}},order=[];
+    arr.forEach(function(s){{ if(!by[s.line]){{by[s.line]=[];order.push(s.line);}} by[s.line].push(s); }});
+    var out=[],added=true;
+    while(added){{ added=false;
+      for(var i=0;i<order.length;i++){{ var g=by[order[i]]; if(g.length){{ out.push(g.shift()); added=true; }} }} }}
+    return out;
+  }}
   var FILT={{family:function(s){{return s.fam;}},couple:function(s){{return s.cpl;}},
     luxury:function(s){{return s.lux;}},value:function(s){{return s.val;}},
     newest:function(s){{return s.year&&s.year>=2018;}},biggest:function(s){{return s.guests&&s.guests>=4000;}},
@@ -243,6 +253,7 @@ def metasearch_tool(lang):
     var list=base(); list.forEach(function(s){{s._pm=pmatch(s,party);s._s=bscore(s);}});
     list.sort(function(a,b){{return (b._pm-a._pm)||(b._s-a._s);}});
     var matched=list.filter(function(s){{return passAll(s,null);}});
+    if(party==='any') matched=spread(matched);  // variety for browsers; personas keep fit-ranking
     // note
     var note='';
     if(r){{ note='<b>'+r.emoji+' '+r.name+'</b> — '+r.season+'.';
