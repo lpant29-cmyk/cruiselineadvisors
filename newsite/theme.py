@@ -500,6 +500,27 @@ section[id^="d-"]{scroll-margin-top:84px}
 .poc-body{padding:14px 16px}
 .poc-body h3{font-size:1.05rem;color:var(--navy);margin:0 0 .3rem}
 .poc-body p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}
+/* rich guide article */
+.gd-body{max-width:760px}
+.gd-body p{margin:0 0 1rem;line-height:1.7;color:#233b47}
+.gd-body ul{margin:0 0 1.1rem;padding-left:1.2rem;line-height:1.7;color:#233b47}
+.gd-body li{margin-bottom:.5rem}
+.gd-body h3{font-size:1.15rem;color:var(--navy);margin:1.4rem 0 .6rem}
+.gd-byline{padding-top:18px;padding-bottom:0}
+.gd-meta{font-size:.82rem;color:var(--muted);font-weight:600;margin:0}
+.gd-takeaways{background:linear-gradient(135deg,rgba(47,196,192,.1),rgba(12,110,134,.08));border:1px solid var(--line);border-left:4px solid var(--sea2);border-radius:0 16px 16px 0;padding:22px 24px;max-width:820px}
+.gd-takeaways h2{font-size:1.15rem;color:var(--navy);margin:0 0 .7rem;font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.gd-takeaways ul{margin:0;padding-left:1.2rem;line-height:1.65}
+.gd-takeaways li{margin-bottom:.55rem;color:#233b47}
+.gd-callout{display:flex;gap:.8em;align-items:flex-start;border-radius:14px;padding:15px 17px;margin:0 0 1.2rem;line-height:1.6;font-size:.95rem}
+.gd-cl-ic{flex:none;font-size:1.2rem;line-height:1.4}
+.gd-tip{background:rgba(47,196,192,.1);border:1px solid rgba(18,145,154,.28)}
+.gd-watch{background:rgba(255,178,62,.14);border:1px solid rgba(240,137,31,.34)}
+.gd-define{background:var(--foam,#EEF7F7);border:1px solid var(--line)}
+.gd-callout b{color:var(--navy)}
+.gd-rel{text-decoration:none}
+.gd-body a{color:var(--sea3);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.gd-body a:hover{color:var(--sea2)}
 /* ship "where & when it sails" scenery banner */
 .route-img{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;background:linear-gradient(135deg,var(--sea3),var(--navy));margin:0 0 4px}
 .route-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

@@ -540,8 +540,19 @@ def p_guides_hub(lang):
 
 
 def p_guide(lang, slug):
+    from guidepage import has_rich_guide, render_rich_guide, RICH_GUIDES
+    import guides_content  # noqa: F401 — side-effect import registers the rich guides
     g = _G[slug]
     kick = "Guide" if lang == "en" else "Guía"
+    if has_rich_guide(slug):
+        rg = RICH_GUIDES[slug]
+        title, dek = rg["title"][lang], rg["dek"][lang]
+        crumb = _crumb(lang, f'<a href="/{lang}/guides.html">{"Guides" if lang=="en" else "Guías"}</a>', title)
+        return (phero(lang, kick, title, dek, crumb)
+                + render_rich_guide(lang, slug)
+                + cta_band(lang, "Ready to price a real sailing?" if lang == "en" else "¿Listo para cotizar un crucero real?",
+                           "Call a specialist — they'll give you the all-in number for your dates." if lang == "en"
+                           else "Llama a un especialista — te da la cifra completa para tus fechas."))
     crumb = _crumb(lang, f'<a href="/{lang}/guides.html">{"Guides" if lang=="en" else "Guías"}</a>', g["t"][lang])
     paras = GUIDE_BODY.get(slug, {}).get(lang) or _GUIDE_FALLBACK[lang]
     body = "".join(f"<p>{p}</p>" for p in paras)
