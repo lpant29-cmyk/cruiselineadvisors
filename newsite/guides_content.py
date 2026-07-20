@@ -3,7 +3,7 @@
 
 Compliance: NO fares/prices/rates/discounts/savings, no "$", no copied prose. Original research copy
 only. Interlinks are hard-coded per language (/en/… or /es/…)."""
-from guidepage import register, tip, watch, define
+from guidepage import register, tip, watch, define, vcards, photo_band
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 # FLAGSHIP — What's included in a cruise fare (cluster: cruise costs & money)
@@ -47,26 +47,26 @@ register("whats-included", {
             "html": {
                 "en": "<p>On nearly every major line, one fare covers the core of your trip. Think of it as your "
                       "room, your ride and your everyday food-and-fun — bundled together:</p>"
-                      "<ul>"
-                      "<li><b>Your cabin</b> — the stateroom you booked, housekeeping and, on most lines, room service (sometimes with a small delivery charge at night).</li>"
-                      "<li><b>Main dining</b> — the main dining rooms, the buffet and most casual eateries, plus tea, drip coffee, iced tea, water and juice at meals.</li>"
-                      "<li><b>Daytime activities</b> — pools, hot tubs, the gym, deck games, trivia, and most onboard entertainment and production shows.</li>"
-                      "<li><b>Kids' and teen clubs</b> — supervised, age-grouped programming during normal hours.</li>"
-                      "<li><b>Getting from port to port</b> — the sailing itself, and usually the government taxes and port fees folded into your fare.</li>"
-                      "</ul>"
+                      + vcards([
+                          ("🛏️", "Your cabin", "The stateroom you booked, daily housekeeping and — on most lines — room service."),
+                          ("🍽️", "Main dining & buffet", "Main dining rooms, the buffet and most casual spots, plus tea, coffee, water and juice at meals."),
+                          ("🎭", "Entertainment & activities", "Pools, hot tubs, the gym, deck games, trivia and most production shows."),
+                          ("🧒", "Kids' & teen clubs", "Supervised, age-grouped youth programming during normal hours."),
+                          ("⚓", "Port-to-port travel", "The sailing itself, and usually the government taxes and port fees."),
+                      ]) +
                       "<p>That's a real all-in base: you could board, never spend another cent, and still eat well, "
                       "be entertained and see every port. The extras below are optional — but a few of them are almost "
                       "universal, so it pays to know them going in. For the exact, per-line detail, we keep a verified "
                       'rundown on the <a href="/en/cruise-facts/">cruise facts that cost you money</a> page.</p>',
                 "es": "<p>En casi todas las líneas principales, una sola tarifa cubre lo esencial del viaje. Piénsalo "
                       "como tu habitación, tu transporte y tu comida-y-diversión de cada día, todo junto:</p>"
-                      "<ul>"
-                      "<li><b>Tu camarote</b> — la habitación que reservaste, la limpieza y, en la mayoría de líneas, el servicio a la habitación (a veces con un pequeño cargo de entrega por la noche).</li>"
-                      "<li><b>Comedor principal</b> — los comedores principales, el bufé y la mayoría de los sitios informales, además de té, café de filtro, agua y jugo en las comidas.</li>"
-                      "<li><b>Actividades de día</b> — piscinas, jacuzzis, gimnasio, juegos en cubierta, trivias y casi todo el entretenimiento y los espectáculos.</li>"
-                      "<li><b>Clubes de niños y adolescentes</b> — programación supervisada por edades en horario normal.</li>"
-                      "<li><b>El traslado entre puertos</b> — la navegación en sí y, normalmente, los impuestos y tasas portuarias incluidos en tu tarifa.</li>"
-                      "</ul>"
+                      + vcards([
+                          ("🛏️", "Tu camarote", "La habitación que reservaste, la limpieza diaria y — en la mayoría de líneas — el servicio a la habitación."),
+                          ("🍽️", "Comedor y bufé", "Comedores principales, el bufé y la mayoría de sitios informales, además de té, café, agua y jugo en las comidas."),
+                          ("🎭", "Entretenimiento y actividades", "Piscinas, jacuzzis, gimnasio, juegos en cubierta, trivias y casi todos los espectáculos."),
+                          ("🧒", "Clubes de niños y adolescentes", "Programación juvenil supervisada por edades en horario normal."),
+                          ("⚓", "Traslado entre puertos", "La navegación en sí y, normalmente, los impuestos y tasas portuarias."),
+                      ]) +
                       "<p>Es una base realmente completa: podrías embarcar, no gastar un centavo más, y aun así comer "
                       "bien, divertirte y ver cada puerto. Los extras de abajo son opcionales, pero algunos son casi "
                       'universales. Para el detalle exacto por línea, mantenemos un resumen verificado en la página de '
@@ -79,26 +79,25 @@ register("whats-included", {
             "html": {
                 "en": "<p>Here's where the final statement grows. None of these are hidden exactly — but they're easy "
                       "to underestimate when you add them across a week:</p>"
-                      "<ul>"
-                      "<li><b>Gratuities</b> — a daily service charge, added automatically (see below).</li>"
-                      "<li><b>Alcohol &amp; specialty drinks</b> — cocktails, wine, beer, sodas, bottled water, energy drinks and barista coffee.</li>"
-                      "<li><b>Wi-Fi</b> — sold as tiered internet packages on most lines.</li>"
-                      "<li><b>Specialty restaurants</b> — steakhouses, sushi, chef's-table and other à la carte venues carry a cover charge.</li>"
-                      "<li><b>Shore excursions</b> — line-run tours in port; you can also explore independently.</li>"
-                      "<li><b>The spa &amp; salon</b>, <b>photos</b>, <b>the casino</b>, <b>laundry</b>, and premium activities (thermal suites, some fitness classes, upcharge attractions).</li>"
-                      "</ul>"
-                      + tip("A useful mental model: your fare buys the <i>ship experience</i>; the extras buy <i>indulgences and convenience</i>. Decide before you sail which indulgences matter to you, and the rest is easy to skip.")
-                      ,
+                      + vcards([
+                          ("🧾", "Gratuities", "A daily service charge, added automatically per guest (see below)."),
+                          ("🍸", "Alcohol & specialty drinks", "Cocktails, wine, beer, sodas, bottled water, energy drinks and barista coffee."),
+                          ("📶", "Wi-Fi", "Sold as tiered internet packages on most lines."),
+                          ("🍤", "Specialty restaurants", "Steakhouses, sushi and à la carte venues carry a cover charge."),
+                          ("🏝️", "Shore excursions", "Line-run tours in port — or explore independently."),
+                          ("💆", "Spa, photos, casino & more", "The spa and salon, photos, casino, laundry and premium activities."),
+                      ])
+                      + tip("A useful mental model: your fare buys the <i>ship experience</i>; the extras buy <i>indulgences and convenience</i>. Decide before you sail which indulgences matter to you, and the rest is easy to skip."),
                 "es": "<p>Aquí es donde crece la cuenta final. Ninguno está realmente oculto, pero es fácil "
                       "subestimarlos cuando se suman durante una semana:</p>"
-                      "<ul>"
-                      "<li><b>Propinas</b> — un cargo por servicio diario, añadido automáticamente (ver abajo).</li>"
-                      "<li><b>Alcohol y bebidas especiales</b> — cócteles, vino, cerveza, refrescos, agua embotellada, bebidas energéticas y café de barista.</li>"
-                      "<li><b>Wi-Fi</b> — se vende como paquetes de internet por niveles en la mayoría de las líneas.</li>"
-                      "<li><b>Restaurantes de especialidad</b> — parrillas, sushi y otros lugares a la carta tienen un cargo de cubierto.</li>"
-                      "<li><b>Excursiones</b> — tours de la línea en cada puerto; también puedes explorar por tu cuenta.</li>"
-                      "<li><b>Spa y salón</b>, <b>fotos</b>, <b>casino</b>, <b>lavandería</b> y actividades premium (suites térmicas, algunas clases, atracciones con cargo).</li>"
-                      "</ul>"
+                      + vcards([
+                          ("🧾", "Propinas", "Un cargo por servicio diario, añadido automáticamente por huésped (ver abajo)."),
+                          ("🍸", "Alcohol y bebidas especiales", "Cócteles, vino, cerveza, refrescos, agua embotellada y café de barista."),
+                          ("📶", "Wi-Fi", "Se vende como paquetes de internet por niveles en la mayoría de las líneas."),
+                          ("🍤", "Restaurantes de especialidad", "Parrillas, sushi y sitios a la carta con un cargo de cubierto."),
+                          ("🏝️", "Excursiones", "Tours de la línea en cada puerto — o explora por tu cuenta."),
+                          ("💆", "Spa, fotos, casino y más", "El spa y salón, fotos, casino, lavandería y actividades premium."),
+                      ])
                       + tip("Un modelo útil: tu tarifa compra la <i>experiencia del barco</i>; los extras compran <i>lujos y comodidad</i>. Decide antes de zarpar qué lujos te importan y el resto es fácil de omitir."),
             },
         },

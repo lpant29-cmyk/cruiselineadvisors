@@ -10,7 +10,35 @@ Content lives in RICH_GUIDES; render_rich_guide() returns the <main> inner HTML 
 and the call CTA). A guide whose slug isn't here falls back to the older paragraph guide.
 """
 import json
+import os
 from config import SITE_URL, BRAND, PHONE_HREF, PHONE_DISPLAY
+
+_GUIDES_IMG_DIR = os.path.join(os.path.dirname(__file__), "assets", "guides")
+
+
+def guide_hero_img(slug, override=None):
+    """Return the guide's hero image filename if it exists on disk, else None (gradient fallback)."""
+    for name in ([override] if override else []) + [f"{slug}.jpg"]:
+        if name and os.path.exists(os.path.join(_GUIDES_IMG_DIR, name)):
+            return name
+    return None
+
+
+def vcards(items):
+    """A visual card grid for scannable concept lists. items = [(emoji, label, note), ...]."""
+    cards = ""
+    for emo, label, note in items:
+        body = f'<div class="xr-b"><p class="xr-desc">{note}</p></div>' if note else ""
+        cards += (f'<article class="xr-card gvc-card"><div class="xr-top">'
+                  f'<span class="xr-emoji">{emo}</span><div class="xr-h"><h3>{label}</h3></div></div>{body}</article>')
+    return f'<div class="xr-grid gvc-grid">{cards}</div>'
+
+
+def photo_band(img, caption=""):
+    """A full-width self-hosted photo band to break up a long guide (illustrative)."""
+    cap = f'<figcaption class="gband-cap">{caption}</figcaption>' if caption else ""
+    return (f'<figure class="gband"><img src="/guides/{img}" alt="{caption}" loading="lazy" decoding="async">{cap}</figure>')
+
 
 # ── small content helpers used inside section HTML ────────────────────────────────────────────────
 def tip(en_or_html):

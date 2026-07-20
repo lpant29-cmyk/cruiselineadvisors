@@ -521,6 +521,12 @@ section[id^="d-"]{scroll-margin-top:84px}
 .gd-rel{text-decoration:none}
 .gd-body a{color:var(--sea3);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .gd-body a:hover{color:var(--sea2)}
+.gvc-grid{margin:.4rem 0 1.4rem}
+.gvc-card{background:#fff}
+.gvc-card .xr-emoji{font-size:1.5rem}
+.gband{position:relative;margin:0 0 1.4rem;border-radius:18px;overflow:hidden;max-width:820px;aspect-ratio:21/9;background:linear-gradient(135deg,var(--sea3),var(--navy))}
+.gband img{width:100%;height:100%;object-fit:cover;display:block}
+.gband-cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#fff;font-size:.85rem;font-weight:600;background:linear-gradient(180deg,rgba(8,44,66,0),rgba(8,44,66,.8))}
 /* ship "where & when it sails" scenery banner */
 .route-img{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;background:linear-gradient(135deg,var(--sea3),var(--navy));margin:0 0 4px}
 .route-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

@@ -33,6 +33,16 @@ def phero(lang, kicker, h1, sub, crumb, seal=""):
 </div></section>"""
 
 
+def _guide_photo_hero(lang, kick, h1, sub, crumb, img):
+    """Photo hero for a rich guide — self-hosted image + scrim + heading + call button."""
+    inner = (f'<p class="crumbs">{crumb}</p><span class="eyebrow" style="color:#7FD4D0">{kick}</span>'
+             f'<h1>{h1}</h1><p class="phero-sub">{sub}</p>'
+             f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'guide-hero\')">'
+             f'<span class="ic">☎</span>{"Call now · " if lang=="en" else "Llama ahora · "}{PHONE_DISPLAY}</a>')
+    return (f'<section class="section phero dhero dhero-photo" style="--dhero-img:url(/guides/{img})">'
+            f'<div class="dhero-scrim"></div><div class="wrap">{inner}</div></section>')
+
+
 def cta_band(lang, title, sub):
     return f"""<section class="section cream"><div class="wrap"><div class="ctaband">
   <div><h2>{title}</h2><p>{sub}</p></div>
@@ -545,10 +555,13 @@ def p_guide(lang, slug):
     g = _G[slug]
     kick = "Guide" if lang == "en" else "Guía"
     if has_rich_guide(slug):
+        from guidepage import guide_hero_img
         rg = RICH_GUIDES[slug]
         title, dek = rg["title"][lang], rg["dek"][lang]
         crumb = _crumb(lang, f'<a href="/{lang}/guides.html">{"Guides" if lang=="en" else "Guías"}</a>', title)
-        return (phero(lang, kick, title, dek, crumb)
+        himg = guide_hero_img(slug, rg.get("hero"))
+        hero = _guide_photo_hero(lang, kick, title, dek, crumb, himg) if himg else phero(lang, kick, title, dek, crumb)
+        return (hero
                 + render_rich_guide(lang, slug)
                 + cta_band(lang, "Ready to price a real sailing?" if lang == "en" else "¿Listo para cotizar un crucero real?",
                            "Call a specialist — they'll give you the all-in number for your dates." if lang == "en"
