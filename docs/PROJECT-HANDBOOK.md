@@ -222,6 +222,11 @@ and deploy — the snippet then renders on every page automatically. Nothing tra
   ("Verified cruise facts. One call books it."); destination **photo heroes** (12 self-hosted
   region images — credits in `docs/hero-image-credits.json`, all Pexels License / commercial /
   no attribution); described ports-of-call cards; "Explore more destinations" cross-link grid.
+  Then: whole destination section unified (Mediterranean/Northern Europe rich too, hub as photo
+  cards); analytics activated (GTM `GTM-NM78WCVF`, Clarity `xpb1uyu7ta`, GA4-via-GTM); **64
+  port-of-call photos** added (self-hosted under `newsite/assets/ports/calls/`, Pexels License /
+  commercial / no attribution) so ports-of-call render as image cards; **table of contents** added
+  to every destination page.
 - Earlier: initial bilingual rebuild — 8 lines, 131 ships, facts store, compare tools, finder,
   self-hosted port photos, verified seals.
 
