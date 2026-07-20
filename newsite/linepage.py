@@ -334,12 +334,16 @@ def rich_sections(lang, slug):
     frows = [("kidsclub", fam.get("kids_club_name")), ("minage", fam.get("minimum_sailing_age"))]
     fgrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in frows)
     # kids clubs are fleet-wide brands — surface a ship's enriched kids programme on the line page too.
+    # Prefer a ship with named venues (list); fall back to prose, but never an internal sourcing gap.
+    from ships import kids_family_display, _kids_is_gap
     kids_detail = None
     for sh in ships_for(slug):
         kf = (sh.get("exp") or {}).get("kids_family")
-        if kf:
+        if isinstance(kf, list) and kf:
             kids_detail = kf
             break
+        if isinstance(kf, str) and kf and not _kids_is_gap(kf) and kids_detail is None:
+            kids_detail = kf  # keep looking for a richer list, but hold this prose as a fallback
     extra = ""
     if kids_detail:
         lbl = "What's on board for kids & teens" if lang == "en" else "Qué hay a bordo para niños y adolescentes"

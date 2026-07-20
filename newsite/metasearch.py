@@ -120,13 +120,16 @@ def _who_short(who, n=150):
     return who if len(who) <= n else who[:n].rsplit(" ", 1)[0] + "…"
 
 
-def _kids(kf):
+def _kids(kf, lang="en"):
+    from ships import kids_family_display, _kids_is_gap
     if not kf:
         return None
     if isinstance(kf, list):
         n = [x.get("name") if isinstance(x, dict) else x for x in kf
              if (isinstance(x, dict) and x.get("name")) or isinstance(x, str)]
         return " · ".join(str(x) for x in n if x) or None
+    if _kids_is_gap(kf):
+        return kids_family_display(kf, lang, short=True)
     return kf if isinstance(kf, str) else None
 
 
@@ -166,7 +169,7 @@ def _payload(lang):
             "id": f"{line_slug}::{s['name']}", "name": s["name"], "line": _NAME.get(line_slug, line_slug),
             "emo": _EMO.get(line_slug, "🚢"), "url": f"/{lang}/lines/{line_slug}/ships/{slugify(s['name'])}/",
             "guests": s.get("guests"), "year": s.get("year"), "cls": s.get("class"),
-            "who": _who_short(who), "route": exp.get("deploy_note"), "kids": _kids(exp.get("kids_family")),
+            "who": _who_short(who), "route": exp.get("deploy_note"), "kids": _kids(exp.get("kids_family"), lang),
             "dine": len(exp.get("dining") or []), "acts": len(acts) if isinstance(acts, list) else 0,
             "regions": regs, "fam": fl["fam"], "cpl": fl["cpl"], "lux": fl["lux"], "val": fl["val"], "solo": solo,
             "grat": fv("gratuities"), "incl": fv("included"), "drink": fv("drink_pkg"), "cancel": fv("cancel"),

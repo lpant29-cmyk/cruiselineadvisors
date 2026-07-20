@@ -270,7 +270,8 @@ def experience_sections(lang, line_slug, ship):
         if v:
             krows += f'<div class="glance-cell"><b>{lbl[lang]}</b><span>{v}</span></div>'
     grid = f'<div class="glance-grid">{krows}</div>' if krows else ""
-    ship_kids = _flex(exp.get("kids_family"), _ACT_EMOJI, "🧒")
+    from ships import kids_family_display
+    ship_kids = _flex(kids_family_display(exp.get("kids_family"), lang), _ACT_EMOJI, "🧒")
     if grid or ship_kids:
         out += _sec("family", lang, f'{grid}{ship_kids}')
 

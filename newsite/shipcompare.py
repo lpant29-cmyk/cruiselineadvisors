@@ -6,7 +6,7 @@ gap. Data comes from ships.py (official-sourced). NO PRICES."""
 import json
 from config import PHONE_HREF, PHONE_DISPLAY
 from data import LINES
-from ships import all_ships, slugify, SHIPS
+from ships import all_ships, slugify, SHIPS, kids_family_display, _kids_is_gap
 from badges import verified_stamp
 from facts import LINE_FACTS
 
@@ -111,7 +111,7 @@ def _sid(line_slug, name):
     return f"{line_slug}::{slugify(name)}"
 
 
-def _kids(kf):
+def _kids(kf, lang="en"):
     """Compact kids/family summary from a ship's enriched kids_family (string or list of {name,desc})."""
     if not kf:
         return None
@@ -119,6 +119,8 @@ def _kids(kf):
         n = [x.get("name") if isinstance(x, dict) else x for x in kf
              if (isinstance(x, dict) and x.get("name")) or isinstance(x, str)]
         return " · ".join(str(x) for x in n if x) or None
+    if _kids_is_gap(kf):
+        return kids_family_display(kf, lang, short=True)
     return kf if isinstance(kf, str) else None
 
 
@@ -146,7 +148,7 @@ def _payload(lang):
             "tonnage": s.get("tonnage"),
             "who": exp.get("who_for"),
             "route": exp.get("deploy_note"),
-            "kids": _kids(exp.get("kids_family")),
+            "kids": _kids(exp.get("kids_family"), lang),
             "dine": len(exp.get("dining") or []),
             "acts": len(acts) if isinstance(acts, list) else 0,
         }

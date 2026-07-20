@@ -48,6 +48,37 @@ def slugify(name):
     return re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
 
 
+# A handful of ships carry an internal sourcing note (e.g. "…not confirmed on the pages read - see
+# needs.") in kids_family, from the enrichment pass. That phrasing is for us, not visitors — it must
+# never render. kids_family_display() swaps it for a clear, honest message; rich list data (named
+# venues) and normal prose pass through untouched.
+_KIDS_GAP_MARKERS = ("not confirmed on the pages read", "see needs", "not verified", "the pages read")
+_KIDS_GAP_MSG = {
+    "en": ("Family programming runs across the ship. We haven't yet verified this ship's exact "
+           "kids-club, nursery and teen venue names from the line's official page — call and an "
+           "advisor will confirm what's on board for your dates."),
+    "es": ("Hay programación familiar en todo el barco. Aún no hemos verificado los nombres exactos "
+           "del club infantil, la guardería y los espacios para adolescentes de este barco en la "
+           "página oficial de la línea — llama y un asesor confirmará qué hay a bordo para tus fechas."),
+}
+_KIDS_GAP_MSG_SHORT = {
+    "en": "Family programming on board — specific venue names confirmed by phone.",
+    "es": "Programación familiar a bordo — nombres de locales confirmados por teléfono.",
+}
+
+
+def _kids_is_gap(kf):
+    return isinstance(kf, str) and any(m in kf.lower() for m in _KIDS_GAP_MARKERS)
+
+
+def kids_family_display(kf, lang="en", short=False):
+    """Visitor-facing kids_family. Internal sourcing-gap phrasing becomes a clear honest message;
+    lists (named venues) and ordinary prose are returned unchanged."""
+    if _kids_is_gap(kf):
+        return (_KIDS_GAP_MSG_SHORT if short else _KIDS_GAP_MSG).get(lang, _KIDS_GAP_MSG["en"])
+    return kf
+
+
 def ships_for(line_slug):
     return SHIPS.get(line_slug, {}).get("ships", [])
 
