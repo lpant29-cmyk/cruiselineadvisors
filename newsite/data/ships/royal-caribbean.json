@@ -2200,9 +2200,26 @@
             "desc": "Central promenade of shops, bars and cafes."
           }
         ],
-        "kids_family": "Family-friendly programming across the ship; specific children's venues (Adventure Ocean, Splashaway Bay) not confirmed on the pages read - see needs.",
+        "kids_family": [
+          {
+            "name": "Adventure Ocean",
+            "desc": "Royal Caribbean's supervised youth program, split by age into Babies & Tots, Aquanauts, Explorers and Voyagers groups, with games, competitions and learning activities."
+          },
+          {
+            "name": "Adventure Science Lab",
+            "desc": "A hands-on lab inside Adventure Ocean where kids run simple experiments and STEM-style activities."
+          },
+          {
+            "name": "SeaPlex",
+            "desc": "The ship's big indoor-outdoor activity complex — bumper cars, roller skating, basketball and games that families and teens rotate through all day."
+          },
+          {
+            "name": "Fuel",
+            "desc": "A teens-only lounge with a space theme where older kids hang out and socialise away from the little ones."
+          }
+        ],
         "deploy_note": "Per the official ship page, Anthem currently sails a mix of regions including Alaska; confirm the specific current-season home port (historically Cape Liberty, Bayonne NJ).",
-        "exp_source": "https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/26/anthem-of-the-seas/"
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/26/anthem-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/anthem-of-the-seas/things-to-do"
       }
     },
     {
@@ -2507,9 +2524,18 @@
             "desc": "Central promenade of shops, bars and cafes."
           }
         ],
-        "kids_family": "Family programming across the ship; specific children's venue names not confirmed on the pages read - see needs.",
+        "kids_family": [
+          {
+            "name": "Adventure Ocean",
+            "desc": "Royal Caribbean's supervised kids program with age-appropriate games, activities and play for younger cruisers."
+          },
+          {
+            "name": "SeaPlex",
+            "desc": "A large indoor-outdoor activity complex with bumper cars, basketball and games that families and teens can use through the day."
+          }
+        ],
         "deploy_note": "Per the official ship page, Quantum currently sails 'West Coast' itineraries from Los Angeles to the Mexican Riviera and Alaska; confirm exact current-season deployment.",
-        "exp_source": "https://www.royalcaribbean.com/cruise-ships/quantum-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/27/quantum-of-the-seas/"
+        "exp_source": "https://www.royalcaribbean.com/cruise-ships/quantum-of-the-seas, https://royalcaribbeanpresscenter.com/fact-sheet/27/quantum-of-the-seas/, https://www.royalcaribbean.com/cruise-ships/quantum-of-the-seas/things-to-do"
       }
     },
     {

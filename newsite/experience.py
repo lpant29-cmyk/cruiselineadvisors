@@ -121,6 +121,14 @@ def _food_emoji(name, t):
     return _emoji(f"{name or ''} {t or ''}", _FOOD_EMOJI, "🍴")
 
 
+def _LINE_NAME(slug):
+    from data import LINES
+    for L in LINES:
+        if L["slug"] == slug:
+            return L["name"]
+    return slug
+
+
 # records the section keys emitted by the most recent experience_sections() call, in order, so the
 # ship page can build a table of contents that lists exactly the sections that actually rendered.
 _LAST_KEYS = []
@@ -300,9 +308,31 @@ def experience_sections(lang, line_slug, ship):
             krows += f'<div class="glance-cell"><b>{lbl[lang]}</b><span>{v}</span></div>'
     grid = f'<div class="glance-grid">{krows}</div>' if krows else ""
     from ships import kids_family_display
-    ship_kids = _flex(kids_family_display(exp.get("kids_family"), lang), _ACT_EMOJI, "🧒")
-    if grid or ship_kids:
-        out += _sec("family", lang, f'{grid}{ship_kids}')
+    from kids import line_program
+    ship_kf = exp.get("kids_family")
+    prog = line_program(line_slug)
+    inner = grid
+    if isinstance(ship_kf, list) and ship_kf:
+        # ship has its own curated venue list (Icon, Star, …) — richest, use it as-is
+        inner += _item_cards(ship_kf, _ACT_EMOJI, "🧒")
+    elif prog:
+        # fleet-wide program cards on every ship, with this ship's own note as a lead line
+        disp = kids_family_display(ship_kf, lang) if ship_kf else None
+        lead = f'<p class="xsub xsub-lead">{disp}</p>' if isinstance(disp, str) and disp else ""
+        cards = "".join(_card(c.get("emo", "🧒"), c["name"],
+                              f'<span class="xr-meta">{c["ages"]}</span>' if c.get("ages") else "",
+                              c["desc"].get(lang, c["desc"]["en"]))
+                        for c in prog["cards"])
+        note = (f"{_LINE_NAME(line_slug)}'s kids clubs run fleet-wide; exact venues and hours for your "
+                "ship and dates are confirmed on the call." if lang == "en" else
+                f"Los clubes infantiles de {_LINE_NAME(line_slug)} operan en toda la flota; confirmamos "
+                "los espacios y horarios de tu barco y fechas en la llamada.")
+        inner += f'{lead}<div class="xr-grid">{cards}</div><p class="xnote">{note}</p>'
+    else:
+        # no fleet program mapped (e.g. Margaritaville) — render the ship's own prose/list
+        inner += _flex(kids_family_display(ship_kf, lang), _ACT_EMOJI, "🧒") if ship_kf else ""
+    if inner.strip():
+        out += _sec("family", lang, inner)
 
     # ── Districts & zones (own section — described cards when we have descriptions) ──
     nbh = exp.get("neighbourhoods") or exp.get("neighborhoods") or []
