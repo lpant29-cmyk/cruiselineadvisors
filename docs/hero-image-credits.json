@@ -59,5 +59,21 @@
       "license": "Pexels License (free for commercial use, no attribution required)",
       "photographer_if_any": null
     }
-  ]
+  ],
+  "guide_images": {
+    "dir": "newsite/assets/guides/",
+    "license": "Pexels License (commercial use, no attribution required)",
+    "files": {
+      "whats-included.jpg": "https://www.pexels.com/photo/13048487/",
+      "cruise-dining.jpg": "https://www.pexels.com/photo/5769594/",
+      "cruise-cabin.jpg": "https://www.pexels.com/photo/12652916/",
+      "cruise-deck.jpg": "https://www.pexels.com/photo/32207991/",
+      "cruise-drinks.jpg": "https://www.pexels.com/photo/6393446/",
+      "cruise-ship-sea.jpg": "https://www.pexels.com/photo/6746779/",
+      "cruise-port.jpg": "https://www.pexels.com/photo/745737/",
+      "cruise-balcony.jpg": "https://www.pexels.com/photo/5334261/",
+      "cruise-planning.jpg": "https://www.pexels.com/photo/7235895/",
+      "cruise-family.jpg": "https://www.pexels.com/photo/3379404/"
+    }
+  }
 }
