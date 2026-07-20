@@ -9,7 +9,7 @@ T = {
     "en": {
         "lang_name": "English", "lang_switch_to": "Español", "lang_switch_code": "ES",
         "skip": "Skip to content",
-        "free_to_call": "Free to call",
+        "free_to_call": "Toll Free",
         "hours_label": "Advisors",
         # top disclosure bar
         "disc_top": "Independent cruise referral service, not a cruise line and not a travel agency.",
@@ -79,7 +79,7 @@ T = {
     "es": {
         "lang_name": "Español", "lang_switch_to": "English", "lang_switch_code": "EN",
         "skip": "Saltar al contenido",
-        "free_to_call": "Llamada gratis",
+        "free_to_call": "Línea gratuita",
         "hours_label": "Asesores",
         "disc_top": "Servicio independiente de referencia de cruceros, no somos una línea de crucero ni una agencia de viajes.",
         "nav_lines": "Líneas de Crucero", "nav_compare": "Comparar", "nav_facts": "Datos de Cruceros",

@@ -24,6 +24,11 @@ def guide_hero_img(slug, override=None):
     return None
 
 
+def link(href, text):
+    """Inline interlink helper. Keeps content strings quote-safe (no embedded href="" quotes)."""
+    return f'<a href="{href}">{text}</a>'
+
+
 def vcards(items):
     """A visual card grid for scannable concept lists. items = [(emoji, label, note)...]."""
     cards = ""

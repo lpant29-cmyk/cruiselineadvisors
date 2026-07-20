@@ -3,7 +3,15 @@
 
 Compliance: NO fares/prices/rates/discounts/savings, no "$", no copied prose. Original research copy
 only. Interlinks are hard-coded per language (/en/… or /es/…)."""
-from guidepage import register, tip, watch, define, vcards, photo_band
+from guidepage import register, tip, watch, define, vcards, photo_band, link
+
+# Cluster content modules (each calls register() on import).
+import guides_costs   # noqa: E402,F401
+import guides_safety  # noqa: E402,F401
+import guides_planning  # noqa: E402,F401
+import guides_line    # noqa: E402,F401
+import guides_who     # noqa: E402,F401
+import guides_dest    # noqa: E402,F401
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 # FLAGSHIP, What's included in a cruise fare (cluster: cruise costs & money)
