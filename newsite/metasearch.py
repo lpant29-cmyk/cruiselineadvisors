@@ -49,6 +49,33 @@ def ship_regions(line_slug, exp):
     published itinerary also returns [] (excluded from the finder rather than guessed)."""
     return region_ids_for_note((exp or {}).get("deploy_note"))
 
+
+# Some deploy_notes read like internal/scraped editorial notes; never show those to visitors.
+_AWKWARD_NOTE = ("itinerary examples", "on the page", "deployment is seasonal", "at capture",
+                 "ship page displayed", "editorial", "verify", "not confirmed", "see needs",
+                 "pages read", "imagery near", "displayed")
+_REG_BY_ID = {r["id"]: r for r in _REGIONS}
+
+
+def note_is_clean(note):
+    low = (note or "").lower()
+    return bool(note) and not any(m in low for m in _AWKWARD_NOTE)
+
+
+def route_display(line_slug, exp, lang="en"):
+    """A clean, visitor-facing 'where it sails' string. Uses the deploy_note when it reads well,
+    otherwise a tidy region summary derived from the itinerary, otherwise a call-to-confirm line."""
+    note = (exp or {}).get("deploy_note")
+    if note_is_clean(note):
+        return note
+    regs = ship_regions(line_slug, exp or {})
+    names = [_REG_BY_ID[r]["name"] for r in regs if r in _REG_BY_ID]
+    if names:
+        return ("Seasonal: " if lang == "en" else "Por temporada: ") + ", ".join(names)
+    return ("Sails seasonally; call for current itineraries." if lang == "en"
+            else "Navega por temporada; llama por itinerarios actuales.")
+
+
 _MONTHS = {"en": ["January", "February", "March", "April", "May", "June", "July", "August",
                   "September", "October", "November", "December"],
            "es": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
@@ -169,7 +196,7 @@ def _payload(lang):
             "id": f"{line_slug}::{s['name']}", "name": s["name"], "line": _NAME.get(line_slug, line_slug),
             "emo": _EMO.get(line_slug, "🚢"), "url": f"/{lang}/lines/{line_slug}/ships/{slugify(s['name'])}/",
             "guests": s.get("guests"), "year": s.get("year"), "cls": s.get("class"),
-            "who": _who_short(who), "route": exp.get("deploy_note"), "kids": _kids(exp.get("kids_family"), lang),
+            "who": _who_short(who), "route": route_display(line_slug, exp, lang), "kids": _kids(exp.get("kids_family"), lang),
             "dine": len(exp.get("dining") or []), "acts": len(acts) if isinstance(acts, list) else 0,
             "regions": regs, "fam": fl["fam"], "cpl": fl["cpl"], "lux": fl["lux"], "val": fl["val"], "solo": solo,
             "grat": fv("gratuities"), "incl": fv("included"), "drink": fv("drink_pkg"), "cancel": fv("cancel"),

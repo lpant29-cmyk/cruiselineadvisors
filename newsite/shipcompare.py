@@ -9,6 +9,7 @@ from data import LINES
 from ships import all_ships, slugify, SHIPS, kids_family_display, _kids_is_gap
 from badges import verified_stamp
 from facts import LINE_FACTS
+from metasearch import route_display
 
 # Decision rows, grouped. Line-policy rows pull from the verified 12-fact sheet (the confusing
 # money stuff people actually agonise over); ship rows come from specs + enrichment.
@@ -147,7 +148,7 @@ def _payload(lang):
             "guests": s.get("guests"),
             "tonnage": s.get("tonnage"),
             "who": exp.get("who_for"),
-            "route": exp.get("deploy_note"),
+            "route": route_display(line_slug, exp, lang),
             "kids": _kids(exp.get("kids_family"), lang),
             "dine": len(exp.get("dining") or []),
             "acts": len(acts) if isinstance(acts, list) else 0,

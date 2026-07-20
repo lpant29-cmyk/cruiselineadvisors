@@ -205,6 +205,64 @@ def has_experience(line_slug, ship):
     return bool(exp) or bool(le.get("beverages") or le.get("kids"))
 
 
+# deploy_note strings that read like internal/scraped editorial notes rather than customer copy.
+_AWKWARD_NOTE = ("itinerary examples", "on the page", "deployment is seasonal", "at capture",
+                 "ship page displayed", "editorial", "verify", "not confirmed", "see needs",
+                 "pages read", "imagery near", "displayed")
+
+
+def _note_is_clean(note):
+    low = (note or "").lower()
+    return bool(note) and not any(m in low for m in _AWKWARD_NOTE)
+
+
+def _where_when(lang, line_slug, exp):
+    """Render 'Where & when it sails' as visual region cards derived from the ship's itinerary
+    (metasearch.ship_regions), each linking to its destination guide. Awkward scraped deploy_notes
+    are never shown; a clean, short note is used as a lead line when we have one."""
+    from metasearch import ship_regions, _REGIONS
+    from destpage import hero_image
+    from data import DESTINATIONS
+    en = lang == "en"
+    reg_info = {r["id"]: r for r in _REGIONS}
+    dest_slugs = {d["slug"] for d in DESTINATIONS}
+    regions = ship_regions(line_slug, exp or {})
+    note = (exp or {}).get("deploy_note")
+
+    if _note_is_clean(note) and len(note) < 200:
+        lead = f'<p class="xsub xsub-lead">{note}</p>'
+    elif regions:
+        lead = ('<p class="xsub xsub-lead">This ship sails seasonally across the regions below. Exact '
+                'dates and ports are confirmed on the call.</p>' if en else
+                '<p class="xsub xsub-lead">Este barco navega por temporada por las regiones de abajo. '
+                'Las fechas y puertos exactos se confirman en la llamada.</p>')
+    else:
+        lead = ('<p class="xsub xsub-lead">Itineraries and seasons vary for this ship. Call and we will '
+                'confirm exactly where and when it sails for your dates.</p>' if en else
+                '<p class="xsub xsub-lead">Los itinerarios y temporadas de este barco varían. Llama y '
+                'confirmamos exactamente dónde y cuándo navega para tus fechas.</p>')
+
+    cards = ""
+    for rid in regions:
+        r = reg_info.get(rid)
+        if not r:
+            continue
+        img = hero_image(rid)
+        media = f'<img src="/ports/{img}" alt="" loading="lazy" decoding="async">' if img else ""
+        season = r.get("season", "")
+        seasonw = (("Best: " if en else "Mejor: ") + season) if season else ""
+        body = f'<span class="rt-body"><span class="rt-nm">{r["emoji"]} {r["name"]}</span><small>{seasonw}</small></span>'
+        if rid in dest_slugs:
+            cards += f'<a class="rt-card" href="/{lang}/destinations/{rid}/">{media}{body}</a>'
+        else:
+            cards += f'<div class="rt-card">{media}{body}</div>'
+    grid = f'<div class="rt-grid">{cards}</div>' if cards else ""
+    nudge = (_call(lang, "Not sailing your dates or from your port? Call, we'll find the ship that is.")
+             if en else
+             _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama, encontramos el barco que sí."))
+    return f'{lead}{grid}{nudge}'
+
+
 def experience_sections(lang, line_slug, ship):
     exp = ship.get("exp") or {}
     le = line_data(line_slug).get("experience") or {}
@@ -233,17 +291,10 @@ def experience_sections(lang, line_slug, ship):
                       f'<div><b>{lbl}</b><p>{wf}</p></div></div>')
         out += _sec("overview", lang, inner)
 
-    # ── Where & when it sails (current-season deployment note, with a scenery visual) ──
-    route = exp.get("deploy_note")
-    if route:
-        img = _route_img(route)
-        vis = (f'<figure class="route-img"><img src="/ports/{img}" alt="" loading="lazy" decoding="async">'
-               f'<figcaption class="route-cap">{route}</figcaption></figure>'
-               if img else f'<p class="rsec-sub">{route}</p>')
-        nudge = (_call(lang, "Not sailing your dates or from your port? Call, we'll find the ship that is.")
-                 if lang == "en" else
-                 _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama, encontramos el barco que sí."))
-        out += _sec("route", lang, f'{vis}{nudge}')
+    # ── Where & when it sails: visual region cards from the ship's own itinerary (never raw scraped
+    # notes). Cards link to the matching destination guide. ──
+    if exp.get("deploy_note"):
+        out += _sec("route", lang, _where_when(lang, line_slug, exp))
 
     # ── Food & dining ──
     dining = [d for d in (exp.get("dining") or []) if d.get("name")]
