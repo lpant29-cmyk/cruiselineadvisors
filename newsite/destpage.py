@@ -305,8 +305,8 @@ def _intl_guide(lang, slug, name):
 
     if copy.get("calls"):
         cards = "".join(_call_card(c, lang) for c in copy["calls"])
-        pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
-                 if en else "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
+        pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see. Photos are illustrative."
+                 if en else "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver. Las fotos son ilustrativas.")
         out += _sec("", "calls", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
                     f'<div class="poc-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
@@ -377,9 +377,9 @@ def region_guide(lang, slug, name):
         state_html = f'<small>{region_state}</small>' if region_state else ""
         pcards += (f'<article class="port-card">{media}'
                    f'<span class="port-nm">{city}{state_html}</span></article>')
-    ports_note = ("These are the US and Canada home ports ships depart from for this region — drive or fly in the day before."
+    ports_note = ("These are the US and Canada home ports ships depart from for this region — drive or fly in the day before. Photos are illustrative."
                   if en else
-                  "Estos son los puertos base de EE.UU. y Canadá desde donde zarpan los barcos de esta región — llega en auto o avión el día antes.")
+                  "Estos son los puertos base de EE.UU. y Canadá desde donde zarpan los barcos de esta región — llega en auto o avión el día antes. Las fotos son ilustrativas.")
     out += _sec("", "ports", ("Where you sail from" if en else "Desde dónde zarpas"), "⚓",
                 f'<div class="port-grid">{pcards}</div><p class="note-line" style="margin-top:16px">{ports_note}</p>')
 
