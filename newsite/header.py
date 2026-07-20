@@ -5,7 +5,6 @@ from config import PHONE_DISPLAY, PHONE_HREF
 from i18n import T
 from logo import lockup
 from search import search_button, search_panel
-from data import LINES
 
 # (string-key in i18n, page filename)
 NAV = [
@@ -19,14 +18,12 @@ NAV = [
 
 
 def _lines_submenu(lang, t):
-    """Dropdown under 'Cruise Lines': the hub, the full ship directory, then each line.
+    """Dropdown under 'Cruise Lines': just the hub and the full ship directory.
     Pure CSS (hover/focus-within on desktop, expanded in the mobile drawer) — no JS."""
     items = [
         f'<li><a href="/{lang}/cruise-lines/">{t["nav_all_lines"]}</a></li>',
         f'<li><a href="/{lang}/ships/"><span aria-hidden="true">🚢</span> {t["nav_ships_dir"]}</a></li>',
-        '<li class="sub-sep" aria-hidden="true"></li>',
     ]
-    items += [f'<li><a href="/{lang}/lines/{L["slug"]}/">{L["emo"]} {L["name"]}</a></li>' for L in LINES]
     return f'<ul class="sub">{"".join(items)}</ul>'
 
 
