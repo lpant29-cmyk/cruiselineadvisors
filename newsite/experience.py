@@ -121,10 +121,38 @@ def _food_emoji(name, t):
     return _emoji(f"{name or ''} {t or ''}", _FOOD_EMOJI, "🍴")
 
 
+# records the section keys emitted by the most recent experience_sections() call, in order, so the
+# ship page can build a table of contents that lists exactly the sections that actually rendered.
+_LAST_KEYS = []
+
+
 def _sec(key, lang, inner):
+    _LAST_KEYS.append(key)
     return (f'<section id="x-{key}" class="section xsec xsec-{key}"><div class="wrap">'
             f'<h2 class="rsec-h"><span class="xic" aria-hidden="true">{_IC[key]}</span>{_H[key][lang]}</h2>'
             f'{inner}</div></section>')
+
+
+# sections worth linking from the table of contents (skip the photo strip and minor cam/decks rows)
+_TOC_ORDER = ["overview", "route", "dining", "drinks", "activities", "entertainment", "family", "zones"]
+
+
+def ship_toc(lang, basics_id, basics_title, tail=None):
+    """A compact 'On this page' table of contents for a ship page: the verified basics, then each
+    experience section that experience_sections() just emitted, then any tail items (e.g. sister
+    ships). Call AFTER experience_sections() so _LAST_KEYS is populated."""
+    present = [k for k in _TOC_ORDER if k in _LAST_KEYS]
+    items = [(f"#{basics_id}", basics_title)]
+    items += [(f"#x-{k}", _H[k][lang]) for k in present]
+    if tail:
+        items += tail
+    if len(items) < 3:  # not worth a TOC for a near-empty page
+        return ""
+    lbl = "On this page" if lang == "en" else "En esta página"
+    links = "".join(f'<a class="ship-toc-a" href="{href}">{title}</a>' for href, title in items)
+    return (f'<section class="section ship-toc-sec"><div class="wrap">'
+            f'<nav class="ship-toc" aria-label="{lbl}"><span class="ship-toc-l">{lbl}</span>{links}</nav>'
+            f'</div></section>')
 
 
 def _call(lang, txt):
@@ -174,6 +202,7 @@ def experience_sections(lang, line_slug, ship):
     le = line_data(line_slug).get("experience") or {}
     name = ship["name"]
     out = ""
+    _LAST_KEYS.clear()  # fresh per page; the TOC is built from what this call emits
 
     # ── Photo strip ──
     photos = exp.get("photos") or []

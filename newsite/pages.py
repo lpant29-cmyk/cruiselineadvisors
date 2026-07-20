@@ -315,23 +315,29 @@ def p_ship(lang, line_slug, sslug):
             f'<p class="ship-ships">{(str(x["year"]) if x.get("year") else "&nbsp;")}</p>'
             f'<span class="ship-more">{"View ship" if lang=="en" else "Ver barco"} →</span></a>'
             for x in sisters)
-        sisters_block = (f'<section class="section"><div class="wrap"><h2 class="rsec-h">{sisters_h}</h2>'
+        sisters_block = (f'<section class="section" id="ship-sisters"><div class="wrap"><h2 class="rsec-h">{sisters_h}</h2>'
                          f'<div class="ship-grid">{cards}</div></div></section>')
 
     back = (f'<a class="ship-back" href="/{lang}/lines/{line_slug}/">'
             f'← {"All " + L["name"] + " ships" if lang=="en" else "Todos los barcos de " + L["name"]}</a>')
 
     # the ship-compare tool now lives in the Compare-hero band at the top of the page.
+    # Build the experience sections first so the table of contents can list exactly what rendered.
+    from experience import ship_toc
+    exp_html = experience_sections(lang, line_slug, s)
+    toc_tail = [("#ship-sisters", sisters_h)] if sisters else []
+    toc = ship_toc(lang, "ship-basics", specs_h, tail=toc_tail)
     return (phero(lang, kick, name, sub, crumb, seal=(verified_seal(lang, ship_source(line_slug)[1]) if _has_specs else ""))
             + compare_hero(lang, default_a=f"{line_slug}::{sslug}", ship_name=name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + ship_banner(lang)
-            + f'<section class="section cream"><div class="wrap">'
+            + toc
+            + f'<section class="section cream" id="ship-basics"><div class="wrap">'
               f'<h2 class="rsec-h">{specs_h}</h2>'
               f'<div class="glance-grid">{specs}</div>{feats_block}'
               f'<p class="note-line" style="margin-top:20px">{note}</p>'
               f'{_ship_nudge(lang, nudge_txt)}</div></section>'
-            + experience_sections(lang, line_slug, s)
+            + exp_html
             + sisters_block
             + f'<section class="section"><div class="wrap">{back}</div></section>'
             + cta_band(lang, cta_t, cta_s)
