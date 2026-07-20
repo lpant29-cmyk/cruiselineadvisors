@@ -129,15 +129,26 @@ def p_line(lang, slug):
     upd_h2 = f"Latest {name} updates" if lang == "en" else f"Últimas novedades de {name}"
     rich = rich_sections(lang, slug)  # sets sections_present(slug) as a side effect
     faq = faq_section(lang, slug)
-    toc_keys = sections_present(slug) + ["facts", "updates"] + (["faq"] if faq else [])
+    toc_keys = ["facts"] + sections_present(slug) + ["updates"] + (["faq"] if faq else [])
+    facts_cta = ("These are exactly the details that surprise people at the pier and on the final bill. "
+                 "Call and we'll confirm every one for your ship, cabin and dates — and the best rate our partners can offer."
+                 if lang == "en" else
+                 "Son justo los detalles que sorprenden en el muelle y en la factura final. Llama y confirmamos cada uno "
+                 "para tu barco, camarote y fechas — y la mejor tarifa que nuestros socios pueden ofrecer.")
+    # "The facts that cost money" — moved high on the page (a strong attention section) with its own CTA.
+    facts_section = (f'<section id="s-facts" class="section foam stamped"><div class="wrap">{verified_seal(lang, latest_verified(slug))}'
+                     f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
+                     f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}'
+                     f'<div class="nudge"><p>{facts_cta}</p>'
+                     f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'facts\')">'
+                     f'<span class="ic" aria-hidden="true">☎</span>{"Call now" if lang == "en" else "Llama ahora"} · {PHONE_DISPLAY}</a></div>'
+                     f'</div></section>')
     return (phero(lang, kick, L["name"], L["tag"][lang], crumb)
             + line_compare_hero(lang, slug, name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + line_toc(lang, toc_keys)
+            + facts_section
             + rich
-            + f'<section id="s-facts" class="section foam stamped"><div class="wrap">{verified_seal(lang, latest_verified(slug))}'
-              f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
-              f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}</div></section>'
             + f'<section id="s-updates" class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{upd_kick}</span>'
               f'<h2>{upd_h2}</h2></div>{update_cards(lang, updates_for(slug), show_line_tags=False)}</div></section>'
             + faq

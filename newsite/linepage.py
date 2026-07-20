@@ -161,6 +161,73 @@ def _fleet_inner(lang, slug, name, classes):
     return f'<div class="ship-grid">{cards}</div>{nudge}'
 
 
+# Generic cabin-type descriptions (standard cruise knowledge — applies across lines). Matched by
+# keyword against each line's published cabin category names.
+_CABIN_DESC = [
+    (("interior", "inside"), "🛏️",
+     {"en": "The most affordable rooms — no window, but the same comfy beds, bathroom and service. Perfect if you plan to be out exploring.",
+      "es": "Los camarotes más económicos — sin ventana, pero con las mismas camas, baño y servicio. Ideales si planeas estar fuera explorando."}),
+    (("ocean view", "oceanview", "porthole", "outside", "obstructed"), "🪟",
+     {"en": "A sealed window or porthole onto the sea — natural light and a view, without the extra of a balcony.",
+      "es": "Una ventana o portilla sellada al mar — luz natural y vistas, sin el costo de un balcón."}),
+    (("balcony", "veranda", "verandah", "infinite", "lanai"), "🌅",
+     {"en": "Your own private outdoor space for morning coffee and sail-aways — the most popular choice for good reason.",
+      "es": "Tu propio espacio exterior privado para el café de la mañana y las salidas — la opción más popular."}),
+    (("yacht club", "retreat", "haven", "grill", "neptune", "pinnacle", "signature", "reserve", "sanctuary", "suite"), "👑",
+     {"en": "The top tier — more space and usually extra perks like priority boarding, a private lounge, sundeck or concierge service.",
+      "es": "La categoría superior — más espacio y ventajas como embarque prioritario, salón privado o servicio de conserje."}),
+    (("spa", "aqua"), "💆",
+     {"en": "Wellness-focused cabins with spa perks or thermal-suite access, usually in a quieter part of the ship.",
+      "es": "Camarotes de bienestar con acceso al spa o suite térmica, en una zona más tranquila del barco."}),
+    (("family", "harbor", "harbour"), "👨‍👩‍👧",
+     {"en": "Roomier layouts and connecting options designed with families in mind.",
+      "es": "Distribuciones más amplias y opciones conectadas pensadas para familias."}),
+    (("solo", "single", "studio"), "🧍",
+     {"en": "Cabins designed and priced for one traveller — no paying for an empty second bed.",
+      "es": "Camarotes diseñados y con precio para una persona — sin pagar por una segunda cama vacía."}),
+    (("concierge", "club", "premium"), "✨",
+     {"en": "An enhanced category with upgraded perks and service, sitting between standard rooms and full suites.",
+      "es": "Una categoría mejorada con ventajas y servicio superiores, entre los camarotes estándar y las suites."}),
+]
+
+
+def _cabin_card(name, lang):
+    s = name.lower()
+    emo, desc = "🛏️", {"en": "A distinct room category on this line — ask us exactly what it includes.",
+                        "es": "Una categoría de camarote de esta línea — pregúntanos qué incluye."}
+    for keys, e, d in _CABIN_DESC:
+        if any(k in s for k in keys):
+            emo, desc = e, d
+            break
+    return (f'<article class="cab-card"><span class="cab-emo">{emo}</span>'
+            f'<div class="cab-b"><h3>{name}</h3><p>{desc[lang]}</p></div></article>')
+
+
+_PORT_EMOJI = [
+    (("miami", "lauderdale", "canaveral", "tampa", "palm beach", "jacksonville", "orlando", "fl"), "🌴"),
+    (("seattle", "vancouver", "seward", "whittier", "alaska"), "🏔️"),
+    (("new york", "cape liberty", "brooklyn", "manhattan", "ny", "nj"), "🗽"),
+    (("boston", "baltimore", "norfolk", "quebec", "montreal", "portland"), "🍁"),
+    (("los angeles", "long beach", "san diego", "san francisco", "san pedro", "ca"), "🌉"),
+    (("honolulu", "hawaii", "oahu"), "🌺"),
+    (("galveston", "new orleans", "mobile", "tx", "la ", "texas"), "⚓"),
+    (("san juan", "puerto rico", "pr"), "🏖️"),
+]
+
+
+def _port_emoji(port):
+    s = port.lower()
+    for keys, e in _PORT_EMOJI:
+        if any(k in s for k in keys):
+            return e
+    return "⚓"
+
+
+def _port_card(port):
+    return (f'<article class="port-card"><span class="port-emo" aria-hidden="true">{_port_emoji(port)}</span>'
+            f'<span class="port-nm">{port}</span></article>')
+
+
 _LAST_SECTIONS = {}
 
 
@@ -220,14 +287,13 @@ def rich_sections(lang, slug):
 
     # ── Cabins ──
     cab = L.get("cabins", {})
-    cats = cab.get("categories", [])
+    cats = [x for x in cab.get("categories", []) if not _gap(x)]
     if cats:
-        chips = "".join(f'<span class="ft">{x}</span>' for x in cats if not _gap(x)) or f'<span class="cmp-gap">{GAP[lang]}</span>'
+        cards = "".join(_cabin_card(x, lang) for x in cats)
         nudge = (_nudge(lang, "The right cabin — and the numbers to avoid on each ship — is exactly what an advisor knows."
                  if lang == "en" else
                  "El camarote correcto — y los números a evitar en cada barco — es justo lo que sabe un asesor."))
-        out += _sec("cream", "cabins", lang,
-                    f'<p class="rsec-sub"><b>{_L["cats"][lang]}:</b></p><div class="ship-feats">{chips}</div>{nudge}'); pres.append("cabins")
+        out += _sec("cream", "cabins", lang, f'<div class="cab-grid">{cards}</div>{nudge}'); pres.append("cabins")
 
     # ── Families ──
     fam = L.get("family", {})
@@ -248,8 +314,8 @@ def rich_sections(lang, slug):
     igrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in irows)
     hp = [x for x in (it.get("home_ports") or []) if not _gap(x)]
     if hp:
-        chips = "".join(f'<span class="ft">{x}</span>' for x in hp)
-        ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b></p><div class="ship-feats">{chips}</div>'
+        cards = "".join(_port_card(x) for x in hp)
+        ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b></p><div class="port-grid">{cards}</div>'
     else:
         ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> <span class="cmp-gap">{GAP[lang]}</span></p>'
     out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>{ports_html}'); pres.append("sails")

@@ -393,6 +393,18 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .ship-feat-list{list-style:none;display:grid;gap:.55rem;margin-top:.6rem;max-width:70ch}
 .ship-feat-list li{position:relative;padding-left:1.5em;color:var(--ink);font-size:.95rem;overflow-wrap:anywhere}
 .ship-feat-list li::before{content:"⚓";position:absolute;left:0;color:var(--sea2);font-size:.9em}
+/* cabin cards (described) */
+.cab-grid{display:grid;gap:14px;grid-template-columns:1fr}
+.cab-card{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.cab-emo{font-size:1.5rem;width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--foam);border-radius:12px}
+.cab-b h3{font-family:'Fraunces',serif;font-size:1.06rem;color:var(--navy);margin:0}
+.cab-b p{color:var(--muted);font-size:.9rem;line-height:1.5;margin:.3rem 0 0}
+@media(min-width:720px){.cab-grid{grid-template-columns:1fr 1fr}}
+/* home-port cards (illustrative tiles — real port photos are copyrighted) */
+.port-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));margin-top:.6rem}
+.port-card{display:flex;flex-direction:column;gap:.5rem;background:linear-gradient(135deg,rgba(47,196,192,.15),rgba(143,217,240,.18));border:1px solid var(--line);border-radius:14px;padding:14px}
+.port-emo{font-size:1.8rem;line-height:1}
+.port-nm{font-weight:800;color:var(--navy);font-size:.88rem;line-height:1.25}
 /* rich ship "experience" sections */
 .xsec:nth-of-type(even){background:var(--cream)}
 .xsec .rsec-h .xic{margin-right:.45em;font-size:1em}
