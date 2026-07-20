@@ -517,6 +517,19 @@ section[id^="x-"],#ship-basics,#ship-sisters{scroll-margin-top:84px}
 .destx-card{min-height:132px;transition:transform .15s,box-shadow .15s}
 .destx-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(8,44,66,.22)}
 .destx-card .port-nm{font-size:1.02rem}
+/* destination page anchors under the sticky header */
+section[id^="d-"]{scroll-margin-top:84px}
+/* ports-of-call photo cards */
+.poc-grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:600px){.poc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:920px){.poc-grid{grid-template-columns:1fr 1fr 1fr}}
+.poc-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.poc-media{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,var(--sea3),var(--navy))}
+.poc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poc-media-ph{display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:rgba(255,255,255,.85)}
+.poc-body{padding:14px 16px}
+.poc-body h3{font-size:1.05rem;color:var(--navy);margin:0 0 .3rem}
+.poc-body p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}
 /* ship "where & when it sails" scenery banner */
 .route-img{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;background:linear-gradient(135deg,var(--sea3),var(--navy));margin:0 0 4px}
 .route-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
