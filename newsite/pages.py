@@ -426,20 +426,24 @@ def _faq_block(lang, faqs):
           "mainEntity": [{"@type": "Question", "name": q,
                           "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
     script = '<script type="application/ld+json">' + _json.dumps(ld, ensure_ascii=False) + '</script>'
-    return (f'<section class="section"><div class="wrap"><h2 class="rsec-h">{h}</h2>'
+    return (f'<section class="section" id="d-faq"><div class="wrap"><h2 class="rsec-h">{h}</h2>'
             f'<div class="faq-list">{items}</div>{script}</div></section>')
 
 
 def p_region(lang, slug):
-    from destpage import has_region_guide, region_guide, region_faqs, dest_hero, more_destinations
+    from destpage import has_region_guide, region_guide, region_faqs, dest_hero, more_destinations, dest_toc
     d = _D[slug]
     if has_region_guide(slug):
         crumb = _crumb(lang, f'<a href="/{lang}/destinations.html">{"Destinations" if lang=="en" else "Destinos"}</a>', d["name"][lang])
         sub = (f"When to sail, where you leave from, which ships go — and one call to book."
                if lang == "en" else "Cuándo navegar, desde dónde sales, qué barcos van — y una llamada para reservar.")
+        guide = region_guide(lang, slug, d["name"][lang])  # populates the section list for the TOC
+        faqs = region_faqs(lang, slug, d["name"][lang])
+        toc_extra = [("d-faq", "Common questions" if lang == "en" else "Preguntas frecuentes")] if faqs else []
         return (dest_hero(lang, slug, d["name"][lang], sub, crumb)
-                + region_guide(lang, slug, d["name"][lang])
-                + _faq_block(lang, region_faqs(lang, slug, d["name"][lang]))
+                + dest_toc(lang, extra=toc_extra)
+                + guide
+                + _faq_block(lang, faqs)
                 + more_destinations(lang, slug, DESTINATIONS))
     s = SEASONS.get(slug, {})
     peak = s.get("peak", {}).get(lang, "") if isinstance(s.get("peak"), dict) else ""

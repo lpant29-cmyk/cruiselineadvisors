@@ -10,6 +10,8 @@ via the caller's fallback.
 """
 import json
 import os
+import re
+import unicodedata
 
 from config import PHONE_HREF, PHONE_DISPLAY
 from data import LINES
@@ -229,10 +231,46 @@ def _call(lang, txt, tag):
             f'<span class="ic" aria-hidden="true">☎</span>{c} · {PHONE_DISPLAY}</a></div>')
 
 
-def _sec(cls, title, emoji, inner):
-    return (f'<section class="section {cls}"><div class="wrap">'
+# records (anchor-id, title) for each section the current guide emits, so we can build a TOC.
+_LAST_SECTIONS = []
+
+
+def _sec(cls, key, title, emoji, inner):
+    _LAST_SECTIONS.append((f"d-{key}", title))
+    return (f'<section id="d-{key}" class="section {cls}"><div class="wrap">'
             f'<h2 class="rsec-h"><span class="xic" aria-hidden="true">{emoji}</span>{title}</h2>'
             f'{inner}</div></section>')
+
+
+def dest_toc(lang, extra=None):
+    """'On this page' table of contents for a destination page, from the sections just emitted."""
+    items = list(_LAST_SECTIONS) + (extra or [])
+    if len(items) < 3:
+        return ""
+    lbl = "On this page" if lang == "en" else "En esta página"
+    links = "".join(f'<a class="ship-toc-a" href="#{anchor}">{title}</a>' for anchor, title in items)
+    return (f'<section class="section ship-toc-sec"><div class="wrap">'
+            f'<nav class="ship-toc" aria-label="{lbl}"><span class="ship-toc-l">{lbl}</span>{links}</nav>'
+            f'</div></section>')
+
+
+_CALLS_DIR = os.path.join(_PORTS_DIR, "calls")
+
+
+def _call_slug(name):
+    base = name.split("(")[0].split("/")[0].strip()
+    base = unicodedata.normalize("NFKD", base).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
+
+
+def _call_card(call, lang):
+    """Port-of-call card with a photo header (if we have one) + name + one-line description."""
+    slug = _call_slug(call["name"])
+    img = f"calls/{slug}.jpg" if os.path.exists(os.path.join(_CALLS_DIR, slug + ".jpg")) else None
+    media = (f'<div class="poc-media"><img src="/ports/{img}" alt="{call["name"]}" loading="lazy" decoding="async"></div>'
+             if img else '<div class="poc-media poc-media-ph"><span aria-hidden="true">📍</span></div>')
+    return (f'<article class="poc-card">{media}'
+            f'<div class="poc-body"><h3>{call["name"]}</h3><p>{call["desc"][lang]}</p></div></article>')
 
 
 def _line_fit_cards(lang, line_slugs):
@@ -257,20 +295,20 @@ def _intl_guide(lang, slug, name):
     out = ""
 
     if copy.get("expect"):
-        out += _sec("", ("What to expect" if en else "Qué esperar"), "🧭",
+        out += _sec("", "expect", ("What to expect" if en else "Qué esperar"), "🧭",
                     f'<p class="intro">{copy["expect"][lang]}</p>')
 
     months = set(r["months"])
     strip = "".join(f'<span class="whn-m{" on" if (i + 1) in months else ""}">{_MONTHS[lang][i]}</span>' for i in range(12))
-    out += _sec("cream", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
+    out += _sec("cream", "best-time", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
                 f'<p class="rsec-sub">{r["season"][lang]}.</p><div class="whn-months dest-months">{strip}</div>')
 
     if copy.get("calls"):
-        cards = "".join(_card("📍", c["name"], "", c["desc"][lang]) for c in copy["calls"])
+        cards = "".join(_call_card(c, lang) for c in copy["calls"])
         pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
                  if en else "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
-        out += _sec("", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
-                    f'<div class="xr-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
+        out += _sec("", "calls", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
+                    f'<div class="poc-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
     # getting there (honest: starts from Europe, not a US home port)
     getting = ("These cruises almost always start and end at a European port, so you'll fly in and often "
@@ -278,9 +316,9 @@ def _intl_guide(lang, slug, name):
                if en else
                "Estos cruceros casi siempre empiezan y terminan en un puerto europeo, así que llegarás en avión y "
                "a menudo añadirás una noche antes. Te ayudamos a elegir la salida y planear el viaje — llámanos.")
-    out += _sec("cream", ("Getting there" if en else "Cómo llegar"), "✈️", f'<p class="rsec-sub">{getting}</p>')
+    out += _sec("cream", "getting", ("Getting there" if en else "Cómo llegar"), "✈️", f'<p class="rsec-sub">{getting}</p>')
 
-    out += _sec("", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
+    out += _sec("", "lines", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
                 f'<div class="xr-grid">{_line_fit_cards(lang, r["lines"])}</div>')
 
     docs = ("A valid passport is required — these itineraries start abroad and visit multiple countries. "
@@ -288,17 +326,18 @@ def _intl_guide(lang, slug, name):
             if en else
             "Se requiere pasaporte vigente — estos itinerarios empiezan en el extranjero y visitan varios países. "
             "Revisa las reglas de visado para tu nacionalidad y cada país de la ruta antes de reservar.")
-    out += _sec("", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
+    out += _sec("", "docs", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
                 f'<p class="rsec-sub">{docs}</p>')
 
     call = "Call now" if en else "Llama ahora"
-    out += _sec("cream", ("Plan this trip" if en else "Planea este viaje"), "📞",
+    out += _sec("cream", "plan", ("Plan this trip" if en else "Planea este viaje"), "📞",
                 _call(lang, (f"Tell us your dates for {name} and we'll match the ship, the itinerary and the best rate our partners can offer."
                              if en else f"Dinos tus fechas para {name} y emparejamos el barco, el itinerario y la mejor tarifa."), "dest-intl-cta"))
     return out
 
 
 def region_guide(lang, slug, name):
+    _LAST_SECTIONS.clear()
     if slug in INTL and slug not in _DEP:
         return _intl_guide(lang, slug, name)
     r = _DEP[slug]
@@ -311,7 +350,7 @@ def region_guide(lang, slug, name):
 
     # what to expect
     if copy.get("expect"):
-        out += _sec("", ("What to expect" if en else "Qué esperar"), "🧭",
+        out += _sec("", "expect", ("What to expect" if en else "Qué esperar"), "🧭",
                     f'<p class="intro">{copy["expect"][lang]}</p>')
 
     # best time — month strip
@@ -325,7 +364,7 @@ def region_guide(lang, slug, name):
                 ("Atlantic hurricane season runs 1 Jun–30 Nov. Sailings still operate and reroute when needed — travel insurance matters more in these months."
                  if en else
                  "La temporada de huracanes del Atlántico va del 1 jun al 30 nov. Los cruceros operan y se redirigen cuando hace falta — el seguro de viaje importa más en estos meses.") + '</p>')
-    out += _sec("cream", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
+    out += _sec("cream", "best-time", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
                 f'<p class="rsec-sub">{r["season"]}.</p><div class="whn-months dest-months">{strip}</div>{warn}')
 
     # where you sail from — port cards with photos
@@ -341,17 +380,17 @@ def region_guide(lang, slug, name):
     ports_note = ("These are the US and Canada home ports ships depart from for this region — drive or fly in the day before."
                   if en else
                   "Estos son los puertos base de EE.UU. y Canadá desde donde zarpan los barcos de esta región — llega en auto o avión el día antes.")
-    out += _sec("", ("Where you sail from" if en else "Desde dónde zarpas"), "⚓",
+    out += _sec("", "ports", ("Where you sail from" if en else "Desde dónde zarpas"), "⚓",
                 f'<div class="port-grid">{pcards}</div><p class="note-line" style="margin-top:16px">{ports_note}</p>')
 
     # typical ports of call — described cards
     if copy.get("calls"):
-        cards = "".join(_card("📍", c["name"], "", c["desc"][lang]) for c in copy["calls"])
+        cards = "".join(_call_card(c, lang) for c in copy["calls"])
         pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
                  if en else
                  "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
-        out += _sec("cream", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
-                    f'<div class="xr-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
+        out += _sec("cream", "calls", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
+                    f'<div class="poc-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
     # ships that sail here — grouped by line
     if n_ships:
@@ -373,7 +412,7 @@ def region_guide(lang, slug, name):
         snote = ("Every ship above sails this region on its own published itinerary. Availability by date changes constantly — one call confirms what's open for you."
                  if en else
                  "Cada barco de arriba navega esta región según su propio itinerario publicado. La disponibilidad por fecha cambia constantemente — una llamada confirma qué hay para ti.")
-        out += _sec("", ("Ships that sail here" if en else "Barcos que navegan aquí"), "🚢",
+        out += _sec("", "ships", ("Ships that sail here" if en else "Barcos que navegan aquí"), "🚢",
                     f'{blocks}<p class="note-line" style="margin-top:8px">{snote}</p>')
 
     # which line fits
@@ -385,7 +424,7 @@ def region_guide(lang, slug, name):
         lcards += _card(L["emo"], L["name"], L["cat"][lang], L["tag"][lang]
                         + f' <a class="dest-linelink" href="/{lang}/lines/{line_slug}/">'
                         + ("Guide →" if en else "Guía →") + "</a>")
-    out += _sec("cream", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
+    out += _sec("cream", "lines", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
                 f'<div class="xr-grid">{lcards}</div>')
 
     # documents & practicalities (general, compliant)
@@ -397,7 +436,7 @@ def region_guide(lang, slug, name):
             "(closed-loop), los ciudadanos estadounidenses pueden viajar con acta de nacimiento y una identificación "
             "con foto — pero se recomienda un pasaporte, y es obligatorio para cualquier crucero que empiece o termine "
             "en el extranjero. Confirma los requisitos de tu itinerario y nacionalidad antes de reservar.")
-    out += _sec("", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
+    out += _sec("", "docs", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
                 f'<p class="rsec-sub">{docs}</p>'
                 f'<p class="note-line" style="margin-top:12px"><a href="/{lang}/cruise-facts/">'
                 + ("See all the cruise facts that cost you money →" if en else "Ve todos los datos que cuestan dinero →")
@@ -406,7 +445,7 @@ def region_guide(lang, slug, name):
     # finder + call CTA
     finder = ("Ready to see real sailings? Use the finder to line up the ships for this region — then one call books the right one."
               if en else "¿Listo para ver salidas reales? Usa el buscador para alinear los barcos de esta región — luego una llamada reserva el correcto.")
-    out += _sec("", ("Find your sailing" if en else "Encuentra tu salida"), "🔎",
+    out += _sec("", "find", ("Find your sailing" if en else "Encuentra tu salida"), "🔎",
                 f'<p class="rsec-sub">{finder}</p>'
                 f'<p style="margin-top:14px"><a class="btn btn-ghost" href="/{lang}/compare/">'
                 + ("Open the cruise finder →" if en else "Abrir el buscador →") + "</a></p>"
