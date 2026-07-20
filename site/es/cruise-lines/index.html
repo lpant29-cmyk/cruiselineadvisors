@@ -613,7 +613,7 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .vseal{display:inline-block;color:var(--sea3);line-height:0;transform:rotate(-8deg)}
 .vseal svg{display:block;width:118px;height:118px}
 .vseal-arc,.vseal-mid,.vseal-di{fill:currentColor;font-family:'Inter',system-ui,sans-serif;text-anchor:middle}
-.vseal-arc{font-weight:800;font-size:14.5px;letter-spacing:1.4px}
+.vseal-arc{font-weight:800;font-size:12px;letter-spacing:.4px}
 .vseal-mid{font-weight:800;font-size:13px;letter-spacing:2px}
 .vseal-di{font-size:12px}
 .stamped{position:relative}
@@ -626,6 +626,14 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
   .stamped .sec-head,.stamped>.wrap>.rsec-h{padding-right:0}
 }
 @media(prefers-reduced-motion:no-preference){.stamped .vseal{transition:transform .2s}.stamped:hover .vseal{transform:rotate(-3deg) scale(1.03)}}
+/* verified seal in the page hero (gold on the dark hero) */
+.phero .wrap{position:relative}
+.phero-seal{position:absolute;top:2px;right:0;z-index:2;pointer-events:none}
+.phero-seal .vseal{color:#E7C67B}
+.phero-seal .vseal svg{width:104px;height:104px}
+.phero h1,.phero-sub{max-width:min(100%,62ch)}
+@media(min-width:760px){.phero h1{max-width:72%}}
+@media(max-width:520px){.phero-seal .vseal svg{width:70px;height:70px}.phero .wrap:has(.phero-seal) h1,.phero .wrap:has(.phero-seal) .phero-sub{padding-right:76px}}
 
 /* ═══ content pages ═══ */
 .phero{padding:34px 0 40px}
@@ -774,7 +782,7 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
         <b style="color:#fff;font-family:'Fraunces',serif;font-size:1.2rem">CruiseLine<span style="color:#E0A84E">Advisors</span></b>
         <p>Servicio independiente de información y referencia de cruceros. <b style="color:#C9DBE5">Horario de atención:</b> 8am–11pm ET, todos los días.</p>
         <p><a href="tel:+18885550142" style="color:#E0A84E;font-weight:800;display:inline">☎ +1 (888) 555-0142</a></p>
-        <div class="foot-seal"><span class="vseal" role="img" aria-label="VERIFICADO OFICIAL — REVISADO JUL 18, 2026"><svg viewBox="0 0 200 200" width="122" height="122" aria-hidden="true"><defs><path id="vs-t293" d="M 30 100 A 70 70 0 0 1 170 100"/><path id="vs-b293" d="M 33 103 A 67 67 0 0 0 167 103"/></defs><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="1.4"/><text class="vseal-arc"><textPath href="#vs-t293" startOffset="50%">VERIFICADO OFICIAL</textPath></text><text class="vseal-arc"><textPath href="#vs-b293" startOffset="50%">REVISADO JUL 18, 2026</textPath></text><text class="vseal-di" x="16" y="105">&#9670;</text><text class="vseal-di" x="184" y="105">&#9670;</text><g fill="currentColor"><path d="M75 92 H125 L119 100 H81 Z"/><rect x="83" y="84" width="34" height="8" rx="1.5"/><rect x="89" y="78" width="22" height="6" rx="1.5"/><rect x="97.5" y="72" width="5.5" height="7" rx="1"/></g><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="107" r="3"/><line x1="100" y1="110" x2="100" y2="126"/><line x1="91" y1="114" x2="109" y2="114"/><path d="M87 120 Q100 132 113 120 M87 120 L84 115 M113 120 L116 115"/></g></svg></span><small>Todos los datos verificados de sitios oficiales de las líneas</small></div>
+        <div class="foot-seal"><span class="vseal" role="img" aria-label="VERIFICADO POR NOSOTROS — REVISADO JUL 18, 2026"><svg viewBox="0 0 200 200" width="122" height="122" aria-hidden="true"><defs><path id="vs-t293" d="M 30 100 A 70 70 0 0 1 170 100"/><path id="vs-b293" d="M 33 103 A 67 67 0 0 0 167 103"/></defs><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="1.4"/><text class="vseal-arc"><textPath href="#vs-t293" startOffset="50%">VERIFICADO POR NOSOTROS</textPath></text><text class="vseal-arc"><textPath href="#vs-b293" startOffset="50%">REVISADO JUL 18, 2026</textPath></text><text class="vseal-di" x="16" y="105">&#9670;</text><text class="vseal-di" x="184" y="105">&#9670;</text><g fill="currentColor"><path d="M75 92 H125 L119 100 H81 Z"/><rect x="83" y="84" width="34" height="8" rx="1.5"/><rect x="89" y="78" width="22" height="6" rx="1.5"/><rect x="97.5" y="72" width="5.5" height="7" rx="1"/></g><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="107" r="3"/><line x1="100" y1="110" x2="100" y2="126"/><line x1="91" y1="114" x2="109" y2="114"/><path d="M87 120 Q100 132 113 120 M87 120 L84 115 M113 120 L116 115"/></g></svg></span><small>Todos los datos verificados de sitios oficiales de las líneas</small></div>
       </div>
       <div>
         <h4>Líneas de Crucero</h4>

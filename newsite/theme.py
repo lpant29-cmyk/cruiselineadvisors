@@ -584,7 +584,7 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .vseal{display:inline-block;color:var(--sea3);line-height:0;transform:rotate(-8deg)}
 .vseal svg{display:block;width:118px;height:118px}
 .vseal-arc,.vseal-mid,.vseal-di{fill:currentColor;font-family:'Inter',system-ui,sans-serif;text-anchor:middle}
-.vseal-arc{font-weight:800;font-size:14.5px;letter-spacing:1.4px}
+.vseal-arc{font-weight:800;font-size:12px;letter-spacing:.4px}
 .vseal-mid{font-weight:800;font-size:13px;letter-spacing:2px}
 .vseal-di{font-size:12px}
 .stamped{position:relative}
@@ -597,6 +597,14 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
   .stamped .sec-head,.stamped>.wrap>.rsec-h{padding-right:0}
 }
 @media(prefers-reduced-motion:no-preference){.stamped .vseal{transition:transform .2s}.stamped:hover .vseal{transform:rotate(-3deg) scale(1.03)}}
+/* verified seal in the page hero (gold on the dark hero) */
+.phero .wrap{position:relative}
+.phero-seal{position:absolute;top:2px;right:0;z-index:2;pointer-events:none}
+.phero-seal .vseal{color:#E7C67B}
+.phero-seal .vseal svg{width:104px;height:104px}
+.phero h1,.phero-sub{max-width:min(100%,62ch)}
+@media(min-width:760px){.phero h1{max-width:72%}}
+@media(max-width:520px){.phero-seal .vseal svg{width:70px;height:70px}.phero .wrap:has(.phero-seal) h1,.phero .wrap:has(.phero-seal) .phero-sub{padding-right:76px}}
 
 /* ═══ content pages ═══ */
 .phero{padding:34px 0 40px}

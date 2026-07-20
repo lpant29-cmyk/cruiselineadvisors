@@ -48,7 +48,7 @@ _T = {
                        ("todo", "Most to do"), ("accessible", "Accessible cabins")],
            "rows": [("who", "Best for"), ("route", "Where it sails"), ("cls", "Ship class"),
                     ("year", "Entered service"), ("guests", "Guests"), ("dine", "Dining venues"),
-                    ("acts", "Things to do"), ("grat", "Daily gratuities"),
+                    ("acts", "Things to do"), ("kids", "Kids & families"), ("grat", "Daily gratuities"),
                     ("incl", "What's included"), ("drink", "Drink-package rule"),
                     ("cancel", "Cancellation")]},
     "es": {"dest": "¿A dónde quieres navegar?", "port": "Zarpar desde", "when": "Cuándo",
@@ -75,6 +75,7 @@ _T = {
                        ("todo", "Más que hacer"), ("accessible", "Camarotes accesibles")],
            "rows": [("who", "Ideal para"), ("route", "Dónde navega"), ("cls", "Clase"),
                     ("year", "En servicio"), ("guests", "Huéspedes"), ("dine", "Restaurantes"),
+                    ("kids", "Niños y familias"),
                     ("acts", "Actividades"), ("grat", "Propinas diarias"),
                     ("incl", "Qué se incluye"), ("drink", "Regla de bebidas"),
                     ("cancel", "Cancelación")]},
@@ -86,6 +87,16 @@ def _who_short(who, n=150):
         return ""
     who = who.strip()
     return who if len(who) <= n else who[:n].rsplit(" ", 1)[0] + "…"
+
+
+def _kids(kf):
+    if not kf:
+        return None
+    if isinstance(kf, list):
+        n = [x.get("name") if isinstance(x, dict) else x for x in kf
+             if (isinstance(x, dict) and x.get("name")) or isinstance(x, str)]
+        return " · ".join(str(x) for x in n if x) or None
+    return kf if isinstance(kf, str) else None
 
 
 def _flags(who, positioning):
@@ -124,7 +135,7 @@ def _payload(lang):
             "id": f"{line_slug}::{s['name']}", "name": s["name"], "line": _NAME.get(line_slug, line_slug),
             "emo": _EMO.get(line_slug, "🚢"), "url": f"/{lang}/lines/{line_slug}/ships/{slugify(s['name'])}/",
             "guests": s.get("guests"), "year": s.get("year"), "cls": s.get("class"),
-            "who": _who_short(who), "route": exp.get("deploy_note"),
+            "who": _who_short(who), "route": exp.get("deploy_note"), "kids": _kids(exp.get("kids_family")),
             "dine": len(exp.get("dining") or []), "acts": len(acts) if isinstance(acts, list) else 0,
             "regions": regs, "fam": fl["fam"], "cpl": fl["cpl"], "lux": fl["lux"], "val": fl["val"], "solo": solo,
             "grat": fv("gratuities"), "incl": fv("included"), "drink": fv("drink_pkg"), "cancel": fv("cancel"),

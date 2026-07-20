@@ -243,8 +243,23 @@ def _port_img(port):
 
 
 def _port_card(port):
-    return (f'<article class="port-card"><img src="/ports/{_port_img(port)}" alt="" loading="lazy">'
+    return (f'<article class="port-card"><img src="/ports/{_port_img(port)}" alt="" loading="lazy" decoding="async">'
             f'<span class="port-nm">{port}</span></article>')
+
+
+def _kids_card(x):
+    nm = x.get("name") if isinstance(x, dict) else str(x)
+    desc = x.get("desc", "") if isinstance(x, dict) else ""
+    if not nm:
+        return ""
+    s = nm.lower()
+    emo = "🧒"
+    if any(k in s for k in ("nursery", "baby", "infant", "toddler")):
+        emo = "👶"
+    elif "teen" in s:
+        emo = "🧑"
+    body = f'<p>{desc}</p>' if desc else ""
+    return f'<article class="cab-card"><span class="cab-emo">{emo}</span><div class="cab-b"><h3>{nm}</h3>{body}</div></article>'
 
 
 _LAST_SECTIONS = {}
@@ -318,7 +333,24 @@ def rich_sections(lang, slug):
     fam = L.get("family", {})
     frows = [("kidsclub", fam.get("kids_club_name")), ("minage", fam.get("minimum_sailing_age"))]
     fgrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in frows)
-    out += _sec("", "family", lang, f'<div class="glance-grid">{fgrid}</div>'); pres.append("family")
+    # kids clubs are fleet-wide brands — surface a ship's enriched kids programme on the line page too.
+    kids_detail = None
+    for sh in ships_for(slug):
+        kf = (sh.get("exp") or {}).get("kids_family")
+        if kf:
+            kids_detail = kf
+            break
+    extra = ""
+    if kids_detail:
+        lbl = "What's on board for kids & teens" if lang == "en" else "Qué hay a bordo para niños y adolescentes"
+        if isinstance(kids_detail, list):
+            cards = "".join(_kids_card(x) for x in kids_detail if x)
+            extra = f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b></p><div class="cab-grid">{cards}</div>'
+        else:
+            extra = f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b> {kids_detail}</p>'
+    nudge = (_nudge(lang, "Travelling with kids? An advisor books connecting cabins, dining times and the right club — and finds the family deals." if lang == "en"
+             else "¿Viajas con niños? Un asesor reserva camarotes conectados, horarios de comida y el club correcto — y encuentra ofertas familiares."))
+    out += _sec("", "family", lang, f'<div class="glance-grid">{fgrid}</div>{extra}{nudge}'); pres.append("family")
 
     # ── Accessibility ──
     acc = L.get("accessibility", {})

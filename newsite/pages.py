@@ -23,8 +23,9 @@ _L = {L["slug"]: L for L in LINES}
 _D = {d["slug"]: d for d in DESTINATIONS}
 
 
-def phero(lang, kicker, h1, sub, crumb):
-    return f"""<section class="section navy phero"><div class="wrap">
+def phero(lang, kicker, h1, sub, crumb, seal=""):
+    seal_html = f'<div class="phero-seal">{seal}</div>' if seal else ""
+    return f"""<section class="section navy phero"><div class="wrap">{seal_html}
   <p class="crumbs">{crumb}</p>
   <span class="eyebrow" style="color:#7FD4D0">{kicker}</span>
   <h1>{h1}</h1><p class="phero-sub">{sub}</p>
@@ -136,14 +137,14 @@ def p_line(lang, slug):
                  "Son justo los detalles que sorprenden en el muelle y en la factura final. Llama y confirmamos cada uno "
                  "para tu barco, camarote y fechas — y la mejor tarifa que nuestros socios pueden ofrecer.")
     # "The facts that cost money" — moved high on the page (a strong attention section) with its own CTA.
-    facts_section = (f'<section id="s-facts" class="section foam stamped"><div class="wrap">{verified_seal(lang, latest_verified(slug))}'
+    facts_section = (f'<section id="s-facts" class="section foam"><div class="wrap">'
                      f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
                      f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}'
                      f'<div class="nudge"><p>{facts_cta}</p>'
                      f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'facts\')">'
                      f'<span class="ic" aria-hidden="true">☎</span>{"Call now" if lang == "en" else "Llama ahora"} · {PHONE_DISPLAY}</a></div>'
                      f'</div></section>')
-    return (phero(lang, kick, L["name"], L["tag"][lang], crumb)
+    return (phero(lang, kick, L["name"], L["tag"][lang], crumb, seal=verified_seal(lang, latest_verified(slug)))
             + line_compare_hero(lang, slug, name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + line_toc(lang, toc_keys)
@@ -264,12 +265,11 @@ def p_ship(lang, line_slug, sslug):
             f'← {"All " + L["name"] + " ships" if lang=="en" else "Todos los barcos de " + L["name"]}</a>')
 
     # the ship-compare tool now lives in the Compare-hero band at the top of the page.
-    return (phero(lang, kick, name, sub, crumb)
+    return (phero(lang, kick, name, sub, crumb, seal=(verified_seal(lang, ship_source(line_slug)[1]) if _has_specs else ""))
             + compare_hero(lang, default_a=f"{line_slug}::{sslug}", ship_name=name)
             + f'<section class="section"><div class="wrap blk"><p class="intro">{intro}</p></div></section>'
             + ship_banner(lang)
-            + f'<section class="section cream{" stamped" if _has_specs else ""}"><div class="wrap">'
-              f'{verified_seal(lang, ship_source(line_slug)[1]) if _has_specs else ""}'
+            + f'<section class="section cream"><div class="wrap">'
               f'<h2 class="rsec-h">{specs_h}</h2>'
               f'<div class="glance-grid">{specs}</div>{feats_block}'
               f'<p class="note-line" style="margin-top:20px">{note}</p>'

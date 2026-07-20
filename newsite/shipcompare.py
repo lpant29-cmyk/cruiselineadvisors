@@ -19,6 +19,7 @@ _ROWS = {
         {"k": "class", "label": "Ship class"}, {"k": "year", "label": "Entered service"},
         {"k": "guests", "label": "Guests"}, {"k": "tonnage", "label": "Gross tonnage"},
         {"k": "dine", "label": "Places to eat"}, {"k": "acts", "label": "Things to do"},
+        {"k": "kids", "label": "Kids & families"},
         {"group": "Cost & the fine print (line policy)"},
         {"k": "gratuities", "label": "Daily gratuities"},
         {"k": "included", "label": "What's included vs extra"},
@@ -34,6 +35,7 @@ _ROWS = {
         {"k": "class", "label": "Clase"}, {"k": "year", "label": "En servicio desde"},
         {"k": "guests", "label": "Huéspedes"}, {"k": "tonnage", "label": "Tonelaje bruto"},
         {"k": "dine", "label": "Dónde comer"}, {"k": "acts", "label": "Qué hacer"},
+        {"k": "kids", "label": "Niños y familias"},
         {"group": "Costo y la letra pequeña (política de la línea)"},
         {"k": "gratuities", "label": "Propinas diarias"},
         {"k": "included", "label": "Qué se incluye vs extra"},
@@ -109,6 +111,17 @@ def _sid(line_slug, name):
     return f"{line_slug}::{slugify(name)}"
 
 
+def _kids(kf):
+    """Compact kids/family summary from a ship's enriched kids_family (string or list of {name,desc})."""
+    if not kf:
+        return None
+    if isinstance(kf, list):
+        n = [x.get("name") if isinstance(x, dict) else x for x in kf
+             if (isinstance(x, dict) and x.get("name")) or isinstance(x, str)]
+        return " · ".join(str(x) for x in n if x) or None
+    return kf if isinstance(kf, str) else None
+
+
 def _payload(lang):
     ships = []
     for line_slug, s in all_ships():
@@ -133,6 +146,7 @@ def _payload(lang):
             "tonnage": s.get("tonnage"),
             "who": exp.get("who_for"),
             "route": exp.get("deploy_note"),
+            "kids": _kids(exp.get("kids_family")),
             "dine": len(exp.get("dining") or []),
             "acts": len(acts) if isinstance(acts, list) else 0,
         }

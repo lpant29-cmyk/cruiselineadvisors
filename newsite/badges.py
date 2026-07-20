@@ -33,9 +33,11 @@ def verified_stamp(lang, date=None):
             f'<span class="vstamp-t">{_LABEL[lang]}</span>{datepart}</span>')
 
 
+# NOTE: the seal is OUR independent verification of data we read from the lines' official sites —
+# it must never read as an official cruise-line page/endorsement (Hard Rule 2). Keep wording clear.
 _SEAL_TEXT = {
-    "en": {"top": "OFFICIALLY VERIFIED", "bot": "CHECKED", "mid": "SOURCE"},
-    "es": {"top": "VERIFICADO OFICIAL", "bot": "REVISADO", "mid": "FUENTE"},
+    "en": {"top": "INDEPENDENTLY VERIFIED", "bot": "CHECKED", "mid": "SOURCE"},
+    "es": {"top": "VERIFICADO POR NOSOTROS", "bot": "REVISADO", "mid": "FUENTE"},
 }
 _seal_n = [0]
 
