@@ -114,6 +114,7 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 <style>{CSS}</style>
 </head>
 <body>
+{_analytics_body()}
 <a href="#main" class="skip">{'Skip to content' if lang=='en' else 'Saltar al contenido'}</a>
 {header(lang, page_path)}
 <main id="main">{content}</main>
