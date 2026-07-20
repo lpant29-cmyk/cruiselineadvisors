@@ -53,57 +53,129 @@ def _ships_by_line(slug):
 
 
 # ── per-region editorial copy (facts only; original wording) ─────────────────────────────────────
-# expect: 1–2 sentence "what to expect". calls: marquee ports of call (well-known geographic stops).
+# expect: 1–2 sentence "what to expect". calls: marquee ports of call as {name, desc} — factual,
+# well-known geographic stops described in our own words (NO prices).
+def _c(name, en, es):
+    return {"name": name, "desc": {"en": en, "es": es}}
+
+
 DEST_COPY = {
     "caribbean": {
         "expect": {"en": "Warm water, short flights to the port, and a mix of beach days and island stops. Eastern routes lean to lush, hilly islands; western routes add Mexico and Central America; southern routes reach the quieter, further-out islands.",
                    "es": "Agua cálida, vuelos cortos al puerto y una mezcla de días de playa y paradas en islas. Las rutas del este tienden a islas verdes; las del oeste añaden México y Centroamérica; las del sur llegan a islas más lejanas y tranquilas."},
-        "calls": ["Cozumel", "Grand Cayman", "Nassau", "Perfect Day at CocoCay", "St. Thomas", "St. Maarten", "San Juan", "Roatán"],
+        "calls": [
+            _c("Cozumel", "Mexico's dive-and-beach island off the Yucatán — a Western-Caribbean staple.", "La isla de buceo y playa de México frente a Yucatán — clásica del Caribe occidental."),
+            _c("Grand Cayman", "Tender port known for Seven Mile Beach and Stingray City.", "Puerto de fondeo famoso por Seven Mile Beach y Stingray City."),
+            _c("Nassau", "The Bahamian capital — forts, markets and Paradise Island next door.", "La capital de Bahamas — fuertes, mercados y Paradise Island al lado."),
+            _c("Perfect Day at CocoCay", "Royal Caribbean's private Bahamian island with a waterpark and beaches.", "La isla privada de Royal Caribbean en Bahamas, con parque acuático y playas."),
+            _c("St. Thomas", "US Virgin Islands port known for Magens Bay and duty-free shopping.", "Puerto de las Islas Vírgenes de EE.UU., famoso por Magens Bay y compras libres de impuestos."),
+            _c("St. Maarten", "Half-Dutch, half-French island with beaches and lively Philipsburg.", "Isla mitad holandesa, mitad francesa, con playas y el animado Philipsburg."),
+            _c("San Juan", "Old San Juan's blue-cobbled streets and Spanish forts, in Puerto Rico.", "Las calles empedradas y fuertes españoles del Viejo San Juan, en Puerto Rico."),
+            _c("Roatán", "Honduran island on the Mesoamerican Reef — snorkelling and beaches.", "Isla hondureña en el Arrecife Mesoamericano — snorkel y playas."),
+        ],
     },
     "bahamas": {
         "expect": {"en": "The quickest warm-weather cruise from Florida — often 3–5 nights, heavy on private islands and easy first-timer itineraries.",
                    "es": "El crucero cálido más rápido desde Florida — a menudo de 3–5 noches, con muchas islas privadas e itinerarios fáciles para primerizos."},
-        "calls": ["Nassau", "Freeport", "Perfect Day at CocoCay", "Ocean Cay", "Great Stirrup Cay", "Half Moon Cay"],
+        "calls": [
+            _c("Nassau", "The capital — forts, beaches and Paradise Island a bridge away.", "La capital — fuertes, playas y Paradise Island a un puente de distancia."),
+            _c("Freeport", "Grand Bahama's port for beaches, markets and reef trips.", "El puerto de Gran Bahama para playas, mercados y excursiones al arrecife."),
+            _c("Perfect Day at CocoCay", "Royal Caribbean's private-island waterpark and beaches.", "El parque acuático y las playas de la isla privada de Royal Caribbean."),
+            _c("Ocean Cay", "MSC's private Bahamian marine-reserve island.", "La isla-reserva marina privada de MSC en Bahamas."),
+            _c("Great Stirrup Cay", "Norwegian's private out-island beach day.", "El día de playa en la isla privada de Norwegian."),
+            _c("Half Moon Cay", "Holland America and Carnival's private crescent-beach island.", "La isla privada de playa en media luna de Holland America y Carnival."),
+        ],
     },
     "alaska": {
         "expect": {"en": "Glaciers, whales and green-mountain fjords on a tight May–September window. Choose a round-trip (usually from Seattle or Vancouver) or a one-way Gulf cruise that pairs with a land tour.",
                    "es": "Glaciares, ballenas y fiordos de montañas verdes en una ventana corta de mayo a septiembre. Elige ida y vuelta (normalmente desde Seattle o Vancouver) o un crucero de una vía por el Golfo que se combina con un tour terrestre."},
-        "calls": ["Juneau", "Ketchikan", "Skagway", "Glacier Bay", "Icy Strait Point", "Sitka", "Hubbard Glacier"],
+        "calls": [
+            _c("Juneau", "The capital, reachable only by sea or air — Mendenhall Glacier and whale-watching.", "La capital, a la que solo se llega por mar o aire — el glaciar Mendenhall y avistamiento de ballenas."),
+            _c("Ketchikan", "Totem poles, salmon runs and the Misty Fjords.", "Tótems, salmón y los Misty Fjords."),
+            _c("Skagway", "Gold-Rush town and the historic White Pass railway.", "Pueblo de la fiebre del oro y el histórico ferrocarril del White Pass."),
+            _c("Glacier Bay", "A national park of tidewater glaciers seen by scenic cruising (no dock).", "Un parque nacional de glaciares de marea que se ve navegando (sin muelle)."),
+            _c("Icy Strait Point", "Native-owned port near Hoonah — whales and the world's longest zipline.", "Puerto de propiedad nativa cerca de Hoonah — ballenas y la tirolesa más larga del mundo."),
+            _c("Sitka", "Russian-Alaskan history on the wilder outer coast.", "Historia ruso-alaskeña en la costa exterior más salvaje."),
+            _c("Hubbard Glacier", "A huge, actively calving glacier visited by scenic cruising.", "Un glaciar enorme y activo que se visita navegando."),
+        ],
     },
     "bermuda": {
         "expect": {"en": "Pink-sand beaches and turquoise water a short hop off the US East Coast. Ships usually dock for multiple days at the Royal Naval Dockyard, so it feels part-cruise, part-resort.",
                    "es": "Playas de arena rosada y agua turquesa a poca distancia de la costa este de EE.UU. Los barcos suelen atracar varios días en el Royal Naval Dockyard, así que es parte crucero, parte resort."},
-        "calls": ["King's Wharf (Royal Naval Dockyard)", "Hamilton", "St. George's"],
+        "calls": [
+            _c("King's Wharf (Royal Naval Dockyard)", "The main cruise port — museum, beaches and ferries to town.", "El puerto principal — museo, playas y ferris al centro."),
+            _c("Hamilton", "The capital, with shops along pastel Front Street.", "La capital, con tiendas en la colorida Front Street."),
+            _c("St. George's", "A UNESCO-listed old town, Bermuda's original settlement.", "Un casco antiguo declarado por la UNESCO, el primer asentamiento de Bermudas."),
+        ],
     },
     "mexican-riviera": {
         "expect": {"en": "Pacific-coast Mexico from Southern California — beaches, tacos and desert-meets-sea scenery, usually on round-trips from Los Angeles or San Diego.",
                    "es": "El Pacífico mexicano desde el sur de California — playas, tacos y paisaje de desierto y mar, normalmente en cruceros de ida y vuelta desde Los Ángeles o San Diego."},
-        "calls": ["Cabo San Lucas", "Puerto Vallarta", "Mazatlán", "Ensenada"],
+        "calls": [
+            _c("Cabo San Lucas", "Land's End, the famous arch and Baja beaches (a tender port).", "Land's End, el famoso arco y las playas de Baja (puerto de fondeo)."),
+            _c("Puerto Vallarta", "Banderas Bay beaches and the Malecón boardwalk.", "Las playas de Bahía de Banderas y el Malecón."),
+            _c("Mazatlán", "A historic centre, the Malecón and Pacific beaches.", "Un centro histórico, el Malecón y playas del Pacífico."),
+            _c("Ensenada", "Baja wine country and La Bufadora blowhole, near San Diego.", "La región vinícola de Baja y el bufadero La Bufadora, cerca de San Diego."),
+        ],
     },
     "canada-new-england": {
         "expect": {"en": "Lighthouses, lobster and fall colour from New York or Boston up to the Canadian Maritimes and the St. Lawrence. September–October is the classic leaf-peeping window.",
                    "es": "Faros, langosta y colores de otoño desde Nueva York o Boston hasta las Marítimas canadienses y el San Lorenzo. Septiembre–octubre es la ventana clásica del follaje otoñal."},
-        "calls": ["Halifax", "Saint John", "Bar Harbor", "Portland", "Quebec City", "Sydney"],
+        "calls": [
+            _c("Halifax", "Nova Scotia's harbour city — the Citadel, waterfront and Peggy's Cove nearby.", "La ciudad portuaria de Nueva Escocia — la Ciudadela, el paseo marítimo y Peggy's Cove cerca."),
+            _c("Saint John", "New Brunswick port for the Bay of Fundy's record tides.", "Puerto de Nuevo Brunswick para las mareas récord de la Bahía de Fundy."),
+            _c("Bar Harbor", "Gateway to Maine's Acadia National Park (a tender port).", "Puerta de entrada al Parque Nacional Acadia de Maine (puerto de fondeo)."),
+            _c("Portland", "Maine lighthouses, lobster and the Old Port district.", "Faros de Maine, langosta y el distrito Old Port."),
+            _c("Quebec City", "A walled French-Canadian old town on the St. Lawrence.", "Un casco antiguo francocanadiense amurallado sobre el San Lorenzo."),
+            _c("Sydney", "A Cape Breton port and gateway to the Cabot Trail.", "Un puerto de Cape Breton y puerta al Cabot Trail."),
+        ],
     },
     "hawaii": {
         "expect": {"en": "Multiple islands on one trip, with more sea days than a Caribbean cruise. Round-trips from the mainland are long; inter-island sailings pack four islands into a week.",
                    "es": "Varias islas en un viaje, con más días de mar que un crucero por el Caribe. Los cruceros de ida y vuelta desde el continente son largos; los inter-islas reúnen cuatro islas en una semana."},
-        "calls": ["Honolulu (Oahu)", "Kahului (Maui)", "Kona", "Hilo", "Nawiliwili (Kauai)", "Ensenada"],
+        "calls": [
+            _c("Honolulu (Oahu)", "Waikiki, Pearl Harbor and Diamond Head.", "Waikiki, Pearl Harbor y Diamond Head."),
+            _c("Kahului (Maui)", "The Road to Hana, Haleakalā and Lahaina.", "La carretera a Hana, Haleakalā y Lahaina."),
+            _c("Kona", "Big Island coffee, snorkelling and volcano country (a tender port).", "Café de Big Island, snorkel y tierra de volcanes (puerto de fondeo)."),
+            _c("Hilo", "The lush gateway to Volcanoes National Park and waterfalls.", "La puerta verde al Parque Nacional de los Volcanes y las cascadas."),
+            _c("Nawiliwili (Kauai)", "The Garden Isle — the Na Pali coast and canyons.", "La Isla Jardín — la costa Na Pali y sus cañones."),
+            _c("Ensenada", "A required foreign stop in Mexico on round-trip Hawaii sailings.", "Una escala extranjera obligatoria en México en los cruceros de ida y vuelta a Hawái."),
+        ],
     },
     "panama-canal": {
         "expect": {"en": "A bucket-list transit through the locks, on either a full ocean-to-ocean crossing or a partial round-trip that enters the canal and turns back. Best in the drier October–April window.",
                    "es": "Un tránsito de lista de deseos por las esclusas, en un cruce completo de océano a océano o en un ida y vuelta parcial que entra al canal y regresa. Mejor en la ventana más seca de octubre a abril."},
-        "calls": ["Panama Canal / Gatún Lake", "Cartagena", "Colón", "Puntarenas", "Cabo San Lucas", "Aruba"],
+        "calls": [
+            _c("Panama Canal / Gatún Lake", "The transit itself — a century-old marvel of locks and lakes.", "El tránsito en sí — una maravilla centenaria de esclusas y lagos."),
+            _c("Cartagena", "Colombia's walled Caribbean colonial city.", "La ciudad colonial amurallada del Caribe colombiano."),
+            _c("Colón", "Panama's Caribbean gateway, near the locks.", "La puerta caribeña de Panamá, cerca de las esclusas."),
+            _c("Puntarenas", "Costa Rica's Pacific port for rainforest and wildlife.", "El puerto pacífico de Costa Rica para selva y fauna."),
+            _c("Cabo San Lucas", "Baja's arch and beaches on full crossings.", "El arco y las playas de Baja en los cruces completos."),
+            _c("Aruba", "Dutch-Caribbean beaches on some routings.", "Playas del Caribe holandés en algunas rutas."),
+        ],
     },
     "pacific-coastal": {
         "expect": {"en": "Short repositioning sailings up and down the US West Coast in spring and fall, as ships move between Alaska and Mexico seasons. A relaxed, scenery-first, mostly sea-day trip.",
                    "es": "Cruceros cortos de reposicionamiento por la costa oeste de EE.UU. en primavera y otoño, cuando los barcos se mueven entre las temporadas de Alaska y México. Un viaje relajado, de paisaje y días de mar."},
-        "calls": ["San Francisco", "San Diego", "Astoria", "Victoria, BC", "Santa Barbara", "Ensenada"],
+        "calls": [
+            _c("San Francisco", "The Golden Gate, cable cars and the bay.", "El Golden Gate, los tranvías y la bahía."),
+            _c("San Diego", "A harbour city with beaches and Balboa Park.", "Una ciudad portuaria con playas y Balboa Park."),
+            _c("Astoria", "The Columbia River mouth in Oregon.", "La desembocadura del río Columbia en Oregón."),
+            _c("Victoria, BC", "British-flavoured Butchart Gardens and Inner Harbour.", "Los jardines Butchart de aire británico y el Inner Harbour."),
+            _c("Santa Barbara", "California's palm-lined 'American Riviera' (a tender port).", "La 'Riviera americana' de California, con palmeras (puerto de fondeo)."),
+            _c("Ensenada", "A Baja wine-country stop.", "Una escala en la región vinícola de Baja."),
+        ],
     },
     "transatlantic": {
-        "expect": {"en": "A classic ocean crossing between North America and Europe — lots of sea days, a slower pace, and a repositioning-season price of admission. Great if the voyage itself is the point.",
+        "expect": {"en": "A classic ocean crossing between North America and Europe — lots of sea days, a slower pace, and a repositioning-season timing. Great if the voyage itself is the point.",
                    "es": "Un cruce oceánico clásico entre Norteamérica y Europa — muchos días de mar, ritmo pausado y en temporada de reposicionamiento. Ideal si el viaje en sí es lo importante."},
-        "calls": ["Southampton", "Ponta Delgada (Azores)", "Bermuda", "New York", "Halifax"],
+        "calls": [
+            _c("Southampton", "The classic English departure port for ocean crossings.", "El clásico puerto de salida inglés para los cruces oceánicos."),
+            _c("Ponta Delgada (Azores)", "A mid-Atlantic Portuguese island stop.", "Una escala en las islas portuguesas del Atlántico medio."),
+            _c("Bermuda", "Pink beaches on some crossings.", "Playas rosadas en algunos cruces."),
+            _c("New York", "The Manhattan skyline as you arrive or depart.", "El horizonte de Manhattan al llegar o partir."),
+            _c("Halifax", "A Nova Scotia gateway on some routings.", "Una puerta de Nueva Escocia en algunas rutas."),
+        ],
     },
 }
 
@@ -134,17 +206,8 @@ def region_guide(lang, slug, name):
     en = lang == "en"
     out = ""
 
-    # quick facts bar
     ships_by_line = _ships_by_line(slug)
     n_ships = sum(len(v) for v in ships_by_line.values())
-    facts = [
-        (("Best time" if en else "Mejor época"), r["season"]),
-        (("Sail from" if en else "Sales desde"), f'{len(r["ports"])} ' + ("US/Canada ports" if en else "puertos EE.UU./Canadá")),
-        (("Ships that sail here" if en else "Barcos que navegan aquí"), str(n_ships)),
-        (("Lines" if en else "Líneas"), str(len(r["lines"]))),
-    ]
-    fcells = "".join(f'<div class="glance-cell"><b>{k}</b><span>{v}</span></div>' for k, v in facts)
-    out += f'<section class="section"><div class="wrap"><div class="glance-grid dest-facts">{fcells}</div></div></section>'
 
     # what to expect
     if copy.get("expect"):
@@ -181,14 +244,14 @@ def region_guide(lang, slug, name):
     out += _sec("", ("Where you sail from" if en else "Desde dónde zarpas"), "⚓",
                 f'<div class="port-grid">{pcards}</div><p class="note-line" style="margin-top:16px">{ports_note}</p>')
 
-    # typical ports of call
+    # typical ports of call — described cards
     if copy.get("calls"):
-        chips = "".join(f'<span class="ft">{c}</span>' for c in copy["calls"])
+        cards = "".join(_card("📍", c["name"], "", c["desc"][lang]) for c in copy["calls"])
         pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
                  if en else
                  "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
         out += _sec("cream", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
-                    f'<div class="ship-feats dest-calls">{chips}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
+                    f'<div class="xr-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
     # ships that sail here — grouped by line
     if n_ships:
@@ -251,6 +314,76 @@ def region_guide(lang, slug, name):
                                if en else
                                f"¿Prefieres preguntar? Dinos tus fechas y con quién viajas para {name} — emparejamos el barco y la mejor tarifa."), "dest-cta"))
     return out
+
+
+# region -> hero background image (self-hosted). Some reuse existing region shots; the rest are
+# sourced separately. Missing files fall back to the gradient hero automatically.
+_HERO_IMG = {
+    "caribbean": "caribbean.jpg", "bahamas": "bahamas.jpg", "alaska": "alaska.jpg",
+    "bermuda": "bermuda.jpg", "mexican-riviera": "mexican-riviera.jpg",
+    "canada-new-england": "newengland.jpg", "hawaii": "hawaii.jpg",
+    "panama-canal": "panama-canal.jpg", "pacific-coastal": "california.jpg",
+    "transatlantic": "transatlantic.jpg", "mediterranean": "mediterranean.jpg",
+    "northern-europe": "northern-europe.jpg",
+}
+
+
+def hero_image(slug):
+    """Return the hero image filename for a region if the file exists on disk, else None."""
+    img = _HERO_IMG.get(slug)
+    if img and os.path.exists(os.path.join(_PORTS_DIR, img)):
+        return img
+    return None
+
+
+def dest_hero(lang, slug, name, sub, crumb):
+    """A photo hero for destination pages: self-hosted region image, dark overlay, heading, sub,
+    a quick-stat strip and a call button. Falls back to the standard gradient hero if no image."""
+    en = lang == "en"
+    img = hero_image(slug)
+    kick = "Destination" if en else "Destino"
+    stats = ""
+    if slug in _DEP:
+        r = _DEP[slug]
+        n_ships = sum(len(v) for v in _ships_by_line(slug).values())
+        chips = [
+            (r["season"], "🗓️"),
+            (f'{len(r["ports"])} ' + ("home ports" if en else "puertos"), "⚓"),
+            (f'{n_ships} ' + ("ships" if en else "barcos"), "🚢"),
+        ]
+        stats = '<div class="dhero-stats">' + "".join(
+            f'<span class="dhero-stat"><span aria-hidden="true">{e}</span> {t}</span>' for t, e in chips) + '</div>'
+    call = "Call now" if en else "Llama ahora"
+    cta = (f'<a class="btn btn-call dhero-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'dest-hero\')">'
+           f'<span class="ic" aria-hidden="true">☎</span>{call} · {PHONE_DISPLAY}</a>')
+    inner = (f'<p class="crumbs">{crumb}</p>'
+             f'<span class="eyebrow" style="color:#7FD4D0">{kick}</span>'
+             f'<h1>{name}</h1><p class="phero-sub">{sub}</p>{stats}'
+             f'<div class="dhero-cta">{cta}</div>')
+    if not img:  # gradient fallback (matches the standard hero)
+        return f'<section class="section navy phero dhero"><div class="wrap">{inner}</div></section>'
+    return (f'<section class="section phero dhero dhero-photo" style="--dhero-img:url(/ports/{img})">'
+            f'<div class="dhero-scrim"></div><div class="wrap">{inner}</div></section>')
+
+
+def more_destinations(lang, current_slug, dests):
+    """A cross-link card grid of OTHER destinations, each with its region photo, name and best time —
+    so a visitor can hop from one destination to a similar one. `dests` is the DESTINATIONS list."""
+    en = lang == "en"
+    cards = ""
+    for d in dests:
+        if d["slug"] == current_slug:
+            continue
+        img = hero_image(d["slug"])
+        media = (f'<img src="/ports/{img}" alt="{d["name"][lang]}" loading="lazy" decoding="async">'
+                 if img else "")
+        best = d.get("best", {}).get(lang, "")
+        best_html = f'<small>{("Best" if en else "Mejor")}: {best}</small>' if best else ""
+        cards += (f'<a class="port-card destx-card" href="/{lang}/destinations/{d["slug"]}/">{media}'
+                  f'<span class="port-nm">{d["emo"]} {d["name"][lang]}{best_html}</span></a>')
+    h = "Explore more destinations" if en else "Explora más destinos"
+    return (f'<section class="section cream"><div class="wrap"><h2 class="rsec-h">{h}</h2>'
+            f'<div class="port-grid destx-grid">{cards}</div></div></section>')
 
 
 def region_faqs(lang, slug, name):

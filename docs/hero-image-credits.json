@@ -1,0 +1,63 @@
+{
+  "downloaded": "2026-07-20",
+  "destination_dir": "/Users/lokesh29/cruiselineadvisors/newsite/assets/ports/",
+  "note": "All images sourced from Pexels under the Pexels License: free for commercial use, no attribution required. All landscape, 1600px wide, valid JPEG.",
+  "images": [
+    {
+      "file": "bahamas.jpg",
+      "subject": "Aerial of a Nassau (Bahamas) resort beach with turquoise water and white sand",
+      "source_url": "https://www.pexels.com/photo/9400985/",
+      "image_url": "https://images.pexels.com/photos/9400985/pexels-photo-9400985.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "bermuda.jpg",
+      "subject": "Bermuda turquoise coastline with rock formations and a small pink-sand cove",
+      "source_url": "https://www.pexels.com/photo/34406309/",
+      "image_url": "https://images.pexels.com/photos/34406309/pexels-photo-34406309.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "mexican-riviera.jpg",
+      "subject": "Cabo San Lucas El Arco / Land's End rock formations over turquoise Pacific water",
+      "source_url": "https://www.pexels.com/photo/22912077/",
+      "image_url": "https://images.pexels.com/photos/22912077/pexels-photo-22912077.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "panama-canal.jpg",
+      "subject": "Panama Canal locks with channel, cranes and infrastructure",
+      "source_url": "https://www.pexels.com/photo/2219139/",
+      "image_url": "https://images.pexels.com/photos/2219139/pexels-photo-2219139.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "transatlantic.jpg",
+      "subject": "Cruise ship at sea on open ocean at golden hour",
+      "source_url": "https://www.pexels.com/photo/32609062/",
+      "image_url": "https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "mediterranean.jpg",
+      "subject": "Santorini blue-domed churches and white buildings above the Aegean Sea",
+      "source_url": "https://www.pexels.com/photo/1010657/",
+      "image_url": "https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    },
+    {
+      "file": "northern-europe.jpg",
+      "subject": "Norwegian fjord with snow-capped mountains and still water",
+      "source_url": "https://www.pexels.com/photo/15979078/",
+      "image_url": "https://images.pexels.com/photos/15979078/pexels-photo-15979078.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "license": "Pexels License (free for commercial use, no attribution required)",
+      "photographer_if_any": null
+    }
+  ]
+}

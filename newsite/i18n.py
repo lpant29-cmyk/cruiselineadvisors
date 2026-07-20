@@ -18,6 +18,7 @@ T = {
         "nav_dest": "Destinations", "nav_guides": "Guides", "nav_updates": "Updates",
         "nav_menu": "Menu",
         "nav_all_lines": "All cruise lines", "nav_ships_dir": "Ship directory",
+        "tagline": "Verified cruise facts. One call books it.",
         # hero
         "hero_badge": "Advisors answering now · 8am–11pm ET",
         "hero_h1a": "Less scrolling.",
@@ -85,6 +86,7 @@ T = {
         "nav_dest": "Destinos", "nav_guides": "Guías", "nav_updates": "Novedades",
         "nav_menu": "Menú",
         "nav_all_lines": "Todas las líneas", "nav_ships_dir": "Directorio de barcos",
+        "tagline": "Datos de crucero verificados. Una llamada reserva.",
         "hero_badge": "Asesores disponibles ahora · 8am–11pm ET",
         "hero_h1a": "Menos buscar.",
         "hero_h1b": "Más navegar.",

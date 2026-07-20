@@ -20,11 +20,12 @@ def mark(px=38):
     )
 
 
-def lockup(home_href, px=38):
-    """Mark + wordmark, linked to the language home page."""
+def lockup(home_href, px=38, tagline=""):
+    """Mark + wordmark (+ optional tagline under the wordmark), linked to the language home page."""
+    tag = f'<span class="brand-tag">{tagline}</span>' if tagline else ""
     return (
         f'<a class="brand" href="{home_href}" aria-label="CruiseLine Advisors — home">'
         f'{mark(px)}'
-        '<span class="brand-txt">CruiseLine<span>Advisors</span></span>'
+        f'<span class="brand-stack"><span class="brand-txt">CruiseLine<span>Advisors</span></span>{tag}</span>'
         '</a>'
     )

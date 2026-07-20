@@ -38,8 +38,11 @@ img,svg{max-width:100%}
 .nav{display:flex;align-items:center;gap:14px;height:66px}
 .brand{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;color:var(--navy);flex:none;min-width:0}
 .cla-mark{display:block;flex:none;border-radius:12px;box-shadow:0 5px 14px rgba(8,44,66,.22)}
-.brand-txt{display:none;font-family:'Fraunces',serif;font-size:1.16rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.brand-stack{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.brand-txt{display:none;font-family:'Fraunces',serif;font-size:1.16rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap;line-height:1.05}
 .brand-txt span{color:var(--gold2)}
+.brand-tag{display:none;font-size:.62rem;font-weight:700;color:var(--muted);letter-spacing:.005em;line-height:1.1;margin-top:2px;white-space:nowrap}
+@media(min-width:1000px){.brand-tag{display:block}}
 .mainnav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);padding:8px;display:none;max-height:calc(100dvh - 66px);overflow-y:auto}
 .navcb{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .navcb:checked~.mainnav{display:block}
@@ -470,6 +473,20 @@ section[id^="x-"],#ship-basics,#ship-sisters{scroll-margin-top:84px}
 .faq-item[open] summary::after{content:"–"}
 .faq-a{padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .faq-a p{margin:0}
+/* destination photo hero */
+.dhero-photo{position:relative;overflow:hidden;background:var(--navy)}
+.dhero-photo::before{content:"";position:absolute;inset:0;background:var(--dhero-img) center/cover no-repeat;z-index:0}
+.dhero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(6,26,42,.9) 0%,rgba(6,26,42,.72) 42%,rgba(6,26,42,.4) 100%)}
+.dhero-photo .wrap{position:relative;z-index:2}
+.dhero-photo h1,.dhero-photo .phero-sub{color:#fff}
+.dhero-stats{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px}
+.dhero-stat{display:inline-flex;align-items:center;gap:.4em;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:99px;padding:.4em .9em;font-size:.85rem;font-weight:700;backdrop-filter:blur(3px)}
+.dhero-cta{margin-top:20px}
+/* more-destinations cross-link grid */
+.destx-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.destx-card{min-height:132px;transition:transform .15s,box-shadow .15s}
+.destx-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(8,44,66,.22)}
+.destx-card .port-nm{font-size:1.02rem}
 /* ship "where & when it sails" scenery banner */
 .route-img{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;align-items:flex-end;background:linear-gradient(135deg,var(--sea3),var(--navy));margin:0 0 4px}
 .route-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

@@ -427,16 +427,16 @@ def _faq_block(lang, faqs):
 
 
 def p_region(lang, slug):
-    from destpage import has_region_guide, region_guide, region_faqs
+    from destpage import has_region_guide, region_guide, region_faqs, dest_hero, more_destinations
     d = _D[slug]
     if has_region_guide(slug):
-        kick = "Destination" if lang == "en" else "Destino"
         crumb = _crumb(lang, f'<a href="/{lang}/destinations.html">{"Destinations" if lang=="en" else "Destinos"}</a>', d["name"][lang])
         sub = (f"When to sail, where you leave from, which ships go — and one call to book."
                if lang == "en" else "Cuándo navegar, desde dónde sales, qué barcos van — y una llamada para reservar.")
-        return (phero(lang, kick, d["name"][lang], sub, crumb)
+        return (dest_hero(lang, slug, d["name"][lang], sub, crumb)
                 + region_guide(lang, slug, d["name"][lang])
-                + _faq_block(lang, region_faqs(lang, slug, d["name"][lang])))
+                + _faq_block(lang, region_faqs(lang, slug, d["name"][lang]))
+                + more_destinations(lang, slug, DESTINATIONS))
     s = SEASONS.get(slug, {})
     peak = s.get("peak", {}).get(lang, "") if isinstance(s.get("peak"), dict) else ""
     kick = "Destination" if lang == "en" else "Destino"

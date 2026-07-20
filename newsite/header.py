@@ -40,7 +40,7 @@ def header(lang, page_path="index.html"):
             nav_links += f'<li><a href="/{lang}/{href}">{t[key]}</a></li>'
     return f"""<header class="hdr">
   <div class="wrap nav">
-    {lockup(f'/{lang}/index.html')}
+    {lockup(f'/{lang}/index.html', tagline=t['tagline'])}
     <input type="checkbox" id="navcb" class="navcb" aria-label="{t['nav_menu']}">
     <nav class="mainnav" aria-label="Primary"><ul>{nav_links}</ul></nav>
     <div class="hdr-right">
