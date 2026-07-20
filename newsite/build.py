@@ -167,7 +167,11 @@ def build():
     n_assets = 0
     if os.path.isdir(assets):
         for fn in os.listdir(assets):
-            shutil.copy2(os.path.join(assets, fn), os.path.join(DIST, fn))
+            src = os.path.join(assets, fn)
+            if os.path.isdir(src):  # e.g. assets/ports/ -> dist/ports/
+                shutil.copytree(src, os.path.join(DIST, fn), dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, os.path.join(DIST, fn))
             n_assets += 1
 
     done, total = coverage()
