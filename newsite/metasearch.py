@@ -18,6 +18,37 @@ _EMO = {L["slug"]: L["emo"] for L in LINES}
 _REGIONS = json.load(open(os.path.join(os.path.dirname(__file__), "data", "deployment.json"),
                           encoding="utf-8"))["regions"]
 
+# A ship's finder regions must come from its OWN itinerary (exp.deploy_note) — the same source the
+# ship detail page shows — not from a line-level tag that over-matches every ship to every region the
+# line sails anywhere. Keyword aliases map itinerary prose to region ids.
+_REGION_ALIAS = {
+    "alaska": ["alaska", "glacier", "inside passage"],
+    "caribbean": ["caribbean", "west indies", "antilles", "cozumel", "eastern & western", "perfect day", "cococay", "coco cay"],
+    "bahamas": ["bahama", "nassau"],
+    "bermuda": ["bermuda"],
+    "mexican-riviera": ["mexican riviera", "mexico", "cabo", "mazatlan", "vallarta", "ensenada", "baja"],
+    "canada-new-england": ["canada", "new england", "quebec", "halifax", "maritime", "st. lawrence", "new-england"],
+    "hawaii": ["hawaii", "honolulu", "maui"],
+    "panama-canal": ["panama"],
+    "pacific-coastal": ["pacific coast", "pacific coastal"],
+    "transatlantic": ["transatlantic", "transatlántic", "atlantic crossing"],
+}
+_VALID_REGIONS = {r["id"] for r in _REGIONS}
+
+
+def region_ids_for_note(note):
+    """Region ids a ship actually sails, derived from its itinerary note (single source of truth)."""
+    s = (note or "").lower()
+    return [rid for rid, al in _REGION_ALIAS.items() if rid in _VALID_REGIONS and any(a in s for a in al)]
+
+
+def ship_regions(line_slug, exp):
+    """Finder regions for a ship, ALWAYS from its own itinerary (deploy_note) — the same source the
+    detail page shows. If the ship has an itinerary but it isn't one of our US/Canada regions (e.g.
+    Mediterranean, Australia, Asia), it returns [] so the ship is not mis-matched; a ship with NO
+    published itinerary also returns [] (excluded from the finder rather than guessed)."""
+    return region_ids_for_note((exp or {}).get("deploy_note"))
+
 _MONTHS = {"en": ["January", "February", "March", "April", "May", "June", "July", "August",
                   "September", "October", "November", "December"],
            "es": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
@@ -115,7 +146,7 @@ def _payload(lang):
         exp = s.get("exp") or {}
         who = exp.get("who_for")
         pos = (line_data(line_slug).get("positioning") or "")
-        regs = [r["id"] for r in _REGIONS if line_slug in r["lines"]]
+        regs = ship_regions(line_slug, exp)  # from the ship's own itinerary, not a line-level tag
         if not regs:
             continue
         fl = _flags(who, pos)
