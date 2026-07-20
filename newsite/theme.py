@@ -599,12 +599,13 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 @media(prefers-reduced-motion:no-preference){.stamped .vseal{transition:transform .2s}.stamped:hover .vseal{transform:rotate(-3deg) scale(1.03)}}
 /* verified seal in the page hero (gold on the dark hero) */
 .phero .wrap{position:relative}
-.phero-seal{position:absolute;top:2px;right:0;z-index:2;pointer-events:none}
-.phero-seal .vseal{color:#E7C67B}
-.phero-seal .vseal svg{width:104px;height:104px}
+.phero-seal{position:absolute;top:-4px;right:0;z-index:2;pointer-events:none}
+.phero-seal .vseal{position:relative;color:#F2D48A;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))}
+.phero-seal .vseal::before{content:"";position:absolute;inset:-10px;border-radius:50%;background:radial-gradient(circle,rgba(10,30,55,.55) 40%,rgba(10,30,55,0) 72%);z-index:-1}
+.phero-seal .vseal svg{width:150px;height:150px}
 .phero h1,.phero-sub{max-width:min(100%,62ch)}
-@media(min-width:760px){.phero h1{max-width:72%}}
-@media(max-width:520px){.phero-seal .vseal svg{width:70px;height:70px}.phero .wrap:has(.phero-seal) h1,.phero .wrap:has(.phero-seal) .phero-sub{padding-right:76px}}
+@media(min-width:760px){.phero h1{max-width:68%}}
+@media(max-width:520px){.phero-seal .vseal svg{width:104px;height:104px}.phero .wrap:has(.phero-seal) h1,.phero .wrap:has(.phero-seal) .phero-sub{padding-right:104px}}
 
 /* ═══ content pages ═══ */
 .phero{padding:34px 0 40px}
