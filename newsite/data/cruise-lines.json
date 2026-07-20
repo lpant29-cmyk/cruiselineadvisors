@@ -196,7 +196,7 @@
         }
       ],
       "inclusions": {
-        "_refresh": "30 days — highest-traffic data on the page",
+        "_refresh": "30 days, highest-traffic data on the page",
         "included": [
           {
             "item": "Main dining room",
@@ -524,7 +524,7 @@
       "faqs": [
         {
           "q": "Which Royal Caribbean ship is best for young children?",
-          "a": "The newer and larger classes carry the deepest children's facilities — bigger waterparks, more kids' club capacity with tighter age bands, and more connecting cabin options. The right answer still depends on your children's ages and how long you want to sail, which is why this is worth two minutes on the phone."
+          "a": "The newer and larger classes carry the deepest children's facilities, bigger waterparks, more kids' club capacity with tighter age bands, and more connecting cabin options. The right answer still depends on your children's ages and how long you want to sail, which is why this is worth two minutes on the phone."
         },
         {
           "q": "What is a neighbourhood balcony and should I book one?",
@@ -1136,7 +1136,7 @@
         "who_its_for": [
           "Budget-conscious families",
           "First-time cruisers testing the format",
-          "Short 3–5 night getaways",
+          "Short 3-5 night getaways",
           "Travellers who can drive to a home port",
           "Groups wanting a social atmosphere"
         ],
@@ -1153,7 +1153,7 @@
           },
           {
             "factor": "Sailing length",
-            "detail": "Short 3–5 night sailings cost less overall but more per night. Seven nights is often better value per day."
+            "detail": "Short 3-5 night sailings cost less overall but more per night. Seven nights is often better value per day."
           },
           {
             "factor": "Ship age",
@@ -1180,7 +1180,7 @@
         },
         {
           "q": "Why are so many people driving to their cruise?",
-          "a": "Carnival sails from more US home ports than any other line, including several that competitors ignore. For a family of four, removing four airfares changes the entire budget — worth checking before you assume you need to fly."
+          "a": "Carnival sails from more US home ports than any other line, including several that competitors ignore. For a family of four, removing four airfares changes the entire budget, worth checking before you assume you need to fly."
         },
         {
           "q": "What is a cove balcony?",
@@ -1199,8 +1199,8 @@
         "note": "Carnival sails year-round from ~20 North American home ports plus Australia; regions vary by season.",
         "caribbean_and_bahamas": "Year-round from Florida (Miami, Port Canaveral, Jacksonville, Tampa), the Gulf (Galveston, New Orleans, Mobile) and East-Coast ports (Charleston, Norfolk, Baltimore, New York) to the Bahamas and Eastern/Western/Southern Caribbean.",
         "mexican_riviera": "Year-round from Long Beach and Los Angeles (Carnival Panorama, Carnival Radiance, Carnival Firenze) to the Mexican Riviera.",
-        "alaska": "Summer season (roughly May–September) from Seattle (Carnival Luminosa, Carnival Spirit).",
-        "bermuda": "Spring–fall from Northeast U.S. ports.",
+        "alaska": "Summer season (roughly May-September) from Seattle (Carnival Luminosa, Carnival Spirit).",
+        "bermuda": "Spring-fall from Northeast U.S. ports.",
         "hawaii_panama_pacific": "Seasonal longer voyages to Hawaii, through the Panama Canal and along the Pacific coast, mainly on Spirit-class ships and repositioning sailings.",
         "australia_south_pacific": "Year-round from Sydney/Brisbane (Carnival Splendor, Carnival Adventure, Carnival Encounter) with seasonal Carnival Luminosa; South Pacific islands, New Zealand and Queensland."
       }
@@ -1558,7 +1558,7 @@
           },
           {
             "factor": "Verandah vs interior",
-            "detail": "On scenic itineraries a verandah earns its cost far more than on a Caribbean sailing — you use it constantly."
+            "detail": "On scenic itineraries a verandah earns its cost far more than on a Caribbean sailing, you use it constantly."
           },
           {
             "factor": "Voyage length",
@@ -1566,7 +1566,7 @@
           },
           {
             "factor": "Cruisetour add-on",
-            "detail": "Land extensions add rail, hotels and transfers — a separate budget line from the sailing."
+            "detail": "Land extensions add rail, hotels and transfers, a separate budget line from the sailing."
           },
           {
             "factor": "Ship class",
@@ -1603,7 +1603,7 @@
       "seasonal_deployment": [
         {
           "region": "Alaska",
-          "season": "Late April–September (summer)",
+          "season": "Late April-September (summer)",
           "ports": [
             "Seattle, WA",
             "Vancouver, BC",
@@ -1622,7 +1622,7 @@
         },
         {
           "region": "Caribbean & Panama Canal",
-          "season": "October–April (winter)",
+          "season": "October-April (winter)",
           "ports": [
             "Fort Lauderdale (Port Everglades), FL"
           ],
@@ -1633,12 +1633,12 @@
             "Volendam",
             "Eurodam"
           ],
-          "note": "Typical winter Caribbean and partial/full Panama Canal deployment out of Fort Lauderdale. Ship assignments rotate year to year — verify against the current published schedule.",
+          "note": "Typical winter Caribbean and partial/full Panama Canal deployment out of Fort Lauderdale. Ship assignments rotate year to year, verify against the current published schedule.",
           "source": "needs-verification"
         },
         {
           "region": "Mexican Riviera & Pacific Coastal",
-          "season": "Fall–Spring",
+          "season": "Fall-Spring",
           "ports": [
             "San Diego, CA",
             "Seattle, WA",
@@ -1654,7 +1654,7 @@
         },
         {
           "region": "Canada & New England",
-          "season": "September–October (fall foliage)",
+          "season": "September-October (fall foliage)",
           "ports": [
             "Boston, MA",
             "Quebec City / Montreal, QC",
@@ -2034,7 +2034,7 @@
         "cost_drivers": [
           {
             "factor": "Promotional inclusions",
-            "detail": "Fares frequently bundle drinks, wi-fi and gratuities. The headline fare alone is a poor comparison tool — compare all-in."
+            "detail": "Fares frequently bundle drinks, wi-fi and gratuities. The headline fare alone is a poor comparison tool, compare all-in."
           },
           {
             "factor": "Ship class",
@@ -2403,7 +2403,7 @@
         ]
       },
       "family": {
-        "kids_club_name": "The Treehouse (3–7), The Lodge (8–12), The Beach House (13–17)",
+        "kids_club_name": "The Treehouse (3-7), The Lodge (8-12), The Beach House (13-17)",
         "age_bands": "VERIFY",
         "minimum_sailing_age": "6 months; 12 months for transatlantic crossings and remote itineraries (Cruisetours 5 years). Guests under 21 must share a stateroom with someone 21+.",
         "nursery": {
@@ -2501,7 +2501,7 @@
         "who_its_for": [
           "Multi-generation groups needing common ground",
           "Alaska travellers wanting a land extension",
-          "Unusual destinations — Japan, Australia, world segments",
+          "Unusual destinations, Japan, Australia, world segments",
           "Couples and older travellers",
           "Cruisers who value itinerary over onboard spectacle"
         ],
@@ -2549,7 +2549,7 @@
         },
         {
           "q": "What does the wearable device actually do?",
-          "a": "Boarding, cabin access, onboard payments and locating your party. It's more useful with a large group — set it up before boarding rather than at the terminal."
+          "a": "Boarding, cabin access, onboard payments and locating your party. It's more useful with a large group, set it up before boarding rather than at the terminal."
         }
       ],
       "sources_master": [
@@ -2961,7 +2961,7 @@
         "cost_drivers": [
           {
             "factor": "Yacht Club vs standard",
-            "detail": "A genuinely different product — compare it against a premium line's balcony, not against an MSC balcony."
+            "detail": "A genuinely different product, compare it against a premium line's balcony, not against an MSC balcony."
           },
           {
             "factor": "Drinks package tier",
@@ -2992,11 +2992,11 @@
         },
         {
           "q": "What is the Yacht Club?",
-          "a": "A gated suite area with private restaurant, lounge, pool and dedicated service — effectively a boutique ship inside the larger vessel. It's the line's standout offering and a different product entirely."
+          "a": "A gated suite area with private restaurant, lounge, pool and dedicated service, effectively a boutique ship inside the larger vessel. It's the line's standout offering and a different product entirely."
         },
         {
           "q": "Is MSC cheaper for a reason?",
-          "a": "Fares reflect scale and European cost structures. Service style differs from US norms rather than being simply lesser — worth setting expectations before you sail."
+          "a": "Fares reflect scale and European cost structures. Service style differs from US norms rather than being simply lesser, worth setting expectations before you sail."
         }
       ],
       "sources_master": [
@@ -3420,7 +3420,7 @@
       "faqs": [
         {
           "q": "What is a transatlantic crossing actually like?",
-          "a": "Roughly a week of open ocean between New York and Southampton with no port calls. Days are filled with lectures, dancing, dining and the sea. Travellers either find it deeply restorative or extremely long — there's little middle ground."
+          "a": "Roughly a week of open ocean between New York and Southampton with no port calls. Days are filled with lectures, dancing, dining and the sea. Travellers either find it deeply restorative or extremely long, there's little middle ground."
         },
         {
           "q": "How formal is it really?",
@@ -3428,7 +3428,7 @@
         },
         {
           "q": "Does cabin grade really affect dining?",
-          "a": "Yes — your cabin grade determines your restaurant assignment, with suite guests in separate dining rooms. This makes cabin choice more consequential here than on any other line."
+          "a": "Yes, your cabin grade determines your restaurant assignment, with suite guests in separate dining rooms. This makes cabin choice more consequential here than on any other line."
         }
       ],
       "sources_master": [
@@ -3439,7 +3439,7 @@
         }
       ],
       "last_built": null,
-      "seasonal_deployment": "EDITORIAL FRAMING ONLY — NOT VERIFIED. Cunard's flagship Queen Mary 2 is the fleet's transatlantic ocean liner, regularly sailing the Southampton (UK) to New York crossing; New York is Cunard's principal North American turnaround port, with additional seasonal New England & Canada and Caribbean voyages from New York, and occasional Caribbean sailings from Florida (e.g. Fort Lauderdale). Exact per-ship, per-season US/Canada port deployments must be confirmed from the official Cunard find-a-cruise pages before publishing."
+      "seasonal_deployment": "EDITORIAL FRAMING ONLY, NOT VERIFIED. Cunard's flagship Queen Mary 2 is the fleet's transatlantic ocean liner, regularly sailing the Southampton (UK) to New York crossing; New York is Cunard's principal North American turnaround port, with additional seasonal New England & Canada and Caribbean voyages from New York, and occasional Caribbean sailings from Florida (e.g. Fort Lauderdale). Exact per-ship, per-season US/Canada port deployments must be confirmed from the official Cunard find-a-cruise pages before publishing."
     },
     {
       "slug": "margaritaville-at-sea",
@@ -3771,7 +3771,7 @@
         }
       ],
       "last_built": null,
-      "seasonal_deployment": "Two-ship fleet with fixed year-round U.S. homeports: Paradise sails from the Port of Palm Beach (Florida) on short Bahamas and Key West getaways; Islander sails from Port Tampa Bay (Florida) on longer Key West, Mexico and Caribbean voyages. No seasonal repositioning between coasts — each ship stays on its homeport program year-round."
+      "seasonal_deployment": "Two-ship fleet with fixed year-round U.S. homeports: Paradise sails from the Port of Palm Beach (Florida) on short Bahamas and Key West getaways; Islander sails from Port Tampa Bay (Florida) on longer Key West, Mexico and Caribbean voyages. No seasonal repositioning between coasts, each ship stays on its homeport program year-round."
     }
   ],
   "destinations": [
@@ -3780,13 +3780,13 @@
       "name": "Caribbean",
       "season": {
         "operates": "Year-round",
-        "peak": "December–April",
+        "peak": "December-April",
         "source": "VERIFY",
         "verified": "PENDING"
       },
       "hurricane_season": {
-        "official": "June 1 – November 30",
-        "most_active": "mid-August – mid-October",
+        "official": "June 1, November 30",
+        "most_active": "mid-August, mid-October",
         "source": "https://www.nhc.noaa.gov/climo/",
         "verified": "PENDING"
       },
@@ -3830,9 +3830,9 @@
         "San Juan"
       ],
       "typical_lengths": [
-        "3–5 nights",
+        "3-5 nights",
         "7 nights",
-        "10–14 nights (Southern)"
+        "10-14 nights (Southern)"
       ],
       "monthly_climate": "VERIFY - pull average high/low, rain days and sea temperature from NOAA per month",
       "tender_ports": "VERIFY - list which ports tender vs dock",
@@ -3869,7 +3869,7 @@
       "label": "Daily gratuity",
       "type": "currency_fact",
       "compare_safe": true,
-      "note": "This is a published fee, not a fare — safe to state with a source and date"
+      "note": "This is a published fee, not a fare, safe to state with a source and date"
     },
     {
       "key": "kids_age_bands",

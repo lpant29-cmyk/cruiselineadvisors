@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Content page builders (everything except the homepage and legal). Each returns the inner
 <main> HTML for a language; base.page() wraps head/header/footer/SEO. Original, compliant copy
-only — no prices, real hours, per-line disclaimers, and unverified facts shown as visible gaps."""
+only, no prices, real hours, per-line disclaimers, and unverified facts shown as visible gaps."""
 import datetime
 from config import PHONE_HREF, PHONE_DISPLAY, HOURS, SINCE_YEAR, BRAND
 from data import LINES, DESTINATIONS
@@ -34,7 +34,7 @@ def phero(lang, kicker, h1, sub, crumb, seal=""):
 
 
 def _guide_photo_hero(lang, kick, h1, sub, crumb, img):
-    """Photo hero for a rich guide — self-hosted image + scrim + heading + call button."""
+    """Photo hero for a rich guide, self-hosted image + scrim + heading + call button."""
     inner = (f'<p class="crumbs">{crumb}</p><span class="eyebrow" style="color:#7FD4D0">{kick}</span>'
              f'<h1>{h1}</h1><p class="phero-sub">{sub}</p>'
              f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'guide-hero\')">'
@@ -76,15 +76,15 @@ def facts_table(lang, slug):
 
 # ─────────────────────────── cruise lines ───────────────────────────
 def p_ships_dir(lang):
-    """Full ship directory — every ship we cover, grouped by line, each linking to its own page.
+    """Full ship directory, every ship we cover, grouped by line, each linking to its own page.
     Reached from the Cruise Lines nav submenu and the lines hub."""
     guestsw = "guests" if lang == "en" else "huéspedes"
     view = "View ship" if lang == "en" else "Ver barco"
     kick = "Ship directory" if lang == "en" else "Directorio de barcos"
     h1 = "Every ship we cover, by line" if lang == "en" else "Cada barco que cubrimos, por línea"
-    sub = ("Jump straight to any ship's verified guide — size, capacity, what's on board and where it "
+    sub = ("Jump straight to any ship's verified guide, size, capacity, what's on board and where it "
            "sails. Then one call books the cabin." if lang == "en"
-           else "Ve directo a la guía verificada de cualquier barco — tamaño, capacidad, qué hay a bordo y "
+           else "Ve directo a la guía verificada de cualquier barco, tamaño, capacidad, qué hay a bordo y "
                 "dónde navega. Luego una llamada reserva el camarote.")
 
     total = sum(len(ships_for(L["slug"])) for L in LINES)
@@ -128,8 +128,8 @@ def p_ships_dir(lang):
                   f'<a href="/{lang}/cruise-lines/">{"Cruise lines" if lang == "en" else "Líneas"}</a>', kick))
             + intro + blocks
             + cta_band(lang, "Not sure which ship fits?" if lang == "en" else "¿No sabes qué barco encaja?",
-                       "Tell a specialist your dates and who's travelling — they'll match the right ship." if lang == "en"
-                       else "Dile a un especialista tus fechas y quién viaja — te emparejará con el barco correcto."))
+                       "Tell a specialist your dates and who's travelling, they'll match the right ship." if lang == "en"
+                       else "Dile a un especialista tus fechas y quién viaja, te emparejará con el barco correcto."))
 
 
 def p_lines_hub(lang):
@@ -140,21 +140,21 @@ def p_lines_hub(lang):
         for i, L in enumerate(LINES))
     kick = "Cruise lines" if lang == "en" else "Líneas de crucero"
     h1 = "In-depth guides to every major line" if lang == "en" else "Guías detalladas de cada línea principal"
-    sub = ("Honest, source-checked guides — ships class by class, what the fare covers, cabins, families, "
+    sub = ("Honest, source-checked guides, ships class by class, what the fare covers, cabins, families, "
            "accessibility and timing. Then one call to a specialist who books it." if lang == "en"
-           else "Guías honestas y verificadas — barcos clase por clase, qué cubre la tarifa, camarotes, familias, "
+           else "Guías honestas y verificadas, barcos clase por clase, qué cubre la tarifa, camarotes, familias, "
                 "accesibilidad y temporada. Luego una llamada a un especialista que lo reserva.")
-    note = ("These eight lines are our first in-depth guides. We cover 36 lines boardable from the Americas — "
+    note = ("These eight lines are our first in-depth guides. We cover 36 lines boardable from the Americas, "
             "call for any line not yet listed." if lang == "en"
-            else "Estas ocho líneas son nuestras primeras guías. Cubrimos 36 líneas desde las Américas — "
+            else "Estas ocho líneas son nuestras primeras guías. Cubrimos 36 líneas desde las Américas, "
                  "llama por cualquiera que aún no esté listada.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
             + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div>'
               f'<p class="note-line">{note}</p></div></section>'
             + directory_section(lang)
             + cta_band(lang, "Not sure which line fits?" if lang == "en" else "¿No sabes qué línea encaja?",
-                       "Tell a specialist what you want — they'll match you to the right ship and sailing." if lang == "en"
-                       else "Dile a un especialista qué quieres — te emparejará con el barco y la salida correctos."))
+                       "Tell a specialist what you want, they'll match you to the right ship and sailing." if lang == "en"
+                       else "Dile a un especialista qué quieres, te emparejará con el barco y la salida correctos."))
 
 
 def p_line(lang, slug):
@@ -163,7 +163,7 @@ def p_line(lang, slug):
     crumb = _crumb(lang, f'<a href="/{lang}/cruise-lines.html">{"Cruise lines" if lang=="en" else "Líneas"}</a>', L["name"])
     if lang == "en":
         intro = (f"{L['name']} is best described as <b>{L['cat']['en'].lower()}</b>. {L['tag']['en']} "
-                 f"Below is an independent, source-checked look at what actually matters before you book — "
+                 f"Below is an independent, source-checked look at what actually matters before you book, "
                  f"and the money-and-complexity details worth a phone call.")
         who_h = "Is it right for you?"
         facts_h = "The facts that cost money"
@@ -176,7 +176,7 @@ def p_line(lang, slug):
         cta_t, cta_s = f"Talk to a {L['name']} specialist", "Free, no obligation, and we never take payment for travel."
     else:
         intro = (f"{L['name']} se describe mejor como <b>{L['cat']['es'].lower()}</b>. {L['tag']['es']} "
-                 f"A continuación, una mirada independiente y verificada a lo que realmente importa antes de reservar — "
+                 f"A continuación, una mirada independiente y verificada a lo que realmente importa antes de reservar, "
                  f"y los detalles de dinero y complejidad que merecen una llamada.")
         who_h = "¿Es adecuada para ti?"
         facts_h = "Los datos que cuestan dinero"
@@ -190,20 +190,20 @@ def p_line(lang, slug):
     name = L["name"]
     cmp_kick = "Compare" if lang == "en" else "Comparar"
     cmp_h2 = f"How does {name} compare?" if lang == "en" else f"¿Cómo se compara {name}?"
-    cmp_sub = (f"Put {name} head-to-head with another line on the facts that cost money — then let an advisor apply them to your sailing."
+    cmp_sub = (f"Put {name} head-to-head with another line on the facts that cost money, then let an advisor apply them to your sailing."
                if lang == "en" else
-               f"Compara {name} con otra línea en los datos que cuestan dinero — luego deja que un asesor los aplique a tu crucero.")
+               f"Compara {name} con otra línea en los datos que cuestan dinero, luego deja que un asesor los aplique a tu crucero.")
     upd_kick = "Updates" if lang == "en" else "Novedades"
     upd_h2 = f"Latest {name} updates" if lang == "en" else f"Últimas novedades de {name}"
     rich = rich_sections(lang, slug)  # sets sections_present(slug) as a side effect
     faq = faq_section(lang, slug)
     toc_keys = ["facts"] + sections_present(slug) + ["updates"] + (["faq"] if faq else [])
     facts_cta = ("These are exactly the details that surprise people at the pier and on the final bill. "
-                 "Call and we'll confirm every one for your ship, cabin and dates — and the best rate our partners can offer."
+                 "Call and we'll confirm every one for your ship, cabin and dates, and the best rate our partners can offer."
                  if lang == "en" else
                  "Son justo los detalles que sorprenden en el muelle y en la factura final. Llama y confirmamos cada uno "
-                 "para tu barco, camarote y fechas — y la mejor tarifa que nuestros socios pueden ofrecer.")
-    # "The facts that cost money" — moved high on the page (a strong attention section) with its own CTA.
+                 "para tu barco, camarote y fechas, y la mejor tarifa que nuestros socios pueden ofrecer.")
+    # "The facts that cost money", moved high on the page (a strong attention section) with its own CTA.
     facts_section = (f'<section id="s-facts" class="section foam"><div class="wrap">'
                      f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
                      f'<h2>{facts_h}</h2><p>{facts_sub}</p></div>{facts_table(lang, slug)}'
@@ -264,7 +264,7 @@ def p_ship(lang, line_slug, sslug):
         sub = L["name"]
     kick = L["cat"][lang]
 
-    # verified specs — core four always shown (gap if missing); crew/length only when present
+    # verified specs, core four always shown (gap if missing); crew/length only when present
     cells = [(_SHIP_L["class"][lang], cls),
              (_SHIP_L["year"][lang], s.get("year")),
              (_SHIP_L["guests"][lang], _num(s["guests"]) if s.get("guests") else None),
@@ -286,32 +286,32 @@ def p_ship(lang, line_slug, sslug):
         intro = (f"{name} is part of {L['name']}'s fleet"
                  + (f", built to the {cls} class" if cls else "") + ". "
                  "Below are the verified basics; sailings, itineraries, cabins and the current rate change "
-                 "constantly — one call to a specialist confirms exactly what's open for your dates and the best "
+                 "constantly, one call to a specialist confirms exactly what's open for your dates and the best "
                  "rate our partners can offer.")
         specs_h = "The basics, verified"
         note = ("Every figure here traces to a published source and is re-checked on our normal schedule. Anything "
                 "we haven't confirmed shows as a gap rather than a guess.")
         sisters_h = f"Other {cls} ships" if cls else f"More {L['name']} ships"
         nudge_txt = (f"Want {name} for your dates? A specialist checks live availability and holds the best cabin "
-                     "for you — call now.")
+                     "for you, call now.")
         cta_t, cta_s = f"Sail on {name}?", "Free, no obligation, and we never take payment for travel."
-        disc = (f"Independent referral service — not affiliated with, sponsored by, endorsed by or an agent of "
+        disc = (f"Independent referral service, not affiliated with, sponsored by, endorsed by or an agent of "
                 f"{L['name']}. {L['name']}, {name} and related names and logos are trademarks of their owner, used "
                 f"here descriptively only.")
     else:
         intro = (f"{name} forma parte de la flota de {L['name']}"
                  + (f", de la clase {cls}" if cls else "") + ". "
                  "Abajo están los datos verificados; las salidas, itinerarios, camarotes y la tarifa actual cambian "
-                 "constantemente — una llamada a un especialista confirma qué hay disponible para tus fechas y la "
+                 "constantemente, una llamada a un especialista confirma qué hay disponible para tus fechas y la "
                  "mejor tarifa que nuestros socios pueden ofrecer.")
         specs_h = "Los datos, verificados"
         note = ("Cada cifra proviene de una fuente publicada y se revisa en nuestro calendario habitual. Lo que no "
                 "hemos confirmado se muestra como un vacío, no como una suposición.")
         sisters_h = f"Otros barcos clase {cls}" if cls else f"Más barcos de {L['name']}"
         nudge_txt = (f"¿Quieres {name} para tus fechas? Un especialista revisa la disponibilidad en vivo y te reserva "
-                     "el mejor camarote — llama ahora.")
+                     "el mejor camarote, llama ahora.")
         cta_t, cta_s = f"¿Navegar en {name}?", "Gratis, sin compromiso, y nunca cobramos por el viaje."
-        disc = (f"Servicio de referencia independiente — no afiliado, patrocinado, respaldado ni agente de "
+        disc = (f"Servicio de referencia independiente, no afiliado, patrocinado, respaldado ni agente de "
                 f"{L['name']}. {L['name']}, {name} y los nombres y logotipos relacionados son marcas de su "
                 f"propietario, usados aquí solo de forma descriptiva.")
 
@@ -364,10 +364,10 @@ def _ship_nudge(lang, txt):
 # ─────────────────────────── compare + facts ───────────────────────────
 def p_compare(lang):
     kick = "Find a cruise" if lang == "en" else "Encuentra tu crucero"
-    h1 = "Find your cruise — then call to book it" if lang == "en" else "Encuentra tu crucero — luego llama para reservar"
-    sub = ("Skip scrolling hundreds of pages. Tell us where and when — we'll line up the ships that fit, and one "
+    h1 = "Find your cruise, then call to book it" if lang == "en" else "Encuentra tu crucero, luego llama para reservar"
+    sub = ("Skip scrolling hundreds of pages. Tell us where and when, we'll line up the ships that fit, and one "
            "call books the right one at the best rate our partners can offer." if lang == "en"
-           else "Sin revisar cientos de páginas. Dinos dónde y cuándo — alineamos los barcos que encajan, y una "
+           else "Sin revisar cientos de páginas. Dinos dónde y cuándo, alineamos los barcos que encajan, y una "
                 "llamada reserva el correcto a la mejor tarifa que nuestros socios pueden ofrecer.")
     also = ("Prefer to compare two lines head-to-head? Every line and ship page has its own compare tool at the top."
             if lang == "en" else
@@ -380,9 +380,9 @@ def p_compare(lang):
 def p_facts(lang):
     kick = "Cruise facts" if lang == "en" else "Datos de cruceros"
     h1 = "The cruise facts that cost you money" if lang == "en" else "Los datos de crucero que te cuestan dinero"
-    sub = ("The details cruise sites bury — gratuities, what's included, cancellation, documents. Here's what each "
+    sub = ("The details cruise sites bury, gratuities, what's included, cancellation, documents. Here's what each "
            "one means and what to ask." if lang == "en"
-           else "Los detalles que los sitios esconden — propinas, qué se incluye, cancelación, documentos. Esto es "
+           else "Los detalles que los sitios esconden, propinas, qué se incluye, cancelación, documentos. Esto es "
                 "lo que significa cada uno y qué preguntar.")
     items = "".join(
         f'<div class="card"><div class="ic-badge">{"💸" if f.get("imp") else "🧭"}</div>'
@@ -445,8 +445,8 @@ def p_region(lang, slug):
     d = _D[slug]
     if has_region_guide(slug):
         crumb = _crumb(lang, f'<a href="/{lang}/destinations.html">{"Destinations" if lang=="en" else "Destinos"}</a>', d["name"][lang])
-        sub = (f"When to sail, where you leave from, which ships go — and one call to book."
-               if lang == "en" else "Cuándo navegar, desde dónde sales, qué barcos van — y una llamada para reservar.")
+        sub = (f"When to sail, where you leave from, which ships go, and one call to book."
+               if lang == "en" else "Cuándo navegar, desde dónde sales, qué barcos van, y una llamada para reservar.")
         guide = region_guide(lang, slug, d["name"][lang])  # populates the section list for the TOC
         faqs = region_faqs(lang, slug, d["name"][lang])
         toc_extra = [("d-faq", "Common questions" if lang == "en" else "Preguntas frecuentes")] if faqs else []
@@ -461,16 +461,16 @@ def p_region(lang, slug):
     crumb = _crumb(lang, f'<a href="/{lang}/destinations.html">{"Destinations" if lang=="en" else "Destinos"}</a>', d["name"][lang])
     if lang == "en":
         body = (f"<b>Best time to sail:</b> {d['best']['en']}" + (f" (peak {peak})" if peak else "") + ". "
-                "Seasons decide far more than the ship does — the right month means better weather, calmer seas and "
+                "Seasons decide far more than the ship does, the right month means better weather, calmer seas and "
                 "the itineraries you actually want. An advisor confirms which ships sail your dates and matches the "
                 "sailing to your party.")
-        warn = ("This is an Atlantic hurricane-season region (1 June–30 November). Sailings still operate and reroute "
+        warn = ("This is an Atlantic hurricane-season region (1 June-30 November). Sailings still operate and reroute "
                 "when needed, but travel insurance matters more in these months." if s.get("warn") else "")
     else:
         body = (f"<b>Mejor época para navegar:</b> {d['best']['es']}" + (f" (pico {peak})" if peak else "") + ". "
-                "La temporada decide mucho más que el barco — el mes correcto significa mejor clima, mares más "
+                "La temporada decide mucho más que el barco, el mes correcto significa mejor clima, mares más "
                 "tranquilos y los itinerarios que quieres. Un asesor confirma qué barcos navegan en tus fechas.")
-        warn = ("Es una región de temporada de huracanes del Atlántico (1 jun–30 nov). Los cruceros operan y se "
+        warn = ("Es una región de temporada de huracanes del Atlántico (1 jun-30 nov). Los cruceros operan y se "
                 "redirigen cuando es necesario, pero el seguro de viaje importa más en estos meses." if s.get("warn") else "")
     warn_html = f'<div class="whn-warn" style="margin-top:16px">⚠ {warn}</div>' if warn else ""
     return (phero(lang, kick, d["name"][lang], (f"Best: {d['best'][lang]}" if lang == "en" else f"Mejor: {d['best'][lang]}"), crumb)
@@ -484,23 +484,23 @@ def p_region(lang, slug):
 GUIDES = [
     {"slug": "first-time-cruisers", "emo": "🧭",
      "t": {"en": "First-time cruisers", "es": "Primer crucero"},
-     "d": {"en": "What nobody tells you before your first sailing — from boarding to disembark.",
-           "es": "Lo que nadie te dice antes de tu primer crucero — del embarque al desembarque."}},
+     "d": {"en": "What nobody tells you before your first sailing, from boarding to disembark.",
+           "es": "Lo que nadie te dice antes de tu primer crucero, del embarque al desembarque."}},
     {"slug": "choosing-a-cabin", "emo": "🛏️",
      "t": {"en": "Choosing a cabin", "es": "Elegir camarote"},
-     "d": {"en": "Interior to suite — what you get, what to watch for, and the cabins to avoid.",
-           "es": "De interior a suite — qué obtienes, qué vigilar y los camarotes a evitar."}},
+     "d": {"en": "Interior to suite, what you get, what to watch for, and the cabins to avoid.",
+           "es": "De interior a suite, qué obtienes, qué vigilar y los camarotes a evitar."}},
     {"slug": "whats-included", "emo": "🧾",
      "t": {"en": "What's included", "es": "Qué se incluye"},
-     "d": {"en": "The gap between the fare and your final bill — explained plainly.",
-           "es": "La diferencia entre la tarifa y tu factura final — explicada con claridad."}},
+     "d": {"en": "The gap between the fare and your final bill, explained plainly.",
+           "es": "La diferencia entre la tarifa y tu factura final, explicada con claridad."}},
     {"slug": "when-to-cruise", "emo": "🗓️",
      "t": {"en": "When to cruise", "es": "Cuándo hacer un crucero"},
-     "d": {"en": "Season by season, region by region — timing beats everything.",
-           "es": "Temporada por temporada, región por región — el momento lo es todo."}},
+     "d": {"en": "Season by season, region by region, timing beats everything.",
+           "es": "Temporada por temporada, región por región, el momento lo es todo."}},
     {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
      "t": {"en": "Groups & families", "es": "Grupos y familias"},
-     "d": {"en": "Linked cabins, dining, kids clubs and split payments — the phone-work parts.",
+     "d": {"en": "Linked cabins, dining, kids clubs and split payments, the phone-work parts.",
            "es": "Camarotes conectados, comidas, clubes infantiles y pagos divididos."}},
     {"slug": "accessibility", "emo": "♿",
      "t": {"en": "Accessibility", "es": "Accesibilidad"},
@@ -509,31 +509,31 @@ GUIDES = [
 ]
 _G = {g["slug"]: g for g in GUIDES}
 
-# Original planning content (general cruise knowledge; compliant — no invented specifics).
+# Original planning content (general cruise knowledge; compliant, no invented specifics).
 GUIDE_BODY = {
     "first-time-cruisers": {
         "en": ["Your fare covers your cabin, most dining, entertainment and getting from port to port. Almost "
-               "everything else — drinks, wifi, specialty restaurants, shore excursions, the spa — is extra. Knowing "
+               "everything else, drinks, wifi, specialty restaurants, shore excursions, the spa, is extra. Knowing "
                "that split up front is the single biggest thing that keeps a first cruise on budget.",
                "Gratuities are added to your onboard account automatically, per guest, per day. You can prepay them. "
                "Documents matter too: on most closed-loop sailings a birth certificate plus ID can work, but a passport "
-               "is safer and sometimes required — get this wrong and you don't board.",
+               "is safer and sometimes required, get this wrong and you don't board.",
                "The rest is easier than it looks. An advisor walks you through cabin choice, dining, and what to book "
-               "before you sail versus onboard — in one call."],
+               "before you sail versus onboard, in one call."],
         "es": ["Tu tarifa cubre el camarote, la mayoría de las comidas, el entretenimiento y el transporte entre "
-               "puertos. Casi todo lo demás — bebidas, wifi, restaurantes especiales, excursiones, spa — es adicional. "
+               "puertos. Casi todo lo demás, bebidas, wifi, restaurantes especiales, excursiones, spa, es adicional. "
                "Saber esa diferencia por adelantado es lo que más ayuda a mantener el presupuesto.",
                "Las propinas se añaden a tu cuenta automáticamente, por huésped y por día. Puedes pagarlas por "
                "adelantado. Los documentos también importan: en muchos cruceros de ida y vuelta un acta de nacimiento "
                "con identificación puede servir, pero un pasaporte es más seguro y a veces obligatorio.",
                "El resto es más fácil de lo que parece. Un asesor te guía por la elección de camarote, comidas y qué "
-               "reservar antes de zarpar — en una llamada."]},
+               "reservar antes de zarpar, en una llamada."]},
 }
 _GUIDE_FALLBACK = {
     "en": ["This guide is being written. In the meantime, the fastest way to get the answer for your specific trip "
-           "is a quick call — free, no obligation, and we never take payment for travel."],
+           "is a quick call, free, no obligation, and we never take payment for travel."],
     "es": ["Esta guía se está escribiendo. Mientras tanto, la forma más rápida de obtener la respuesta para tu viaje "
-           "es una llamada rápida — gratis, sin compromiso, y nunca cobramos por el viaje."]}
+           "es una llamada rápida, gratis, sin compromiso, y nunca cobramos por el viaje."]}
 
 
 def p_guides_hub(lang):
@@ -543,15 +543,15 @@ def p_guides_hub(lang):
                ("Read" if lang == "en" else "Leer"), i) for i, g in enumerate(GUIDES))
     kick = "Guides" if lang == "en" else "Guías"
     h1 = "Practical cruise planning guides" if lang == "en" else "Guías prácticas para planear tu crucero"
-    sub = ("Cabins, budgets, families, accessibility and timing — the real questions, answered plainly." if lang == "en"
-           else "Camarotes, presupuestos, familias, accesibilidad y temporada — las preguntas reales, con claridad.")
+    sub = ("Cabins, budgets, families, accessibility and timing, the real questions, answered plainly." if lang == "en"
+           else "Camarotes, presupuestos, familias, accesibilidad y temporada, las preguntas reales, con claridad.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
             + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div></div></section>')
 
 
 def p_guide(lang, slug):
     from guidepage import has_rich_guide, render_rich_guide, RICH_GUIDES
-    import guides_content  # noqa: F401 — side-effect import registers the rich guides
+    import guides_content  # noqa: F401, side-effect import registers the rich guides
     g = _G[slug]
     kick = "Guide" if lang == "en" else "Guía"
     if has_rich_guide(slug):
@@ -564,8 +564,8 @@ def p_guide(lang, slug):
         return (hero
                 + render_rich_guide(lang, slug)
                 + cta_band(lang, "Ready to price a real sailing?" if lang == "en" else "¿Listo para cotizar un crucero real?",
-                           "Call a specialist — they'll give you the all-in number for your dates." if lang == "en"
-                           else "Llama a un especialista — te da la cifra completa para tus fechas."))
+                           "Call a specialist, they'll give you the all-in number for your dates." if lang == "en"
+                           else "Llama a un especialista, te da la cifra completa para tus fechas."))
     crumb = _crumb(lang, f'<a href="/{lang}/guides.html">{"Guides" if lang=="en" else "Guías"}</a>', g["t"][lang])
     paras = GUIDE_BODY.get(slug, {}).get(lang) or _GUIDE_FALLBACK[lang]
     body = "".join(f"<p>{p}</p>" for p in paras)
@@ -578,8 +578,8 @@ def p_guide(lang, slug):
             + f'<section class="section"><div class="wrap blk">{body}</div></section>'
             + extra
             + cta_band(lang, "Have a question about your trip?" if lang == "en" else "¿Tienes una pregunta sobre tu viaje?",
-                       "Call a specialist — they'll answer it in minutes." if lang == "en"
-                       else "Llama a un especialista — te responde en minutos."))
+                       "Call a specialist, they'll answer it in minutes." if lang == "en"
+                       else "Llama a un especialista, te responde en minutos."))
 
 
 # ─────────────────────────── updates ───────────────────────────
@@ -588,9 +588,9 @@ def p_updates(lang):
     h1 = "Cruise policy & industry updates" if lang == "en" else "Novedades de políticas e industria"
     sub = ("Dated, sourced changes to cruise-line policies and requirements. We only post what we can verify." if lang == "en"
            else "Cambios fechados y con fuente en políticas y requisitos de cruceros. Solo publicamos lo que podemos verificar.")
-    intro = ("Dated, sourced changes to cruise-line policies and requirements — we only post what we can verify. "
+    intro = ("Dated, sourced changes to cruise-line policies and requirements, we only post what we can verify. "
              "Each update is also shown on the affected line's page." if lang == "en" else
-             "Cambios fechados y con fuente en políticas y requisitos — solo publicamos lo que podemos verificar. "
+             "Cambios fechados y con fuente en políticas y requisitos, solo publicamos lo que podemos verificar. "
              "Cada novedad también aparece en la página de la línea afectada.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
             + f'<section class="section"><div class="wrap"><p class="intro">{intro}</p>'

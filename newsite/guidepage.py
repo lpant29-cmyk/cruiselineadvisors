@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Rich, SEO-first cruise guides — the topical-authority layer.
+"""Rich, SEO-first cruise guides, the topical-authority layer.
 
-Each guide is a hand-written research piece (no copied prose, no prices — Hard Rules), structured for
+Each guide is a hand-written research piece (no copied prose, no prices, Hard Rules), structured for
 both Google and AI overviews: a clear H1 + dek, a "key takeaways" box (snippet/answer bait), scannable
 H2 sections with their own anchors and a table of contents, an FAQ that emits FAQPage JSON-LD, Article
 JSON-LD, and dense semantic interlinking to the tools, fact pages, line pages and sibling guides.
@@ -25,7 +25,7 @@ def guide_hero_img(slug, override=None):
 
 
 def vcards(items):
-    """A visual card grid for scannable concept lists. items = [(emoji, label, note), ...]."""
+    """A visual card grid for scannable concept lists. items = [(emoji, label, note)...]."""
     cards = ""
     for emo, label, note in items:
         body = f'<div class="xr-b"><p class="xr-desc">{note}</p></div>' if note else ""
@@ -112,7 +112,7 @@ def _faq(lang, faqs):
 
 
 def _related(lang, related):
-    """related = list of (emoji, title, href, blurb) — semantic interlinks to guides/tools/pages."""
+    """related = list of (emoji, title, href, blurb), semantic interlinks to guides/tools/pages."""
     if not related:
         return ""
     h = _L(lang, "Keep reading", "Sigue leyendo")
@@ -145,10 +145,11 @@ def render_rich_guide(lang, slug):
     g = RICH_GUIDES[slug]
     updated = _L(lang, "Reviewed", "Revisado") + " " + (g.get("updated") or "")
     meta = f'<p class="gd-meta">{updated} · {_L(lang, "Written by the CruiseLine Advisors team", "Escrito por el equipo de CruiseLine Advisors")}</p>'
+    faqs = g.get("faqs", {}).get(lang) or []  # per-language list of (question, answer)
     return (_article_ld(lang, slug, g)
             + f'<section class="section gd-byline"><div class="wrap gd-body">{meta}</div></section>'
             + _takeaways(lang, g["takeaways"][lang])
-            + _toc(lang, g["sections"], g.get("faqs"))
+            + _toc(lang, g["sections"], faqs)
             + _sections(lang, g["sections"])
-            + _faq(lang, g.get("faqs"))
+            + _faq(lang, faqs)
             + _related(lang, g.get("related", {}).get(lang, [])))

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Ship-vs-ship comparison. Pick any two ships (grouped by line) and see their verified specs
-side by side — class, year, guests, tonnage, features. Same card UI as the line compare tool
+side by side, class, year, guests, tonnage, features. Same card UI as the line compare tool
 (A = teal, B = gold), mobile-first, guarded IIFE JS. Unverified specs show a 'Not yet verified'
 gap. Data comes from ships.py (official-sourced). NO PRICES."""
 import json
@@ -68,14 +68,14 @@ def compare_hero(lang, default_a=None, ship_name=None):
     kick = "Compare ships" if lang == "en" else "Comparar barcos"
     nm = ship_name or ("this ship" if lang == "en" else "este barco")
     if lang == "en":
-        h = f"Compare {nm} with any other ship — and find the winner in seconds."
+        h = f"Compare {nm} with any other ship, and find the winner in seconds."
         sub = ("No more digging through hundreds of pages. Line it up against any ship, from any line, on "
-               "what actually matters — size, dining, what's included and the fine print. Then one call gets "
+               "what actually matters, size, dining, what's included and the fine print. Then one call gets "
                "you the best rate our partners can offer.")
     else:
-        h = f"Compara {nm} con cualquier otro barco — y encuentra al ganador en segundos."
+        h = f"Compara {nm} con cualquier otro barco, y encuentra al ganador en segundos."
         sub = ("Sin revisar cientos de páginas. Compáralo con cualquier barco, de cualquier línea, en lo que "
-               "importa — tamaño, restaurantes, qué se incluye y la letra pequeña. Luego una llamada te da la "
+               "importa, tamaño, restaurantes, qué se incluye y la letra pequeña. Luego una llamada te da la "
                "mejor tarifa que nuestros socios pueden ofrecer.")
     return compare_band(lang, kick, h, sub, ship_compare_tool(lang, default_a=default_a))
 
@@ -94,7 +94,7 @@ _T = {
                     ("who", "Best for"), ("route", "Where it sails")],
            "line": "Cruise line",
            "cta": "The right ship depends on your dates, party and budget. Call and we'll match you.",
-           "call": "Find the right ship — call now",
+           "call": "Find the right ship, call now",
            "flag": "specs verified from official cruise-line sources"},
     "es": {"a": "Barco A", "b": "Barco B", "vs": "vs", "gap": "No verificado aún",
            "rows": [("class", "Clase"), ("year", "En servicio desde"),
@@ -102,7 +102,7 @@ _T = {
                     ("who", "Ideal para"), ("route", "Dónde navega")],
            "line": "Línea",
            "cta": "El barco correcto depende de tus fechas, grupo y presupuesto. Llama y te emparejamos.",
-           "call": "Encuentra el barco ideal — llama ahora",
+           "call": "Encuentra el barco ideal, llama ahora",
            "flag": "datos verificados de sitios oficiales de las líneas"},
 }
 
@@ -157,18 +157,18 @@ def _payload(lang):
         ships.append(row)
     ships.sort(key=lambda x: (x["line"], x["name"]))
     vd = ({"h": "Which should you pick?", "take": "Our take",
-           "newer": "newer", "bigger": "bigger — more space & more to do",
+           "newer": "newer", "bigger": "bigger, more space & more to do",
            "moredine": "more dining choice",
            "consider": "Prefer a smaller, calmer, easier-to-navigate ship? Go with {x}.",
-           "tie": "These two are closely matched — the right one really comes down to your dates, party and budget.",
-           "close": "Either way, tell us your dates and party and we'll match the right ship — and the best rate our partners can offer."}
+           "tie": "These two are closely matched, the right one really comes down to your dates, party and budget.",
+           "close": "Either way, tell us your dates and party and we'll match the right ship, and the best rate our partners can offer."}
           if lang == "en" else
           {"h": "¿Cuál elegir?", "take": "Nuestra recomendación",
-           "newer": "más nuevo", "bigger": "más grande — más espacio y más que hacer",
+           "newer": "más nuevo", "bigger": "más grande, más espacio y más que hacer",
            "moredine": "más opciones de comida",
            "consider": "¿Prefieres un barco más pequeño, tranquilo y fácil de recorrer? Elige {x}.",
-           "tie": "Están muy parejos — la elección depende de tus fechas, grupo y presupuesto.",
-           "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal — y la mejor tarifa que nuestros socios pueden ofrecer."})
+           "tie": "Están muy parejos, la elección depende de tus fechas, grupo y presupuesto.",
+           "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal, y la mejor tarifa que nuestros socios pueden ofrecer."})
     return {"ships": ships, "gap": _T[lang]["gap"], "rows": _ROWS[lang],
             "lineLabel": _T[lang]["line"], "vd": vd}
 
@@ -243,7 +243,7 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
     if(ra.length===0&&rb.length===0){{ body='<p>'+V.tie+'</p>'; }}
     else {{
       var win=ra.length>=rb.length?a:b, lose=win===a?b:a, wr=win===a?ra:rb;
-      body='<p><span class="cx-vwin">'+V.take+': '+win.name+'</span> — '+wr.join(', ')+'. '+V.consider.replace('{{x}}',lose.name)+'</p>';
+      body='<p><span class="cx-vwin">'+V.take+': '+win.name+'</span>, '+wr.join(', ')+'. '+V.consider.replace('{{x}}',lose.name)+'</p>';
     }}
     vd.innerHTML='<div class="cx-vhead">★ '+V.h+'</div>'+body+'<p class="cx-vclose">'+V.close+'</p>';
   }}

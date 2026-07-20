@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cruise policy/industry updates — SINGLE SOURCE for the Updates page AND the per-line update
+"""Cruise policy/industry updates, SINGLE SOURCE for the Updates page AND the per-line update
 cards. Tag each entry with the line slugs it affects (empty list = general/all lines). Posting an
 entry here makes it appear on the Updates page and on each tagged line's page automatically.
 
@@ -18,8 +18,8 @@ UPDATES = [
                "es": "MSC actualizó su cargo por servicio diario para nuevas reservas"},
      "body": {"en": "For cruises booked from 11 May 2026 (US & Caribbean), MSC's daily hotel service charge changed.",
               "es": "Para cruceros reservados desde el 11 de mayo de 2026 (EE.UU. y Caribe), cambió el cargo por servicio diario de MSC."},
-     "detail": {"en": "For MSC cruises booked from 11 May 2026 in the US and Caribbean region, the daily hotel service charge was updated. This charge is added automatically to your onboard account each night and is not part of the base fare. Bookings made before that date keep the earlier rate, and the amounts also vary by other regions. The current per-person amounts are on our MSC guide and comparison — and an advisor can confirm the exact charge for your specific sailing, region and cabin before you book.",
-                "es": "Para los cruceros de MSC reservados desde el 11 de mayo de 2026 en EE.UU. y el Caribe, se actualizó el cargo por servicio diario. Este cargo se añade automáticamente a tu cuenta a bordo cada noche y no forma parte de la tarifa base. Las reservas anteriores mantienen la tarifa previa, y los montos también varían por región. Los montos actuales están en nuestra guía y comparación de MSC — y un asesor puede confirmar el cargo exacto para tu crucero, región y camarote antes de reservar."},
+     "detail": {"en": "For MSC cruises booked from 11 May 2026 in the US and Caribbean region, the daily hotel service charge was updated. This charge is added automatically to your onboard account each night and is not part of the base fare. Bookings made before that date keep the earlier rate, and the amounts also vary by other regions. The current per-person amounts are on our MSC guide and comparison, and an advisor can confirm the exact charge for your specific sailing, region and cabin before you book.",
+                "es": "Para los cruceros de MSC reservados desde el 11 de mayo de 2026 en EE.UU. y el Caribe, se actualizó el cargo por servicio diario. Este cargo se añade automáticamente a tu cuenta a bordo cada noche y no forma parte de la tarifa base. Las reservas anteriores mantienen la tarifa previa, y los montos también varían por región. Los montos actuales están en nuestra guía y comparación de MSC, y un asesor puede confirmar el cargo exacto para tu crucero, región y camarote antes de reservar."},
      "src": "https://www.msccruisesusa.com/manage-booking/before-you-go/service-charges"},
 ]
 
@@ -31,7 +31,7 @@ def get_update(slug):
 
 
 def updates_for(slug):
-    """Updates tagged with this line, plus general (untagged) updates — newest first."""
+    """Updates tagged with this line, plus general (untagged) updates, newest first."""
     ups = [u for u in UPDATES if not u.get("lines") or slug in u["lines"]]
     return sorted(ups, key=lambda u: u["date"], reverse=True)
 

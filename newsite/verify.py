@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Fact-verification audit — the tool for the 30-day re-check.
+"""Fact-verification audit, the tool for the 30-day re-check.
 
 Run `python3 verify.py status`  → one-line summary + non-zero exit if anything is due (use in CI /
                                    before deploy).
 Run `python3 verify.py report`  → a full, per-line checklist: every fact, its source URL, when it was
-                                   last verified and how many days ago — open each URL, confirm the
+                                   last verified and how many days ago, open each URL, confirm the
                                    value still matches, then bump the `verified` date in facts.py.
 
 Refresh windows (see CLAUDE.md): inclusions 30 days, everything else 90, ship rosters 90. The default
@@ -75,13 +75,13 @@ def status(window_override=None):
         for name, label, ver, ds, win, _src in stale[:40]:
             print(f"    - {name}: {label}  (verified {ver}, {ds}d ago, window {win}d)")
     ok = not (stale or ships)
-    print("\n  " + ("✓ all current — nothing due." if ok else "⚠ items above are due for re-verification."))
+    print("\n  " + ("✓ all current, nothing due." if ok else "⚠ items above are due for re-verification."))
     return 0 if ok else 1
 
 
 def report(window_override=None):
-    """Full per-line checklist with source URLs — work through this during the 30-day pass."""
-    print(f"# 30-day fact re-check — {TODAY}\n")
+    """Full per-line checklist with source URLs, work through this during the 30-day pass."""
+    print(f"# 30-day fact re-check, {TODAY}\n")
     for L in LINES:
         facts = LINE_FACTS.get(L["slug"], {})
         print(f"\n## {L['emo']} {L['name']}")
@@ -96,8 +96,8 @@ def report(window_override=None):
                 win = window_override if window_override is not None else _WINDOW[k]
                 flag = "DUE" if (ds is None or ds > win) else "ok"
             src = cell.get("src") or "(no source recorded)"
-            days = f"{ds}d" if ds is not None else "—"
-            print(f"  [{flag:<4}] {_LABEL[k]:<28} last {ver or '—'} ({days})")
+            days = f"{ds}d" if ds is not None else ", "
+            print(f"  [{flag:<4}] {_LABEL[k]:<28} last {ver or ', '} ({days})")
             print(f"         source: {src}")
     print("\nAfter confirming a value still matches its source, update its `verified` date in facts.py.")
     return 0

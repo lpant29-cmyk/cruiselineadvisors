@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The logo — one file. Clean nautical mark (navy badge + gold sun + ocean waves)
+"""The logo, one file. Clean nautical mark (navy badge + gold sun + ocean waves)
 paired with the wordmark. Edit here to change the logo everywhere."""
 
 
@@ -24,7 +24,7 @@ def lockup(home_href, px=38, tagline=""):
     """Mark + wordmark (+ optional tagline under the wordmark), linked to the language home page."""
     tag = f'<span class="brand-tag">{tagline}</span>' if tagline else ""
     return (
-        f'<a class="brand" href="{home_href}" aria-label="CruiseLine Advisors — home">'
+        f'<a class="brand" href="{home_href}" aria-label="CruiseLine Advisors, home">'
         f'{mark(px)}'
         f'<span class="brand-stack"><span class="brand-txt">CruiseLine<span>Advisors</span></span>{tag}</span>'
         '</a>'

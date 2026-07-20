@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Find-your-cruise metasearch (v2) — the site's USP tool. Pick Destination + Departure port + When
+"""Find-your-cruise metasearch (v2), the site's USP tool. Pick Destination + Departure port + When
 + Who's travelling; the tool ranks every ship (across all lines) that sails that region, matched to
 travel style. Features: progressive "load more", refine filters + Show all, a compare tray (pick up
 to 4 ships -> side-by-side facts), honest 0-results reasoning, and an agent-avatar "call a licensed
-agent" CTA on every result. NO PRICES — we compare what you get, never fares. Region-level matching
+agent" CTA on every result. NO PRICES, we compare what you get, never fares. Region-level matching
 (deployment.json); exact ship/date/port confirmed on the call."""
 import json
 import os
@@ -18,8 +18,8 @@ _EMO = {L["slug"]: L["emo"] for L in LINES}
 _REGIONS = json.load(open(os.path.join(os.path.dirname(__file__), "data", "deployment.json"),
                           encoding="utf-8"))["regions"]
 
-# A ship's finder regions must come from its OWN itinerary (exp.deploy_note) — the same source the
-# ship detail page shows — not from a line-level tag that over-matches every ship to every region the
+# A ship's finder regions must come from its OWN itinerary (exp.deploy_note), the same source the
+# ship detail page shows, not from a line-level tag that over-matches every ship to every region the
 # line sails anywhere. Keyword aliases map itinerary prose to region ids.
 _REGION_ALIAS = {
     "alaska": ["alaska", "glacier", "inside passage"],
@@ -43,7 +43,7 @@ def region_ids_for_note(note):
 
 
 def ship_regions(line_slug, exp):
-    """Finder regions for a ship, ALWAYS from its own itinerary (deploy_note) — the same source the
+    """Finder regions for a ship, ALWAYS from its own itinerary (deploy_note), the same source the
     detail page shows. If the ship has an itinerary but it isn't one of our US/Canada regions (e.g.
     Mediterranean, Australia, Asia), it returns [] so the ship is not mis-matched; a ship with NO
     published itinerary also returns [] (excluded from the finder rather than guessed)."""
@@ -59,18 +59,18 @@ _T = {
            "who": "Who's travelling?", "any": "Any", "anyport": "Any US/Canada port",
            "search": "Find my cruise", "match": "ships match your search", "reco": "Top match",
            "guests": "guests", "eat": "dining", "do": "things to do", "sails": "Sails",
-           "view": "Ship details", "book": "Call a licensed agent", "agentsub": "Free · 8am–11pm ET",
+           "view": "Ship details", "book": "Call a licensed agent", "agentsub": "Free · 8am-11pm ET",
            "loadmore": "Load more ships", "showing": "Showing", "of": "of",
-           "off": "is off-season for", "sweet": "is the sweet spot — ask us about the best time.",
+           "off": "is off-season for", "sweet": "is the sweet spot, ask us about the best time.",
            "compare": "Compare", "compared": "Comparing", "added": "Added",
            "traysel": "selected", "traycmp": "Compare these", "trayclr": "Clear", "close": "Close",
            "cmptitle": "Which ship wins for you?",
            "none0": "No ship matches every filter you picked.",
-           "trythis": "Try removing", "unlocks": "— that alone brings back",
-           "orcall": "Or just call — our specialists cover even more ships and sailings.",
+           "trythis": "Try removing", "unlocks": ", that alone brings back",
+           "orcall": "Or just call, our specialists cover even more ships and sailings.",
            "cta": "Rates change daily by ship, date and cabin. One call gets you the real number and the best our partners can offer.",
            "call": "Call now", "filt": "Refine:", "showall": "Show all",
-           "accnote": "Every line here offers accessible staterooms — step-free access and cabin type vary by ship and port, so call and we'll confirm exactly what works for you.",
+           "accnote": "Every line here offers accessible staterooms, step-free access and cabin type vary by ship and port, so call and we'll confirm exactly what works for you.",
            "parties": [("any", "Just exploring"), ("family", "Family"), ("couple", "Couple"),
                        ("friends", "Friends"), ("solo", "Solo")],
            "filters": [("family", "Kids & families"), ("couple", "Couples & adults"),
@@ -86,18 +86,18 @@ _T = {
            "who": "¿Quién viaja?", "any": "Cualquiera", "anyport": "Cualquier puerto EE.UU./Canadá",
            "search": "Encontrar mi crucero", "match": "barcos coinciden", "reco": "Mejor opción",
            "guests": "huéspedes", "eat": "restaurantes", "do": "actividades", "sails": "Navega",
-           "view": "Ver barco", "book": "Llama a un agente con licencia", "agentsub": "Gratis · 8am–11pm ET",
+           "view": "Ver barco", "book": "Llama a un agente con licencia", "agentsub": "Gratis · 8am-11pm ET",
            "loadmore": "Ver más barcos", "showing": "Mostrando", "of": "de",
-           "off": "está fuera de temporada para", "sweet": "es la mejor época — pregúntanos.",
+           "off": "está fuera de temporada para", "sweet": "es la mejor época, pregúntanos.",
            "compare": "Comparar", "compared": "Comparando", "added": "Añadido",
            "traysel": "seleccionados", "traycmp": "Comparar estos", "trayclr": "Limpiar", "close": "Cerrar",
            "cmptitle": "¿Qué barco gana para ti?",
            "none0": "Ningún barco coincide con todos tus filtros.",
-           "trythis": "Prueba quitar", "unlocks": "— eso solo devuelve",
-           "orcall": "O llama — nuestros especialistas cubren aún más barcos y salidas.",
+           "trythis": "Prueba quitar", "unlocks": ", eso solo devuelve",
+           "orcall": "O llama, nuestros especialistas cubren aún más barcos y salidas.",
            "cta": "Las tarifas cambian a diario. Una llamada te da el número real y la mejor tarifa de nuestros socios.",
            "call": "Llama ahora", "filt": "Refinar:", "showall": "Ver todos",
-           "accnote": "Todas estas líneas ofrecen camarotes accesibles — el acceso sin escalones y el tipo de camarote varían por barco y puerto; llama y confirmamos lo que funciona para ti.",
+           "accnote": "Todas estas líneas ofrecen camarotes accesibles, el acceso sin escalones y el tipo de camarote varían por barco y puerto; llama y confirmamos lo que funciona para ti.",
            "parties": [("any", "Solo explorando"), ("family", "Familia"), ("couple", "Pareja"),
                        ("friends", "Amigos"), ("solo", "Solo")],
            "filters": [("family", "Niños y familias"), ("couple", "Parejas y adultos"),
@@ -234,7 +234,7 @@ def metasearch_tool(lang):
     return 0;
   }}
   // "Just exploring" shows a spread ACROSS lines (variety), so its top row visibly differs from the
-  // persona rankings — which cluster by fit and can otherwise repeat the same biggest family ships.
+  // persona rankings, which cluster by fit and can otherwise repeat the same biggest family ships.
   function spread(arr){{
     var by={{}},order=[];
     arr.forEach(function(s){{ if(!by[s.line]){{by[s.line]=[];order.push(s.line);}} by[s.line].push(s); }});
@@ -259,7 +259,7 @@ def metasearch_tool(lang):
     if(party==='any') matched=spread(matched);  // variety for browsers; personas keep fit-ranking
     // note
     var note='';
-    if(r){{ note='<b>'+r.emoji+' '+r.name+'</b> — '+r.season+'.';
+    if(r){{ note='<b>'+r.emoji+' '+r.name+'</b>, '+r.season+'.';
       if(mo&&r.months.indexOf(mo)<0) note+=' <span class="ms-warn">'+D.months[mo-1]+' '+T.off+' '+r.name+'; '+r.season+' '+T.sweet+'</span>';
     }}
     if(active.accessible) note+='<span class="ms-accnote">♿ '+T.accnote+'</span>';
@@ -277,7 +277,7 @@ def metasearch_tool(lang):
         var n=list.filter(function(s){{return passAll(s,k);}}).length;
         if(n>bestN){{bestN=n;best=k;}} }});
       var bl=''; T.filters.forEach(function(c){{if(c[0]===best)bl=c[1];}});
-      var msg='<div class="ms-none"><p><b>0</b> — '+T.none0+'</p>';
+      var msg='<div class="ms-none"><p><b>0</b>, '+T.none0+'</p>';
       if(best) msg+='<p>'+T.trythis+' <button type="button" class="ms-relax" data-f="'+best+'">'+bl+'</button> '+T.unlocks+' <b>'+bestN+'</b>.</p>';
       msg+='<p>'+T.orcall+'</p><a class="btn btn-call" href="tel:'+D.href+'" onclick="trackCall(\\'ms-zero\\')"><span class="ic">☎</span>'+T.call+' · '+D.phone+'</a></div>';
       $('msResults').innerHTML=msg; $('msFoot').innerHTML='';
@@ -325,7 +325,7 @@ def metasearch_tool(lang):
     var rows=T.rows.map(function(rw){{
       return '<div class="ms-cmp-row"><div class="ms-cmp-lbl">'+rw[1]+'</div>'+ships.map(function(s){{
         var v=s[rw[0]]; if(rw[0]==='guests')v=num(v); if(rw[0]==='dine'||rw[0]==='acts')v=v||null;
-        return '<div class="ms-cmp-val">'+(v?esc(String(v)):'<span class="cmp-gap">—</span>')+'</div>';}}).join('')+'</div>';
+        return '<div class="ms-cmp-val">'+(v?esc(String(v)):'<span class="cmp-gap">, </span>')+'</div>';}}).join('')+'</div>';
     }}).join('');
     el.innerHTML='<div class="ms-cmp-inner"><div class="ms-cmp-top"><h3>'+T.cmptitle+'</h3><button type="button" class="ms-cmp-x" id="msCmpX">✕ '+T.close+'</button></div>'
       +'<div class="ms-cmp-scroll" style="--n:'+ships.length+'">'+head+rows+'</div>'

@@ -14,7 +14,7 @@ def big_call(lang, placement="section"):
 def sticky_callbar(lang):
     t = T[lang]
     return (f'<div class="callbar">'
-            f'<div class="cbtxt"><b>{t["cta_call"]} — {PHONE_DISPLAY}</b>'
+            f'<div class="cbtxt"><b>{t["cta_call"]}, {PHONE_DISPLAY}</b>'
             f'<span>{t["free_to_call"]} · {HOURS[lang]}</span></div>'
             f'<a class="btn btn-call" href="tel:{PHONE_HREF}" onclick="trackCall(\'sticky\')">'
             f'<span class="ic" aria-hidden="true">☎</span></a></div>')

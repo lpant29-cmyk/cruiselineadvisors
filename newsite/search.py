@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Site-wide search.
 
-Builds a small client-side index over every page type — hubs, cruise lines, ships, cruise-fact
-topics, destinations, guides and updates — from the SAME data modules the pages are generated from,
+Builds a small client-side index over every page type, hubs, cruise lines, ships, cruise-fact
+topics, destinations, guides and updates, from the SAME data modules the pages are generated from,
 so the search can never drift from what's published. The index is embedded once per page as JSON and
 matched by a self-contained IIFE with a null guard on line one (CLAUDE.md pitfall 1), so it can never
 throw and kill other scripts. The Python matcher in tests/test_search.py mirrors the JS scoring
@@ -17,7 +17,7 @@ from updates import all_updates
 from i18n import T
 from metasearch import ship_regions, _REGIONS
 
-# region id -> display name, so a ship's own (itinerary-derived) regions become search keywords —
+# region id -> display name, so a ship's own (itinerary-derived) regions become search keywords, 
 # same source of truth the finder uses, so "alaska" surfaces the ships that actually sail it.
 _REGION_NAME = {r["id"]: r["name"] for r in _REGIONS}
 
@@ -30,9 +30,9 @@ _TYPE = {
 }
 
 _UI = {
-    "en": {"open": "Search", "ph": "Search ships, lines, destinations…", "no": "No matches — try a line, ship or destination name.",
+    "en": {"open": "Search", "ph": "Search ships, lines, destinations…", "no": "No matches, try a line, ship or destination name.",
            "hint": "Type to search the whole site"},
-    "es": {"open": "Buscar", "ph": "Busca barcos, líneas, destinos…", "no": "Sin resultados — prueba con una línea, barco o destino.",
+    "es": {"open": "Buscar", "ph": "Busca barcos, líneas, destinos…", "no": "Sin resultados, prueba con una línea, barco o destino.",
            "hint": "Escribe para buscar en todo el sitio"},
 }
 

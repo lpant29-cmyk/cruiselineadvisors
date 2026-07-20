@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Legal pages — Terms, Privacy, Calling & SMS Consent (TCPA), Do Not Sell or Share.
+"""Legal pages, Terms, Privacy, Calling & SMS Consent (TCPA), Do Not Sell or Share.
 Bilingual. Compliance-critical: keep the disclaimers intact. Placeholders in [brackets]
 must be filled before launch ([Your Company] LLC, address, privacy email)."""
 import datetime
@@ -121,11 +121,11 @@ LEGAL = {
             ({"en": "How to opt out", "es": "Cómo excluirte"},
              {"en": "Contact us at [privacy@yourdomain.com] with the subject 'Do Not Sell or Share' and the phone "
                     "number and name you provided, so we can locate your record and process your request. Opting out "
-                    "does not delete information already shared with a partner agency — contact that agency directly to "
+                    "does not delete information already shared with a partner agency, contact that agency directly to "
                     "request deletion.",
               "es": "Contáctanos en [privacy@yourdomain.com] con el asunto 'No vender ni compartir' y el número y nombre "
                     "que proporcionaste, para localizar tu registro y procesar tu solicitud. Excluirte no elimina la "
-                    "información ya compartida con una agencia asociada — contáctala directamente para solicitar la "
+                    "información ya compartida con una agencia asociada, contáctala directamente para solicitar la "
                     "eliminación."}),
             ({"en": "No discrimination", "es": "Sin discriminación"},
              {"en": "We will not deny you services, or provide a different level of service, because you exercised your "

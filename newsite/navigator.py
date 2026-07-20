@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The interactive Cruise Finder ("navigator") — a 4-step where/when/who flow that
+"""The interactive Cruise Finder ("navigator"), a 4-step where/when/who flow that
 suggests a starting point and drives the call. A dolphin guide reacts to each choice.
 Self-contained: bilingual data + guarded JS embedded here. Every path ends at the phone."""
 import json
@@ -24,11 +24,11 @@ _MAP = {
 }
 
 _SEASONS = {
-    "en": [("spring", "🌸", "Spring (Mar–May)"), ("summer", "☀️", "Summer (Jun–Aug)"),
-           ("fall", "🍂", "Fall (Sep–Nov)"), ("winter", "❄️", "Winter (Dec–Feb)"),
+    "en": [("spring", "🌸", "Spring (Mar-May)"), ("summer", "☀️", "Summer (Jun-Aug)"),
+           ("fall", "🍂", "Fall (Sep-Nov)"), ("winter", "❄️", "Winter (Dec-Feb)"),
            ("flex", "🗓️", "I'm flexible")],
-    "es": [("spring", "🌸", "Primavera (Mar–May)"), ("summer", "☀️", "Verano (Jun–Ago)"),
-           ("fall", "🍂", "Otoño (Sep–Nov)"), ("winter", "❄️", "Invierno (Dic–Feb)"),
+    "es": [("spring", "🌸", "Primavera (Mar-May)"), ("summer", "☀️", "Verano (Jun-Ago)"),
+           ("fall", "🍂", "Otoño (Sep-Nov)"), ("winter", "❄️", "Invierno (Dic-Feb)"),
            ("flex", "🗓️", "Soy flexible")],
 }
 _PARTIES = {
@@ -43,18 +43,18 @@ _PARTIES = {
 _TXT = {
     "en": {"kicker": "Cruise finder · 4 quick steps", "q1": "Where do you want to sail?",
            "q2": "When can you travel?", "q3": "Who's travelling?", "resultTitle": "Here's a great place to start",
-           "back": "← Back", "restart": "Start over", "call": "Get your options — call now",
+           "back": "← Back", "restart": "Start over", "call": "Get your options, call now",
            "cap": "Free, no obligation, and we never take payment.",
            "linesLabel": "Lines that often sail here",
-           "deployNote": "Deployments change by season — an advisor confirms which ships actually sail your dates.",
-           "lead": "{region}, {when} — a great fit for {who}."},
+           "deployNote": "Deployments change by season, an advisor confirms which ships actually sail your dates.",
+           "lead": "{region}, {when}, a great fit for {who}."},
     "es": {"kicker": "Buscador de cruceros · 4 pasos", "q1": "¿A dónde quieres navegar?",
            "q2": "¿Cuándo puedes viajar?", "q3": "¿Quién viaja?", "resultTitle": "Un excelente punto de partida",
-           "back": "← Atrás", "restart": "Empezar de nuevo", "call": "Ver tus opciones — llama ahora",
+           "back": "← Atrás", "restart": "Empezar de nuevo", "call": "Ver tus opciones, llama ahora",
            "cap": "Gratis, sin compromiso, y nunca cobramos por el viaje.",
            "linesLabel": "Líneas que suelen navegar aquí",
-           "deployNote": "Los despliegues cambian por temporada — un asesor confirma qué barcos navegan en tus fechas.",
-           "lead": "{region}, {when} — ideal para {who}."},
+           "deployNote": "Los despliegues cambian por temporada, un asesor confirma qué barcos navegan en tus fechas.",
+           "lead": "{region}, {when}, ideal para {who}."},
 }
 
 
@@ -88,7 +88,7 @@ def finder_card(lang):
       <div class="fd-steps" id="fdSteps"><i class="on"></i><i></i><i></i><i></i></div>
     </div>
     <div class="finder-body" id="fdBody"></div>
-    <noscript><p class="fd-cap">Enable JavaScript to use the finder, or just call — we'll walk you through it.</p></noscript>
+    <noscript><p class="fd-cap">Enable JavaScript to use the finder, or just call, we'll walk you through it.</p></noscript>
   </div>
 <script>
 (function(){{

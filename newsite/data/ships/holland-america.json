@@ -20,7 +20,7 @@
       "notes": "Maiden voyage Apr 8, 2016. Maximum Passengers 3,154. Crew 1,036. First Pinnacle-class ship.",
       "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
       "exp": {
-        "overview": "The lead ship of Holland America's flagship Pinnacle Class, christened by Queen Máxima of the Netherlands, Koningsdam pairs a music-and-design theme with the line's most ambitious dining and entertainment line-up. Named decks honour composers — Beethoven, Gershwin, Mozart, Schubert — and the ship centres on the two-story World Stage theatre and the multi-venue Music Walk. A 2026 dry dock refreshed the live-music spaces.",
+        "overview": "The lead ship of Holland America's flagship Pinnacle Class, christened by Queen Máxima of the Netherlands, Koningsdam pairs a music-and-design theme with the line's most ambitious dining and entertainment line-up. Named decks honour composers, Beethoven, Gershwin, Mozart, Schubert, and the ship centres on the two-story World Stage theatre and the multi-venue Music Walk. A 2026 dry dock refreshed the live-music spaces.",
         "neighbourhoods": [
           "Music Walk",
           "World Stage",
@@ -106,7 +106,7 @@
           },
           {
             "name": "Pickleball",
-            "desc": "Ocean-view sport court — part of the fleetwide pickleball roll-out."
+            "desc": "Ocean-view sport court, part of the fleetwide pickleball roll-out."
           },
           {
             "name": "Fitness Center",
@@ -131,11 +131,11 @@
             "desc": "A Memphis-style band brings soul, blues and R&B to the Music Walk late into the night."
           }
         ],
-        "kids_family": "Club HAL (branded Kids Club) offers supervised, age-tiered activities for ages 3–12 with a separate tween/teen space and a 'High Score!' arcade. Programming runs on select sailings and is lighter on adult-oriented itineraries.",
+        "kids_family": "Club HAL (branded Kids Club) offers supervised, age-tiered activities for ages 3-12 with a separate tween/teen space and a 'High Score!' arcade. Programming runs on select sailings and is lighter on adult-oriented itineraries.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/koningsdam/3 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/KO/3/hal-ko-deckplan.pdf ; dry dock https://www.hollandamerica.com/en/us/news/2026/march/news-03302026-koningsdam-cruise-ship-drydock",
         "who_for": "Aimed squarely at Holland America's core: mature, well-travelled guests who choose a premium mid-size ship for its culinary depth and live-music program over waterslides and crowds. A strong fit for couples, music lovers and multi-generational family groups who still want a refined, unhurried atmosphere.",
         "decks": 12,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, roundtrip ex-Seattle and Vancouver). Typically repositions to Mexican Riviera / Pacific ex-San Diego in winter — verify current season."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, roundtrip ex-Seattle and Vancouver). Typically repositions to Mexican Riviera / Pacific ex-San Diego in winter, verify current season."
       }
     },
     {
@@ -264,7 +264,7 @@
             "desc": "A Memphis-style band delivering blues, soul and R&B in the Music Walk."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) provides age-tiered supervised activities for ages 3–12, a tween/teen space and a 'High Score!' game room; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) provides age-tiered supervised activities for ages 3-12, a tween/teen space and a 'High Score!' game room; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-statendam/1 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/NS/pdf/hal-ns-deckplan-08242025.pdf",
         "who_for": "Built for Holland America's mature, premium-leaning guest who prizes an elevated culinary scene and nightly live music. Ideal for couples and small groups seeking a polished, sophisticated ship rather than a resort-at-sea aimed at kids.",
         "decks": 13,
@@ -399,9 +399,9 @@
             "desc": "A Memphis-style band brings blues, soul and R&B to the Music Walk."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a tween/teen space; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a tween/teen space; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/rotterdam/0 ; maiden voyage https://www.hollandamerica.com/en/us/news/2021-press-releases1/news-10202021-RODMFirstCruise21 ; dry dock https://www.hollandamerica.com/en/us/news/2026/April/news-04282026-rotterdam-dry-dock",
-        "who_for": "The choice for Holland America loyalists and discerning, culturally-minded travellers who want the line's flagship experience — deep art and history touches, top-tier dining and the richest live-music program at sea. Best suited to couples and mature guests.",
+        "who_for": "The choice for Holland America loyalists and discerning, culturally-minded travellers who want the line's flagship experience, deep art and history touches, top-tier dining and the richest live-music program at sea. Best suited to couples and mature guests.",
         "deploy_note": "Typically Caribbean out of Fort Lauderdale in winter and Europe in summer; a 2026 dry dock kept it current. Not on the official Alaska list. Verify home ports and season."
       }
     },
@@ -513,11 +513,11 @@
             "desc": "Dueling pianos performing chart hits across the decades."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a tween/teen space; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a tween/teen space; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/eurodam/0 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/ED/1/hal-ed-deckplan.pdf ; Alaska https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises",
         "who_for": "Suits mature, premium-minded cruisers who want a mid-size ship with strong dining and live music but a more intimate feel than the flagship class. A dependable fit for couples and Alaska-bound travellers.",
         "decks": 11,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Caribbean or Pacific itineraries in winter — verify."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Caribbean or Pacific itineraries in winter, verify."
       }
     },
     {
@@ -628,11 +628,11 @@
             "desc": "Dueling pianos running through chart hits."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a 'High Score!' arcade; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a 'High Score!' arcade; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/nieuw-amsterdam/4 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/NA/4/hal-na-deckplan.pdf ; Alaska https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises",
         "who_for": "Made for mature, premium-oriented guests who appreciate art, design and live music on a manageable mid-size ship. Popular with couples and Alaska travellers who want character without the scale of the flagship class.",
         "decks": 12,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Mexico or Caribbean in winter — verify."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Mexico or Caribbean in winter, verify."
       }
     },
     {
@@ -731,11 +731,11 @@
             "desc": "Dueling pianos performing chart hits across the decades."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a tween/teen space; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a tween/teen space; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/noordam/7 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/NO/pdf/hal-no-deckplan-100525.pdf ; Alaska https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises",
         "who_for": "A good match for mature, premium-leaning cruisers who want a comfortable mid-size ship with solid dining and live music. Well suited to couples and Alaska travellers who prefer a classic, unhurried atmosphere.",
         "decks": 11,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Other seasons typically Pacific/South Pacific or Europe — verify."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Other seasons typically Pacific/South Pacific or Europe, verify."
       }
     },
     {
@@ -834,7 +834,7 @@
             "desc": "Dueling pianos running through decades of chart hits."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a 'High Score!' arcade; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a 'High Score!' arcade; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/oosterdam/1 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/OS/pdf/hal-os-deckplan-111725.pdf",
         "who_for": "Fits mature, premium-oriented guests looking for a comfortable mid-size ship with dependable dining and nightly live music. A natural choice for couples on longer, destination-focused voyages.",
         "decks": 11,
@@ -938,11 +938,11 @@
             "desc": "Redesigned forward observation lounge with a new bandstand stage for intimate live performances, added in the January 2026 dry dock."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a tween/teen space; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a tween/teen space; offered on select sailings.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/westerdam/8 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/WE/8/hal-we-deckplan.pdf ; dry dock https://www.hollandamerica.com/en/us/news/2026/january/news-01192026-westerdam-dry-dock ; Alaska https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises",
         "who_for": "Suits mature, premium-minded cruisers who value a freshly refreshed mid-size ship with strong dining and live music. A solid choice for couples and Alaska travellers.",
         "decks": 11,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Asia/Pacific in winter — verify."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, ex-Seattle/Vancouver). Typically Asia/Pacific in winter, verify."
       }
     },
     {
@@ -1046,7 +1046,7 @@
             "desc": "New forward-lounge bandstand stage for intimate live performances, added in the December 2025 dry dock."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3–12 and a tween/teen space; offered on select sailings.",
+        "kids_family": "Club HAL (Kids Club) with age-tiered supervised activities for ages 3-12 and a tween/teen space; offered on select sailings.",
         "decks": 11,
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/zuiderdam/7 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/UU/6/hal-uu-deckplan.pdf ; dry dock https://www.hollandamerica.com/en/us/news/2025/December/news-12092025-holland-america-line-zuiderdam-returns-from-dry-dock",
         "who_for": "A match for mature, premium-oriented cruisers who want a comfortable, recently refreshed mid-size ship with strong dining and live music. Well suited to couples on Caribbean, Panama Canal and Canada/New England voyages.",
@@ -1068,7 +1068,7 @@
       "notes": "Maiden voyage Nov 12, 1999. Maximum Passengers 1,839. Crew 604. R-class; uses Wajang Theater rather than World Stage. 21 Lanai staterooms per Fleet Specifications.",
       "spec_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
       "exp": {
-        "overview": "An R-Class ship and one of the two smallest, most intimate vessels in the fleet, Volendam spreads across ten decks with a floral design theme. It centres on the World Stage show lounge and the distinctive Wajang Theater cinema — an R-Class signature — rather than a full Music Walk, and offers Pinnacle Grill and Canaletto specialty dining, the Greenhouse Spa, and both Lido and Sea View pools.",
+        "overview": "An R-Class ship and one of the two smallest, most intimate vessels in the fleet, Volendam spreads across ten decks with a floral design theme. It centres on the World Stage show lounge and the distinctive Wajang Theater cinema, an R-Class signature, rather than a full Music Walk, and offers Pinnacle Grill and Canaletto specialty dining, the Greenhouse Spa, and both Lido and Sea View pools.",
         "dining": [
           {
             "name": "Dining Room",
@@ -1130,12 +1130,12 @@
           },
           {
             "name": "Wajang Theater",
-            "desc": "A dedicated cinema for films and screenings — a distinctive R-Class feature not found on the larger ships."
+            "desc": "A dedicated cinema for films and screenings, a distinctive R-Class feature not found on the larger ships."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with supervised activities for ages 3–12; offered on select sailings and lighter on this intimate, adult-leaning ship.",
+        "kids_family": "Club HAL (Kids Club) with supervised activities for ages 3-12; offered on select sailings and lighter on this intimate, adult-leaning ship.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/volendam/7 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/VO/7/hal-vo-deckplan.pdf",
-        "who_for": "Ideal for mature guests who prefer a small, intimate, classic ship over a big-ship experience — well suited to couples and enrichment-minded travellers drawn to longer, destination-rich itineraries. Less oriented to families and the elaborate live-music program of the larger classes.",
+        "who_for": "Ideal for mature guests who prefer a small, intimate, classic ship over a big-ship experience, well suited to couples and enrichment-minded travellers drawn to longer, destination-rich itineraries. Less oriented to families and the elaborate live-music program of the larger classes.",
         "neighbourhoods": [
           "World Stage",
           "Wajang Theater",
@@ -1226,12 +1226,12 @@
           },
           {
             "name": "Wajang Theater",
-            "desc": "A dedicated cinema for films and screenings — a distinctive R-Class feature."
+            "desc": "A dedicated cinema for films and screenings, a distinctive R-Class feature."
           }
         ],
-        "kids_family": "Club HAL (Kids Club) with supervised activities for ages 3–12; offered on select sailings and lighter on this intimate, adult-leaning ship.",
+        "kids_family": "Club HAL (Kids Club) with supervised activities for ages 3-12; offered on select sailings and lighter on this intimate, adult-leaning ship.",
         "exp_source": "https://www.hollandamerica.com/en/us/cruise-ships/zaandam/7 ; deck plan https://www.hollandamerica.com/content/dam/hal/inventory-assets/ships/AA/7/hal-aa-deckplan.pdf ; Alaska https://www.hollandamerica.com/en/us/cruise-destinations/alaska-cruises",
-        "who_for": "Best for mature travellers who want a small, classic, intimate ship for destination-focused and Alaska voyages — well suited to couples and enrichment-minded guests rather than families seeking big-ship amenities.",
+        "who_for": "Best for mature travellers who want a small, classic, intimate ship for destination-focused and Alaska voyages, well suited to couples and enrichment-minded guests rather than families seeking big-ship amenities.",
         "neighbourhoods": [
           "World Stage",
           "Wajang Theater",
@@ -1242,7 +1242,7 @@
           "Casino"
         ],
         "decks": 10,
-        "deploy_note": "Officially listed on Holland America's Alaska program (summer, including one-way Gulf of Alaska sailings ex-Vancouver/Whittier). Other seasons typically Pacific Coastal, Mexico and Canada/New England — verify."
+        "deploy_note": "Officially listed on Holland America's Alaska program (summer, including one-way Gulf of Alaska sailings ex-Vancouver/Whittier). Other seasons typically Pacific Coastal, Mexico and Canada/New England, verify."
       }
     }
   ],

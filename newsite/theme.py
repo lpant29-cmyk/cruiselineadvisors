@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The design system — one inlined stylesheet. FUN tropical-cruise identity:
+"""The design system, one inlined stylesheet. FUN tropical-cruise identity:
 bright sky, turquoise sea, sunny gold, coral pop, an animated ship-on-the-ocean hero
 and wave-shaped section dividers. Reads as "cruise vacation" before a word is read.
 Motion is transform/opacity only and freezes under prefers-reduced-motion."""
@@ -50,7 +50,7 @@ img,svg{max-width:100%}
 .mainnav ul{list-style:none;display:flex;flex-direction:column;gap:2px}
 .mainnav a{display:block;padding:.8em .85em;border-radius:10px;font-size:1rem;font-weight:700;color:var(--navy);text-decoration:none;min-height:44px}
 .mainnav a:hover{background:var(--foam)}
-/* Cruise Lines submenu — mobile drawer: shown indented under the parent */
+/* Cruise Lines submenu, mobile drawer: shown indented under the parent */
 .has-sub .sub{list-style:none;margin:2px 0 8px;padding:0 0 0 12px;display:flex;flex-direction:column;gap:1px;border-left:2px solid var(--line)}
 .has-sub .sub a{font-size:.94rem;padding:.6em .7em;color:var(--muted);font-weight:600;min-height:40px}
 .has-sub .sub a:hover{color:var(--navy)}
@@ -304,7 +304,7 @@ img,svg{max-width:100%}
 .cmp-table tr.imp th.fact{border-left:3px solid var(--gold)}
 .facts-1col tbody th{width:54%}
 
-/* ═══ comparison tool — stacked, color-coded cards (mobile-clear) ═══ */
+/* ═══ comparison tool, stacked, color-coded cards (mobile-clear) ═══ */
 .cx{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-lg);overflow:hidden}
 .cx-top{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:linear-gradient(120deg,var(--navy2),var(--navy))}
 @media(min-width:560px){.cx-top{flex-direction:row;align-items:center;gap:10px}}
@@ -333,7 +333,7 @@ img,svg{max-width:100%}
 .cx-foot{padding:16px;background:var(--cream);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .cx-foot p{font-size:.95rem;color:var(--navy);font-weight:700}
 @media(min-width:760px){.cx-cards{grid-template-columns:1fr 1fr}}
-/* collapsible accordion rows — compact, tap to expand (one open at a time) */
+/* collapsible accordion rows, compact, tap to expand (one open at a time) */
 .cx-card{padding:0;overflow:hidden}
 .cx-head{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;background:none;border:0;padding:12px 15px;cursor:pointer;text-align:left;font:inherit;color:inherit}
 .cx-head:hover{background:rgba(18,145,154,.06)}
@@ -470,7 +470,7 @@ section[id^="x-"],#ship-basics,#ship-sisters{scroll-margin-top:84px}
 .faq-item summary{cursor:pointer;padding:16px 18px;font-weight:800;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:"+";font-size:1.3rem;color:var(--sea3);flex:none}
-.faq-item[open] summary::after{content:"–"}
+.faq-item[open] summary::after{content:"-"}
 .faq-a{padding:0 18px 16px;color:var(--muted);line-height:1.6}
 .faq-a p{margin:0}
 /* destination photo hero */
@@ -669,6 +669,11 @@ section[id^="d-"]{scroll-margin-top:84px}
 .totop.show{opacity:1;pointer-events:auto;transform:none}
 .totop:hover{background:var(--sea3)}
 @media(min-width:760px){.totop{bottom:24px;right:24px;width:50px;height:50px}}
+.goback{position:fixed;left:16px;bottom:84px;z-index:90;display:inline-flex;align-items:center;gap:.4em;height:46px;padding:0 1em;border-radius:99px;border:0;background:#fff;color:var(--navy);font:inherit;font-size:.9rem;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(8,44,66,.28);border:1px solid var(--line);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
+.goback.show{opacity:1;pointer-events:auto;transform:none}
+.goback:hover{border-color:var(--sea2);color:var(--sea3)}
+.goback span{font-size:1.15em;line-height:1}
+@media(min-width:760px){.goback{bottom:24px;left:24px}}
 .xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
 .xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
 .xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}

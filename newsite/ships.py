@@ -2,7 +2,7 @@
 """Verified ship rosters, per line. Single source for the fleet listings on line pages, the
 dedicated per-ship pages, and the ship-compare tool.
 
-Each field is either a real, sourced value or None (renders as a visible "Not yet verified" gap —
+Each field is either a real, sourced value or None (renders as a visible "Not yet verified" gap, 
 never guessed). `source`/`verified` record where the roster came from and when it was checked;
 per Hard Rule 7, ships are re-checked on the normal refresh window. NO prices anywhere.
 
@@ -12,7 +12,7 @@ SHIPS[line_slug] = {
     "ships": [
         {"name": str, "class": str|None, "year": int|None,
          "tonnage": int|None, "guests": int|None,
-         "features": [str, ...], "notes": str|None},
+         "features": [str...], "notes": str|None},
         ...
     ],
 }
@@ -23,7 +23,7 @@ import re
 import os
 import json
 
-# Rosters load from data/ships/*.json — the official-sourced files written by the sourcing pass
+# Rosters load from data/ships/*.json, the official-sourced files written by the sourcing pass
 # (one per line). Each: {line, roster_source, specs_source, verified, ships:[...], needs_manual, flag}.
 # Drop a new official file in and the build picks it up; no hand-transcription. NO PRICES in these.
 SHIPS = {}
@@ -49,21 +49,21 @@ def slugify(name):
 
 
 # A handful of ships carry an internal sourcing note (e.g. "…not confirmed on the pages read - see
-# needs.") in kids_family, from the enrichment pass. That phrasing is for us, not visitors — it must
+# needs.") in kids_family, from the enrichment pass. That phrasing is for us, not visitors, it must
 # never render. kids_family_display() swaps it for a clear, honest message; rich list data (named
 # venues) and normal prose pass through untouched.
 _KIDS_GAP_MARKERS = ("not confirmed on the pages read", "see needs", "not verified", "the pages read")
 _KIDS_GAP_MSG = {
     "en": ("Family programming runs across the ship. We haven't yet verified this ship's exact "
-           "kids-club, nursery and teen venue names from the line's official page — call and an "
+           "kids-club, nursery and teen venue names from the line's official page, call and an "
            "advisor will confirm what's on board for your dates."),
     "es": ("Hay programación familiar en todo el barco. Aún no hemos verificado los nombres exactos "
            "del club infantil, la guardería y los espacios para adolescentes de este barco en la "
-           "página oficial de la línea — llama y un asesor confirmará qué hay a bordo para tus fechas."),
+           "página oficial de la línea, llama y un asesor confirmará qué hay a bordo para tus fechas."),
 }
 _KIDS_GAP_MSG_SHORT = {
-    "en": "Family programming on board — specific venue names confirmed by phone.",
-    "es": "Programación familiar a bordo — nombres de locales confirmados por teléfono.",
+    "en": "Family programming on board, specific venue names confirmed by phone.",
+    "es": "Programación familiar a bordo, nombres de locales confirmados por teléfono.",
 }
 
 
@@ -112,7 +112,7 @@ def source_of(line_slug):
 
 
 def coverage():
-    """(lines with a roster, total verified ships) — printed by the build."""
+    """(lines with a roster, total verified ships), printed by the build."""
     lines = sum(1 for v in SHIPS.values() if v.get("ships"))
     total = sum(len(v.get("ships", [])) for v in SHIPS.values())
     return lines, total

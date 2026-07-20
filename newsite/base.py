@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The page shell — <head> SEO, fonts, inlined CSS, header, content, footer, sticky call.
+"""The page shell, <head> SEO, fonts, inlined CSS, header, content, footer, sticky call.
 Every page is composed through page(). Bilingual: emits canonical + hreflang alternates."""
 import html, json
 from config import (PHONE_HREF, SITE_URL, BRAND, LANGS, DEFAULT_LANG, IS_PLACEHOLDER_PHONE, HOURS,
@@ -35,7 +35,7 @@ def _analytics_head():
 
 
 def _analytics_body():
-    """GTM <noscript> fallback iframe — must be the first thing after <body>."""
+    """GTM <noscript> fallback iframe, must be the first thing after <body>."""
     if GTM_ID:
         return (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"'
                 ' height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>')
@@ -120,6 +120,7 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 <main id="main">{content}</main>
 {footer(lang)}
 {sticky_callbar(lang)}
+<button id="goBack" class="goback" aria-label="{'Go back to the previous page' if lang=='en' else 'Volver a la página anterior'}"><span aria-hidden="true">←</span> {'Back' if lang=='en' else 'Atrás'}</button>
 <button id="toTop" class="totop" aria-label="{'Back to top' if lang=='en' else 'Volver arriba'}">↑</button>
 <script>
 function trackCall(p){{window.dataLayer=window.dataLayer||[];window.dataLayer.push({{event:'call_click',placement:p,lang:'{lang}'}});
@@ -127,5 +128,9 @@ if(typeof gtag==='function'){{gtag('event','call_click',{{placement:p}});}}retur
 (function(){{var b=document.getElementById('toTop');if(!b)return;
 b.onclick=function(){{window.scrollTo({{top:0,behavior:'smooth'}});}};
 addEventListener('scroll',function(){{b.classList.toggle('show',window.scrollY>600);}},{{passive:true}});}})();
+(function(){{var g=document.getElementById('goBack');if(!g)return;
+// only show when there's an in-site page to go back to
+if(document.referrer&&history.length>1){{g.classList.add('show');}}
+g.onclick=function(){{if(history.length>1){{history.back();}}else{{location.href='/{lang}/index.html';}}}};}})();
 </script>
 </body></html>"""

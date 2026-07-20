@@ -2,7 +2,7 @@
 """Merge enrich-<line>.json files (from the parallel enrichment pass) into the fact sheets:
 per-ship exp (overview/who_for/dining/activities/entertainment/zones->neighbourhoods/kids_family/
 decks/deploy_note) into data/ships/<line>.json, and line seasonal_deployment into
-data/cruise-lines.json. Idempotent — re-run as more line files arrive. Normalizes {value,...}
+data/cruise-lines.json. Idempotent, re-run as more line files arrive. Normalizes {value,...}
 wrappers, strips price tokens, drops "Not yet verified" placeholders (keeps them honest gaps)."""
 import json
 import glob

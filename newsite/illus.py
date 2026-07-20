@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """Self-hosted, zero-copyright illustrative artwork (inline SVG). Used on ship pages as a decorative
 banner until/unless the user supplies licensed real photos. On-brand with the site's ocean palette.
-It is clearly stylised/illustrative — never presented as a photo of the actual ship."""
+It is clearly stylised/illustrative, never presented as a photo of the actual ship."""
 
 _LABEL = {"en": "Illustrative", "es": "Ilustrativo"}
 
 
 def ship_banner(lang):
-    """A wide flat-design ocean scene with a stylised modern cruise ship — decorative only."""
+    """A wide flat-design ocean scene with a stylised modern cruise ship, decorative only."""
     return f'''<div class="illus-band" role="img" aria-label="{_LABEL[lang]} ocean scene">
 <svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
   <defs>

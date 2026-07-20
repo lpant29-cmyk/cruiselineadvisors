@@ -13,13 +13,13 @@
       "crew": 1173,
       "length": "1,132 ft",
       "features": [],
-      "notes": "Cunard's official ship pages publish guests, crew and length only — gross tonnage and entered-service year are not published on the site.",
+      "notes": "Cunard's official ship pages publish guests, crew and length only, gross tonnage and entered-service year are not published on the site.",
       "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-mary-2",
       "exp": {
-        "overview": "Queen Mary 2 is Cunard's flagship and the only true ocean liner in service today — built for the North Atlantic crossing rather than as a converted cruise ship, she carries the White Star Service and Cunard's ocean-liner heritage of grand, formal transatlantic travel.",
+        "overview": "Queen Mary 2 is Cunard's flagship and the only true ocean liner in service today, built for the North Atlantic crossing rather than as a converted cruise ship, she carries the White Star Service and Cunard's ocean-liner heritage of grand, formal transatlantic travel.",
         "who_for": "Best suited to couples, honeymooners and travellers who love tradition and occasion: formal-night dressers, ballroom dancers, and those drawn to the romance of a transatlantic crossing. Skews older and affluent, with a British-influenced, refined atmosphere; not a party or big-water-park ship.",
-        "deploy_note": "EDITORIAL — VERIFY: Queen Mary 2 is Cunard's transatlantic liner, best known for the Southampton–New York crossing, with additional seasonal voyages (New England/Canada, Caribbean) from New York. Confirm exact itineraries officially before publishing.",
-        "exp_source": "cunard.com UNREADABLE this pass — every WebFetch to ship landing pages and sub-pages (dining, unique-venues) returned a 60s timeout; the Cunard newsroom host did not resolve; WebSearch budget was exhausted. No onboard facts could be verified from an official source. Only editorial who_for/overview produced."
+        "deploy_note": "EDITORIAL, VERIFY: Queen Mary 2 is Cunard's transatlantic liner, best known for the Southampton-New York crossing, with additional seasonal voyages (New England/Canada, Caribbean) from New York. Confirm exact itineraries officially before publishing.",
+        "exp_source": "cunard.com UNREADABLE this pass, every WebFetch to ship landing pages and sub-pages (dining, unique-venues) returned a 60s timeout; the Cunard newsroom host did not resolve; WebSearch budget was exhausted. No onboard facts could be verified from an official source. Only editorial who_for/overview produced."
       }
     },
     {
@@ -36,8 +36,8 @@
       "exp": {
         "overview": "Queen Anne is Cunard's newest ship (fourth in the fleet), carrying the White Star Service and the line's ocean-liner heritage into a contemporary design while preserving Cunard's signature formal, grand-voyage character.",
         "who_for": "Suits couples and traditional, formal-leaning cruisers who want Cunard's refined, dress-for-dinner style in a newer ship. Appeals to older, affluent travellers and ballroom/afternoon-tea enthusiasts; a sophisticated rather than family-thrill atmosphere.",
-        "deploy_note": "EDITORIAL — VERIFY: Confirm Queen Anne's US/Canada season presence (if any) from official find-a-cruise before publishing; primarily deployed on European and world voyages.",
-        "exp_source": "cunard.com UNREADABLE this pass — WebFetch to the Queen Anne page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
+        "deploy_note": "EDITORIAL, VERIFY: Confirm Queen Anne's US/Canada season presence (if any) from official find-a-cruise before publishing; primarily deployed on European and world voyages.",
+        "exp_source": "cunard.com UNREADABLE this pass, WebFetch to the Queen Anne page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
       }
     },
     {
@@ -52,10 +52,10 @@
       "notes": "Cunard publishes guests, crew and length only; tonnage and year not published.",
       "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-victoria",
       "exp": {
-        "overview": "Queen Victoria carries Cunard's White Star Service and ocean-liner heritage in an intimate, classically styled ship — evoking the grandeur of golden-age travel with a two-storey library, ballroom and formal dining.",
+        "overview": "Queen Victoria carries Cunard's White Star Service and ocean-liner heritage in an intimate, classically styled ship, evoking the grandeur of golden-age travel with a two-storey library, ballroom and formal dining.",
         "who_for": "Best for couples and traditional cruisers who value a smaller, refined, formal atmosphere; ballroom dancers, afternoon-tea and enrichment lovers. Skews older and affluent, with a British-influenced ambience; not aimed at families seeking activity-packed ships.",
-        "deploy_note": "EDITORIAL — VERIFY: Confirm any US/Canada season presence from official find-a-cruise; typically deployed on world voyages and European/UK sailings.",
-        "exp_source": "cunard.com UNREADABLE this pass — WebFetch to the Queen Victoria page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
+        "deploy_note": "EDITORIAL, VERIFY: Confirm any US/Canada season presence from official find-a-cruise; typically deployed on world voyages and European/UK sailings.",
+        "exp_source": "cunard.com UNREADABLE this pass, WebFetch to the Queen Victoria page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
       }
     },
     {
@@ -70,10 +70,10 @@
       "notes": "Cunard publishes guests, crew and length only; tonnage and year not published.",
       "spec_source": "https://www.cunard.com/en-gb/cruise-ships/queen-elizabeth",
       "exp": {
-        "overview": "Queen Elizabeth continues Cunard's White Star Service and ocean-liner heritage with art-deco-inspired grandeur — a graceful, formal ship named in the tradition of the original Cunard Queens.",
+        "overview": "Queen Elizabeth continues Cunard's White Star Service and ocean-liner heritage with art-deco-inspired grandeur, a graceful, formal ship named in the tradition of the original Cunard Queens.",
         "who_for": "Suits couples and traditional, formal-leaning cruisers who enjoy dressing for dinner, ballroom dancing and enrichment programming. Appeals to older, affluent, British-influenced travellers seeking refinement over high-energy family activity.",
-        "deploy_note": "EDITORIAL — VERIFY: Confirm any US/Canada (e.g. Alaska-adjacent or repositioning) season presence from official find-a-cruise; typically deployed on world voyages, Alaska (from US West Coast in some seasons), and European sailings.",
-        "exp_source": "cunard.com UNREADABLE this pass — WebFetch to the Queen Elizabeth page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
+        "deploy_note": "EDITORIAL, VERIFY: Confirm any US/Canada (e.g. Alaska-adjacent or repositioning) season presence from official find-a-cruise; typically deployed on world voyages, Alaska (from US West Coast in some seasons), and European sailings.",
+        "exp_source": "cunard.com UNREADABLE this pass, WebFetch to the Queen Elizabeth page timed out (60s); newsroom host did not resolve; WebSearch budget exhausted. No onboard facts verified from official source."
       }
     }
   ],

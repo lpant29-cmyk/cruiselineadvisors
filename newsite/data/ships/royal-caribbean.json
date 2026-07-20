@@ -20,7 +20,7 @@
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage January 27, 2024. Max occupancy not published on official fact sheet.",
       "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/ICON_Fact_Sheet.jpg",
       "exp": {
-        "overview": "The first ship in Royal Caribbean's revolutionary Icon Class, sailing since January 2024 with eight distinct neighborhoods, seven pools and Category 6 — the largest waterpark at sea.",
+        "overview": "The first ship in Royal Caribbean's revolutionary Icon Class, sailing since January 2024 with eight distinct neighborhoods, seven pools and Category 6, the largest waterpark at sea.",
         "activities": [
           {
             "name": "Category 6",
@@ -197,7 +197,7 @@
         "entertainment": [
           {
             "name": "The Wizard of Oz",
-            "desc": "Full Broadway musical production — Royal Caribbean's biggest cast and orchestra ever — with a new 16-piece orchestra, characters soaring above the audience and 600+ costume elements."
+            "desc": "Full Broadway musical production, Royal Caribbean's biggest cast and orchestra ever, with a new 16-piece orchestra, characters soaring above the audience and 600+ costume elements."
           },
           {
             "name": "Aqua Action!",
@@ -320,7 +320,7 @@
       "spec_source": "https://royalcaribbeanmedia.com/files/image/2025-Dec-10-Wed/STAR_Fact_Sheet.jpg",
       "exp": {
         "overview": "The second Icon Class ship, which debuted from Port Canaveral in August 2025, carrying the class's eight neighborhoods, seven pools and Category 6 waterpark with its own new-to-the-fleet entertainment lineup.",
-        "who_for": "Built as 'the ultimate family vacation' for multi-generational families and thrill-seekers — the family-focused Surfside neighborhood and Splashaway Bay for little ones, Category 6 and Crown's Edge for daredevils, and adults-only Hideaway and Cove pools for grown-ups.",
+        "who_for": "Built as 'the ultimate family vacation' for multi-generational families and thrill-seekers, the family-focused Surfside neighborhood and Splashaway Bay for little ones, Category 6 and Crown's Edge for daredevils, and adults-only Hideaway and Cove pools for grown-ups.",
         "dining": [
           {
             "name": "Main Dining Room",
@@ -392,7 +392,7 @@
             "name": "Lincoln Park Supper Club",
             "type": "specialty",
             "extra": true,
-            "desc": "1930s-inspired multi-course dinner-and-show with live jazz — new to Star of the Seas."
+            "desc": "1930s-inspired multi-course dinner-and-show with live jazz, new to Star of the Seas."
           },
           {
             "name": "Chops Grille",
@@ -636,7 +636,7 @@
       "notes": "Guests = double occupancy (per official fact sheet). Maiden voyage July 4, 2026. Max occupancy not published on official fact sheet.",
       "spec_source": "https://royalcaribbeanmedia.com/files/image/2026-Mar-2-Mon/1770756033_26-RCC-0561-LE-Ship-Fact-Sheet-DIGITAL-021026.jpg",
       "exp": {
-        "overview": "The third Icon Class ship, entering service in summer 2026 as the first of the class to sail Europe, carrying the same eight neighborhoods, seven pools and Category 6 — the largest waterpark at sea.",
+        "overview": "The third Icon Class ship, entering service in summer 2026 as the first of the class to sail Europe, carrying the same eight neighborhoods, seven pools and Category 6, the largest waterpark at sea.",
         "who_for": "Every type of family and vacationer across eight neighborhoods: families get the stay-all-day Surfside neighborhood, Splashaway Bay and a carousel; thrill-seekers get Category 6 and Crown's Edge; and adults get the adults-only Hideaway with its infinity-style pool.",
         "dining": [
           {
@@ -2211,7 +2211,7 @@
           },
           {
             "name": "SeaPlex",
-            "desc": "The ship's big indoor-outdoor activity complex — bumper cars, roller skating, basketball and games that families and teens rotate through all day."
+            "desc": "The ship's big indoor-outdoor activity complex, bumper cars, roller skating, basketball and games that families and teens rotate through all day."
           },
           {
             "name": "Fuel",
@@ -3994,8 +3994,8 @@
     }
   ],
   "needs_manual": [
-    "ALL ships: maximum (non-double) occupancy — official fact sheets publish only double-occupancy guest counts.",
-    "Hero of the Seas — EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
+    "ALL ships: maximum (non-double) occupancy, official fact sheets publish only double-occupancy guest counts.",
+    "Hero of the Seas, EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
   ],
   "flag": "30 in-service '...of the Seas' ships. Roster confirmed against official royalcaribbean.com/cruise-ships fleet page AND the official press-center LoadShips API (which also supplied each ship's class grouping). Per-ship year/tonnage/guests/features read directly from official Royal Caribbean 'Fast Facts' fact-sheet images (royalcaribbeanmedia.com, first-party, one per ship). 'year' is derived from the printed MAIDEN VOYAGE date. All guest figures are DOUBLE OCCUPANCY; no official page publishes max occupancy. Hero of the Seas (Icon class) excluded as not-yet-in-service (maiden voyage Aug 11, 2027). No third-party sources used. No prices present on fact sheets."
 }

@@ -19,7 +19,7 @@
       "notes": "In service. Sails from Port of Palm Beach to Key West and The Bahamas. Official about-us page: \"Launched in May 2022 with the Margaritaville at Sea Paradise sailing from the Port of Palm Beach.\" Tonnage, guest capacity, decks and class not published on any official page.",
       "spec_source": "https://www.margaritavilleatsea.com/about-us",
       "exp": {
-        "overview": "Paradise is the fleet's original, intimate island-in-motion — a laid-back, Jimmy Buffett-inspired ship built for short, no-fuss escapes where the party starts the moment you leave the dock. Signature restaurants, frozen margaritas, live island music and a beach-bar spirit run from the pool deck to the theater, all a quick sail from Florida.",
+        "overview": "Paradise is the fleet's original, intimate island-in-motion, a laid-back, Jimmy Buffett-inspired ship built for short, no-fuss escapes where the party starts the moment you leave the dock. Signature restaurants, frozen margaritas, live island music and a beach-bar spirit run from the pool deck to the theater, all a quick sail from Florida.",
         "dining": [
           {
             "name": "Fins Dining",
@@ -31,13 +31,13 @@
             "name": "High Tide Market",
             "type": "buffet",
             "extra": false,
-            "desc": "A five-station food hall replacing the traditional buffet — Mexican Cutie Cantina (tacos, rice bowls), License to Chill Sandwich Shack, Slice of Paradise (desserts), Provisions Salads & More, and Frank & Lola's Pizzeria."
+            "desc": "A five-station food hall replacing the traditional buffet, Mexican Cutie Cantina (tacos, rice bowls), License to Chill Sandwich Shack, Slice of Paradise (desserts), Provisions Salads & More, and Frank & Lola's Pizzeria."
           },
           {
             "name": "Cheeseburger in Paradise Burger Bar",
             "type": "casual",
             "extra": false,
-            "desc": "Build-your-own burgers and cold drinks at the 5 o'Clock Somewhere Bar and Grill on the pool deck — a nod to the Buffett classic."
+            "desc": "Build-your-own burgers and cold drinks at the 5 o'Clock Somewhere Bar and Grill on the pool deck, a nod to the Buffett classic."
           },
           {
             "name": "Margaritaville Coffee Shop",
@@ -71,7 +71,7 @@
           },
           {
             "name": "12 Volt Pool & 12 Volt Bar",
-            "desc": "An adults-only pool and refreshed stern bar with ocean views and Electric Margaritas — the quieter, grown-up corner of the deck."
+            "desc": "An adults-only pool and refreshed stern bar with ocean views and Electric Margaritas, the quieter, grown-up corner of the deck."
           },
           {
             "name": "St. Somewhere Spa & Salon",
@@ -143,7 +143,7 @@
       "notes": "In service. Official about-us page: \"expanded in June 2024 with the addition of the Margaritaville at Sea Islander, offering cruises from Port Tampa Bay.\" Tonnage, guest capacity, decks and class not published on any official page.",
       "spec_source": "https://www.margaritavilleatsea.com/about-us",
       "exp": {
-        "overview": "Islander is the fleet's larger, purpose-built flagship — 12 passenger decks wrapped around a 14-story tropical atrium, home to the world's only three-story LandShark Bar. It layers six new dining concepts, eleven new bars and lounges, three pools, two live production shows and family water play onto the signature Margaritaville beach-bar spirit, so the days at sea are as much the point as the ports.",
+        "overview": "Islander is the fleet's larger, purpose-built flagship, 12 passenger decks wrapped around a 14-story tropical atrium, home to the world's only three-story LandShark Bar. It layers six new dining concepts, eleven new bars and lounges, three pools, two live production shows and family water play onto the signature Margaritaville beach-bar spirit, so the days at sea are as much the point as the ports.",
         "dining": [
           {
             "name": "Fins Dining",
@@ -197,7 +197,7 @@
             "name": "Island Eats",
             "type": null,
             "extra": true,
-            "desc": "Adults-only ocean-bar bites — peel-and-eat shrimp, tuna nachos, crab salad (extra charge)."
+            "desc": "Adults-only ocean-bar bites, peel-and-eat shrimp, tuna nachos, crab salad (extra charge)."
           },
           {
             "name": "Tiki Grill",
@@ -257,7 +257,7 @@
           },
           {
             "name": "Caribbean Heat Remix",
-            "desc": "An amplified take on the Margaritaville favorite — electrifying dance, acrobatics and the beats of Key West and Mexico."
+            "desc": "An amplified take on the Margaritaville favorite, electrifying dance, acrobatics and the beats of Key West and Mexico."
           },
           {
             "name": "Radio Margaritaville: Live at Sea",
@@ -303,13 +303,13 @@
     }
   ],
   "needs_manual": [
-    "Paradise gross tonnage — not published on any official margaritavilleatsea.com page",
-    "Paradise guest capacity + basis — not published officially",
-    "Paradise number of decks — not published officially",
-    "Islander gross tonnage — not published officially",
-    "Islander guest capacity + basis — not published officially",
-    "Islander number of decks — not published officially",
-    "Ship class for both vessels — not stated officially"
+    "Paradise gross tonnage, not published on any official margaritavilleatsea.com page",
+    "Paradise guest capacity + basis, not published officially",
+    "Paradise number of decks, not published officially",
+    "Islander gross tonnage, not published officially",
+    "Islander guest capacity + basis, not published officially",
+    "Islander number of decks, not published officially",
+    "Ship class for both vessels, not stated officially"
   ],
-  "flag": "Beachcomber EXCLUDED from active roster — official cruise-ships page states \"Sailing from PortMiami in 2027\" (about-us: January 2027); upcoming, not yet in service. No tonnage/capacity/deck specs are published anywhere on the official site; all such fields null and flagged needs_manual."
+  "flag": "Beachcomber EXCLUDED from active roster, official cruise-ships page states \"Sailing from PortMiami in 2027\" (about-us: January 2027); upcoming, not yet in service. No tonnage/capacity/deck specs are published anywhere on the official site; all such fields null and flagged needs_manual."
 }

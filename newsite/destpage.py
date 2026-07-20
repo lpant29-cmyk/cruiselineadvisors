@@ -3,7 +3,7 @@
 
 Each US/Canada region page is a decision guide built from data we already hold: the home ports you
 sail from (deployment.json + self-hosted port photos), the ships that actually sail the region
-(derived from each ship's own itinerary — the same source the finder uses), the lines strong there,
+(derived from each ship's own itinerary, the same source the finder uses), the lines strong there,
 best time to sail, marquee ports of call, and travel-document practicalities. No prices anywhere;
 descriptive copy is original. Regions not in deployment.json (e.g. Mediterranean) get a lighter guide
 via the caller's fallback.
@@ -55,7 +55,7 @@ def _ships_by_line(slug):
 
 
 # ── per-region editorial copy (facts only; original wording) ─────────────────────────────────────
-# expect: 1–2 sentence "what to expect". calls: marquee ports of call as {name, desc} — factual,
+# expect: 1-2 sentence "what to expect". calls: marquee ports of call as {name, desc}, factual,
 # well-known geographic stops described in our own words (NO prices).
 def _c(name, en, es):
     return {"name": name, "desc": {"en": en, "es": es}}
@@ -66,21 +66,21 @@ DEST_COPY = {
         "expect": {"en": "Warm water, short flights to the port, and a mix of beach days and island stops. Eastern routes lean to lush, hilly islands; western routes add Mexico and Central America; southern routes reach the quieter, further-out islands.",
                    "es": "Agua cálida, vuelos cortos al puerto y una mezcla de días de playa y paradas en islas. Las rutas del este tienden a islas verdes; las del oeste añaden México y Centroamérica; las del sur llegan a islas más lejanas y tranquilas."},
         "calls": [
-            _c("Cozumel", "Mexico's dive-and-beach island off the Yucatán — a Western-Caribbean staple.", "La isla de buceo y playa de México frente a Yucatán — clásica del Caribe occidental."),
+            _c("Cozumel", "Mexico's dive-and-beach island off the Yucatán, a Western-Caribbean staple.", "La isla de buceo y playa de México frente a Yucatán, clásica del Caribe occidental."),
             _c("Grand Cayman", "Tender port known for Seven Mile Beach and Stingray City.", "Puerto de fondeo famoso por Seven Mile Beach y Stingray City."),
-            _c("Nassau", "The Bahamian capital — forts, markets and Paradise Island next door.", "La capital de Bahamas — fuertes, mercados y Paradise Island al lado."),
+            _c("Nassau", "The Bahamian capital, forts, markets and Paradise Island next door.", "La capital de Bahamas, fuertes, mercados y Paradise Island al lado."),
             _c("Perfect Day at CocoCay", "Royal Caribbean's private Bahamian island with a waterpark and beaches.", "La isla privada de Royal Caribbean en Bahamas, con parque acuático y playas."),
             _c("St. Thomas", "US Virgin Islands port known for Magens Bay and duty-free shopping.", "Puerto de las Islas Vírgenes de EE.UU., famoso por Magens Bay y compras libres de impuestos."),
             _c("St. Maarten", "Half-Dutch, half-French island with beaches and lively Philipsburg.", "Isla mitad holandesa, mitad francesa, con playas y el animado Philipsburg."),
             _c("San Juan", "Old San Juan's blue-cobbled streets and Spanish forts, in Puerto Rico.", "Las calles empedradas y fuertes españoles del Viejo San Juan, en Puerto Rico."),
-            _c("Roatán", "Honduran island on the Mesoamerican Reef — snorkelling and beaches.", "Isla hondureña en el Arrecife Mesoamericano — snorkel y playas."),
+            _c("Roatán", "Honduran island on the Mesoamerican Reef, snorkelling and beaches.", "Isla hondureña en el Arrecife Mesoamericano, snorkel y playas."),
         ],
     },
     "bahamas": {
-        "expect": {"en": "The quickest warm-weather cruise from Florida — often 3–5 nights, heavy on private islands and easy first-timer itineraries.",
-                   "es": "El crucero cálido más rápido desde Florida — a menudo de 3–5 noches, con muchas islas privadas e itinerarios fáciles para primerizos."},
+        "expect": {"en": "The quickest warm-weather cruise from Florida, often 3-5 nights, heavy on private islands and easy first-timer itineraries.",
+                   "es": "El crucero cálido más rápido desde Florida, a menudo de 3-5 noches, con muchas islas privadas e itinerarios fáciles para primerizos."},
         "calls": [
-            _c("Nassau", "The capital — forts, beaches and Paradise Island a bridge away.", "La capital — fuertes, playas y Paradise Island a un puente de distancia."),
+            _c("Nassau", "The capital, forts, beaches and Paradise Island a bridge away.", "La capital, fuertes, playas y Paradise Island a un puente de distancia."),
             _c("Freeport", "Grand Bahama's port for beaches, markets and reef trips.", "El puerto de Gran Bahama para playas, mercados y excursiones al arrecife."),
             _c("Perfect Day at CocoCay", "Royal Caribbean's private-island waterpark and beaches.", "El parque acuático y las playas de la isla privada de Royal Caribbean."),
             _c("Ocean Cay", "MSC's private Bahamian marine-reserve island.", "La isla-reserva marina privada de MSC en Bahamas."),
@@ -89,14 +89,14 @@ DEST_COPY = {
         ],
     },
     "alaska": {
-        "expect": {"en": "Glaciers, whales and green-mountain fjords on a tight May–September window. Choose a round-trip (usually from Seattle or Vancouver) or a one-way Gulf cruise that pairs with a land tour.",
+        "expect": {"en": "Glaciers, whales and green-mountain fjords on a tight May-September window. Choose a round-trip (usually from Seattle or Vancouver) or a one-way Gulf cruise that pairs with a land tour.",
                    "es": "Glaciares, ballenas y fiordos de montañas verdes en una ventana corta de mayo a septiembre. Elige ida y vuelta (normalmente desde Seattle o Vancouver) o un crucero de una vía por el Golfo que se combina con un tour terrestre."},
         "calls": [
-            _c("Juneau", "The capital, reachable only by sea or air — Mendenhall Glacier and whale-watching.", "La capital, a la que solo se llega por mar o aire — el glaciar Mendenhall y avistamiento de ballenas."),
+            _c("Juneau", "The capital, reachable only by sea or air, Mendenhall Glacier and whale-watching.", "La capital, a la que solo se llega por mar o aire, el glaciar Mendenhall y avistamiento de ballenas."),
             _c("Ketchikan", "Totem poles, salmon runs and the Misty Fjords.", "Tótems, salmón y los Misty Fjords."),
             _c("Skagway", "Gold-Rush town and the historic White Pass railway.", "Pueblo de la fiebre del oro y el histórico ferrocarril del White Pass."),
             _c("Glacier Bay", "A national park of tidewater glaciers seen by scenic cruising (no dock).", "Un parque nacional de glaciares de marea que se ve navegando (sin muelle)."),
-            _c("Icy Strait Point", "Native-owned port near Hoonah — whales and the world's longest zipline.", "Puerto de propiedad nativa cerca de Hoonah — ballenas y la tirolesa más larga del mundo."),
+            _c("Icy Strait Point", "Native-owned port near Hoonah, whales and the world's longest zipline.", "Puerto de propiedad nativa cerca de Hoonah, ballenas y la tirolesa más larga del mundo."),
             _c("Sitka", "Russian-Alaskan history on the wilder outer coast.", "Historia ruso-alaskeña en la costa exterior más salvaje."),
             _c("Hubbard Glacier", "A huge, actively calving glacier visited by scenic cruising.", "Un glaciar enorme y activo que se visita navegando."),
         ],
@@ -105,14 +105,14 @@ DEST_COPY = {
         "expect": {"en": "Pink-sand beaches and turquoise water a short hop off the US East Coast. Ships usually dock for multiple days at the Royal Naval Dockyard, so it feels part-cruise, part-resort.",
                    "es": "Playas de arena rosada y agua turquesa a poca distancia de la costa este de EE.UU. Los barcos suelen atracar varios días en el Royal Naval Dockyard, así que es parte crucero, parte resort."},
         "calls": [
-            _c("King's Wharf (Royal Naval Dockyard)", "The main cruise port — museum, beaches and ferries to town.", "El puerto principal — museo, playas y ferris al centro."),
+            _c("King's Wharf (Royal Naval Dockyard)", "The main cruise port, museum, beaches and ferries to town.", "El puerto principal, museo, playas y ferris al centro."),
             _c("Hamilton", "The capital, with shops along pastel Front Street.", "La capital, con tiendas en la colorida Front Street."),
             _c("St. George's", "A UNESCO-listed old town, Bermuda's original settlement.", "Un casco antiguo declarado por la UNESCO, el primer asentamiento de Bermudas."),
         ],
     },
     "mexican-riviera": {
-        "expect": {"en": "Pacific-coast Mexico from Southern California — beaches, tacos and desert-meets-sea scenery, usually on round-trips from Los Angeles or San Diego.",
-                   "es": "El Pacífico mexicano desde el sur de California — playas, tacos y paisaje de desierto y mar, normalmente en cruceros de ida y vuelta desde Los Ángeles o San Diego."},
+        "expect": {"en": "Pacific-coast Mexico from Southern California, beaches, tacos and desert-meets-sea scenery, usually on round-trips from Los Angeles or San Diego.",
+                   "es": "El Pacífico mexicano desde el sur de California, playas, tacos y paisaje de desierto y mar, normalmente en cruceros de ida y vuelta desde Los Ángeles o San Diego."},
         "calls": [
             _c("Cabo San Lucas", "Land's End, the famous arch and Baja beaches (a tender port).", "Land's End, el famoso arco y las playas de Baja (puerto de fondeo)."),
             _c("Puerto Vallarta", "Banderas Bay beaches and the Malecón boardwalk.", "Las playas de Bahía de Banderas y el Malecón."),
@@ -121,10 +121,10 @@ DEST_COPY = {
         ],
     },
     "canada-new-england": {
-        "expect": {"en": "Lighthouses, lobster and fall colour from New York or Boston up to the Canadian Maritimes and the St. Lawrence. September–October is the classic leaf-peeping window.",
-                   "es": "Faros, langosta y colores de otoño desde Nueva York o Boston hasta las Marítimas canadienses y el San Lorenzo. Septiembre–octubre es la ventana clásica del follaje otoñal."},
+        "expect": {"en": "Lighthouses, lobster and fall colour from New York or Boston up to the Canadian Maritimes and the St. Lawrence. September-October is the classic leaf-peeping window.",
+                   "es": "Faros, langosta y colores de otoño desde Nueva York o Boston hasta las Marítimas canadienses y el San Lorenzo. Septiembre-octubre es la ventana clásica del follaje otoñal."},
         "calls": [
-            _c("Halifax", "Nova Scotia's harbour city — the Citadel, waterfront and Peggy's Cove nearby.", "La ciudad portuaria de Nueva Escocia — la Ciudadela, el paseo marítimo y Peggy's Cove cerca."),
+            _c("Halifax", "Nova Scotia's harbour city, the Citadel, waterfront and Peggy's Cove nearby.", "La ciudad portuaria de Nueva Escocia, la Ciudadela, el paseo marítimo y Peggy's Cove cerca."),
             _c("Saint John", "New Brunswick port for the Bay of Fundy's record tides.", "Puerto de Nuevo Brunswick para las mareas récord de la Bahía de Fundy."),
             _c("Bar Harbor", "Gateway to Maine's Acadia National Park (a tender port).", "Puerta de entrada al Parque Nacional Acadia de Maine (puerto de fondeo)."),
             _c("Portland", "Maine lighthouses, lobster and the Old Port district.", "Faros de Maine, langosta y el distrito Old Port."),
@@ -140,15 +140,15 @@ DEST_COPY = {
             _c("Kahului (Maui)", "The Road to Hana, Haleakalā and Lahaina.", "La carretera a Hana, Haleakalā y Lahaina."),
             _c("Kona", "Big Island coffee, snorkelling and volcano country (a tender port).", "Café de Big Island, snorkel y tierra de volcanes (puerto de fondeo)."),
             _c("Hilo", "The lush gateway to Volcanoes National Park and waterfalls.", "La puerta verde al Parque Nacional de los Volcanes y las cascadas."),
-            _c("Nawiliwili (Kauai)", "The Garden Isle — the Na Pali coast and canyons.", "La Isla Jardín — la costa Na Pali y sus cañones."),
+            _c("Nawiliwili (Kauai)", "The Garden Isle, the Na Pali coast and canyons.", "La Isla Jardín, la costa Na Pali y sus cañones."),
             _c("Ensenada", "A required foreign stop in Mexico on round-trip Hawaii sailings.", "Una escala extranjera obligatoria en México en los cruceros de ida y vuelta a Hawái."),
         ],
     },
     "panama-canal": {
-        "expect": {"en": "A bucket-list transit through the locks, on either a full ocean-to-ocean crossing or a partial round-trip that enters the canal and turns back. Best in the drier October–April window.",
+        "expect": {"en": "A bucket-list transit through the locks, on either a full ocean-to-ocean crossing or a partial round-trip that enters the canal and turns back. Best in the drier October-April window.",
                    "es": "Un tránsito de lista de deseos por las esclusas, en un cruce completo de océano a océano o en un ida y vuelta parcial que entra al canal y regresa. Mejor en la ventana más seca de octubre a abril."},
         "calls": [
-            _c("Panama Canal / Gatún Lake", "The transit itself — a century-old marvel of locks and lakes.", "El tránsito en sí — una maravilla centenaria de esclusas y lagos."),
+            _c("Panama Canal / Gatún Lake", "The transit itself, a century-old marvel of locks and lakes.", "El tránsito en sí, una maravilla centenaria de esclusas y lagos."),
             _c("Cartagena", "Colombia's walled Caribbean colonial city.", "La ciudad colonial amurallada del Caribe colombiano."),
             _c("Colón", "Panama's Caribbean gateway, near the locks.", "La puerta caribeña de Panamá, cerca de las esclusas."),
             _c("Puntarenas", "Costa Rica's Pacific port for rainforest and wildlife.", "El puerto pacífico de Costa Rica para selva y fauna."),
@@ -169,8 +169,8 @@ DEST_COPY = {
         ],
     },
     "transatlantic": {
-        "expect": {"en": "A classic ocean crossing between North America and Europe — lots of sea days, a slower pace, and a repositioning-season timing. Great if the voyage itself is the point.",
-                   "es": "Un cruce oceánico clásico entre Norteamérica y Europa — muchos días de mar, ritmo pausado y en temporada de reposicionamiento. Ideal si el viaje en sí es lo importante."},
+        "expect": {"en": "A classic ocean crossing between North America and Europe, lots of sea days, a slower pace, and a repositioning-season timing. Great if the voyage itself is the point.",
+                   "es": "Un cruce oceánico clásico entre Norteamérica y Europa, muchos días de mar, ritmo pausado y en temporada de reposicionamiento. Ideal si el viaje en sí es lo importante."},
         "calls": [
             _c("Southampton", "The classic English departure port for ocean crossings.", "El clásico puerto de salida inglés para los cruces oceánicos."),
             _c("Ponta Delgada (Azores)", "A mid-Atlantic Portuguese island stop.", "Una escala en las islas portuguesas del Atlántico medio."),
@@ -183,7 +183,7 @@ DEST_COPY = {
         "expect": {"en": "Two cruises in one region: the Western Med (Spain, France, Italy) leans to art cities and beaches, while the Eastern Med (Greece and the Adriatic) is all whitewashed islands and ancient ruins. Warm, port-intensive, and almost always round-trip from a European city.",
                    "es": "Dos cruceros en una región: el Mediterráneo occidental (España, Francia, Italia) se inclina a ciudades de arte y playas, mientras que el oriental (Grecia y el Adriático) es de islas blancas y ruinas antiguas. Cálido, con muchos puertos y casi siempre de ida y vuelta desde una ciudad europea."},
         "calls": [
-            _c("Barcelona", "A top embarkation city — Gaudí, Las Ramblas and beaches.", "Una de las principales ciudades de embarque — Gaudí, Las Ramblas y playas."),
+            _c("Barcelona", "A top embarkation city, Gaudí, Las Ramblas and beaches.", "Una de las principales ciudades de embarque, Gaudí, Las Ramblas y playas."),
             _c("Rome (Civitavecchia)", "The port for Rome and the Vatican.", "El puerto para Roma y el Vaticano."),
             _c("Naples", "Gateway to Pompeii, the Amalfi Coast and Capri.", "Puerta a Pompeya, la Costa Amalfitana y Capri."),
             _c("Santorini", "The iconic caldera cliffs and blue domes of the Greek isles.", "Los icónicos acantilados de la caldera y las cúpulas azules de las islas griegas."),
@@ -193,10 +193,10 @@ DEST_COPY = {
         ],
     },
     "northern-europe": {
-        "expect": {"en": "Two flavours: the Norwegian Fjords for waterfalls and mountain scenery, and the Baltic for grand capital cities. Long summer daylight, a short May–September window, and cooler weather than the Med.",
+        "expect": {"en": "Two flavours: the Norwegian Fjords for waterfalls and mountain scenery, and the Baltic for grand capital cities. Long summer daylight, a short May-September window, and cooler weather than the Med.",
                    "es": "Dos estilos: los fiordos noruegos por sus cascadas y montañas, y el Báltico por sus grandes capitales. Días de verano muy largos, una ventana corta de mayo a septiembre y clima más fresco que el Mediterráneo."},
         "calls": [
-            _c("Copenhagen", "A common Baltic home port — harbours, palaces and design.", "Un puerto base habitual del Báltico — puertos, palacios y diseño."),
+            _c("Copenhagen", "A common Baltic home port, harbours, palaces and design.", "Un puerto base habitual del Báltico, puertos, palacios y diseño."),
             _c("Geiranger (Norwegian Fjords)", "A UNESCO fjord of sheer cliffs and waterfalls.", "Un fiordo declarado por la UNESCO, de acantilados y cascadas."),
             _c("Stockholm", "A capital spread across islands, reached via a scenic archipelago.", "Una capital repartida en islas, a la que se llega por un archipiélago escénico."),
             _c("Bergen", "The colourful Bryggen wharf and gateway to the fjords.", "El colorido muelle de Bryggen y la puerta a los fiordos."),
@@ -210,9 +210,9 @@ DEST_COPY = {
 # home port (so no "where you sail from" / "ships that sail here" sections). Data drives the hero,
 # best-time strip and which-lines panel; itineraries typically start from Europe.
 INTL = {
-    "mediterranean": {"season": {"en": "April–October", "es": "Abril–Octubre"}, "months": [4, 5, 6, 7, 8, 9, 10],
+    "mediterranean": {"season": {"en": "April-October", "es": "Abril-Octubre"}, "months": [4, 5, 6, 7, 8, 9, 10],
                       "lines": ["msc", "celebrity", "princess", "royal-caribbean", "holland-america", "cunard"]},
-    "northern-europe": {"season": {"en": "May–September", "es": "Mayo–Septiembre"}, "months": [5, 6, 7, 8, 9],
+    "northern-europe": {"season": {"en": "May-September", "es": "Mayo-Septiembre"}, "months": [5, 6, 7, 8, 9],
                         "lines": ["princess", "holland-america", "celebrity", "royal-caribbean", "cunard", "msc"]},
 }
 
@@ -288,7 +288,7 @@ def _line_fit_cards(lang, line_slugs):
 
 def _intl_guide(lang, slug, name):
     """Rich guide for a region NOT boardable from a US/Canada home port (Mediterranean, N. Europe):
-    same look, but no US home-port or ship-itinerary sections — itineraries start from Europe."""
+    same look, but no US home-port or ship-itinerary sections, itineraries start from Europe."""
     r = INTL[slug]
     copy = DEST_COPY.get(slug, {})
     en = lang == "en"
@@ -305,26 +305,26 @@ def _intl_guide(lang, slug, name):
 
     if copy.get("calls"):
         cards = "".join(_call_card(c, lang) for c in copy["calls"])
-        pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see. Photos are illustrative."
-                 if en else "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver. Las fotos son ilustrativas.")
+        pnote = ("Exact stops vary by ship and sailing, a specialist matches the itinerary to what you want to see. Photos are illustrative."
+                 if en else "Las paradas exactas varían por barco y salida, un especialista ajusta el itinerario a lo que quieres ver. Las fotos son ilustrativas.")
         out += _sec("", "calls", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
                     f'<div class="poc-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
     # getting there (honest: starts from Europe, not a US home port)
     getting = ("These cruises almost always start and end at a European port, so you'll fly in and often "
-               "add a night before. We help you pick the sailing and plan the routing — call and we'll sort it."
+               "add a night before. We help you pick the sailing and plan the routing, call and we'll sort it."
                if en else
                "Estos cruceros casi siempre empiezan y terminan en un puerto europeo, así que llegarás en avión y "
-               "a menudo añadirás una noche antes. Te ayudamos a elegir la salida y planear el viaje — llámanos.")
+               "a menudo añadirás una noche antes. Te ayudamos a elegir la salida y planear el viaje, llámanos.")
     out += _sec("cream", "getting", ("Getting there" if en else "Cómo llegar"), "✈️", f'<p class="rsec-sub">{getting}</p>')
 
     out += _sec("", "lines", ("Which line fits this trip" if en else "Qué línea encaja"), "🧭",
                 f'<div class="xr-grid">{_line_fit_cards(lang, r["lines"])}</div>')
 
-    docs = ("A valid passport is required — these itineraries start abroad and visit multiple countries. "
+    docs = ("A valid passport is required, these itineraries start abroad and visit multiple countries. "
             "Check visa rules for your nationality and each country on the route before you book."
             if en else
-            "Se requiere pasaporte vigente — estos itinerarios empiezan en el extranjero y visitan varios países. "
+            "Se requiere pasaporte vigente, estos itinerarios empiezan en el extranjero y visitan varios países. "
             "Revisa las reglas de visado para tu nacionalidad y cada país de la ruta antes de reservar.")
     out += _sec("", "docs", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
                 f'<p class="rsec-sub">{docs}</p>')
@@ -353,7 +353,7 @@ def region_guide(lang, slug, name):
         out += _sec("", "expect", ("What to expect" if en else "Qué esperar"), "🧭",
                     f'<p class="intro">{copy["expect"][lang]}</p>')
 
-    # best time — month strip
+    # best time, month strip
     months = set(r.get("months") or [])
     strip = "".join(
         f'<span class="whn-m{" on" if (i + 1) in months else ""}">{_MONTHS[lang][i]}</span>'
@@ -361,13 +361,13 @@ def region_guide(lang, slug, name):
     warn = ""
     if slug in ("caribbean", "bahamas"):
         warn = ('<p class="whn-warn" style="margin-top:14px">⚠ ' +
-                ("Atlantic hurricane season runs 1 Jun–30 Nov. Sailings still operate and reroute when needed — travel insurance matters more in these months."
+                ("Atlantic hurricane season runs 1 Jun-30 Nov. Sailings still operate and reroute when needed, travel insurance matters more in these months."
                  if en else
-                 "La temporada de huracanes del Atlántico va del 1 jun al 30 nov. Los cruceros operan y se redirigen cuando hace falta — el seguro de viaje importa más en estos meses.") + '</p>')
+                 "La temporada de huracanes del Atlántico va del 1 jun al 30 nov. Los cruceros operan y se redirigen cuando hace falta, el seguro de viaje importa más en estos meses.") + '</p>')
     out += _sec("cream", "best-time", ("Best time to sail" if en else "Mejor época para navegar"), "🗓️",
                 f'<p class="rsec-sub">{r["season"]}.</p><div class="whn-months dest-months">{strip}</div>{warn}')
 
-    # where you sail from — port cards with photos
+    # where you sail from, port cards with photos
     pcards = ""
     for p in r["ports"]:
         img = _port_photo(p)
@@ -377,22 +377,22 @@ def region_guide(lang, slug, name):
         state_html = f'<small>{region_state}</small>' if region_state else ""
         pcards += (f'<article class="port-card">{media}'
                    f'<span class="port-nm">{city}{state_html}</span></article>')
-    ports_note = ("These are the US and Canada home ports ships depart from for this region — drive or fly in the day before. Photos are illustrative."
+    ports_note = ("These are the US and Canada home ports ships depart from for this region, drive or fly in the day before. Photos are illustrative."
                   if en else
-                  "Estos son los puertos base de EE.UU. y Canadá desde donde zarpan los barcos de esta región — llega en auto o avión el día antes. Las fotos son ilustrativas.")
+                  "Estos son los puertos base de EE.UU. y Canadá desde donde zarpan los barcos de esta región, llega en auto o avión el día antes. Las fotos son ilustrativas.")
     out += _sec("", "ports", ("Where you sail from" if en else "Desde dónde zarpas"), "⚓",
                 f'<div class="port-grid">{pcards}</div><p class="note-line" style="margin-top:16px">{ports_note}</p>')
 
-    # typical ports of call — described cards
+    # typical ports of call, described cards
     if copy.get("calls"):
         cards = "".join(_call_card(c, lang) for c in copy["calls"])
-        pnote = ("Exact stops vary by ship and sailing — a specialist matches the itinerary to what you want to see."
+        pnote = ("Exact stops vary by ship and sailing, a specialist matches the itinerary to what you want to see."
                  if en else
-                 "Las paradas exactas varían por barco y salida — un especialista ajusta el itinerario a lo que quieres ver.")
+                 "Las paradas exactas varían por barco y salida, un especialista ajusta el itinerario a lo que quieres ver.")
         out += _sec("cream", "calls", ("Typical ports of call" if en else "Puertos de escala típicos"), "📍",
                     f'<div class="poc-grid">{cards}</div><p class="note-line" style="margin-top:14px">{pnote}</p>')
 
-    # ships that sail here — grouped by line
+    # ships that sail here, grouped by line
     if n_ships:
         blocks = ""
         for line_slug in r["lines"]:
@@ -409,9 +409,9 @@ def region_guide(lang, slug, name):
             blocks += (f'<h3 class="fleet-class">{L["emo"]} {L["name"]} '
                        f'<span class="shipdir-n">{len(ships)}</span></h3>'
                        f'<div class="ship-grid">{cards}</div>')
-        snote = ("Every ship above sails this region on its own published itinerary. Availability by date changes constantly — one call confirms what's open for you."
+        snote = ("Every ship above sails this region on its own published itinerary. Availability by date changes constantly, one call confirms what's open for you."
                  if en else
-                 "Cada barco de arriba navega esta región según su propio itinerario publicado. La disponibilidad por fecha cambia constantemente — una llamada confirma qué hay para ti.")
+                 "Cada barco de arriba navega esta región según su propio itinerario publicado. La disponibilidad por fecha cambia constantemente, una llamada confirma qué hay para ti.")
         out += _sec("", "ships", ("Ships that sail here" if en else "Barcos que navegan aquí"), "🚢",
                     f'{blocks}<p class="note-line" style="margin-top:8px">{snote}</p>')
 
@@ -429,12 +429,12 @@ def region_guide(lang, slug, name):
 
     # documents & practicalities (general, compliant)
     docs = ("On most round-trips that start and end at the same US port (closed-loop), US citizens can sail on a "
-            "birth certificate plus government photo ID — but a passport is strongly recommended and is required for "
+            "birth certificate plus government photo ID, but a passport is strongly recommended and is required for "
             "any cruise that starts or ends abroad, and for flying home if you miss the ship. Confirm requirements for "
             "your exact itinerary and nationality before you book." if en else
             "En la mayoría de los cruceros de ida y vuelta que empiezan y terminan en el mismo puerto de EE.UU. "
             "(closed-loop), los ciudadanos estadounidenses pueden viajar con acta de nacimiento y una identificación "
-            "con foto — pero se recomienda un pasaporte, y es obligatorio para cualquier crucero que empiece o termine "
+            "con foto, pero se recomienda un pasaporte, y es obligatorio para cualquier crucero que empiece o termine "
             "en el extranjero. Confirma los requisitos de tu itinerario y nacionalidad antes de reservar.")
     out += _sec("", "docs", ("Documents & practicalities" if en else "Documentos y logística"), "🛂",
                 f'<p class="rsec-sub">{docs}</p>'
@@ -443,15 +443,15 @@ def region_guide(lang, slug, name):
                 + "</a></p>")
 
     # finder + call CTA
-    finder = ("Ready to see real sailings? Use the finder to line up the ships for this region — then one call books the right one."
-              if en else "¿Listo para ver salidas reales? Usa el buscador para alinear los barcos de esta región — luego una llamada reserva el correcto.")
+    finder = ("Ready to see real sailings? Use the finder to line up the ships for this region, then one call books the right one."
+              if en else "¿Listo para ver salidas reales? Usa el buscador para alinear los barcos de esta región, luego una llamada reserva el correcto.")
     out += _sec("", "find", ("Find your sailing" if en else "Encuentra tu salida"), "🔎",
                 f'<p class="rsec-sub">{finder}</p>'
                 f'<p style="margin-top:14px"><a class="btn btn-ghost" href="/{lang}/compare/">'
                 + ("Open the cruise finder →" if en else "Abrir el buscador →") + "</a></p>"
-                + _call(lang, (f"Prefer to just ask? Tell us your dates and party for {name} — we'll match the ship and the best rate our partners can offer."
+                + _call(lang, (f"Prefer to just ask? Tell us your dates and party for {name}, we'll match the ship and the best rate our partners can offer."
                                if en else
-                               f"¿Prefieres preguntar? Dinos tus fechas y con quién viajas para {name} — emparejamos el barco y la mejor tarifa."), "dest-cta"))
+                               f"¿Prefieres preguntar? Dinos tus fechas y con quién viajas para {name}, emparejamos el barco y la mejor tarifa."), "dest-cta"))
     return out
 
 
@@ -515,7 +515,7 @@ def dest_hero(lang, slug, name, sub, crumb):
 
 
 def more_destinations(lang, current_slug, dests):
-    """A cross-link card grid of OTHER destinations, each with its region photo, name and best time —
+    """A cross-link card grid of OTHER destinations, each with its region photo, name and best time, 
     so a visitor can hop from one destination to a similar one. `dests` is the DESTINATIONS list."""
     en = lang == "en"
     cards = ""
@@ -543,8 +543,8 @@ def region_faqs(lang, slug, name):
             (("When is the best time to cruise " + name + "?" if en else "¿Cuándo es la mejor época para navegar por " + name + "?"),
              (f"The season runs {r['season'][lang]}." if en else f"La temporada es {r['season'][lang]}.")),
             (("Do these cruises leave from the US?" if en else "¿Salen estos cruceros desde EE.UU.?"),
-             ("No — " + name + " itineraries almost always start and end at a European port, so you fly in. Call and we'll help plan the routing."
-              if en else "No — los itinerarios de " + name + " casi siempre empiezan y terminan en un puerto europeo, así que llegas en avión. Llámanos y te ayudamos a planear el viaje.")),
+             ("No, " + name + " itineraries almost always start and end at a European port, so you fly in. Call and we'll help plan the routing."
+              if en else "No, los itinerarios de " + name + " casi siempre empiezan y terminan en un puerto europeo, así que llegas en avión. Llámanos y te ayudamos a planear el viaje.")),
             (("Which cruise lines sail " + name + "?" if en else "¿Qué líneas navegan por " + name + "?"),
              ((", ".join(_LINE[l]["name"] for l in r["lines"] if l in _LINE) + " all sail this region.")
               if en else (", ".join(_LINE[l]["name"] for l in r["lines"] if l in _LINE) + " navegan esta región."))),

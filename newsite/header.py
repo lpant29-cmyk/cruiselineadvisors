@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Site header — one file. Logo + dropdown-free primary nav + prominent click-to-call +
+"""Site header, one file. Logo + dropdown-free primary nav + prominent click-to-call +
 language switcher + mobile hamburger drawer. Pure CSS (no JS), so it can never throw."""
 from config import PHONE_DISPLAY, PHONE_HREF
 from i18n import T
@@ -19,7 +19,7 @@ NAV = [
 
 def _lines_submenu(lang, t):
     """Dropdown under 'Cruise Lines': just the hub and the full ship directory.
-    Pure CSS (hover/focus-within on desktop, expanded in the mobile drawer) — no JS."""
+    Pure CSS (hover/focus-within on desktop, expanded in the mobile drawer), no JS."""
     items = [
         f'<li><a href="/{lang}/cruise-lines/">{t["nav_all_lines"]}</a></li>',
         f'<li><a href="/{lang}/ships/"><span aria-hidden="true">🚢</span> {t["nav_ships_dir"]}</a></li>',

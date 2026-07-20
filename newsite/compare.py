@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Interactive comparison tool. Pick any two lines; each fact renders as a stacked CARD
-(color-coded: Line A = teal, Line B = gold) — readable on phones, no horizontal scroll.
+(color-coded: Line A = teal, Line B = gold), readable on phones, no horizontal scroll.
 Pulls from the verified data sheet (facts.py); unverified cells show a 'Not yet verified' gap
 with a source link once sourced. Bilingual, guarded JS."""
 import json
@@ -15,10 +15,10 @@ _EMO = {L["slug"]: L["emo"] for L in LINES}
 _T = {
     "en": {"a": "Line A", "b": "Line B", "vs": "vs", "gap": "Not yet verified",
            "cta": "These differences add up. Call and we'll sort them for your trip.",
-           "call": "Get your options — call now", "flag": "facts verified from official sources"},
+           "call": "Get your options, call now", "flag": "facts verified from official sources"},
     "es": {"a": "Línea A", "b": "Línea B", "vs": "vs", "gap": "No verificado aún",
            "cta": "Estas diferencias suman. Llama y las resolvemos para tu viaje.",
-           "call": "Ver tus opciones — llama ahora", "flag": "datos verificados de fuentes oficiales"},
+           "call": "Ver tus opciones, llama ahora", "flag": "datos verificados de fuentes oficiales"},
 }
 
 
@@ -42,14 +42,14 @@ def line_compare_hero(lang, slug, line_name):
     from shipcompare import compare_band
     kick = "Compare lines" if lang == "en" else "Comparar líneas"
     if lang == "en":
-        h = f"Compare {line_name} with any other cruise line — and see who wins on what matters."
-        sub = ("No more hopping between pages. Line them up on the money-and-complexity facts — gratuities, "
-               "what's included, drink rules, cancellation — then one call gets you the best rate our partners "
+        h = f"Compare {line_name} with any other cruise line, and see who wins on what matters."
+        sub = ("No more hopping between pages. Line them up on the money-and-complexity facts, gratuities, "
+               "what's included, drink rules, cancellation, then one call gets you the best rate our partners "
                "can offer.")
     else:
-        h = f"Compara {line_name} con cualquier otra línea — y ve quién gana en lo que importa."
-        sub = ("Sin saltar entre páginas. Compáralas en los datos de dinero y complejidad — propinas, qué se "
-               "incluye, reglas de bebidas, cancelación — luego una llamada te da la mejor tarifa que nuestros "
+        h = f"Compara {line_name} con cualquier otra línea, y ve quién gana en lo que importa."
+        sub = ("Sin saltar entre páginas. Compáralas en los datos de dinero y complejidad, propinas, qué se "
+               "incluye, reglas de bebidas, cancelación, luego una llamada te da la mejor tarifa que nuestros "
                "socios pueden ofrecer.")
     return compare_band(lang, kick, h, sub, compare_tool(lang, default_a=slug))
 

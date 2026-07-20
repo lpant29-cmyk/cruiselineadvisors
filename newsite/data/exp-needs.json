@@ -197,11 +197,11 @@
     ],
     "Nieuw Statendam": [
       "Confirm current Music Walk venues (Lincoln Center Stage appears removed; Morimoto By Sea added). ",
-      "Confirm deck count (deck plan runs 1–12 and 14, skipping 13 = 13 physical decks).",
+      "Confirm deck count (deck plan runs 1-12 and 14, skipping 13 = 13 physical decks).",
       "Confirm US/Canada seasonal home ports."
     ],
     "Rotterdam": [
-      "Deck count NOT verified — no Rotterdam-specific official deck plan located; do not fill with sister-ship Nieuw Statendam's number.",
+      "Deck count NOT verified, no Rotterdam-specific official deck plan located; do not fill with sister-ship Nieuw Statendam's number.",
       "Confirm current Music Walk venues (Lincoln Center Stage present at 2021 launch, appears removed in refresh; Morimoto By Sea added).",
       "Confirm US/Canada seasonal home ports."
     ],
@@ -222,7 +222,7 @@
       "Confirm winter deployment."
     ],
     "Oosterdam": [
-      "Deck plan omits Tamarind and New York Deli & Pizza — not fixed venues here.",
+      "Deck plan omits Tamarind and New York Deli & Pizza, not fixed venues here.",
       "Confirm B.B. King's / Lincoln Center Stage absence.",
       "Confirm Morimoto By Sea presence.",
       "Confirm US/Canada deployment (may sail mostly non-Americas)."
@@ -240,13 +240,13 @@
       "Confirm current US home ports."
     ],
     "Volendam": [
-      "No Music Walk rooms at all (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage) — R-Class limited music offering confirmed on deck plan.",
+      "No Music Walk rooms at all (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage), R-Class limited music offering confirmed on deck plan.",
       "No Tamarind, Rudi's or New York Deli & Pizza.",
       "Floral design theme from marketing page not independently verified.",
       "Confirm current home ports."
     ],
     "Zaandam": [
-      "No Music Walk rooms (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage) — R-Class limited music offering.",
+      "No Music Walk rooms (no Rolling Stone, Billboard, B.B. King's or Lincoln Center Stage), R-Class limited music offering.",
       "No Tamarind, Rudi's or New York Deli & Pizza.",
       "Music-themed decor from marketing page not independently verified.",
       "Confirm non-Alaska seasonal home ports."
@@ -254,7 +254,7 @@
   },
   "margaritaville-at-sea": {
     "Margaritaville at Sea Paradise": [
-      "Paradise passenger deck count (not stated on ship or deck-plan page — requires deck-plan PDF)",
+      "Paradise passenger deck count (not stated on ship or deck-plan page, requires deck-plan PDF)",
       "Confirm whether Paradise itineraries currently include Mexico (one source mentioned it; ship main page lists Bahamas and Key West)"
     ],
     "Margaritaville at Sea Islander": [
@@ -263,36 +263,36 @@
   },
   "cunard": {
     "Queen Mary 2": [
-      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-dining (expected: Britannia Restaurant, Britannia Club Restaurant, Princess Grill Restaurant, Queens Grill Restaurant, Kings Court, The Verandah / Steakhouse at The Verandah [extra charge], Sir Samuel's, Carinthia Lounge, Godiva chocolate; capture names, included-vs-supplement, descriptions).",
-      "Activities / spa / pools — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 and unique-venues page (expected: Mareel Wellness & Beauty / spa, indoor & outdoor pools, Games Deck, gym, library).",
-      "Entertainment — verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-unique-venues (expected: Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Illuminations planetarium [unique to QM2], jazz/live music, Chart Room, Commodore Club).",
-      "Kids/family — verify children's facilities (The Play Zone / kids clubs, The Zone) from official ship pages.",
-      "Decks — verify published deck count from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 or official deck plans.",
-      "Named zones — verify any named onboard zones/districts from official pages."
+      "Dining venues, verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-dining (expected: Britannia Restaurant, Britannia Club Restaurant, Princess Grill Restaurant, Queens Grill Restaurant, Kings Court, The Verandah / Steakhouse at The Verandah [extra charge], Sir Samuel's, Carinthia Lounge, Godiva chocolate; capture names, included-vs-supplement, descriptions).",
+      "Activities / spa / pools, verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 and unique-venues page (expected: Mareel Wellness & Beauty / spa, indoor & outdoor pools, Games Deck, gym, library).",
+      "Entertainment, verify from https://www.cunard.com/en-us/cruise-ships/queen-mary-2/queen-mary-2-unique-venues (expected: Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Illuminations planetarium [unique to QM2], jazz/live music, Chart Room, Commodore Club).",
+      "Kids/family, verify children's facilities (The Play Zone / kids clubs, The Zone) from official ship pages.",
+      "Decks, verify published deck count from https://www.cunard.com/en-us/cruise-ships/queen-mary-2 or official deck plans.",
+      "Named zones, verify any named onboard zones/districts from official pages."
     ],
     "Queen Anne": [
-      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-anne (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Artisans buffet, Aji Wa, Aranya, Sir Thomas, Tramonto [specialty — confirm names & supplements & descriptions]).",
-      "Activities / spa / pools — verify Mareel Wellness & Beauty spa, pools, gym, library, Games Deck from official page.",
-      "Entertainment — verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, live music/jazz venues from https://www.cunard.com/en-us/cruise-ships/queen-anne.",
-      "Kids/family — verify The Play Zone / children's facilities from official page.",
-      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
-      "Named zones — verify any named onboard zones."
+      "Dining venues, verify from https://www.cunard.com/en-us/cruise-ships/queen-anne (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Artisans buffet, Aji Wa, Aranya, Sir Thomas, Tramonto [specialty, confirm names & supplements & descriptions]).",
+      "Activities / spa / pools, verify Mareel Wellness & Beauty spa, pools, gym, library, Games Deck from official page.",
+      "Entertainment, verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, live music/jazz venues from https://www.cunard.com/en-us/cruise-ships/queen-anne.",
+      "Kids/family, verify The Play Zone / children's facilities from official page.",
+      "Decks, verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones, verify any named onboard zones."
     ],
     "Queen Victoria": [
-      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-victoria (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
-      "Activities / spa / pools — verify Mareel Wellness & Beauty / spa, pools, gym, two-storey library, Games Deck from official page.",
-      "Entertainment — verify Royal Court Theatre (with private boxes), Queens Room ballroom, Golden Lion Pub, Commodore Club, Chart Room, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-victoria.",
-      "Kids/family — verify The Play Zone / children's facilities from official page.",
-      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
-      "Named zones — verify any named onboard zones."
+      "Dining venues, verify from https://www.cunard.com/en-us/cruise-ships/queen-victoria (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
+      "Activities / spa / pools, verify Mareel Wellness & Beauty / spa, pools, gym, two-storey library, Games Deck from official page.",
+      "Entertainment, verify Royal Court Theatre (with private boxes), Queens Room ballroom, Golden Lion Pub, Commodore Club, Chart Room, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-victoria.",
+      "Kids/family, verify The Play Zone / children's facilities from official page.",
+      "Decks, verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones, verify any named onboard zones."
     ],
     "Queen Elizabeth": [
-      "Dining venues — verify from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
-      "Activities / spa / pools — verify Mareel Wellness & Beauty / spa, pools, gym, library, Games Deck (croquet/bowls) from official page.",
-      "Entertainment — verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Commodore Club, Yacht Club, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth.",
-      "Kids/family — verify The Play Zone / children's facilities from official page.",
-      "Decks — verify published deck count and guest capacity from official ship page / deck plans.",
-      "Named zones — verify any named onboard zones."
+      "Dining venues, verify from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth (expected: Britannia Restaurant, Britannia Club, Princess Grill, Queens Grill, Lido buffet, The Verandah [specialty], Golden Lion pub fare; confirm names, supplements, descriptions).",
+      "Activities / spa / pools, verify Mareel Wellness & Beauty / spa, pools, gym, library, Games Deck (croquet/bowls) from official page.",
+      "Entertainment, verify Royal Court Theatre, Queens Room ballroom, Golden Lion Pub, Commodore Club, Yacht Club, live music/jazz from https://www.cunard.com/en-us/cruise-ships/queen-elizabeth.",
+      "Kids/family, verify The Play Zone / children's facilities from official page.",
+      "Decks, verify published deck count and guest capacity from official ship page / deck plans.",
+      "Named zones, verify any named onboard zones."
     ]
   },
   "msc": {

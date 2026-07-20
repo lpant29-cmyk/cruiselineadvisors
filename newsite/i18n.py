@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """All user-facing UI strings, per language. Content lives here; components read T[lang][key].
 
-Legal/compliance copy is intentionally NOT here — it lives in the legal page builder so it
+Legal/compliance copy is intentionally NOT here, it lives in the legal page builder so it
 stays reviewable in one block. Spanish is provided; have a native speaker review before launch
 (flagged in the handbook)."""
 
@@ -12,7 +12,7 @@ T = {
         "free_to_call": "Free to call",
         "hours_label": "Advisors",
         # top disclosure bar
-        "disc_top": "Independent cruise referral service — not a cruise line and not a travel agency.",
+        "disc_top": "Independent cruise referral service, not a cruise line and not a travel agency.",
         # nav
         "nav_lines": "Cruise Lines", "nav_compare": "Compare", "nav_facts": "Cruise Facts",
         "nav_dest": "Destinations", "nav_guides": "Guides", "nav_updates": "Updates",
@@ -20,10 +20,10 @@ T = {
         "nav_all_lines": "All cruise lines", "nav_ships_dir": "Ship directory",
         "tagline": "Verified cruise facts. One call books it.",
         # hero
-        "hero_badge": "Advisors answering now · 8am–11pm ET",
+        "hero_badge": "Advisors answering now · 8am-11pm ET",
         "hero_h1a": "Less scrolling.",
         "hero_h1b": "More sailing.",
-        "hero_sub": ("Real, verified answers on every major cruise line — then one call to a "
+        "hero_sub": ("Real, verified answers on every major cruise line, then one call to a "
                      "specialist who compares, plans and books it all for you. Free, no pressure, "
                      "and we never take payment."),
         "cta_call": "Call now",
@@ -34,36 +34,36 @@ T = {
         "chip_independent": "Independent",
         "chip_since": "In travel since 2015",
         "chip_nopay": "We never take payment",
-        "benefit_1": "The fine print that costs money — gratuities, what's included, cancellation — explained plainly.",
+        "benefit_1": "The fine print that costs money, gratuities, what's included, cancellation, explained plainly.",
         "benefit_2": "A real specialist who knows the ships, not a call-center script.",
         "benefit_3": "Free to call, no obligation, and we never take payment for travel.",
         # why-call
         "why_h2": "Why a call beats another hour of open tabs",
         "why_1_t": "Straight answers on the costly stuff",
-        "why_1_b": "Gratuities, drink-package rules, final-payment deadlines, cancellation penalties — the details that quietly change your final bill.",
+        "why_1_b": "Gratuities, drink-package rules, final-payment deadlines, cancellation penalties, the details that quietly change your final bill.",
         "why_2_t": "A specialist, not a script",
-        "why_2_b": "You talk to a licensed advisor at a partner agency who actually knows the ships, cabins and seasons — and who does the comparing for you.",
+        "why_2_b": "You talk to a licensed advisor at a partner agency who actually knows the ships, cabins and seasons, and who does the comparing for you.",
         "why_3_t": "No pressure, ever",
-        "why_3_b": "Free to call, no obligation, and we never take payment for travel. We're paid a referral fee — you're never charged by us.",
+        "why_3_b": "Free to call, no obligation, and we never take payment for travel. We're paid a referral fee, you're never charged by us.",
         # comparison
         "cmp_h2": "Compare the details that actually cost you money",
-        "cmp_sub": ("Cruise lines bury the facts that change your final bill. See them side by side — "
+        "cmp_sub": ("Cruise lines bury the facts that change your final bill. See them side by side, "
                     "then let an advisor apply them to your exact sailing."),
-        "cmp_sample": "Sample view — full verified data in progress",
+        "cmp_sample": "Sample view, full verified data in progress",
         "cmp_pick": "Pick two lines to compare",
         "cmp_cta": "These differences add up. Call and we'll sort them for your trip.",
         # quiz
         "quiz_kicker": "Not sure where to start?",
-        "quiz_h2": "Answer four quick questions — we'll point you the right way",
+        "quiz_h2": "Answer four quick questions, we'll point you the right way",
         "quiz_sub": "Where, when, who's travelling, and what matters most. Takes about 30 seconds.",
         "quiz_cta": "Start the 4-question finder",
         # lines
         "lines_h2": "In-depth guides to every major line",
-        "lines_sub": "Honest, source-checked guides — ships class by class, what the fare covers, cabins, families, accessibility and timing.",
+        "lines_sub": "Honest, source-checked guides, ships class by class, what the fare covers, cabins, families, accessibility and timing.",
         "lines_all": "See all cruise lines",
         "read_guide": "Read the guide",
         "dest_h2": "Where do you want to sail?",
-        "dest_sub": "Every region runs on a season — pick the right month and the whole trip gets better. Explore the top cruise destinations.",
+        "dest_sub": "Every region runs on a season, pick the right month and the whole trip gets better. Explore the top cruise destinations.",
         "dest_all": "See all destinations",
         "dest_best": "Best",
         # final cta
@@ -81,16 +81,16 @@ T = {
         "skip": "Saltar al contenido",
         "free_to_call": "Llamada gratis",
         "hours_label": "Asesores",
-        "disc_top": "Servicio independiente de referencia de cruceros — no somos una línea de crucero ni una agencia de viajes.",
+        "disc_top": "Servicio independiente de referencia de cruceros, no somos una línea de crucero ni una agencia de viajes.",
         "nav_lines": "Líneas de Crucero", "nav_compare": "Comparar", "nav_facts": "Datos de Cruceros",
         "nav_dest": "Destinos", "nav_guides": "Guías", "nav_updates": "Novedades",
         "nav_menu": "Menú",
         "nav_all_lines": "Todas las líneas", "nav_ships_dir": "Directorio de barcos",
         "tagline": "Datos de crucero verificados. Una llamada reserva.",
-        "hero_badge": "Asesores disponibles ahora · 8am–11pm ET",
+        "hero_badge": "Asesores disponibles ahora · 8am-11pm ET",
         "hero_h1a": "Menos buscar.",
         "hero_h1b": "Más navegar.",
-        "hero_sub": ("Respuestas reales y verificadas de cada línea de crucero — luego una llamada "
+        "hero_sub": ("Respuestas reales y verificadas de cada línea de crucero, luego una llamada "
                      "a un especialista que compara, planifica y lo reserva todo por ti. Gratis, "
                      "sin presión, y nunca cobramos por el viaje."),
         "cta_call": "Llama ahora",
@@ -101,32 +101,32 @@ T = {
         "chip_independent": "Independiente",
         "chip_since": "En viajes desde 2015",
         "chip_nopay": "Nunca cobramos",
-        "benefit_1": "La letra pequeña que cuesta dinero — propinas, qué incluye, cancelación — explicada con claridad.",
+        "benefit_1": "La letra pequeña que cuesta dinero, propinas, qué incluye, cancelación, explicada con claridad.",
         "benefit_2": "Un especialista de verdad que conoce los barcos, no un guion de call-center.",
         "benefit_3": "Llamar es gratis, sin compromiso, y nunca cobramos por el viaje.",
         "why_h2": "Por qué una llamada supera otra hora de pestañas abiertas",
         "why_1_t": "Respuestas claras sobre lo que cuesta",
-        "why_1_b": "Propinas, reglas de paquetes de bebidas, fechas límite de pago, penalidades de cancelación — los detalles que cambian tu factura final.",
+        "why_1_b": "Propinas, reglas de paquetes de bebidas, fechas límite de pago, penalidades de cancelación, los detalles que cambian tu factura final.",
         "why_2_t": "Un especialista, no un guion",
-        "why_2_b": "Hablas con un asesor con licencia de una agencia asociada que conoce los barcos, camarotes y temporadas — y que compara por ti.",
+        "why_2_b": "Hablas con un asesor con licencia de una agencia asociada que conoce los barcos, camarotes y temporadas, y que compara por ti.",
         "why_3_t": "Sin presión, nunca",
-        "why_3_b": "Llamar es gratis, sin compromiso, y nunca cobramos por el viaje. Recibimos una comisión de referencia — tú nunca nos pagas.",
+        "why_3_b": "Llamar es gratis, sin compromiso, y nunca cobramos por el viaje. Recibimos una comisión de referencia, tú nunca nos pagas.",
         "cmp_h2": "Compara los detalles que de verdad cuestan dinero",
-        "cmp_sub": ("Las líneas esconden los datos que cambian tu factura final. Míralos lado a lado — "
+        "cmp_sub": ("Las líneas esconden los datos que cambian tu factura final. Míralos lado a lado, "
                     "luego deja que un asesor los aplique a tu crucero exacto."),
-        "cmp_sample": "Vista de muestra — datos verificados en proceso",
+        "cmp_sample": "Vista de muestra, datos verificados en proceso",
         "cmp_pick": "Elige dos líneas para comparar",
         "cmp_cta": "Estas diferencias suman. Llama y las resolvemos para tu viaje.",
         "quiz_kicker": "¿No sabes por dónde empezar?",
-        "quiz_h2": "Responde cuatro preguntas rápidas — te orientamos",
+        "quiz_h2": "Responde cuatro preguntas rápidas, te orientamos",
         "quiz_sub": "Dónde, cuándo, quién viaja y qué es lo más importante. Toma unos 30 segundos.",
         "quiz_cta": "Iniciar el buscador de 4 preguntas",
         "lines_h2": "Guías detalladas de cada línea principal",
-        "lines_sub": "Guías honestas y verificadas — barcos clase por clase, qué cubre la tarifa, camarotes, familias, accesibilidad y temporada.",
+        "lines_sub": "Guías honestas y verificadas, barcos clase por clase, qué cubre la tarifa, camarotes, familias, accesibilidad y temporada.",
         "lines_all": "Ver todas las líneas de crucero",
         "read_guide": "Leer la guía",
         "dest_h2": "¿A dónde quieres navegar?",
-        "dest_sub": "Cada región tiene su temporada — elige el mes correcto y todo el viaje mejora. Explora los mejores destinos de crucero.",
+        "dest_sub": "Cada región tiene su temporada, elige el mes correcto y todo el viaje mejora. Explora los mejores destinos de crucero.",
         "dest_all": "Ver todos los destinos",
         "dest_best": "Mejor",
         "final_h2": "¿Listo para conversarlo?",

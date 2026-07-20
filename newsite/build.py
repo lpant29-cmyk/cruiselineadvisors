@@ -24,8 +24,8 @@ DIST = os.path.join(ROOT, "dist")
 TODAY = datetime.date.today().isoformat()
 BANNED = ("$", "usd", "from $", "save ", "discount", "% off", "cheapest", "lowest price")
 
-HOME_TITLE = {"en": "CruiseLine Advisors — Talk to a Licensed Cruise Specialist",
-              "es": "CruiseLine Advisors — Habla con un especialista en cruceros"}
+HOME_TITLE = {"en": "CruiseLine Advisors, Talk to a Licensed Cruise Specialist",
+              "es": "CruiseLine Advisors, Habla con un especialista en cruceros"}
 
 
 def _t(en, es, lang):
@@ -55,7 +55,7 @@ def build():
         if not m:
             return
         # Scripts carry the compare-tool data (may hold sanctioned fee amounts); <span class="fee">
-        # wraps published fees (e.g. gratuities) — the allowed exception to Hard Rule 1. Strip both,
+        # wraps published fees (e.g. gratuities), the allowed exception to Hard Rule 1. Strip both,
         # then scan the remaining visible prose strictly.
         main = re.sub(r"<script\b[^>]*>.*?</script>", "", m.group(1), flags=re.S | re.I)
         main = re.sub(r'<span class="fee">.*?</span>', "", main, flags=re.S | re.I)
@@ -78,27 +78,27 @@ def build():
         emit(lang, "index.html", HOME_TITLE[lang], T[lang]["hero_sub"], page_home.render(lang))
 
         emit(lang, "cruise-lines.html",
-             _t("Cruise Line Guides — Every Major Line | CruiseLine Advisors",
-                "Guías de líneas de crucero — cada línea principal | CruiseLine Advisors", lang),
+             _t("Cruise Line Guides, Every Major Line | CruiseLine Advisors",
+                "Guías de líneas de crucero, cada línea principal | CruiseLine Advisors", lang),
              T[lang]["lines_sub"], p_lines_hub(lang))
         emit(lang, "ships.html",
-             _t("Cruise Ship Directory — Every Ship by Line | CruiseLine Advisors",
-                "Directorio de barcos — cada barco por línea | CruiseLine Advisors", lang),
+             _t("Cruise Ship Directory, Every Ship by Line | CruiseLine Advisors",
+                "Directorio de barcos, cada barco por línea | CruiseLine Advisors", lang),
              _t("Every cruise ship we cover, grouped by line, each with a verified guide.",
                 "Cada barco de crucero que cubrimos, por línea, cada uno con guía verificada.", lang),
              p_ships_dir(lang))
         for L in LINES:
             emit(lang, f"lines/{L['slug']}.html",
-                 _t(f"{L['name']} Cruises — Guide, Included, Cabins & Timing | CruiseLine Advisors",
+                 _t(f"{L['name']} Cruises, Guide, Included, Cabins & Timing | CruiseLine Advisors",
                     f"{L['name']}: guía, qué se incluye, camarotes y temporada | CruiseLine Advisors", lang),
                  L["tag"][lang], p_line(lang, L["slug"]))
         for line_slug, sh in all_ships():
             from ships import slugify as _sslug
             emit(lang, f"lines/{line_slug}/ships/{_sslug(sh['name'])}.html",
-                 _t(f"{sh['name']} — Ship Guide, Size, Cabins & Sailings | CruiseLine Advisors",
-                    f"{sh['name']} — guía del barco, tamaño, camarotes y salidas | CruiseLine Advisors", lang),
-                 _t(f"{sh['name']}: verified size, capacity and what's on board — call to book.",
-                    f"{sh['name']}: tamaño y capacidad verificados y qué hay a bordo — llama para reservar.", lang),
+                 _t(f"{sh['name']}, Ship Guide, Size, Cabins & Sailings | CruiseLine Advisors",
+                    f"{sh['name']}, guía del barco, tamaño, camarotes y salidas | CruiseLine Advisors", lang),
+                 _t(f"{sh['name']}: verified size, capacity and what's on board, call to book.",
+                    f"{sh['name']}: tamaño y capacidad verificados y qué hay a bordo, llama para reservar.", lang),
                  p_ship(lang, line_slug, _sslug(sh['name'])))
 
         emit(lang, "compare.html",
@@ -108,17 +108,17 @@ def build():
         emit(lang, "cruise-facts.html",
              _t("Cruise Facts That Cost You Money | CruiseLine Advisors",
                 "Datos de crucero que cuestan dinero | CruiseLine Advisors", lang),
-             _t("Gratuities, what's included, cancellation, documents — explained.",
-                "Propinas, qué se incluye, cancelación, documentos — explicado.", lang), p_facts(lang))
+             _t("Gratuities, what's included, cancellation, documents, explained.",
+                "Propinas, qué se incluye, cancelación, documentos, explicado.", lang), p_facts(lang))
 
         emit(lang, "destinations.html",
-             _t("Cruise Destinations — Where & When to Sail | CruiseLine Advisors",
-                "Destinos de crucero — a dónde y cuándo navegar | CruiseLine Advisors", lang),
+             _t("Cruise Destinations, Where & When to Sail | CruiseLine Advisors",
+                "Destinos de crucero, a dónde y cuándo navegar | CruiseLine Advisors", lang),
              T[lang]["dest_sub"], p_dest_hub(lang))
         for d in DESTINATIONS:
             emit(lang, f"destinations/{d['slug']}.html",
-                 _t(f"{d['name']['en']} Cruises — Best Time to Sail | CruiseLine Advisors",
-                    f"Cruceros a {d['name']['es']} — mejor época | CruiseLine Advisors", lang),
+                 _t(f"{d['name']['en']} Cruises, Best Time to Sail | CruiseLine Advisors",
+                    f"Cruceros a {d['name']['es']}, mejor época | CruiseLine Advisors", lang),
                  _t(f"When to cruise {d['name']['en']} and what to expect.",
                     f"Cuándo navegar a {d['name']['es']} y qué esperar.", lang), p_region(lang, d["slug"]))
 

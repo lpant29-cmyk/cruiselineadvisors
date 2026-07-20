@@ -19,7 +19,7 @@
         "neighbourhoods": [
           {
             "name": "Grand Central",
-            "desc": "Multi-deck glass-walled atrium — the ship's social heart that becomes an entertainment venue at night."
+            "desc": "Multi-deck glass-walled atrium, the ship's social heart that becomes an entertainment venue at night."
           },
           {
             "name": "Currents",
@@ -153,7 +153,7 @@
         "activities": [
           {
             "name": "BOLT electric sea coaster",
-            "desc": "The first roller coaster at sea — an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
+            "desc": "The first roller coaster at sea, an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
           },
           {
             "name": "Carnival WaterWorks (Blue Lightning, Orange Thunder, Twister)",
@@ -214,11 +214,11 @@
             "desc": "Vintage-Carnival-themed cocktail bar with live entertainment (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-jubilee (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Texas-based families and thrill-seekers wanting Carnival's newest and largest ship with the deepest dining lineup.",
-        "deploy_note": "Galveston, TX — year-round Western Caribbean"
+        "deploy_note": "Galveston, TX, year-round Western Caribbean"
       }
     },
     {
@@ -399,7 +399,7 @@
             "desc": "Bar serving the adults-only Serenity retreat (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-firenze (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Couples and families drawn to an Italian flair on the West Coast alongside Carnival's signature fun."
@@ -571,7 +571,7 @@
             "desc": "Bar serving the adults-only Serenity retreat (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-venezia (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Cruisers who want a distinctive Venetian-Italian atmosphere blended with Carnival's casual fun."
@@ -702,7 +702,7 @@
         "activities": [
           {
             "name": "BOLT roller coaster",
-            "desc": "The first roller coaster at sea — an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
+            "desc": "The first roller coaster at sea, an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
           },
           {
             "name": "Carnival WaterWorks (three spiraling slides)",
@@ -763,11 +763,11 @@
             "desc": "Two-deck South Pacific-themed tiki bar for frozen and tropical drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care. Space Cruisers, a NASA-inspired program (ages 2–11) developed with Kennedy Space Center, is exclusive to this ship.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care. Space Cruisers, a NASA-inspired program (ages 2-11) developed with Kennedy Space Center, is exclusive to this ship.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-celebration (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and first-timers sailing from Miami who want the full big-ship experience with the widest choice of dining and shows.",
-        "deploy_note": "Miami, FL — year-round Caribbean"
+        "deploy_note": "Miami, FL, year-round Caribbean"
       }
     },
     {
@@ -894,7 +894,7 @@
             "desc": "Caribbean-style bar pouring rum drinks and ThirstyFrog brews (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-luminosa (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Couples and destination-focused cruisers who prefer a mid-size ship for longer, scenic voyages."
@@ -915,7 +915,7 @@
         "neighbourhoods": [
           {
             "name": "Grand Central",
-            "desc": "Multi-deck glass-walled atrium — the ship's social heart that becomes an entertainment venue at night."
+            "desc": "Multi-deck glass-walled atrium, the ship's social heart that becomes an entertainment venue at night."
           },
           {
             "name": "French Quarter",
@@ -1055,7 +1055,7 @@
         "activities": [
           {
             "name": "BOLT sea roller coaster",
-            "desc": "The first roller coaster at sea — an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
+            "desc": "The first roller coaster at sea, an all-electric, two-seat motorcycle ride that laps the top-deck track (extra charge)."
           },
           {
             "name": "Carnival WaterWorks (Blue Lightning, Orange Thunder, Twister slides)",
@@ -1120,11 +1120,11 @@
             "desc": "Two-deck South Pacific-themed tiki bar for frozen and tropical drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/mardi-gras (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Big multigenerational families and thrill-seekers who want the newest, largest and most feature-packed Carnival ship.",
-        "deploy_note": "Port Canaveral, FL — year-round Caribbean"
+        "deploy_note": "Port Canaveral, FL, year-round Caribbean"
       }
     },
     {
@@ -1245,7 +1245,7 @@
             "desc": "Apothecary-themed cocktail bar mixing bespoke 'prescription' cocktails to taste (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-conquest (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Value-minded families and first-timers who want a full-size ship on shorter Caribbean getaways."
@@ -1373,7 +1373,7 @@
             "desc": "Poolside tequila-and-cerveza bar with margaritas and Mexican beers (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-dream (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families who want a large ship with plenty of pools, dining and deck activities at an approachable scale."
@@ -1517,7 +1517,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-panorama (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Active families sailing the Mexican Riviera who want top-deck thrills and varied specialty dining."
@@ -1657,7 +1657,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-legend (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Couples and families who prefer a mid-size ship for scenic, longer cruises."
@@ -1781,7 +1781,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-glory (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and groups after an affordable, full-featured Caribbean cruise."
@@ -1909,7 +1909,7 @@
             "desc": "Candy and sweets shop stocked with bulk candy, chocolates and gifts."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-radiance (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and West-Coast/Caribbean cruisers wanting a heavily refreshed classic ship with lots to do."
@@ -2065,7 +2065,7 @@
             "desc": "Apothecary-themed cocktail bar mixing bespoke 'prescription' cocktails to taste (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-spirit (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Couples and families who prefer a smaller, easy-to-navigate ship for longer or repositioning voyages."
@@ -2197,7 +2197,7 @@
             "desc": "Live version of the Family Feud game show played on an authentic set with guest teams."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-horizon (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families wanting big-ship activities plus Dr. Seuss kids' programming and premium specialty dining."
@@ -2327,7 +2327,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-sunrise (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Value-focused families who want a lot of dining variety on shorter Caribbean cruises."
@@ -2471,7 +2471,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-miracle (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Cruisers seeking a mid-size ship for longer West-Coast, Alaska and Hawaii-style voyages."
@@ -2617,7 +2617,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-vista (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and fun-seekers who want a large, activity-rich ship with a standout dining and bar scene."
@@ -2753,7 +2753,7 @@
             "desc": "Apothecary-themed cocktail bar mixing bespoke 'prescription' cocktails to taste (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-magic (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Active families and groups who want a large ship with signature top-deck sports and casual dining."
@@ -2879,7 +2879,7 @@
             "desc": "Caribbean-style bar pouring rum drinks and ThirstyFrog brews (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-breeze (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Sun-and-fun families who want a lively large ship with a strong poolside and nightlife scene."
@@ -3029,7 +3029,7 @@
             "desc": "Candy and sweets shop stocked with bulk candy, chocolates and gifts."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-freedom (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and first-timers seeking an easy, activity-filled short Caribbean getaway."
@@ -3145,7 +3145,7 @@
             "desc": "Poolside tequila-and-cerveza bar with margaritas and Mexican beers (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-paradise (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "First-timers, groups and budget cruisers after quick, no-fuss short getaways."
@@ -3162,7 +3162,7 @@
       "notes": "Class labeled 'Fantasy Class' on official fact sheet.",
       "spec_source": "https://www.carnival-news.com/ship/carnival-elation-fact-sheet",
       "exp": {
-        "overview": "A Fantasy-class ship (1998) — one of Carnival's smaller, value-friendly ships — refreshed with WaterWorks and Fun Ship 2.0 dining.",
+        "overview": "A Fantasy-class ship (1998), one of Carnival's smaller, value-friendly ships, refreshed with WaterWorks and Fun Ship 2.0 dining.",
         "neighbourhoods": [
           {
             "name": "Serenity",
@@ -3279,7 +3279,7 @@
             "desc": "Candy and sweets shop stocked with bulk candy, chocolates and gifts."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-elation (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Budget-conscious first-timers and families who want a short, affordable getaway."
@@ -3411,7 +3411,7 @@
             "desc": "Cuban-themed pool bar pouring mojitos and island cocktails (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-sunshine (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Value-minded families and couples who want maximum variety on a mid-size ship."
@@ -3521,7 +3521,7 @@
             "desc": "Poolside tequila-and-cerveza bar with margaritas and Mexican beers (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-valor (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Budget-conscious families and first-timers on short and week-long Caribbean sailings."
@@ -3641,7 +3641,7 @@
             "desc": "Apothecary-themed cocktail bar mixing bespoke 'prescription' cocktails to taste (drinks extra)."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-liberty (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Families and groups who want a classic big-ship Caribbean cruise on a budget."
@@ -3763,7 +3763,7 @@
             "desc": "Patriotic bar honoring the U.S. armed forces, with memorabilia and themed drinks."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-pride (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Cruisers who want a mid-size ship for longer East-Coast and European-style itineraries."
@@ -3910,9 +3910,9 @@
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-splendor (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Australian families and groups wanting a big, activity-rich ship close to home.",
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "decks": 13,
-        "deploy_note": "Sydney, Australia — South Pacific & Australia"
+        "deploy_note": "Sydney, Australia, South Pacific & Australia"
       }
     },
     {
@@ -4035,12 +4035,12 @@
             "desc": "Deck parties and a range of bars and lounges around the ship."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "decks": 13,
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-adventure (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Australian and New Zealand families who want a big-ship holiday from local ports.",
-        "deploy_note": "Sydney, Australia (select Melbourne/Adelaide/Auckland departures) — South Pacific & Australia"
+        "deploy_note": "Sydney, Australia (select Melbourne/Adelaide/Auckland departures), South Pacific & Australia"
       }
     },
     {
@@ -4159,11 +4159,11 @@
             "desc": "Deck parties and a range of bars and lounges around the ship."
           }
         ],
-        "kids_family": "Camp Ocean for ages 2–11 (Penguins 2–5, Sharks 6–8, Stingrays 9–11), Circle “C” for tweens 12–14, and Club O2 for teens 15–17, plus Night Owls late-night care.",
+        "kids_family": "Camp Ocean for ages 2-11 (Penguins 2-5, Sharks 6-8, Stingrays 9-11), Circle “C” for tweens 12-14, and Club O2 for teens 15-17, plus Night Owls late-night care.",
         "bridge_cam": false,
         "exp_source": "https://www.carnival.com/cruise-ships/carnival-encounter (official ship page); https://www.carnival-news.com/ship/ (official fact sheet)",
         "who_for": "Australian families and groups after a big-ship South Pacific holiday from local ports.",
-        "deploy_note": "Australia — South Pacific & Australia"
+        "deploy_note": "Australia, South Pacific & Australia"
       }
     }
   ],

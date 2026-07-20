@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""The 'Verified from official source' stamp. Shown wherever verified facts/specs appear —
-line pages, the compare tools, and ship pages — with the date the data was last checked.
+"""The 'Verified from official source' stamp. Shown wherever verified facts/specs appear, 
+line pages, the compare tools, and ship pages, with the date the data was last checked.
 It only ever claims official-source verification; unverified fields still render as visible gaps."""
 import datetime
 
@@ -33,7 +33,7 @@ def verified_stamp(lang, date=None):
             f'<span class="vstamp-t">{_LABEL[lang]}</span>{datepart}</span>')
 
 
-# NOTE: the seal is OUR independent verification of data we read from the lines' official sites —
+# NOTE: the seal is OUR independent verification of data we read from the lines' official sites, 
 # it must never read as an official cruise-line page/endorsement (Hard Rule 2). Keep wording clear.
 _SEAL_TEXT = {
     "en": {"top": "INDEPENDENTLY VERIFIED", "bot": "CHECKED", "mid": "SOURCE"},
@@ -51,7 +51,7 @@ def verified_seal(lang, date=None):
     t = _SEAL_TEXT[lang]
     d = _fmt(date).upper()
     bot = f'{t["bot"]} {d}' if d else t["bot"]
-    aria = f'{t["top"]} — {t["bot"]} {d}' if d else t["top"]
+    aria = f'{t["top"]}, {t["bot"]} {d}' if d else t["top"]
     return (
         f'<span class="vseal" role="img" aria-label="{aria}">'
         f'<svg viewBox="0 0 200 200" width="122" height="122" aria-hidden="true">'

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Site footer — one file. Link columns + the compliance disclaimers (bilingual).
+"""Site footer, one file. Link columns + the compliance disclaimers (bilingual).
 The disclaimers are legally load-bearing; edit with care."""
 from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY
 from i18n import T
@@ -26,7 +26,7 @@ DISC = {
          "authorised by, or an agent of any cruise line."),
         ("Pricing", "This site displays no fares, rates, discounts or savings."),
         ("How we verify", "The facts shown on this site are gathered from each cruise line's official website "
-         "and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap — "
+         "and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap, "
          "never guessed. Always confirm the details that matter to you with the licensed agency that books your trip."),
         ("Photography", "Destination, port and ship photos are illustrative stock images from royalty-free sources "
          "(Pexels and Unsplash), used under their licenses, which permit commercial use without attribution. We credit "
@@ -46,7 +46,7 @@ DISC = {
         ("Precios", "Este sitio no muestra tarifas, precios, descuentos ni ahorros."),
         ("Cómo verificamos", "Los datos de este sitio se obtienen del sitio web oficial y las políticas públicas de "
          "cada línea de crucero y se revisan cada 30 días. Lo que aún no está verificado se muestra como un vacío "
-         "visible — nunca se adivina. Confirma siempre los detalles importantes con la agencia con licencia que reserve tu viaje."),
+         "visible, nunca se adivina. Confirma siempre los detalles importantes con la agencia con licencia que reserve tu viaje."),
         ("Fotografía", "Las fotos de destinos, puertos y barcos son imágenes ilustrativas de archivo de fuentes libres "
          "de regalías (Pexels y Unsplash), usadas según sus licencias, que permiten el uso comercial sin atribución. "
          "Damos crédito a las fuentes aquí por cortesía. Las imágenes son solo representativas y pueden no mostrar el "

@@ -16,10 +16,10 @@ _CAT_EN = {c["id"]: c["name"] for c in CATEGORIES}
 
 _T = {
     "en": {"kick": "All cruise lines", "h2": "Every major line boardable from the Americas",
-           "sub": "We publish in-depth, verified guides as we go. The lines with a guide are live below; the rest are on the way — call for any line, listed or not.",
+           "sub": "We publish in-depth, verified guides as we go. The lines with a guide are live below; the rest are on the way, call for any line, listed or not.",
            "done": "Guide ›", "soon": "Coming soon"},
     "es": {"kick": "Todas las líneas de crucero", "h2": "Todas las líneas principales desde las Américas",
-           "sub": "Publicamos guías detalladas y verificadas a medida que avanzamos. Las líneas con guía están activas abajo; las demás llegan pronto — llama por cualquier línea, esté o no listada.",
+           "sub": "Publicamos guías detalladas y verificadas a medida que avanzamos. Las líneas con guía están activas abajo; las demás llegan pronto, llama por cualquier línea, esté o no listada.",
            "done": "Ver guía ›", "soon": "Próximamente"},
 }
 

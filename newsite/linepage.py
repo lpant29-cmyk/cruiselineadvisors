@@ -3,9 +3,9 @@
 detailed pages used): at-a-glance, who-it's-for, the fleet, what's included, cabins, families,
 accessibility, where/when it sails, what drives cost, FAQ. Heavy call CTAs throughout.
 
-Unverified fields (VERIFY/PENDING) render as visible "Not yet verified" gaps — never guessed.
+Unverified fields (VERIFY/PENDING) render as visible "Not yet verified" gaps, never guessed.
 NOTE: the JSON prose is English; ES pages show English deep content for now (headings/labels are
-bilingual) — full ES translation of this content is a flagged follow-up."""
+bilingual), full ES translation of this content is a flagged follow-up."""
 import json
 import os
 from config import PHONE_HREF, PHONE_DISPLAY
@@ -21,7 +21,7 @@ _H = {
     "fityes": {"en": "A strong fit for", "es": "Una buena opción para"},
     "fitno": {"en": "Probably not for", "es": "Probablemente no para"},
     "fleet": {"en": "The fleet, class by class", "es": "La flota, clase por clase"},
-    "incl": {"en": "What's included — and what isn't", "es": "Qué se incluye — y qué no"},
+    "incl": {"en": "What's included, and what isn't", "es": "Qué se incluye, y qué no"},
     "inclyes": {"en": "Included in your fare", "es": "Incluido en tu tarifa"},
     "inclno": {"en": "Costs extra", "es": "Cuesta extra"},
     "cabins": {"en": "Choosing a cabin", "es": "Elegir camarote"},
@@ -57,7 +57,7 @@ def _v(v, lang):
 
 def _note(n):
     """Render an item note, but hide it if it's empty, a gap, or carries a VERIFY marker."""
-    return f' — {n}' if (n and not _gap(n) and "VERIFY" not in n) else ""
+    return f', {n}' if (n and not _gap(n) and "VERIFY" not in n) else ""
 
 
 def _nudge(lang, txt):
@@ -110,8 +110,8 @@ def _num(n):
 
 
 def _fleet_inner(lang, slug, name, classes):
-    """The fleet section body. Prefers the verified per-ship roster (ships.py) — each ship a card
-    linking to its own page — and only falls back to class-level cards when no roster exists yet."""
+    """The fleet section body. Prefers the verified per-ship roster (ships.py), each ship a card
+    linking to its own page, and only falls back to class-level cards when no roster exists yet."""
     clsw = "class" if lang == "en" else "clase"
     guestsw = "guests" if lang == "en" else "huéspedes"
     view = "View ship" if lang == "en" else "Ver barco"
@@ -141,9 +141,9 @@ def _fleet_inner(lang, slug, name, classes):
             head = (f'<h3 class="fleet-class">{k} {clsw}</h3>'
                     if k not in ("Other", "Otros") else "")
             blocks += f'{head}<div class="ship-grid">{cards}</div>'
-        nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where — and when."
+        nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where, and when."
                  if lang == "en" else
-                 f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde — y cuándo."))
+                 f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde, y cuándo."))
         return f'{blocks}{nudge}'
 
     # fallback: class-level cards from cruise-lines.json
@@ -155,27 +155,27 @@ def _fleet_inner(lang, slug, name, classes):
         cards += (f'<article class="ship-card"><h3>{_v(s.get("class"), lang)} {clsw}</h3>'
                   f'<p class="ship-ships"><b>{_L["ships"][lang]}:</b> {_v(s.get("ships"), lang)}</p>'
                   f'<div class="ship-feats">{feats}</div></article>')
-    nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where — and when."
+    nudge = (_nudge(lang, f"Not sure which {name} ship fits your trip? A specialist knows which ships sail where, and when."
              if lang == "en" else
-             f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde — y cuándo."))
+             f"¿No sabes qué barco de {name} encaja? Un especialista sabe qué barcos navegan dónde, y cuándo."))
     return f'<div class="ship-grid">{cards}</div>{nudge}'
 
 
-# Generic cabin-type descriptions (standard cruise knowledge — applies across lines). Matched by
+# Generic cabin-type descriptions (standard cruise knowledge, applies across lines). Matched by
 # keyword against each line's published cabin category names.
 _CABIN_DESC = [
     (("interior", "inside"), "🛏️",
-     {"en": "The most affordable rooms — no window, but the same comfy beds, bathroom and service. Perfect if you plan to be out exploring.",
-      "es": "Los camarotes más económicos — sin ventana, pero con las mismas camas, baño y servicio. Ideales si planeas estar fuera explorando."}),
+     {"en": "The most affordable rooms, no window, but the same comfy beds, bathroom and service. Perfect if you plan to be out exploring.",
+      "es": "Los camarotes más económicos, sin ventana, pero con las mismas camas, baño y servicio. Ideales si planeas estar fuera explorando."}),
     (("ocean view", "oceanview", "porthole", "outside", "obstructed"), "🪟",
-     {"en": "A sealed window or porthole onto the sea — natural light and a view, without the extra of a balcony.",
-      "es": "Una ventana o portilla sellada al mar — luz natural y vistas, sin el costo de un balcón."}),
+     {"en": "A sealed window or porthole onto the sea, natural light and a view, without the extra of a balcony.",
+      "es": "Una ventana o portilla sellada al mar, luz natural y vistas, sin el costo de un balcón."}),
     (("balcony", "veranda", "verandah", "infinite", "lanai"), "🌅",
-     {"en": "Your own private outdoor space for morning coffee and sail-aways — the most popular choice for good reason.",
-      "es": "Tu propio espacio exterior privado para el café de la mañana y las salidas — la opción más popular."}),
+     {"en": "Your own private outdoor space for morning coffee and sail-aways, the most popular choice for good reason.",
+      "es": "Tu propio espacio exterior privado para el café de la mañana y las salidas, la opción más popular."}),
     (("yacht club", "retreat", "haven", "grill", "neptune", "pinnacle", "signature", "reserve", "sanctuary", "suite"), "👑",
-     {"en": "The top tier — more space and usually extra perks like priority boarding, a private lounge, sundeck or concierge service.",
-      "es": "La categoría superior — más espacio y ventajas como embarque prioritario, salón privado o servicio de conserje."}),
+     {"en": "The top tier, more space and usually extra perks like priority boarding, a private lounge, sundeck or concierge service.",
+      "es": "La categoría superior, más espacio y ventajas como embarque prioritario, salón privado o servicio de conserje."}),
     (("spa", "aqua"), "💆",
      {"en": "Wellness-focused cabins with spa perks or thermal-suite access, usually in a quieter part of the ship.",
       "es": "Camarotes de bienestar con acceso al spa o suite térmica, en una zona más tranquila del barco."}),
@@ -183,8 +183,8 @@ _CABIN_DESC = [
      {"en": "Roomier layouts and connecting options designed with families in mind.",
       "es": "Distribuciones más amplias y opciones conectadas pensadas para familias."}),
     (("solo", "single", "studio"), "🧍",
-     {"en": "Cabins designed and priced for one traveller — no paying for an empty second bed.",
-      "es": "Camarotes diseñados y con precio para una persona — sin pagar por una segunda cama vacía."}),
+     {"en": "Cabins designed and priced for one traveller, no paying for an empty second bed.",
+      "es": "Camarotes diseñados y con precio para una persona, sin pagar por una segunda cama vacía."}),
     (("concierge", "club", "premium"), "✨",
      {"en": "An enhanced category with upgraded perks and service, sitting between standard rooms and full suites.",
       "es": "Una categoría mejorada con ventajas y servicio superiores, entre los camarotes estándar y las suites."}),
@@ -193,8 +193,8 @@ _CABIN_DESC = [
 
 def _cabin_card(name, lang):
     s = name.lower()
-    emo, desc = "🛏️", {"en": "A distinct room category on this line — ask us exactly what it includes.",
-                        "es": "Una categoría de camarote de esta línea — pregúntanos qué incluye."}
+    emo, desc = "🛏️", {"en": "A distinct room category on this line, ask us exactly what it includes.",
+                        "es": "Una categoría de camarote de esta línea, pregúntanos qué incluye."}
     for keys, e, d in _CABIN_DESC:
         if any(k in s for k in keys):
             emo, desc = e, d
@@ -271,7 +271,7 @@ def line_data(slug):
 
 
 def sections_present(slug):
-    """Ordered rich-section keys that rendered for this line (set by rich_sections) — for the TOC."""
+    """Ordered rich-section keys that rendered for this line (set by rich_sections), for the TOC."""
     return _LAST_SECTIONS.get(slug, [])
 
 
@@ -324,16 +324,16 @@ def rich_sections(lang, slug):
     cats = [x for x in cab.get("categories", []) if not _gap(x)]
     if cats:
         cards = "".join(_cabin_card(x, lang) for x in cats)
-        nudge = (_nudge(lang, "The right cabin — and the numbers to avoid on each ship — is exactly what an advisor knows."
+        nudge = (_nudge(lang, "The right cabin, and the numbers to avoid on each ship, is exactly what an advisor knows."
                  if lang == "en" else
-                 "El camarote correcto — y los números a evitar en cada barco — es justo lo que sabe un asesor."))
+                 "El camarote correcto, y los números a evitar en cada barco, es justo lo que sabe un asesor."))
         out += _sec("cream", "cabins", lang, f'<div class="cab-grid">{cards}</div>{nudge}'); pres.append("cabins")
 
     # ── Families ──
     fam = L.get("family", {})
     frows = [("kidsclub", fam.get("kids_club_name")), ("minage", fam.get("minimum_sailing_age"))]
     fgrid = "".join(f'<div class="glance-cell"><b>{_L[k][lang]}</b><span>{_v(v, lang)}</span></div>' for k, v in frows)
-    # kids clubs are fleet-wide brands — surface a ship's enriched kids programme on the line page too.
+    # kids clubs are fleet-wide brands, surface a ship's enriched kids programme on the line page too.
     # Prefer a ship with named venues (list); fall back to prose, but never an internal sourcing gap.
     from ships import kids_family_display, _kids_is_gap
     kids_detail = None
@@ -352,8 +352,8 @@ def rich_sections(lang, slug):
             extra = f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b></p><div class="cab-grid">{cards}</div>'
         else:
             extra = f'<p class="rsec-sub" style="margin-top:16px"><b>{lbl}:</b> {kids_detail}</p>'
-    nudge = (_nudge(lang, "Travelling with kids? An advisor books connecting cabins, dining times and the right club — and finds the family deals." if lang == "en"
-             else "¿Viajas con niños? Un asesor reserva camarotes conectados, horarios de comida y el club correcto — y encuentra ofertas familiares."))
+    nudge = (_nudge(lang, "Travelling with kids? An advisor books connecting cabins, dining times and the right club, and finds the family deals." if lang == "en"
+             else "¿Viajas con niños? Un asesor reserva camarotes conectados, horarios de comida y el club correcto, y encuentra ofertas familiares."))
     out += _sec("", "family", lang, f'<div class="glance-grid">{fgrid}</div>{extra}{nudge}'); pres.append("family")
 
     # ── Accessibility ──
@@ -380,9 +380,9 @@ def rich_sections(lang, slug):
     if cd:
         items = "".join(f'<div class="cd-row"><b>{d.get("factor")}</b><span>{d.get("detail")}</span></div>'
                         for d in cd if isinstance(d, dict) and not _gap(d.get("factor")))
-        nudge = (_nudge(lang, "Prices move daily by ship, date and cabin. One call gets you the real number for your trip — and the best rate our partners can offer."
+        nudge = (_nudge(lang, "Prices move daily by ship, date and cabin. One call gets you the real number for your trip, and the best rate our partners can offer."
                  if lang == "en" else
-                 "Los precios cambian a diario por barco, fecha y camarote. Una llamada te da el número real — y la mejor tarifa que nuestros socios pueden ofrecer."))
+                 "Los precios cambian a diario por barco, fecha y camarote. Una llamada te da el número real, y la mejor tarifa que nuestros socios pueden ofrecer."))
         out += _sec("cream", "cost", lang, f'<div class="cd-list">{items}</div>{nudge}'); pres.append("cost")
 
     _LAST_SECTIONS[slug] = pres

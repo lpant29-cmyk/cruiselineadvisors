@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Rich per-ship 'experience' sections — Onboard overview, Food & Dining, Drinks & packages,
-Activities, Entertainment, Kids/Teens/Families, Decks & layout, Bridge cam — plus a self-hosted
+"""Rich per-ship 'experience' sections, Onboard overview, Food & Dining, Drinks & packages,
+Activities, Entertainment, Kids/Teens/Families, Decks & layout, Bridge cam, plus a self-hosted
 photo strip. Each section renders ONLY when it has verified content (no fake placeholders).
 
 Every list section renders as visual CARDS (emoji tile + name + description). Inputs are flexible:
@@ -8,13 +8,13 @@ activities / entertainment / kids_family may be a STRING (prose), a LIST of stri
 cards), or a LIST of {name, desc} (rich cards). Dining is a LIST of {name, type, extra} where
 `extra` is a bool (Included/Specialty pill) or a descriptive string. Per-ship content lives in
 data/ships/<line>.json under each ship's "exp"; line-wide content in cruise-lines.json
-"experience". NO PRICES. All prose is original — vivid but grounded in verified facts."""
+"experience". NO PRICES. All prose is original, vivid but grounded in verified facts."""
 import os
 from config import PHONE_HREF, PHONE_DISPLAY
 from linepage import line_data
 
 _PORTS_DIR = os.path.join(os.path.dirname(__file__), "assets", "ports")
-# Pick a scenery image for a ship's "where & when it sails" note — destination region first
+# Pick a scenery image for a ship's "where & when it sails" note, destination region first
 # (what the cruise is about), then the departure city as a fallback.
 _ROUTE_REGION = [
     (("caribbean", "bahamas", "west indies", "key west", "cozumel", "antilles"), "caribbean.jpg"),
@@ -240,9 +240,9 @@ def experience_sections(lang, line_slug, ship):
         vis = (f'<figure class="route-img"><img src="/ports/{img}" alt="" loading="lazy" decoding="async">'
                f'<figcaption class="route-cap">{route}</figcaption></figure>'
                if img else f'<p class="rsec-sub">{route}</p>')
-        nudge = (_call(lang, "Not sailing your dates or from your port? Call — we'll find the ship that is.")
+        nudge = (_call(lang, "Not sailing your dates or from your port? Call, we'll find the ship that is.")
                  if lang == "en" else
-                 _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama — encontramos el barco que sí."))
+                 _call(lang, "¿No navega en tus fechas o desde tu puerto? Llama, encontramos el barco que sí."))
         out += _sec("route", lang, f'{vis}{nudge}')
 
     # ── Food & dining ──
@@ -251,9 +251,9 @@ def experience_sections(lang, line_slug, ship):
         inc = sum(1 for d in dining if d.get("extra") is False)
         spec = sum(1 for d in dining if d.get("extra") is True)
         if inc or spec:
-            sub = (f"{len(dining)} places to eat — {inc} included in your fare, {spec} specialty."
+            sub = (f"{len(dining)} places to eat, {inc} included in your fare, {spec} specialty."
                    if lang == "en" else
-                   f"{len(dining)} lugares para comer — {inc} incluidos, {spec} de especialidad.")
+                   f"{len(dining)} lugares para comer, {inc} incluidos, {spec} de especialidad.")
         else:
             sub = (f"{len(dining)} places to eat on board." if lang == "en"
                    else f"{len(dining)} lugares para comer a bordo.")
@@ -286,9 +286,9 @@ def experience_sections(lang, line_slug, ship):
     # ── Things to do ──
     ai = _flex(exp.get("activities"), _ACT_EMOJI, "✨")
     if ai:
-        nudge = (_call(lang, f"A specialist knows which {name} experiences book up fast — and locks them in for you.")
+        nudge = (_call(lang, f"A specialist knows which {name} experiences book up fast, and locks them in for you.")
                  if lang == "en" else
-                 _call(lang, f"Un especialista sabe qué experiencias de {name} se agotan rápido — y te las asegura."))
+                 _call(lang, f"Un especialista sabe qué experiencias de {name} se agotan rápido, y te las asegura."))
         out += _sec("activities", lang, f'{ai}{nudge}')
 
     # ── Entertainment ──
@@ -313,7 +313,7 @@ def experience_sections(lang, line_slug, ship):
     prog = line_program(line_slug)
     inner = grid
     if isinstance(ship_kf, list) and ship_kf:
-        # ship has its own curated venue list (Icon, Star, …) — richest, use it as-is
+        # ship has its own curated venue list (Icon, Star, …), richest, use it as-is
         inner += _item_cards(ship_kf, _ACT_EMOJI, "🧒")
     elif prog:
         # fleet-wide program cards on every ship, with this ship's own note as a lead line
@@ -329,12 +329,12 @@ def experience_sections(lang, line_slug, ship):
                 "los espacios y horarios de tu barco y fechas en la llamada.")
         inner += f'{lead}<div class="xr-grid">{cards}</div><p class="xnote">{note}</p>'
     else:
-        # no fleet program mapped (e.g. Margaritaville) — render the ship's own prose/list
+        # no fleet program mapped (e.g. Margaritaville), render the ship's own prose/list
         inner += _flex(kids_family_display(ship_kf, lang), _ACT_EMOJI, "🧒") if ship_kf else ""
     if inner.strip():
         out += _sec("family", lang, inner)
 
-    # ── Districts & zones (own section — described cards when we have descriptions) ──
+    # ── Districts & zones (own section, described cards when we have descriptions) ──
     nbh = exp.get("neighbourhoods") or exp.get("neighborhoods") or []
     if nbh:
         if isinstance(nbh[0], dict):
@@ -355,9 +355,9 @@ def experience_sections(lang, line_slug, ship):
     cam = exp.get("bridge_cam")
     if cam is not None:
         if cam:
-            txt = (f"{name} has a live bridge cam on board — ask us what the view and itinerary look like for your dates."
+            txt = (f"{name} has a live bridge cam on board, ask us what the view and itinerary look like for your dates."
                    if lang == "en" else
-                   f"{name} tiene cámara del puente en vivo a bordo — pregúntanos por la vista y el itinerario de tus fechas.")
+                   f"{name} tiene cámara del puente en vivo a bordo, pregúntanos por la vista y el itinerario de tus fechas.")
         else:
             txt = ("No bridge cam published for this ship." if lang == "en"
                    else "No hay cámara del puente publicada para este barco.")

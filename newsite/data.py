@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Prototype content data. The 8 launch lines + a SAMPLE of the comparison sheet.
 
-NOTE: CMP_FACTS values here are illustrative SAMPLE text for the design prototype — they are
+NOTE: CMP_FACTS values here are illustrative SAMPLE text for the design prototype, they are
 line-agnostic general truths, clearly flagged "Sample" in the UI. The real, per-line, source-verified
 values (with source URL + verified date, refreshed every 30 days) get loaded from the verified data
 sheet during the facts-sourcing phase. Nothing here is presented as a verified per-line fact."""
@@ -43,31 +43,31 @@ LINES = [
 
 DESTINATIONS = [
     {"slug": "caribbean", "emo": "🏝️", "name": {"en": "Caribbean", "es": "Caribe"},
-     "best": {"en": "Nov–Apr", "es": "Nov–Abr"}},
+     "best": {"en": "Nov-Apr", "es": "Nov-Abr"}},
     {"slug": "bahamas", "emo": "⛵", "name": {"en": "Bahamas", "es": "Bahamas"},
      "best": {"en": "Year-round", "es": "Todo el año"}},
     {"slug": "alaska", "emo": "🏔️", "name": {"en": "Alaska", "es": "Alaska"},
-     "best": {"en": "May–Sep", "es": "May–Sep"}},
+     "best": {"en": "May-Sep", "es": "May-Sep"}},
     {"slug": "mediterranean", "emo": "🏛️", "name": {"en": "Mediterranean", "es": "Mediterráneo"},
-     "best": {"en": "Apr–Oct", "es": "Abr–Oct"}},
+     "best": {"en": "Apr-Oct", "es": "Abr-Oct"}},
     {"slug": "mexican-riviera", "emo": "🌵", "name": {"en": "Mexican Riviera", "es": "Riviera Mexicana"},
-     "best": {"en": "Oct–Apr", "es": "Oct–Abr"}},
+     "best": {"en": "Oct-Apr", "es": "Oct-Abr"}},
     {"slug": "panama-canal", "emo": "🛳️", "name": {"en": "Panama Canal", "es": "Canal de Panamá"},
-     "best": {"en": "Oct–Apr", "es": "Oct–Abr"}},
+     "best": {"en": "Oct-Apr", "es": "Oct-Abr"}},
     {"slug": "northern-europe", "emo": "🏰", "name": {"en": "Northern Europe", "es": "Norte de Europa"},
-     "best": {"en": "May–Aug", "es": "May–Ago"}},
+     "best": {"en": "May-Aug", "es": "May-Ago"}},
     {"slug": "hawaii", "emo": "🌺", "name": {"en": "Hawaii", "es": "Hawái"},
      "best": {"en": "Year-round", "es": "Todo el año"}},
     {"slug": "bermuda", "emo": "🐚", "name": {"en": "Bermuda", "es": "Bermudas"},
-     "best": {"en": "Apr–Oct", "es": "Abr–Oct"}},
+     "best": {"en": "Apr-Oct", "es": "Abr-Oct"}},
     {"slug": "canada-new-england", "emo": "🍁",
      "name": {"en": "Canada & New England", "es": "Canadá y Nueva Inglaterra"},
-     "best": {"en": "May–Oct", "es": "May–Oct"}},
+     "best": {"en": "May-Oct", "es": "May-Oct"}},
     {"slug": "pacific-coastal", "emo": "🌊",
      "name": {"en": "Pacific Coastal", "es": "Costa del Pacífico"},
      "best": {"en": "Spring & fall", "es": "Primavera y otoño"}},
     {"slug": "transatlantic", "emo": "⛴️", "name": {"en": "Transatlantic", "es": "Transatlántico"},
-     "best": {"en": "Spring–fall", "es": "Primavera–otoño"}},
+     "best": {"en": "Spring-fall", "es": "Primavera-otoño"}},
 ]
 
 # Sample rows for the comparison-tool preview (illustrative, flagged Sample in UI)
@@ -75,10 +75,10 @@ CMP_FACTS = [
     {"label": {"en": "Daily gratuities", "es": "Propinas diarias"},
      "note": {"en": "Added automatically to your onboard account",
               "es": "Se añaden automáticamente a tu cuenta a bordo"},
-     "a": {"en": "Added daily per guest — amount being verified",
-           "es": "Diarias por huésped — monto en verificación"},
-     "b": {"en": "Added daily per guest — amount being verified",
-           "es": "Diarias por huésped — monto en verificación"}},
+     "a": {"en": "Added daily per guest, amount being verified",
+           "es": "Diarias por huésped, monto en verificación"},
+     "b": {"en": "Added daily per guest, amount being verified",
+           "es": "Diarias por huésped, monto en verificación"}},
     {"label": {"en": "Drink package rule", "es": "Regla del paquete de bebidas"},
      "note": {"en": "The rule that surprises most guests",
               "es": "La regla que más sorprende a los huéspedes"},
@@ -94,8 +94,8 @@ CMP_FACTS = [
     {"label": {"en": "Final payment", "es": "Pago final"},
      "note": {"en": "Miss it and the booking can cancel",
               "es": "Si lo pierdes, la reserva puede cancelarse"},
-     "a": {"en": "Roughly 75–90 days before sailing", "es": "Aproximadamente 75–90 días antes de zarpar"},
-     "b": {"en": "Roughly 75–90 days before sailing", "es": "Aproximadamente 75–90 días antes de zarpar"}},
+     "a": {"en": "Roughly 75-90 days before sailing", "es": "Aproximadamente 75-90 días antes de zarpar"},
+     "b": {"en": "Roughly 75-90 days before sailing", "es": "Aproximadamente 75-90 días antes de zarpar"}},
     {"label": {"en": "Cancellation penalties", "es": "Penalidades de cancelación"},
      "note": {"en": "Increase as the sailing gets closer",
               "es": "Aumentan a medida que se acerca la salida"},
