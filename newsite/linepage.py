@@ -203,28 +203,30 @@ def _cabin_card(name, lang):
             f'<div class="cab-b"><h3>{name}</h3><p>{desc[lang]}</p></div></article>')
 
 
-_PORT_EMOJI = [
-    (("miami", "lauderdale", "canaveral", "tampa", "palm beach", "jacksonville", "orlando", "fl"), "🌴"),
-    (("seattle", "vancouver", "seward", "whittier", "alaska"), "🏔️"),
-    (("new york", "cape liberty", "brooklyn", "manhattan", "ny", "nj"), "🗽"),
-    (("boston", "baltimore", "norfolk", "quebec", "montreal", "portland"), "🍁"),
-    (("los angeles", "long beach", "san diego", "san francisco", "san pedro", "ca"), "🌉"),
-    (("honolulu", "hawaii", "oahu"), "🌺"),
-    (("galveston", "new orleans", "mobile", "tx", "la ", "texas"), "⚓"),
-    (("san juan", "puerto rico", "pr"), "🏖️"),
+# Self-hosted, Unsplash-licensed regional scenery (free for commercial use, no attribution) — an
+# illustrative photo of the port's region, not a claim about the exact spot.
+_PORT_IMG = [
+    (("miami", "lauderdale", "canaveral", "tampa", "palm beach", "jacksonville", "orlando"), "florida.jpg"),
+    (("san juan", "puerto rico"), "caribbean.jpg"),
+    (("seattle", "vancouver", "seward", "whittier", "alaska"), "alaska.jpg"),
+    (("new york", "cape liberty", "brooklyn", "manhattan"), "newyork.jpg"),
+    (("los angeles", "long beach", "san diego", "san francisco", "san pedro"), "california.jpg"),
+    (("honolulu", "hawaii", "oahu"), "hawaii.jpg"),
+    (("boston", "baltimore", "norfolk", "quebec", "montreal", "portland"), "newengland.jpg"),
+    (("galveston", "new orleans", "mobile"), "gulf.jpg"),
 ]
 
 
-def _port_emoji(port):
+def _port_img(port):
     s = port.lower()
-    for keys, e in _PORT_EMOJI:
+    for keys, img in _PORT_IMG:
         if any(k in s for k in keys):
-            return e
-    return "⚓"
+            return img
+    return "gulf.jpg"
 
 
 def _port_card(port):
-    return (f'<article class="port-card"><span class="port-emo" aria-hidden="true">{_port_emoji(port)}</span>'
+    return (f'<article class="port-card"><img src="/ports/{_port_img(port)}" alt="" loading="lazy">'
             f'<span class="port-nm">{port}</span></article>')
 
 

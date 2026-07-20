@@ -429,11 +429,12 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .cab-b h3{font-family:'Fraunces',serif;font-size:1.06rem;color:var(--navy);margin:0}
 .cab-b p{color:var(--muted);font-size:.9rem;line-height:1.5;margin:.3rem 0 0}
 @media(min-width:720px){.cab-grid{grid-template-columns:1fr 1fr}}
-/* home-port cards (illustrative tiles — real port photos are copyrighted) */
-.port-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));margin-top:.6rem}
-.port-card{display:flex;flex-direction:column;gap:.5rem;background:linear-gradient(135deg,rgba(47,196,192,.15),rgba(143,217,240,.18));border:1px solid var(--line);border-radius:14px;padding:14px}
-.port-emo{font-size:1.8rem;line-height:1}
-.port-nm{font-weight:800;color:var(--navy);font-size:.88rem;line-height:1.25}
+/* home-port cards (self-hosted Unsplash-licensed regional scenery) */
+.port-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));margin-top:.6rem}
+.port-card{position:relative;min-height:118px;border-radius:14px;overflow:hidden;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.port-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,44,66,0) 38%,rgba(8,44,66,.82))}
+.port-nm{position:relative;z-index:1;color:#fff;font-weight:800;font-size:.9rem;padding:10px 12px;text-shadow:0 1px 4px rgba(0,0,0,.55);line-height:1.2}
 /* rich ship "experience" sections */
 .xsec:nth-of-type(even){background:var(--cream)}
 .xsec .rsec-h .xic{margin-right:.45em;font-size:1em}
