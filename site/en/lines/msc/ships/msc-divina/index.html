@@ -532,6 +532,40 @@ a.dir-line:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:
 .ms-none{background:var(--foam);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--navy);font-weight:600}
 @media(min-width:620px){.ms-form{grid-template-columns:1fr 1fr}.ms-go{grid-column:1/-1}}
 @media(min-width:900px){.ms-form{grid-template-columns:1.3fr 1.3fr 1fr 1.2fr auto}.ms-go{grid-column:auto}.ms-grid{grid-template-columns:1fr 1fr}}
+/* metasearch v2 */
+.ms-count{font-size:.85rem;font-weight:700;color:var(--muted);margin:4px 0 14px}
+.ms-count b{color:var(--navy)}
+.ms-tags{display:flex;gap:6px;flex-wrap:wrap}
+.ms-tag{font-size:.66rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--sea3);background:var(--foam);border-radius:99px;padding:.25em .7em}
+.ms-cmpbtn{margin-left:auto;flex:none;align-self:flex-start;background:#fff;border:1.5px solid var(--sea2);color:var(--sea3);border-radius:99px;padding:.35em .8em;font-size:.75rem;font-weight:800;cursor:pointer;white-space:nowrap}
+.ms-cmpbtn.on{background:var(--sea3);color:#fff;border-color:var(--sea3)}
+.ms-bk{display:inline-flex;align-items:center;gap:.55em;background:linear-gradient(180deg,var(--gold),var(--gold2));color:var(--navy);text-decoration:none;border-radius:12px;padding:.4em .7em;box-shadow:0 5px 14px rgba(240,137,31,.3)}
+.ms-av{width:30px;height:30px;flex:none;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;font-size:1.05rem}
+.ms-bkt{display:flex;flex-direction:column;line-height:1.05;font-weight:800;font-size:.85rem}
+.ms-bkt small{font-weight:700;font-size:.6rem;opacity:.85;text-transform:none;letter-spacing:0}
+.ms-loadmore{display:block;width:100%;background:#fff;border:1.5px solid var(--line);color:var(--navy);border-radius:12px;padding:.9em;font-weight:800;cursor:pointer;margin-top:16px;font-size:.95rem}
+.ms-loadmore:hover{border-color:var(--sea2)}
+.ms-showall{border-color:var(--coral)!important;color:var(--coral2)!important}
+.ms-accnote{display:block;margin-top:.55rem;color:var(--sea3);font-size:.9rem;font-weight:600;line-height:1.5}
+.ms-none p{margin:0 0 .6rem}.ms-none .ms-relax{background:var(--gold);color:var(--navy);border:0;border-radius:99px;padding:.2em .7em;font-weight:800;cursor:pointer}
+.ms-tray{position:sticky;bottom:12px;z-index:20;display:none}
+.ms-tray.show{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px rgba(8,44,66,.35);margin-top:18px}
+.ms-traytxt{font-weight:700}.ms-traytxt b{color:var(--gold)}
+.ms-traycmp{margin-left:auto}.ms-traycmp[disabled]{opacity:.5;pointer-events:none}
+.ms-trayclr{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:99px;padding:.4em .9em;font-weight:700;cursor:pointer}
+.ms-cmp{display:none}
+.ms-cmp.show{display:block;position:fixed;inset:0;z-index:200;background:rgba(8,44,66,.6);overflow-y:auto;padding:16px}
+.ms-cmp-inner{max-width:1000px;margin:20px auto;background:#fff;border-radius:18px;padding:20px}
+.ms-cmp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.ms-cmp-top h3{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--navy)}
+.ms-cmp-x{background:var(--foam);border:0;border-radius:99px;padding:.5em 1em;font-weight:800;color:var(--navy);cursor:pointer;flex:none}
+.ms-cmp-scroll{overflow-x:auto;margin-bottom:16px}
+.ms-cmp-row{display:grid;grid-template-columns:130px repeat(var(--n,3),minmax(148px,1fr));border-bottom:1px solid var(--line)}
+.ms-cmp-head{border-bottom:2px solid var(--gold)}
+.ms-cmp-lbl{padding:12px 10px;font-weight:800;color:var(--navy);font-size:.82rem;background:var(--soft)}
+.ms-cmp-col{padding:12px 10px;display:flex;flex-direction:column;gap:.15rem;text-align:center;align-items:center;border-left:1px solid var(--line)}
+.ms-cmp-col b{color:var(--navy);font-family:'Fraunces',serif;font-size:1rem}
+.ms-cmp-val{padding:11px 10px;font-size:.82rem;color:var(--ink);line-height:1.4;border-left:1px solid var(--line)}
 .xtag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:.22em .62em;border-radius:99px;background:var(--foam);color:var(--sea3);border:1px solid var(--line);flex:none}
 .xtag-i{background:rgba(18,145,154,.13);color:var(--sea3);border-color:transparent}
 .xtag-x{background:rgba(240,137,31,.15);color:var(--gold2);border-color:transparent}
