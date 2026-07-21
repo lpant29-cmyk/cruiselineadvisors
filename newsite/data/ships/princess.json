@@ -6,7 +6,7 @@
   "ships": [
     {
       "name": "Sun Princess",
-      "class": null,
+      "class": "Sphere class",
       "year": 2024,
       "tonnage": 177882,
       "guests": 4300,
@@ -223,7 +223,7 @@
     },
     {
       "name": "Star Princess",
-      "class": null,
+      "class": "Sphere class",
       "year": 2025,
       "tonnage": 177800,
       "guests": 4300,
@@ -434,7 +434,7 @@
     },
     {
       "name": "Discovery Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2022,
       "tonnage": 145000,
       "guests": 3660,
@@ -611,7 +611,7 @@
     },
     {
       "name": "Enchanted Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2021,
       "tonnage": 145000,
       "guests": 3660,
@@ -782,7 +782,7 @@
     },
     {
       "name": "Sky Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2019,
       "tonnage": 141000,
       "guests": 3660,
@@ -965,7 +965,7 @@
     },
     {
       "name": "Majestic Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2017,
       "tonnage": 143700,
       "guests": 3560,
@@ -1124,7 +1124,7 @@
     },
     {
       "name": "Regal Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2014,
       "tonnage": 142229,
       "guests": 3560,
@@ -1289,7 +1289,7 @@
     },
     {
       "name": "Royal Princess",
-      "class": null,
+      "class": "Royal class",
       "year": 2013,
       "tonnage": 142229,
       "guests": 3560,
@@ -1454,8 +1454,8 @@
     },
     {
       "name": "Caribbean Princess",
-      "class": null,
-      "year": null,
+      "class": "Grand class",
+      "year": 2004,
       "tonnage": 112894,
       "guests": 3140,
       "crew": 1200,
@@ -1642,7 +1642,7 @@
     },
     {
       "name": "Crown Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 2006,
       "tonnage": 113561,
       "guests": 3080,
@@ -1834,7 +1834,7 @@
     },
     {
       "name": "Emerald Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 2007,
       "tonnage": 113561,
       "guests": 3080,
@@ -2028,7 +2028,7 @@
     },
     {
       "name": "Ruby Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 2008,
       "tonnage": 113561,
       "guests": 3080,
@@ -2220,7 +2220,7 @@
     },
     {
       "name": "Diamond Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 2004,
       "tonnage": 115875,
       "guests": 2706,
@@ -2406,7 +2406,7 @@
     },
     {
       "name": "Sapphire Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 2004,
       "tonnage": 115875,
       "guests": 2670,
@@ -2592,7 +2592,7 @@
     },
     {
       "name": "Grand Princess",
-      "class": null,
+      "class": "Grand class",
       "year": 1998,
       "tonnage": 107517,
       "guests": 2600,
@@ -2786,8 +2786,8 @@
     },
     {
       "name": "Island Princess",
-      "class": null,
-      "year": null,
+      "class": "Coral class",
+      "year": 2003,
       "tonnage": 92822,
       "guests": 2200,
       "crew": 900,
@@ -2952,8 +2952,8 @@
     },
     {
       "name": "Coral Princess",
-      "class": null,
-      "year": null,
+      "class": "Coral class",
+      "year": 2003,
       "tonnage": 91627,
       "guests": 2000,
       "crew": 895,

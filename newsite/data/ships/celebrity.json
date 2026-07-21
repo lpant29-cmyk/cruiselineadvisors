@@ -7,7 +7,7 @@
     {
       "name": "Celebrity Edge",
       "class": "Edge",
-      "year": null,
+      "year": 2018,
       "tonnage": 130818,
       "guests": 2918,
       "features": [
@@ -157,7 +157,7 @@
     {
       "name": "Celebrity Apex",
       "class": "Edge",
-      "year": null,
+      "year": 2020,
       "tonnage": 130818,
       "guests": 2910,
       "features": [
@@ -434,7 +434,7 @@
     {
       "name": "Celebrity Ascent",
       "class": "Edge",
-      "year": null,
+      "year": 2023,
       "tonnage": 141420,
       "guests": 3260,
       "features": [
@@ -554,9 +554,9 @@
     {
       "name": "Celebrity Xcel",
       "class": "Edge",
-      "year": null,
-      "tonnage": null,
-      "guests": null,
+      "year": 2025,
+      "tonnage": 141420,
+      "guests": 3260,
       "features": [
         "The Bazaar",
         "Celebrity Pool Club",
@@ -668,7 +668,7 @@
     {
       "name": "Celebrity Solstice",
       "class": "Solstice",
-      "year": null,
+      "year": 2008,
       "tonnage": 121878,
       "guests": 2852,
       "features": [
@@ -780,7 +780,7 @@
     {
       "name": "Celebrity Equinox",
       "class": "Solstice",
-      "year": null,
+      "year": 2009,
       "tonnage": 121878,
       "guests": 2852,
       "features": [
@@ -876,7 +876,7 @@
     {
       "name": "Celebrity Eclipse",
       "class": "Solstice",
-      "year": null,
+      "year": 2010,
       "tonnage": 121878,
       "guests": 2852,
       "features": [
@@ -968,7 +968,7 @@
     {
       "name": "Celebrity Silhouette",
       "class": "Solstice",
-      "year": null,
+      "year": 2011,
       "tonnage": 122210,
       "guests": 2902,
       "features": [
@@ -1070,7 +1070,7 @@
     {
       "name": "Celebrity Reflection",
       "class": "Solstice",
-      "year": null,
+      "year": 2012,
       "tonnage": 125366,
       "guests": 3046,
       "features": [
@@ -1170,7 +1170,7 @@
     {
       "name": "Celebrity Millennium",
       "class": "Millennium",
-      "year": null,
+      "year": 2000,
       "tonnage": 91011,
       "guests": 2218,
       "features": [
@@ -1278,7 +1278,7 @@
     {
       "name": "Celebrity Infinity",
       "class": "Millennium",
-      "year": null,
+      "year": 2001,
       "tonnage": 90940,
       "guests": 2170,
       "features": [
@@ -1382,7 +1382,7 @@
     {
       "name": "Celebrity Summit",
       "class": "Millennium",
-      "year": null,
+      "year": 2001,
       "tonnage": 91003,
       "guests": 2218,
       "features": [
@@ -1490,7 +1490,7 @@
     {
       "name": "Celebrity Constellation",
       "class": "Millennium",
-      "year": null,
+      "year": 2002,
       "tonnage": 90940,
       "guests": 2184,
       "features": [
@@ -1598,7 +1598,7 @@
     {
       "name": "Celebrity Flora",
       "class": "Expedition",
-      "year": null,
+      "year": 2019,
       "tonnage": 5922,
       "guests": 100,
       "features": [

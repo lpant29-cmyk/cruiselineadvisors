@@ -6,9 +6,9 @@
   "ships": [
     {
       "name": "Queen Mary 2",
-      "class": null,
-      "year": null,
-      "tonnage": null,
+      "class": "Ocean liner",
+      "year": 2004,
+      "tonnage": 149215,
       "guests": 2691,
       "crew": 1173,
       "length": "1,132 ft",
@@ -25,7 +25,7 @@
     {
       "name": "Queen Anne",
       "class": "Pinnacle",
-      "year": null,
+      "year": 2024,
       "tonnage": 113000,
       "guests": 2996,
       "crew": 1225,
@@ -42,9 +42,9 @@
     },
     {
       "name": "Queen Victoria",
-      "class": null,
-      "year": null,
-      "tonnage": null,
+      "class": "Vista class",
+      "year": 2007,
+      "tonnage": 90049,
       "guests": 2061,
       "crew": 913,
       "length": "964.5 ft",
@@ -60,9 +60,9 @@
     },
     {
       "name": "Queen Elizabeth",
-      "class": null,
-      "year": null,
-      "tonnage": null,
+      "class": "Vista class",
+      "year": 2010,
+      "tonnage": 90901,
       "guests": 2081,
       "crew": 911,
       "length": "964.5 ft",

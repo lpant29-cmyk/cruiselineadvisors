@@ -6,10 +6,10 @@
   "ships": [
     {
       "name": "Margaritaville at Sea Paradise",
-      "class": null,
+      "class": "Classica class",
       "year": 2022,
-      "tonnage": null,
-      "guests": null,
+      "tonnage": 52926,
+      "guests": 1308,
       "features": [
         "Cheeseburger in Paradise Burger Bar",
         "JWB Prime Steakhouse",
@@ -130,9 +130,9 @@
     },
     {
       "name": "Margaritaville at Sea Islander",
-      "class": null,
+      "class": "Spirit class",
       "year": 2024,
-      "tonnage": null,
+      "tonnage": 85619,
       "guests": 2650,
       "features": [
         "Radio Margaritaville: Live at Sea",

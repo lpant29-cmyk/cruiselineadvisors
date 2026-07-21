@@ -1073,9 +1073,7 @@
           "Seattle, WA",
           "Tampa, FL"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "2 to 8 nights (most are 3-7 nights)",
         "regions": [
           {
             "region": "Alaska",
@@ -1493,9 +1491,7 @@
           "San Diego, CA",
           "Vancouver, BC"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "7 to 35 nights (destination-focused, longer voyages)",
         "regions": [
           {
             "region": "Alaska",
@@ -1968,9 +1964,7 @@
           "Seward, AK",
           "Vancouver, BC"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "3 to 14 nights",
         "regions": [
           {
             "region": "Alaska",
@@ -2443,9 +2437,7 @@
           "Vancouver, BC",
           "Quebec City, QC"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "3 to 14 nights, plus longer world voyages",
         "regions": [
           {
             "region": "Alaska",
@@ -2881,7 +2873,7 @@
       "family": {
         "kids_club_name": "MSC Kids Clubs",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months; 12 months for voyages with 3+ consecutive sea days or certain long crossings",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -2910,9 +2902,7 @@
           "New York, NY",
           "Galveston, TX"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "3 to 21 nights",
         "regions": [
           {
             "region": "Caribbean",
@@ -3327,9 +3317,7 @@
           "Vancouver, BC",
           "Victoria, BC"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "3 to 30+ nights, including transatlantic crossings and world voyages",
         "regions": [
           {
             "region": "Caribbean",
@@ -3652,7 +3640,7 @@
       "family": {
         "kids_club_name": "Jolly Mon, Parakeets, The Hangout Tween's Club & Teen's Club",
         "age_bands": "VERIFY",
-        "minimum_sailing_age": "VERIFY",
+        "minimum_sailing_age": "6 months",
         "nursery": {
           "available": "VERIFY",
           "extra_cost": "VERIFY",
@@ -3679,9 +3667,7 @@
           "Port of Palm Beach (Riviera Beach, FL)",
           "Port Tampa Bay (Tampa, FL)"
         ],
-        "typical_lengths": [
-          "VERIFY"
-        ],
+        "typical_lengths": "2 to 5 nights (short getaways)",
         "regions": [
           {
             "region": "Bahamas",

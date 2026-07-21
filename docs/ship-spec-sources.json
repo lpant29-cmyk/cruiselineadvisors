@@ -1,0 +1,256 @@
+{
+  "Celebrity Edge": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2018
+  },
+  "Celebrity Apex": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2020
+  },
+  "Celebrity Ascent": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2023
+  },
+  "Celebrity Xcel": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Xcel",
+    "year": 2025,
+    "tonnage": 141420,
+    "guests": 3260
+  },
+  "Celebrity Solstice": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2008
+  },
+  "Celebrity Equinox": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2009
+  },
+  "Celebrity Eclipse": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2010
+  },
+  "Celebrity Silhouette": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2011
+  },
+  "Celebrity Reflection": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2012
+  },
+  "Celebrity Millennium": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2000
+  },
+  "Celebrity Infinity": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2001
+  },
+  "Celebrity Summit": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2001
+  },
+  "Celebrity Constellation": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2002
+  },
+  "Celebrity Flora": {
+    "source": "https://en.wikipedia.org/wiki/Celebrity_Cruises",
+    "year": 2019
+  },
+  "Queen Mary 2": {
+    "source": "https://en.wikipedia.org/wiki/RMS_Queen_Mary_2",
+    "class": "Ocean liner",
+    "year": 2004,
+    "tonnage": 149215
+  },
+  "Queen Anne": {
+    "source": "https://en.wikipedia.org/wiki/MS_Queen_Anne",
+    "year": 2024
+  },
+  "Queen Victoria": {
+    "source": "https://en.wikipedia.org/wiki/MS_Queen_Victoria",
+    "class": "Vista class",
+    "year": 2007,
+    "tonnage": 90049
+  },
+  "Queen Elizabeth": {
+    "source": "https://en.wikipedia.org/wiki/MS_Queen_Elizabeth",
+    "class": "Vista class",
+    "year": 2010,
+    "tonnage": 90901
+  },
+  "Margaritaville at Sea Paradise": {
+    "source": "https://en.wikipedia.org/wiki/Margaritaville_at_Sea_Paradise",
+    "class": "Classica class",
+    "tonnage": 52926,
+    "guests": 1308
+  },
+  "Margaritaville at Sea Islander": {
+    "source": "https://en.wikipedia.org/wiki/Margaritaville_at_Sea_Islander",
+    "class": "Spirit class",
+    "tonnage": 85619
+  },
+  "MSC Virtuosa": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Virtuosa",
+    "tonnage": 181541,
+    "guests": 4842
+  },
+  "MSC Meraviglia": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Meraviglia",
+    "year": 2017,
+    "tonnage": 171598
+  },
+  "MSC Seascape": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Seascape",
+    "tonnage": 170412,
+    "guests": 4540
+  },
+  "MSC Seaview": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Seaview",
+    "tonnage": 153516,
+    "guests": 4132
+  },
+  "MSC Fantasia": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Fantasia",
+    "year": 2008,
+    "tonnage": 137936,
+    "guests": 3274
+  },
+  "MSC Splendida": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Splendida",
+    "year": 2009,
+    "tonnage": 137936,
+    "guests": 3274
+  },
+  "MSC Divina": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Divina",
+    "year": 2012,
+    "tonnage": 139072,
+    "guests": 3502
+  },
+  "MSC Preziosa": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Preziosa",
+    "year": 2013,
+    "tonnage": 139072,
+    "guests": 3502
+  },
+  "MSC Musica": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Musica",
+    "year": 2006,
+    "tonnage": 92409,
+    "guests": 2550
+  },
+  "MSC Orchestra": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Orchestra",
+    "year": 2007,
+    "tonnage": 92409,
+    "guests": 2550
+  },
+  "MSC Poesia": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Poesia",
+    "year": 2008,
+    "tonnage": 92627,
+    "guests": 2550
+  },
+  "MSC Magnifica": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Magnifica",
+    "year": 2010,
+    "tonnage": 95128,
+    "guests": 2550
+  },
+  "MSC Lirica": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Lirica",
+    "year": 2003,
+    "tonnage": 65591,
+    "guests": 1984
+  },
+  "MSC Opera": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Opera",
+    "year": 2004,
+    "tonnage": 65591,
+    "guests": 2150
+  },
+  "MSC Armonia": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Armonia",
+    "year": 2001,
+    "tonnage": 65542,
+    "guests": 2087
+  },
+  "MSC Sinfonia": {
+    "source": "https://en.wikipedia.org/wiki/MSC_Sinfonia",
+    "year": 2002,
+    "tonnage": 65542,
+    "guests": 2087
+  },
+  "Sun Princess": {
+    "source": "https://en.wikipedia.org/wiki/Sun_Princess_(2024)",
+    "class": "Sphere class"
+  },
+  "Star Princess": {
+    "source": "https://en.wikipedia.org/wiki/Star_Princess_(2025)",
+    "class": "Sphere class"
+  },
+  "Discovery Princess": {
+    "source": "https://en.wikipedia.org/wiki/Discovery_Princess",
+    "class": "Royal class"
+  },
+  "Enchanted Princess": {
+    "source": "https://en.wikipedia.org/wiki/Enchanted_Princess",
+    "class": "Royal class"
+  },
+  "Sky Princess": {
+    "source": "https://en.wikipedia.org/wiki/Sky_Princess",
+    "class": "Royal class"
+  },
+  "Majestic Princess": {
+    "source": "https://en.wikipedia.org/wiki/Majestic_Princess",
+    "class": "Royal class"
+  },
+  "Regal Princess": {
+    "source": "https://en.wikipedia.org/wiki/Regal_Princess",
+    "class": "Royal class"
+  },
+  "Royal Princess": {
+    "source": "https://en.wikipedia.org/wiki/Royal_Princess_(2013)",
+    "class": "Royal class"
+  },
+  "Caribbean Princess": {
+    "source": "https://en.wikipedia.org/wiki/Caribbean_Princess",
+    "class": "Grand class",
+    "year": 2004
+  },
+  "Crown Princess": {
+    "source": "https://en.wikipedia.org/wiki/Crown_Princess_(ship)",
+    "class": "Grand class"
+  },
+  "Emerald Princess": {
+    "source": "https://en.wikipedia.org/wiki/Emerald_Princess",
+    "class": "Grand class"
+  },
+  "Ruby Princess": {
+    "source": "https://en.wikipedia.org/wiki/Ruby_Princess",
+    "class": "Grand class"
+  },
+  "Diamond Princess": {
+    "source": "https://en.wikipedia.org/wiki/Diamond_Princess_(ship)",
+    "class": "Grand class"
+  },
+  "Sapphire Princess": {
+    "source": "https://en.wikipedia.org/wiki/Sapphire_Princess",
+    "class": "Grand class"
+  },
+  "Grand Princess": {
+    "source": "https://en.wikipedia.org/wiki/Grand_Princess",
+    "class": "Grand class"
+  },
+  "Island Princess": {
+    "source": "https://en.wikipedia.org/wiki/Island_Princess_(2002)",
+    "class": "Coral class",
+    "year": 2003
+  },
+  "Coral Princess": {
+    "source": "https://en.wikipedia.org/wiki/Coral_Princess",
+    "class": "Coral class",
+    "year": 2003
+  }
+}
