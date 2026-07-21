@@ -150,6 +150,11 @@ def build():
     write("index.html", clean_urls(f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 {_gsc}
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta http-equiv="refresh" content="0; url=/{DEFAULT_LANG}/index.html">
 <link rel="canonical" href="{SITE_URL}/{DEFAULT_LANG}/index.html"><title>{BRAND}</title></head>
 <body><script>location.replace('/{DEFAULT_LANG}/index.html')</script>
