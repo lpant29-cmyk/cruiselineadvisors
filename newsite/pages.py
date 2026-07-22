@@ -629,6 +629,14 @@ def _guide_thumb(slug):
     return guide_hero_img(slug, RICH_GUIDES.get(slug, {}).get("hero"))
 
 
+def _guide_date(slug):
+    """The guide's publish date (YYYY-MM-DD) for sorting, or '' if unknown."""
+    import guides_content  # noqa: F401
+    from guidepage import RICH_GUIDES
+    g = RICH_GUIDES.get(slug, {})
+    return g.get("published") or g.get("updated") or ""
+
+
 def guide_card(lang, slug):
     """A guide card with a self-hosted thumbnail (or emoji tile) + title + one-liner."""
     g = _G.get(slug)
@@ -638,7 +646,7 @@ def guide_card(lang, slug):
     media = (f'<span class="gcard-media"><img src="/guides/{thumb}" alt="" loading="lazy" decoding="async"></span>'
              if thumb else f'<span class="gcard-media gcard-emo"><span aria-hidden="true">{g["emo"]}</span></span>')
     read = "Read guide" if lang == "en" else "Leer guía"
-    return (f'<a class="gcard" href="/{lang}/guides/{slug}/">{media}'
+    return (f'<a class="gcard" data-date="{_guide_date(slug)}" href="/{lang}/guides/{slug}/">{media}'
             f'<span class="gcard-body"><span class="gcard-t">{g["t"][lang]}</span>'
             f'<span class="gcard-d">{g["d"][lang]}</span>'
             f'<span class="gcard-read">{read} →</span></span></a>')
@@ -682,16 +690,47 @@ def related_pages_for_guide(lang, slug):
 
 
 def guides_hub_grouped(lang):
-    """The Guides hub, grouped by category."""
-    out = ""
+    """The Guides hub: grouped by category by default, with a Newest/Oldest sort toggle that switches
+    to a flat, date-sorted view (client-side, no backend)."""
+    en = lang == "en"
+    # grouped-by-topic view (default)
+    grouped = ""
     for key, title in GUIDE_CATS:
         slugs = [g["slug"] for g in GUIDES if GUIDE_META.get(g["slug"], {}).get("cat") == key]
         if not slugs:
             continue
         cards = "".join(guide_card(lang, s) for s in slugs)
-        out += (f'<section class="section"><div class="wrap">'
-                f'<h2 class="gcat-h">{title[lang]}</h2><div class="gcard-grid">{cards}</div></div></section>')
-    return out
+        grouped += (f'<div class="wrap gcat"><h2 class="gcat-h">{title[lang]}</h2>'
+                    f'<div class="gcard-grid">{cards}</div></div>')
+    # flat all-guides view (JS sorts it by date)
+    flat_cards = "".join(guide_card(lang, g["slug"]) for g in GUIDES)
+    lbl = {"topic": "By topic" if en else "Por tema",
+           "new": "Newest" if en else "Más recientes",
+           "old": "Oldest" if en else "Más antiguas"}
+    toolbar = (f'<div class="wrap"><div class="gsort" role="group" aria-label="{"Sort guides" if en else "Ordenar guías"}">'
+               f'<span class="gsort-l">{"Sort:" if en else "Ordenar:"}</span>'
+               f'<button type="button" class="gsort-btn on" data-sort="topic">{lbl["topic"]}</button>'
+               f'<button type="button" class="gsort-btn" data-sort="new">{lbl["new"]}</button>'
+               f'<button type="button" class="gsort-btn" data-sort="old">{lbl["old"]}</button>'
+               f'</div></div>')
+    js = ("<script>(function(){"
+          "var root=document.getElementById('guidesHub');if(!root)return;"
+          "var byTopic=document.getElementById('gByTopic'),byDate=document.getElementById('gByDate'),"
+          "grid=byDate.querySelector('.gcard-grid'),cards=[].slice.call(grid.children),"
+          "btns=root.querySelectorAll('.gsort-btn');"
+          "function apply(mode){"
+          "for(var i=0;i<btns.length;i++){btns[i].classList.toggle('on',btns[i].getAttribute('data-sort')===mode);}"
+          "if(mode==='topic'){byTopic.hidden=false;byDate.hidden=true;return;}"
+          "byTopic.hidden=true;byDate.hidden=false;"
+          "cards.sort(function(a,b){var da=a.getAttribute('data-date')||'',db=b.getAttribute('data-date')||'';"
+          "return mode==='new'?db.localeCompare(da):da.localeCompare(db);});"
+          "for(var j=0;j<cards.length;j++){grid.appendChild(cards[j]);}}"
+          "for(var k=0;k<btns.length;k++){(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-sort'));});})(btns[k]);}"
+          "})();</script>")
+    return (f'<section class="section" id="guidesHub">{toolbar}'
+            f'<div id="gByTopic">{grouped}</div>'
+            f'<div id="gByDate" hidden><div class="wrap"><div class="gcard-grid">{flat_cards}</div></div></div>'
+            f'{js}</section>')
 
 
 def related_guides(lang, ctx, slug=None, heading=None, limit=None):
