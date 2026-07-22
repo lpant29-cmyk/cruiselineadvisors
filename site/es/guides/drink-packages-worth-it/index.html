@@ -555,7 +555,14 @@ section[id^="d-"]{scroll-margin-top:84px}
 .gd-body a{color:var(--sea3);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .gd-body a:hover{color:var(--sea2)}
 /* guide cards (hub categories + contextual "helpful guides") */
+.gcat{margin-bottom:2.4rem}
+.gcat:last-child{margin-bottom:0}
 .gcat-h{font-size:clamp(1.2rem,3vw,1.5rem);color:var(--navy);margin:0 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--line)}
+.gsort{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:1.6rem}
+.gsort-l{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:2px}
+.gsort-btn{background:#fff;border:1px solid var(--line);border-radius:99px;padding:.45em .95em;font:inherit;font-size:.86rem;font-weight:700;color:var(--navy);cursor:pointer;transition:.14s}
+.gsort-btn:hover{border-color:var(--sea2);color:var(--sea3)}
+.gsort-btn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .gcard-grid{display:grid;gap:16px;grid-template-columns:1fr}
 @media(min-width:560px){.gcard-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:920px){.gcard-grid{grid-template-columns:repeat(4,1fr)}}
