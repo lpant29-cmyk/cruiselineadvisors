@@ -1111,3 +1111,247 @@ register("hidden-cruise-costs", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("how-cruise-pricing-works", {
+    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-22", "updated": "2026-07-22",
+    "title": {"en": "How cruise pricing actually works (why fares vary)",
+              "es": "Cómo funciona realmente el precio de un crucero (por qué varía la tarifa)"},
+    "dek": {
+        "en": "Two people can book the exact same cabin on the exact same ship and pay very different "
+              "amounts, and it is not random. Cruise lines price the way airlines and hotels do. Once "
+              "you understand the handful of levers behind it, you can read the market and time your "
+              "trip well instead of guessing.",
+        "es": "Dos personas pueden reservar exactamente el mismo camarote en el mismo barco y pagar "
+              "montos muy distintos, y no es al azar. Las líneas fijan precios como las aerolíneas y los "
+              "hoteles. Cuando entiendes las pocas palancas detrás de ello, puedes leer el mercado y "
+              "programar bien tu viaje en lugar de adivinar.",
+    },
+    "takeaways": {
+        "en": [
+            "Cruise lines use dynamic, demand-based pricing (yield management): the fare for a sailing moves up and down as the ship fills.",
+            "The biggest levers are WHEN you sail (season and holidays) and WHEN you book, followed by cabin type, the itinerary and the ship.",
+            "As a sailing sells out, fares generally climb; a specific cabin category can also sell out entirely and disappear.",
+            "The headline fare is per person based on two sharing, and it excludes gratuities, drinks, Wi-Fi and extras, so the real cost is always higher than the sticker.",
+            "You cannot control the market, but you can control your flexibility, and flexibility is what unlocks a better fare.",
+        ],
+        "es": [
+            "Las líneas usan precios dinámicos según la demanda (gestión de ingresos): la tarifa de un crucero sube y baja a medida que el barco se llena.",
+            "Las mayores palancas son CUÁNDO navegas (temporada y vacaciones) y CUÁNDO reservas, seguidas del tipo de camarote, el itinerario y el barco.",
+            "A medida que un crucero se llena, las tarifas suelen subir; una categoría de camarote también puede agotarse por completo y desaparecer.",
+            "La tarifa principal es por persona con base en dos compartiendo, y excluye propinas, bebidas, Wi-Fi y extras, así que el costo real siempre es mayor que la etiqueta.",
+            "No puedes controlar el mercado, pero sí tu flexibilidad, y la flexibilidad es lo que abre una mejor tarifa.",
+        ],
+    },
+    "sections": [
+        {"id": "dynamic-pricing", "h2": {"en": "Cruise fares are dynamic, not fixed", "es": "Las tarifas de crucero son dinámicas, no fijas"},
+         "html": {
+            "en": "<p>A cruise line does not set one permanent fare for a sailing and leave it there. It uses "
+                  "<b>dynamic, demand-based pricing</b>, the same approach airlines and hotels use, where the fare for a "
+                  "given sailing is constantly adjusted based on how well it is selling. This is often called "
+                  "<b>yield management</b>: the line's goal is to fill every cabin at the best fare the market will bear "
+                  "as the sailing date approaches.</p>"
+                  + define("Yield management",
+                           "the practice of continuously adjusting prices to match demand and fill available capacity, "
+                           "used across travel. On a cruise it means the fare you see is a snapshot of that moment, not a "
+                           "fixed number.")
+                  + "<p>That is why the same cabin can cost one thing today and something different next week. Nothing is "
+                  "wrong, and nobody is being singled out. The fare simply reflects how full that specific sailing is at "
+                  "that moment.</p>",
+            "es": "<p>Una línea de crucero no fija una tarifa permanente para un crucero y la deja ahí. Usa <b>precios "
+                  "dinámicos según la demanda</b>, el mismo enfoque de aerolíneas y hoteles, donde la tarifa de un "
+                  "crucero se ajusta constantemente según qué tan bien se vende. Esto suele llamarse <b>gestión de "
+                  "ingresos</b>: el objetivo de la línea es llenar cada camarote a la mejor tarifa que el mercado "
+                  "acepte a medida que se acerca la fecha.</p>"
+                  + define("Gestión de ingresos (yield management)",
+                           "la práctica de ajustar continuamente los precios para igualar la demanda y llenar la "
+                           "capacidad, usada en todo el sector de viajes. En un crucero significa que la tarifa que ves "
+                           "es una foto de ese momento, no un número fijo.")
+                  + "<p>Por eso el mismo camarote puede costar una cosa hoy y otra la próxima semana. Nada está mal, y "
+                  "no señalan a nadie. La tarifa simplemente refleja qué tan lleno está ese crucero en ese momento.</p>",
+         }},
+        {"id": "levers", "h2": {"en": "The levers that set the fare", "es": "Las palancas que fijan la tarifa"},
+         "html": {
+            "en": "<p>Behind that moving number are a handful of factors. The first two matter most:</p>"
+                  + vcards([
+                      ("🗓️", "When you sail", "Season and school holidays drive demand hardest. Peak weeks (summer, spring break, the winter holidays) and a region's high season command the top fares; shoulder weeks are gentler."),
+                      ("⏳", "When you book", "As a sailing fills and the date nears, fares generally climb. Booking early usually secures a better fare and full cabin choice; occasionally an unsold sailing softens close to departure."),
+                      ("🛏️", "Cabin type & location", "Interior, oceanview, balcony and suite are priced in tiers, and prime locations within a category cost more. As a category sells out it can vanish entirely."),
+                      ("🗺️", "The itinerary & length", "Marquee regions, bucket-list routes and longer voyages price higher than short, everyday sailings. A sea-day-heavy repositioning cruise is usually gentler."),
+                      ("🚢", "The ship", "Brand-new ships and the biggest, most feature-packed vessels command a premium over older or smaller ones sailing the same route."),
+                      ("🏠", "Home port & demand", "Sailings from busy, easy-to-reach ports in high demand tend to price higher than those from ports fewer people can drive to."),
+                  ])
+                  + "<p>Notice that the two levers you have the most influence over, <b>when you sail</b> and <b>when you "
+                  "book</b>, are also the two that move the fare the most. That is the whole opportunity.</p>",
+            "es": "<p>Detrás de ese número en movimiento hay unas pocas variables. Las dos primeras importan más:</p>"
+                  + vcards([
+                      ("🗓️", "Cuándo navegas", "La temporada y las vacaciones escolares mueven más la demanda. Las semanas pico (verano, Semana Santa, fiestas de invierno) y la temporada alta de una región tienen las tarifas más altas; las semanas medias son más suaves."),
+                      ("⏳", "Cuándo reservas", "A medida que un crucero se llena y se acerca la fecha, las tarifas suelen subir. Reservar temprano suele asegurar una mejor tarifa y toda la elección de camarote; a veces un crucero sin vender se suaviza cerca de la salida."),
+                      ("🛏️", "Tipo y ubicación del camarote", "Interior, vista al mar, balcón y suite tienen precios por niveles, y las mejores ubicaciones dentro de una categoría cuestan más. Al agotarse una categoría puede desaparecer."),
+                      ("🗺️", "El itinerario y la duración", "Las regiones estrella, las rutas de lista de deseos y los viajes largos cuestan más que los cruceros cortos de siempre. Un crucero de reposicionamiento con muchos días de mar suele ser más suave."),
+                      ("🚢", "El barco", "Los barcos nuevos y los más grandes y llenos de atracciones cuestan una prima sobre los más viejos o pequeños en la misma ruta."),
+                      ("🏠", "Puerto base y demanda", "Los cruceros desde puertos concurridos y de fácil acceso, con alta demanda, tienden a costar más que los de puertos a los que llega menos gente."),
+                  ])
+                  + "<p>Fíjate que las dos palancas sobre las que más influyes, <b>cuándo navegas</b> y <b>cuándo "
+                  "reservas</b>, son también las dos que más mueven la tarifa. Ahí está toda la oportunidad.</p>",
+         }},
+        {"id": "supply-demand", "h2": {"en": "How lines fill a ship (and why it matters to you)", "es": "Cómo llenan un barco (y por qué te importa)"},
+         "html": {
+            "en": "<p>Every sailing has a fixed number of cabins and a fixed departure date, and once the ship sails, "
+                  "any empty cabin is revenue gone forever. That deadline is what drives the whole pricing dance. Early "
+                  "on, a line seeds demand with promotions to build momentum. As the sailing fills, fares tend to firm "
+                  "up and rise. Close to departure the picture splits: a nearly-full, in-demand sailing stays expensive, "
+                  "while a soft one may ease to move the last cabins.</p>"
+                  + watch("This is why 'wait for a last-minute deal' is a gamble, not a strategy. On popular sailings, "
+                          "peak weeks, Alaska, holidays, the fare only goes up and the cabins you want sell out. "
+                          "Last-minute softening mostly happens on sailings that were not filling anyway.")
+                  + "<p>There is no public countdown telling you which way a given sailing will move. That read, whether "
+                  "a specific ship and date is filling fast or has room, is exactly the kind of live market knowledge a "
+                  "specialist has and a casual search does not.</p>",
+            "es": "<p>Cada crucero tiene un número fijo de camarotes y una fecha fija, y una vez que el barco zarpa, "
+                  "todo camarote vacío es ingreso perdido para siempre. Esa fecha límite mueve todo el baile de "
+                  "precios. Al principio, la línea siembra demanda con promociones para tomar impulso. A medida que se "
+                  "llena, las tarifas tienden a firmarse y subir. Cerca de la salida el panorama se divide: un crucero "
+                  "casi lleno y demandado sigue caro, mientras uno flojo puede ceder para mover los últimos "
+                  "camarotes.</p>"
+                  + watch("Por eso 'esperar una oferta de último minuto' es una apuesta, no una estrategia. En los "
+                          "cruceros populares, semanas pico, Alaska, fiestas, la tarifa solo sube y los camarotes que "
+                          "quieres se agotan. La suavización de último minuto ocurre sobre todo en cruceros que no se "
+                          "estaban llenando.")
+                  + "<p>No hay un contador público que te diga hacia dónde irá un crucero. Esa lectura, si un barco y "
+                  "fecha específicos se llenan rápido o tienen lugar, es justo el conocimiento de mercado en vivo que "
+                  "tiene un especialista y una búsqueda casual no.</p>",
+         }},
+        {"id": "sticker-vs-real", "h2": {"en": "The advertised fare is not the final cost", "es": "La tarifa anunciada no es el costo final"},
+         "html": {
+            "en": "<p>One more thing that makes cruise pricing confusing: the number you first see is rarely the number "
+                  "you actually pay. A headline cruise fare is almost always <b>per person, based on two people sharing "
+                  "a cabin</b>, and it does not include the extras that apply to nearly everyone:</p>"
+                  "<ul>"
+                  "<li><b>Taxes, fees and port expenses</b>, usually added on top of the base fare.</li>"
+                  "<li><b>Daily gratuities</b>, added automatically to your onboard account.</li>"
+                  "<li><b>Drinks, Wi-Fi, specialty dining and shore excursions</b>, all optional add-ons.</li>"
+                  "<li><b>A solo traveller supplement</b>, if you are not sailing two to a cabin.</li>"
+                  "</ul>"
+                  "<p>So comparing two headline fares is not really comparing the two trips. To understand the true, "
+                  "all-in cost, read " + link("/en/guides/whats-included/", "what is included in a cruise fare") +
+                  " and " + link("/en/guides/hidden-cruise-costs/", "hidden cruise costs first-timers miss") + ".</p>",
+            "es": "<p>Otra cosa que hace confuso el precio de un crucero: el número que ves primero rara vez es el que "
+                  "pagas. Una tarifa principal casi siempre es <b>por persona, con base en dos personas compartiendo "
+                  "camarote</b>, y no incluye los extras que aplican a casi todos:</p>"
+                  "<ul>"
+                  "<li><b>Impuestos, tasas y gastos portuarios</b>, normalmente añadidos sobre la tarifa base.</li>"
+                  "<li><b>Propinas diarias</b>, añadidas automáticamente a tu cuenta a bordo.</li>"
+                  "<li><b>Bebidas, Wi-Fi, restaurantes de especialidad y excursiones</b>, todos extras opcionales.</li>"
+                  "<li><b>Un suplemento para viajero solo</b>, si no navegas de a dos por camarote.</li>"
+                  "</ul>"
+                  "<p>Así que comparar dos tarifas principales no es comparar los dos viajes. Para entender el costo "
+                  "real y completo, lee " + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero") +
+                  " y " + link("/es/guides/hidden-cruise-costs/", "costos ocultos que los primerizos pasan por alto") + ".</p>",
+         }},
+        {"id": "wave-season", "h2": {"en": "Wave season and booking windows", "es": "Wave season y ventanas de reserva"},
+         "html": {
+            "en": define("Wave season",
+                         "the cruise industry's biggest booking-promotion period, running roughly January through March, "
+                         "when lines compete hardest for the year's bookings with added perks and incentives.")
+                  + "<p>Because the whole industry promotes heavily in wave season, it is a genuinely strong time to "
+                  "book, especially the perks (things like added onboard credit, included packages or reduced deposits) "
+                  "rather than the headline fare alone. Outside wave season, the best window is generally <b>early</b>: "
+                  "booking well ahead locks a good cabin at a fair market fare and gives you time to pay it off before "
+                  "the final-payment date.</p>"
+                  "<p>Two useful habits: keep an eye on the sailing after you book (many lines will honour a better "
+                  "fare or perk if one appears before final payment), and be ready to move, because fares reward "
+                  "flexibility far more than loyalty to a single date.</p>",
+            "es": define("Wave season",
+                         "el mayor periodo de promociones de reserva de la industria, aproximadamente de enero a marzo, "
+                         "cuando las líneas compiten más por las reservas del año con beneficios e incentivos añadidos.")
+                  + "<p>Como toda la industria promociona fuerte en wave season, es un momento genuinamente bueno para "
+                  "reservar, sobre todo por los beneficios (crédito a bordo, paquetes incluidos o depósitos reducidos) "
+                  "más que por la tarifa principal sola. Fuera de wave season, la mejor ventana suele ser "
+                  "<b>temprano</b>: reservar con anticipación fija un buen camarote a una tarifa de mercado justa y te "
+                  "da tiempo de pagarlo antes de la fecha de pago final.</p>"
+                  "<p>Dos hábitos útiles: vigila el crucero después de reservar (muchas líneas honran una mejor tarifa "
+                  "o beneficio si aparece antes del pago final), y prepárate para moverte, porque las tarifas premian "
+                  "la flexibilidad mucho más que la lealtad a una sola fecha.</p>",
+         }},
+        {"id": "use-it", "h2": {"en": "How to use this to your advantage", "es": "Cómo usar esto a tu favor"},
+         "html": {
+            "en": "<p>You cannot control the market, but you can control the inputs that move your fare:</p>"
+                  "<ul>"
+                  "<li><b>Be flexible on the week.</b> Shifting your dates by a week or two, especially out of school "
+                  "holidays, is the single biggest lever you hold.</li>"
+                  "<li><b>Be flexible on the cabin.</b> An interior or a guarantee cabin stretches the budget furthest; "
+                  "you are on the same ship either way.</li>"
+                  "<li><b>Book early for popular sailings.</b> For Alaska, holidays and new ships, waiting rarely helps "
+                  "and often costs you the cabin you wanted.</li>"
+                  "<li><b>Compare the all-in cost, not the sticker.</b> Add gratuities, packages and getting to the "
+                  "port before you decide one sailing is better value than another.</li>"
+                  "</ul>"
+                  "<p>For the full playbook on stacking these together, read "
+                  + link("/en/guides/how-to-find-affordable-cruise/", "how to find an affordable cruise") + ".</p>",
+            "es": "<p>No puedes controlar el mercado, pero sí las variables que mueven tu tarifa:</p>"
+                  "<ul>"
+                  "<li><b>Sé flexible con la semana.</b> Mover tus fechas una o dos semanas, sobre todo fuera de las "
+                  "vacaciones escolares, es la mayor palanca que tienes.</li>"
+                  "<li><b>Sé flexible con el camarote.</b> Un interior o un camarote garantizado rinde más el "
+                  "presupuesto; estás en el mismo barco de cualquier forma.</li>"
+                  "<li><b>Reserva temprano los cruceros populares.</b> Para Alaska, fiestas y barcos nuevos, esperar "
+                  "rara vez ayuda y a menudo te cuesta el camarote que querías.</li>"
+                  "<li><b>Compara el costo completo, no la etiqueta.</b> Suma propinas, paquetes y llegar al puerto "
+                  "antes de decidir que un crucero es mejor valor que otro.</li>"
+                  "</ul>"
+                  "<p>Para el manual completo de combinar todo esto, lee "
+                  + link("/es/guides/how-to-find-affordable-cruise/", "cómo encontrar un crucero accesible") + ".</p>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Cruise fares move because lines price to fill each sailing to the day it departs. The market is "
+                  "driven mostly by when you sail and when you book, then by your cabin, itinerary and ship, and the "
+                  "headline number is never the full story. Understand that, stay flexible, and you are reading the "
+                  "market instead of guessing at it.</p>"
+                  "<p>When you want the real, current number for a specific ship and date, and a read on whether it is "
+                  "filling fast or has room, that is exactly what a specialist gives you in one call, free, with no "
+                  "obligation, and never a payment to us.</p>",
+            "es": "<p>Las tarifas se mueven porque las líneas fijan precios para llenar cada crucero hasta el día que "
+                  "zarpa. El mercado lo mueven sobre todo cuándo navegas y cuándo reservas, luego tu camarote, "
+                  "itinerario y barco, y el número principal nunca es toda la historia. Entiende eso, mantente "
+                  "flexible, y estarás leyendo el mercado en vez de adivinar.</p>"
+                  "<p>Cuando quieras el número real y actual de un barco y fecha específicos, y una lectura de si se "
+                  "llena rápido o tiene lugar, eso es justo lo que un especialista te da en una llamada, gratis, sin "
+                  "compromiso, y nunca un pago para nosotros.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Why do cruise prices change so much?", "Cruise lines use dynamic, demand-based pricing (yield management), the same as airlines and hotels. The fare for a sailing is adjusted continuously based on how well it is selling, so the same cabin can cost different amounts from one day to the next. It is not random, and no one is being singled out."),
+            ("Is it cheaper to book a cruise early or last minute?", "For most sailings, booking early gives you a better fare and full cabin choice, because fares generally climb as the ship fills. Last-minute softening mainly happens on sailings that were not filling anyway; on popular weeks, Alaska and holidays, waiting usually costs you more and the cabin you wanted."),
+            ("What is wave season?", "Wave season is the cruise industry's biggest booking-promotion period, roughly January through March, when lines compete hardest for the year's bookings with added perks like onboard credit, included packages or reduced deposits. It is a strong time to book, especially for the perks."),
+            ("Why is the same cabin more expensive on one sailing than another?", "Because demand differs. Season, school holidays, the itinerary, the ship and how full that specific sailing already is all feed into the fare. A peak-week sailing on a new ship prices higher than a shoulder-week sailing on an older one, even for an identical cabin."),
+            ("Do cruise prices drop closer to the sailing date?", "Sometimes, but only on sailings that are not filling well. In-demand sailings stay firm or rise as they sell out. Treating a last-minute drop as a plan is a gamble, and you risk the cabins you want being gone."),
+            ("Why isn't the advertised cruise fare the final price?", "A headline fare is per person based on two sharing a cabin and excludes taxes and port fees, daily gratuities, and optional extras like drinks, Wi-Fi and excursions. The true all-in cost is always higher, which is why comparing sticker numbers can mislead you."),
+        ],
+        "es": [
+            ("¿Por qué cambian tanto los precios de crucero?", "Las líneas usan precios dinámicos según la demanda (gestión de ingresos), igual que aerolíneas y hoteles. La tarifa de un crucero se ajusta continuamente según qué tan bien se vende, así que el mismo camarote puede costar montos distintos de un día a otro. No es al azar, y no señalan a nadie."),
+            ("¿Conviene reservar temprano o a último minuto?", "Para la mayoría de los cruceros, reservar temprano da una mejor tarifa y toda la elección de camarote, porque las tarifas suelen subir a medida que el barco se llena. La suavización de último minuto ocurre sobre todo en cruceros que no se estaban llenando; en semanas populares, Alaska y fiestas, esperar suele costar más."),
+            ("¿Qué es wave season?", "Wave season es el mayor periodo de promociones de la industria, aproximadamente de enero a marzo, cuando las líneas compiten más por las reservas del año con beneficios como crédito a bordo, paquetes incluidos o depósitos reducidos. Es un buen momento para reservar, sobre todo por los beneficios."),
+            ("¿Por qué el mismo camarote cuesta más en un crucero que en otro?", "Porque la demanda difiere. La temporada, las vacaciones escolares, el itinerario, el barco y qué tan lleno está ya ese crucero alimentan la tarifa. Un crucero de semana pico en un barco nuevo cuesta más que uno de temporada media en un barco viejo, incluso para un camarote idéntico."),
+            ("¿Bajan los precios cerca de la fecha de salida?", "A veces, pero solo en cruceros que no se llenan bien. Los cruceros demandados se mantienen o suben a medida que se agotan. Tratar una bajada de último minuto como plan es una apuesta, y arriesgas que los camarotes que quieres ya no estén."),
+            ("¿Por qué la tarifa anunciada no es el precio final?", "Una tarifa principal es por persona con base en dos compartiendo camarote y excluye impuestos y tasas portuarias, propinas diarias y extras opcionales como bebidas, Wi-Fi y excursiones. El costo real completo siempre es mayor, por eso comparar etiquetas puede engañarte."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("💰", "How to find an affordable cruise", "/en/guides/how-to-find-affordable-cruise/", "Turn this pricing knowledge into a better fare."),
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "Why the sticker is never the full cost."),
+            ("🔍", "Hidden cruise costs", "/en/guides/hidden-cruise-costs/", "The extras that sit on top of every fare."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Get the real, current number for your dates in one call."),
+        ],
+        "es": [
+            ("💰", "Cómo encontrar un crucero accesible", "/es/guides/how-to-find-affordable-cruise/", "Convierte este conocimiento en una mejor tarifa."),
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "Por qué la etiqueta nunca es el costo completo."),
+            ("🔍", "Costos ocultos de un crucero", "/es/guides/hidden-cruise-costs/", "Los extras que se suman a toda tarifa."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Obtén el número real y actual de tus fechas en una llamada."),
+        ],
+    },
+})

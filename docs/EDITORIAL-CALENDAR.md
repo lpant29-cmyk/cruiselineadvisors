@@ -40,7 +40,7 @@ Ordered to clear high-intent gaps first, then start the destination deep-guides 
 destination pages. Swap any day for a timely/seasonal post whenever one is warranted.
 
 **Week 1 — finish the money & decision how-tos**
-1. How cruise pricing actually works (why fares vary)
+1. ~~How cruise pricing actually works~~ ✅ published 2026-07-22
 2. Cruise travel insurance: is it worth it?
 3. Onboard credit, explained
 4. Best cabin location (deck, midship, what to avoid)
