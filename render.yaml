@@ -1,0 +1,54 @@
+# Render Blueprint — cruiselineadvisors.com (static site)
+# =============================================================================
+# PURPOSE
+#   Add a real server-side HTTP 301 redirect from the EXACT root path "/" to
+#   "/en/". The Render dashboard UI accepts a "/" redirect rule but does not
+#   honor it for the domain root, so we express the redirect here in the
+#   Blueprint's `routes` block instead (the Blueprint spec documents `source: /`
+#   as valid).
+#
+# INERT UNTIL CONNECTED
+#   This file does NOTHING until the existing Render service is connected as a
+#   Blueprint in the Render dashboard. Committing/pushing it alone only redeploys
+#   the identical committed site/ directory — no behavior change.
+#
+# MATCHES THE LIVE SERVICE
+#   Every field is set to match the current service so that enabling Blueprint
+#   sync changes nothing except adding the redirect. Verify each "CONFIRM" value
+#   against your Render dashboard BEFORE enabling sync — Blueprint sync will
+#   overwrite dashboard-managed settings with what is written here.
+# =============================================================================
+
+services:
+  - type: web
+    runtime: static
+
+    # CONFIRM: must EXACTLY match the existing service's name in the Render
+    # dashboard. A mismatch makes Render create a NEW duplicate service instead
+    # of adopting your live one.
+    name: cruiselineadvisors
+
+    # CONFIRM: the branch the live service auto-deploys from.
+    branch: main
+
+    # Serves the committed site/ directory as-is. Confirmed: site/ is tracked in
+    # git (the .gitignore notes "site/ is the committed, served copy"), so there
+    # is no generator step at deploy time.
+    staticPublishPath: ./site
+
+    # CONFIRM: current Build Command. Kept as a no-op ON PURPOSE — the repo's old
+    # generators are stale and must NEVER run on deploy or they could clobber the
+    # curated site/ files. Do not replace this with any python build_*.py call.
+    buildCommand: "echo 'No build step: site/ is pre-committed and served as-is.'"
+
+    # CONFIRM: keep auto-deploy on pushes to the branch (matches current behavior).
+    autoDeployTrigger: commit
+
+    # The one change this Blueprint introduces: a server-side 301 on the exact
+    # root path only. Deeper paths (/en/, /es/, /guides/...) do not match and are
+    # untouched.
+    routes:
+      - type: redirect
+        source: /
+        destination: /en/
+        statusCode: 301
