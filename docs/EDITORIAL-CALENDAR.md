@@ -41,7 +41,7 @@ destination pages. Swap any day for a timely/seasonal post whenever one is warra
 
 **Week 1 — finish the money & decision how-tos**
 1. ~~How cruise pricing actually works~~ ✅ published 2026-07-22
-2. Cruise travel insurance: is it worth it?
+2. ~~Cruise travel insurance: is it worth it?~~ ✅ published 2026-07-23
 3. Onboard credit, explained
 4. Best cabin location (deck, midship, what to avoid)
 5. Contemporary vs premium vs luxury cruise lines

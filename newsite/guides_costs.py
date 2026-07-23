@@ -1355,3 +1355,292 @@ register("how-cruise-pricing-works", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("cruise-travel-insurance", {
+    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-23", "updated": "2026-07-23",
+    "title": {"en": "Cruise travel insurance: is it worth it?",
+              "es": "Seguro de viaje para crucero: ¿vale la pena?"},
+    "dek": {
+        "en": "A cruise is usually paid for months ahead, follows a strict cancellation deadline, and can "
+              "carry you far from home. Travel insurance is simply about protecting the money you put down "
+              "and yourself if something goes wrong. Here is what it typically covers, when it matters "
+              "most, and how to decide, without the hype.",
+        "es": "Un crucero suele pagarse con meses de anticipación, sigue una fecha límite estricta de "
+              "cancelación y puede llevarte lejos de casa. El seguro de viaje trata simplemente de proteger "
+              "el dinero que adelantaste y a ti mismo si algo sale mal. Esto es lo que suele cubrir, cuándo "
+              "importa más y cómo decidir, sin exageraciones.",
+    },
+    "takeaways": {
+        "en": [
+            "Travel insurance protects two different things: the money you prepaid for the trip, and you (medical care and evacuation while you are travelling).",
+            "Cruises are booked far ahead and carry a cancellation-penalty schedule, so there is a long stretch where a cancellation could cost you real money. That is the core reason to consider cover.",
+            "Your everyday health plan often does not follow you abroad or at sea, and a medical evacuation from a ship is a serious, complex event.",
+            "Policies differ enormously in what they include and exclude, so the terms matter far more than the label on the plan.",
+            "Whether it is worth it depends on your trip cost, your health, where and when you sail, and your own tolerance for risk. It is a personal decision, not a single yes or no.",
+        ],
+        "es": [
+            "El seguro de viaje protege dos cosas distintas: el dinero que pagaste por adelantado y a ti mismo (atención médica y evacuación mientras viajas).",
+            "Los cruceros se reservan con mucha anticipación y tienen un calendario de penalización por cancelación, así que hay un tramo largo en el que cancelar podría costarte dinero real. Esa es la razón central para considerar cobertura.",
+            "Tu seguro de salud habitual a menudo no te acompaña en el extranjero ni en el mar, y una evacuación médica desde un barco es un evento serio y complejo.",
+            "Las pólizas varían enormemente en lo que incluyen y excluyen, así que las condiciones importan mucho más que la etiqueta del plan.",
+            "Que valga la pena depende del costo de tu viaje, tu salud, dónde y cuándo navegas, y tu propia tolerancia al riesgo. Es una decisión personal, no un sí o no único.",
+        ],
+    },
+    "sections": [
+        {"id": "what-it-covers", "h2": {"en": "What cruise travel insurance actually covers", "es": "Qué cubre realmente el seguro de viaje para crucero"},
+         "html": {
+            "en": "<p>A travel-insurance plan bundles several protections. These are the ones that matter most on a cruise:</p>"
+                  + vcards([
+                      ("🛑", "Trip cancellation", "Reimburses prepaid, non-refundable costs if you have to cancel before you sail for a covered reason, such as illness or a family emergency."),
+                      ("✂️", "Trip interruption", "Covers you if a covered event cuts your trip short after it has begun, including the unused portion and the cost of getting home."),
+                      ("🏥", "Emergency medical", "Pays for treatment if you are hurt or fall ill during the trip, onboard or ashore, where your home health plan may not reach."),
+                      ("🚁", "Medical evacuation", "Covers transport to proper medical care, which from a ship at sea or a remote port can be complex and costly."),
+                      ("🧳", "Baggage", "Helps if your luggage is lost, stolen or delayed, including essentials while you wait for delayed bags."),
+                      ("⏱️", "Travel delay & missed connection", "Steps in when a delay makes you miss the ship or strands you overnight, covering the knock-on costs."),
+                  ])
+                  + define("Trip interruption",
+                           "cover that applies after your trip has already started, for a covered reason, reimbursing the "
+                           "unused part of the cruise and often the extra cost of returning home early."),
+            "es": "<p>Un plan de seguro de viaje combina varias protecciones. Estas son las que más importan en un crucero:</p>"
+                  + vcards([
+                      ("🛑", "Cancelación del viaje", "Reembolsa costos pagados y no reembolsables si tienes que cancelar antes de zarpar por un motivo cubierto, como enfermedad o una emergencia familiar."),
+                      ("✂️", "Interrupción del viaje", "Te cubre si un evento cubierto acorta tu viaje una vez comenzado, incluida la parte no usada y el costo de volver a casa."),
+                      ("🏥", "Emergencia médica", "Paga el tratamiento si te lesionas o enfermas durante el viaje, a bordo o en tierra, donde tu plan de salud quizá no llegue."),
+                      ("🚁", "Evacuación médica", "Cubre el traslado a la atención médica adecuada, que desde un barco en el mar o un puerto remoto puede ser complejo y costoso."),
+                      ("🧳", "Equipaje", "Ayuda si tu equipaje se pierde, lo roban o se retrasa, incluidos artículos esenciales mientras esperas maletas demoradas."),
+                      ("⏱️", "Retrasos y conexiones perdidas", "Interviene cuando un retraso te hace perder el barco o te deja varado una noche, cubriendo los costos derivados."),
+                  ])
+                  + define("Interrupción del viaje",
+                           "cobertura que aplica después de que tu viaje ya comenzó, por un motivo cubierto, reembolsando "
+                           "la parte no usada del crucero y a menudo el costo extra de regresar antes."),
+         }},
+        {"id": "why-cruises", "h2": {"en": "Why a cruise is a special case", "es": "Por qué un crucero es un caso especial"},
+         "html": {
+            "en": "<p>When it comes to risk, a cruise is not a normal trip. Three things make it different:</p>"
+                  "<ul>"
+                  "<li><b>You pay well ahead, under a deadline.</b> Most of the cost is due before you sail, and the "
+                  + link("/en/guides/cruise-deposit-payment-cancellation/", "deposit, payment and cancellation schedule")
+                  + " means that as departure nears, the amount you would forfeit by cancelling steps up toward the whole fare.</li>"
+                  "<li><b>You travel far from home.</b> A cruise can take you to another country or into open water, well "
+                  "away from your usual doctors, hospitals and health network.</li>"
+                  "<li><b>The ship does not wait.</b> Miss embarkation or a late flight, and you are covering your own way "
+                  "to catch up, sometimes in the next port.</li>"
+                  "</ul>"
+                  + watch("The cancellation-penalty window is the heart of the matter. Once you are inside it, a booking "
+                          "you cannot use may return little or nothing. Understanding "
+                          + link("/en/guides/refundable-vs-non-refundable/", "refundable versus non-refundable bookings")
+                          + " tells you exactly how much is actually at risk on your sailing.")
+                  + "<p>None of this is meant to alarm you. It simply explains why cover that would be optional on a short, "
+                  "easily refunded trip close to home can be a sensible move on a cruise booked half a year out.</p>",
+            "es": "<p>En cuanto al riesgo, un crucero no es un viaje normal. Tres cosas lo hacen diferente:</p>"
+                  "<ul>"
+                  "<li><b>Pagas con mucha anticipación, bajo una fecha límite.</b> La mayor parte del costo vence antes de "
+                  "zarpar, y el "
+                  + link("/es/guides/cruise-deposit-payment-cancellation/", "calendario de depósito, pago y cancelación")
+                  + " hace que, al acercarse la salida, el monto que perderías al cancelar suba hacia la tarifa completa.</li>"
+                  "<li><b>Viajas lejos de casa.</b> Un crucero puede llevarte a otro país o a mar abierto, lejos de tus "
+                  "médicos, hospitales y red de salud habituales.</li>"
+                  "<li><b>El barco no espera.</b> Si pierdes el embarque o tu vuelo se retrasa, tú cubres tu manera de "
+                  "alcanzarlo, a veces en el siguiente puerto.</li>"
+                  "</ul>"
+                  + watch("La ventana de penalización por cancelación es el meollo del asunto. Una vez dentro de ella, una "
+                          "reserva que no puedas usar puede devolver poco o nada. Entender "
+                          + link("/es/guides/refundable-vs-non-refundable/", "reservas reembolsables frente a no reembolsables")
+                          + " te dice exactamente cuánto está realmente en riesgo en tu crucero.")
+                  + "<p>Nada de esto busca asustarte. Solo explica por qué una cobertura que sería opcional en una escapada "
+                  "corta y fácil de reembolsar cerca de casa puede ser una decisión sensata en un crucero reservado con "
+                  "medio año de anticipación.</p>",
+         }},
+        {"id": "medical-at-sea", "h2": {"en": "The medical and evacuation piece people underestimate", "es": "La parte médica y de evacuación que la gente subestima"},
+         "html": {
+            "en": "<p>Trip cancellation gets the attention, but the medical side is where travel insurance can matter "
+                  "most. Two facts catch people out:</p>"
+                  "<p>First, <b>your regular health insurance often travels poorly.</b> Many domestic plans provide "
+                  "limited or no coverage once you are abroad or at sea, and a ship's medical centre generally treats you "
+                  "as an out-of-pocket expense, settled before you leave. Whether your own plan follows you is worth "
+                  "checking before you sail, not after.</p>"
+                  + define("Medical evacuation",
+                           "emergency transport from where you are to a place that can properly treat you. From a ship at "
+                           "sea that can mean a transfer at the next port or, in a serious case, an airlift, followed by "
+                           "care far from home.")
+                  + "<p>Second, <b>getting to care is its own problem at sea.</b> A ship may be hours from land, and an "
+                  "evacuation involves coordination, transport and sometimes a flight home under medical supervision. "
+                  "This is exactly the kind of event a strong medical-and-evacuation benefit is designed for, and the "
+                  "reason many experienced cruisers buy cover for the medical side alone, even when they are relaxed "
+                  "about cancellation.</p>",
+            "es": "<p>La cancelación se lleva la atención, pero el lado médico es donde el seguro de viaje puede importar "
+                  "más. Dos hechos sorprenden a la gente:</p>"
+                  "<p>Primero, <b>tu seguro de salud habitual a menudo viaja mal.</b> Muchos planes nacionales ofrecen "
+                  "cobertura limitada o nula una vez que estás en el extranjero o en el mar, y el centro médico del barco "
+                  "suele tratarte como un gasto de tu bolsillo, saldado antes de bajar. Vale la pena confirmar si tu plan "
+                  "te acompaña antes de zarpar, no después.</p>"
+                  + define("Evacuación médica",
+                           "traslado de emergencia desde donde estás hasta un lugar que pueda tratarte adecuadamente. "
+                           "Desde un barco en el mar puede significar un traslado en el siguiente puerto o, en un caso "
+                           "serio, un traslado aéreo, seguido de atención lejos de casa.")
+                  + "<p>Segundo, <b>llegar a la atención es un problema en sí en el mar.</b> Un barco puede estar a horas "
+                  "de tierra, y una evacuación implica coordinación, transporte y a veces un vuelo a casa con supervisión "
+                  "médica. Justo para ese tipo de evento se diseña un buen beneficio médico y de evacuación, y por eso "
+                  "muchos cruceristas con experiencia contratan cobertura solo por el lado médico, aunque estén "
+                  "tranquilos con la cancelación.</p>",
+         }},
+        {"id": "types", "h2": {"en": "Not all policies are equal", "es": "No todas las pólizas son iguales"},
+         "html": {
+            "en": "<p>Two plans with the same name can be very different underneath. The details that decide whether a "
+                  "policy is right for you include:</p>"
+                  + vcards([
+                      ("🩺", "Pre-existing conditions", "Many plans exclude flare-ups of existing conditions unless you add a waiver, which usually has to be bought within a limited window after your first deposit."),
+                      ("🤷", "Cancel for any reason", "An optional upgrade that loosens the strict list of covered reasons, letting you recover part of your non-refundable cost if you cancel for a reason not otherwise included."),
+                      ("📏", "Coverage limits", "Each benefit has a cap. A high medical limit and a solid evacuation limit matter more at sea than a long list of small extras."),
+                      ("🚫", "Exclusions", "The fine print rules things out: certain activities, some adventure excursions, and events you could reasonably have expected. Read this part first, not last."),
+                      ("🥇", "Primary vs secondary", "Primary medical cover pays first; secondary pays only after your other insurance does. Primary is simpler if your home plan will not travel."),
+                      ("🗓️", "When it starts", "Some benefits only apply if you buy soon after booking. Waiting can quietly close the door on the waivers you most want."),
+                  ])
+                  + define("Cancel for any reason (CFAR)",
+                           "an optional, higher-tier add-on that reimburses a portion of your prepaid, non-refundable "
+                           "costs when you cancel for a reason a standard policy would not cover. It costs more and comes "
+                           "with conditions, such as buying early and cancelling by a set point before departure.")
+                  + watch("The label on a plan tells you almost nothing. Two policies called the same thing can differ on "
+                          "medical limits, evacuation, pre-existing waivers and exclusions. Always compare the actual "
+                          "terms, and make sure the medical and evacuation benefits are real, not token."),
+            "es": "<p>Dos planes con el mismo nombre pueden ser muy distintos por dentro. Los detalles que definen si una "
+                  "póliza te conviene incluyen:</p>"
+                  + vcards([
+                      ("🩺", "Condiciones preexistentes", "Muchos planes excluyen recaídas de condiciones existentes salvo que agregues una exención, que suele contratarse dentro de una ventana limitada tras tu primer depósito."),
+                      ("🤷", "Cancelar por cualquier motivo", "Una mejora opcional que flexibiliza la lista estricta de motivos cubiertos y te permite recuperar parte de tu costo no reembolsable si cancelas por una razón no incluida."),
+                      ("📏", "Límites de cobertura", "Cada beneficio tiene un tope. Un límite médico alto y un buen límite de evacuación importan más en el mar que una larga lista de extras pequeños."),
+                      ("🚫", "Exclusiones", "La letra chica descarta cosas: ciertas actividades, algunas excursiones de aventura y hechos que podías prever. Lee esta parte primero, no al final."),
+                      ("🥇", "Primaria vs secundaria", "La cobertura médica primaria paga primero; la secundaria paga solo después de tu otro seguro. La primaria es más simple si tu plan de casa no viaja."),
+                      ("🗓️", "Cuándo empieza", "Algunos beneficios solo aplican si contratas poco después de reservar. Esperar puede cerrar en silencio la puerta a las exenciones que más quieres."),
+                  ])
+                  + define("Cancelar por cualquier motivo (CFAR)",
+                           "un complemento opcional de nivel superior que reembolsa una parte de tus costos pagados y no "
+                           "reembolsables cuando cancelas por un motivo que una póliza estándar no cubriría. Cuesta más e "
+                           "incluye condiciones, como contratar temprano y cancelar antes de un punto fijado previo a la salida.")
+                  + watch("La etiqueta de un plan casi no dice nada. Dos pólizas con el mismo nombre pueden diferir en "
+                          "límites médicos, evacuación, exenciones por preexistencias y exclusiones. Compara siempre las "
+                          "condiciones reales, y asegúrate de que los beneficios médico y de evacuación sean reales, no simbólicos."),
+         }},
+        {"id": "line-vs-independent", "h2": {"en": "The cruise line's plan vs an independent policy", "es": "El plan de la línea de crucero vs una póliza independiente"},
+         "html": {
+            "en": "<p>You will usually be offered the cruise line's own protection plan when you book, and you can also "
+                  "buy an independent travel-insurance policy from a specialist provider. Both can be valid; they simply "
+                  "tend to work differently.</p>"
+                  + vcards([
+                      ("🚢", "The line's own plan", "Convenient and easy to add at booking. It often reimburses cancellation as cruise credit rather than cash, and its medical and evacuation cover can be lighter. Read what it actually pays and how."),
+                      ("🌐", "An independent policy", "Bought separately and comparable across providers. It more often pays cash, can carry stronger medical and evacuation limits, and lets you match the terms to your trip and health."),
+                  ])
+                  + "<p>There is no single winner. The convenient option is not automatically the weaker one, and the "
+                  "independent option is not automatically better. What matters is which set of terms fits your sailing, "
+                  "your health and how much you have at risk.</p>",
+            "es": "<p>Al reservar, normalmente te ofrecerán el plan de protección de la propia línea de crucero, y también "
+                  "puedes contratar una póliza de seguro de viaje independiente de un proveedor especializado. Ambos "
+                  "pueden ser válidos; simplemente suelen funcionar distinto.</p>"
+                  + vcards([
+                      ("🚢", "El plan de la propia línea", "Cómodo y fácil de agregar al reservar. A menudo reembolsa la cancelación como crédito de crucero en vez de efectivo, y su cobertura médica y de evacuación puede ser más ligera. Lee qué paga en realidad y cómo."),
+                      ("🌐", "Una póliza independiente", "Se contrata aparte y se puede comparar entre proveedores. Con más frecuencia paga en efectivo, puede tener límites médicos y de evacuación más fuertes, y te deja ajustar las condiciones a tu viaje y tu salud."),
+                  ])
+                  + "<p>No hay un ganador único. La opción cómoda no es automáticamente la más débil, y la independiente no "
+                  "es automáticamente mejor. Lo que importa es qué conjunto de condiciones encaja con tu crucero, tu salud "
+                  "y cuánto tienes en riesgo.</p>",
+         }},
+        {"id": "when-worth-it", "h2": {"en": "When it is most worth it", "es": "Cuándo vale más la pena"},
+         "html": {
+            "en": "<p>Insurance is a personal call, but the case gets stronger as these stack up:</p>"
+                  "<ul>"
+                  "<li><b>A large, prepaid trip</b> booked well before you sail, with a long penalty window.</li>"
+                  "<li><b>Travel far from home or abroad,</b> where your health plan may not follow you.</li>"
+                  "<li><b>Health considerations,</b> your own or a close family member's, that could force a cancellation "
+                  "or need care.</li>"
+                  "<li><b>Storm-prone seasons,</b> such as sailing during hurricane season, when weather disruption is "
+                  "more likely. See " + link("/en/guides/when-to-cruise/", "when to cruise") + " for how seasons differ.</li>"
+                  "<li><b>Non-refundable bookings or tight flight connections</b> into the port, where a hiccup has real "
+                  "consequences.</li>"
+                  "</ul>"
+                  + "<p>And it is reasonable to go lighter, or think harder about it, on a short, easily refunded sailing "
+                  "close to home, when your own health coverage clearly travels, and when little of your money is actually "
+                  "locked in. The point is to match the cover to the real risk, not to buy or skip it on autopilot.</p>",
+            "es": "<p>El seguro es una decisión personal, pero el caso se fortalece a medida que se suman estos factores:</p>"
+                  "<ul>"
+                  "<li><b>Un viaje grande y pagado por adelantado,</b> reservado mucho antes de zarpar, con una larga "
+                  "ventana de penalización.</li>"
+                  "<li><b>Viajar lejos de casa o al extranjero,</b> donde tu plan de salud quizá no te siga.</li>"
+                  "<li><b>Consideraciones de salud,</b> tuyas o de un familiar cercano, que puedan forzar una cancelación "
+                  "o requerir atención.</li>"
+                  "<li><b>Temporadas de tormentas,</b> como navegar en temporada de huracanes, cuando la interrupción por "
+                  "clima es más probable. Mira " + link("/es/guides/when-to-cruise/", "cuándo hacer un crucero") + " para "
+                  "ver cómo cambian las temporadas.</li>"
+                  "<li><b>Reservas no reembolsables o conexiones de vuelo ajustadas</b> hacia el puerto, donde un "
+                  "contratiempo tiene consecuencias reales.</li>"
+                  "</ul>"
+                  + "<p>Y es razonable ir más ligero, o pensarlo más, en un crucero corto y fácil de reembolsar cerca de "
+                  "casa, cuando tu propia cobertura de salud claramente viaja y cuando poco de tu dinero está realmente "
+                  "comprometido. La idea es ajustar la cobertura al riesgo real, no contratarla ni omitirla en piloto automático.</p>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "How to decide, and the bottom line", "es": "Cómo decidir, y en conclusión"},
+         "html": {
+            "en": "<p>You do not need to become an insurance expert. Three questions get you most of the way:</p>"
+                  "<ul>"
+                  "<li><b>How much have I prepaid, and when is my penalty date?</b> That is the money at risk. Your "
+                  + link("/en/guides/cruise-deposit-payment-cancellation/", "cancellation schedule") + " tells you.</li>"
+                  "<li><b>Does my health plan cover me abroad and at sea?</b> If not, the medical and evacuation side "
+                  "alone may justify a policy.</li>"
+                  "<li><b>What is my personal risk this trip?</b> Health, weather season, flights and how far you are "
+                  "sailing all feed into it.</li>"
+                  "</ul>"
+                  "<p>Answer those, then choose a policy by its terms rather than its name, checking the medical limit, "
+                  "the evacuation limit, the exclusions and any waiver deadline.</p>"
+                  + "<p>If you would rather not sort through it alone, that is a good moment to call. A licensed specialist "
+                  "can walk you through what protection fits your specific sailing and your situation, in plain language, "
+                  "for free, with no obligation, and never a payment to us.</p>",
+            "es": "<p>No necesitas volverte experto en seguros. Tres preguntas te llevan casi todo el camino:</p>"
+                  "<ul>"
+                  "<li><b>¿Cuánto he pagado por adelantado y cuándo es mi fecha de penalización?</b> Ese es el dinero en "
+                  "riesgo. Tu " + link("/es/guides/cruise-deposit-payment-cancellation/", "calendario de cancelación") + " te lo dice.</li>"
+                  "<li><b>¿Mi plan de salud me cubre en el extranjero y en el mar?</b> Si no, el lado médico y de "
+                  "evacuación por sí solo puede justificar una póliza.</li>"
+                  "<li><b>¿Cuál es mi riesgo personal en este viaje?</b> La salud, la temporada de clima, los vuelos y qué "
+                  "tan lejos navegas influyen.</li>"
+                  "</ul>"
+                  "<p>Responde eso y luego elige una póliza por sus condiciones y no por su nombre, revisando el límite "
+                  "médico, el límite de evacuación, las exclusiones y cualquier fecha límite de exención.</p>"
+                  + "<p>Si prefieres no revisar todo esto solo, es un buen momento para llamar. Un especialista con "
+                  "licencia puede explicarte qué protección encaja con tu crucero y tu situación, en lenguaje claro, "
+                  "gratis, sin compromiso, y nunca un pago para nosotros.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Is travel insurance required for a cruise?", "For most sailings it is not legally required, so it stays optional. That said, some destinations or health situations can make proof of medical coverage effectively necessary, and many travellers choose cover because a cruise is prepaid, deadline-driven and often far from home. Optional is not the same as unwise."),
+            ("Does my regular health insurance work on a cruise?", "Often only partly, or not at all, once you are abroad or at sea. Many domestic plans limit or exclude international care, and a ship's medical centre usually charges you directly. Check your own plan's travel terms before you sail; if it does not follow you, a travel-medical benefit fills the gap."),
+            ("What is the difference between the cruise line's plan and travel insurance?", "The line's plan is convenient to add at booking but often reimburses cancellation as cruise credit and carries lighter medical and evacuation cover. An independent policy is bought separately, more often pays cash, and can offer stronger medical and evacuation limits. Compare the actual terms rather than assuming one is better."),
+            ("When should I buy cruise travel insurance?", "Generally soon after your first deposit. Some of the most useful benefits, such as a pre-existing-condition waiver or cancel-for-any-reason cover, are only available if you buy within a limited window of your initial payment. Buying early also means you are protected for the whole run-up to the trip."),
+            ("What is cancel for any reason coverage?", "It is an optional upgrade that lets you recover a portion of your prepaid, non-refundable costs if you cancel for a reason a standard policy would not cover. It costs more, must usually be added early, and requires you to cancel by a set point before departure, but it gives you the most flexibility."),
+            ("Is insurance worth it for a short, inexpensive cruise?", "It depends. With less money prepaid, the cancellation side protects less, so some travellers skip or minimise it. The medical and evacuation case can still apply, especially abroad or if your health plan does not travel. It comes down to your trip, your health and where you sail."),
+        ],
+        "es": [
+            ("¿Es obligatorio el seguro de viaje para un crucero?", "Para la mayoría de los cruceros no es obligatorio por ley, así que es opcional. Dicho esto, algunos destinos o situaciones de salud pueden hacer que una prueba de cobertura médica sea prácticamente necesaria, y muchos viajeros eligen cobertura porque un crucero se paga por adelantado, tiene fechas límite y a menudo está lejos de casa. Opcional no es lo mismo que imprudente."),
+            ("¿Funciona mi seguro de salud normal en un crucero?", "A menudo solo en parte, o nada, una vez que estás en el extranjero o en el mar. Muchos planes nacionales limitan o excluyen la atención internacional, y el centro médico del barco suele cobrarte directamente. Revisa las condiciones de viaje de tu plan antes de zarpar; si no te acompaña, un beneficio médico de viaje llena el vacío."),
+            ("¿Qué diferencia hay entre el plan de la línea y un seguro de viaje?", "El plan de la línea es cómodo de agregar al reservar, pero a menudo reembolsa la cancelación como crédito de crucero y tiene cobertura médica y de evacuación más ligera. Una póliza independiente se contrata aparte, con más frecuencia paga en efectivo y puede ofrecer límites médicos y de evacuación más fuertes. Compara las condiciones reales en vez de suponer que una es mejor."),
+            ("¿Cuándo debo contratar el seguro de viaje para crucero?", "Por lo general, poco después de tu primer depósito. Algunos de los beneficios más útiles, como una exención por condiciones preexistentes o la cobertura de cancelar por cualquier motivo, solo están disponibles si contratas dentro de una ventana limitada de tu pago inicial. Contratar temprano también significa estar protegido durante toda la antesala del viaje."),
+            ("¿Qué es la cobertura de cancelar por cualquier motivo?", "Es una mejora opcional que te permite recuperar una parte de tus costos pagados y no reembolsables si cancelas por un motivo que una póliza estándar no cubriría. Cuesta más, suele agregarse temprano y exige cancelar antes de un punto fijado previo a la salida, pero da la mayor flexibilidad."),
+            ("¿Vale la pena el seguro para un crucero corto y económico?", "Depende. Con menos dinero pagado por adelantado, el lado de cancelación protege menos, así que algunos viajeros lo omiten o lo minimizan. El caso médico y de evacuación puede seguir aplicando, sobre todo en el extranjero o si tu plan de salud no viaja. Se reduce a tu viaje, tu salud y dónde navegas."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧾", "Deposits, payments & cancellation", "/en/guides/cruise-deposit-payment-cancellation/", "The schedule that decides how much is at risk."),
+            ("↩️", "Refundable vs non-refundable", "/en/guides/refundable-vs-non-refundable/", "How much of your fare you could actually lose."),
+            ("🔍", "Hidden cruise costs", "/en/guides/hidden-cruise-costs/", "The extras that sit on top of every fare."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Talk through the right cover for your sailing in one call."),
+        ],
+        "es": [
+            ("🧾", "Depósitos, pagos y cancelación", "/es/guides/cruise-deposit-payment-cancellation/", "El calendario que decide cuánto está en riesgo."),
+            ("↩️", "Reembolsable vs no reembolsable", "/es/guides/refundable-vs-non-refundable/", "Cuánto de tu tarifa podrías perder realmente."),
+            ("🔍", "Costos ocultos de un crucero", "/es/guides/hidden-cruise-costs/", "Los extras que se suman a toda tarifa."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Conversa la cobertura correcta para tu crucero en una llamada."),
+        ],
+    },
+})

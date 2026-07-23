@@ -94,7 +94,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 |---|---|---|---|---|
 | ⬜ | P1 | How to avoid cruise "deal" scams & robocalls | `avoid-cruise-scams` | cruise scam, cruise robocall |
 | ⬜ | P1 | Is that "free cruise" offer real? red flags | `free-cruise-offer-red-flags` | free cruise offer real, scam red flags |
-| ⬜ | P2 | Travel insurance for cruises | `cruise-travel-insurance` | cruise travel insurance worth it |
+| ✅ | P2 | Travel insurance for cruises | `cruise-travel-insurance` | cruise travel insurance worth it |
 | ⬜ | P2 | Your cruise ticket contract & passenger rights | `cruise-contract-passenger-rights` | cruise contract, passenger rights |
 
 ### Tools (interactive, not articles)
