@@ -47,8 +47,9 @@ services:
     # The one change this Blueprint introduces: a server-side 301 on the exact
     # root path only. Deeper paths (/en/, /es/, /guides/...) do not match and are
     # untouched.
+    # type: redirect issues a 301 (Moved Permanently) automatically — Render's
+    # route schema has no status-code field, and redirect is always a 301.
     routes:
       - type: redirect
         source: /
         destination: /en/
-        statusCode: 301
