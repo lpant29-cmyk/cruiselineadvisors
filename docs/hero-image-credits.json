@@ -75,5 +75,117 @@
       "cruise-planning.jpg": "https://www.pexels.com/photo/7235895/",
       "cruise-family.jpg": "https://www.pexels.com/photo/3379404/"
     }
+  },
+  "guide_hero_images": {
+    "downloaded": "2026-07-26",
+    "destination_dir": "newsite/assets/guides/",
+    "note": "Guide hero/thumbnail images, one per guide, sourced from Pexels (Pexels License: free for commercial use, no attribution required). 1600px wide.",
+    "images": [
+      {
+        "file": "what-to-pack-for-a-cruise.jpg",
+        "subject": "Open packed suitcase with clothes, hat, camera and passport",
+        "source_url": "https://www.pexels.com/photo/8212231/",
+        "image_url": "https://images.pexels.com/photos/8212231/pexels-photo-8212231.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "cruise-documents-id.jpg",
+        "subject": "Passport and boarding passes on a laptop",
+        "source_url": "https://www.pexels.com/photo/7310015/",
+        "image_url": "https://images.pexels.com/photos/7310015/pexels-photo-7310015.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "cruise-deposit-payment-cancellation.jpg",
+        "subject": "Person signing a document with a pen",
+        "source_url": "https://www.pexels.com/photo/8730987/",
+        "image_url": "https://images.pexels.com/photos/8730987/pexels-photo-8730987.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "cruise-travel-insurance.jpg",
+        "subject": "Orange life ring buoy on a ship railing",
+        "source_url": "https://www.pexels.com/photo/14449292/",
+        "image_url": "https://images.pexels.com/photos/14449292/pexels-photo-14449292.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "cruise-wifi-explained.jpg",
+        "subject": "Traveler photographing the sea with a smartphone",
+        "source_url": "https://www.pexels.com/photo/3932864/",
+        "image_url": "https://images.pexels.com/photos/3932864/pexels-photo-3932864.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "hidden-cruise-costs.jpg",
+        "subject": "Hands opening a leather wallet",
+        "source_url": "https://www.pexels.com/photo/4452504/",
+        "image_url": "https://images.pexels.com/photos/4452504/pexels-photo-4452504.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "how-cruise-pricing-works.jpg",
+        "subject": "Calculator and pen on a numbered graph",
+        "source_url": "https://www.pexels.com/photo/209224/",
+        "image_url": "https://images.pexels.com/photos/209224/pexels-photo-209224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "refundable-vs-non-refundable.jpg",
+        "subject": "Person writing on a desk calendar",
+        "source_url": "https://www.pexels.com/photo/6172482/",
+        "image_url": "https://images.pexels.com/photos/6172482/pexels-photo-6172482.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "how-to-choose-a-destination.jpg",
+        "subject": "Colorful push pins on a world map",
+        "source_url": "https://www.pexels.com/photo/1078850/",
+        "image_url": "https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "when-to-cruise.jpg",
+        "subject": "Tropical beach with palm trees and turquoise water",
+        "source_url": "https://www.pexels.com/photo/12858509/",
+        "image_url": "https://images.pexels.com/photos/12858509/pexels-photo-12858509.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "how-to-choose-a-cruise-line.jpg",
+        "subject": "Cruise ship docked at a port, aerial view",
+        "source_url": "https://www.pexels.com/photo/12464323/",
+        "image_url": "https://images.pexels.com/photos/12464323/pexels-photo-12464323.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "free-cruise-offer-red-flags.jpg",
+        "subject": "Person at a laptop with an email open on a phone",
+        "source_url": "https://www.pexels.com/photo/5717940/",
+        "image_url": "https://images.pexels.com/photos/5717940/pexels-photo-5717940.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "avoid-cruise-scams.jpg",
+        "subject": "Smartphone home screen full of notification badges",
+        "source_url": "https://www.pexels.com/photo/32944547/",
+        "image_url": "https://images.pexels.com/photos/32944547/pexels-photo-32944547.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "accessibility.jpg",
+        "subject": "Two women, one using a wheelchair, chatting outdoors",
+        "source_url": "https://www.pexels.com/photo/2026764/",
+        "image_url": "https://images.pexels.com/photos/2026764/pexels-photo-2026764.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "onboard-credit-explained.jpg",
+        "subject": "Guests relaxing on a cruise ship pool deck",
+        "source_url": "https://www.pexels.com/photo/15322441/",
+        "image_url": "https://images.pexels.com/photos/15322441/pexels-photo-15322441.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
+      }
+    ]
   }
 }

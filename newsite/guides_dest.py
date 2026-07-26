@@ -6,7 +6,7 @@ from guidepage import register, tip, watch, define, vcards, link
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("how-to-choose-a-destination", {
     "cat": "dest",
-    "hero": "cruise-port.jpg",
+    "hero": "how-to-choose-a-destination.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {
@@ -160,7 +160,7 @@ register("how-to-choose-a-destination", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("when-to-cruise", {
-    "cat": "dest", "hero": "cruise-ship-sea.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "dest", "hero": "when-to-cruise.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "When to cruise: the best time to sail, by region", "es": "Cuándo hacer un crucero: la mejor época, por región"},
     "dek": {
         "en": "The week you sail shapes your trip more than almost anything else: the weather, the "

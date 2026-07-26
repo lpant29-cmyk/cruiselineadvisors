@@ -386,7 +386,7 @@ register("how-to-find-affordable-cruise", {
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("cruise-deposit-payment-cancellation", {
     "cat": "costs",
-    "hero": "cruise-ship-sea.jpg",
+    "hero": "cruise-deposit-payment-cancellation.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {
@@ -730,7 +730,7 @@ register("drink-packages-worth-it", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("cruise-wifi-explained", {
-    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "costs", "hero": "cruise-wifi-explained.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "Cruise Wi-Fi: packages and what to actually expect",
               "es": "Wi-Fi en crucero: paquetes y qué esperar de verdad"},
     "dek": {
@@ -870,7 +870,7 @@ register("cruise-wifi-explained", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("refundable-vs-non-refundable", {
-    "cat": "costs", "hero": "cruise-ship-sea.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "costs", "hero": "refundable-vs-non-refundable.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "Refundable vs non-refundable cruise fares", "es": "Tarifas de crucero reembolsables vs no reembolsables"},
     "dek": {
         "en": "Many cruise fares come in two flavours: refundable and non-refundable. The non-refundable "
@@ -989,7 +989,7 @@ register("refundable-vs-non-refundable", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("hidden-cruise-costs", {
-    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "costs", "hero": "hidden-cruise-costs.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "Hidden cruise costs first-timers miss", "es": "Costos ocultos que los primerizos pasan por alto"},
     "dek": {
         "en": "None of these are truly hidden, they are in the fine print, but first-time cruisers "
@@ -1115,7 +1115,7 @@ register("hidden-cruise-costs", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("how-cruise-pricing-works", {
-    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-22", "updated": "2026-07-22",
+    "cat": "costs", "hero": "how-cruise-pricing-works.jpg", "published": "2026-07-22", "updated": "2026-07-22",
     "title": {"en": "How cruise pricing actually works (why fares vary)",
               "es": "Cómo funciona realmente el precio de un crucero (por qué varía la tarifa)"},
     "dek": {
@@ -1359,7 +1359,7 @@ register("how-cruise-pricing-works", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("cruise-travel-insurance", {
-    "cat": "costs", "hero": "cruise-planning.jpg", "published": "2026-07-23", "updated": "2026-07-23",
+    "cat": "costs", "hero": "cruise-travel-insurance.jpg", "published": "2026-07-23", "updated": "2026-07-23",
     "title": {"en": "Cruise travel insurance: is it worth it?",
               "es": "Seguro de viaje para crucero: ¿vale la pena?"},
     "dek": {
@@ -1641,6 +1641,247 @@ register("cruise-travel-insurance", {
             ("↩️", "Reembolsable vs no reembolsable", "/es/guides/refundable-vs-non-refundable/", "Cuánto de tu tarifa podrías perder realmente."),
             ("🔍", "Costos ocultos de un crucero", "/es/guides/hidden-cruise-costs/", "Los extras que se suman a toda tarifa."),
             ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Conversa la cobertura correcta para tu crucero en una llamada."),
+        ],
+    },
+})
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("onboard-credit-explained", {
+    "cat": "costs", "hero": "onboard-credit-explained.jpg", "published": "2026-07-26", "updated": "2026-07-26",
+    "title": {"en": "Onboard credit, explained",
+              "es": "Crédito a bordo, explicado"},
+    "dek": {
+        "en": "Onboard credit is one of the most common cruise perks, and one of the most misunderstood. It "
+              "is spending money loaded onto your shipboard account, but where it comes from, whether you "
+              "get it back if unused, and how to spend it well are the parts that trip people up. Here is "
+              "the whole picture.",
+        "es": "El crédito a bordo es uno de los beneficios de crucero más comunes, y uno de los más "
+              "malentendidos. Es dinero para gastar cargado en tu cuenta del barco, pero de dónde viene, si "
+              "lo recuperas si no lo usas y cómo gastarlo bien son las partes que confunden a la gente. Aquí "
+              "está el panorama completo.",
+    },
+    "takeaways": {
+        "en": [
+            "Onboard credit (OBC) is a spending balance applied to your shipboard account, used for purchases during the cruise, not cash handed to you.",
+            "It comes from several places: promotions, your past-guest loyalty tier, booking through a travel advisor, a cruise line credit card, or goodwill.",
+            "The single most important thing to know is whether your credit is refundable or non-refundable, because that decides what happens to anything you do not spend.",
+            "You can use it on most onboard charges: drinks, specialty dining, the spa, shore excursions, shops, Wi-Fi and often gratuities.",
+            "Check your balance during the cruise and spend the use-it-or-lose-it portion first, so none of it goes to waste.",
+        ],
+        "es": [
+            "El crédito a bordo (OBC) es un saldo para gastar aplicado a tu cuenta del barco, usado para compras durante el crucero, no efectivo que te entregan.",
+            "Viene de varios lugares: promociones, tu nivel de fidelidad como pasajero recurrente, reservar con un asesor de viajes, una tarjeta de crédito de la línea o cortesía.",
+            "Lo más importante que debes saber es si tu crédito es reembolsable o no reembolsable, porque eso decide qué pasa con lo que no gastes.",
+            "Puedes usarlo en la mayoría de los cargos a bordo: bebidas, restaurantes de especialidad, el spa, excursiones, tiendas, Wi-Fi y a menudo las propinas.",
+            "Revisa tu saldo durante el crucero y gasta primero la parte que se pierde si no se usa, para que nada se desperdicie.",
+        ],
+    },
+    "sections": [
+        {"id": "what-is-obc", "h2": {"en": "What onboard credit actually is", "es": "Qué es realmente el crédito a bordo"},
+         "html": {
+            "en": "<p>Onboard credit, often shortened to <b>OBC</b>, is a spending balance the cruise line puts on "
+                  "your onboard account. Everything you buy during the cruise is charged to that account, and your "
+                  "onboard credit is applied against those charges. It is not cash in your pocket, and it is not a "
+                  "lower fare. Think of it as a tab the line has pre-loaded in your favour.</p>"
+                  + define("Onboard account (folio)",
+                           "the running tab tied to your cabin and keycard. Nearly everything you spend on the ship, "
+                           "from a coffee to an excursion, posts here, and you settle it at the end of the sailing. "
+                           "Onboard credit is applied against this balance.")
+                  + "<p>Because it lives on your account, onboard credit only has value on the ship. You cannot spend "
+                  "it before you sail or take it home as store credit. What you can sometimes do is get unspent credit "
+                  "back as cash, and whether that is allowed is the next thing to understand.</p>",
+            "es": "<p>El crédito a bordo, a menudo abreviado como <b>OBC</b> por sus siglas en inglés, es un saldo para "
+                  "gastar que la línea de crucero coloca en tu cuenta a bordo. Todo lo que compras durante el crucero "
+                  "se carga a esa cuenta, y tu crédito a bordo se aplica contra esos cargos. No es efectivo en tu "
+                  "bolsillo, y no es una tarifa más baja. Piénsalo como una cuenta que la línea ya cargó a tu favor.</p>"
+                  + define("Cuenta a bordo (folio)",
+                           "la cuenta corriente ligada a tu camarote y a tu tarjeta llave. Casi todo lo que gastas en "
+                           "el barco, desde un café hasta una excursión, se registra aquí, y la liquidas al final del "
+                           "crucero. El crédito a bordo se aplica contra este saldo.")
+                  + "<p>Como vive en tu cuenta, el crédito a bordo solo tiene valor en el barco. No puedes gastarlo "
+                  "antes de zarpar ni llevártelo a casa como crédito de tienda. Lo que a veces sí puedes hacer es "
+                  "recuperar el crédito no gastado como efectivo, y si eso se permite es lo siguiente que debes entender.</p>",
+         }},
+        {"id": "where-from", "h2": {"en": "Where onboard credit comes from", "es": "De dónde viene el crédito a bordo"},
+         "html": {
+            "en": "<p>Onboard credit arrives through several channels. These are the most common:</p>"
+                  + vcards([
+                      ("🎉", "Promotions", "Lines frequently attach onboard credit to a booking as a perk, especially during major promotional periods, instead of touching the fare itself."),
+                      ("🏅", "Loyalty tier", "Past-guest and loyalty programs often reward repeat cruisers with onboard credit that grows as your status rises."),
+                      ("🤝", "Your travel advisor", "Booking through a licensed advisor can come with onboard credit the advisor passes on, on top of whatever the line is offering."),
+                      ("💳", "A cruise line credit card", "Co-branded cruise cards frequently let you redeem points as onboard credit for a future sailing."),
+                      ("📈", "Shareholder benefit", "Some publicly traded cruise companies offer onboard credit to shareholders, subject to their own terms."),
+                      ("🤍", "Goodwill", "If something goes wrong, a line may add onboard credit as a gesture. It is compensation to use on board, not a refund."),
+                  ])
+                  + "<p>Where your credit came from often decides whether it is refundable, which matters more than the "
+                  "label suggests.</p>",
+            "es": "<p>El crédito a bordo llega por varias vías. Estas son las más comunes:</p>"
+                  + vcards([
+                      ("🎉", "Promociones", "Las líneas suelen sumar crédito a bordo a una reserva como beneficio, sobre todo en los grandes periodos promocionales, en lugar de tocar la tarifa."),
+                      ("🏅", "Nivel de fidelidad", "Los programas de pasajeros recurrentes a menudo premian a quienes repiten con crédito a bordo que crece a medida que sube tu estatus."),
+                      ("🤝", "Tu asesor de viajes", "Reservar con un asesor con licencia puede incluir crédito a bordo que el asesor te traslada, además de lo que ofrezca la línea."),
+                      ("💳", "Una tarjeta de la línea", "Las tarjetas de crédito de marca compartida suelen dejarte canjear puntos como crédito a bordo para un próximo crucero."),
+                      ("📈", "Beneficio para accionistas", "Algunas compañías de crucero que cotizan en bolsa ofrecen crédito a bordo a sus accionistas, sujeto a sus propias condiciones."),
+                      ("🤍", "Cortesía", "Si algo sale mal, una línea puede añadir crédito a bordo como gesto. Es una compensación para usar a bordo, no un reembolso."),
+                  ])
+                  + "<p>De dónde vino tu crédito suele decidir si es reembolsable, lo que importa más de lo que sugiere "
+                  "la etiqueta.</p>",
+         }},
+        {"id": "refundable", "h2": {"en": "The distinction that matters: refundable vs non-refundable", "es": "La distinción que importa: reembolsable vs no reembolsable"},
+         "html": {
+            "en": define("Refundable onboard credit",
+                         "credit you can take back as cash at the end of the cruise if you do not spend it. It usually "
+                         "comes from money you effectively paid, such as a shareholder benefit or certain advisor credits.")
+                  + define("Non-refundable onboard credit",
+                           "promotional credit that must be spent on board. Anything left over when you disembark is "
+                           "simply forfeited, not returned.")
+                  + "<p>This one distinction changes how you should treat the credit. Non-refundable credit is "
+                  "use-it-or-lose-it, so it should be the first money you spend. Refundable credit is effectively yours "
+                  "either way, so there is no rush and no loss if you carry some home.</p>"
+                  + watch("Do not assume all your credit behaves the same way. A single booking can carry both types at "
+                          "once, a promotional (non-refundable) chunk and a refundable chunk. If you are not sure which "
+                          "is which, guest services can tell you. For how this mirrors the way fares themselves work, see "
+                          + link("/en/guides/refundable-vs-non-refundable/", "refundable versus non-refundable cruise fares") + "."),
+            "es": define("Crédito a bordo reembolsable",
+                         "crédito que puedes recuperar como efectivo al final del crucero si no lo gastas. Suele venir de "
+                         "dinero que en la práctica pagaste, como un beneficio para accionistas o ciertos créditos de asesor.")
+                  + define("Crédito a bordo no reembolsable",
+                           "crédito promocional que debe gastarse a bordo. Lo que quede al desembarcar simplemente se "
+                           "pierde, no se devuelve.")
+                  + "<p>Esta sola distinción cambia cómo debes tratar el crédito. El no reembolsable se pierde si no se "
+                  "usa, así que debe ser el primer dinero que gastes. El reembolsable es tuyo de todos modos, así que no "
+                  "hay prisa ni pérdida si te llevas algo a casa.</p>"
+                  + watch("No supongas que todo tu crédito funciona igual. Una misma reserva puede llevar los dos tipos a "
+                          "la vez, una parte promocional (no reembolsable) y una parte reembolsable. Si no sabes cuál es "
+                          "cuál, atención al huésped puede decírtelo. Para ver cómo esto refleja el funcionamiento de las "
+                          "tarifas, lee " + link("/es/guides/refundable-vs-non-refundable/", "tarifas de crucero reembolsables frente a no reembolsables") + "."),
+         }},
+        {"id": "how-to-use", "h2": {"en": "What you can spend it on, and how", "es": "En qué puedes gastarlo, y cómo"},
+         "html": {
+            "en": "<p>Onboard credit is flexible. On most ships it applies automatically to nearly anything that posts "
+                  "to your account, including:</p>"
+                  "<ul>"
+                  "<li><b>Drinks and specialty dining</b>, from a coffee to a full meal at an extra-charge restaurant.</li>"
+                  "<li><b>The spa, shops and photos</b>, and other onboard concessions.</li>"
+                  "<li><b>Shore excursions</b> booked through the line.</li>"
+                  "<li><b>Wi-Fi</b> and, on many lines, your <b>daily gratuities</b>.</li>"
+                  "</ul>"
+                  "<p>You do not usually have to do anything to trigger it. Charges post to your account, and the credit "
+                  "is drawn down against them, typically the non-refundable portion first. You can see where you stand "
+                  "at any point by checking your account on the cabin TV, the line's app, or at guest services.</p>"
+                  + tip("Planning to use credit on a popular excursion or a specialty restaurant? Those can sell out. "
+                        "Booking early still lets you apply your onboard credit later, so you are not choosing between a "
+                        "good booking and using your perk."),
+            "es": "<p>El crédito a bordo es flexible. En la mayoría de los barcos se aplica automáticamente a casi todo lo "
+                  "que se carga a tu cuenta, incluyendo:</p>"
+                  "<ul>"
+                  "<li><b>Bebidas y restaurantes de especialidad</b>, desde un café hasta una comida completa en un restaurante con cargo extra.</li>"
+                  "<li><b>El spa, las tiendas y las fotos</b>, y otras concesiones a bordo.</li>"
+                  "<li><b>Excursiones</b> reservadas a través de la línea.</li>"
+                  "<li><b>Wi-Fi</b> y, en muchas líneas, tus <b>propinas diarias</b>.</li>"
+                  "</ul>"
+                  "<p>Normalmente no tienes que hacer nada para activarlo. Los cargos se registran en tu cuenta y el "
+                  "crédito se descuenta contra ellos, por lo general primero la parte no reembolsable. Puedes ver cómo "
+                  "vas en cualquier momento revisando tu cuenta en la TV del camarote, en la app de la línea o en "
+                  "atención al huésped.</p>"
+                  + tip("¿Piensas usar el crédito en una excursión popular o un restaurante de especialidad? Esos pueden "
+                        "agotarse. Reservar temprano igual te permite aplicar tu crédito a bordo después, así no eliges "
+                        "entre una buena reserva y usar tu beneficio."),
+         }},
+        {"id": "per-cabin", "h2": {"en": "Per cabin, and in the ship's money", "es": "Por camarote, y en la moneda del barco"},
+         "html": {
+            "en": "<p>Two practical details prevent confusion. First, onboard credit is usually granted <b>per "
+                  "stateroom</b>, not per person, so a couple sharing a cabin shares one pool of credit. Second, it is "
+                  "denominated in the <b>ship's onboard currency</b>, which may differ from your home currency. Neither "
+                  "changes how you use it, but both are worth knowing before you start spending.</p>"
+                  + "<p>Onboard credit also does not usually stack with the fare or reduce what you owe before you sail. "
+                  "It is money for the ship, applied on the ship. To understand what your fare does and does not already "
+                  "include before you start adding extras, read "
+                  + link("/en/guides/whats-included/", "what is included in a cruise fare") + ".</p>",
+            "es": "<p>Dos detalles prácticos evitan confusiones. Primero, el crédito a bordo suele otorgarse <b>por "
+                  "camarote</b>, no por persona, así que una pareja que comparte camarote comparte un solo bolsón de "
+                  "crédito. Segundo, se expresa en la <b>moneda de a bordo</b>, que puede diferir de la de tu país. "
+                  "Ninguno cambia cómo lo usas, pero conviene saberlos antes de empezar a gastar.</p>"
+                  + "<p>El crédito a bordo tampoco suele combinarse con la tarifa ni reducir lo que debes antes de "
+                  "zarpar. Es dinero para el barco, aplicado en el barco. Para entender qué incluye y qué no tu tarifa "
+                  "antes de sumar extras, lee "
+                  + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero") + ".</p>",
+         }},
+        {"id": "maximize", "h2": {"en": "How to make the most of it", "es": "Cómo aprovecharlo al máximo"},
+         "html": {
+            "en": "<ul>"
+                  "<li><b>Find out which type you have.</b> Ask before you sail, or check with guest services early, so "
+                  "you know what must be spent and what can come home.</li>"
+                  "<li><b>Spend the non-refundable part first.</b> It is the money you would otherwise lose.</li>"
+                  "<li><b>Put it toward things you already wanted.</b> Credit spent on an excursion or dinner you would "
+                  "have paid for anyway is credit working hardest.</li>"
+                  "<li><b>Check your balance mid-cruise.</b> The last thing you want is to disembark leaving usable "
+                  "credit behind.</li>"
+                  "<li><b>Mind the extras it can cover.</b> Applying credit to gratuities or Wi-Fi frees up your own "
+                  "money for the rest. See " + link("/en/guides/hidden-cruise-costs/", "hidden cruise costs") + " for "
+                  "what those extras are.</li>"
+                  "</ul>",
+            "es": "<ul>"
+                  "<li><b>Averigua qué tipo tienes.</b> Pregunta antes de zarpar, o consulta pronto en atención al "
+                  "huésped, para saber qué debe gastarse y qué puede volver a casa.</li>"
+                  "<li><b>Gasta primero la parte no reembolsable.</b> Es el dinero que de otro modo perderías.</li>"
+                  "<li><b>Destínalo a cosas que ya querías.</b> El crédito gastado en una excursión o cena que igual "
+                  "ibas a pagar es el crédito que más rinde.</li>"
+                  "<li><b>Revisa tu saldo a mitad del crucero.</b> Lo último que quieres es desembarcar dejando crédito "
+                  "utilizable atrás.</li>"
+                  "<li><b>Ojo con los extras que puede cubrir.</b> Aplicar crédito a las propinas o al Wi-Fi libera tu "
+                  "propio dinero para lo demás. Mira " + link("/es/guides/hidden-cruise-costs/", "costos ocultos de un crucero") + " para saber cuáles son esos extras.</li>"
+                  "</ul>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Onboard credit is a genuine perk, but only if you know what you are holding. It is spending money "
+                  "for the ship, it comes from a handful of sources, and its single most important trait is whether it "
+                  "is refundable. Learn that, spend the use-it-or-lose-it portion first, and put the rest toward things "
+                  "you already planned to enjoy.</p>"
+                  + "<p>When you want to know exactly what onboard credit a specific sailing includes, whether it is "
+                  "refundable, and how it stacks with the current promotions, that is precisely the kind of detail a "
+                  "licensed specialist confirms for you in one call, free, with no obligation, and never a payment to us.</p>",
+            "es": "<p>El crédito a bordo es un beneficio genuino, pero solo si sabes qué tienes en la mano. Es dinero "
+                  "para gastar en el barco, viene de unas pocas fuentes, y su rasgo más importante es si es reembolsable. "
+                  "Aprende eso, gasta primero la parte que se pierde si no se usa, y destina el resto a cosas que ya "
+                  "planeabas disfrutar.</p>"
+                  + "<p>Cuando quieras saber exactamente qué crédito a bordo incluye un crucero específico, si es "
+                  "reembolsable y cómo se combina con las promociones actuales, ese es justo el detalle que un "
+                  "especialista con licencia te confirma en una llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What is onboard credit (OBC)?", "Onboard credit is a spending balance the cruise line applies to your onboard account. You use it for purchases during the cruise, such as drinks, dining, the spa, excursions and Wi-Fi. It is not cash in hand and it does not lower your fare; it is money that only has value once you are on the ship."),
+            ("Where does onboard credit come from?", "It can come from a booking promotion, your past-guest loyalty tier, a licensed travel advisor, a co-branded cruise credit card, a shareholder benefit, or goodwill from the line if something went wrong. A single booking can combine credit from more than one source."),
+            ("What is the difference between refundable and non-refundable onboard credit?", "Refundable credit can be taken back as cash at the end of the cruise if you do not spend it. Non-refundable credit, usually promotional, must be spent on board or it is forfeited. Because they behave differently, it is worth knowing which type you hold, and spending the non-refundable part first."),
+            ("What can I spend onboard credit on?", "On most ships it applies to nearly anything that posts to your onboard account: drinks, specialty dining, the spa, shops, photos, shore excursions booked through the line, Wi-Fi, and often your daily gratuities. It usually applies automatically as you spend."),
+            ("Do I lose onboard credit if I do not use it?", "It depends on the type. Non-refundable credit that you do not spend is forfeited when you disembark. Refundable credit can be returned to you as cash. Check your balance during the cruise so you do not accidentally leave usable credit behind."),
+            ("Is onboard credit per person or per cabin?", "It is usually granted per stateroom rather than per person, so people sharing a cabin share the same pool of credit. It is also denominated in the ship's onboard currency, which may differ from your home currency."),
+        ],
+        "es": [
+            ("¿Qué es el crédito a bordo (OBC)?", "El crédito a bordo es un saldo para gastar que la línea aplica a tu cuenta del barco. Lo usas para compras durante el crucero, como bebidas, restaurantes, el spa, excursiones y Wi-Fi. No es efectivo en mano y no reduce tu tarifa; es dinero que solo tiene valor una vez que estás en el barco."),
+            ("¿De dónde viene el crédito a bordo?", "Puede venir de una promoción de reserva, tu nivel de fidelidad como pasajero recurrente, un asesor de viajes con licencia, una tarjeta de crédito de marca compartida, un beneficio para accionistas, o de la cortesía de la línea si algo salió mal. Una misma reserva puede combinar crédito de más de una fuente."),
+            ("¿Cuál es la diferencia entre crédito a bordo reembolsable y no reembolsable?", "El reembolsable puede recuperarse como efectivo al final del crucero si no lo gastas. El no reembolsable, por lo general promocional, debe gastarse a bordo o se pierde. Como se comportan distinto, conviene saber cuál tienes y gastar primero la parte no reembolsable."),
+            ("¿En qué puedo gastar el crédito a bordo?", "En la mayoría de los barcos se aplica a casi todo lo que se carga a tu cuenta: bebidas, restaurantes de especialidad, el spa, tiendas, fotos, excursiones reservadas con la línea, Wi-Fi y a menudo tus propinas diarias. Suele aplicarse automáticamente a medida que gastas."),
+            ("¿Pierdo el crédito a bordo si no lo uso?", "Depende del tipo. El crédito no reembolsable que no gastes se pierde al desembarcar. El reembolsable puede devolvértelo como efectivo. Revisa tu saldo durante el crucero para no dejar por accidente crédito utilizable atrás."),
+            ("¿El crédito a bordo es por persona o por camarote?", "Por lo general se otorga por camarote y no por persona, así que quienes comparten camarote comparten el mismo bolsón de crédito. También se expresa en la moneda de a bordo, que puede diferir de la de tu país."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("↩️", "Refundable vs non-refundable", "/en/guides/refundable-vs-non-refundable/", "The same distinction that governs your credit."),
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "What you are already paying for before extras."),
+            ("🔍", "Hidden cruise costs", "/en/guides/hidden-cruise-costs/", "The extras your credit can help cover."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Confirm the exact credit on your sailing in one call."),
+        ],
+        "es": [
+            ("↩️", "Reembolsable vs no reembolsable", "/es/guides/refundable-vs-non-refundable/", "La misma distinción que rige tu crédito."),
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "Lo que ya pagas antes de los extras."),
+            ("🔍", "Costos ocultos de un crucero", "/es/guides/hidden-cruise-costs/", "Los extras que tu crédito puede ayudar a cubrir."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Confirma el crédito exacto de tu crucero en una llamada."),
         ],
     },
 })

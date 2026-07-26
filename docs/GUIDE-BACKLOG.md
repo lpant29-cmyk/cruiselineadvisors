@@ -51,7 +51,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 | ⬜ | P2 | Refundable vs non-refundable cruise fares | `refundable-vs-non-refundable` | refundable vs non-refundable cruise |
 | ⬜ | P2 | Hidden cruise costs first-timers miss | `hidden-cruise-costs` | hidden cruise costs, extra fees |
 | ⬜ | P2 | How cruise pricing actually works | `how-cruise-pricing-works` | how cruise pricing works, why fares vary |
-| ⬜ | P3 | Onboard credit, explained | `onboard-credit-explained` | onboard credit, OBC refundable |
+| ✅ | P3 | Onboard credit, explained | `onboard-credit-explained` | onboard credit, OBC refundable |
 
 ### Pillar B — Planning your first cruise
 | Status | Pri | Topic | Slug | Primary intent / keywords |

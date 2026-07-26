@@ -6,7 +6,7 @@ from guidepage import register, tip, watch, define, vcards, link
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("avoid-cruise-scams", {
     "cat": "safety",
-    "hero": "cruise-planning.jpg",
+    "hero": "avoid-cruise-scams.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {
@@ -162,7 +162,7 @@ register("avoid-cruise-scams", {
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("free-cruise-offer-red-flags", {
     "cat": "safety",
-    "hero": "cruise-deck.jpg",
+    "hero": "free-cruise-offer-red-flags.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {

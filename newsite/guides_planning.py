@@ -6,7 +6,7 @@ from guidepage import register, tip, watch, define, vcards, link
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("cruise-documents-id", {
     "cat": "planning",
-    "hero": "cruise-planning.jpg",
+    "hero": "cruise-documents-id.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {
@@ -176,7 +176,7 @@ register("cruise-documents-id", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("what-to-pack-for-a-cruise", {
-    "cat": "planning", "hero": "cruise-planning.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "planning", "hero": "what-to-pack-for-a-cruise.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "What to pack for a cruise (the smart checklist)", "es": "Qué llevar a un crucero (la lista inteligente)"},
     "dek": {
         "en": "Cruise packing is its own art: a few things you must not forget, a few the ship does not "

@@ -285,7 +285,7 @@ register("groups-and-families", {
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("accessibility", {
-    "cat": "who", "hero": "cruise-cabin.jpg", "published": "2026-07-20", "updated": "2026-07-20",
+    "cat": "who", "hero": "accessibility.jpg", "published": "2026-07-20", "updated": "2026-07-20",
     "title": {"en": "Accessible cruising: cabins, tendering & what to confirm", "es": "Cruceros accesibles: camarotes, transbordos y qué confirmar"},
     "dek": {
         "en": "Cruising can be one of the most accessible ways to travel: you unpack once and the ship "

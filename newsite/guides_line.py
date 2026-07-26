@@ -6,7 +6,7 @@ from guidepage import register, tip, watch, define, vcards, link
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
 register("how-to-choose-a-cruise-line", {
     "cat": "line",
-    "hero": "cruise-ship-sea.jpg",
+    "hero": "how-to-choose-a-cruise-line.jpg",
     "published": "2026-07-20",
     "updated": "2026-07-20",
     "title": {
