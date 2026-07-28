@@ -1,0 +1,19 @@
+state,ranked_ports,market_label
+NY,cape-liberty;miami;port-canaveral,New York
+NJ,cape-liberty;miami;port-canaveral,New York
+CT,cape-liberty;boston;miami,New York
+PA,cape-liberty;baltimore;miami,Northeast
+MA,boston;cape-liberty;miami,Boston
+MD,baltimore;cape-liberty;miami,Baltimore
+VA,baltimore;cape-liberty;port-canaveral,Mid-Atlantic
+TX,galveston;new-orleans;miami,Texas
+OK,galveston;new-orleans,Texas drive
+LA,new-orleans;galveston,New Orleans
+FL,miami;port-canaveral;fort-lauderdale;tampa;jacksonville,Florida
+GA,jacksonville;port-canaveral;miami,Southeast
+WA,seattle;vancouver,Seattle
+OR,seattle;san-francisco,Pacific NW
+CA,los-angeles;long-beach;san-diego;san-francisco,California
+AZ,los-angeles;long-beach;san-diego,Southwest
+IL,miami;port-canaveral;galveston,Fly market
+default,miami;port-canaveral;galveston;cape-liberty,National

@@ -1,0 +1,2 @@
+offer_id,line_id,offer_text,start_date,end_date,show_banner,banner_pages,source,date_checked,status
+o001,rci,EXAMPLE - Kids sail free on select 2026 Caribbean and Bahamas sailings,2026-07-01,2026-08-31,yes,"line:royal-caribbean;dest:bahamas;aud:family",public-site,2026-07-27,example-replace

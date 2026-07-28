@@ -1,0 +1,66 @@
+category,seed_keyword,notes
+brand-core,royal caribbean cruises,volume anchor
+brand-core,royal caribbean deals,
+brand-core,book royal caribbean cruise,
+brand-core,royal caribbean prices,
+line-port,royal caribbean cruises from galveston,
+line-port,royal caribbean cruises from miami,
+line-port,royal caribbean cruises from new york,cape-liberty alias
+line-port,royal caribbean cruises from cape liberty,
+line-port,royal caribbean cruises from port canaveral,
+line-port,royal caribbean cruises from fort lauderdale,
+line-port,royal caribbean cruises from tampa,
+line-port,royal caribbean cruises from baltimore,
+line-port,royal caribbean cruises from los angeles,
+line-port,royal caribbean cruises from seattle,
+line-port,royal caribbean cruises from new orleans,
+line-port,royal caribbean cruises from san juan,
+line-dest,royal caribbean bahamas cruise,
+line-dest,royal caribbean caribbean cruise,
+line-dest,royal caribbean alaska cruise,
+line-dest,royal caribbean bermuda cruise,
+line-dest,royal caribbean mexico cruise,
+line-dest,royal caribbean mediterranean cruise,
+line-dest,royal caribbean perfect day at cococay cruise,private island demand
+line-duration,royal caribbean 3 day cruise,
+line-duration,royal caribbean 4 night cruise,
+line-duration,royal caribbean 5 night cruise,
+line-duration,royal caribbean 7 day cruise,
+line-duration,royal caribbean weekend cruise,
+line-duration,7 day bahamas cruise royal caribbean,worked-example keyword
+ships,icon of the seas cruise,
+ships,icon of the seas prices,
+ships,star of the seas cruise,
+ships,utopia of the seas cruise,
+ships,wonder of the seas cruise,
+ships,symphony of the seas cruise,
+ships,harmony of the seas cruise,
+ships,oasis of the seas cruise,
+ships,allure of the seas cruise,
+ships,odyssey of the seas cruise,
+ships,anthem of the seas cruise,
+ships,liberty of the seas cruise,
+ships,freedom of the seas cruise,
+ships,navigator of the seas cruise,
+ships,adventure of the seas cruise,
+call-intent,royal caribbean phone number,policed category - separate campaign
+call-intent,royal caribbean reservations,policed category
+call-intent,royal caribbean reservations phone number,policed category
+call-intent,call royal caribbean to book,policed category
+call-intent,royal caribbean booking help,
+call-intent,royal caribbean travel agent,cleanest call category
+call-intent,cruise travel agent,non-brand gold
+call-intent,cruise specialist near me,non-brand
+deals-timing,royal caribbean last minute cruise,
+deals-timing,royal caribbean kids sail free,
+deals-timing,cheap royal caribbean cruises,
+deals-timing,royal caribbean black friday deals,seasonal
+deals-timing,royal caribbean wave season,seasonal
+month-season,royal caribbean december cruises,
+month-season,royal caribbean christmas cruise,
+month-season,royal caribbean spring break cruise,
+month-season,royal caribbean summer 2027 cruises,
+audience,royal caribbean family cruise,
+audience,royal caribbean cruise for kids,
+audience,best royal caribbean ship for families,research-warm
+audience,royal caribbean adults only,verify - likely info about ship areas

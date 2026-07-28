@@ -1,0 +1,16 @@
+ship_id,line_id,ship_name,slug,class_or_note,size_tier,audience_fit,highlights,family_note,page_planned,status
+s001,rci,Icon of the Seas,icon-of-the-seas,Icon class,mega,family;first-timer,"Largest ship at sea; waterpark; eight neighborhoods","Surfside neighborhood built for young families",yes,seeded
+s002,rci,Utopia of the Seas,utopia-of-the-seas,Oasis class,mega,family;short-getaway,"Short-cruise flagship; huge activity range","Strong kids clubs and pools",yes,seeded
+s003,rci,Wonder of the Seas,wonder-of-the-seas,Oasis class,mega,family,"Oasis-class scale; park-lined promenade","Full family program",yes,seeded
+s014,rci,Odyssey of the Seas,odyssey-of-the-seas,Quantum Ultra class,large,family;couples,"Resort-style pool deck; indoor sports and arcade complex; observation pod","Bumper cars and laser tag are teen magnets",yes,seeded
+s015,rci,Oasis of the Seas,oasis-of-the-seas,Oasis class,mega,family,"The original mega-resort ship; open-air park at center","Classic full family program",yes,seeded
+s004,ccl,Carnival Celebration,carnival-celebration,Excel class,mega,family;value,"Newest-generation flagship; roller coaster at sea","Big waterworks and family zones",yes,seeded
+s005,ccl,Mardi Gras,mardi-gras,Excel class,mega,family;value,"First of the Excel class","Family fun positioning",yes,seeded
+s006,pcl,Sun Princess,sun-princess,Sphere class,large,premium;couples,"Newest Princess generation; glass dome","Family areas present; calmer pace",yes,seeded
+s007,cel,Celebrity Beyond,celebrity-beyond,Edge class,large,adult-premium,"Design-forward premium ship","Adult-leaning; kids welcome",yes,seeded
+s008,hal,Rotterdam,rotterdam,Pinnacle class,mid,classic;longer-itins,"Music-venue-rich classic ship","Quieter family profile",yes,seeded
+s009,msc,MSC Seascape,msc-seascape,Seaside EVO,mega,family;value,"Outdoor-focused design","Strong value for families",yes,seeded
+s010,cun,Queen Mary 2,queen-mary-2,Ocean liner,large,luxury;transatlantic,"The only true ocean liner in service","Formal culture; limited kids focus",yes,seeded
+s011,mvas,Margaritaville at Sea Islander,mas-islander,,mid,budget;short,"Casual island-themed short cruises","Casual family friendly",yes,seeded
+s012,vik,Viking Star,viking-star,Ocean series,small,adult-luxury,"Understated Scandinavian design","Adults only - 18+",yes,seeded
+s013,ssc,Silver Nova,silver-nova,Nova class,small,ultra-luxury,"All-inclusive ultra-lux","Not family positioned",yes,seeded

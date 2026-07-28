@@ -1,0 +1,11 @@
+line_id,line_name,slug,tier,priority,deposit_note,kids_policy,page_status
+rci,Royal Caribbean,royal-caribbean,mainstream-mega,1,"Typically $200-250 pp on 7-night sailings; refundable and non-refundable deposit fares price differently","Kids clubs included ages 3-17; nursery on select ships; kids-sail-free promos on select dates",build
+ccl,Carnival,carnival,mainstream-value,1,"Low deposits common on short sailings; Early Saver fares carry restrictions","Camp Ocean included ages 2-11; Circle C and Club O2 for teens",build
+pcl,Princess,princess,premium,2,"Deposit varies by fare type and length","Camp Discovery youth centers ages 3-17",build
+cel,Celebrity,celebrity,premium,2,"Deposit varies; non-refundable fares price lower","Camp at Sea ages 3-17; adult-leaning line overall",build
+hal,Holland America,holland-america,premium-classic,2,"Deposit varies by itinerary length","Club HAL ages 3-17; quieter family profile",build
+msc,MSC Cruises,msc-cruises,mainstream-euro,1,"Low deposits frequently promoted","Kids clubs by age band; strong kids-sail-free pricing tradition",build
+cun,Cunard,cunard,luxury-classic,3,"Higher deposits typical of premium fares","Limited kids facilities vs mainstream lines; formal culture",build
+mvas,Margaritaville at Sea,margaritaville-at-sea,budget-short,3,"Low deposits on short sailings","Casual short cruises; limited dedicated kids programming",build
+vik,Viking,viking,luxury-adult,3,"Higher deposits; adult-only line","No guests under 18 - exclude from all family pages",build
+ssc,Silversea,silversea,ultra-luxury,3,"Luxury deposit terms; largely all-inclusive fares","Limited children's facilities; not family-positioned",build

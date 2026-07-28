@@ -1,0 +1,9 @@
+itin_id,day_no,port_slug,port_label,arrive,depart,note
+i0001,1,cape-liberty,Cape Liberty (New York area),,3:00 PM,Embarkation day
+i0001,2,at-sea,At sea,,,Full ship day
+i0001,3,port-canaveral,Port Canaveral FL,11:59 AM,8:00 PM,Long evening in port
+i0001,4,cococay,Perfect Day at CocoCay,9:00 AM,5:00 PM,Private island day
+i0001,5,nassau,Nassau Bahamas,8:00 AM,5:00 PM,Capital city day
+i0001,6,at-sea,At sea,,,Sea day northbound
+i0001,7,at-sea,At sea,,,Sea day northbound
+i0001,8,cape-liberty,Cape Liberty (New York area),6:00 AM,,Disembarkation

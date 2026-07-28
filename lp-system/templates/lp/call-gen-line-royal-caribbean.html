@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Royal Caribbean Cruises — Call for Today's Best Fares | [AGENCY NAME]</title>
+<meta name="description" content="Every Royal Caribbean ship and itinerary compared in one free call by cruise specialists. Recent fares, current promos applied. Call 1-833-555-0100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#132430;--deep:#0B3050;--sea:#0E7C8C;--sea-soft:#E5F2F4;--foam:#F6FAFB;--coral:#E85D3D;--coral-d:#C2472A;--line:#DFE8EC;--gold:#FFD9A8;--ok:#1D7A4A;--r:14px;--maxw:1120px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15}
+a{text-decoration:none;color:var(--sea)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.imgbox{background:linear-gradient(135deg,#CFE3EA,#9FC4D4);display:flex;align-items:center;justify-content:center;color:#3E6375;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:8px}
+
+/* disclosure ribbon — REQUIRED for brand-term traffic, keep visible */
+.disclose{background:#FFF4E8;border-bottom:1px solid #F2DCC2;color:#7A5A33;font-size:12.5px;text-align:center;padding:7px 14px;font-weight:600}
+
+/* top bar */
+.topbar{background:var(--deep);color:#DCE9F2;font-size:13.5px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar .hours{font-weight:600}
+.topbar .hours .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ADE80;margin-right:6px}
+.topbar a{color:#fff;font-weight:800;font-size:15px}
+
+/* nav */
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;color:var(--deep)}
+.nav ul{display:flex;gap:22px;list-style:none;font-size:14px;font-weight:600}
+.nav ul a{color:#41586A}
+.nav .cta{background:var(--coral);color:#fff;padding:10px 16px;border-radius:9px;font-weight:800;font-size:14.5px}
+.nav .cta:hover{background:var(--coral-d)}
+
+/* hero */
+.hero{position:relative;height:430px}
+.hero .imgbox{position:absolute;inset:0;font-size:14px}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,44,.2) 25%,rgba(6,26,44,.78))}
+.hero .content{position:absolute;left:0;right:0;bottom:28px;color:#fff}
+.hero .linelogo{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--deep);font-weight:800;font-size:13px;border-radius:8px;padding:7px 12px;margin-bottom:10px}
+.hero h1{font-size:clamp(29px,4.4vw,46px);text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.hero .tagline{font-size:16.5px;color:#E4EFF6;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+
+/* CALL CARD (replaces search widget) */
+.callzone{margin-top:-52px;position:relative;z-index:5}
+.callzone .card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 50px rgba(8,32,53,.18);padding:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.callzone .main h2{font-size:21px;color:var(--deep);margin-bottom:4px}
+.callzone .main .why{font-size:14px;color:#5B707C;margin-bottom:14px}
+.bigcall{display:flex;align-items:center;gap:14px;background:var(--coral);color:#fff;border-radius:12px;padding:16px 20px;transition:background .15s}
+.bigcall:hover{background:var(--coral-d)}
+.bigcall .ic{font-size:30px}
+.bigcall .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:26px;color:#fff;line-height:1.1}
+.bigcall .lbl{font-size:12.5px;color:#FFE0D5;font-weight:700;letter-spacing:.03em}
+.callmeta{display:flex;gap:16px;margin-top:12px;font-size:12.5px;color:#5B707C;flex-wrap:wrap}
+.callmeta b{color:var(--ok)}
+.cb{border-left:1px solid var(--line);padding-left:24px}
+.cb h3{font-size:15px;color:var(--deep);margin-bottom:8px}
+.cb label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#63788A;margin:8px 0 4px}
+.cb input,.cb select{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:10px;font-size:14.5px;font-family:inherit;background:#FBFDFE}
+.cb input:focus,.cb select:focus{outline:2px solid var(--sea);border-color:var(--sea)}
+.cb button{width:100%;margin-top:12px;background:var(--deep);color:#fff;border:0;border-radius:9px;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+.cb button:hover{background:#0E3D63}
+.cb .fp{font-size:11px;color:#8B9AA4;margin-top:8px;line-height:1.5}
+
+/* intro */
+.intro{padding:38px 0 6px}
+.intro p{max-width:78ch;color:#3D5261;font-size:16.5px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.badge{background:var(--sea-soft);color:#0A5A66;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px}
+
+/* anchors */
+.anchors{position:sticky;top:60px;background:#fff;border-bottom:1px solid var(--line);z-index:50}
+.anchors ul{display:flex;gap:4px;list-style:none;overflow-x:auto}
+.anchors a{display:block;padding:14px 16px;font-size:14.5px;font-weight:700;color:#5A6E7E;border-bottom:3px solid transparent;white-space:nowrap}
+.anchors a:hover,.anchors a.on{color:var(--deep);border-bottom-color:var(--coral)}
+
+section.blk{padding:50px 0 26px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-bottom:6px}
+.blk h2{font-size:clamp(23px,3vw,31px);color:var(--deep);margin-bottom:20px}
+
+/* tabs + carousel */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{border:1.5px solid var(--line);background:#fff;color:#41586A;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer;font-family:inherit}
+.tab.on{background:var(--deep);border-color:var(--deep);color:#fff}
+.carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.pcard{min-width:240px;max-width:240px;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff}
+.pcard .imgbox{height:150px}
+.pcard .cap{padding:12px 14px;font-weight:800;font-size:14.5px;color:var(--deep)}
+.pcard .cap span{display:block;font-weight:400;font-size:12.5px;color:#63788A}
+
+/* facts */
+.facts{background:var(--deep);color:#fff;border-radius:18px;padding:34px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}
+.fact .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:40px;color:var(--gold)}
+.fact .l{font-size:13.5px;color:#BFD4E1;font-weight:700}
+
+/* cabins */
+.cabin-panel{display:grid;grid-template-columns:1fr 1fr;gap:26px;background:var(--foam);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.cabin-panel .imgbox{min-height:280px}
+.cabin-panel .txt{padding:26px}
+.cabin-panel h3{font-size:22px;color:var(--deep);margin-bottom:6px}
+.cabin-panel p{color:#3D5261;font-size:15px;margin-bottom:14px}
+.cabin-panel ul{list-style:none;display:grid;gap:8px;margin-bottom:18px}
+.cabin-panel li{padding-left:24px;position:relative;font-size:14.5px;color:#33485A}
+.cabin-panel li::before{content:"✓";position:absolute;left:0;color:var(--sea);font-weight:800}
+.btn{display:inline-block;background:var(--coral);color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:15.5px;border:0;border-radius:10px;padding:13px 22px;cursor:pointer}
+.btn:hover{background:var(--coral-d)}
+
+/* sailing cards — call version */
+.sailings{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
+.scard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.scard .imgbox{height:130px}
+.scard .b{padding:15px 16px 18px;display:flex;flex-direction:column;flex:1}
+.scard h3{font-size:16.5px;color:var(--deep);margin-bottom:3px}
+.scard .meta{font-size:13px;color:#63788A;margin-bottom:8px}
+.scard .price{margin-top:auto;display:flex;align-items:baseline;gap:7px}
+.scard .price .f{font-size:12px;color:#63788A;text-transform:uppercase;font-weight:700}
+.scard .price .a{font-family:'Bricolage Grotesque';font-weight:800;font-size:24px;color:var(--deep)}
+.scard .stamp{font-size:11px;color:#8B9AA4;margin:4px 0 10px}
+.scard .go{text-align:center;background:var(--coral);color:#fff;border-radius:9px;padding:11px;font-weight:800;font-size:14px}
+.scard .go:hover{background:var(--coral-d)}
+.scard .go small{display:block;font-weight:600;font-size:11px;color:#FFE0D5}
+
+/* why call */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.wcard{background:var(--foam);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.wcard .ic{font-size:24px;margin-bottom:8px}
+.wcard h3{font-size:16.5px;margin-bottom:4px;color:var(--deep)}
+.wcard p{font-size:14.5px;color:#51656F}
+
+/* phone banner */
+.phoneband{background:linear-gradient(90deg,var(--deep),#0E4A78);border-radius:18px;color:#fff;padding:30px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.phoneband h2{font-size:clamp(20px,2.6vw,27px)}
+.phoneband p{color:#BFD4E1;font-size:14.5px}
+.phoneband .bigcall{background:var(--coral)}
+
+/* footer */
+footer{background:#081F35;color:#8FA6B6;font-size:12.5px;padding:30px 0 96px;line-height:1.7}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-bottom:22px}
+footer h4{color:#DCE9F2;font-size:13px;margin-bottom:8px}
+footer ul{list-style:none;display:grid;gap:5px}
+footer a{color:#AFC5D3}
+footer .legal{border-top:1px solid #16344E;padding-top:16px}
+footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
+
+/* sticky call bar */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;padding:10px 14px;z-index:70;box-shadow:0 -8px 24px rgba(4,24,43,.14)}
+.sticky-cta .btn{flex:1;text-align:center;margin:0;font-size:15.5px;padding:14px}
+.sticky-cta .cb-btn{background:var(--deep);max-width:170px}
+.sticky-cta .cb-btn:hover{background:#0E3D63}
+
+@media(max-width:900px){
+  .nav ul{display:none}
+  .callzone .card{grid-template-columns:1fr}
+  .cb{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px}
+  .cabin-panel{grid-template-columns:1fr}
+  .hero{height:340px}
+}
+@media(min-width:901px){ .sticky-cta{display:none} }
+
+/* offer ribbon (auto-expiring) */
+.offerbar{background:linear-gradient(90deg,#B4530A,#E8603C);color:#fff;border-radius:12px;padding:13px 18px;display:flex;gap:12px;align-items:center;margin:18px 0 0;font-size:14.5px;font-weight:700}
+.offerbar .tag{background:rgba(255,255,255,.2);border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.06em}
+.offerbar .end{margin-left:auto;font-weight:600;font-size:12.5px;color:#FFE0D5;white-space:nowrap}
+.gridcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+</style>
+</head>
+<body>
+
+<div class="disclose">[AGENCY NAME] is an independent travel referral service, not a cruise line and not any cruise line's customer service. Quotes and bookings are provided by independent licensed travel agencies.</div>
+<div class="topbar">
+  <div class="wrap">
+    <span class="hours"><span class="dot"></span>Advisors answering now · 8am–11pm ET, every day</span>
+    <a href="tel:+18335550100">📞 1-833-555-0100</a>
+  </div>
+</div>
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">[AGENCY NAME]</span>
+    <ul>
+      <li><a href="#deals">Sailings & fares</a></li>
+      <li><a href="#know">Know before you go</a></li>
+      <li><a href="#whycall">Why call us</a></li>
+    </ul>
+    <a class="cta" href="tel:+18335550100">Call for today's fare</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="imgbox">IMG SLOT · large cruise ship at sea, generic (assets: theme/megaship-hero.webp — no livery/logo)</div>
+  <div class="shade"></div>
+  <div class="content">
+    <div class="wrap">
+      <span class="linelogo">🚢 ROYAL CARIBBEAN SPECIALISTS · ALL SHIPS</span>
+      <h1>Royal Caribbean cruises, booked smarter</h1>
+      <p class="tagline">Icon-class giants to quick Bahamas getaways — one call compares every ship, sail date and promo for your trip.</p>
+    </div>
+  </div>
+</header>
+
+<div class="callzone wrap">
+  <div class="card">
+    <div class="main">
+      <h2>Speak to a Royal Caribbean specialist</h2>
+      <p class="why">Tell us where and when — a licensed specialist compares every Royal Caribbean ship and current promotion, then quotes your exact total. Free, no pressure.</p>
+      <a class="bigcall" href="tel:+18335550100">
+        <span class="ic">📞</span>
+        <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
+      </a>
+      <div class="callmeta">
+        <span><b>●</b> Advisors available now</span>
+        <span>Average wait under 30 seconds</span>
+        <span>Licensed US partner agencies</span>
+      </div>
+    </div>
+    <div class="cb">
+      <h3>Prefer we call you?</h3>
+      <form action="#CALLBACK_ACTION" method="POST">
+        <label for="cbname">Name</label>
+        <input id="cbname" name="name" required autocomplete="name" placeholder="Jane Rivera">
+        <label for="cbphone">Phone</label>
+        <input id="cbphone" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-0100">
+        <label for="cbwhen">Best time to call</label>
+        <select id="cbwhen" name="calltime"><option>As soon as possible</option><option>This afternoon</option><option>This evening</option><option>Tomorrow morning</option></select>
+        <button type="submit">Request a callback</button>
+        <p class="fp">By submitting you agree to be contacted by phone or SMS about your cruise inquiry. See our Calling & SMS Consent policy.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="intro wrap">
+  <p>Royal Caribbean runs the biggest ships afloat and some of the sharpest short-cruise prices on the water — which is exactly why picking right matters. Ship class, sail month and cabin category swing your total by hundreds. A specialist who books this line every week sorts it in one call.</p>
+  <div class="badges">
+    <span class="badge">Families & first-timers</span><span class="badge">Biggest ships at sea</span><span class="badge">Loyalty points intact</span><span class="badge">Phone-only promos applied</span>
+  </div>
+  <div id="offerSlot"></div>
+</section>
+<div class="anchors"><div class="wrap"><ul>
+  <li><a href="#deals" class="on">Sailings & fares</a></li>
+  <li><a href="#classes">Ship classes</a></li>
+  <li><a href="#facts">Fine print</a></li>
+  <li><a href="#whycall">Why call us</a></li>
+</ul></div></div>
+<section class="blk wrap" id="deals">
+  <p class="kicker">Sailings & fares</p>
+  <h2>Royal Caribbean sailings we're quoting this week</h2>
+  <div class="sailings" id="dealGrid"></div>
+</section>
+<section class="blk wrap" id="classes">
+  <p class="kicker">Ship classes</p>
+  <h2>Pick your ship class — it changes everything</h2>
+  <div class="tabs" id="classTabs">
+    <button class="tab on" data-c="icon">Icon & Oasis</button>
+    <button class="tab" data-c="quantum">Quantum & Anthem</button>
+    <button class="tab" data-c="voyager">Voyager & classics</button>
+  </div>
+  <div class="cabin-panel">
+    <div class="imgbox" id="classImg">IMG SLOT · generic ship class photo</div>
+    <div class="txt">
+      <h3 id="classTitle"></h3>
+      <p id="classDesc"></p>
+      <ul id="classList"></ul>
+      <a class="btn" href="tel:+18335550100">📞 Which ship fits us? Ask</a>
+    </div>
+  </div>
+</section>
+<section class="blk wrap" id="facts">
+  <p class="kicker">The fine print</p>
+  <h2>The details that change your final bill</h2>
+  <div class="gridcards">
+    <div class="wcard"><div class="ic">💵</div><h3>Gratuities</h3><p>Added per person, per day unless prepaid. We'll tell you the current rate and whether prepaying makes sense for you.</p></div>
+    <div class="wcard"><div class="ic">🥤</div><h3>Drink packages</h3><p>Priced per day for the whole cruise, all adults in the cabin. Sometimes worth it, often not — we do the math on the call.</p></div>
+    <div class="wcard"><div class="ic">📅</div><h3>Deposits & final payment</h3><p>Refundable and non-refundable deposit fares price differently. The deadline that matters is final payment — we track it for you.</p></div>
+    <div class="wcard"><div class="ic">👑</div><h3>Loyalty</h3><p>Your Crown & Anchor number attaches to any booking made through a partner agency — points and perks unchanged.</p></div>
+  </div>
+</section>
+
+<section class="blk wrap" id="whycall">
+  <p class="kicker">Why call us</p>
+  <h2>What a 10-minute call gets you that a website can't</h2>
+  <div class="why">
+    <div class="wcard"><div class="ic">🏷️</div><h3>Today's real price</h3><p>Fares reprice constantly. A specialist quotes live availability on the call, including promos that never appear on public sites.</p></div>
+    <div class="wcard"><div class="ic">🧭</div><h3>A specialist, not a script</h3><p>Ships, cabins, seasons and the fine print that changes your final bill, compared for you by someone who does this daily.</p></div>
+    <div class="wcard"><div class="ic">🤝</div><h3>No pressure, ever</h3><p>Free to call, no obligation, and we never take payment for travel. Bookings are handled by licensed partner agencies.</p></div>
+    <div class="wcard"><div class="ic">🛡️</div><h3>Straight answers</h3><p>Gratuities, drink packages, deposits, cancellation windows, explained plainly before you commit to anything.</p></div>
+  </div>
+</section>
+
+<section class="blk faq wrap">
+  <h2>Booking Royal Caribbean — quick answers</h2>
+  <details><summary>Is calling more expensive than booking on the cruise line's site?</summary><p>No — the fare is the cruise line's fare either way. The call adds comparison, promo-stacking and a human who handles changes afterward.</p></details>
+  <details><summary>Will I keep my loyalty benefits?</summary><p>Yes. Your loyalty number attaches to the booking exactly as if you booked direct.</p></details>
+  <details><summary>Which ship is best for families?</summary><p>Usually the biggest and newest — but the honest answer depends on your kids' ages and your budget. That's a two-minute conversation.</p></details>
+  <details><summary>Can you help if the price drops after booking?</summary><p>Before final payment, usually yes — repricing, upgrades or credit. The partner agency that books you handles it.</p></details>
+</section>
+
+<section class="blk wrap">
+  <div class="phoneband">
+    <div>
+      <h2>Ready when you are — one call, best options, done.</h2>
+      <p>8am–11pm ET, every day · Free quotes · No obligation · Se habla español</p>
+    </div>
+    <a class="bigcall" href="tel:+18335550100">
+      <span class="ic">📞</span>
+      <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL NOW</span></span>
+    </a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="legal">
+      <p class="agency-line">[AGENCY NAME] — independent cruise information & referral service</p>
+      <p>Prices shown are per-person lead-in fares based on double occupancy, observed from publicly available sources on the date stamped with each offer. They exclude taxes, fees and port expenses, change frequently, and are not an offer to sell travel. All quotes, availability, bookings and payments are handled by independent licensed travel agencies. We do not sell, book or take payment for travel. All cruise line and ship names are property of their respective owners, used descriptively only; we are not affiliated with or endorsed by any cruise line. <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Calling & SMS Consent</a></p>
+    </div>
+  </div>
+</footer>
+<div class="sticky-cta">
+  <a class="btn" href="tel:+18335550100">📞 Call now · free quote</a>
+  <a class="btn cb-btn" href="#CALLBACK_ACTION" onclick="document.getElementById('cbname').focus();return false;">Callback</a>
+</div>
+
+<script>
+
+const PHONE_TEL = "+18335550100";
+const PHONE_DISPLAY = "1-833-555-0100";
+const pricesCheckedOn = "July 27";
+
+/* ===== RATES DATA — EDIT WEEKLY ===== */
+const DEALS = [
+  { name: "4-Night Bahamas & Perfect Day", meta: "Utopia of the Seas · Port Canaveral", from: 249, img: "IMG SLOT · Bahamas beach" },
+  { name: "7-Night Western Caribbean & Perfect Day", meta: "Icon of the Seas · Miami", from: 983, img: "IMG SLOT · Caribbean aerial" },
+  { name: "6-Night Western Caribbean", meta: "Icon-class · Galveston", from: 1052, img: "IMG SLOT · Cozumel pier" },
+  { name: "7-Night Alaska Glacier", meta: "Quantum-class · Seattle", from: 799, img: "IMG SLOT · Alaska glacier" },
+  { name: "5-Night Western Caribbean Holiday", meta: "Liberty of the Seas · Galveston", from: 584, img: "IMG SLOT · sunset at sea" },
+  { name: "7-Night Bermuda & New England", meta: "From Cape Liberty NJ", from: 699, img: "IMG SLOT · Bermuda shoreline" }
+];
+const OFFERS = [
+  { text: "Example: kids sail free on select 2026 Caribbean sailings", start: "2026-07-01", end: "2026-08-31", endLabel: "Aug 31" }
+];
+/* ===== END RATES DATA ===== */
+
+function renderDeals(){
+  const grid = document.getElementById('dealGrid');
+  grid.innerHTML = DEALS.map(d => `
+    <article class="scard">
+      <div class="imgbox">${d.img}</div>
+      <div class="b">
+        <h3>${d.name}</h3>
+        <p class="meta">${d.meta}</p>
+        <div class="price"><span class="f">Recently from</span><span class="a">$${d.from.toLocaleString()}</span></div>
+        <p class="stamp">Fare seen ${pricesCheckedOn} · changes daily · promos may lower it</p>
+        <a class="go" href="tel:${PHONE_TEL}">📞 Call for today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
+      </div>
+    </article>`).join('');
+}
+renderDeals();
+function renderOffers(){
+  const el = document.getElementById('offerSlot'); if(!el) return;
+  const today = new Date().toISOString().slice(0,10);
+  const live = OFFERS.filter(o => o.start <= today && today <= o.end);
+  el.innerHTML = live.map(o => `
+    <div class="offerbar"><span class="tag">LIMITED OFFER</span><span>${o.text}</span><span class="end">Ends ${o.endLabel} · call to apply</span></div>`).join('');
+}
+renderOffers();
+
+const CLASSES = {
+  icon:{t:"Icon & Oasis class — the floating resorts",d:"The biggest ships at sea: waterparks, park-lined promenades, headline shows. The ship is the destination.",l:["Best for families & first-timers","Balconies sell out first — book early","Widest dining and activity range","Premium pricing, premium payoff"]},
+  quantum:{t:"Quantum & Anthem class — the innovators",d:"Indoor pools, skydiving simulators, glass observation pods — built for variable weather, which is why they own Alaska and the Northeast.",l:["Best for Alaska & cooler routes","Great tech and indoor spaces","Slightly calmer pace than Oasis","Strong shoulder-season value"]},
+  voyager:{t:"Voyager & classic ships — the values",d:"The classic big-ship experience at the sharpest prices, often on shorter sailings — ideal for testing whether cruising is your thing.",l:["Lowest lead-in fares in the fleet","Short 3–5 night getaways","Ice shows, rock walls, the classics","Perfect first-cruise budget pick"]}
+};
+function renderClass(k){const c=CLASSES[k];document.getElementById('classTitle').textContent=c.t;document.getElementById('classDesc').textContent=c.d;document.getElementById('classList').innerHTML=c.l.map(x=>`<li>${x}</li>`).join('');document.getElementById('classImg').textContent=`IMG SLOT · ${c.t.split(' — ')[0]}`;}
+document.getElementById('classTabs').addEventListener('click',e=>{if(!e.target.dataset.c)return;document.querySelectorAll('#classTabs .tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');renderClass(e.target.dataset.c);});
+renderClass('icon');
+const links=[...document.querySelectorAll('.anchors a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io2=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+en.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>s&&io2.observe(s));
+</script>
+</body>
+</html>

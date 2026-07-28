@@ -1,0 +1,5 @@
+asset_id,subject_type,subject_slug,file,source,license_note,alt_text,status
+a-cl-01,port,cape-liberty,img/port/cape-liberty-hero.webp,pexels,Pexels license commercial ok,"Manhattan skyline seen across the harbor from Bayonne",to-source
+a-cc-01,dest,cococay,img/dest/private-island-hero.webp,pexels,Pexels license commercial ok,"White sand Bahamian beach with clear turquoise water",to-source
+a-na-01,port,nassau,img/port/nassau-hero.webp,unsplash,Unsplash license commercial ok,"Colorful waterfront buildings in Nassau Bahamas",to-source
+a-d-bah,dest,bahamas,img/dest/bahamas-hero.webp,pexels,Pexels license commercial ok,"Aerial of Bahamian islands and sandbars",to-source
