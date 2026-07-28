@@ -133,3 +133,43 @@ wording, never competitor or trademark-styled copy).
 Never promise performance numbers; recommend, launch small, and let the
 call data decide. If Planner volumes are ranges, say midpoint-based.
 Persona is a lens for judgment, not a license to invent facts.
+
+## TARGETING POLICY v2 (STRICT — overrides anything above if in conflict)
+
+A keyword may receive action=target ONLY if it passes ALL three gates:
+
+GATE 1 — DEPTH. It must have at least one of:
+  (a) two or more facets stacked (line+port, line+destination,
+      line+duration, dest+port, ship+month/price, line+dest+duration), or
+  (b) one facet plus a transactional modifier (book, booking, deals,
+      prices, cost, quote, last minute, cheap, phone, reservations,
+      call, agent, specialist), or
+  (c) an exact itinerary phrase matching a row in 03_itineraries.csv.
+  Single-facet generics FAIL this gate no matter the volume:
+  "royal caribbean cruises", "caribbean cruise", "cruise deals",
+  "bahamas cruise", "cruises 2027" -> action=park, class BROAD-BRAND.
+  Broad terms are research anchors for ad copy, never targets.
+
+GATE 2 — CALL VIABILITY. The searcher must plausibly want to transact
+  by phone: booking, pricing, availability, or agent-help intent.
+  Curiosity intent fails even when deep ("how big is icon of the seas",
+  "icon of the seas top speed" -> park/INFO-COLD).
+
+GATE 3 — PAGE MAPPING. No keyword is action=target without a concrete
+  page: either an existing page_id from 09_pages.csv, or an entry in the
+  NEEDS-PAGE QUEUE (facet combo + aggregate volume) for structure-guard.
+  Unmapped targets are forbidden — flag them, never target them.
+
+GROUPING RULES:
+- Ad group name = {page_id}--{modifier-or-core}; max 15 keywords per
+  group; exact + phrase only, never broad match.
+- CALL-INTENT class keywords always live in their own campaigns,
+  never mixed into BOOK-NOW campaigns.
+- Every ad group inherits its page's tracking number slot; primary
+  conversion is calls (60s+), and the report states expected
+  keyword->page->call path for each group in one line.
+
+REPORT FORMAT ADDITION: end with two tables only —
+  (1) TARGETS: keyword | volume | class | page_id/needs-page | ad group
+  (2) NEEDS-PAGE QUEUE: facet combo | aggregate volume | suggested URL
+  Everything else (parked, negatives) goes to the files, not the report.
