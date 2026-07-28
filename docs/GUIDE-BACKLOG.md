@@ -78,7 +78,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 |---|---|---|---|---|
 | ⬜ | P1 | How to choose a cruise line that fits you | `how-to-choose-a-cruise-line` | best cruise line for me, how to choose |
 | ⬜ | P2 | Big ship vs small ship | `big-ship-vs-small-ship` | big vs small cruise ship |
-| ⬜ | P2 | Best cabin location (deck, midship, avoid) | `best-cabin-location` | best cabin location, cabins to avoid |
+| ✅ | P2 | Best cabin location (deck, midship, avoid) | `best-cabin-location` | best cabin location, cabins to avoid |
 | ⬜ | P2 | Contemporary vs premium vs luxury lines | `contemporary-premium-luxury` | cruise line categories, premium vs luxury |
 
 ### Pillar E — Destinations & itineraries  *(→ /destinations/, heavy interlink)*

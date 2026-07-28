@@ -185,6 +185,13 @@
         "source_url": "https://www.pexels.com/photo/15322441/",
         "image_url": "https://images.pexels.com/photos/15322441/pexels-photo-15322441.jpeg?auto=compress&cs=tinysrgb&w=1600",
         "license": "Pexels License (free for commercial use, no attribution required)"
+      },
+      {
+        "file": "best-cabin-location.jpg",
+        "subject": "Top-down aerial of a cruise ship showing its full deck layout",
+        "source_url": "https://www.pexels.com/photo/18573229/",
+        "image_url": "https://images.pexels.com/photos/18573229/pexels-photo-18573229.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "license": "Pexels License (free for commercial use, no attribution required)"
       }
     ]
   }

@@ -683,3 +683,225 @@ register("choosing-a-cabin", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("best-cabin-location", {
+    "cat": "planning", "hero": "best-cabin-location.jpg", "published": "2026-07-28", "updated": "2026-07-28",
+    "title": {"en": "Best cabin location: deck, midship, and what to avoid",
+              "es": "Mejor ubicación del camarote: cubierta, centro del barco y qué evitar"},
+    "dek": {
+        "en": "Two cabins in the same category can give you very different cruises depending on where they "
+              "sit. Deck height, how far forward or aft you are, and what sits directly above and below your "
+              "room all shape how much you sleep, how much you feel the sea, and how far you walk. Here is "
+              "how to read a deck plan and pick well.",
+        "es": "Dos camarotes de la misma categoría pueden darte cruceros muy distintos según dónde estén. La "
+              "altura de la cubierta, qué tan adelante o atrás estás, y qué hay justo arriba y abajo de tu "
+              "habitación moldean cuánto duermes, cuánto sientes el mar y cuánto caminas. Aquí te mostramos "
+              "cómo leer un plano de cubiertas y elegir bien.",
+    },
+    "takeaways": {
+        "en": [
+            "Category is your room type (interior, oceanview, balcony, suite). Location is where that room sits on the ship, and it matters just as much.",
+            "Midship and lower decks feel the least motion, which is the single biggest factor if you are prone to seasickness.",
+            "Higher decks put you near the pools and buffet but also near the noise and the most movement; lower decks are calmer and central to boarding and dining.",
+            "The cabins to avoid are the ones directly above or below noisy spaces: the theater, nightclub, buffet, galley, pool deck or engine areas.",
+            "Always read the deck plan and check what sits immediately above and below your cabin before you book.",
+        ],
+        "es": [
+            "La categoría es tu tipo de habitación (interior, vista al mar, balcón, suite). La ubicación es dónde está esa habitación en el barco, y importa igual.",
+            "El centro del barco y las cubiertas bajas sienten menos movimiento, el factor más importante si te mareas.",
+            "Las cubiertas altas te dejan cerca de las piscinas y el buffet, pero también del ruido y del mayor movimiento; las bajas son más tranquilas y centrales para embarcar y comer.",
+            "Los camarotes a evitar son los que están justo arriba o abajo de espacios ruidosos: el teatro, la discoteca, el buffet, la cocina, la cubierta de piscina o las zonas de motores.",
+            "Siempre lee el plano de cubiertas y revisa qué hay justo arriba y abajo de tu camarote antes de reservar.",
+        ],
+    },
+    "sections": [
+        {"id": "category-vs-location", "h2": {"en": "Category is the room. Location is where it sits.", "es": "La categoría es la habitación. La ubicación es dónde está."},
+         "html": {
+            "en": "<p>When people talk about picking a cabin, they usually mean the <b>category</b>: interior, "
+                  "oceanview, balcony or suite. That is covered in "
+                  + link("/en/guides/choosing-a-cabin/", "choosing a cabin") + ". This guide is about the other "
+                  "half of the decision, the part that is easy to overlook: <b>where on the ship that cabin actually "
+                  "sits.</b></p>"
+                  + define("Cabin location",
+                           "the position of your stateroom on the ship, described by its deck (how high up) and how "
+                           "far forward, aft or midship it is. Two identical cabins in different locations can feel "
+                           "like different trips.")
+                  + "<p>Location shapes three things you will notice every day: how much motion you feel, how much "
+                  "noise reaches you, and how far you walk to the places you use most. Getting it right costs nothing "
+                  "extra; it just takes reading the deck plan with a little knowledge.</p>",
+            "es": "<p>Cuando la gente habla de elegir camarote, suele referirse a la <b>categoría</b>: interior, "
+                  "vista al mar, balcón o suite. Eso lo cubre "
+                  + link("/es/guides/choosing-a-cabin/", "cómo elegir tu camarote") + ". Esta guía trata la otra "
+                  "mitad de la decisión, la que es fácil pasar por alto: <b>dónde está ese camarote en el barco.</b></p>"
+                  + define("Ubicación del camarote",
+                           "la posición de tu camarote en el barco, según su cubierta (qué tan alto) y qué tan "
+                           "adelante, atrás o al centro está. Dos camarotes idénticos en ubicaciones distintas pueden "
+                           "sentirse como viajes diferentes.")
+                  + "<p>La ubicación moldea tres cosas que notarás cada día: cuánto movimiento sientes, cuánto ruido "
+                  "te llega y cuánto caminas hasta los lugares que más usas. Acertar no cuesta nada extra; solo "
+                  "requiere leer el plano de cubiertas con un poco de conocimiento.</p>",
+         }},
+        {"id": "deck-height", "h2": {"en": "How high up: choosing your deck", "es": "Qué tan alto: elegir tu cubierta"},
+         "html": {
+            "en": "<p>Decks are numbered from the bottom up, and height is a genuine trade-off rather than 'higher "
+                  "is better'.</p>"
+                  + vcards([
+                      ("⬆️", "Higher decks", "Quick access to the pool deck, buffet and top-deck activity, and often better views. The downside: you feel more motion up high, and you may hear foot traffic or dragging chairs from the deck above."),
+                      ("⬇️", "Lower decks", "Calmer and steadier, closer to the gangway when you board and to the main dining and theater. Trade-off: fewer views and a longer trip up to the sun."),
+                      ("↕️", "The middle decks", "Often the sweet spot: a reasonable walk to everything, less motion than the top, and usually surrounded by other cabins rather than public venues."),
+                  ])
+                  + "<p>If you love being first in the pool each morning, go high. If steadiness and an easy walk to "
+                  "dinner matter more, the middle and lower decks reward you.</p>",
+            "es": "<p>Las cubiertas se numeran de abajo hacia arriba, y la altura es un verdadero equilibrio, no un "
+                  "simple 'más alto es mejor'.</p>"
+                  + vcards([
+                      ("⬆️", "Cubiertas altas", "Acceso rápido a la piscina, el buffet y la actividad de la cubierta superior, y a menudo mejores vistas. La desventaja: sientes más movimiento arriba, y puedes oír pasos o sillas arrastrándose en la cubierta de encima."),
+                      ("⬇️", "Cubiertas bajas", "Más tranquilas y estables, cerca de la pasarela al embarcar y del comedor principal y el teatro. A cambio: menos vistas y una subida más larga hasta el sol."),
+                      ("↕️", "Las cubiertas del medio", "A menudo el punto ideal: una caminata razonable a todo, menos movimiento que arriba, y por lo general rodeadas de otros camarotes en vez de espacios públicos."),
+                  ])
+                  + "<p>Si te encanta ser el primero en la piscina cada mañana, ve alto. Si la estabilidad y una "
+                  "caminata fácil a la cena importan más, las cubiertas del medio y bajas te premian.</p>",
+         }},
+        {"id": "fore-aft-mid", "h2": {"en": "Forward, midship or aft", "es": "Proa, centro o popa"},
+         "html": {
+            "en": "<p>Just as important as height is where you sit along the length of the ship.</p>"
+                  + vcards([
+                      ("🎯", "Midship", "The steadiest spot on any ship and the most central. You feel the least motion here and walk the shortest distance to most venues. It is the safe choice, especially for a first cruise."),
+                      ("⛵", "Forward (bow)", "Quiet and often roomier, with head-on sea views. You feel more pitching motion here, especially in rougher water, and you may hear the anchor or bow thruster when arriving in port."),
+                      ("🌊", "Aft (stern)", "Prized for the wide wake views off the back of the ship and handy for aft dining. You may feel more movement and, on some ships, a faint vibration or engine hum low and far back."),
+                  ])
+                  + tip("If you are choosing mainly to avoid motion, prioritise midship and a lower or middle deck "
+                        "over any particular view. You can always walk to a view; you cannot walk away from a rolling sea."),
+            "es": "<p>Tan importante como la altura es dónde te ubicas a lo largo del barco.</p>"
+                  + vcards([
+                      ("🎯", "Centro del barco", "El punto más estable de cualquier barco y el más central. Aquí sientes el menor movimiento y caminas la menor distancia a la mayoría de los lugares. Es la opción segura, sobre todo para un primer crucero."),
+                      ("⛵", "Proa (adelante)", "Tranquila y a menudo más amplia, con vistas de frente al mar. Aquí sientes más cabeceo, sobre todo con mar picada, y puedes oír el ancla o el propulsor de proa al llegar a puerto."),
+                      ("🌊", "Popa (atrás)", "Apreciada por las amplias vistas de la estela detrás del barco y práctica para el comedor de popa. Puedes sentir más movimiento y, en algunos barcos, una leve vibración o zumbido de motor abajo y muy atrás."),
+                  ])
+                  + tip("Si eliges sobre todo para evitar el movimiento, prioriza el centro del barco y una cubierta "
+                        "baja o media por encima de cualquier vista. Siempre puedes caminar hacia una vista; no puedes "
+                        "alejarte de un mar que se mueve."),
+         }},
+        {"id": "motion", "h2": {"en": "If you are worried about seasickness", "es": "Si te preocupa el mareo"},
+         "html": {
+            "en": "<p>Motion is the number one reason cabin location matters. A ship pivots least around its centre, "
+                  "both along its length and its height, so the <b>lower and more midship</b> you are, the less you "
+                  "feel it. Someone prone to seasickness will almost always be more comfortable in a low, central "
+                  "cabin than in a high, forward or far-aft one, even on the same sailing.</p>"
+                  + watch("An inside cabin with no window can make motion feel worse for some people, because your "
+                          "eyes lose the horizon. If you are motion-sensitive, a low midship cabin with a window or "
+                          "balcony often beats a high interior one. Choosing calmer waters and seasons helps too; see "
+                          + link("/en/guides/when-to-cruise/", "when to cruise") + "."),
+            "es": "<p>El movimiento es la razón número uno por la que importa la ubicación. Un barco pivota menos "
+                  "alrededor de su centro, tanto a lo largo como en altura, así que cuanto más <b>bajo y al centro</b> "
+                  "estés, menos lo sientes. Alguien propenso al mareo casi siempre estará más cómodo en un camarote "
+                  "bajo y central que en uno alto, de proa o muy a popa, aun en el mismo crucero.</p>"
+                  + watch("Un camarote interior sin ventana puede hacer que el movimiento se sienta peor para algunas "
+                          "personas, porque tus ojos pierden el horizonte. Si eres sensible al movimiento, un camarote "
+                          "bajo y al centro con ventana o balcón suele ganarle a uno interior alto. Elegir aguas y "
+                          "temporadas más tranquilas también ayuda; mira "
+                          + link("/es/guides/when-to-cruise/", "cuándo hacer un crucero") + "."),
+         }},
+        {"id": "noise-traps", "h2": {"en": "The cabins to avoid: noise traps", "es": "Los camarotes a evitar: trampas de ruido"},
+         "html": {
+            "en": "<p>The most common regret is a noisy cabin, and it is entirely avoidable by reading the deck "
+                  "plan. Before you book, look at what sits <b>directly above and directly below</b> your room, and be "
+                  "wary of cabins next to or under these:</p>"
+                  "<ul>"
+                  "<li><b>The pool deck or sports areas</b> above you: dragging deck chairs early and late, and foot traffic.</li>"
+                  "<li><b>The buffet or galley</b>: early-morning clatter and carts.</li>"
+                  "<li><b>The theater, nightclub or atrium</b>: music and crowds until late.</li>"
+                  "<li><b>Elevators, stairwells and laundry rooms</b>: constant passing traffic.</li>"
+                  "<li><b>The very front, near the bow thruster and anchor</b>: mechanical noise when docking early in the morning.</li>"
+                  "</ul>"
+                  + "<p>A cabin sandwiched between other cabins, on a deck of cabins above and below, is usually the "
+                  "quietest place to be.</p>",
+            "es": "<p>El arrepentimiento más común es un camarote ruidoso, y es totalmente evitable leyendo el plano "
+                  "de cubiertas. Antes de reservar, mira qué hay <b>justo arriba y justo abajo</b> de tu habitación, y "
+                  "desconfía de los camarotes junto a o debajo de esto:</p>"
+                  "<ul>"
+                  "<li><b>La cubierta de piscina o zonas deportivas</b> encima de ti: sillas arrastrándose temprano y tarde, y paso de gente.</li>"
+                  "<li><b>El buffet o la cocina</b>: ruido y carritos de madrugada.</li>"
+                  "<li><b>El teatro, la discoteca o el atrio</b>: música y multitudes hasta tarde.</li>"
+                  "<li><b>Ascensores, escaleras y lavanderías</b>: tránsito constante.</li>"
+                  "<li><b>La parte delantera, cerca del propulsor de proa y el ancla</b>: ruido mecánico al atracar temprano en la mañana.</li>"
+                  "</ul>"
+                  + "<p>Un camarote entre otros camarotes, en una cubierta con camarotes arriba y abajo, suele ser el "
+                  "lugar más silencioso.</p>",
+         }},
+        {"id": "special-cases", "h2": {"en": "Obstructed views, connecting rooms and guarantees", "es": "Vistas obstruidas, habitaciones conectadas y garantías"},
+         "html": {
+            "en": vcards([
+                      ("🚧", "Obstructed-view cabins", "Some oceanview and balcony cabins have a lifeboat or structure partly blocking the view. They are worth knowing about, but only you can decide if the view matters for how you will use the room."),
+                      ("🚪", "Connecting cabins", "Great for families who want adjoining rooms, but the connecting door lets sound through. If you are not using both rooms, a non-connecting cabin is quieter."),
+                      ("🎲", "Guarantee cabins", "You book a category and let the line assign the exact cabin later. It can work out well, but you give up control over deck and position, so it is not the choice if location is your priority."),
+                  ])
+                  + "<p>For how these fit into the wider room decision, from interior to suite, read "
+                  + link("/en/guides/choosing-a-cabin/", "choosing a cabin") + ". If anyone in your party has "
+                  "mobility needs, a cabin near a midship elevator bank is usually easiest; see "
+                  + link("/en/guides/accessibility/", "accessible cruising") + ".</p>",
+            "es": vcards([
+                      ("🚧", "Camarotes con vista obstruida", "Algunos camarotes con vista al mar o balcón tienen un bote salvavidas o una estructura que bloquea parte de la vista. Vale la pena saberlo, pero solo tú decides si la vista importa según cómo usarás la habitación."),
+                      ("🚪", "Camarotes conectados", "Ideales para familias que quieren habitaciones contiguas, pero la puerta de conexión deja pasar el sonido. Si no usas ambas habitaciones, un camarote sin conexión es más silencioso."),
+                      ("🎲", "Camarotes garantizados", "Reservas una categoría y dejas que la línea asigne el camarote exacto después. Puede salir bien, pero cedes el control de la cubierta y la posición, así que no es la opción si la ubicación es tu prioridad."),
+                  ])
+                  + "<p>Para ver cómo encajan en la decisión más amplia de la habitación, de interior a suite, lee "
+                  + link("/es/guides/choosing-a-cabin/", "cómo elegir tu camarote") + ". Si alguien de tu grupo "
+                  "tiene necesidades de movilidad, un camarote cerca de un grupo de ascensores del centro suele ser lo "
+                  "más fácil; mira " + link("/es/guides/accessibility/", "cruceros accesibles") + ".</p>",
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>Pick your category for the room you want, then pick your location for how you want the cruise "
+                  "to feel. Midship and lower for the least motion, higher for the action, and always check what sits "
+                  "above and below to dodge the noise. Read the deck plan once with these points in mind and you will "
+                  "avoid the mistakes that quietly spoil a good cabin.</p>"
+                  + "<p>When you want a second pair of eyes on a specific deck plan, which cabins on a given ship are "
+                  "the quiet ones and which to skip, that is exactly the kind of thing a licensed specialist knows "
+                  "sailing by sailing, and will walk you through in one call, free, with no obligation, and never a "
+                  "payment to us.</p>",
+            "es": "<p>Elige tu categoría por la habitación que quieres, y luego tu ubicación por cómo quieres que se "
+                  "sienta el crucero. Centro y bajo para el menor movimiento, más alto para la acción, y siempre revisa "
+                  "qué hay arriba y abajo para esquivar el ruido. Lee el plano de cubiertas una vez con estos puntos en "
+                  "mente y evitarás los errores que en silencio arruinan un buen camarote.</p>"
+                  + "<p>Cuando quieras un segundo par de ojos sobre un plano de cubiertas específico, qué camarotes de "
+                  "un barco dado son los silenciosos y cuáles saltarte, eso es justo lo que un especialista con licencia "
+                  "conoce crucero por crucero, y te lo explicará en una llamada, gratis, sin compromiso, y nunca un pago "
+                  "para nosotros.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What is the best cabin location on a cruise ship?", "For most people, midship on a lower or middle deck is the best all-round location: it has the least motion, a short walk to most venues, and is usually surrounded by other cabins rather than noisy public spaces. The 'best' spot then shifts with your priorities, whether that is views, quiet or being near the pool."),
+            ("Which cabins have the least motion?", "Cabins that are low and midship feel the least movement, because a ship pivots least around its centre. If you are prone to seasickness, favour a low, central cabin over a high, forward or far-aft one, and consider a cabin with a window or balcony so your eyes keep the horizon."),
+            ("Are higher decks better?", "Not automatically. Higher decks are handy for the pool and buffet and often have better views, but they feel more motion and can be noisier. Lower decks are steadier and closer to boarding and dining. It is a trade-off between convenience and calm, not a simple upgrade."),
+            ("Which cabins should I avoid?", "Avoid cabins directly above or below noisy spaces: the pool deck, buffet, galley, theater, nightclub or atrium, and those beside elevators, stairwells or laundry rooms. The front of the ship near the bow thruster can be noisy when docking. Reading the deck plan for what sits above and below prevents most surprises."),
+            ("Is forward or aft better on a cruise ship?", "Midship is steadiest. Forward cabins are quiet with head-on views but feel more pitching and some bow noise in port. Aft cabins offer wake views and are handy for aft dining but can have more movement and, on some ships, a faint vibration. Choose by what you value most and how sensitive you are to motion."),
+            ("What is a guarantee cabin?", "A guarantee means you book a cabin category and let the cruise line assign the specific cabin later. You are guaranteed at least that category, sometimes ending up higher, but you give up the ability to choose your deck and position. It is not the right choice if a specific location matters to you."),
+        ],
+        "es": [
+            ("¿Cuál es la mejor ubicación de camarote en un crucero?", "Para la mayoría, el centro del barco en una cubierta baja o media es la mejor ubicación general: tiene el menor movimiento, una caminata corta a la mayoría de los lugares y suele estar rodeada de otros camarotes y no de espacios públicos ruidosos. La 'mejor' luego cambia según tus prioridades, ya sean las vistas, la tranquilidad o estar cerca de la piscina."),
+            ("¿Qué camarotes tienen menos movimiento?", "Los camarotes bajos y al centro sienten el menor movimiento, porque un barco pivota menos alrededor de su centro. Si te mareas, prefiere un camarote bajo y central sobre uno alto, de proa o muy a popa, y considera uno con ventana o balcón para que tus ojos conserven el horizonte."),
+            ("¿Son mejores las cubiertas altas?", "No automáticamente. Las cubiertas altas son prácticas para la piscina y el buffet y suelen tener mejores vistas, pero sienten más movimiento y pueden ser más ruidosas. Las bajas son más estables y cercanas al embarque y al comedor. Es un equilibrio entre comodidad y calma, no una simple mejora."),
+            ("¿Qué camarotes debo evitar?", "Evita los camarotes justo arriba o abajo de espacios ruidosos: la cubierta de piscina, el buffet, la cocina, el teatro, la discoteca o el atrio, y los que están junto a ascensores, escaleras o lavanderías. La parte delantera cerca del propulsor de proa puede ser ruidosa al atracar. Leer el plano de cubiertas para ver qué hay arriba y abajo evita casi todas las sorpresas."),
+            ("¿Proa o popa en un crucero?", "El centro del barco es lo más estable. Los camarotes de proa son tranquilos y con vistas de frente, pero sienten más cabeceo y algo de ruido de proa en puerto. Los de popa ofrecen vistas de la estela y son prácticos para el comedor de popa, pero pueden tener más movimiento y, en algunos barcos, una leve vibración. Elige según lo que más valoras y qué tan sensible eres al movimiento."),
+            ("¿Qué es un camarote garantizado?", "Una garantía significa que reservas una categoría de camarote y dejas que la línea asigne el camarote específico después. Tienes garantizada al menos esa categoría, a veces terminas en una más alta, pero cedes la posibilidad de elegir cubierta y posición. No es la opción correcta si una ubicación específica te importa."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🛏️", "Choosing a cabin", "/en/guides/choosing-a-cabin/", "Interior, oceanview, balcony or suite, and who each suits."),
+            ("🚢", "Big ship vs small ship", "/en/guides/big-ship-vs-small-ship/", "How the ship itself shapes your cruise."),
+            ("♿", "Accessible cruising", "/en/guides/accessibility/", "Cabins and routes that make the ship easier."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Get the quiet cabins on a specific ship in one call."),
+        ],
+        "es": [
+            ("🛏️", "Cómo elegir tu camarote", "/es/guides/choosing-a-cabin/", "Interior, vista al mar, balcón o suite, y a quién le va cada uno."),
+            ("🚢", "Barco grande vs barco pequeño", "/es/guides/big-ship-vs-small-ship/", "Cómo el barco en sí moldea tu crucero."),
+            ("♿", "Cruceros accesibles", "/es/guides/accessibility/", "Camarotes y rutas que facilitan el barco."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Consigue los camarotes silenciosos de un barco específico en una llamada."),
+        ],
+    },
+})

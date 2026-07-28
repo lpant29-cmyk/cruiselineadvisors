@@ -43,7 +43,7 @@ destination pages. Swap any day for a timely/seasonal post whenever one is warra
 1. ~~How cruise pricing actually works~~ ✅ published 2026-07-22
 2. ~~Cruise travel insurance: is it worth it?~~ ✅ published 2026-07-23
 3. ~~Onboard credit, explained~~ ✅ published 2026-07-26
-4. Best cabin location (deck, midship, what to avoid)
+4. ~~Best cabin location (deck, midship, what to avoid)~~ ✅ published 2026-07-28
 5. Contemporary vs premium vs luxury cruise lines
 6. Cruising for couples / adults-only at sea
 7. A–Z cruise glossary (terms every cruiser should know)
