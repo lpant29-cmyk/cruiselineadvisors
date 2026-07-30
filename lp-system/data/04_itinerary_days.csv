@@ -7,3 +7,123 @@ i0001,5,nassau,Nassau Bahamas,8:00 AM,5:00 PM,Capital city day
 i0001,6,at-sea,At sea,,,Sea day northbound
 i0001,7,at-sea,At sea,,,Sea day northbound
 i0001,8,cape-liberty,Cape Liberty (New York area),6:00 AM,,Disembarkation
+i0003,1,galveston,Galveston TX,,4:30 PM,Embarkation day
+i0003,2,at-sea,At sea,,,At sea
+i0003,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0003,4,roatan,Roatan Honduras,9:00 AM,5:00 PM,
+i0003,5,costa-maya,Costa Maya Mexico,8:00 AM,4:00 PM,
+i0003,6,at-sea,At sea,,,At sea
+i0003,7,galveston,Galveston TX,6:00 AM,,Disembarkation
+i0004,1,galveston,Galveston TX,,4:30 PM,Embarkation day
+i0004,2,at-sea,At sea,,,At sea
+i0004,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0004,4,costa-maya,Costa Maya Mexico,8:00 AM,5:00 PM,
+i0004,5,at-sea,At sea,,,At sea
+i0004,6,cococay,Perfect Day at CocoCay,8:30 AM,5:00 PM,
+i0004,7,at-sea,At sea,,,At sea
+i0004,8,at-sea,At sea,,,At sea
+i0004,9,galveston,Galveston TX,6:00 AM,,Disembarkation
+i0005,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0005,2,at-sea,At sea,,,At sea
+i0005,3,costa-maya,Costa Maya Mexico,11:59 AM,7:00 PM,
+i0005,4,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0005,5,at-sea,At sea,,,At sea
+i0005,6,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0006,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0006,2,at-sea,At sea,,,At sea
+i0006,3,costa-maya,Costa Maya Mexico,11:59 AM,7:00 PM,
+i0006,4,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0006,5,at-sea,At sea,,,At sea
+i0006,6,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0007,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0007,2,at-sea,At sea,,,At sea
+i0007,3,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0007,4,at-sea,At sea,,,At sea
+i0007,5,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0008,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0008,2,at-sea,At sea,,,At sea
+i0008,3,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0008,4,at-sea,At sea,,,At sea
+i0008,5,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0009,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0009,2,at-sea,At sea,,,At sea
+i0009,3,costa-maya,Costa Maya Mexico,11:59 AM,7:00 PM,
+i0009,4,roatan,Roatan Honduras,7:00 AM,3:00 PM,
+i0009,5,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0009,6,at-sea,At sea,,,At sea
+i0009,7,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0010,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0010,2,at-sea,At sea,,,At sea
+i0010,3,at-sea,At sea,,,At sea
+i0010,4,roatan,Roatan Honduras,8:00 AM,5:00 PM,
+i0010,5,costa-maya,Costa Maya Mexico,8:00 AM,5:00 PM,
+i0010,6,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0010,7,at-sea,At sea,,,At sea
+i0010,8,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0011,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0011,2,at-sea,At sea,,,At sea
+i0011,3,at-sea,At sea,,,At sea
+i0011,4,cococay,Perfect Day at CocoCay,7:00 AM,4:00 PM,
+i0011,5,at-sea,At sea,,,At sea
+i0011,6,costa-maya,Costa Maya Mexico,10:00 AM,6:00 PM,
+i0011,7,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0011,8,at-sea,At sea,,,At sea
+i0011,9,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0012,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0012,2,at-sea,At sea,,,At sea
+i0012,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0012,4,belize-city,Belize City Belize,8:00 AM,5:00 PM,
+i0012,5,costa-maya,Costa Maya Mexico,8:00 AM,3:00 PM,
+i0012,6,at-sea,At sea,,,At sea
+i0012,7,galveston,Galveston TX,8:00 AM,,Disembarkation
+i0013,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0013,2,at-sea,At sea,,,At sea
+i0013,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0013,4,roatan,Roatan Honduras,8:00 AM,5:00 PM,
+i0013,5,costa-maya,Costa Maya Mexico,8:00 AM,3:00 PM,
+i0013,6,at-sea,At sea,,,At sea
+i0013,7,galveston,Galveston TX,8:00 AM,,Disembarkation
+i0014,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0014,2,at-sea,At sea,,,At sea
+i0014,3,cozumel,Cozumel Mexico,6:00 PM,,Evening arrival - overnight in port
+i0014,4,cozumel,Cozumel Mexico,,5:00 PM,Overnight continues - full day in port
+i0014,5,at-sea,At sea,,,At sea
+i0014,6,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0015,1,galveston,Galveston TX,,3:00 PM,Embarkation day
+i0015,2,at-sea,At sea,,,At sea
+i0015,3,at-sea,At sea,,,At sea
+i0015,4,cococay,Perfect Day at CocoCay,7:00 AM,5:00 PM,
+i0015,5,nassau,Nassau Bahamas,7:30 AM,5:30 PM,
+i0015,6,at-sea,At sea,,,At sea
+i0015,7,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0015,8,at-sea,At sea,,,At sea
+i0015,9,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0016,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0016,2,at-sea,At sea,,,At sea
+i0016,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0016,4,roatan,Roatan Honduras,9:00 AM,5:00 PM,
+i0016,5,at-sea,At sea,,,At sea
+i0016,6,falmouth,Falmouth Jamaica,8:00 AM,5:00 PM,
+i0016,7,george-town,George Town Grand Cayman,8:00 AM,5:00 PM,
+i0016,8,at-sea,At sea,,,At sea
+i0016,9,at-sea,At sea,,,At sea
+i0016,10,galveston,Galveston TX,7:00 AM,,Disembarkation
+i0017,1,galveston,Galveston TX,,4:30 PM,Embarkation day
+i0017,2,at-sea,At sea,,,At sea
+i0017,3,at-sea,At sea,,,At sea
+i0017,4,roatan,Roatan Honduras,8:00 AM,5:00 PM,
+i0017,5,costa-maya,Costa Maya Mexico,8:00 AM,5:00 PM,
+i0017,6,cozumel,Cozumel Mexico,7:00 AM,5:00 PM,
+i0017,7,at-sea,At sea,,,At sea
+i0017,8,galveston,Galveston TX,6:00 AM,,Disembarkation
+i0018,1,galveston,Galveston TX,,4:00 PM,Embarkation day
+i0018,2,at-sea,At sea,,,At sea
+i0018,3,cozumel,Cozumel Mexico,8:00 AM,6:00 PM,
+i0018,4,roatan,Roatan Honduras,8:00 AM,5:00 PM,
+i0018,5,at-sea,At sea,,,At sea
+i0018,6,at-sea,At sea,,,At sea
+i0018,7,willemstad,Willemstad Curacao,8:00 AM,5:00 PM,
+i0018,8,oranjestad,Oranjestad Aruba,8:00 AM,5:00 PM,
+i0018,9,at-sea,At sea,,,At sea
+i0018,10,at-sea,At sea,,,At sea
+i0018,11,fort-lauderdale,Fort Lauderdale FL,7:00 AM,,Disembarkation - one-way cruise ends in Fort Lauderdale

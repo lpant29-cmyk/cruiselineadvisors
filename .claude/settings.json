@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(lp-system/**)",
+      "Write(lp-system/**)",
+      "Edit(.claude/**)",
+      "Write(.claude/**)",
+      "Bash(python3 lp-system/scripts/*)",
+      "Bash(bash lp-system/scripts/*)",
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "WebFetch(domain:royalcaribbean.com)",
+      "WebFetch(domain:royalcaribbeanmedia.com)",
+      "WebFetch(domain:portofgalveston.com)",
+      "WebFetch(domain:travel.state.gov)",
+      "WebFetch(domain:cbp.gov)",
+      "WebFetch(domain:noaa.gov)",
+      "WebFetch(domain:api.pexels.com)",
+      "WebFetch(domain:api.unsplash.com)"
+    ],
+    "deny": [
+      "Bash(git push)",
+      "Bash(git push *)"
+    ]
+  }
+}

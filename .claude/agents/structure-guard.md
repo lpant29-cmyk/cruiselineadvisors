@@ -55,6 +55,40 @@ Follow this exact sequence and report each step's outcome:
    itinerary count, tracking number, h1, and any keywords already
    sharing this page (so ad groups don't compete).
 
+## ITINERARY DETAIL PAGES (operator ruling, 2026-07-29)
+
+- page_type=itinerary, URL scheme:
+  /en/go/itineraries/{nights}-night-{dest}-from-{port}-{ship}/
+  (ship slug from 02_ships; lowercase-hyphen; no dates in URLs).
+- Inventory threshold: >=1 verified priced row (NOT 3). deal_filter is
+  itin:{slug} where {slug} is the 03_itineraries row slug.
+- Linked from finder cards via a secondary "View full itinerary" CTA;
+  the call CTA stays primary. Itinerary pages are still noindex ad
+  destinations, never in sitemaps or main-site nav.
+- DURATION/SHIP KEYWORD MAPPING (one page per intent, no exceptions):
+  a duration- or ship-stacked keyword (e.g. "royal caribbean 4 night
+  cruise from galveston", "icon of the seas galveston") maps to the
+  ITINERARY page only when EXACTLY ONE publishable itinerary matches
+  the stack; when several match, it maps to the FINDER page pre-filtered
+  via URL params (?nights= / ?to=), recorded as h1_variant in
+  12_keyword_map.csv. Never two pages for one intent; re-evaluate the
+  mapping when inventory changes the match count.
+
+## SHIP PAGES (operator ruling, 2026-07-29 master enrichment pass)
+
+- page_type=ship, URL scheme /en/go/ships/{ship-slug}/ per the Tier-1
+  taxonomy; ship slug from 02_ships.csv (lowercase-hyphen).
+- Inventory threshold: >=1 publishable priced itinerary featuring the
+  ship (supplies the hero from-fare). deal_filter is ship:{ship-slug}.
+- Ship facts come from the newsite/data/ships/*.json dataset (per-LINE
+  files, e.g. royal-caribbean.json with a `ships` array — the single
+  source shared with the live site's ship guides). LP-specific fields
+  (features_hook, family_hook, status, etc.) stay in 02_ships.csv.
+- Generator matching: the ship-page branch matches itineraries by
+  ship_id from 02_ships (e.g. s016), with the deal_filter recorded as
+  declared intent; a ship:{slug} key in 03_itineraries page_targets is
+  informative, not required.
+
 ## Standing duties (every run of /rate-update)
 - Verify every page with an active keyword_map entry passed validation
   this week; flag any live ad pointing at a failed or retired page as

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<!-- SHIP LP TEMPLATE v2 (canonical) · one ship = one page.
+     Operator ruling 2026-07-29 (SHIP PAGES) + master-enrichment spec. Anatomy:
+       disclosure ribbon > slim header (brand + phone, no nav) > full-width
+       photo hero (name, class/year/guests, recently-from fare + stamp, call
+       CTA) > call zone (tap-to-call + 3-field callback + TCPA) > offer slot >
+       what the fare covers vs paid extras (+ inline call prompt) > ship at a
+       glance > dining (included vs specialty) > cabins in advice voice
+       (+ prompt) > decks & layout as WRITTEN orientation only > bars &
+       lounges > entertainment & nightlife > casino (honest line or omitted) >
+       onboard activities > kids & teens (+ prompt) > wellness & spa +
+       shopping > where she sails now (live sheet cards + route schematic,
+       + prompt) > FAQ (max 4, calling-cost first) > final call band >
+       sticky bar > compact §6a footer.
+     Data contract: generate.py replaces the SHIP PAGE DATA block. Facts come
+     from the newsite ships dataset + LP CSVs only; thin sections render
+     honestly small, never padded. Visual layer = cruiselineadvisors.com
+     design system (navy #0A2540, teal #12919A, gold #FFB23E/#F0891F,
+     coral #FF6B5A, Fraunces + Inter). -->
+<title>Mariner of the Seas: Cruises, Cabins and What's Onboard | [AGENCY NAME]</title>
+<meta name="description" content="What is on board, which cabins fit which travelers, and where she sails now with recent from-fares. Call 1-833-555-0100 for exact dates and today's price.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+<style>
+:root{--ink:#082C42;--deep:#0A2540;--deep-2:#123C5A;--sea:#12919A;--sea-d:#0C6E86;--sea-soft:#E9FAFA;--foam:#F0FAFB;--coral:#FF6B5A;--coral-d:#E8552E;--line:#DCEBEC;--gold:#FFB23E;--gold-d:#F0891F;--ok:#1D7A4A;--r:16px;--maxw:1060px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces','Georgia',serif;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+a{text-decoration:none;color:var(--sea-d)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.imgbox{background:linear-gradient(135deg,#CFF1F8,#8FD9F0);display:flex;align-items:center;justify-content:center;color:#0C6E86;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:8px}
+.imgbox.has-img{padding:0}
+.imgbox img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* disclosure ribbon: REQUIRED for brand-term traffic. Mobile collapses it
+   to ONE tap-to-expand line; the full text stays in the DOM (it is legally
+   load-bearing) and the collapse is JS-gated so no-JS renders it in full */
+@media(max-width:900px){
+}
+
+/* top bar */
+.topbar{background:var(--deep);color:#DCE9F2;font-size:13.5px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar .hours{font-weight:600}
+.topbar .hours .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#25C36B;margin-right:6px}
+.topbar a{color:#fff;font-weight:800;font-size:15px}
+
+/* slim header: brand + phone, NO nav (one intent, no exits) */
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:21px;letter-spacing:-.01em;color:var(--deep)}
+/* color discipline: coral is reserved for the sticky bar, hero CTA and
+   sheet-footer CTAs; every other call CTA is navy outline */
+.nav .cta{background:#fff;border:2px solid var(--deep);color:var(--deep);padding:8px 14px;border-radius:11px;font-weight:800;font-size:14.5px}
+.nav .cta:hover{background:var(--foam)}
+.nav .wrap{flex-wrap:nowrap}
+.brand{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.nav .cta .cta-i{display:none}
+/* <=480px: compact phone ICON button so brand + phone stay on one row */
+@media(max-width:480px){
+  .nav .cta{flex:0 0 auto;width:42px;height:42px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center}
+  .nav .cta .cta-t{display:none}
+  .nav .cta .cta-i{display:block;font-size:19px}
+}
+
+/* full-width photo hero with overlaid title + CTA */
+.hero{position:relative;height:480px}
+.hero .imgbox{position:absolute;inset:0;font-size:14px}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,37,64,.25) 15%,rgba(10,37,64,.88))}
+.hero .content{position:absolute;left:0;right:0;bottom:26px;color:#fff}
+.hero .linelogo{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--deep);font-weight:800;font-size:13px;border-radius:8px;padding:7px 12px;margin-bottom:10px}
+.hero h1{font-size:clamp(27px,4vw,42px);text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.hero .sub{font-size:15.5px;color:#E4EFF6;text-shadow:0 1px 8px rgba(0,0,0,.4);margin-top:6px;font-weight:600}
+.hero .fareline{display:inline-flex;align-items:baseline;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:11px;padding:7px 14px;margin-top:12px;backdrop-filter:blur(3px)}
+.hero .fareline .a{font-weight:800;font-size:23px;white-space:nowrap}
+.hero .fareline .s{font-size:12px;color:#DCE9F2}
+.hero .hero-cta{display:inline-block;margin:14px 0 0}
+
+/* call zone */
+.callzone{margin-top:-56px;position:relative;z-index:5}
+.callzone .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(10,37,64,.16);padding:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.callzone .main h2{font-size:21px;color:var(--deep);margin-bottom:4px}
+.callzone .main .why{font-size:14px;color:#4E6B75;margin-bottom:14px}
+.bigcall{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--deep);color:var(--deep);border-radius:13px;padding:15px 19px;transition:background .15s}
+.bigcall:hover{background:var(--foam)}
+.bigcall .ic{font-size:30px}
+.bigcall .num{font-weight:800;font-size:26px;color:var(--deep);line-height:1.1}
+.bigcall .lbl{font-size:12.5px;color:#4E6B75;font-weight:700;letter-spacing:.03em}
+.callmeta{display:flex;gap:16px;margin-top:12px;font-size:12.5px;color:#4E6B75;flex-wrap:wrap}
+.callmeta b{color:var(--ok)}
+.cb{border-left:1px solid var(--line);padding-left:24px}
+.cb h3{font-size:15px;color:var(--deep);margin-bottom:8px}
+.cb label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#4E6B75;margin:8px 0 4px}
+.cb input,.cb select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px;font-size:14.5px;font-family:inherit;background:#FBFDFE}
+.cb input:focus,.cb select:focus{outline:2px solid var(--sea);border-color:var(--sea)}
+.cb button{width:100%;margin-top:12px;background:var(--deep);color:#fff;border:0;border-radius:10px;font-family:inherit;font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+.cb button:hover{background:var(--deep-2)}
+.cb .fp{font-size:11px;color:#6B7C86;margin-top:8px;line-height:1.5}
+/* mobile top-stack budget: the callback form collapses behind a navy
+   outline button; the form stays in the DOM so lead_submit binds on load.
+   (.cb .cb-toggle outranks the .cb button solid-navy rule) */
+.cb .cb-toggle{display:none;width:100%;margin:0;background:#fff;border:2px solid var(--deep);border-radius:12px;color:var(--deep);font-family:inherit;font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+.cb .cb-toggle:hover{background:var(--foam)}
+@media(max-width:900px){
+  .cb.js .cb-toggle{display:block}
+  .cb.js:not(.open) form,.cb.js:not(.open) h3{display:none}
+  .cb.js.open .cb-toggle{display:none}
+}
+
+/* intro + offer */
+.intro{padding:34px 0 4px}
+.intro p{max-width:78ch;color:#233B47;font-size:16px}
+/* offer ribbon: soft gold tint + navy text (color discipline: coral and
+   solid orange stay off non-CTA surfaces) */
+.offerbar{background:#FFF7EC;border:1px solid var(--gold);color:var(--deep);border-radius:12px;padding:13px 18px;display:flex;gap:12px;align-items:center;margin:18px 0 0;font-size:14.5px;font-weight:700}
+.offerbar .tag{background:rgba(240,137,31,.16);color:#7A5A33;border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.06em}
+.offerbar .end{margin-left:auto;font-weight:700;font-size:12.5px;color:#7A5A33;white-space:nowrap}
+
+section.blk{padding:44px 0 20px}
+section.blk.thin{padding:20px 0 8px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-bottom:6px}
+.blk h2{font-size:clamp(23px,3vw,30px);color:var(--deep);margin-bottom:18px}
+.lead{max-width:78ch;color:#233B47;font-size:15px;margin-bottom:18px}
+.smallnote{font-size:12.5px;color:#4E6B75;margin-top:12px;max-width:80ch}
+
+/* inline call prompt */
+.callrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:var(--foam);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:22px}
+.callrow p{font-weight:700;color:var(--deep);font-size:15.5px}
+.callrow p small{display:block;font-weight:500;color:#4E6B75;font-size:12.5px}
+.btn{display:inline-block;background:linear-gradient(180deg,var(--coral),var(--coral-d));color:#fff;font-family:inherit;font-weight:800;font-size:15px;border:0;border-radius:12px;padding:12px 20px;cursor:pointer;box-shadow:0 10px 22px rgba(232,85,46,.3);white-space:nowrap}
+.btn:hover{filter:brightness(1.06)}
+/* navy-outline variants (coral reserved for hero CTA, sticky bar and
+   sheet-footer CTAs) */
+.callrow .btn{background:#fff;border:2px solid var(--deep);color:var(--deep);box-shadow:none}
+.callrow .btn:hover{background:var(--foam);filter:none}
+
+/* included vs extras */
+.inc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.inccard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.inccard h3{font-size:16px;color:var(--deep);margin-bottom:8px}
+.inccard ul{list-style:none;display:grid;gap:7px}
+.inccard li{padding-left:22px;position:relative;font-size:13.5px;color:#233B47}
+.inccard li::before{content:"✓";position:absolute;left:0;color:var(--sea);font-weight:800}
+.inccard.extras li::before{content:"+";color:var(--gold-d)}
+.inccard p{font-size:13.5px;color:#4E6B75}
+/* number-dense registry notes render as small 2-col tables (all viewports) */
+.minitbl{width:100%;border-collapse:collapse;font-size:13.5px;margin:4px 0 10px}
+.minitbl caption{text-align:left;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#4E6B75;padding-bottom:4px}
+.minitbl td{padding:6px 0;border-top:1px dashed var(--line);color:#233B47}
+.minitbl td:last-child{text-align:right;font-weight:800;color:var(--deep)}
+.minitbl tr:first-child td{border-top:0}
+
+/* at a glance */
+.glance{background:var(--deep);color:#fff;border-radius:18px;padding:28px 26px}
+.glance .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center;margin-bottom:18px}
+.glance .spec .n{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:30px;color:var(--gold)}
+.glance .spec .l{font-size:12.5px;color:#BFD4E1;font-weight:700}
+.glance .featchips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px}
+.glance .featchips span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#E4EFF6;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+.glance .who{color:#DCE9F2;font-size:14px;max-width:84ch;margin:0 auto;text-align:center}
+
+/* media sections: image-led, alternating on desktop, full-bleed on mobile */
+.msec{display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:stretch;background:var(--foam);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.msec .imgbox{min-height:260px}
+.msec .txt{padding:24px 26px}
+.msec.flip .imgbox{order:2}
+.msec h3{font-size:19px;color:var(--deep);margin-bottom:8px}
+.vlist{list-style:none;display:grid;gap:9px}
+.vlist li{padding-left:24px;position:relative;font-size:14px;color:#233B47}
+.vlist li::before{content:"✓";position:absolute;left:0;color:var(--sea);font-weight:800}
+.vlist.extras li::before{content:"+";color:var(--gold-d)}
+.vlist b{color:var(--deep)}
+.vlist span{color:#4E6B75}
+
+/* cabins */
+.cabgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.cabcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.cabcard h3{font-size:16px;color:var(--deep);margin-bottom:6px}
+.cabcard p{font-size:13.5px;color:#233B47}
+
+/* sailing cards */
+.sailings{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.scard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.scard .imgbox{height:140px}
+.scard .b{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
+.scard h3{font-size:17px;color:var(--deep);margin-bottom:2px}
+.scard .meta{font-size:13px;color:#4E6B75;margin-bottom:8px}
+.months{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.mchip{background:var(--sea-soft);color:var(--sea-d);font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px}
+.scard .price{margin-top:auto;display:flex;align-items:baseline;gap:7px}
+.scard .price .f{font-size:11.5px;color:#4E6B75;text-transform:uppercase;font-weight:700}
+.scard .price .a{font-weight:800;font-size:25px;color:var(--deep)}
+.scard .stamp{font-size:11px;color:#6B7C86;margin:3px 0 10px}
+.scard .go{text-align:center;background:#fff;border:2px solid var(--deep);color:var(--deep);border-radius:10px;padding:9px;font-weight:800;font-size:14px}
+.scard .go:hover{background:var(--foam)}
+.scard .go small{display:block;font-weight:600;font-size:11px;color:#4E6B75}
+.scard .more{display:block;text-align:center;font-size:12.5px;font-weight:700;color:var(--sea-d);margin-top:8px}
+.scard .more:hover{text-decoration:underline}
+
+/* route schematic (our own inline SVG, never a copied map) */
+.routewrap{overflow-x:auto;margin:6px 0 4px}
+.route-svg{display:block;max-width:100%;height:auto}
+
+/* faq */
+.faq details{border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 16px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700;font-size:15px;color:var(--deep);padding:13px 0}
+.faq details p{font-size:14px;color:#233B47;padding:0 0 14px}
+
+/* phone banner */
+.phoneband{background:linear-gradient(90deg,var(--deep),var(--deep-2));border-radius:18px;color:#fff;padding:30px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.phoneband h2{font-size:clamp(20px,2.6vw,27px);color:#fff}
+.phoneband p{color:#BFD4E1;font-size:14.5px}
+/* on the navy band the outline goes white for contrast (still not coral) */
+.phoneband .bigcall{background:transparent;border-color:#fff}
+.phoneband .bigcall .num{color:#fff}
+.phoneband .bigcall .lbl{color:#BFD4E1}
+.phoneband .bigcall:hover{background:rgba(255,255,255,.08)}
+
+/* footer */
+footer{background:#071C30;color:#9EC6CF;font-size:12.5px;padding:30px 0 96px;line-height:1.7}
+footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
+footer a{color:#BDE0E5}
+
+/* sticky call bar */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;padding:10px 14px;z-index:70;box-shadow:0 -8px 24px rgba(10,37,64,.14)}
+.sticky-cta .btn{flex:1;text-align:center;margin:0;font-size:15.5px;padding:14px}
+.sticky-cta .cb-btn{background:var(--deep);max-width:170px;box-shadow:none}
+.sticky-cta .cb-btn:hover{background:var(--deep-2);filter:none}
+
+@media(max-width:900px){
+  .callzone .card{grid-template-columns:1fr;padding:16px}
+  .cb{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px}
+  .hero{height:420px}
+  .msec{grid-template-columns:1fr;border-radius:0;border-left:0;border-right:0;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+  .msec.flip .imgbox{order:0}
+  .msec .imgbox{min-height:220px}
+  /* top-stack budget: first content within 2 screens at 390px */
+  .topbar{font-size:12.5px}
+  .callzone{margin-top:14px} /* no hero overlap on mobile: hero CTA stays fully visible */
+  .callzone .main .why{margin-bottom:10px}
+  .bigcall{padding:12px 16px}
+  .bigcall .num{font-size:22px}
+  section.blk{padding:32px 0 18px}
+  .intro{padding:22px 0 4px}
+  .offerbar{font-size:13px;padding:11px 14px;gap:8px;flex-wrap:wrap}
+  .offerbar .end{margin-left:0}
+}
+@media(max-width:480px){
+  /* hours badge stays, one line: the "Advisors answering now" prefix hides,
+     the 8am-11pm ET coverage line always renders */
+  .topbar .now{display:none}
+}
+@media(min-width:901px){
+  .sticky-cta{display:none}
+  /* hero content sits above the callzone overlap zone (CTA was clipped) */
+  .hero .content{bottom:84px}
+}
+
+/* ---- mobile UX pass (<=900px): ship-life tile slider + bottom sheets,
+   scroll reveals. Desktop layout unchanged. ---- */
+#shiplife{display:none}
+.tiles{display:none}
+/* bottom sheet: single dialog, slide-up 200ms, backdrop + X + swipe-down.
+   The off state is TRULY gone: visibility:hidden + pointer-events:none
+   (viewport chrome/dvh quirks otherwise let the grab bar peek up and eat
+   taps at the bottom edge). Visibility flips after the slide-out (0s .2s)
+   and immediately on open (0s in the base state). */
+.sheetback{position:fixed;inset:0;background:rgba(8,28,48,.55);z-index:80;transition:opacity .2s ease,visibility 0s}
+.sheetback.off{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility 0s .2s}
+.sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:18px 18px 0 0;z-index:81;max-height:82vh;display:flex;flex-direction:column;box-shadow:0 -14px 44px rgba(10,37,64,.32);transition:transform .2s ease,visibility 0s}
+.sheet.off{transform:translateY(105%);visibility:hidden;pointer-events:none;transition:transform .2s ease,visibility 0s .2s}
+.sheet-grab{padding:10px 0 2px;display:flex;justify-content:center;touch-action:none}
+.sheet-grab span{width:42px;height:5px;border-radius:999px;background:var(--line)}
+.sheet-x{position:absolute;top:10px;right:12px;width:34px;height:34px;border-radius:50%;border:0;background:var(--foam);color:var(--deep);font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
+.sheet-h{font-size:20px;color:var(--deep);padding:4px 54px 8px 20px}
+.sheet-body{overflow-y:auto;padding:2px 20px 18px;font-size:16px;color:#233B47}
+.sheet-body .smeta2{font-size:13px;color:#4E6B75;font-weight:600;margin-bottom:6px}
+.sheet-foot{border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.sheet-foot .btn{flex:1;text-align:center}
+@media(prefers-reduced-motion:reduce){.sheet,.sheetback{transition:none}}
+@media(max-width:900px){
+  /* scroll reveal: fade + 14px rise, once per element; gated on .js-rv so
+     reduced-motion and no-IO paths render everything visible */
+  .js-rv .rv{opacity:0;transform:translateY(14px);transition:opacity .22s ease,transform .22s ease}
+  .js-rv .rv.in{opacity:1;transform:none}
+  /* top-stack budget: section kicker labels off on mobile */
+  .kicker{display:none}
+  /* ship-life tile slider replaces the stacked media sections on mobile;
+     each tile opens the bottom sheet with the same baked facts */
+  #dining,#bars,#shows,#activities,#kids,#wellness{display:none}
+  #shiplife{display:block}
+  .tiles.on{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;-webkit-overflow-scrolling:touch;margin:0 calc(50% - 50vw);padding:2px 20px 8px;scrollbar-width:none}
+  .tiles.on::-webkit-scrollbar{display:none}
+  .tile{position:relative;flex:0 0 43vw;height:130px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#CFF1F8,#8FD9F0);cursor:pointer;padding:0;font-family:inherit;scroll-snap-align:start}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tile .tlab{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(180deg,rgba(10,37,64,0),rgba(10,37,64,.82));color:#fff;font-weight:800;font-size:14px;text-align:left}
+  /* reading-text floor on mobile */
+  .lead,.wcard p,.faq details p,.inccard p,.cabcard p{font-size:16px}
+}
+.hero-ind{font-size:12.5px;font-weight:700;color:#fff;background:rgba(8,28,48,.62);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 11px;margin:0 0 9px;display:inline-block;backdrop-filter:blur(2px);text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.hero-rep{font-size:11px;color:#DCE9F2;margin:0 0 6px;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+@media(max-width:600px){.hero .linelogo{display:none}}
+
+.scard .daymore{width:100%;margin:0 0 8px;border:2px solid var(--deep);background:#fff;color:var(--deep);font:inherit;font-weight:800;font-size:14px;border-radius:10px;padding:9px;cursor:pointer}
+.scard .daymore:hover{background:var(--foam)}
+.sdays{list-style:none;margin:2px 0 14px;padding:0;display:grid;gap:10px}
+.sdays li{border-left:2px solid var(--line);padding:0 0 0 12px}
+.sdays .dno{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--sea-d);margin-right:6px}
+.sdays b{font-size:15px;color:var(--deep)}
+.sdays .tm{display:block;font-size:12.5px;color:#4E6B75;margin-top:2px}
+.sdays p{font-size:14px;color:#3A5261;margin-top:4px}
+.sdays .cur{display:inline-block;font-size:10.5px;font-weight:700;background:var(--foam);color:var(--sea-d);border-radius:6px;padding:1px 6px;margin-left:5px}
+@media(max-width:420px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+.price.nofare .a{font-size:19px;color:var(--sea-d)}
+</style>
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hours"><span class="dot"></span><span class="now">Advisors answering now · </span>8am-11pm ET, every day</span>
+    <a href="tel:+18335550100">📞 1-833-555-0100</a>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">[AGENCY NAME]</span>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for today's fare</span><span class="cta-i" aria-hidden="true">📞</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <!-- hero image resolves through 10_assets.csv (baked HERO const); labeled frame when unresolved -->
+  <div class="imgbox" id="heroImg" aria-hidden="true"></div>
+  <div class="shade"></div>
+  <div class="content">
+    <div class="wrap">
+      <span class="linelogo">🚢 <span id="heroKicker">ROYAL CARIBBEAN · SHIP GUIDE</span></span>
+      <p class="hero-rep">Representative imagery. Not a photograph of this ship.</p>
+      <p class="hero-ind">Independent referral service. Not Royal Caribbean, and not the cruise line's customer service.</p>
+      <h1>Mariner of the Seas: Cruises, Cabins and What's Onboard</h1>
+      <p class="sub" id="heroSub"></p>
+      <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
+      <br>
+      <a class="btn hero-cta" href="tel:+18335550100">📞 Call for today's fare</a>
+    </div>
+  </div>
+</header>
+
+<!-- CALL ZONE (ADS-LP-BRIEF §4): tap-to-call + 3-field callback form + TCPA line -->
+<div class="callzone wrap">
+  <div class="card">
+    <div class="main">
+      <h2>Get this ship priced for your dates by phone</h2>
+      <p class="why">The page shows what is on board and recent from-fares for her current sailings. A licensed specialist checks your exact date, cabin type and current promotions, then quotes the real total. Free, no pressure.</p>
+      <a class="bigcall" href="tel:+18335550100">
+        <span class="ic">📞</span>
+        <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
+      </a>
+            <div class="callmeta">
+        <span><b>●</b> Advisors answering now</span>
+        <span>8am-11pm ET, every day</span>
+        <span>Licensed US partner agencies</span>
+      </div>
+    </div>
+    <div class="cb">
+      <button class="cb-toggle" id="cbToggle" type="button" aria-expanded="false">Prefer we call you?</button>
+      <h3>Prefer we call you?</h3>
+      <form action="#CALLBACK_ACTION" method="POST">
+        <label for="cbname">Name</label>
+        <input id="cbname" name="name" required autocomplete="name" placeholder="Jane Rivera">
+        <label for="cbphone">Phone</label>
+        <input id="cbphone" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-0100">
+        <label for="cbwhen">Best time to call</label>
+        <select id="cbwhen" name="calltime"><option>As soon as possible</option><option>This afternoon</option><option>This evening</option><option>Tomorrow morning</option></select>
+        <button type="submit">Request a callback</button>
+        <p class="fp">By submitting you agree to be contacted by phone or SMS about your cruise inquiry. See our Calling & SMS Consent policy.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="intro wrap">
+  <p id="introLine"></p>
+  <div id="offerSlot"></div>
+</section>
+
+<section class="blk wrap" id="included">
+  <p class="kicker">The money part</p>
+  <h2>What your fare covers, and what costs extra</h2>
+  <div class="inc" id="incGrid"></div>
+  <div class="callrow">
+    <p>Wondering what your total would come to?<small>Fare, taxes, deposit and the extras your group would actually use.</small></p>
+    <a class="btn" href="tel:+18335550100">📞 Ask: 1-833-555-0100</a>
+  </div>
+</section>
+
+<section class="blk wrap" id="glance">
+  <p class="kicker">The ship</p>
+  <h2 id="glanceH2">At a glance</h2>
+  <p class="lead" id="glanceLead"></p>
+  <div class="glance">
+    <div class="specs" id="glanceSpecs"></div>
+    <div class="featchips" id="glanceFeats"></div>
+    <p class="who" id="glanceWho"></p>
+  </div>
+</section>
+
+<!-- SHIP-LIFE (mobile UX): at <=900px the dining / kids / nightlife / spa /
+     activities sections below render as this tile slider + bottom sheets;
+     the stacked sections stay the desktop layout -->
+<section class="blk wrap" id="shiplife">
+  <p class="kicker">Life on board</p>
+  <h2>Explore the ship</h2>
+  <div class="tiles" id="lifeStrip"></div>
+</section>
+
+<section class="blk wrap" id="dining">
+  <p class="kicker">Dining</p>
+  <h2>Dining on board</h2>
+  <p class="lead" id="diningLead"></p>
+  <div class="msec">
+    <div class="imgbox" id="diningImg"></div>
+    <div class="txt" id="diningTxt"></div>
+  </div>
+  <p class="smallnote">With kids in tow: specialty venues take reservations and fill early on short sailings, so if one matters to you, have it booked alongside the cruise. An advisor sets that up on the same call.</p>
+</section>
+
+<section class="blk wrap" id="cabins">
+  <p class="kicker">Cabins</p>
+  <h2>Cabins: how to choose</h2>
+  <p class="lead" id="cabinNote"></p>
+  <div class="msec flip">
+    <div class="imgbox" id="cabinImg"></div>
+    <div class="txt"><div class="cabgrid" id="cabinGrid" style="margin-top:0"></div></div>
+  </div>
+  <div class="callrow">
+    <p>Which cabin fits your family?<small>Deck position, connecting rooms and what the upgrade really costs on your date.</small></p>
+    <a class="btn" href="tel:+18335550100">📞 Ask: 1-833-555-0100</a>
+  </div>
+</section>
+
+<section class="blk thin wrap" id="decks">
+  <p class="kicker">Finding your way</p>
+  <h2>Decks and layout, in plain words</h2>
+  <p class="lead" id="decksTxt" style="margin-bottom:0"></p>
+</section>
+
+<section class="blk wrap" id="bars">
+  <p class="kicker">Evenings</p>
+  <h2>Bars and lounges</h2>
+  <div class="msec">
+    <div class="imgbox" id="barsImg"></div>
+    <div class="txt"><ul class="vlist" id="barsList"></ul></div>
+  </div>
+</section>
+
+<section class="blk thin wrap" id="shows">
+  <p class="kicker">After dark</p>
+  <h2>Entertainment and nightlife</h2>
+  <div id="showsBody"></div>
+</section>
+
+<section class="blk thin wrap" id="casino" hidden>
+  <p class="kicker">Casino</p>
+  <h2>Casino</h2>
+  <p class="lead" id="casinoTxt" style="margin-bottom:0"></p>
+</section>
+
+<section class="blk wrap" id="activities">
+  <p class="kicker">Days on board</p>
+  <h2>Onboard activities</h2>
+  <div class="msec flip">
+    <div class="imgbox" id="actImg"></div>
+    <div class="txt"><ul class="vlist" id="actList"></ul></div>
+  </div>
+</section>
+
+<section class="blk wrap" id="kids">
+  <p class="kicker">Families</p>
+  <h2>Kids and teens</h2>
+  <div class="msec">
+    <div class="imgbox" id="kidsImg"></div>
+    <div class="txt"><p id="kidsTxt" style="font-size:14.5px;color:#233B47"></p></div>
+  </div>
+  <div class="callrow">
+    <p>What do kids actually pay on your dates?<small>Third and fourth guest pricing moves with promotions, so it is a live question.</small></p>
+    <a class="btn" href="tel:+18335550100">📞 Ask: 1-833-555-0100</a>
+  </div>
+</section>
+
+<section class="blk wrap" id="wellness">
+  <p class="kicker">Slower days</p>
+  <h2>Wellness, spa and shopping</h2>
+  <div class="inc" id="wellGrid"></div>
+</section>
+
+<section class="blk wrap" id="sailings">
+  <p class="kicker">Sailing now</p>
+  <h2 id="sailH2">Where she sails now</h2>
+  <div class="sailings" id="sailGrid"></div>
+  <p class="smallnote" id="sailNote"></p>
+  <div class="callrow">
+    <p>Which of these prices lowest for your week?<small>Fares move daily by date and cabin; a specialist checks them live.</small></p>
+    <a class="btn" href="tel:+18335550100">📞 Ask: 1-833-555-0100</a>
+  </div>
+</section>
+
+<!-- FAQ: rendered from the baked FAQS const (08_faqs rows matching this
+     page's facets, max 4, "is calling more expensive" first) -->
+<section class="blk faq wrap" id="faq">
+  <h2>Quick answers</h2>
+  <div id="faqList"></div>
+</section>
+
+<section class="blk wrap">
+  <div class="phoneband">
+    <div>
+      <h2 id="bandH2">Ready to price this ship for your dates?</h2>
+      <p>8am-11pm ET, every day · Free quotes · No obligation · Se habla español</p>
+    </div>
+    <a class="bigcall" href="tel:+18335550100">
+      <span class="ic">📞</span>
+      <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL NOW</span></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="legal">
+      <p class="agency-line">[AGENCY NAME]: independent cruise information &amp; referral service</p>
+      <p>Prices shown are per-person from-fares based on double occupancy, observed from publicly available sources for the sail month indicated, on the date stamped. They exclude taxes, fees and port expenses, change frequently, and are not an offer to sell travel. All quotes, availability, bookings and payments are handled by independent licensed travel agencies. We do not sell, book or take payment for travel. Cruise line and ship names are property of their respective owners, used descriptively only; we are not affiliated with or endorsed by any cruise line. <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Calling & SMS Consent</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn" href="tel:+18335550100">📞 Call for today's fare</a>
+  <a class="btn cb-btn" href="#sailings">See sailings</a>
+</div>
+
+<!-- BOTTOM SHEET (mobile UX): single dialog reused by the ship-life tiles;
+     footer always carries the call CTA; dismiss = backdrop tap, X, swipe-down -->
+<div class="sheetback" id="sheetBack" hidden></div>
+<div class="sheet off" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <div class="sheet-grab" id="sheetGrab"><span></span></div>
+  <button class="sheet-x" id="sheetClose" type="button" aria-label="Close">✕</button>
+  <h3 class="sheet-h" id="sheetTitle"></h3>
+  <div class="sheet-body" id="sheetBody"></div>
+  <div class="sheet-foot" id="sheetFoot"></div>
+</div>
+
+<script>
+/* ============================================================
+   SHIP PAGE DATA - generated from the registries by generate.py
+   (edit here manually only during prototyping)
+   ============================================================ */
+const PAGE = { type:"ship", id:"p000", h1:"Mariner of the Seas: Cruises, Cabins and What's Onboard",
+  shipName:"Mariner of the Seas", cls:"Voyager class (Royal Amplified)", tier:"large",
+  line:"royal-caribbean", ship:"mariner-of-the-seas", lineLabel:"Royal Caribbean" };
+const PHONE_TEL = "+18335550100";
+const PHONE_DISPLAY = "1-833-555-0100";
+const STAMP = "2026-07-29";
+const pricesCheckedOn = "July 29";
+const HERO = null; /* {src,alt,w,h} via 10_assets.csv or null -> labeled frame */
+const GLANCE = { cls:"Voyager class (Royal Amplified)", year:2003, tonnage:139863, guests:3344,
+  features:["Royal Escape Room","FlowRider"], overview:"Prototype overview.", whoFor:"Prototype audience line." };
+const INCLUDED = { taxes:"Taxes and fees included in the listed fare",
+  /* deposit: generate.py deposit_struct() output - tier rows (length |
+     deposit), final-payment rows (length | due) and the leftover prose */
+  deposit:{ rows:[{len:"1-5 nights",amt:"$100 pp"}], pay:[], prose:"Prototype deposit prose." },
+  kids:"Prototype kids policy",
+  incDining:["Main Dining Room"], extraDining:["Izumi"] };
+const DINING = [ {name:"Main Dining Room",type:"main",extra:false,desc:"Complimentary multi-deck main dining."},
+  {name:"Izumi",type:"specialty",extra:true,desc:"Sushi specialty dining."} ];
+const CABINS = { categories:["Interior","Ocean View","Balcony","Suite"], note:"Prototype cabins note." };
+const BARS = [ {name:"Schooner Bar",desc:"Piano bar with sing-alongs."} ];
+const SHOWS = [];
+const CASINO = { name:null, desc:null };
+const ACTIVITIES = [ {name:"FlowRider",desc:"Surf simulator."} ];
+const KIDS = "Prototype kids bands text.";
+const SPA = { name:"Vitality Spa", desc:"Prototype spa line." };
+const SHOPPING = { desc:"Prototype shopping line." };
+const IMGS = { dining:null, bars:null, activities:null, kids:null, spa:null, cabins:null };
+const SAILINGS = [
+  { id:"i0005", name:"5-Night Western Caribbean", nights:5, portLabel:"Galveston TX",
+    months:["2026-08","2026-09","2026-10"], from:398, stamp:"2026-07-29", img:null, oneWay:false,
+    days:[ {n:1,p:"galveston",arr:"",dep:"3:00 PM",note:"Embarkation day"}, {n:2,p:"at-sea",arr:"",dep:"",note:""},
+      {n:3,p:"costa-maya",arr:"11:59 AM",dep:"7:00 PM",note:""}, {n:4,p:"cozumel",arr:"7:00 AM",dep:"5:00 PM",note:""},
+      {n:5,p:"at-sea",arr:"",dep:"",note:""}, {n:6,p:"galveston",arr:"7:00 AM",dep:"",note:"Disembarkation"} ] }
+];
+const PORTS = {
+  "galveston":{label:"Galveston TX",short:"Galveston",blurb:"Texas cruising without the flight.",story:"",cur:["USD"]},
+  "costa-maya":{label:"Costa Maya Mexico",short:"Costa Maya",blurb:"A purpose-built cruise port.",story:"",cur:["USD","MXN"]},
+  "cozumel":{label:"Cozumel Mexico",short:"Cozumel",blurb:"Mexico's busiest cruise island.",story:"",cur:["USD","MXN"]}
+};
+const FAQS = [
+  { q:"Is calling more expensive than booking online?", a:"No - the fare is the cruise line's fare either way. The call adds comparison promo-stacking and a human who handles changes afterward free of charge." }
+];
+const OFFERS = [];
+/* ================== END GENERATED DATA ====================== */
+
+const MONTH_NAMES=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const mLabel=m=>{const[y,mo]=m.split("-");return MONTH_NAMES[+mo-1]+" "+y;};
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+function imgHTML(img,label,eager){
+  if(img&&img.src){return `<img src="${img.src}" alt="${esc(img.alt)}"${img.w?` width="${img.w}" height="${img.h}"`:''} loading="${eager?'eager':'lazy'}"${eager?' fetchpriority="high"':''}>`;}
+  return esc(label||'');
+}
+function fillBox(el,img,label,eager){if(!el)return;el.innerHTML=imgHTML(img,label,eager);el.classList.toggle('has-img',!!(img&&img.src));}
+function portOf(slug){return (typeof PORTS!=='undefined'&&PORTS[slug])||{label:slug,short:slug,blurb:'',story:'',cur:[]};}
+function joinList(a){return a.length>1?a.slice(0,-1).join(', ')+' and '+a[a.length-1]:(a[0]||'');}
+
+/* route schematic: our own inline SVG built from the days data (ports as
+   dots on a line, sea days as ticks); never a copied map image */
+function routeSVG(days){
+  if(!days||!days.length)return'';
+  const step=84,pad=44,W=pad*2+step*(days.length-1),H=72;
+  const parts=[`<line x1="${pad}" y1="30" x2="${W-pad}" y2="30" stroke="#A9D6DA" stroke-width="2.5" stroke-dasharray="1 6" stroke-linecap="round"/>`];
+  days.forEach((d,i)=>{
+    const x=pad+i*step;
+    if(d.p==='at-sea'){
+      parts.push(`<line x1="${x}" y1="24" x2="${x}" y2="36" stroke="#8FB9C6" stroke-width="2.5" stroke-linecap="round"/>`);
+      parts.push(`<text x="${x}" y="54" text-anchor="middle" font-size="9.5" fill="#6B7C86" font-family="Inter,sans-serif">Sea</text>`);
+    }else{
+      const end=i===0||i===days.length-1;
+      parts.push(`<circle cx="${x}" cy="30" r="6.5" fill="${end?'#0A2540':'#12919A'}" stroke="#fff" stroke-width="2"/>`);
+      parts.push(`<text x="${x}" y="54" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A2540" font-family="Inter,sans-serif">${esc(portOf(d.p).short)}</text>`);
+      parts.push(`<text x="${x}" y="14" text-anchor="middle" font-size="9" fill="#6B7C86" font-family="Inter,sans-serif">Day ${d.n}</text>`);
+    }
+  });
+  return `<div class="routewrap"><svg class="route-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Route in order: ports as dots, sea days as ticks">${parts.join('')}</svg></div>`;
+}
+
+(function(){if(!document.getElementById('heroImg'))return; /* hero module */
+  fillBox(document.getElementById('heroImg'),typeof HERO!=='undefined'?HERO:null,PAGE.shipName,true);
+  const k=document.getElementById('heroKicker');
+  if(k)k.textContent=(PAGE.lineLabel+' · ship guide').toUpperCase();
+  const sub=document.getElementById('heroSub');
+  if(sub){
+    const bits=[PAGE.cls];
+    if(GLANCE.year)bits.push('entered service '+GLANCE.year);
+    if(GLANCE.guests)bits.push(GLANCE.guests.toLocaleString()+' guests at double occupancy');
+    sub.textContent=bits.filter(Boolean).join(' · ');
+  }
+  const fares=(SAILINGS||[]).map(s=>s.from).filter(v=>v!=null);
+  const lo=fares.length?Math.min.apply(null,fares):null;
+  const f=document.getElementById('heroFare');
+  const fl=document.querySelector('.hero .fareline');
+  if(lo!=null&&f){f.textContent='$'+lo.toLocaleString()+' pp';
+    const st=document.getElementById('heroStamp');
+    if(st)st.textContent='fare seen '+pricesCheckedOn+' · call for today\'s fare';
+  }else if(fl){fl.style.display='none';}
+  const intro=document.getElementById('introLine');
+  if(intro)intro.textContent=(GLANCE.overview?GLANCE.overview+' ':'')+'Below: what the fare covers, the ship in plain terms, cabin advice, and where she sails now with recent from-fares. The exact price for your date and cabin is a ten-minute call.';
+})();
+
+(function(){const el=document.getElementById('incGrid');if(!el)return; /* included vs extras, registry facts only */
+  const inFare=[];
+  if(INCLUDED.taxes)inFare.push(INCLUDED.taxes+' (seen '+pricesCheckedOn+')');
+  (INCLUDED.incDining||[]).forEach(n=>inFare.push(n+' (dining included in the fare)'));
+  (INCLUDED.kids||'').split(';').map(s=>s.trim()).filter(Boolean).forEach(x=>inFare.push(x));
+  const extras=(INCLUDED.extraDining||[]).map(n=>n+' (specialty dining)');
+  const cards=[];
+  cards.push(`<div class="inccard"><h3>In the fare</h3><ul>${inFare.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`);
+  /* deposits are number-dense: tier + final-payment series render as small
+     2-col tables (registry wording split by generate.py, nothing invented) */
+  const dp=INCLUDED.deposit;
+  const mini=(rows,cap)=>rows&&rows.length?`<table class="minitbl"><caption>${cap}</caption><tbody>${rows.map(r=>`<tr><td>${esc(r.len)}</td><td>${esc(r.amt||r.due)}</td></tr>`).join('')}</tbody></table>`:'';
+  if(dp&&((dp.rows&&dp.rows.length)||(dp.pay&&dp.pay.length)||dp.prose)){
+    cards.push(`<div class="inccard"><h3>Deposits and payment</h3>${mini(dp.rows,'Deposit per person')}${mini(dp.pay,'Final payment due')}${dp.prose?`<p>${esc(dp.prose)}</p>`:''}<p style="margin-top:8px">We confirm the deposit for your exact sailing and fare type on the call.</p></div>`);
+  }
+  cards.push(`<div class="inccard extras"><h3>Priced separately</h3><ul>${extras.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p style="margin-top:8px">Drink packages, Wi-Fi and shore excursions are also sold separately and reprice by sailing, so we do not list stale numbers here. Ask on the call and get real totals before you book.</p></div>`);
+  el.innerHTML=cards.join('');
+})();
+
+(function(){const el=document.getElementById('glanceSpecs');if(!el)return; /* at a glance */
+  document.getElementById('glanceH2').textContent=PAGE.shipName+' at a glance';
+  const lead=document.getElementById('glanceLead');
+  if(lead)lead.textContent=GLANCE.overview||'';
+  const specs=[];
+  if(GLANCE.cls)specs.push(['Class',GLANCE.cls]);
+  if(GLANCE.year)specs.push(['Entered service',String(GLANCE.year)]);
+  if(GLANCE.guests)specs.push(['Guests (double occupancy)',GLANCE.guests.toLocaleString()]);
+  if(GLANCE.tonnage)specs.push(['Gross tonnage',GLANCE.tonnage.toLocaleString()]);
+  el.innerHTML=specs.map(s=>`<div class="spec"><div class="n" style="font-size:${s[1].length>14?'17px':'30px'}">${esc(s[1])}</div><div class="l">${esc(s[0])}</div></div>`).join('');
+  const fc=document.getElementById('glanceFeats');
+  if(fc)fc.innerHTML=(GLANCE.features||[]).map(f=>`<span>${esc(f)}</span>`).join('');
+  const who=document.getElementById('glanceWho');
+  if(who){if(GLANCE.whoFor)who.textContent='Who she suits: '+GLANCE.whoFor;else who.style.display='none';}
+})();
+
+(function(){const el=document.getElementById('diningTxt');if(!el)return; /* dining module */
+  const inc=DINING.filter(v=>!v.extra),ex=DINING.filter(v=>v.extra);
+  const lead=document.getElementById('diningLead');
+  if(lead)lead.textContent=`${inc.length} venue${inc.length===1?'':'s'} included in the fare and ${ex.length} priced separately. That is the lineup we can verify, not necessarily every counter on board.`;
+  const li=v=>`<li><b>${esc(v.name)}</b>${v.desc?` <span>${esc(v.desc)}</span>`:''}</li>`;
+  el.innerHTML=`<h3>Included in the fare</h3><ul class="vlist">${inc.map(li).join('')}</ul>
+    <h3 style="margin-top:16px">Specialty, priced separately</h3><ul class="vlist extras">${ex.map(li).join('')}</ul>`;
+  fillBox(document.getElementById('diningImg'),IMGS.dining,'Dining');
+})();
+
+(function(){const el=document.getElementById('cabinGrid');if(!el)return; /* cabins in advice voice */
+  /* advice whitelist keyed by category NAME: statements about the nature of
+     the category, never invented ship specifics (those live in CABINS.note) */
+  const ADVICE={
+    'Interior':'The lowest fare on the ship. Pick it if the cabin is mostly for sleeping and you would rather put the budget into the trip itself.',
+    'Ocean View':'Daylight and a sea view without the balcony premium. A sensible middle ground for first-timers who want to wake up to the water.',
+    'Balcony':'Private outdoor space of your own, and on warm-water routes it earns its keep daily. Ask what the step up from ocean view costs on your exact date.',
+    'Suite':'The most space on board. If you are pricing one for a family, have an advisor compare it against two connecting staterooms before you commit.'
+  };
+  const note=document.getElementById('cabinNote');
+  if(note)note.textContent=(CABINS.note||'')+(CABINS.note?' ':'')+'The advice below is about the category, not a specific room; an advisor matches real cabin numbers to your group on the call.';
+  el.innerHTML=(CABINS.categories||[]).map(c=>`<div class="cabcard"><h3>${esc(c)}</h3><p>${esc(ADVICE[c]||'Ask an advisor whether this category earns its price on your sailing.')}</p></div>`).join('');
+  fillBox(document.getElementById('cabinImg'),IMGS.cabins,'Cabins');
+})();
+
+(function(){const el=document.getElementById('decksTxt');if(!el)return; /* decks & layout: WRITTEN orientation only */
+  const bits=[];
+  if(DINING&&DINING.length)bits.push(`${DINING.length} dining venues`);
+  if(BARS&&BARS.length)bits.push(`${BARS.length} bars and lounges`);
+  if(typeof SPA!=='undefined'&&SPA&&SPA.name)bits.push('the '+SPA.name);
+  if(typeof SHOPPING!=='undefined'&&SHOPPING)bits.push('onboard shopping');
+  el.textContent='We do not reproduce deck plans here, so this stays written and simple: the verified lineup on this page covers '+joinList(bits)+', with cabin categories running '+joinList(CABINS.categories||[])+'. An advisor can talk through where a specific cabin sits, and what is above and below it, before you book.';
+})();
+
+(function(){const el=document.getElementById('barsList');if(!el)return; /* bars & lounges */
+  if(!BARS||!BARS.length){const sec=document.getElementById('bars');if(sec)sec.hidden=true;return;}
+  el.innerHTML=BARS.map(v=>`<li><b>${esc(v.name)}</b>${v.desc?` <span>${esc(v.desc)}</span>`:''}</li>`).join('');
+  fillBox(document.getElementById('barsImg'),IMGS.bars,'Bars and lounges');
+})();
+
+(function(){const el=document.getElementById('showsBody');if(!el)return; /* entertainment & nightlife */
+  if(SHOWS&&SHOWS.length){
+    el.innerHTML=`<ul class="vlist">${SHOWS.map(v=>`<li><b>${esc(v.name)}</b>${v.desc?` <span>${esc(v.desc)}</span>`:''}</li>`).join('')}</ul>`;
+  }else{
+    el.innerHTML=`<p class="lead" style="margin-bottom:0">Show and nightlife schedules are set per sailing, and we have not verified a fixed lineup for ${esc(PAGE.shipName)}, so we do not guess at one. An advisor can tell you what runs on your exact date.</p>`;
+  }
+})();
+
+(function(){const sec=document.getElementById('casino');if(!sec)return; /* casino: honest line or omitted */
+  if(typeof CASINO==='undefined'||CASINO===null)return; /* stays hidden */
+  const t=document.getElementById('casinoTxt');
+  sec.hidden=false;
+  if(CASINO.name){
+    t.textContent=CASINO.name+(CASINO.desc?': '+CASINO.desc:'');
+  }else{
+    t.textContent='We have not verified casino details for '+PAGE.shipName+', so we do not list any here. If the casino matters to your group, confirm it on the call.';
+  }
+})();
+
+(function(){const el=document.getElementById('actList');if(!el)return; /* onboard activities */
+  if(!ACTIVITIES||!ACTIVITIES.length){const sec=document.getElementById('activities');if(sec)sec.hidden=true;return;}
+  el.innerHTML=ACTIVITIES.map(v=>`<li><b>${esc(v.name)}</b>${v.desc?` <span>${esc(v.desc)}</span>`:''}</li>`).join('');
+  fillBox(document.getElementById('actImg'),IMGS.activities,'Onboard activities');
+})();
+
+(function(){const el=document.getElementById('kidsTxt');if(!el)return; /* kids & teens */
+  if(!KIDS){const sec=document.getElementById('kids');if(sec)sec.hidden=true;return;}
+  el.textContent=KIDS;
+  fillBox(document.getElementById('kidsImg'),IMGS.kids,'Kids and teens');
+})();
+
+(function(){const el=document.getElementById('wellGrid');if(!el)return; /* wellness + shopping, honestly small */
+  const cards=[];
+  if(typeof SPA!=='undefined'&&SPA&&SPA.name){
+    cards.push(`<div class="inccard"><div class="imgbox" style="height:130px;border-radius:10px;overflow:hidden;margin-bottom:12px${IMGS.spa&&IMGS.spa.src?'':';display:none'}">${imgHTML(IMGS.spa,'Spa')}</div><h3>${esc(SPA.name)}</h3><p>${esc(SPA.desc||'')}</p></div>`);
+  }
+  if(typeof SHOPPING!=='undefined'&&SHOPPING&&SHOPPING.desc){
+    cards.push(`<div class="inccard"><h3>Shopping on board</h3><p>${esc(SHOPPING.desc)}</p></div>`);
+  }
+  if(!cards.length){const sec=document.getElementById('wellness');if(sec)sec.hidden=true;return;}
+  el.innerHTML=cards.join('');
+})();
+
+(function(){const el=document.getElementById('sailGrid');if(!el)return; /* where she sails now: live sheet cards */
+  document.getElementById('sailH2').textContent='Where '+PAGE.shipName+' sails now';
+  el.innerHTML=(SAILINGS||[]).map(s=>{
+    const chips=(s.months||[]).slice(0,4).map(m=>`<span class="mchip">${mLabel(m)}</span>`).join('')+((s.months||[]).length>4?`<span class="mchip">+${s.months.length-4} more</span>`:'');
+    return `<article class="scard">
+      <div class="imgbox${s.img&&s.img.src?' has-img':''}">${imgHTML(s.img,s.name)}</div>
+      <div class="b">
+        <h3>${esc(s.name)}</h3>
+        <p class="meta">${s.nights} nights · ${s.oneWay?'from':'round-trip from'} ${esc(s.portLabel)}</p>
+        ${routeSVG(s.days)}
+        <div class="months">${chips}</div>
+        ${s.from==null
+          ? `<div class="price nofare"><span class="a">Fare on request</span></div>`
+          : `<div class="price"><span class="f">From</span><span class="a">$${s.from.toLocaleString()}</span><span class="f">pp</span></div>`}
+        <p class="stamp">${s.from==null? 'This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call for a live quote.' : `From-fare seen ${esc(s.stamp)} · exact dates priced by phone`}</p>
+        <button class="daymore" type="button" data-sail="${esc(s.id)}">Day by day</button>
+        <a class="go" href="tel:${PHONE_TEL}">📞 Call for exact dates &amp; today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
+        ${s.detailUrl?`<a class="more" href="${s.detailUrl}">View full itinerary</a>`:''}
+      </div>
+    </article>`;
+  }).join('');
+  el.addEventListener('click',function(e){
+    const b=e.target&&e.target.closest?e.target.closest('.daymore'):null;if(!b)return;
+    const s=(SAILINGS||[]).filter(x=>String(x.id)===b.dataset.sail)[0];if(!s)return;
+    const seen={};
+    const rows=(s.days||[]).map(d=>{
+      if(d.p==='at-sea')return `<li><span class="dno">Day ${d.n}</span><b>At sea</b><span class="tm">A full day on board</span></li>`;
+      const po=portOf(d.p);
+      const tm=d.arr&&d.dep?`${esc(d.arr)} to ${esc(d.dep)}`:(d.dep?`departs ${esc(d.dep)}`:(d.arr?`arrives ${esc(d.arr)}`:''));
+      const cur=(po.cur||[]).map(c=>`<span class="cur">${esc(c)}</span>`).join('');
+      const first=!seen[d.p];seen[d.p]=1;
+      return `<li><span class="dno">Day ${d.n}</span><b>${esc(po.label)}</b>${cur}<span class="tm">${tm}${d.note?' · '+esc(d.note):''}</span>${first&&po.blurb?`<p>${esc(po.blurb)}</p>`:''}</li>`;
+    }).join('');
+    sheetOpen('sheet-day',s.name,`<p class="smeta2">${s.nights} nights · ${s.oneWay?'from':'round-trip from'} ${esc(s.portLabel)}</p><ol class="sdays">${rows}</ol>`,
+      `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for exact dates</a>`);
+  });
+  const note=document.getElementById('sailNote');
+  if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call. Deployments change seasonally; specialists see the full live schedule.`;
+})();
+
+(function(){const el=document.getElementById('faqList');if(!el)return; /* FAQ module */
+  if(typeof FAQS==='undefined'||!FAQS)return;
+  el.innerHTML=FAQS.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
+})();
+
+(function(){const el=document.getElementById('offerSlot');if(!el)return; /* offer ribbon slot */
+  const today=new Date().toISOString().slice(0,10);
+  el.innerHTML=(typeof OFFERS!=='undefined'?OFFERS:[]).filter(o=>o.start<=today&&today<=o.end).map(o=>
+    `<div class="offerbar"><span class="tag">LIMITED OFFER</span><span>${esc(o.text)}</span><span class="end">Ends ${esc(o.endLabel)} · call to apply</span></div>`).join('');
+})();
+
+(function(){const b=document.getElementById('bandH2');if(!b)return; /* final band personalization */
+  b.textContent='Ready to price '+PAGE.shipName+' for your dates?';
+})();
+
+/* ============ mobile UX modules (ship-life tiles + bottom sheets, scroll
+   reveals). Presentation only: all content comes from the baked consts
+   above; the tile slider scrolls inside its own container; nothing here
+   calls stopPropagation, so the delegated tel_click listener sees every
+   click. ============ */
+function sheetOpen(kind,title,bodyHTML,footHTML){
+  var s=document.getElementById('sheet'),b=document.getElementById('sheetBack');
+  if(!s||!b)return;
+  s.className='sheet off '+kind;
+  document.getElementById('sheetTitle').textContent=title;
+  document.getElementById('sheetBody').innerHTML=bodyHTML;
+  document.getElementById('sheetFoot').innerHTML=footHTML;
+  b.hidden=false;s.hidden=false;b.classList.remove('off');
+  void s.offsetHeight; /* reflow so the 200ms slide-up transition runs */
+  s.classList.remove('off');
+  document.body.style.overflow='hidden';
+}
+function sheetClose(){
+  var s=document.getElementById('sheet'),b=document.getElementById('sheetBack');
+  if(!s||s.hidden)return;
+  s.classList.add('off');b.classList.add('off');
+  document.body.style.overflow='';
+  var done=false,fin=function(){if(done)return;done=true;s.hidden=true;b.hidden=true;};
+  s.addEventListener('transitionend',fin,{once:true});
+  setTimeout(fin,240); /* reduced-motion path: no transitionend, timer hides */
+}
+(function(){var s=document.getElementById('sheet');if(!s)return; /* sheet dismissal wiring */
+  var b=document.getElementById('sheetBack'),x=document.getElementById('sheetClose');
+  if(x)x.addEventListener('click',sheetClose);
+  if(b)b.addEventListener('click',sheetClose);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')sheetClose();});
+  /* in-sheet #anchor links close the sheet, then navigate normally */
+  s.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="#"]'):null;if(a)sheetClose();});
+  /* swipe-down on the grab bar */
+  var g=document.getElementById('sheetGrab'),y0=null;
+  if(g){
+    g.addEventListener('touchstart',function(e){y0=e.touches[0].clientY;},{passive:true});
+    g.addEventListener('touchmove',function(e){if(y0==null)return;var dy=e.touches[0].clientY-y0;if(dy>0)s.style.transform='translateY('+dy+'px)';},{passive:true});
+    g.addEventListener('touchend',function(e){var dy=e.changedTouches[0].clientY-(y0==null?0:y0);y0=null;s.style.transform='';if(dy>70)sheetClose();});
+  }
+})();
+(function(){var strip=document.getElementById('lifeStrip');if(!strip)return; /* ship-life tiles -> sheets (mobile) */
+  var li=v=>`<li><b>${esc(v.name)}</b>${v.desc?` <span>${esc(v.desc)}</span>`:''}</li>`;
+  var foot='<a class="btn" href="tel:'+PHONE_TEL+'">📞 Call '+PHONE_DISPLAY+'</a>';
+  var tiles=[];
+  if(typeof DINING!=='undefined'&&DINING&&DINING.length){
+    var inc=DINING.filter(v=>!v.extra),ex=DINING.filter(v=>v.extra);
+    tiles.push({lab:'Dining',img:IMGS.dining,t:'Dining on board',
+      b:`<p>${inc.length} venue${inc.length===1?'':'s'} included in the fare and ${ex.length} priced separately.</p>
+         <ul class="vlist" style="margin:10px 0">${inc.map(li).join('')}</ul>
+         <ul class="vlist extras">${ex.map(li).join('')}</ul>`});
+  }
+  if(typeof KIDS!=='undefined'&&KIDS){
+    tiles.push({lab:'Kids & teens',img:IMGS.kids,t:'Kids and teens',
+      b:`<p>${esc(KIDS)}</p><p style="margin-top:10px">Third and fourth guest pricing moves with promotions, so what kids pay on your dates is a live question for the call.</p>`});
+  }
+  var nb=[];
+  if(typeof BARS!=='undefined'&&BARS&&BARS.length)nb.push(`<ul class="vlist" style="margin-bottom:10px">${BARS.map(li).join('')}</ul>`);
+  if(typeof SHOWS!=='undefined'&&SHOWS&&SHOWS.length)nb.push(`<ul class="vlist">${SHOWS.map(li).join('')}</ul>`);
+  else nb.push(`<p>Show and nightlife schedules are set per sailing, and we have not verified a fixed lineup for ${esc(PAGE.shipName)}, so we do not guess at one. An advisor can tell you what runs on your exact date.</p>`);
+  tiles.push({lab:'Nightlife',img:IMGS.bars,t:'Bars, shows and nightlife',b:nb.join('')});
+  var wb=[];
+  if(typeof SPA!=='undefined'&&SPA&&SPA.name)wb.push(`<p><b>${esc(SPA.name)}</b>${SPA.desc?` ${esc(SPA.desc)}`:''}</p>`);
+  if(typeof SHOPPING!=='undefined'&&SHOPPING&&SHOPPING.desc)wb.push(`<p style="margin-top:8px"><b>Shopping on board</b> ${esc(SHOPPING.desc)}</p>`);
+  if(wb.length)tiles.push({lab:'Spa & shopping',img:IMGS.spa,t:'Wellness, spa and shopping',b:wb.join('')});
+  if(typeof ACTIVITIES!=='undefined'&&ACTIVITIES&&ACTIVITIES.length)tiles.push({lab:'Activities',img:IMGS.activities,t:'Onboard activities',b:`<ul class="vlist">${ACTIVITIES.map(li).join('')}</ul>`});
+  if(!tiles.length)return;
+  strip.innerHTML=tiles.map((t,i)=>`<button class="tile" type="button" data-i="${i}">${t.img&&t.img.src?`<img src="${t.img.src}" alt="" loading="lazy">`:''}<span class="tlab">${esc(t.lab)}</span></button>`).join('');
+  strip.classList.add('on');
+  strip.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest?e.target.closest('.tile'):null;if(!b)return;
+    var t=tiles[+b.dataset.i];if(t)sheetOpen('sheet-life',t.t,t.b,foot);
+  });
+})();
+(function(){if(!document.body||!('IntersectionObserver' in window))return; /* scroll reveals, once per element */
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  document.documentElement.classList.add('js-rv');
+  var io=new IntersectionObserver(function(es){
+    for(var i=0;i<es.length;i++){if(es[i].isIntersecting){es[i].target.classList.add('in');io.unobserve(es[i].target);}}
+  },{rootMargin:'0px 0px -8% 0px'});
+  var els=document.querySelectorAll('section.blk, .callzone .card');
+  for(var i=0;i<els.length;i++){
+    /* skip sections a media query or module keeps hidden (e.g. the ship
+       template's desktop-only stacks): they can never intersect */
+    if(els[i].hidden)continue;
+    var cs=window.getComputedStyle?getComputedStyle(els[i]):null;
+    if(cs&&cs.display==='none')continue;
+    els[i].classList.add('rv');io.observe(els[i]);
+  }
+})();
+(function(){var t=document.getElementById('cbToggle');if(!t)return; /* collapsed callback form (mobile); form stays in the DOM so lead_submit binding is untouched */
+  var cb=t.closest?t.closest('.cb'):null;if(!cb)return;
+  cb.classList.add('js');
+  t.addEventListener('click',function(){
+    cb.classList.add('open');t.setAttribute('aria-expanded','true');
+    var f=cb.querySelector('input');if(f&&f.focus)try{f.focus();}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

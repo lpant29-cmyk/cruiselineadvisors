@@ -1,7 +1,9 @@
 page_id,page_type,slug,url,h1,deal_filter,target_keywords,status,priority
 p001,itinerary,7n-bahamas-perfect-day-cape-liberty,/en/go/itineraries/7-night-bahamas-perfect-day-from-new-york/,7-Night Bahamas Cruise with Royal Caribbean from New York,itin:7n-bahamas-perfect-day-cape-liberty,"7 day bahamas cruise royal caribbean;royal caribbean bahamas cruise from new york",pilot,1
-p002,combo,royal-caribbean-galveston,/en/go/lines/royal-caribbean/from/galveston/,Royal Caribbean Cruises from Galveston,combo:royal-caribbean-galveston,royal caribbean cruises from galveston,built-template,1
+p002,combo,royal-caribbean-galveston,/en/go/lines/royal-caribbean/from/galveston/,Royal Caribbean Cruises from Galveston,combo:royal-caribbean-galveston,"royal caribbean cruises from galveston;royal caribbean galveston cruise port;royal caribbean out of galveston;royal caribbean galveston schedule;royal caribbean cruise port in galveston texas;icon of the seas galveston;symphony of the seas galveston;harmony of the seas galveston;allure of the seas galveston;liberty of the seas galveston;royal caribbean 4 day cruise from galveston",building,1
 p003,line,royal-caribbean,/en/go/lines/royal-caribbean/,Royal Caribbean Cruises,line:royal-caribbean,royal caribbean cruise deals,planned,1
 p004,port,cape-liberty,/en/go/from/new-york/,Cruises from New York (Cape Liberty),port:cape-liberty,cruises from new york,planned,1
 p005,dest,bahamas,/en/go/to/bahamas/,Bahamas Cruises,dest:bahamas,bahamas cruise deals,planned,1
 p006,audience,family,/en/go/family-cruises/,Family Cruises,aud:family,family cruise deals,planned,2
+p007,itinerary,5n-west-caribbean-mariner-galveston,/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/,5-Night Western Caribbean Cruise from Galveston on Mariner of the Seas,itin:5n-west-caribbean-mariner-galveston,,building,1
+p008,ship,mariner-of-the-seas,/en/go/ships/mariner-of-the-seas/,"Mariner of the Seas: Cruises, Cabins and What's Onboard",ship:mariner-of-the-seas,,building,1

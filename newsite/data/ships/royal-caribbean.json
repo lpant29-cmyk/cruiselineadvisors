@@ -3104,6 +3104,33 @@
           }
         ],
         "kids_family": "Family-oriented activities and age-appropriate programming across the ship.",
+        "kids_bands": "Adventure Ocean on Mariner runs complimentary, age-grouped sessions for kids 3 to 11: Aquanauts (ages 3-5), Explorers (ages 6-8) and Voyagers (ages 9-11). A Royal Babies & Tots nursery takes 6 to 36 month olds for an extra fee, and teens get a dedicated Teen Lounge hangout. Fleet-wide, Royal Caribbean's FAQ frames Adventure Ocean as covering ages 3-17 with separate programs per age group.",
+        "kids_bands_source": "https://www.royalcaribbean.com/guides/best-family-vacation-onboard-mariner-of-the-seas, https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas/things-to-do, https://www.royalcaribbean.com/faq/questions/children-teen-activities",
+        "casino": {
+          "name": null,
+          "desc": null,
+          "source": null,
+          "note": "Honest gap: no casino venue is stated on any loaded official Mariner page (ship page, things-to-do, rooms, family/free-things/top-things guides) as of 2026-07-29. Only the fleet-wide Club Royale casino rewards program appears, in site navigation. Left null rather than assumed."
+        },
+        "spa": {
+          "name": "Vitality Spa",
+          "desc": "The ship's official things-to-do listing includes a Spa & Fitness Center entry naming Vitality Spa with a full treatment menu, alongside fitness classes in an ocean-view gym.",
+          "source": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas/things-to-do"
+        },
+        "shopping": {
+          "desc": "Onboard shopping is listed on the ship's official things-to-do page: boutiques carrying name-brand retail.",
+          "source": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas/things-to-do"
+        },
+        "cabins": {
+          "categories": [
+            "Interior",
+            "Ocean View",
+            "Balcony",
+            "Suite"
+          ],
+          "quad_note": "The official rooms page does not publish berth counts. It states that select staterooms connect for extended families and that cribs and baby supplies are provided on request; suite virtual tours listed there: Royal Suite with Balcony, Grand Suite (1 and 2 bedroom), Owner's Suite. Internal cross-check: our 2026-07-29 fare collection from royalcaribbean.com/graph returned live interior and balcony fares for Mariner sailings, confirming both categories bookable.",
+          "source": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas/rooms"
+        },
         "exp_source": "https://www.royalcaribbean.com/cruise-ships/mariner-of-the-seas"
       }
     },

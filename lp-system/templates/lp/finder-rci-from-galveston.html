@@ -12,82 +12,115 @@
        combo page -> lock line + port (this file)
        dest page  -> lock destination
        ship page  -> lock ship (results = that ship's itineraries)
-     Data contract mirrors the sheet deals tab; generate.py injects DATA from CSVs. -->
-<title>Royal Caribbean Cruises from Galveston — Search Sailings & Call for Exact Fares | [AGENCY NAME]</title>
+     Data contract mirrors the sheet deals tab; generate.py injects DATA from CSVs.
+     Visual layer = cruiselineadvisors.com design system (navy #0A2540, teal #12919A,
+     gold #FFB23E/#F0891F, coral #FF6B5A, Fraunces display + Inter UI). -->
+<title>Royal Caribbean Cruises from Galveston: Search Sailings &amp; Call for Exact Fares | [AGENCY NAME]</title>
 <meta name="description" content="Search real Royal Caribbean itineraries from Galveston by destination, month and length. Recent from-fares by month; call 1-833-555-0100 for exact dates and today's price.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
 <style>
-:root{--ink:#132430;--deep:#0B3050;--sea:#0E7C8C;--sea-soft:#E5F2F4;--foam:#F6FAFB;--coral:#E85D3D;--coral-d:#C2472A;--line:#DFE8EC;--gold:#FFD9A8;--ok:#1D7A4A;--r:14px;--maxw:1120px}
+:root{--ink:#082C42;--deep:#0A2540;--deep-2:#123C5A;--sea:#12919A;--sea-d:#0C6E86;--sea-soft:#E9FAFA;--foam:#F0FAFB;--coral:#FF6B5A;--coral-d:#E8552E;--line:#DCEBEC;--gold:#FFB23E;--gold-d:#F0891F;--ok:#1D7A4A;--r:16px;--maxw:1120px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15}
-a{text-decoration:none;color:var(--sea)}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces','Georgia',serif;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+a{text-decoration:none;color:var(--sea-d)}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-.imgbox{background:linear-gradient(135deg,#CFE3EA,#9FC4D4);display:flex;align-items:center;justify-content:center;color:#3E6375;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:8px}
+.imgbox{background:linear-gradient(135deg,#CFF1F8,#8FD9F0);display:flex;align-items:center;justify-content:center;color:#0C6E86;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:8px}
+.imgbox.has-img{padding:0}
+.imgbox img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* disclosure ribbon — REQUIRED for brand-term traffic, keep visible */
-.disclose{background:#FFF4E8;border-bottom:1px solid #F2DCC2;color:#7A5A33;font-size:12.5px;text-align:center;padding:7px 14px;font-weight:600}
+/* disclosure ribbon: REQUIRED for brand-term traffic. Mobile collapses it
+   to ONE tap-to-expand line; the full text stays in the DOM (it is legally
+   load-bearing) and the collapse is JS-gated so no-JS renders it in full */
+@media(max-width:900px){
+}
 
 /* top bar */
 .topbar{background:var(--deep);color:#DCE9F2;font-size:13.5px;padding:8px 0}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .topbar .hours{font-weight:600}
-.topbar .hours .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ADE80;margin-right:6px}
+.topbar .hours .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#25C36B;margin-right:6px}
 .topbar a{color:#fff;font-weight:800;font-size:15px}
 
 /* nav */
 .nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;color:var(--deep)}
+.brand{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:21px;letter-spacing:-.01em;color:var(--deep)}
 .nav ul{display:flex;gap:22px;list-style:none;font-size:14px;font-weight:600}
-.nav ul a{color:#41586A}
-.nav .cta{background:var(--coral);color:#fff;padding:10px 16px;border-radius:9px;font-weight:800;font-size:14.5px}
-.nav .cta:hover{background:var(--coral-d)}
+.nav ul a{color:#4E6B75}
+/* color discipline: coral is reserved for the sticky bar, hero CTA and
+   sheet-footer CTAs; every other call CTA is navy outline */
+.nav .cta{background:#fff;border:2px solid var(--deep);color:var(--deep);padding:8px 14px;border-radius:11px;font-weight:800;font-size:14.5px}
+.nav .cta:hover{background:var(--foam)}
+.nav .wrap{flex-wrap:nowrap}
+.brand{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.nav .cta .cta-i{display:none}
+/* <=480px: compact phone ICON button so brand + phone stay on one row
+   (same collision class as the detail templates once the brand is baked) */
+@media(max-width:480px){
+  .nav .cta{flex:0 0 auto;width:42px;height:42px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center}
+  .nav .cta .cta-t{display:none}
+  .nav .cta .cta-i{display:block;font-size:19px}
+}
 
 /* hero */
 .hero{position:relative;height:430px}
 .hero .imgbox{position:absolute;inset:0;font-size:14px}
-.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,44,.2) 25%,rgba(6,26,44,.78))}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,37,64,.2) 25%,rgba(10,37,64,.8))}
 .hero .content{position:absolute;left:0;right:0;bottom:28px;color:#fff}
 .hero .linelogo{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--deep);font-weight:800;font-size:13px;border-radius:8px;padding:7px 12px;margin-bottom:10px}
 .hero h1{font-size:clamp(29px,4.4vw,46px);text-shadow:0 2px 14px rgba(0,0,0,.35)}
 .hero .tagline{font-size:16.5px;color:#E4EFF6;text-shadow:0 1px 8px rgba(0,0,0,.4)}
 
-/* CALL CARD (replaces search widget) */
-.callzone{margin-top:-52px;position:relative;z-index:5}
-.callzone .card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 50px rgba(8,32,53,.18);padding:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+/* CALL CARD (call zone; on this template the finder holds the hero-overlap
+   slot, so the call zone sits below it with a normal margin) */
+.callzone{margin-top:26px;position:relative;z-index:5}
+.callzone .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(10,37,64,.16);padding:22px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
 .callzone .main h2{font-size:21px;color:var(--deep);margin-bottom:4px}
-.callzone .main .why{font-size:14px;color:#5B707C;margin-bottom:14px}
-.bigcall{display:flex;align-items:center;gap:14px;background:var(--coral);color:#fff;border-radius:12px;padding:16px 20px;transition:background .15s}
-.bigcall:hover{background:var(--coral-d)}
+.callzone .main .why{font-size:14px;color:#4E6B75;margin-bottom:14px}
+.bigcall{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--deep);color:var(--deep);border-radius:13px;padding:15px 19px;transition:background .15s}
+.bigcall:hover{background:var(--foam)}
 .bigcall .ic{font-size:30px}
-.bigcall .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:26px;color:#fff;line-height:1.1}
-.bigcall .lbl{font-size:12.5px;color:#FFE0D5;font-weight:700;letter-spacing:.03em}
-.callmeta{display:flex;gap:16px;margin-top:12px;font-size:12.5px;color:#5B707C;flex-wrap:wrap}
+.bigcall .num{font-weight:800;font-size:26px;color:var(--deep);line-height:1.1}
+.bigcall .lbl{font-size:12.5px;color:#4E6B75;font-weight:700;letter-spacing:.03em}
+.callmeta{display:flex;gap:16px;margin-top:12px;font-size:12.5px;color:#4E6B75;flex-wrap:wrap}
 .callmeta b{color:var(--ok)}
 .cb{border-left:1px solid var(--line);padding-left:24px}
 .cb h3{font-size:15px;color:var(--deep);margin-bottom:8px}
-.cb label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#63788A;margin:8px 0 4px}
-.cb input,.cb select{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:10px;font-size:14.5px;font-family:inherit;background:#FBFDFE}
+.cb label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#4E6B75;margin:8px 0 4px}
+.cb input,.cb select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px;font-size:14.5px;font-family:inherit;background:#FBFDFE}
 .cb input:focus,.cb select:focus{outline:2px solid var(--sea);border-color:var(--sea)}
-.cb button{width:100%;margin-top:12px;background:var(--deep);color:#fff;border:0;border-radius:9px;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;padding:12px;cursor:pointer}
-.cb button:hover{background:#0E3D63}
-.cb .fp{font-size:11px;color:#8B9AA4;margin-top:8px;line-height:1.5}
+.cb button{width:100%;margin-top:12px;background:var(--deep);color:#fff;border:0;border-radius:10px;font-family:inherit;font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+.cb button:hover{background:var(--deep-2)}
+.cb .fp{font-size:11px;color:#6B7C86;margin-top:8px;line-height:1.5}
+/* mobile top-stack budget: the callback form collapses behind a navy
+   outline button; the form stays in the DOM so lead_submit binds on load.
+   (.cb .cb-toggle outranks the .cb button solid-navy rule) */
+.cb .cb-toggle{display:none;width:100%;margin:0;background:#fff;border:2px solid var(--deep);border-radius:12px;color:var(--deep);font-family:inherit;font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+.cb .cb-toggle:hover{background:var(--foam)}
+@media(max-width:900px){
+  .cb.js .cb-toggle{display:block}
+  .cb.js:not(.open) form,.cb.js:not(.open) h3{display:none}
+  .cb.js.open .cb-toggle{display:none}
+}
 
 /* intro */
 .intro{padding:38px 0 6px}
-.intro p{max-width:78ch;color:#3D5261;font-size:16.5px}
+.intro p{max-width:78ch;color:#233B47;font-size:16.5px}
 .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
-.badge{background:var(--sea-soft);color:#0A5A66;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px}
+.badge{background:var(--sea-soft);color:var(--sea-d);font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px}
 
 /* anchors */
 .anchors{position:sticky;top:60px;background:#fff;border-bottom:1px solid var(--line);z-index:50}
 .anchors ul{display:flex;gap:4px;list-style:none;overflow-x:auto}
-.anchors a{display:block;padding:14px 16px;font-size:14.5px;font-weight:700;color:#5A6E7E;border-bottom:3px solid transparent;white-space:nowrap}
-.anchors a:hover,.anchors a.on{color:var(--deep);border-bottom-color:var(--coral)}
+.anchors a{display:block;padding:14px 16px;font-size:14.5px;font-weight:700;color:#4E6B75;border-bottom:3px solid transparent;white-space:nowrap}
+.anchors a:hover,.anchors a.on{color:var(--deep);border-bottom-color:var(--sea)}
 
 section.blk{padding:50px 0 26px}
 .kicker{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-bottom:6px}
@@ -95,17 +128,17 @@ section.blk{padding:50px 0 26px}
 
 /* tabs + carousel */
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.tab{border:1.5px solid var(--line);background:#fff;color:#41586A;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer;font-family:inherit}
+.tab{border:1.5px solid var(--line);background:#fff;color:#4E6B75;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer;font-family:inherit}
 .tab.on{background:var(--deep);border-color:var(--deep);color:#fff}
 .carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
 .pcard{min-width:240px;max-width:240px;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff}
 .pcard .imgbox{height:150px}
 .pcard .cap{padding:12px 14px;font-weight:800;font-size:14.5px;color:var(--deep)}
-.pcard .cap span{display:block;font-weight:400;font-size:12.5px;color:#63788A}
+.pcard .cap span{display:block;font-weight:400;font-size:12.5px;color:#4E6B75}
 
 /* facts */
 .facts{background:var(--deep);color:#fff;border-radius:18px;padding:34px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}
-.fact .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:40px;color:var(--gold)}
+.fact .n{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:40px;color:var(--gold)}
 .fact .l{font-size:13.5px;color:#BFD4E1;font-weight:700}
 
 /* cabins */
@@ -113,117 +146,266 @@ section.blk{padding:50px 0 26px}
 .cabin-panel .imgbox{min-height:280px}
 .cabin-panel .txt{padding:26px}
 .cabin-panel h3{font-size:22px;color:var(--deep);margin-bottom:6px}
-.cabin-panel p{color:#3D5261;font-size:15px;margin-bottom:14px}
+.cabin-panel p{color:#233B47;font-size:15px;margin-bottom:14px}
 .cabin-panel ul{list-style:none;display:grid;gap:8px;margin-bottom:18px}
-.cabin-panel li{padding-left:24px;position:relative;font-size:14.5px;color:#33485A}
+.cabin-panel li{padding-left:24px;position:relative;font-size:14.5px;color:#233B47}
 .cabin-panel li::before{content:"✓";position:absolute;left:0;color:var(--sea);font-weight:800}
-.btn{display:inline-block;background:var(--coral);color:#fff;font-family:'Bricolage Grotesque';font-weight:800;font-size:15.5px;border:0;border-radius:10px;padding:13px 22px;cursor:pointer}
-.btn:hover{background:var(--coral-d)}
+.btn{display:inline-block;background:linear-gradient(180deg,var(--coral),var(--coral-d));color:#fff;font-family:inherit;font-weight:800;font-size:15.5px;border:0;border-radius:12px;padding:13px 22px;cursor:pointer;box-shadow:0 10px 22px rgba(232,85,46,.3)}
+.btn:hover{filter:brightness(1.06)}
+/* navy-outline variants (coral reserved for sticky bar + sheet-footer CTAs) */
+.cabin-panel .btn,.noresults .btn{background:#fff;border:2px solid var(--deep);color:var(--deep);box-shadow:none}
+.cabin-panel .btn:hover,.noresults .btn:hover{background:var(--foam);filter:none}
 
-/* sailing cards — call version */
+/* sailing cards: call version */
 .sailings{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
 .scard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
 .scard .imgbox{height:130px}
 .scard .b{padding:15px 16px 18px;display:flex;flex-direction:column;flex:1}
 .scard h3{font-size:16.5px;color:var(--deep);margin-bottom:3px}
-.scard .meta{font-size:13px;color:#63788A;margin-bottom:8px}
+.scard .meta{font-size:13px;color:#4E6B75;margin-bottom:8px}
 .scard .price{margin-top:auto;display:flex;align-items:baseline;gap:7px}
-.scard .price .f{font-size:12px;color:#63788A;text-transform:uppercase;font-weight:700}
-.scard .price .a{font-family:'Bricolage Grotesque';font-weight:800;font-size:24px;color:var(--deep)}
-.scard .stamp{font-size:11px;color:#8B9AA4;margin:4px 0 10px}
-.scard .go{text-align:center;background:var(--coral);color:#fff;border-radius:9px;padding:11px;font-weight:800;font-size:14px}
-.scard .go:hover{background:var(--coral-d)}
-.scard .go small{display:block;font-weight:600;font-size:11px;color:#FFE0D5}
+.scard .price .f{font-size:12px;color:#4E6B75;text-transform:uppercase;font-weight:700}
+.scard .price .a{font-weight:800;font-size:24px;color:var(--deep)}
+.scard .stamp{font-size:11px;color:#6B7C86;margin:4px 0 10px}
+.scard .go{text-align:center;background:#fff;border:2px solid var(--deep);color:var(--deep);border-radius:10px;padding:9px;font-weight:800;font-size:14px}
+.scard .go:hover{background:var(--foam)}
+.scard .go small{display:block;font-weight:600;font-size:11px;color:#4E6B75}
 
 /* why call */
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
 .wcard{background:var(--foam);border:1px solid var(--line);border-radius:var(--r);padding:20px}
 .wcard .ic{font-size:24px;margin-bottom:8px}
 .wcard h3{font-size:16.5px;margin-bottom:4px;color:var(--deep)}
-.wcard p{font-size:14.5px;color:#51656F}
+.wcard p{font-size:14.5px;color:#4E6B75}
 
 /* phone banner */
-.phoneband{background:linear-gradient(90deg,var(--deep),#0E4A78);border-radius:18px;color:#fff;padding:30px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
-.phoneband h2{font-size:clamp(20px,2.6vw,27px)}
+.phoneband{background:linear-gradient(90deg,var(--deep),var(--deep-2));border-radius:18px;color:#fff;padding:30px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.phoneband h2{font-size:clamp(20px,2.6vw,27px);color:#fff}
 .phoneband p{color:#BFD4E1;font-size:14.5px}
-.phoneband .bigcall{background:var(--coral)}
+/* on the navy band the outline goes white for contrast (still not coral) */
+.phoneband .bigcall{background:transparent;border-color:#fff}
+.phoneband .bigcall .num{color:#fff}
+.phoneband .bigcall .lbl{color:#BFD4E1}
+.phoneband .bigcall:hover{background:rgba(255,255,255,.08)}
 
 /* footer */
-footer{background:#081F35;color:#8FA6B6;font-size:12.5px;padding:30px 0 96px;line-height:1.7}
+footer{background:#071C30;color:#9EC6CF;font-size:12.5px;padding:30px 0 96px;line-height:1.7}
 footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-bottom:22px}
-footer h4{color:#DCE9F2;font-size:13px;margin-bottom:8px}
+footer h4{color:#fff;font-size:13px;margin-bottom:8px}
 footer ul{list-style:none;display:grid;gap:5px}
-footer a{color:#AFC5D3}
-footer .legal{border-top:1px solid #16344E;padding-top:16px}
-footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
+footer a{color:#BDE0E5}
+footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 
 /* sticky call bar */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;padding:10px 14px;z-index:70;box-shadow:0 -8px 24px rgba(4,24,43,.14)}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;padding:10px 14px;z-index:70;box-shadow:0 -8px 24px rgba(10,37,64,.14)}
 .sticky-cta .btn{flex:1;text-align:center;margin:0;font-size:15.5px;padding:14px}
-.sticky-cta .cb-btn{background:var(--deep);max-width:170px}
-.sticky-cta .cb-btn:hover{background:#0E3D63}
+.sticky-cta .cb-btn{background:var(--deep);max-width:170px;box-shadow:none}
+.sticky-cta .cb-btn:hover{background:var(--deep-2);filter:none}
 
 @media(max-width:900px){
   .nav ul{display:none}
-  .callzone .card{grid-template-columns:1fr}
-  .cb{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px}
+  .callzone .card{grid-template-columns:1fr;padding:16px}
+  .cb{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px}
   .cabin-panel{grid-template-columns:1fr}
-  .hero{height:340px}
+  /* top-stack budget: first content within 2 screens at 390px */
+  .hero{height:260px}
+  .topbar{font-size:12.5px}
+  .callzone .main .why{margin-bottom:10px}
+  .bigcall{padding:12px 16px}
+  .bigcall .num{font-size:22px}
+  /* no hero overlap on mobile: tagline stays readable (.finder.wrap outranks
+     the base .finder{margin-top:-52px} that follows in source order) */
+  .finder.wrap{margin-top:12px}
+  .finder .card{padding:14px;gap:10px}
+  .f select{padding:9px 8px}
+  section.blk{padding:30px 0 18px}
+  .intro{padding:22px 0 4px}
+  .intro p{font-size:16px}
+  .offerbar{font-size:13px;padding:11px 14px;gap:8px;flex-wrap:wrap}
+  .offerbar .end{margin-left:0}
 }
-@media(min-width:901px){ .sticky-cta{display:none} }
+@media(max-width:480px){
+  /* hours badge stays, one line: the "Advisors answering now" prefix hides,
+     the 8am-11pm ET coverage line always renders */
+  .topbar .now{display:none}
+}
+@media(min-width:901px){
+  .sticky-cta{display:none}
+  /* hero text sits above the finder-card overlap zone (was clipped) */
+  .hero .content{bottom:80px}
+}
 
 /* ---- finder search box ---- */
 .finder{margin-top:-52px;position:relative;z-index:5}
-.finder .card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 50px rgba(8,32,53,.18);padding:18px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
-.f label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#63788A;margin-bottom:5px}
-.f select{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:12px 10px;font-size:14.5px;font-family:inherit;background:#FBFDFE;color:var(--ink)}
+.finder .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(10,37,64,.16);padding:18px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
+.f label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#4E6B75;margin-bottom:5px}
+.f select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 10px;font-size:14.5px;font-family:inherit;background:#FBFDFE;color:var(--ink)}
 .f select:disabled{background:var(--sea-soft);color:var(--deep);font-weight:800;opacity:1}
 .f select:focus{outline:2px solid var(--sea);border-color:var(--sea)}
-.finder .go{background:var(--coral);color:#fff;border:0;border-radius:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:16px;padding:14px 26px;cursor:pointer;white-space:nowrap}
-.finder .go:hover{background:var(--coral-d)}
-.locked-note{font-size:11px;color:#0A5A66;font-weight:700;margin-top:4px}
+.finder .go{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:var(--deep);border:0;border-radius:12px;font-family:inherit;font-weight:800;font-size:16px;padding:14px 26px;cursor:pointer;white-space:nowrap;box-shadow:0 8px 18px rgba(240,137,31,.32)}
+.finder .go:hover{filter:brightness(1.05)}
+.locked-note{font-size:11px;color:var(--sea-d);font-weight:700;margin-top:4px}
 /* ---- results ---- */
 .results-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.results-head .count{font-size:14px;color:#5B707C;font-weight:700}
+.results-head .count{font-size:14px;color:#4E6B75;font-weight:700}
 .itins{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
 .itin{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
 .itin .imgbox{height:140px}
 .itin .b{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
 .itin h3{font-size:17px;color:var(--deep);margin-bottom:2px}
-.itin .meta{font-size:13px;color:#63788A;margin-bottom:8px}
-.ribbon{display:flex;align-items:center;margin:6px 0 4px}
-.ribbon .port{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+.itin .meta{font-size:13px;color:#4E6B75;margin-bottom:8px}
+.ribbon{display:flex;align-items:center;margin:6px 0 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ribbon::-webkit-scrollbar{display:none}
+.ribbon .port{display:flex;flex-direction:column;align-items:center;gap:3px;flex:0 0 auto;min-width:0}
 .ribbon .dot{width:10px;height:10px;border-radius:50%;background:var(--sea);border:2px solid #fff;box-shadow:0 0 0 1.5px var(--sea)}
-.ribbon .dot.e{background:var(--coral);box-shadow:0 0 0 1.5px var(--coral)}
-.ribbon .leg{flex:1;border-top:2.5px dotted #A9C6CD;margin:0 3px;transform:translateY(-8px)}
-.ribbon .pname{font-size:10.5px;font-weight:700;color:#48606C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:78px}
+.ribbon .dot.e{background:var(--deep);box-shadow:0 0 0 1.5px var(--deep)}
+.ribbon .leg{flex:0 0 22px;min-width:22px;border-top:2.5px dotted #A9D6DA;margin:0 3px;transform:translateY(-8px)}
+.ribbon .pname{font-size:10.5px;font-weight:700;color:#48606C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
 .months{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
-.mchip{background:var(--sea-soft);color:#0A5A66;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px}
+.mchip{background:var(--sea-soft);color:var(--sea-d);font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px}
 .mchip.hit{background:var(--deep);color:#fff}
 .itin .price{margin-top:auto;display:flex;align-items:baseline;gap:7px}
-.itin .price .f{font-size:11.5px;color:#63788A;text-transform:uppercase;font-weight:700}
-.itin .price .a{font-family:'Bricolage Grotesque';font-weight:800;font-size:25px;color:var(--deep)}
-.itin .stamp{font-size:11px;color:#8B9AA4;margin:3px 0 10px}
-.itin .go{text-align:center;background:var(--coral);color:#fff;border-radius:9px;padding:11px;font-weight:800;font-size:14px}
-.itin .go:hover{background:var(--coral-d)}
-.itin .go small{display:block;font-weight:600;font-size:11px;color:#FFE0D5}
+.itin .price .f{font-size:11.5px;color:#4E6B75;text-transform:uppercase;font-weight:700}
+.itin .price .a{font-weight:800;font-size:25px;color:var(--deep)}
+.itin .stamp{font-size:11px;color:#6B7C86;margin:3px 0 10px}
+.itin .go{text-align:center;background:#fff;border:2px solid var(--deep);color:var(--deep);border-radius:10px;padding:9px;font-weight:800;font-size:14px}
+.itin .go:hover{background:var(--foam)}
+.itin .go small{display:block;font-weight:600;font-size:11px;color:#4E6B75}
+.itin .more{display:block;text-align:center;font-size:12.5px;font-weight:700;color:var(--sea-d);margin-top:8px}
+.itin .more:hover{text-decoration:underline}
+.seachip{background:#FFF3DC;color:#8A5A14;font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:999px;margin-left:8px;white-space:nowrap;align-self:center}
+.cur{display:inline-block;background:var(--sea-soft);color:var(--sea-d);font-size:10px;font-weight:800;padding:1px 7px;border-radius:999px;margin-left:5px;vertical-align:middle}
+/* day-by-day expander */
+.dd{margin:8px 0 6px;border:1px solid var(--line);border-radius:10px;background:var(--foam)}
+.dd summary{cursor:pointer;font-size:12.5px;font-weight:800;color:var(--sea-d);padding:8px 12px}
+.dd ol{list-style:none;padding:2px 12px 10px}
+.dd li{padding:7px 0;border-top:1px dashed var(--line);font-size:12.5px;color:#233B47}
+.dd li:first-child{border-top:0}
+.dd .dno{font-weight:800;color:var(--deep);margin-right:6px}
+.dd .tm{color:#6B7C86;font-size:11.5px;margin-left:6px}
+.dd p{margin:2px 0 0;font-size:12px;color:#4E6B75;line-height:1.5}
+/* ship module */
+.ships{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.shipcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.shipcard h3{font-size:17px;color:var(--deep);margin-bottom:2px}
+.ship-tab-img{height:150px;border-radius:12px;overflow:hidden;margin-bottom:10px}
+.repnote{font-size:11px;color:#8B9AA4;margin:-4px 0 10px}
+.shipcard .smeta{font-size:12.5px;color:#4E6B75;margin-bottom:8px}
+.fitchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.fitchips span{background:var(--sea-soft);color:var(--sea-d);font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px}
+.shipcard ul{list-style:none;display:grid;gap:6px;margin-bottom:10px}
+.shipcard li{padding-left:20px;position:relative;font-size:13.5px;color:#233B47}
+.shipcard li::before{content:"✓";position:absolute;left:0;color:var(--sea);font-weight:800}
+.shipcard .fam{font-size:12.5px;color:#4E6B75;border-top:1px dashed var(--line);padding-top:8px}
 .noresults{background:var(--foam);border:1.5px dashed var(--line);border-radius:var(--r);padding:28px;text-align:center}
 .noresults h3{color:var(--deep);font-size:18px;margin-bottom:6px}
-.noresults p{color:#5B707C;font-size:14.5px;margin-bottom:14px}
-.offerbar{background:linear-gradient(90deg,#B4530A,#E8603C);color:#fff;border-radius:12px;padding:13px 18px;display:flex;gap:12px;align-items:center;margin:18px 0 0;font-size:14.5px;font-weight:700}
-.offerbar .tag{background:rgba(255,255,255,.2);border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.06em}
-.offerbar .end{margin-left:auto;font-weight:600;font-size:12.5px;color:#FFE0D5;white-space:nowrap}
+.noresults p{color:#4E6B75;font-size:14.5px;margin-bottom:14px}
+/* offer ribbon: soft gold tint + navy text (color discipline: coral and
+   solid orange stay off non-CTA surfaces) */
+.offerbar{background:#FFF7EC;border:1px solid var(--gold);color:var(--deep);border-radius:12px;padding:13px 18px;display:flex;gap:12px;align-items:center;margin:18px 0 0;font-size:14.5px;font-weight:700}
+.offerbar .tag{background:rgba(240,137,31,.16);color:#7A5A33;border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.06em}
+.offerbar .end{margin-left:auto;font-weight:700;font-size:12.5px;color:#7A5A33;white-space:nowrap}
 .gridcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 @media(max-width:900px){ .finder .card{grid-template-columns:1fr 1fr} .finder .go{grid-column:1/-1} }
+
+/* ---- mobile UX pass (<=900px): one-line result rows, featured strip,
+   bottom sheet, scroll reveals. Desktop layout unchanged. ---- */
+.nchip{display:none}
+.showall{display:none}
+.featwrap{display:none}
+.featwrap[hidden]{display:none!important}
+.mchip.xtra{display:none}
+/* bottom sheet: single dialog, slide-up 200ms, backdrop + X + swipe-down.
+   The off state is TRULY gone: visibility:hidden + pointer-events:none
+   (viewport chrome/dvh quirks otherwise let the grab bar peek up and eat
+   taps at the bottom edge). Visibility flips after the slide-out (0s .2s)
+   and immediately on open (0s in the base state). */
+.sheetback{position:fixed;inset:0;background:rgba(8,28,48,.55);z-index:80;transition:opacity .2s ease,visibility 0s}
+.sheetback.off{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility 0s .2s}
+.sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;border-radius:18px 18px 0 0;z-index:81;max-height:82vh;display:flex;flex-direction:column;box-shadow:0 -14px 44px rgba(10,37,64,.32);transition:transform .2s ease,visibility 0s}
+.sheet.off{transform:translateY(105%);visibility:hidden;pointer-events:none;transition:transform .2s ease,visibility 0s .2s}
+.sheet-grab{padding:10px 0 2px;display:flex;justify-content:center;touch-action:none}
+.sheet-grab span{width:42px;height:5px;border-radius:999px;background:var(--line)}
+.sheet-x{position:absolute;top:10px;right:12px;width:34px;height:34px;border-radius:50%;border:0;background:var(--foam);color:var(--deep);font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
+.sheet-h{font-size:20px;color:var(--deep);padding:4px 54px 8px 20px}
+.sheet-body{overflow-y:auto;padding:2px 20px 18px;font-size:16px;color:#233B47}
+.sheet-body .smeta2{font-size:13px;color:#4E6B75;font-weight:600;margin-bottom:6px}
+.sheet-body .sh4{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sea);margin:12px 0 2px;font-family:'Inter',sans-serif}
+.sheet-body .srow{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.sheet-body .srow b{color:var(--deep)}
+.sheet-body .sstamp{font-size:12.5px;color:#6B7C86;margin-top:8px}
+.sheet-foot{border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.sheet-foot .btn{flex:1;text-align:center}
+.sheet-foot .btn2{flex:1;text-align:center;border:1.5px solid var(--deep);border-radius:12px;padding:12px 16px;font-weight:800;font-size:15px;color:var(--deep);background:#fff}
+@media(prefers-reduced-motion:reduce){.sheet,.sheetback{transition:none}}
+@media(max-width:900px){
+  /* scroll reveal: fade + 14px rise, once per element; gated on .js-rv so
+     reduced-motion and no-IO paths render everything visible */
+  .js-rv .rv{opacity:0;transform:translateY(14px);transition:opacity .22s ease,transform .22s ease}
+  .js-rv .rv.in{opacity:1;transform:none}
+  /* top-stack budget: section kicker labels off on mobile; the featured
+     strip keeps its label (it is the strip's only caption) */
+  .kicker{display:none}
+  .featwrap .kicker{display:block}
+  /* results become TRUE one-line rows: 44px thumb, truncated name, nights,
+     from-price. Months + per-row stamp + call CTA live in the deal sheet;
+     the list-level "seen <date>" stamp stays visible in the results head. */
+  .itins{grid-template-columns:1fr;gap:8px}
+  .itin{display:flex;flex-direction:row;align-items:center;gap:10px;border-radius:12px;cursor:pointer;padding:8px 10px}
+  .itin .imgbox{flex:0 0 44px;width:44px;height:44px;min-height:0;border-radius:9px;overflow:hidden;font-size:7px}
+  .itin .b{padding:0;display:flex;flex-direction:row;align-items:center;gap:8px;flex:1;min-width:0}
+  .itin h3{font-size:14.5px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .itin .meta,.itin .ribbon,.itin .dd,.itin .months,.itin .stamp,.itin .go,.itin .more{display:none}
+  .itin .nchip{display:block;flex:0 0 auto;font-size:12.5px;font-weight:700;color:#4E6B75;white-space:nowrap}
+  .itin .price{margin:0;flex:0 0 auto;gap:4px;white-space:nowrap}
+  .itin .price .f{font-size:10.5px}
+  .itin .price .a{font-size:15px}
+  /* first 6 rows show; the rest expand behind the show-all button */
+  .itins:not(.allrows) .itin.xrow{display:none}
+  .showall{display:block;width:100%;background:#fff;border:2px solid var(--deep);border-radius:12px;color:var(--deep);font-family:inherit;font-weight:800;font-size:15px;padding:12px;cursor:pointer}
+  .itins.allrows .showall{display:none}
+  /* featured strip: CSS scroll-snap slider, scrolls inside its own box */
+  .featwrap{display:block;margin:0 0 20px}
+  .featwrap .kicker{margin-bottom:10px}
+  .fstrip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;-webkit-overflow-scrolling:touch;margin:0 calc(50% - 50vw);padding:2px 20px 8px;scrollbar-width:none}
+  .fstrip::-webkit-scrollbar{display:none}
+  .fslide{flex:0 0 72vw;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;text-align:left;padding:0;font-family:inherit;cursor:pointer}
+  .fslide .imgbox{height:120px}
+  .fslide .fb{padding:10px 12px 12px}
+  .fslide h3{font-size:16px;color:var(--deep)}
+  .fslide .fmeta{font-size:13px;color:#4E6B75;margin-top:2px}
+  .fslide .fmeta b{color:var(--deep)}
+  /* reading-text floor on mobile */
+  .wcard p,.faq details p{font-size:16px}
+}
+
+/* gentle attention pulse on day-by-day controls: 3 cycles then still,
+   fully off under reduced motion (operator ruling 2026-07-30) */
+@keyframes ddpulse{0%,100%{box-shadow:0 0 0 0 rgba(18,145,154,0)}50%{box-shadow:0 0 0 6px rgba(18,145,154,.25)}}
+.daymore,.dd summary{animation:ddpulse 2.2s ease-in-out 1.2s 3}
+@media(prefers-reduced-motion:reduce){.daymore,.dd summary{animation:none}}
+
+/* day-by-day inside the deal sheet */
+.sdays{list-style:none;margin:2px 0 14px;padding:0;display:grid;gap:10px}
+.sdays li{border-left:2px solid var(--line);padding:0 0 0 12px}
+.sdays .dno{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--sea-d);margin-right:6px}
+.sdays b{font-size:15px;color:var(--deep)}
+.sdays .tm{display:block;font-size:12.5px;color:#4E6B75;margin-top:2px}
+.sdays p{font-size:14px;color:#3A5261;margin-top:4px}
+.sdays .cur{display:inline-block;font-size:10.5px;font-weight:700;background:var(--foam);color:var(--sea-d);border-radius:6px;padding:1px 6px;margin-left:5px}
+.hero-ind{font-size:12.5px;font-weight:700;color:#fff;background:rgba(8,28,48,.62);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 11px;margin:0 0 9px;display:inline-block;backdrop-filter:blur(2px);text-shadow:0 1px 4px rgba(0,0,0,.5)}
+@media(max-width:600px){.hero .linelogo{display:none}}
+@media(max-width:420px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+.price.nofare .a{font-size:17px;color:var(--sea-d)}
 </style>
 </head>
 <body>
 
-<div class="disclose">[AGENCY NAME] is an independent travel referral service, not Royal Caribbean and not the cruise line's customer service. Quotes and bookings are provided by independent licensed travel agencies.</div>
 
 <div class="topbar">
   <div class="wrap">
-    <span class="hours"><span class="dot"></span>Advisors answering now · 8am–11pm ET, every day</span>
+    <span class="hours"><span class="dot"></span><span class="now">Advisors answering now · </span>8am-11pm ET, every day</span>
     <a href="tel:+18335550100">📞 1-833-555-0100</a>
   </div>
 </div>
@@ -233,21 +415,24 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
     <span class="brand">[AGENCY NAME]</span>
     <ul>
       <li><a href="#results">Sailings</a></li>
+      <li><a href="#ships">Ships</a></li>
       <li><a href="#know">Galveston guide</a></li>
       <li><a href="#whycall">Why call us</a></li>
     </ul>
-    <a class="cta" href="tel:+18335550100">Call for exact fares</a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for exact fares</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="imgbox">IMG SLOT · Galveston terminal + big ship hero (assets: port/galveston-hero.webp)</div>
+  <!-- hero image resolves through 10_assets.csv (baked HERO const); labeled frame when unresolved -->
+  <div class="imgbox" id="heroImg" aria-hidden="true"></div>
   <div class="shade"></div>
   <div class="content">
     <div class="wrap">
       <span class="linelogo">🚢 ROYAL CARIBBEAN · FROM GALVESTON, TEXAS</span>
+      <p class="hero-ind">Independent referral service. Not Royal Caribbean, and not the cruise line's customer service.</p>
       <h1>Royal Caribbean cruises from Galveston</h1>
-      <p class="tagline">Search real itineraries by month and length — then one call gets exact dates, cabins and today's price.</p>
+      <p class="tagline">Search real itineraries by month and length, then one call gets exact dates, cabins and today's price.</p>
     </div>
   </div>
 </header>
@@ -272,8 +457,8 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
       <label for="fNights">Duration</label>
       <select id="fNights">
         <option value="">Any length</option>
-        <option value="2-5">2–5 nights</option>
-        <option value="6-8">6–8 nights</option>
+        <option value="2-5">2-5 nights</option>
+        <option value="6-8">6-8 nights</option>
         <option value="9-99">9+ nights</option>
       </select>
     </div>
@@ -281,8 +466,42 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
   </form>
 </div>
 
+<!-- CALL ZONE (ADS-LP-BRIEF §4): tap-to-call + 3-field callback form + TCPA line.
+     Joins the finder above; does not replace it. -->
+<div class="callzone wrap">
+  <div class="card">
+    <div class="main">
+      <h2>Get exact dates and today's fare by phone</h2>
+      <p class="why">The search shows recent from-fares by month. A licensed Galveston specialist checks your dates, cabins and current promotions, then quotes the real total. Free, no pressure.</p>
+      <a class="bigcall" href="tel:+18335550100">
+        <span class="ic">📞</span>
+        <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
+      </a>
+            <div class="callmeta">
+        <span><b>●</b> Advisors answering now</span>
+        <span>8am-11pm ET, every day</span>
+        <span>Licensed US partner agencies</span>
+      </div>
+    </div>
+    <div class="cb">
+      <button class="cb-toggle" id="cbToggle" type="button" aria-expanded="false">Prefer we call you?</button>
+      <h3>Prefer we call you?</h3>
+      <form action="#CALLBACK_ACTION" method="POST">
+        <label for="cbname">Name</label>
+        <input id="cbname" name="name" required autocomplete="name" placeholder="Jane Rivera">
+        <label for="cbphone">Phone</label>
+        <input id="cbphone" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-0100">
+        <label for="cbwhen">Best time to call</label>
+        <select id="cbwhen" name="calltime"><option>As soon as possible</option><option>This afternoon</option><option>This evening</option><option>Tomorrow morning</option></select>
+        <button type="submit">Request a callback</button>
+        <p class="fp">By submitting you agree to be contacted by phone or SMS about your cruise inquiry. See our Calling & SMS Consent policy.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
 <section class="intro wrap">
-  <p>Royal Caribbean sails from Galveston year-round out of its purpose-built terminal, with Western Caribbean runs, holiday sailings and longer repositioning voyages. Fares below are recent from-prices by sail month — the exact price for your dates, cabin and current promotions is a ten-minute call.</p>
+  <p>Royal Caribbean sails from Galveston year-round out of its purpose-built terminal, with Western Caribbean runs, holiday sailings and longer repositioning voyages. Fares below are recent from-prices by sail month. The exact price for your dates, cabin and current promotions is a ten-minute call.</p>
   <div id="offerSlot"></div>
 </section>
 
@@ -293,6 +512,13 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
       <h2 style="margin:0">Itineraries matching your search</h2>
     </div>
     <span class="count" id="resultCount"></span>
+  </div>
+  <!-- FEATURED strip (mobile UX): featured=yes rows as a swipe slider; the
+       full list below still contains them. Hidden on desktop and when no
+       featured rows are baked. -->
+  <div class="featwrap" id="featWrap" hidden>
+    <p class="kicker">Featured sailings</p>
+    <div class="fstrip" id="featStrip"></div>
   </div>
   <div class="itins" id="itinGrid"></div>
 </section>
@@ -307,7 +533,7 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
     <button class="tab" data-k="docs">Documents</button>
   </div>
   <div class="cabin-panel">
-    <div class="imgbox" id="knowImg">IMG SLOT · Galveston detail photo</div>
+    <div class="imgbox" id="knowImg"></div>
     <div class="txt">
       <h3 id="knowTitle"></h3>
       <p id="knowDesc"></p>
@@ -317,29 +543,39 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
   </div>
 </section>
 
+<!-- SHIP MODULE: the ships sailing this port as tabs; 02_ships facts plus
+     the newsite ships dataset (at-a-glance, verified dining counts, family
+     line). Sea-day lines in the day expanders anchor here (#ships). -->
+<section class="blk wrap" id="ships">
+  <p class="kicker">The ships</p>
+  <h2>The ships sailing this route</h2>
+  <div class="tabs" id="shipTabs"></div>
+  <div class="shipcard" id="shipPanel" style="max-width:760px"></div>
+</section>
+
 <section class="blk wrap" id="whycall">
   <p class="kicker">Why call us</p>
   <h2>The search shows the itinerary. The call gets your price.</h2>
   <div class="why">
     <div class="wcard"><div class="ic">🏷️</div><h3>Exact dates, exact price</h3><p>From-fares by month are the map; your sail date, cabin and current promos set the real number. A specialist quotes it live.</p></div>
-    <div class="wcard"><div class="ic">🛏️</div><h3>The right cabin</h3><p>Which balconies, which decks, which quads actually fit a family — advice from people who book this ship weekly.</p></div>
+    <div class="wcard"><div class="ic">🛏️</div><h3>The right cabin</h3><p>Which balconies, which decks, which quads actually fit a family, advice from people who book this ship weekly.</p></div>
     <div class="wcard"><div class="ic">🤝</div><h3>No pressure, ever</h3><p>Free to call, no obligation, and we never take payment for travel. Licensed partner agencies handle every booking.</p></div>
-    <div class="wcard"><div class="ic">🛡️</div><h3>Straight answers</h3><p>Gratuities, deposits, drink packages, cancellation windows — explained plainly before you commit.</p></div>
+    <div class="wcard"><div class="ic">🛡️</div><h3>Straight answers</h3><p>Gratuities, deposits, drink packages, cancellation windows: explained plainly before you commit.</p></div>
   </div>
 </section>
 
-<section class="blk faq wrap">
+<!-- FAQ: rendered from the baked FAQS const (08_faqs rows matching this
+     page's facets, max 4, "is calling more expensive" first) -->
+<section class="blk faq wrap" id="faq">
   <h2>Quick answers</h2>
-  <details><summary>Why don't you show a price for every date?</summary><p>Cruise fares reprice constantly by date and cabin. We show honest recent from-fares by month, then quote your exact dates live on the call — that number is accurate, not stale.</p></details>
-  <details><summary>Is calling more expensive than booking online?</summary><p>No — the fare is the cruise line's fare either way. The call adds comparison, promo-stacking and a human for changes afterward.</p></details>
-  <details><summary>Do I need a passport to cruise from Galveston?</summary><p>Closed-loop sailings allow US citizens a birth certificate + photo ID, but a passport is strongly recommended. We confirm for your exact sailing.</p></details>
+  <div id="faqList"></div>
 </section>
 
 <section class="blk wrap">
   <div class="phoneband">
     <div>
       <h2>Found your itinerary? Get the exact fare now.</h2>
-      <p>8am–11pm ET, every day · Free quotes · No obligation · Se habla español</p>
+      <p>8am-11pm ET, every day · Free quotes · No obligation · Se habla español</p>
     </div>
     <a class="bigcall" href="tel:+18335550100">
       <span class="ic">📞</span>
@@ -351,7 +587,7 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
 <footer>
   <div class="wrap">
     <div class="legal">
-      <p class="agency-line">[AGENCY NAME] — independent cruise information & referral service</p>
+      <p class="agency-line">[AGENCY NAME]: independent cruise information &amp; referral service</p>
       <p>Prices shown are per-person from-fares based on double occupancy, observed from publicly available sources for the sail month indicated, on the date stamped. They exclude taxes, fees and port expenses, change frequently, and are not an offer to sell travel. All quotes, availability, bookings and payments are handled by independent licensed travel agencies. We do not sell, book or take payment for travel. Cruise line and ship names are property of their respective owners, used descriptively only; we are not affiliated with or endorsed by any cruise line. <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Calling & SMS Consent</a></p>
     </div>
   </div>
@@ -362,38 +598,56 @@ footer .legal .agency-line{color:#C6D6E1;font-weight:700;margin-bottom:6px}
   <a class="btn cb-btn" href="#finder" onclick="document.getElementById('fTo').focus();return false;">Search</a>
 </div>
 
+<!-- BOTTOM SHEET (mobile UX): single dialog reused by the row/slide taps;
+     footer always carries the call CTA; dismiss = backdrop tap, X, swipe-down -->
+<div class="sheetback" id="sheetBack" hidden></div>
+<div class="sheet off" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <div class="sheet-grab" id="sheetGrab"><span></span></div>
+  <button class="sheet-x" id="sheetClose" type="button" aria-label="Close">✕</button>
+  <h3 class="sheet-h" id="sheetTitle"></h3>
+  <div class="sheet-body" id="sheetBody"></div>
+  <div class="sheet-foot" id="sheetFoot"></div>
+</div>
+
 <script>
 /* ============================================================
-   PAGE PARAMS + DATA — generated from the sheet by generate.py
+   PAGE PARAMS + DATA - generated from the sheet by generate.py
    (edit here manually only during prototyping)
    ============================================================ */
-const PAGE = { type:"combo", line:"royal-caribbean", lineLabel:"Royal Caribbean", port:"galveston", portLabel:"Galveston, TX" };
+const PAGE = { type:"combo", filter:"royal-caribbean-galveston", h1:"Royal Caribbean cruises from Galveston", line:"royal-caribbean", lineLabel:"Royal Caribbean", port:"galveston", portLabel:"Galveston, TX" };
 const PHONE_TEL = "+18335550100";
 const PHONE_DISPLAY = "1-833-555-0100";
 const pricesCheckedOn = "July 27";
-
+/* image contract: {src, alt, w, h} resolved via 10_assets.csv, or null ->
+   the labeled placeholder frame stays */
+const HERO = null;
+const KNOW_IMG = null;
+/* pre-cruise module (05_ports_content pre_cruise column) or null */
+const PRE_CRUISE = { text:"Prototype: arrive a day early and explore the port town before boarding.", items:["Historic district","Beaches"] };
+/* one-line travel documents summary (first sentence of FAQ q001) */
+const DOCS_SUMMARY = "Prototype: closed-loop sailings allow US citizens a birth certificate and photo ID, passport strongly recommended.";
+/* PORTS lookup for route chips + day expanders (05_ports_content) */
+const PORTS = {
+  "galveston":{label:"Galveston TX",short:"Galveston",blurb:"Texas cruising without the flight.",cur:["USD"]},
+  "cozumel":{label:"Cozumel Mexico",short:"Cozumel",blurb:"Mexico's busiest cruise island.",cur:["USD","MXN"]}
+};
+/* ship module rows (02_ships) */
+const SHIPS = [
+  { id:"s017", name:"Liberty of the Seas", cls:"Royal Amplified", tier:"large", fit:["family","value"],
+    high:["Perfect Storm waterslides","Splashaway Bay aqua park"], family:"Splashaway Bay aimed at younger kids",
+    seaLine:"A full day on board. Ship time on Liberty of the Seas: Perfect Storm waterslides and Splashaway Bay aqua park." }
+];
 /* Data contract = deals tab rows filtered to this page (line+port), with
-   month-level from-prices: months lists available sail months; prices maps
-   month -> from-fare; prices.default used when a month has no override. */
+   month-level from-prices (prices.default when a month has no override),
+   a days array from 04_itinerary_days, an img object via 10_assets.csv and
+   an optional detailUrl when 09_pages registers a buildable itinerary page. */
 const ITINERARIES = [
-  { id:"d0003", name:"6-Night Western Caribbean", ship:"Icon-class", nights:6, dest:"western-caribbean", destLabel:"Western Caribbean",
-     ports:["Galveston","Costa Maya","Cozumel","Galveston"], months:["2026-09","2026-10","2026-11"],
-     prices:{ "default":1052, "2026-11":1189 }, img:"IMG SLOT · Cozumel pier" },
-  { id:"d0004", name:"8-Night Perfect Day & West Caribbean", ship:"Icon-class", nights:8, dest:"western-caribbean", destLabel:"Western Caribbean",
-     ports:["Galveston","CocoCay","Cozumel","Galveston"], months:["2026-09","2026-12"],
-     prices:{ "default":1365, "2026-12":1690 }, img:"IMG SLOT · CocoCay aerial" },
-  { id:"d0005", name:"5-Night Western Caribbean Holiday", ship:"Liberty of the Seas", nights:5, dest:"western-caribbean", destLabel:"Western Caribbean",
-     ports:["Galveston","Cozumel","Galveston"], months:["2026-12"],
-     prices:{ "default":584 }, img:"IMG SLOT · holiday sunset at sea" },
-  { id:"d0006", name:"4-Night Western Caribbean Getaway", ship:"Liberty of the Seas", nights:4, dest:"western-caribbean", destLabel:"Western Caribbean",
-     ports:["Galveston","Cozumel","Galveston"], months:["2027-01","2027-02"],
-     prices:{ "default":303 }, img:"IMG SLOT · ship wake" },
-  { id:"d0007", name:"7-Night Bahamas & Perfect Day", ship:"Voyager-class", nights:7, dest:"bahamas", destLabel:"Bahamas",
-     ports:["Galveston","Nassau","CocoCay","Galveston"], months:["2026-10","2026-11"],
-     prices:{ "default":721 }, img:"IMG SLOT · Bahamas beach" },
-  { id:"d0008", name:"10-Night Galveston to Ft. Lauderdale", ship:"Symphony-class", nights:10, dest:"caribbean-repositioning", destLabel:"Caribbean repositioning",
-     ports:["Galveston","Cozumel","Nassau","Ft. Lauderdale"], months:["2027-08"],
-     prices:{ "default":1221 }, img:"IMG SLOT · open ocean" }
+  { id:"d0006", name:"4-Night Western Caribbean Getaway", ship:"Liberty of the Seas", shipId:"s017", nights:4, dest:"western-caribbean", destLabel:"Western Caribbean",
+     featured:true, months:["2027-01","2027-02"], prices:{ "default":303 }, img:null,
+     days:[ {n:1,p:"galveston",arr:"",dep:"4:00 PM",note:"Embarkation day"}, {n:2,p:"at-sea",arr:"",dep:"",note:""}, {n:3,p:"cozumel",arr:"7:00 AM",dep:"5:00 PM",note:""}, {n:4,p:"at-sea",arr:"",dep:"",note:""}, {n:5,p:"galveston",arr:"7:00 AM",dep:"",note:"Disembarkation"} ] }
+];
+const FAQS = [
+  { q:"Is calling more expensive than booking online?", a:"No - the fare is the cruise line's fare either way. The call adds comparison promo-stacking and a human who handles changes afterward free of charge." }
 ];
 const OFFERS = [
   { text:"Example: kids sail free on select 2026 Caribbean sailings from Galveston", start:"2026-07-01", end:"2026-08-31", endLabel:"Aug 31" }
@@ -402,11 +656,66 @@ const OFFERS = [
 
 const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const mLabel = m => { const [y,mo]=m.split("-"); return MONTH_NAMES[+mo-1]+" "+y; };
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+
+/* imgbox contract: registry-resolved {src,alt,w,h} renders a real image;
+   anything else keeps the labeled frame */
+function imgHTML(img,label,eager){
+  if(img&&img.src){return `<img src="${img.src}" alt="${esc(img.alt)}"${img.w?` width="${img.w}" height="${img.h}"`:''} loading="${eager?'eager':'lazy'}"${eager?' fetchpriority="high"':''}>`;}
+  return esc(label||'');
+}
+function fillBox(el,img,label,eager){if(!el)return;el.innerHTML=imgHTML(img,label,eager);el.classList.toggle('has-img',!!(img&&img.src));}
+
+(function(){if(!document.getElementById('heroImg'))return; /* hero image module */
+  fillBox(document.getElementById('heroImg'), typeof HERO!=='undefined'?HERO:null, PAGE.portLabel, true);
+})();
+
+const SHIPS_BY_ID={};
+(function(){if(typeof SHIPS==='undefined'||!SHIPS)return;SHIPS.forEach(s=>{SHIPS_BY_ID[s.id]=s;});})();
+
+function portOf(slug){return (typeof PORTS!=='undefined'&&PORTS[slug])||{label:slug,short:slug,blurb:'',cur:[]};}
+
+/* route = embark -> calls -> return from the days array; consecutive
+   repeats (overnight calls) collapse; sea days collapse into a count */
+function routeOf(it){const stops=[];let sea=0;(it.days||[]).forEach(d=>{if(d.p==='at-sea'){sea++;return;}if(stops.length&&stops[stops.length-1]===d.p)return;stops.push(d.p);});return {stops,sea};}
+
+function ribbonHTML(it){
+  const r=routeOf(it);
+  if(!r.stops.length)return'';
+  const chips=r.stops.map((s,ix)=>`<span class="port"><span class="dot${ix===0||ix===r.stops.length-1?' e':''}"></span><span class="pname">${esc(portOf(s).short)}</span></span>`).join('<span class="leg"></span>');
+  const sea=r.sea?`<span class="seachip">${r.sea} sea day${r.sea>1?'s':''}</span>`:'';
+  return `<div class="ribbon">${chips}${sea}</div>`;
+}
+
+function dayLine(it,d,seen){
+  if(d.p==='at-sea'){
+    const s=SHIPS_BY_ID[it.shipId];
+    const txt=s?`${esc(s.seaLine)} <a href="#ships">See the ship</a>`:'A full day on board.';
+    return `<li><span class="dno">Day ${d.n}</span><b>At sea</b><p>${txt}</p></li>`;
+  }
+  const po=portOf(d.p);
+  const tm=d.arr&&d.dep?`${d.arr} to ${d.dep}`:(d.dep?`departs ${d.dep}`:(d.arr?`arrives ${d.arr}`:''));
+  const cur=(po.cur||[]).map(c=>`<span class="cur">${esc(c)}</span>`).join('');
+  const first=!seen.has(d.p);seen.add(d.p);
+  return `<li><span class="dno">Day ${d.n}</span><b>${esc(po.label)}</b>${cur}<span class="tm">${esc(tm)}${d.note?` · ${esc(d.note)}`:''}</span>${first&&po.blurb?`<p>${esc(po.blurb)}</p>`:''}</li>`;
+}
+
+function daysHTML(it){ /* day-by-day inside the deal sheet (mobile) */
+  if(!it.days||!it.days.length)return'';
+  const seen=new Set();
+  return `<h4 class="sh4">Day by day</h4><ol class="sdays">${it.days.map(d=>dayLine(it,d,seen)).join('')}</ol>`;
+}
+
+function expanderHTML(it){
+  if(!it.days||!it.days.length)return'';
+  const seen=new Set();
+  return `<details class="dd"><summary>Day-by-day</summary><ol>${it.days.map(d=>dayLine(it,d,seen)).join('')}</ol></details>`;
+}
 
 function populateFilters(){
   const dests=[...new Set(ITINERARIES.map(i=>i.dest))];
   const fTo=document.getElementById('fTo');
-  dests.forEach(d=>{ const lab=ITINERARIES.find(i=>i.dest===d).destLabel; fTo.insertAdjacentHTML('beforeend',`<option value="${d}">${lab}</option>`); });
+  dests.forEach(d=>{ const lab=ITINERARIES.find(i=>i.dest===d).destLabel; fTo.insertAdjacentHTML('beforeend',`<option value="${d}">${esc(lab)}</option>`); });
   const months=[...new Set(ITINERARIES.flatMap(i=>i.months))].sort();
   const fM=document.getElementById('fMonth');
   months.forEach(m=>fM.insertAdjacentHTML('beforeend',`<option value="${m}">${mLabel(m)}</option>`));
@@ -416,7 +725,7 @@ function populateFilters(){
   if(q.get('nights')) document.getElementById('fNights').value=q.get('nights');
 }
 
-function priceFor(it,month){ return (month && it.prices[month]!=null)? it.prices[month] : it.prices.default; }
+function priceFor(it,month){ const px=it.prices||{}; return (month && px[month]!=null)? px[month] : px.default; }
 
 function runSearch(scroll=true){
   const to=document.getElementById('fTo').value;
@@ -433,50 +742,225 @@ function runSearch(scroll=true){
   if(!list.length){
     grid.innerHTML=`<div class="noresults" style="grid-column:1/-1">
       <h3>No tracked sailings match that combination</h3>
-      <p>Our list covers the most-booked itineraries — specialists see the full live inventory, including dates and routes not shown here.</p>
-      <a class="btn" href="tel:${PHONE_TEL}">📞 Call ${PHONE_DISPLAY} — check availability</a></div>`;
+      <p>Our list covers the most-booked itineraries. Specialists see the full live inventory, including dates and routes not shown here.</p>
+      <a class="btn" href="tel:${PHONE_TEL}">📞 Call ${PHONE_DISPLAY} · check availability</a></div>`;
   } else {
-    grid.innerHTML=list.map(it=>{
+    /* mobile shows the first 6 rows, then the show-all expander (row count
+       is dynamic from the live result list); desktop shows the full grid */
+    grid.classList.remove('allrows');
+    grid.innerHTML=list.map((it,ix)=>{
       const p=priceFor(it,month);
-      const ribbon=it.ports.map((pt,ix)=>`<span class="port"><span class="dot${ix===0||ix===it.ports.length-1?' e':''}"></span><span class="pname">${pt}</span></span>`).join('<span class="leg"></span>');
-      const chips=it.months.slice(0,4).map(m=>`<span class="mchip${m===month?' hit':''}">${mLabel(m)}</span>`).join('')+(it.months.length>4?`<span class="mchip">+${it.months.length-4} more</span>`:'');
-      return `<article class="itin">
-        <div class="imgbox">${it.img}</div>
+      /* month chips are desktop-only (mobile rows are one-liners; months
+         live in the deal sheet); desktop shows 4 + a "+N more" chip */
+      const chips=it.months.map((m,mx)=>`<span class="mchip${mx>3?' xtra':''}${m===month?' hit':''}">${mLabel(m)}</span>`).join('')+(it.months.length>4?`<span class="mchip morechip">+${it.months.length-4} more</span>`:'');
+      return `<article class="itin${ix>5?' xrow':''}" data-id="${esc(it.id)}">
+        <div class="imgbox${it.img&&it.img.src?' has-img':''}">${imgHTML(it.img,it.destLabel)}</div>
         <div class="b">
-          <h3>${it.name}</h3>
-          <p class="meta">${PAGE.lineLabel} · ${it.ship} · ${it.nights} nights · round-trip ${PAGE.portLabel.split(',')[0]}</p>
-          <div class="ribbon">${ribbon}</div>
+          <h3>${esc(it.name)}</h3>
+          <span class="nchip">${it.nights} nts</span>
+          <p class="meta">${esc(PAGE.lineLabel)} · ${esc(it.ship)} · ${it.nights} nights · from ${esc(PAGE.portLabel.split(',')[0])}</p>
+          ${ribbonHTML(it)}
+          ${expanderHTML(it)}
           <div class="months">${chips}</div>
-          <div class="price"><span class="f">From</span><span class="a">$${p.toLocaleString()}</span><span class="f">pp${month? ' · '+mLabel(month):''}</span></div>
-          <p class="stamp">From-fare seen ${pricesCheckedOn} · exact dates priced by phone</p>
+          ${it.noPrice
+            ? `<div class="price nofare"><span class="a">Fare on request</span></div>
+          <p class="stamp">This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call and we will quote it live.</p>`
+            : `<div class="price"><span class="f">From</span><span class="a">$${p.toLocaleString()}</span><span class="f">pp${month? ' · '+mLabel(month):''}</span></div>
+          <p class="stamp">From-fare seen ${pricesCheckedOn}<span class="stamp-x"> · exact dates priced by phone</span></p>`}
           <a class="go" href="tel:${PHONE_TEL}">📞 Call for exact dates & today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
+          ${it.detailUrl?`<a class="more" href="${it.detailUrl}">View full itinerary</a>`:''}
         </div>
       </article>`;
-    }).join('');
+    }).join('')+(list.length>6?`<button class="showall" type="button">Show all ${list.length} sailings</button>`:'');
   }
   if(scroll) document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
 
 function renderOffers(){
   const el=document.getElementById('offerSlot');
+  if(!el)return;
   const today=new Date().toISOString().slice(0,10);
   el.innerHTML=OFFERS.filter(o=>o.start<=today&&today<=o.end).map(o=>
-    `<div class="offerbar"><span class="tag">LIMITED OFFER</span><span>${o.text}</span><span class="end">Ends ${o.endLabel} · call to apply</span></div>`).join('');
+    `<div class="offerbar"><span class="tag">LIMITED OFFER</span><span>${esc(o.text)}</span><span class="end">Ends ${esc(o.endLabel)} · call to apply</span></div>`).join('');
 }
 
+(function(){const tabs=document.getElementById('shipTabs');if(!tabs)return; /* ship module: one tab per ship */
+  if(typeof SHIPS==='undefined'||!SHIPS||!SHIPS.length){document.getElementById('ships').style.display='none';return;}
+  const TIER={mega:'Mega ship',large:'Large ship',mid:'Mid-size ship',small:'Small ship'};
+  const FIT={family:'Families',value:'Value','first-timer':'First-timers',couples:'Couples','short-getaway':'Short getaways','adult-premium':'Adults'};
+  const panel=document.getElementById('shipPanel');
+  const short=n=>n.replace(/ of the Seas$/,'');
+  tabs.innerHTML=SHIPS.map((s,i)=>`<button class="tab${i===0?' on':''}" type="button" data-i="${i}">${esc(short(s.name))}</button>`).join('');
+  function render(i){
+    const s=SHIPS[i];if(!s)return;
+    /* at-a-glance chips from the newsite ships dataset (s.ds), when joined;
+       ships not in the dataset render 02_ships facts only, no padding */
+    const chips=[];
+    if(s.ds&&s.ds.year)chips.push('Entered service '+s.ds.year);
+    if(s.ds&&s.ds.guests)chips.push(s.ds.guests.toLocaleString()+' guests (double occupancy)');
+    if(s.ds&&s.ds.tonnage)chips.push(s.ds.tonnage.toLocaleString()+' GT');
+    const dine=(s.ds&&(s.ds.dineInc||s.ds.dineExtra))?`<p class="fam" style="border-top:0;padding-top:0">Dining onboard: ${s.ds.dineInc} venue${s.ds.dineInc===1?'':'s'} included in the fare, ${s.ds.dineExtra} priced separately.</p>`:'';
+    const famTxt=(s.ds&&s.ds.famLine)||s.family||'';
+    const img=s.img&&s.img.src?`<div class="imgbox has-img ship-tab-img"><img src="${s.img.src}" alt="${esc(s.img.alt)}"${s.img.w?` width="${s.img.w}" height="${s.img.h}"`:''} loading="lazy"></div><p class="repnote">Representative image, not the specific ship.</p>`:'';
+    panel.innerHTML=`
+      ${img}
+      <h3>${esc(s.name)}</h3>
+      <p class="smeta">${esc(s.cls)}${s.cls&&s.tier?' · ':''}${TIER[s.tier]||esc(s.tier)}</p>
+      <div class="fitchips">${(s.fit||[]).map(f=>`<span>${FIT[f]||esc(f)}</span>`).join('')}</div>
+      ${chips.length?`<div class="fitchips">${chips.map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}
+      <ul>${(s.high||[]).map(h=>`<li>${esc(h)}</li>`).join('')}</ul>
+      ${dine}
+      ${famTxt?`<p class="fam">${esc(famTxt)}</p>`:''}`;
+  }
+  tabs.addEventListener('click',e=>{const i=e.target&&e.target.dataset?e.target.dataset.i:null;if(i==null)return;
+    tabs.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');render(+i);});
+  render(0);
+})();
+
+(function(){const el=document.getElementById('faqList');if(!el)return; /* FAQ module */
+  if(typeof FAQS==='undefined'||!FAQS)return;
+  el.innerHTML=FAQS.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
+})();
+
 const KNOW = {
-  term:{t:"Royal Caribbean's Galveston terminal",d:"Purpose-built for the biggest ships, with fast check-in when you arrive at your assigned slot.",l:["Arrive at your check-in window, not before","Choose the earliest slot the moment it opens","Ask us which terminal your sailing uses","Porters take bags kerbside — tip cash"]},
+  term:{t:"Royal Caribbean's Galveston terminal",d:"Purpose-built for the biggest ships, with fast check-in when you arrive at your assigned slot.",l:["Arrive at your check-in window, not before","Choose the earliest slot the moment it opens","Ask us which terminal your sailing uses","Porters take bags kerbside, tip cash"]},
   park:{t:"Parking, solved",d:"Official port lots and established shuttle lots both work; the difference is price and walk time.",l:["Official lots: closest, premium price","Independent shuttle lots: cheaper","Book parking as early as the cruise","We send current recommendations with your quote"]},
-  stay:{t:"The night before",d:"Flying in through Houston? Always stay the night before — the seawall puts you minutes from the ship.",l:["Hobby airport ~50 min, IAH ~75+ min","Seawall hotels: views + quick access","Park-and-cruise packages can save money","We'll suggest options for your budget"]},
-  docs:{t:"Documents",d:"Closed-loop rules allow birth certificate + photo ID for US citizens; a passport protects you if plans change abroad.",l:["Passport recommended for everyone","Kids: birth certificates accepted closed-loop","Names must match documents exactly","We double-check for your exact sailing"]}
+  stay:{t:"The night before",d:"Flying in through Houston? Always stay the night before: the seawall puts you minutes from the ship.",l:["Hobby airport ~50 min, IAH ~75+ min","Seawall hotels: views + quick access","Park-and-cruise packages can save money","We'll suggest options for your budget"]},
+  docs:{t:"Travel documents",d:"Closed-loop rules allow birth certificate + photo ID for US citizens; a passport protects you if plans change abroad.",l:["Passport recommended for everyone","Kids: birth certificates accepted closed-loop","Names must match documents exactly","We double-check for your exact sailing"]}
 };
-function renderKnow(k){const c=KNOW[k];document.getElementById('knowTitle').textContent=c.t;document.getElementById('knowDesc').textContent=c.d;document.getElementById('knowList').innerHTML=c.l.map(x=>`<li>${x}</li>`).join('');document.getElementById('knowImg').textContent=`IMG SLOT · ${c.t}`;}
+(function(){if(!document.getElementById('knowTabs'))return; /* registry-fed know-panel content */
+  if(typeof DOCS_SUMMARY!=='undefined'&&DOCS_SUMMARY){
+    KNOW.docs.d=esc(DOCS_SUMMARY)+' <a href="#faq">Full answer in Quick answers below.</a>';
+  }
+  if(typeof PRE_CRUISE!=='undefined'&&PRE_CRUISE&&PRE_CRUISE.text){
+    KNOW.explore={t:"A day early in Galveston",d:esc(PRE_CRUISE.text),l:PRE_CRUISE.items||[]};
+    const tabs=document.getElementById('knowTabs');
+    const b=document.createElement('button');b.className='tab';b.dataset.k='explore';b.type='button';b.textContent='A day early';
+    tabs.insertBefore(b,tabs.querySelector('[data-k="docs"]'));
+  }
+})();
+function renderKnow(k){const c=KNOW[k];if(!c)return;
+  document.getElementById('knowTitle').textContent=c.t;
+  document.getElementById('knowDesc').innerHTML=c.d;
+  document.getElementById('knowList').innerHTML=c.l.map(x=>`<li>${esc(x)}</li>`).join('');
+  fillBox(document.getElementById('knowImg'), typeof KNOW_IMG!=='undefined'?KNOW_IMG:null, c.t);
+}
 document.getElementById('knowTabs').addEventListener('click',e=>{if(!e.target.dataset.k)return;document.querySelectorAll('#knowTabs .tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');renderKnow(e.target.dataset.k);});
 
 populateFilters();
 renderOffers();
 renderKnow('term');
 runSearch(false);
+
+/* ============ mobile UX modules (bottom sheet, featured strip, taps,
+   scroll reveals). Presentation only: all content comes from the baked
+   consts above; sliders scroll inside their own containers; nothing here
+   calls stopPropagation, so the delegated tel_click listener sees every
+   click. ============ */
+function isMobile(){return !!(window.matchMedia&&window.matchMedia('(max-width:900px)').matches);}
+function sheetOpen(kind,title,bodyHTML,footHTML){
+  var s=document.getElementById('sheet'),b=document.getElementById('sheetBack');
+  if(!s||!b)return;
+  s.className='sheet off '+kind;
+  document.getElementById('sheetTitle').textContent=title;
+  document.getElementById('sheetBody').innerHTML=bodyHTML;
+  document.getElementById('sheetFoot').innerHTML=footHTML;
+  b.hidden=false;s.hidden=false;b.classList.remove('off');
+  void s.offsetHeight; /* reflow so the 200ms slide-up transition runs */
+  s.classList.remove('off');
+  document.body.style.overflow='hidden';
+}
+function sheetClose(){
+  var s=document.getElementById('sheet'),b=document.getElementById('sheetBack');
+  if(!s||s.hidden)return;
+  s.classList.add('off');b.classList.add('off');
+  document.body.style.overflow='';
+  var done=false,fin=function(){if(done)return;done=true;s.hidden=true;b.hidden=true;};
+  s.addEventListener('transitionend',fin,{once:true});
+  setTimeout(fin,240); /* reduced-motion path: no transitionend, timer hides */
+}
+(function(){var s=document.getElementById('sheet');if(!s)return; /* sheet dismissal wiring */
+  var b=document.getElementById('sheetBack'),x=document.getElementById('sheetClose');
+  if(x)x.addEventListener('click',sheetClose);
+  if(b)b.addEventListener('click',sheetClose);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')sheetClose();});
+  /* in-sheet #anchor links close the sheet, then navigate normally */
+  s.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="#"]'):null;if(a)sheetClose();});
+  /* swipe-down on the grab bar */
+  var g=document.getElementById('sheetGrab'),y0=null;
+  if(g){
+    g.addEventListener('touchstart',function(e){y0=e.touches[0].clientY;},{passive:true});
+    g.addEventListener('touchmove',function(e){if(y0==null)return;var dy=e.touches[0].clientY-y0;if(dy>0)s.style.transform='translateY('+dy+'px)';},{passive:true});
+    g.addEventListener('touchend',function(e){var dy=e.changedTouches[0].clientY-(y0==null?0:y0);y0=null;s.style.transform='';if(dy>70)sheetClose();});
+  }
+})();
+function dealSheet(it){ /* row/slide bottom sheet: route, month fares, both CTAs */
+  if(!it)return;
+  var fares=it.noPrice
+    ? `<p class="sstamp">This sailing is repricing at the moment, so we are not publishing a figure we cannot stand behind. Call and an advisor quotes it live for your dates.</p>`
+    : it.months.map(m=>`<div class="srow"><span>${mLabel(m)}</span><b>from $${priceFor(it,m).toLocaleString()} pp</b></div>`).join('');
+  var body=`<p class="smeta2">${esc(PAGE.lineLabel)} · ${esc(it.ship)} · ${it.nights} nights · from ${esc(PAGE.portLabel.split(',')[0])}</p>
+    ${ribbonHTML(it)}
+    ${daysHTML(it)}
+    <h4 class="sh4">${it.noPrice? 'Fares' : 'From-fares by sail month'}</h4>
+    ${fares}
+    ${it.noPrice? '' : `<p class="sstamp">From-fares seen ${pricesCheckedOn} · exact dates priced by phone</p>`}`;
+  var foot=`<a class="btn" href="tel:${PHONE_TEL}">📞 Call for today's fare</a>${it.detailUrl?`<a class="btn2" href="${it.detailUrl}">Full itinerary</a>`:''}`;
+  sheetOpen('sheet-deal',it.name,body,foot);
+}
+(function(){var grid=document.getElementById('itinGrid');if(!grid)return; /* row/slide tap -> deal sheet (mobile only) */
+  function handler(e){
+    if(!isMobile())return;
+    if(e.target&&e.target.closest&&e.target.closest('a'))return; /* real links keep their native behavior */
+    var el=e.target&&e.target.closest?e.target.closest('[data-id]'):null;
+    if(!el)return;
+    dealSheet(ITINERARIES.find(function(i){return i.id===el.dataset.id;}));
+  }
+  grid.addEventListener('click',handler);
+  var fs=document.getElementById('featStrip');
+  if(fs)fs.addEventListener('click',handler);
+})();
+(function(){var grid=document.getElementById('itinGrid');if(!grid)return; /* show-all rows expander (mobile) */
+  grid.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest?e.target.closest('.showall'):null;if(!b)return;
+    grid.classList.add('allrows');
+  });
+})();
+(function(){var t=document.getElementById('cbToggle');if(!t)return; /* collapsed callback form (mobile); form stays in the DOM so lead_submit binding is untouched */
+  var cb=t.closest?t.closest('.cb'):null;if(!cb)return;
+  cb.classList.add('js');
+  t.addEventListener('click',function(){
+    cb.classList.add('open');t.setAttribute('aria-expanded','true');
+    var f=cb.querySelector('input');if(f&&f.focus)try{f.focus();}catch(e){}
+  });
+})();
+(function(){var wrapEl=document.getElementById('featWrap');if(!wrapEl)return; /* featured sailings strip (mobile, max 4 slides) */
+  var feats=(typeof ITINERARIES!=='undefined'?ITINERARIES:[]).filter(function(i){return i.featured;}).slice(0,4);
+  if(!feats.length)return;
+  document.getElementById('featStrip').innerHTML=feats.map(it=>`<button class="fslide" type="button" data-id="${esc(it.id)}">
+      <div class="imgbox${it.img&&it.img.src?' has-img':''}">${imgHTML(it.img,it.destLabel)}</div>
+      <div class="fb"><h3>${esc(it.name)}</h3>
+      <p class="fmeta">${esc(it.ship)} · ${it.nights} nights</p>
+      <p class="fmeta"><b>From $${it.prices.default.toLocaleString()}</b> pp · seen ${pricesCheckedOn}</p></div>
+    </button>`).join('');
+  wrapEl.hidden=false;
+})();
+(function(){if(!document.body||!('IntersectionObserver' in window))return; /* scroll reveals, once per element */
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  document.documentElement.classList.add('js-rv');
+  var io=new IntersectionObserver(function(es){
+    for(var i=0;i<es.length;i++){if(es[i].isIntersecting){es[i].target.classList.add('in');io.unobserve(es[i].target);}}
+  },{rootMargin:'0px 0px -8% 0px'});
+  var els=document.querySelectorAll('section.blk, .callzone .card');
+  for(var i=0;i<els.length;i++){
+    /* skip sections a media query or module keeps hidden (e.g. the ship
+       template's desktop-only stacks): they can never intersect */
+    if(els[i].hidden)continue;
+    var cs=window.getComputedStyle?getComputedStyle(els[i]):null;
+    if(cs&&cs.display==='none')continue;
+    els[i].classList.add('rv');io.observe(els[i]);
+  }
+})();
 </script>
 </body>
 </html>

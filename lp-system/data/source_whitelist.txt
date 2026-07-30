@@ -1,0 +1,21 @@
+# LP SYSTEM — official fact-source whitelist (DATA PROVENANCE POLICY)
+# A fact may be recorded, and a row published, ONLY if its source_url is on
+# one of these domains (exact domain or any subdomain of it).
+# validate.py fails any publishable row whose source domain is not listed.
+# Extend per cruise line as scope grows; one domain per line, # for comments.
+
+# Royal Caribbean — line facts, ships, itineraries, prices, offers
+royalcaribbean.com
+# RC official press/media center — confirmed first-party 2026-07-29: royalcaribbeanmedia.com
+# 302-redirects to royalcaribbeangroup.com (the Royal Caribbean Group corporate site), and
+# that Group site serves its own hero video/images from royalcaribbeanmedia.com/files/...;
+# official ship Fast Facts fact-sheet images (spec_source in newsite ships dataset) live here.
+royalcaribbeanmedia.com
+
+# Port authorities — port facts (terminals, parking, directions)
+portofgalveston.com
+
+# Government — travel documents, entry rules, weather/hurricane climatology
+travel.state.gov
+cbp.gov
+noaa.gov

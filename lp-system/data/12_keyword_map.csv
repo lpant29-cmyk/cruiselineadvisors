@@ -1,0 +1,8 @@
+keyword_group,example_queries,page_id,match_type_plan,h1_variant
+p002--core,royal caribbean cruises from galveston | royal caribbean galveston cruise port | royal caribbean out of galveston | royal caribbean galveston schedule | royal caribbean cruise port in galveston texas,p002,"exact + phrase (discovery, negatives applied)",
+p002--icon,icon of the seas galveston,p002,"exact + phrase (discovery, negatives applied)",
+p002--symphony,symphony of the seas galveston,p002,"exact + phrase (discovery, negatives applied)",
+p002--harmony,harmony of the seas galveston,p002,"exact + phrase (discovery, negatives applied)",
+p002--allure,allure of the seas galveston,p002,"exact + phrase (discovery, negatives applied)",
+p002--liberty,liberty of the seas galveston,p002,"exact + phrase (discovery, negatives applied)",
+p002--2-4-night,royal caribbean 4 day cruise from galveston,p002,"exact + phrase (discovery, negatives applied)",?nights=4

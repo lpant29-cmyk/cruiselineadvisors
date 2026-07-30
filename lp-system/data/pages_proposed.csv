@@ -1,0 +1,11 @@
+slug,url,h1,deal_filter,itinerary_count,note
+lines-royal-caribbean,/en/go/lines/royal-caribbean/,Royal Caribbean Cruises,line:royal-caribbean,10,already-registered
+from-galveston,/en/go/from/galveston/,Cruises from Galveston,port:galveston,9,
+6-8-night-cruises,/en/go/6-8-night-cruises/,6 to 8 Night Cruises,dur:6-8,5,
+2-5-night-cruises,/en/go/2-5-night-cruises/,2 to 5 Night Cruises,dur:2-5,5,
+lines-royal-caribbean-from-galveston-5-night,/en/go/lines/royal-caribbean/from/galveston/5-night/,5-Night Royal Caribbean Cruises from Galveston,lpn:royal-caribbean-galveston-5n,3,
+lines-royal-caribbean-from-galveston-4-night,/en/go/lines/royal-caribbean/from/galveston/4-night/,4-Night Royal Caribbean Cruises from Galveston,lpn:royal-caribbean-galveston-4n,2,
+lines-royal-caribbean-from-galveston-8-night,/en/go/lines/royal-caribbean/from/galveston/8-night/,8-Night Royal Caribbean Cruises from Galveston,lpn:royal-caribbean-galveston-8n,2,
+lines-royal-caribbean-from-miami-7-night,/en/go/lines/royal-caribbean/from/miami/7-night/,7-Night Royal Caribbean Cruises from Miami,lpn:royal-caribbean-miami-7n,1,
+lines-royal-caribbean-from-galveston-6-night,/en/go/lines/royal-caribbean/from/galveston/6-night/,6-Night Royal Caribbean Cruises from Galveston,lpn:royal-caribbean-galveston-6n,1,
+lines-royal-caribbean-from-galveston-7-night,/en/go/lines/royal-caribbean/from/galveston/7-night/,7-Night Royal Caribbean Cruises from Galveston,lpn:royal-caribbean-galveston-7n,1,

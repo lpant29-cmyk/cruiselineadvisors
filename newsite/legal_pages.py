@@ -32,11 +32,16 @@ LEGAL = {
                     "términos, y podemos recibir una comisión de referencia."}),
             ({"en": "Information, not advice or offers", "es": "Información, no asesoría ni ofertas"},
              {"en": "The information on this site is general and for planning purposes only. It is not a quote, an "
-                    "offer, or professional advice, and it does not display fares, rates or savings. Cruise "
+                    "offer, or professional advice. Any fares shown anywhere on this site are indicative, observed "
+                    "from public sources on the date stamped, and are not an offer to sell travel; all quotes and "
+                    "bookings are provided by independent licensed agencies. Cruise "
                     "line policies change; we verify facts against their sources and mark anything unverified as such, "
                     "but you should confirm details that matter to you with the agency that books your trip.",
               "es": "La información de este sitio es general y solo para fines de planificación. No es una cotización, "
-                    "una oferta ni asesoría profesional, y no muestra tarifas, precios, descuentos ni ahorros. Las "
+                    "una oferta ni asesoría profesional. Las tarifas mostradas en cualquier parte de este sitio son "
+                    "indicativas, observadas de fuentes públicas en la fecha indicada, y no constituyen una oferta de "
+                    "venta de viajes; todas las cotizaciones y reservas las proporcionan agencias independientes con "
+                    "licencia. Las "
                     "políticas de las líneas cambian; verificamos los datos con sus fuentes y marcamos lo no verificado, "
                     "pero debes confirmar los detalles importantes con la agencia que reserve tu viaje."}),
             ({"en": "Trademarks", "es": "Marcas registradas"},

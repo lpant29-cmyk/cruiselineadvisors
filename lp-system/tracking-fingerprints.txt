@@ -1,0 +1,132 @@
+# Tracking fingerprints (drift detection) - maintained by tracking-guardian
+# Format: page_id | date | build_or_live | sha256 of tracking-relevant blocks | notes
+# Blocks hashed: head dataLayer-init + GTM loader + Clarity scripts, GTM noscript
+# iframe, and the injected DNI/tel_click/lead_submit script block. The
+# page-data/main finder script (const PAGE ...) is EXCLUDED so data refreshes
+# do not read as tracking drift.
+p002 | 2026-07-29 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | b85967f9e6394b2057fd3b700df6f3d267158fc6b54eb4f9493448a05e70b031 | SUPERSEDED same day: baseline after T1/T2/T4 fixes (pre-T6 rebake, pre-DNI)
+p002 | 2026-07-29 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | 06ad4bd2d021513da7c0020794c11da1bf1b38cfee8e5023b36f5a36d6e72e27 | SUPERSEDED by audit #4 line below. T6 rebake + website-call DNI module (_googWcmGet callback, MutationObserver re-apply, REAL_DISPLAY=config number). Hash change vs prior line was EXPLAINED drift (audit #3, 18/18 simulation checks passed), not silent.
+#
+# RECIPE (fixed from audit #4 onward, so hashes are reproducible):
+# sha256 over UTF-8 concat of, in order, joined with "\n":
+#   (1) the single head line containing the dataLayer-init + GTM loader +
+#       Clarity <script> tags (the line matching both
+#       "window.dataLayer=window.dataLayer||[]" and "googletagmanager"),
+#   (2) the <noscript><iframe ...googletagmanager...></noscript> line,
+#   (3) the inner content (between <script> and </script>, untrimmed) of the
+#       injected block containing _googWcmGet + tel_click + lead_submit.
+# Tool: scratchpad fingerprint.js, variant "v1(head+nos+track)".
+# NOTE: audit #3's exact byte-recipe could not be replayed in audit #4 (the
+# audit-#3 bake was overwritten and out/ is untracked in git), so 06ad4bd2
+# could not be re-derived; drift vs it was instead verified by enumeration:
+# the ONLY tracking-block changes in the audit-#4 bake are (a) head dataLayer
+# gained a "dest" key (""=combo pages, slug on itinerary pages, derived from
+# page_targets) and (b) POS gained ['.fares','deal-card'] - both documented
+# by page-builder in tasks.md. DNI/tel_click/lead_submit blocks otherwise
+# byte-identical between p002 and p007 modulo page_id and match generate.py
+# source exactly. EXPLAINED drift, not silent. Keep out-of-band copies of
+# audited bakes if replay matters.
+p002 | 2026-07-29 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | 0f0bca9937c9a105718f86aad86b18ac93ff8ba1ef7c68a32d949735e18184da | current baseline (audit #4): 16-card rebake with images/route ribbons/day expanders/ship module/baked FAQ/i0005 detailUrl link; head dataLayer +dest:""; POS +['.fares','deal-card'] (inert on p002, no .fares element). 24/24 jsdom checks passed.
+p007 | 2026-07-29 | build (lp-system/out/preview/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/index.html) | 3ae6d12fc89dbac140c187fcbb9f8ac0feb757f3b11d603c37ef2314bf8bef24 | SUPERSEDED by audit #5 line below. NEW baseline (audit #4): first itinerary-detail page. dataLayer line=royal-caribbean port=galveston dest=western-caribbean from i0005 page_targets (not URL); fare table maps to position deal-card via ['.fares','deal-card'] (confirmed sound - fare table is the page's deal module); DNI covers fare-row tel links incl. ?when= hit row. Injected blocks byte-identical to p002 modulo page_id. 21/21 jsdom checks passed.
+#
+# AUDIT #5 (2026-07-29, master-enrichment bake). Drift vs audit #4 PROVEN
+# exactly the documented change and nothing else: recomputing the v1 recipe
+# on the new bakes with ONLY the head dataLayer `ship` key removed
+# reproduces the audit-#4 baselines byte-for-byte (p002 0f0bca99...,
+# p007 3ae6d12f...). Injected DNI/tel_click/lead_submit blocks remain
+# byte-identical across p002/p007/p008 modulo page_id. EXPLAINED drift;
+# re-baselined below. Recipe unchanged: v1(head+nos+track).
+p002 | 2026-07-29 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | dc1797afa67460cba43c6235dca0e3af69dbe33bc162fcaacfb1addc818bcd74 | SUPERSEDED by audit #6 line below. (audit #5): head dataLayer +ship:"" (only change vs 0f0bca99, proven by replay). Ship section now tabs (Icon/Mariner/Liberty/Symphony) - render-layer only, no tracking-block change. 25/25 jsdom checks passed.
+p007 | 2026-07-29 | build (lp-system/out/preview/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/index.html) | ca4de4a45b754d16687369db205f27071ad850ffed94fe93de60887439bd7b3d | SUPERSEDED by audit #6 line below. (audit #5): head dataLayer +ship:"" (only change vs 3ae6d12f, proven by replay). Photo-story journey/route schematic/ship tabs/?when=next-month are render-layer only. 25/25 jsdom checks passed.
+p008 | 2026-07-29 | build (lp-system/out/preview/en/go/ships/mariner-of-the-seas/index.html) | 44b9e747519aae0da7d8e43443a42861aac9f21ce588303dd9f2d69ca8f18067 | SUPERSEDED by audit #6 line below. (audit #5): first ship page. head dataLayer line=royal-caribbean port="" dest="" ship=mariner-of-the-seas (port/dest honestly empty - ship intent spans ports; GTM variable mapping must not assume port set). .scard sailing cards -> deal-card; hero/nav/4 callrow prompts -> documented 'other'. DNI covers all 12 tel links (10 static + 2 sailing cards). Injected blocks byte-identical to p002/p007 modulo page_id. 22/22 jsdom checks passed.
+#
+# AUDIT #6 (2026-07-29, mobile-UX-redesign bake). Drift vs audit #5 PROVEN
+# exactly the documented change and nothing else: removing ONLY the POS
+# entry ['.sheet-deal','deal-card'] from the extracted track block (one
+# occurrence per page) and recomputing v1 reproduces all three audit-#5
+# baselines byte-for-byte (p002 dc1797af..., p007 ca4de4a4...,
+# p008 44b9e747...). Head dataLayer and DNI/lead_submit blocks unchanged;
+# shared-footer legal-partial swap (real /en/legal/ links + footer tel
+# link) is outside the tracking blocks and did not move the hashes.
+# Footer tel link position = 'other' (documented catch-all, verified).
+# Recipe unchanged: v1(head+nos+track), tool scratchpad fingerprint.js.
+p002 | 2026-07-29 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | f882ddf8dae1a8b0189b6913dde9099a1edd38fbae1c5cbbb9be84d1201cb1b6 | SUPERSEDED by audit #8 line below. (audit #6): POS +['.sheet-deal','deal-card'] (only change, proven by replay). Mobile compact rows/featured strip/deal bottom sheet are render-layer; sheet-deal foot CTA -> deal-card verified incl. MutationObserver re-swap of fresh sheet DOM. 36/36 jsdom checks passed.
+p007 | 2026-07-29 | build (lp-system/out/preview/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/index.html) | d607192be6f3e1b6194c595000157b1435491cc512ba704f494058b20bf45168 | SUPERSEDED by audit #8 line below. (audit #6): POS +['.sheet-deal','deal-card'] (only change, proven by replay; selector inert on p007 - only sheet-day/sheet-life kinds exist here, both -> documented 'other'). Day slider/dots/ship-life tiles render-layer; MO re-swap of fresh sheet DOM verified href+text. 26/26 jsdom checks passed.
+p008 | 2026-07-29 | build (lp-system/out/preview/en/go/ships/mariner-of-the-seas/index.html) | c5fa7945cb1b4bd45276afc576940ea53fffb9bc4926c8cca222a52628eb4ce7 | SUPERSEDED by audit #8 line below. (audit #6): POS +['.sheet-deal','deal-card'] (only change, proven by replay; selector inert on p008 - only sheet-life kind exists here -> documented 'other'). 5 ship-life tiles cycle clean; .scard -> deal-card regression holds; MO re-swap of fresh sheet DOM verified href+text. 22/22 jsdom checks passed.
+#
+# AUDIT #8 (2026-07-30, T-ARIA-DNI fix rebake). Drift vs audit #6/#7
+# baselines PROVEN exactly the documented change and nothing else: the DNI
+# applyAll() gained a 7-line aria-label pass (querySelectorAll('[aria-label]')
+# + split/join REAL_DISPLAY -> swapped.f, inside applyAll so the
+# MutationObserver covers re-renders). Reduction proof (scratchpad
+# replay8.js): stripping ONLY that pass (1 occurrence per page) from the
+# extracted track block reproduces all three audit-#6 baselines
+# byte-for-byte. Behavioral proof (audit8-aria.js, 15/15): after simulated
+# swap stale-aria=0/swapped-aria=1 and aria matches href number on all
+# three; MO re-applies aria+href+text on injected fresh DOM; non-number
+# aria-labels ('Close', 'Go to day N') untouched; empty-Google fallback
+# keeps the base number in aria+href+text. Audit-#7 suite regression on
+# the rebakes: 89/89 still-valid checks pass (the 2 obsolete stale-aria
+# caveat checks per page now correctly invert - defect fixed; p008
+# life-sheet re-proven via audit7-p008-sheet.js). EXPLAINED drift;
+# re-baselined below. Recipe unchanged: v1(head+nos+track).
+p002 | 2026-07-30 | build (lp-system/out/preview/en/go/lines/royal-caribbean/from/galveston/index.html) | bec631ef30a7e5ab39b41ae6f3a0339b53f3e11a73e6685e7d7b7b5e1af13ab1 | current baseline (audit #8): DNI applyAll +aria-label pass (T-ARIA-DNI fix; only change, proven by reduction replay). Everything else identical to audit-#7 state.
+p007 | 2026-07-30 | build (lp-system/out/preview/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/index.html) | 664f02703d468517515b7cca4b9f4458a3c1cce830bb72734ebe516c8aed44c1 | current baseline (audit #8): DNI applyAll +aria-label pass (T-ARIA-DNI fix; only change, proven by reduction replay). Everything else identical to audit-#7 state.
+p008 | 2026-07-30 | build (lp-system/out/preview/en/go/ships/mariner-of-the-seas/index.html) | 9a45c5e0517bde1a86adca363b167cfba1ab937932b9cb05bc45a26f3e447181 | current baseline (audit #8): DNI applyAll +aria-label pass (T-ARIA-DNI fix; only change, proven by reduction replay). Everything else identical to audit-#7 state.
+#
+# AUDIT #7 (2026-07-30, mobile-polish-pass rebake): v1 recipe replayed on
+# all three fresh bakes -> hashes MATCH the audit-#6 baselines byte-for-byte
+# (p002 f882ddf8..., p007 d607192b..., p008 c5fa7945...). ZERO drift, as
+# page-builder predicted. Extracted head/noscript/track blocks diff-identical
+# to the audit-#6 extractions; POS array md5-identical across all three
+# pages (4147b72672bf1faa2f318fbfa3984bfc). New surfaces (discloseSum,
+# cbToggle, .showall, fareSeg, header icon cta, restyled navy-outline CTAs,
+# sheet off-state visibility:hidden+pointer-events:none) are render-layer
+# only: 95/95 independent jsdom checks (audit7.js + audit7-p008-sheet.js).
+# Notables: header nav icon cta -> position 'other' (documented; .nav not
+# in POS - adding it would be drift, deferred); fare-cta -> deal-card via
+# '.fares' independently re-proven; lead_submit fires once after
+# expand+submit, form_mode 'placeholder'. KNOWN CAVEAT RULED A DEFECT
+# (task T-ARIA-DNI in tasks.md): nav cta aria-label="Call 1-833-555-0100"
+# is NOT swapped by DNI (attribute, not text node) - fixing it will move
+# the DNI block hash; EXPECT documented drift at the next audit and
+# re-baseline then. Baselines below remain current.
+#
+# AUDIT #9 (2026-07-30, operator design batch + bugfixes bake). v1 recipe
+# replayed on all three fresh bakes -> hashes MATCH the audit-#8 baselines
+# BYTE-FOR-BYTE (p002 bec631ef..., p007 664f0270..., p008 9a45c5e0...).
+# ZERO drift inside the tracking blocks, as the coordinator predicted; the
+# extracted head/noscript/track blocks are diff-IDENTICAL to the audit-#8
+# extractions (audit8-*-blocks.txt vs aud9-*-blocks.txt, no differences).
+# The batch's changes (disclosure-bar removal + .ind-note, logo lockup,
+# NAV_UI_JS backtop/goback, ship-tab + finder imagery, ddpulse, ribbon
+# scroll fix, sheet daysHTML restore, .pname 120px, phoneband h2 colour,
+# 9 copy rewrites) are all render-layer/CSS/data. 141/141 jsdom checks
+# (audit9.js) + 15/15 audit-8 aria regression (audit8-aria.js).
+# Baselines above (audit #8 lines) REMAIN CURRENT. Recipe unchanged:
+# v1(head+nos+track), tool scratchpad fingerprint.js.
+#
+# SUPPLEMENTAL FINGERPRINT (new in audit #9, NOT part of the v1 baseline).
+# The v1 recipe by design captures only the three tracking blocks, so the
+# NEW generator-injected NAV_UI_JS block (back-to-top + conditional header
+# Back button, injected before </body> by generate.py) is invisible to it.
+# That block is tracking-INERT today but sits one line away from being a
+# measurement surface, so it is fingerprinted separately from now on. If
+# this hash moves, re-audit the block before accepting the bake. Tool:
+# scratchpad navfp.js.
+# NAV_UI_JS | 2026-07-30 | identical on p002/p007/p008 |
+#   sha256 1073db9fe75f75bb603612314a6afefb0ca9de2cbbfc9be75dc90250abe43cf6
+# DATALAYER-SURFACE CENSUS (invariant, all three pages, audit #9):
+#   6 <script> blocks total | 3 blocks referencing dataLayer (head init,
+#   GTM loader, tel_click+lead_submit block) | 3 literal dataLayer.push()
+#   sites | exactly 2 event names in the file: tel_click, lead_submit.
+#   Any increase = a new measurement surface; treat as drift and audit it.
+#
+# POST-AUDIT-#6 REPLAY (2026-07-29, same day): qa-audit-#7 defect rebake
+# (D1 legal links -> clean directory URLs /en/legal/terms/ etc. from the
+# shared partial + CONSENT_LINKED update; D2 ship-life tiles 46vw->43vw)
+# fingerprint-replayed on all three fresh bakes (21:13 files): v1 hashes
+# MATCH the audit-#6 baselines above byte-for-byte. ZERO drift, as
+# predicted (body/CSS only). Full jsdom suites also re-run clean on the
+# rebakes (36/36 + 26/26 + 22/22, incl. clicking the new legal URLs:
+# zero dataLayer events). Baselines above remain current.

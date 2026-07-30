@@ -92,3 +92,33 @@ Key data files:
 - `verify.py status` passes (exits non-zero on stale data)
 - No placeholder strings left: `[Your Company] LLC`, `[Street Address]`, `+18885550142`, `example.com`
 - Every rendered fact traces to a source URL and a verified date
+
+---
+
+## LP SYSTEM (paid-ads landing pages under /go/)
+
+A separate, **noindexed** landing-page layer used only as Google Ads destinations.
+Scoped to **Royal Caribbean only** for now. It is allowed to show observed, date-stamped
+lead-in fares — an explicit, documented exception to Hard Rule 1 that applies **only to
+/go/ pages** and only once the section-6 footer disclosure change (ADS-LP-BRIEF) ships
+in the same commit as the first /go/ page.
+
+Read before touching anything LP-related, in this order:
+1. `lp-system/blueprint/PROJECT-BLUEPRINT.md` — taxonomy, master sheet, agents, pipeline
+2. `lp-system/blueprint/ADS-LP-BRIEF.md` — page anatomy, noindex/isolation, legal wording
+3. `lp-system/blueprint/SCALING-PLAYBOOK.md` — itinerary-first data model, propose/retire logic
+
+Layout:
+- `lp-system/data/*.csv` — sheet v3 (single source of truth for LP pages)
+- `lp-system/templates/lp/*.html` — functional/structural spec; final pages are implemented
+  in this site's own design system, not shipped verbatim
+- `lp-system/scripts/` — `collect.py`, `validate.py`, `generate.py`, `propose_pages.py`, `notify.sh`
+- `.claude/agents/` — manager, qa-auditor, pricing-scout, page-builder, photo-curator,
+  research-registrar, keyword-scout, structure-guard
+
+Non-negotiables: every price carries its `date_checked` stamp (no stamp, no price);
+`noindex,nofollow` meta on every /go/ page; never linked from main-site nav, sitemap or
+content; never block /go/ in robots.txt (it hides the noindex tag); rows marked
+VERIFY-BEFORE-PUBLISH never render; qa-auditor approval gates every deploy.
+Main-site pages, routes and config stay untouched except the ADS-LP-BRIEF §6
+footer/terms disclosure change.
