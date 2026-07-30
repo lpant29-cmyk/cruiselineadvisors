@@ -27,11 +27,12 @@
       "WebFetch(domain:cbp.gov)",
       "WebFetch(domain:noaa.gov)",
       "WebFetch(domain:api.pexels.com)",
-      "WebFetch(domain:api.unsplash.com)"
+      "WebFetch(domain:api.unsplash.com)",
+      "Bash(git push origin main)"
     ],
     "deny": [
-      "Bash(git push)",
-      "Bash(git push *)"
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
     ]
   }
 }

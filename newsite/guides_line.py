@@ -304,3 +304,273 @@ register("big-ship-vs-small-ship", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("contemporary-premium-luxury", {
+    "cat": "line",
+    "hero": "contemporary-premium-luxury.jpg",
+    "published": "2026-07-30",
+    "updated": "2026-07-30",
+    "title": {
+        "en": "Contemporary vs premium vs luxury cruise lines",
+        "es": "Líneas de crucero: contemporánea vs premium vs lujo",
+    },
+    "dek": {
+        "en": "Cruise lines get sorted into three tiers, and the labels get thrown around as if everyone "
+              "agrees what they mean. They are useful shorthand, but they describe a style of holiday and "
+              "what the fare covers, not a quality ranking. Here is what each tier actually feels like on "
+              "board, and how to tell which one suits the trip you want.",
+        "es": "Las líneas de crucero se agrupan en tres niveles, y las etiquetas se usan como si todos "
+              "coincidieran en su significado. Son un atajo útil, pero describen un estilo de viaje y qué "
+              "cubre la tarifa, no una escala de calidad. Aquí verás cómo se siente cada nivel a bordo y "
+              "cómo saber cuál encaja con el viaje que quieres.",
+    },
+    "takeaways": {
+        "en": [
+            "The tiers describe style and what is bundled into the fare, not how good a line is. A great contemporary cruise beats a poorly matched luxury one.",
+            "Contemporary lines carry the most guests, pack in the most to do, and keep the base fare low by charging separately for extras.",
+            "Premium lines run somewhat smaller ships at a calmer pace, with more included and more space per guest.",
+            "Luxury lines are small, mostly all-inclusive, and priced accordingly; the fare covers what other tiers bill for.",
+            "The tiers blur in practice. Suites on a contemporary ship include perks that feel premium, and every line runs both busy and quiet sailings.",
+            "Pick the tier by the day you want, not by prestige. Who is travelling and what you want to do decides it.",
+        ],
+        "es": [
+            "Los niveles describen el estilo y qué incluye la tarifa, no qué tan buena es una línea. Un buen crucero contemporáneo supera a uno de lujo mal elegido.",
+            "Las líneas contemporáneas llevan más huéspedes, ofrecen más actividades y mantienen baja la tarifa base cobrando aparte los extras.",
+            "Las líneas premium operan barcos algo más pequeños a un ritmo más tranquilo, con más incluido y más espacio por huésped.",
+            "Las líneas de lujo son pequeñas, casi todo incluido, y su precio lo refleja: la tarifa cubre lo que otros niveles facturan aparte.",
+            "Los niveles se difuminan en la práctica. Las suites de un barco contemporáneo incluyen ventajas que se sienten premium, y toda línea tiene salidas concurridas y tranquilas.",
+            "Elige el nivel por el día que quieres, no por prestigio. Quién viaja y qué quieres hacer lo decide.",
+        ],
+    },
+    "sections": [
+        {"id": "what-the-tiers-are", "h2": {"en": "What the three tiers actually describe",
+                                            "es": "Qué describen realmente los tres niveles"},
+         "html": {
+            "en": "<p>Walk into any cruise conversation and you will hear lines sorted into contemporary, premium "
+                  "and luxury. It is industry shorthand rather than an official standard, so the edges are fuzzy "
+                  "and lines move over time. What the tiers really track is two things: <b>how much is bundled "
+                  "into your fare</b>, and <b>how many people you share the ship with.</b></p>"
+                  + define("Cruise line tier",
+                           "an informal grouping of cruise lines by style, ship size and how much the fare "
+                           "includes. It is a description of the holiday, not a rating of the company.")
+                  + "<p>That distinction matters, because the labels sound like a quality ladder and they are not. "
+                  "A family who wants waterslides, a rock wall and a late-night comedy show will have a far better "
+                  "week on a contemporary ship than on a hushed luxury one, whatever the fare says. The right "
+                  "question is never which tier is best. It is which tier matches the trip you actually want.</p>",
+            "es": "<p>En cualquier conversación sobre cruceros escucharás que las líneas se agrupan en "
+                  "contemporánea, premium y lujo. Es una jerga del sector, no un estándar oficial, así que los "
+                  "límites son difusos y las líneas cambian con el tiempo. Lo que los niveles realmente reflejan "
+                  "son dos cosas: <b>cuánto incluye tu tarifa</b> y <b>con cuánta gente compartes el barco.</b></p>"
+                  + define("Nivel de línea de crucero",
+                           "una agrupación informal de líneas según estilo, tamaño del barco y cuánto incluye la "
+                           "tarifa. Describe el viaje, no califica a la empresa.")
+                  + "<p>Esa diferencia importa, porque las etiquetas suenan a escalera de calidad y no lo son. Una "
+                  "familia que quiere toboganes, muro de escalada y comedia nocturna la pasará mucho mejor en un "
+                  "barco contemporáneo que en uno de lujo silencioso, diga lo que diga la tarifa. La pregunta "
+                  "correcta nunca es qué nivel es mejor, sino cuál encaja con el viaje que quieres.</p>",
+         }},
+        {"id": "contemporary", "h2": {"en": "Contemporary: the big, busy, do-everything ships",
+                                      "es": "Contemporánea: los barcos grandes, animados y con todo"},
+         "html": {
+            "en": "<p>This is the tier most first-time cruisers meet, and the one that carries the most passengers "
+                  "worldwide. The ships are large to very large, the atmosphere is lively, and the whole model is "
+                  "built on keeping the entry fare accessible while offering a great deal to do.</p>"
+                  + vcards([
+                      ("🎢", "The ship is the attraction", "Waterslides, pools, live shows, sports decks, kids clubs and a long list of dining rooms. On the newest ships the vessel itself is as much the destination as the ports."),
+                      ("👨‍👩‍👧‍👦", "Built for families and groups", "Kids programming by age band, connecting cabins, and enough going on that different ages can split up and meet for dinner."),
+                      ("🧾", "Low base fare, more extras", "Your fare covers the room, main dining and most entertainment. Specialty restaurants, drinks packages, Wi-Fi and shore excursions are billed separately."),
+                      ("🔊", "Livelier by design", "More guests means more energy, busier pool decks and queues at peak times. That is the trade for the variety and the price point."),
+                  ])
+                  + "<p>Among the lines we cover, "
+                  + link("/en/lines/royal-caribbean/", "Royal Caribbean")
+                  + " and " + link("/en/lines/carnival/", "Carnival")
+                  + " sit squarely here, and "
+                  + link("/en/lines/msc/", "MSC")
+                  + " brings a European accent to the same big-ship idea. "
+                  + link("/en/lines/margaritaville-at-sea/", "Margaritaville at Sea")
+                  + " works the short-getaway end of it.</p>"
+                  + tip("If you are weighing this tier, read "
+                        + link("/en/guides/whats-included/", "what's included in a cruise fare")
+                        + " first. The gap between the headline fare and your final bill is widest here, and it is "
+                          "entirely manageable once you know which extras you actually want."),
+            "es": "<p>Es el nivel que conoce la mayoría de quienes viajan por primera vez, y el que transporta más "
+                  "pasajeros en el mundo. Los barcos son grandes o muy grandes, el ambiente es animado, y todo el "
+                  "modelo se basa en mantener accesible la tarifa de entrada ofreciendo muchísimo que hacer.</p>"
+                  + vcards([
+                      ("🎢", "El barco es la atracción", "Toboganes, piscinas, espectáculos, cubiertas deportivas, clubes infantiles y una larga lista de restaurantes. En los barcos más nuevos, el barco es tanto destino como los puertos."),
+                      ("👨‍👩‍👧‍👦", "Pensado para familias y grupos", "Programas infantiles por edades, camarotes comunicados y suficiente actividad para que cada edad se separe y se reúna a cenar."),
+                      ("🧾", "Tarifa base baja, más extras", "Tu tarifa cubre la habitación, el comedor principal y casi todo el entretenimiento. Restaurantes de especialidad, paquetes de bebidas, Wi-Fi y excursiones se cobran aparte."),
+                      ("🔊", "Más animado por diseño", "Más huéspedes significa más energía, cubiertas de piscina concurridas y filas en horas punta. Ese es el intercambio por la variedad y el precio."),
+                  ])
+                  + "<p>Entre las líneas que cubrimos, "
+                  + link("/es/lines/royal-caribbean/", "Royal Caribbean")
+                  + " y " + link("/es/lines/carnival/", "Carnival")
+                  + " están claramente aquí, y "
+                  + link("/es/lines/msc/", "MSC")
+                  + " aporta un acento europeo a la misma idea de barco grande. "
+                  + link("/es/lines/margaritaville-at-sea/", "Margaritaville at Sea")
+                  + " trabaja el extremo de las escapadas cortas.</p>"
+                  + tip("Si consideras este nivel, lee primero "
+                        + link("/es/guides/whats-included/", "qué incluye la tarifa de un crucero")
+                        + ". Aquí es donde más se separa la tarifa anunciada de tu cuenta final, y se maneja bien "
+                          "en cuanto sabes qué extras quieres de verdad."),
+         }},
+        {"id": "premium", "h2": {"en": "Premium: calmer ships, more included",
+                                 "es": "Premium: barcos más tranquilos, más incluido"},
+         "html": {
+            "en": "<p>Premium is the middle ground, and for a lot of travellers it is the sweet spot. The ships are "
+                  "usually smaller than the contemporary giants, carry fewer guests, and give each of them more "
+                  "room. The pace slows down. The entertainment leans toward music, enrichment and good food "
+                  "rather than waterslides.</p>"
+                  + vcards([
+                      ("🌊", "More space per guest", "Fewer people on a similar hull means quieter decks, easier seating and shorter queues, which is what most people actually notice day to day."),
+                      ("🍽️", "Food and service move up", "More attention on the dining rooms, more staff per guest, and a service style that gets to know you over the week."),
+                      ("🎻", "A gentler evening", "Live music, theatre, talks and enrichment sessions rather than headline production spectacle. Quieter, not duller."),
+                      ("🗺️", "More time in port", "Premium itineraries often stay later or overnight, which suits travellers who cruise mainly for the destinations."),
+                  ])
+                  + "<p>Of the lines we cover, "
+                  + link("/en/lines/princess/", "Princess")
+                  + ", " + link("/en/lines/celebrity/", "Celebrity")
+                  + " and " + link("/en/lines/holland-america/", "Holland America")
+                  + " sit in this space, each with its own character. "
+                  + link("/en/lines/cunard/", "Cunard")
+                  + " is its own case: a traditional ocean liner experience with formal evenings that does not map "
+                    "neatly onto any tier.</p>"
+                  + watch("<b>Premium does not mean everything is included.</b> More is bundled than on a "
+                          "contemporary ship, but the specific list varies by line and by the fare you book. "
+                          "Always check what your particular fare covers rather than assuming the tier decides it."),
+            "es": "<p>Premium es el punto medio, y para muchos viajeros es el equilibrio ideal. Los barcos suelen "
+                  "ser más pequeños que los gigantes contemporáneos, llevan menos huéspedes y dan más espacio a "
+                  "cada uno. El ritmo baja. El entretenimiento se inclina a la música, el aprendizaje y la buena "
+                  "comida más que a los toboganes.</p>"
+                  + vcards([
+                      ("🌊", "Más espacio por huésped", "Menos gente en un casco similar significa cubiertas más tranquilas, sitio para sentarse y menos filas, que es lo que más se nota a diario."),
+                      ("🍽️", "Comida y servicio suben", "Más atención en los comedores, más personal por huésped y un servicio que llega a conocerte durante la semana."),
+                      ("🎻", "Una noche más suave", "Música en vivo, teatro, charlas y sesiones de aprendizaje más que grandes espectáculos de producción. Más tranquilo, no más aburrido."),
+                      ("🗺️", "Más tiempo en puerto", "Los itinerarios premium suelen quedarse hasta tarde o pernoctar, ideal para quien viaja sobre todo por los destinos."),
+                  ])
+                  + "<p>De las líneas que cubrimos, "
+                  + link("/es/lines/princess/", "Princess")
+                  + ", " + link("/es/lines/celebrity/", "Celebrity")
+                  + " y " + link("/es/lines/holland-america/", "Holland America")
+                  + " están en este espacio, cada una con su carácter. "
+                  + link("/es/lines/cunard/", "Cunard")
+                  + " es un caso aparte: una experiencia tradicional de transatlántico con noches formales que no "
+                    "encaja del todo en ningún nivel.</p>"
+                  + watch("<b>Premium no significa que todo esté incluido.</b> Se agrupa más que en un barco "
+                          "contemporáneo, pero la lista concreta varía según la línea y la tarifa que reserves. "
+                          "Revisa siempre qué cubre tu tarifa en lugar de suponer que lo decide el nivel."),
+         }},
+        {"id": "luxury", "h2": {"en": "Luxury: small ships, nearly everything bundled",
+                                "es": "Lujo: barcos pequeños, casi todo incluido"},
+         "html": {
+            "en": "<p>Luxury lines run the smallest ships of the three tiers, often carrying a few hundred guests "
+                  "rather than a few thousand. The defining feature is not decor, it is the <b>all-inclusive "
+                  "model</b>: most of what other tiers add to your onboard account is simply part of the fare.</p>"
+                  + vcards([
+                      ("🥂", "Mostly all-inclusive", "Dining, drinks, gratuities and often Wi-Fi are typically bundled. What exactly is covered varies by line, and some include shore excursions or flights too."),
+                      ("👥", "Few guests, high staffing", "Small ships with a high ratio of crew to guests, which is where the personal service comes from."),
+                      ("⚓", "Smaller ports", "Compact ships reach harbours the big ships cannot enter, so itineraries often look quite different."),
+                      ("🤫", "Quiet by nature", "No waterslides, no big production spectacle. The draw is space, service and the destinations."),
+                  ])
+                  + "<p>We do not currently publish verified guides for luxury lines, so we will not pretend to "
+                  "rank them here. What we can tell you is how to compare a luxury fare honestly against a premium "
+                  "or contemporary one: add up what you would realistically spend on board in the other tier, then "
+                  "compare the totals rather than the headline fares. That is the only comparison that means "
+                  "anything.</p>",
+            "es": "<p>Las líneas de lujo operan los barcos más pequeños de los tres niveles, a menudo con unos "
+                  "cientos de huéspedes en lugar de miles. Su rasgo definitorio no es la decoración, es el "
+                  "<b>modelo todo incluido</b>: gran parte de lo que otros niveles cargan a tu cuenta a bordo "
+                  "simplemente forma parte de la tarifa.</p>"
+                  + vcards([
+                      ("🥂", "Casi todo incluido", "Comidas, bebidas, propinas y a menudo Wi-Fi suelen ir incluidos. Lo que cubre exactamente varía por línea, y algunas incluyen excursiones o vuelos."),
+                      ("👥", "Pocos huéspedes, mucho personal", "Barcos pequeños con una alta proporción de tripulación por huésped, de donde viene el servicio personal."),
+                      ("⚓", "Puertos más pequeños", "Los barcos compactos llegan a puertos donde los grandes no entran, así que los itinerarios suelen ser muy distintos."),
+                      ("🤫", "Tranquilo por naturaleza", "Sin toboganes ni grandes espectáculos. El atractivo es el espacio, el servicio y los destinos."),
+                  ])
+                  + "<p>Por ahora no publicamos guías verificadas de líneas de lujo, así que no vamos a fingir que "
+                  "las clasificamos aquí. Lo que sí podemos decirte es cómo comparar con honestidad una tarifa de "
+                  "lujo frente a una premium o contemporánea: suma lo que gastarías de verdad a bordo en el otro "
+                  "nivel y compara los totales, no las tarifas anunciadas. Es la única comparación que significa "
+                  "algo.</p>",
+         }},
+        {"id": "where-tiers-blur", "h2": {"en": "Where the tiers blur", "es": "Dónde se difuminan los niveles"},
+         "html": {
+            "en": "<p>Treat the labels as a starting point, not a verdict. Several things cut across them:</p>"
+                  + vcards([
+                      ("🏨", "Suites change everything", "Book a suite on a contemporary ship and you often get a private restaurant, a dedicated lounge and priority everything. That day feels premium even though the ship is not."),
+                      ("📅", "The sailing matters as much as the line", "The same ship in school holidays and in late autumn is two different holidays. Timing shifts the atmosphere more than the tier does."),
+                      ("🚢", "Fleets are not uniform", "A line's newest ship and its oldest can feel a generation apart. Pick the ship, not just the brand."),
+                      ("💼", "Fare types differ within a line", "One line can sell a bare fare and an inclusive one on the same sailing. What is bundled depends on which you book."),
+                  ])
+                  + "<p>This is exactly why " + link("/en/guides/big-ship-vs-small-ship/", "ship size")
+                  + " and " + link("/en/guides/how-to-choose-a-cruise-line/", "how you match a line to how you travel")
+                  + " are usually more useful questions than which tier a brand belongs to.</p>",
+            "es": "<p>Toma las etiquetas como punto de partida, no como veredicto. Varias cosas las atraviesan:</p>"
+                  + vcards([
+                      ("🏨", "Las suites lo cambian todo", "Reserva una suite en un barco contemporáneo y sueles obtener restaurante privado, salón exclusivo y prioridad en todo. Ese día se siente premium aunque el barco no lo sea."),
+                      ("📅", "La salida importa tanto como la línea", "El mismo barco en vacaciones escolares y en otoño son dos viajes distintos. La fecha cambia el ambiente más que el nivel."),
+                      ("🚢", "Las flotas no son uniformes", "El barco más nuevo de una línea y el más antiguo pueden sentirse de generaciones distintas. Elige el barco, no solo la marca."),
+                      ("💼", "Las tarifas difieren dentro de una línea", "Una misma línea puede vender una tarifa básica y otra inclusiva en la misma salida. Lo incluido depende de cuál reserves."),
+                  ])
+                  + "<p>Por eso " + link("/es/guides/big-ship-vs-small-ship/", "el tamaño del barco")
+                  + " y " + link("/es/guides/how-to-choose-a-cruise-line/", "cómo ajustar la línea a tu forma de viajar")
+                  + " suelen ser preguntas más útiles que a qué nivel pertenece una marca.</p>",
+         }},
+        {"id": "which-fits", "h2": {"en": "Which tier fits you", "es": "Qué nivel encaja contigo"},
+         "html": {
+            "en": "<p>Skip the labels and answer three questions honestly.</p>"
+                  + vcards([
+                      ("🎯", "Who is travelling?", "Kids or teens in the group pushes you toward contemporary, where the programming and the space for different ages exist. Adults travelling together have the full range open."),
+                      ("🌅", "What is your ideal day at sea?", "A packed day with something on every deck is contemporary. A book, a long lunch and a talk in the afternoon is premium or luxury."),
+                      ("💳", "How do you want to pay?", "Prefer a low fare and control over your extras, or a higher fare with almost nothing added later? That single preference separates the tiers more cleanly than anything else."),
+                  ])
+                  + "<p>If your answers pull in different directions, that is normal and it is worth a conversation "
+                  "rather than a guess. Ships within a single line vary enough that the right one often sits "
+                  "somewhere other than where the label points.</p>",
+            "es": "<p>Olvida las etiquetas y responde tres preguntas con honestidad.</p>"
+                  + vcards([
+                      ("🎯", "¿Quién viaja?", "Niños o adolescentes en el grupo te empujan a contemporánea, donde existen los programas y el espacio para distintas edades. Los adultos que viajan juntos tienen todo el abanico abierto."),
+                      ("🌅", "¿Cuál es tu día ideal en el mar?", "Un día lleno con algo en cada cubierta es contemporánea. Un libro, una comida larga y una charla por la tarde es premium o lujo."),
+                      ("💳", "¿Cómo quieres pagar?", "¿Prefieres tarifa baja y control sobre tus extras, o tarifa más alta y casi nada añadido después? Esa sola preferencia separa los niveles mejor que ninguna otra cosa."),
+                  ])
+                  + "<p>Si tus respuestas apuntan a lados distintos, es normal y merece una conversación en vez de "
+                  "una suposición. Los barcos dentro de una misma línea varían lo suficiente como para que el "
+                  "adecuado esté a menudo en otro sitio del que señala la etiqueta.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What is the difference between contemporary, premium and luxury cruise lines?", "Contemporary lines run the largest ships with the most activities and the lowest base fares, charging separately for extras. Premium lines run somewhat smaller ships at a calmer pace with more included and more space per guest. Luxury lines run small ships where most things, typically dining, drinks and gratuities, are bundled into a higher fare. The tiers describe style and inclusions, not quality."),
+            ("Is a luxury cruise line better than a contemporary one?", "Not inherently. They are built for different holidays. A family wanting waterslides, kids clubs and evening shows will enjoy a contemporary ship far more than a quiet luxury one, and a couple wanting space and a slow pace will feel the opposite. Better means better matched to you."),
+            ("Which cruise lines are considered contemporary?", "Contemporary is the mass-market tier built around large ships and a low entry fare. Among the lines we cover, Royal Caribbean and Carnival are the clearest examples, with MSC bringing a European style to the same big-ship approach. Lines do shift over time, so treat any list as a guide rather than a fixed classification."),
+            ("Are premium cruises all-inclusive?", "Usually not fully. Premium fares bundle more than contemporary ones, but the exact list varies by line and by the fare type you book, and drinks or specialty dining are often still extra. Check what your specific fare covers rather than relying on the tier."),
+            ("Is a premium cruise worth the extra cost?", "It depends on what you would have spent anyway. If you would buy a drinks package, eat in specialty restaurants and want a quieter ship, the gap narrows quickly once you compare full totals rather than headline fares. If you are happy with the main dining room and the included entertainment, contemporary gives you more for less."),
+            ("Do the tiers mean the same thing on every cruise line?", "No. They are informal industry shorthand, not a regulated standard, so lines position themselves differently and change over time. Two lines described as premium can feel quite different on board, which is why the ship and the sailing date matter as much as the label."),
+        ],
+        "es": [
+            ("¿Cuál es la diferencia entre líneas contemporáneas, premium y de lujo?", "Las contemporáneas operan los barcos más grandes con más actividades y las tarifas base más bajas, cobrando aparte los extras. Las premium operan barcos algo más pequeños a un ritmo más tranquilo, con más incluido y más espacio por huésped. Las de lujo operan barcos pequeños donde casi todo, normalmente comidas, bebidas y propinas, va incluido en una tarifa más alta. Los niveles describen estilo e inclusiones, no calidad."),
+            ("¿Una línea de lujo es mejor que una contemporánea?", "No por sí misma. Están hechas para viajes distintos. Una familia que quiere toboganes, clubes infantiles y espectáculos disfrutará mucho más un barco contemporáneo que uno de lujo silencioso, y una pareja que busca espacio y calma sentirá lo contrario. Mejor significa mejor ajustado a ti."),
+            ("¿Qué líneas se consideran contemporáneas?", "Contemporánea es el nivel masivo construido en torno a barcos grandes y una tarifa de entrada baja. Entre las líneas que cubrimos, Royal Caribbean y Carnival son los ejemplos más claros, y MSC aporta un estilo europeo al mismo enfoque de barco grande. Las líneas cambian con el tiempo, así que toma cualquier lista como orientación y no como una clasificación fija."),
+            ("¿Los cruceros premium son todo incluido?", "Normalmente no del todo. Las tarifas premium incluyen más que las contemporáneas, pero la lista exacta varía según la línea y el tipo de tarifa que reserves, y las bebidas o los restaurantes de especialidad suelen seguir siendo extra. Revisa qué cubre tu tarifa concreta en lugar de fiarte del nivel."),
+            ("¿Vale la pena el coste extra de un crucero premium?", "Depende de lo que ibas a gastar de todos modos. Si comprarías un paquete de bebidas, cenarías en restaurantes de especialidad y quieres un barco más tranquilo, la diferencia se reduce rápido al comparar totales completos en vez de tarifas anunciadas. Si te basta el comedor principal y el entretenimiento incluido, la contemporánea te da más por menos."),
+            ("¿Los niveles significan lo mismo en todas las líneas?", "No. Son jerga informal del sector, no un estándar regulado, así que cada línea se posiciona distinto y cambia con el tiempo. Dos líneas descritas como premium pueden sentirse muy diferentes a bordo, por eso el barco y la fecha importan tanto como la etiqueta."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🚢", "How to choose a cruise line", "/en/guides/how-to-choose-a-cruise-line/", "Match a line to how you actually travel."),
+            ("⚖️", "Big ship vs small ship", "/en/guides/big-ship-vs-small-ship/", "The size question that cuts across every tier."),
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "The difference between the fare and your final bill."),
+            ("🔍", "Compare the lines side by side", "/en/compare/", "Put any two lines next to each other on the facts."),
+        ],
+        "es": [
+            ("🚢", "Cómo elegir una línea de crucero", "/es/guides/how-to-choose-a-cruise-line/", "Ajusta la línea a tu forma real de viajar."),
+            ("⚖️", "Barco grande vs barco pequeño", "/es/guides/big-ship-vs-small-ship/", "La pregunta de tamaño que atraviesa cada nivel."),
+            ("🧾", "Qué incluye la tarifa de un crucero", "/es/guides/whats-included/", "La diferencia entre la tarifa y tu cuenta final."),
+            ("🔍", "Compara las líneas lado a lado", "/es/compare/", "Pon dos líneas cualquiera frente a frente con datos."),
+        ],
+    },
+})
