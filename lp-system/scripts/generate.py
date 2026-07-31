@@ -1135,6 +1135,10 @@ def bake(page, reg, today, used):
             f'const PHONE_TEL = "{PHONE_TEL}";\n'
             f'const PHONE_DISPLAY = "{PHONE_DISPLAY}";\n'
             f'const pricesCheckedOn = "{month_label(newest)}";\n'
+            # True when the fare-printing rows do NOT share one date_checked:
+            # a single list-level stamp would then overstate freshness, so the
+            # template falls back to per-card stamps (qa condition N1).
+            f"const STAMP_MIXED = {json.dumps(len({r['date_checked'] for r in priced}) > 1)};\n"
             f"const HERO = {json.dumps(hero)};\n"
             f"const KNOW_IMG = {json.dumps(know_img)};\n"
             f"const PRE_CRUISE = {json.dumps(pre_cruise_obj(port_row))};\n"

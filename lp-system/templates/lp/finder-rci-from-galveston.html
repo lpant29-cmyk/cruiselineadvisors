@@ -396,8 +396,10 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 .sdays .cur{display:inline-block;font-size:10.5px;font-weight:700;background:var(--foam);color:var(--sea-d);border-radius:6px;padding:1px 6px;margin-left:5px}
 .hero-ind{font-size:12.5px;font-weight:700;color:#fff;background:rgba(8,28,48,.62);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 11px;margin:0 0 9px;display:inline-block;backdrop-filter:blur(2px);text-shadow:0 1px 4px rgba(0,0,0,.5)}
 @media(max-width:600px){.hero .linelogo{display:none}}
-@media(max-width:420px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+@media(max-width:480px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
 .price.nofare .a{font-size:17px;color:var(--sea-d)}
+.bundle-line{font-size:13.5px;font-weight:600;color:#3A5261;margin:10px 0 2px;line-height:1.5}.bundle-line .bl-short{display:none}@media(max-width:600px){.bundle-line .bl-full{display:none}.bundle-line .bl-short{display:inline}.bundle-line{font-size:13px}}.hero .bundle-line{color:#E4EFF6;text-shadow:0 1px 6px rgba(0,0,0,.5);margin-top:8px}
+.results-fine{font-size:12px;color:#7C8B95;margin:-4px 0 12px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -419,7 +421,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
       <li><a href="#know">Galveston guide</a></li>
       <li><a href="#whycall">Why call us</a></li>
     </ul>
-    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for exact fares</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for better rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -430,9 +432,10 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   <div class="content">
     <div class="wrap">
       <span class="linelogo">🚢 ROYAL CARIBBEAN · FROM GALVESTON, TEXAS</span>
-      <p class="hero-ind">Independent referral service. Not Royal Caribbean, and not the cruise line's customer service.</p>
+      <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
       <h1>Royal Caribbean cruises from Galveston</h1>
-      <p class="tagline">Search real itineraries by month and length, then one call gets exact dates, cabins and today's price.</p>
+      <p class="tagline">Search real itineraries by month and length, then one call gets exact dates, cabins and often better rates than booking online once your travel is bundled.</p>
+      <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
     </div>
   </div>
 </header>
@@ -471,13 +474,14 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 <div class="callzone wrap">
   <div class="card">
     <div class="main">
-      <h2>Get exact dates and today's fare by phone</h2>
-      <p class="why">The search shows recent from-fares by month. A licensed Galveston specialist checks your dates, cabins and current promotions, then quotes the real total. Free, no pressure.</p>
+      <h2>Better rates than booking online</h2>
+      <p class="why">The search shows recent from-fares by month. A licensed Galveston specialist checks your dates, cabins and current promotions, then quotes your real total, often better than booking online once your travel is bundled. Free, no pressure.</p>
       <a class="bigcall" href="tel:+18335550100">
         <span class="ic">📞</span>
         <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
       </a>
-            <div class="callmeta">
+            <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+      <div class="callmeta">
         <span><b>●</b> Advisors answering now</span>
         <span>8am-11pm ET, every day</span>
         <span>Licensed US partner agencies</span>
@@ -513,6 +517,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
     </div>
     <span class="count" id="resultCount"></span>
   </div>
+  <p class="results-fine" id="resultsFine"></p>
   <!-- FEATURED strip (mobile UX): featured=yes rows as a swipe slider; the
        full list below still contains them. Hidden on desktop and when no
        featured rows are baked. -->
@@ -574,7 +579,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 <section class="blk wrap">
   <div class="phoneband">
     <div>
-      <h2>Found your itinerary? Get the exact fare now.</h2>
+      <h2>Found your itinerary? Get better rates by phone.</h2>
       <p>8am-11pm ET, every day · Free quotes · No obligation · Se habla español</p>
     </div>
     <a class="bigcall" href="tel:+18335550100">
@@ -594,7 +599,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18335550100">📞 Call for exact fares</a>
+  <a class="btn" href="tel:+18335550100">📞 Call for better rates</a>
   <a class="btn cb-btn" href="#finder" onclick="document.getElementById('fTo').focus();return false;">Search</a>
 </div>
 
@@ -739,6 +744,15 @@ function runSearch(scroll=true){
   const grid=document.getElementById('itinGrid');
   const count=document.getElementById('resultCount');
   count.textContent = list.length ? `${list.length} itinerar${list.length===1?'y':'ies'} · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}` : '';
+  /* the stamp moved off the cards (operator, 2026-07-31) and sits here once as
+     fine print. If the rendered fares do NOT share one date, STAMP_MIXED is
+     baked true and we say so rather than let one date speak for all of them. */
+  const fine=document.getElementById('resultsFine');
+  if(fine) fine.textContent = list.length
+    ? ((typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
+        ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
+        : `From-fares seen ${pricesCheckedOn} · exact dates priced by phone`)
+    : '';
   if(!list.length){
     grid.innerHTML=`<div class="noresults" style="grid-column:1/-1">
       <h3>No tracked sailings match that combination</h3>
@@ -766,8 +780,8 @@ function runSearch(scroll=true){
             ? `<div class="price nofare"><span class="a">Fare on request</span></div>
           <p class="stamp">This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call and we will quote it live.</p>`
             : `<div class="price"><span class="f">From</span><span class="a">$${p.toLocaleString()}</span><span class="f">pp${month? ' · '+mLabel(month):''}</span></div>
-          <p class="stamp">From-fare seen ${pricesCheckedOn}<span class="stamp-x"> · exact dates priced by phone</span></p>`}
-          <a class="go" href="tel:${PHONE_TEL}">📞 Call for exact dates & today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
+          `}
+          <a class="go" href="tel:${PHONE_TEL}">📞 Call for better rates vs online<small>Unpublished bundle rates by phone</small></a>
           ${it.detailUrl?`<a class="more" href="${it.detailUrl}">View full itinerary</a>`:''}
         </div>
       </article>`;
@@ -905,7 +919,7 @@ function dealSheet(it){ /* row/slide bottom sheet: route, month fares, both CTAs
     <h4 class="sh4">${it.noPrice? 'Fares' : 'From-fares by sail month'}</h4>
     ${fares}
     ${it.noPrice? '' : `<p class="sstamp">From-fares seen ${pricesCheckedOn} · exact dates priced by phone</p>`}`;
-  var foot=`<a class="btn" href="tel:${PHONE_TEL}">📞 Call for today's fare</a>${it.detailUrl?`<a class="btn2" href="${it.detailUrl}">Full itinerary</a>`:''}`;
+  var foot=`<a class="btn" href="tel:${PHONE_TEL}">📞 Call for better rates</a>${it.detailUrl?`<a class="btn2" href="${it.detailUrl}">Full itinerary</a>`:''}`;
   sheetOpen('sheet-deal',it.name,body,foot);
 }
 (function(){var grid=document.getElementById('itinGrid');if(!grid)return; /* row/slide tap -> deal sheet (mobile only) */

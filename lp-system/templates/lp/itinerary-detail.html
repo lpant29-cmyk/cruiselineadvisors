@@ -352,7 +352,8 @@ footer a{color:#BDE0E5}
 @media(prefers-reduced-motion:reduce){.daymore,.dd summary{animation:none}}
 .hero-ind{font-size:12.5px;font-weight:700;color:#fff;background:rgba(8,28,48,.62);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 11px;margin:0 0 9px;display:inline-block;backdrop-filter:blur(2px);text-shadow:0 1px 4px rgba(0,0,0,.5)}
 @media(max-width:600px){.hero .linelogo{display:none}}
-@media(max-width:420px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+@media(max-width:480px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+.bundle-line{font-size:13.5px;font-weight:600;color:#3A5261;margin:10px 0 2px;line-height:1.5}.bundle-line .bl-short{display:none}@media(max-width:600px){.bundle-line .bl-full{display:none}.bundle-line .bl-short{display:inline}.bundle-line{font-size:13px}}.hero .bundle-line{color:#E4EFF6;text-shadow:0 1px 6px rgba(0,0,0,.5);margin-top:8px}
 </style>
 </head>
 <body>
@@ -368,7 +369,7 @@ footer a{color:#BDE0E5}
 <nav class="nav">
   <div class="wrap">
     <span class="brand">[AGENCY NAME]</span>
-    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for today's fare</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for better rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -379,13 +380,14 @@ footer a{color:#BDE0E5}
   <div class="content">
     <div class="wrap">
       <span class="linelogo">🚢 <span id="heroKicker">ROYAL CARIBBEAN · FROM GALVESTON TX</span></span>
-      <p class="hero-ind">Independent referral service. Not Royal Caribbean, and not the cruise line's customer service.</p>
+      <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
       <h1>5-Night Western Caribbean Cruise from Galveston on Mariner of the Seas</h1>
       <p class="sub" id="heroSub"></p>
+      <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <!-- static route ribbon removed (mobile polish item 9): the day
            slider and the SVG schematic are the route representations -->
-      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for today's fare</a>
+      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for better rates</a>
     </div>
   </div>
 </header>
@@ -394,13 +396,14 @@ footer a{color:#BDE0E5}
 <div class="callzone wrap">
   <div class="card">
     <div class="main">
-      <h2>Get exact dates and today's fare by phone</h2>
+      <h2>Better rates than booking online</h2>
       <p class="why">The fares below are recent from-prices by sail month. A licensed specialist checks your exact date, cabin type and current promotions, then quotes the real total. Free, no pressure.</p>
       <a class="bigcall" href="tel:+18335550100">
         <span class="ic">📞</span>
         <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
       </a>
-            <div class="callmeta">
+            <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+      <div class="callmeta">
         <span><b>●</b> Advisors answering now</span>
         <span>8am-11pm ET, every day</span>
         <span>Licensed US partner agencies</span>
@@ -494,7 +497,7 @@ footer a{color:#BDE0E5}
   </div>
   <!-- mobile: single call CTA for the whole table (per-row links hidden);
        lives inside .fares so tel_click position resolves to deal-card -->
-  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for today's fare</a>
+  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for better rates</a>
   <p class="note" id="fareNote"></p>
 </section>
 
@@ -538,7 +541,7 @@ footer a{color:#BDE0E5}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18335550100">📞 Call for today's fare</a>
+  <a class="btn" href="tel:+18335550100">📞 Call for better rates</a>
   <a class="btn cb-btn" href="#fares">See fares</a>
 </div>
 
@@ -757,8 +760,8 @@ function routeSVG(days){
   if(!/^\d{4}-\d{2}$/.test(when)||typeof WHEN_LINES==='undefined'||!WHEN_LINES||!WHEN_LINES[when])when='';
   el.innerHTML=MONTHS.map(x=>{
     const hit=x.m===when;
-    const cell=v=>v==null?`<a class="call" href="tel:${PHONE_TEL}">Call for fare</a>`:`<span class="a">$${v.toLocaleString()}</span><span class="st">pp · seen ${pricesCheckedOn}</span>`;
-    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for today's fare</a></td></tr>`;
+    const cell=v=>v==null?`<a class="call" href="tel:${PHONE_TEL}">Call for rates</a>`:`<span class="a">$${v.toLocaleString()}</span><span class="st">pp · seen ${pricesCheckedOn}</span>`;
+    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for better rates</a></td></tr>`;
   }).join('');
   const note=document.getElementById('fareNote');
   if(note)note.textContent=`${BOOKING.taxes||''}${BOOKING.taxes?'. ':''}From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.${BOOKING.season?' '+BOOKING.season+'.':''}`;

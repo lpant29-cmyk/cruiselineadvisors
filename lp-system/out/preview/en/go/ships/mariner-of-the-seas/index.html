@@ -310,7 +310,6 @@ footer a{color:#BDE0E5}
   .lead,.wcard p,.faq details p,.inccard p,.cabcard p{font-size:16px}
 }
 .hero-ind{font-size:12.5px;font-weight:700;color:#fff;background:rgba(8,28,48,.62);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 11px;margin:0 0 9px;display:inline-block;backdrop-filter:blur(2px);text-shadow:0 1px 4px rgba(0,0,0,.5)}
-.hero-rep{font-size:11px;color:#DCE9F2;margin:0 0 6px;text-shadow:0 1px 4px rgba(0,0,0,.55)}
 @media(max-width:600px){.hero .linelogo{display:none}}
 
 .scard .daymore{width:100%;margin:0 0 8px;border:2px solid var(--deep);background:#fff;color:var(--deep);font:inherit;font-weight:800;font-size:14px;border-radius:10px;padding:9px;cursor:pointer}
@@ -322,8 +321,9 @@ footer a{color:#BDE0E5}
 .sdays .tm{display:block;font-size:12.5px;color:#4E6B75;margin-top:2px}
 .sdays p{font-size:14px;color:#3A5261;margin-top:4px}
 .sdays .cur{display:inline-block;font-size:10.5px;font-weight:700;background:var(--foam);color:var(--sea-d);border-radius:6px;padding:1px 6px;margin-left:5px}
-@media(max-width:420px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
+@media(max-width:480px){.hero{height:auto;min-height:460px}.hero .content{top:auto;padding-top:112px}}@media(max-width:360px){.hero{min-height:500px}}
 .price.nofare .a{font-size:19px;color:var(--sea-d)}
+.bundle-line{font-size:13.5px;font-weight:600;color:#3A5261;margin:10px 0 2px;line-height:1.5}.bundle-line .bl-short{display:none}@media(max-width:600px){.bundle-line .bl-full{display:none}.bundle-line .bl-short{display:inline}.bundle-line{font-size:13px}}.hero .bundle-line{color:#E4EFF6;text-shadow:0 1px 6px rgba(0,0,0,.5);margin-top:8px}
 </style>
 <style>.brand-lockup{display:inline-flex;align-items:center;gap:9px}.brand-lockup .brand-txt{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--deep)}.brand-lockup .brand-txt span{color:#E0A84E}.backtop{position:fixed;right:14px;bottom:calc(104px + env(safe-area-inset-bottom));z-index:66;width:44px;height:44px;border-radius:50%;border:2px solid var(--deep);background:#fff;color:var(--deep);font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(10,37,64,.18);opacity:0;visibility:hidden;transition:opacity .2s,visibility 0s .2s}.backtop.show{opacity:1;visibility:visible;transition:opacity .2s,visibility 0s}@media(min-width:901px){.backtop{bottom:24px}}.goback{border:0;background:none;color:var(--sea-d);font:inherit;font-weight:700;font-size:14px;cursor:pointer;padding:6px 10px 6px 0;white-space:nowrap}@media(prefers-reduced-motion:reduce){.backtop{transition:none}}</style>
 </head>
@@ -341,7 +341,7 @@ footer a{color:#BDE0E5}
 <nav class="nav">
   <div class="wrap">
     <span class="brand brand-lockup"><svg class="cla-mark" width="30" height="30" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><defs><linearGradient id="clm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123C5A"/><stop offset="1" stop-color="#0A2540"/></linearGradient></defs><rect width="44" height="44" rx="13" fill="url(#clm)"/><circle cx="30" cy="15" r="5" fill="#E0A84E"/><path d="M6 25q4-3.6 8 0t8 0 8 0 8 0" fill="none" stroke="#1FB6B6" stroke-width="2.4" stroke-linecap="round"/><path d="M6 31q4-3.6 8 0t8 0 8 0 8 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".92"/><path d="M6 37q4-3.6 8 0t8 0 8 0 8 0" fill="none" stroke="#E0A84E" stroke-width="2.4" stroke-linecap="round" opacity=".65"/></svg><span class="brand-txt">CruiseLine<span>Advisors</span></span></span>
-    <a class="cta" href="tel:+18336844250" aria-label="Call +1-833-684-4250"><span class="cta-t">Call for today's fare</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18336844250" aria-label="Call +1-833-684-4250"><span class="cta-t">Call for better rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -352,13 +352,13 @@ footer a{color:#BDE0E5}
   <div class="content">
     <div class="wrap">
       <span class="linelogo">🚢 <span id="heroKicker">ROYAL CARIBBEAN · SHIP GUIDE</span></span>
-      <p class="hero-rep">Representative imagery. Not a photograph of this ship.</p>
-      <p class="hero-ind">Independent referral service. Not Royal Caribbean, and not the cruise line's customer service.</p>
+      <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
       <h1>Mariner of the Seas: Cruises, Cabins and What's Onboard</h1>
       <p class="sub" id="heroSub"></p>
+      <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <br>
-      <a class="btn hero-cta" href="tel:+18336844250">📞 Call for today's fare</a>
+      <a class="btn hero-cta" href="tel:+18336844250">📞 Call for better rates</a>
     </div>
   </div>
 </header>
@@ -367,13 +367,14 @@ footer a{color:#BDE0E5}
 <div class="callzone wrap">
   <div class="card">
     <div class="main">
-      <h2>Get this ship priced for your dates by phone</h2>
+      <h2>Better rates than booking online</h2>
       <p class="why">The page shows what is on board and recent from-fares for her current sailings. A licensed specialist checks your exact date, cabin type and current promotions, then quotes the real total. Free, no pressure.</p>
       <a class="bigcall" href="tel:+18336844250">
         <span class="ic">📞</span>
         <span><span class="num">+1-833-684-4250</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
       </a>
-            <div class="callmeta">
+            <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+      <div class="callmeta">
         <span><b>●</b> Advisors answering now</span>
         <span>8am-11pm ET, every day</span>
         <span>Licensed US partner agencies</span>
@@ -555,7 +556,7 @@ footer a{color:#BDE0E5}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18336844250">📞 Call for today's fare</a>
+  <a class="btn" href="tel:+18336844250">📞 Call for better rates</a>
   <a class="btn cb-btn" href="#sailings">See sailings</a>
 </div>
 
@@ -785,7 +786,7 @@ const PORTS = {"costa-maya": {"label": "Costa Maya Mexico", "short": "Costa Maya
 const FAQS = [
  {
   "q": "Is calling more expensive than booking online?",
-  "a": "No - the fare is the cruise line's fare either way. The call adds comparison promo-stacking and a human who handles changes afterward free of charge."
+  "a": "No. The cruise line's fare is the same whether you book online or by phone, so calling never costs you more. Where calling wins is the rest of the trip: one agent can book your cruise, flight and hotel together, which often comes out better than arranging each piece yourself, and can sometimes include onboard credit or other extras. The call is free and there is no obligation."
  },
  {
   "q": "Do I need a passport for a closed-loop cruise?",
@@ -988,7 +989,7 @@ function routeSVG(days){
           : `<div class="price"><span class="f">From</span><span class="a">$${s.from.toLocaleString()}</span><span class="f">pp</span></div>`}
         <p class="stamp">${s.from==null? 'This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call for a live quote.' : `From-fare seen ${esc(s.stamp)} · exact dates priced by phone`}</p>
         <button class="daymore" type="button" data-sail="${esc(s.id)}">Day by day</button>
-        <a class="go" href="tel:${PHONE_TEL}">📞 Call for exact dates &amp; today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
+        <a class="go" href="tel:${PHONE_TEL}">📞 Call for better rates vs online<small>Unpublished bundle rates by phone</small></a>
         ${s.detailUrl?`<a class="more" href="${s.detailUrl}">View full itinerary</a>`:''}
       </div>
     </article>`;
@@ -1006,7 +1007,7 @@ function routeSVG(days){
       return `<li><span class="dno">Day ${d.n}</span><b>${esc(po.label)}</b>${cur}<span class="tm">${tm}${d.note?' · '+esc(d.note):''}</span>${first&&po.blurb?`<p>${esc(po.blurb)}</p>`:''}</li>`;
     }).join('');
     sheetOpen('sheet-day',s.name,`<p class="smeta2">${s.nights} nights · ${s.oneWay?'from':'round-trip from'} ${esc(s.portLabel)}</p><ol class="sdays">${rows}</ol>`,
-      `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for exact dates</a>`);
+      `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for better rates</a>`);
   });
   const note=document.getElementById('sailNote');
   if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call. Deployments change seasonally; specialists see the full live schedule.`;
