@@ -369,7 +369,7 @@ footer a{color:#BDE0E5}
 <nav class="nav">
   <div class="wrap">
     <span class="brand">[AGENCY NAME]</span>
-    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for better rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for Exclusive Rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -383,11 +383,12 @@ footer a{color:#BDE0E5}
       <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
       <h1>5-Night Western Caribbean Cruise from Galveston on Mariner of the Seas</h1>
       <p class="sub" id="heroSub"></p>
-      <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+      <p class="bundle-line"><span class="bl-full">Call for Unadvertised Bundle Rates &amp; Phone-Only Deals</span><span class="bl-short">Unadvertised bundle rates, phone only</span></p>
+      
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <!-- static route ribbon removed (mobile polish item 9): the day
            slider and the SVG schematic are the route representations -->
-      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for better rates</a>
+      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
     </div>
   </div>
 </header>
@@ -396,13 +397,13 @@ footer a{color:#BDE0E5}
 <div class="callzone wrap">
   <div class="card">
     <div class="main">
-      <h2>Better rates than booking online</h2>
-      <p class="why">The fares below are recent from-prices by sail month. A licensed specialist checks your exact date, cabin type and current promotions, then quotes the real total. Free, no pressure.</p>
+      <h2>Unlock Unpublished Rates by Phone</h2>
+      <p class="why">Call an advisor now to apply exclusive promos, cabin upgrades, and secret bundle savings for your exact dates.</p>
       <a class="bigcall" href="tel:+18335550100">
         <span class="ic">📞</span>
         <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
       </a>
-            <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+            
       <div class="callmeta">
         <span><b>●</b> Advisors answering now</span>
         <span>8am-11pm ET, every day</span>
@@ -497,7 +498,7 @@ footer a{color:#BDE0E5}
   </div>
   <!-- mobile: single call CTA for the whole table (per-row links hidden);
        lives inside .fares so tel_click position resolves to deal-card -->
-  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for better rates</a>
+  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
   <p class="note" id="fareNote"></p>
 </section>
 
@@ -541,7 +542,7 @@ footer a{color:#BDE0E5}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18335550100">📞 Call for better rates</a>
+  <a class="btn" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
   <a class="btn cb-btn" href="#fares">See fares</a>
 </div>
 
@@ -761,7 +762,7 @@ function routeSVG(days){
   el.innerHTML=MONTHS.map(x=>{
     const hit=x.m===when;
     const cell=v=>v==null?`<a class="call" href="tel:${PHONE_TEL}">Call for rates</a>`:`<span class="a">$${v.toLocaleString()}</span><span class="st">pp · seen ${pricesCheckedOn}</span>`;
-    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for better rates</a></td></tr>`;
+    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a></td></tr>`;
   }).join('');
   const note=document.getElementById('fareNote');
   if(note)note.textContent=`${BOOKING.taxes||''}${BOOKING.taxes?'. ':''}From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.${BOOKING.season?' '+BOOKING.season+'.':''}`;

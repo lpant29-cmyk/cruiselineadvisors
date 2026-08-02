@@ -338,7 +338,7 @@ footer a{color:#BDE0E5}
 <nav class="nav">
   <div class="wrap">
     <span class="brand">[AGENCY NAME]</span>
-    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for better rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for Exclusive Rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -352,10 +352,11 @@ footer a{color:#BDE0E5}
       <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
       <h1>Mariner of the Seas: Cruises, Cabins and What's Onboard</h1>
       <p class="sub" id="heroSub"></p>
-      <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+      <p class="bundle-line"><span class="bl-full">Call for Unadvertised Bundle Rates &amp; Phone-Only Deals</span><span class="bl-short">Unadvertised bundle rates, phone only</span></p>
+      
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <br>
-      <a class="btn hero-cta" href="tel:+18335550100">📞 Call for better rates</a>
+      <a class="btn hero-cta" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
     </div>
   </div>
 </header>
@@ -364,13 +365,13 @@ footer a{color:#BDE0E5}
 <div class="callzone wrap">
   <div class="card">
     <div class="main">
-      <h2>Better rates than booking online</h2>
-      <p class="why">The page shows what is on board and recent from-fares for her current sailings. A licensed specialist checks your exact date, cabin type and current promotions, then quotes the real total. Free, no pressure.</p>
+      <h2>Unlock Unpublished Rates by Phone</h2>
+      <p class="why">Call an advisor now to apply exclusive promos, cabin upgrades, and secret bundle savings for your exact dates.</p>
       <a class="bigcall" href="tel:+18335550100">
         <span class="ic">📞</span>
         <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
       </a>
-            <p class="bundle-line"><span class="bl-full">Bundle your travel. It often beats the rates you see online booking each piece alone. One call, better bundled rates.</span><span class="bl-short">Bundle your travel. One call, often better rates than booking each piece online.</span></p>
+            
       <div class="callmeta">
         <span><b>●</b> Advisors answering now</span>
         <span>8am-11pm ET, every day</span>
@@ -550,7 +551,7 @@ footer a{color:#BDE0E5}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18335550100">📞 Call for better rates</a>
+  <a class="btn" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
   <a class="btn cb-btn" href="#sailings">See sailings</a>
 </div>
 
@@ -804,7 +805,7 @@ function routeSVG(days){
           : `<div class="price"><span class="f">From</span><span class="a">$${s.from.toLocaleString()}</span><span class="f">pp</span></div>`}
         <p class="stamp">${s.from==null? 'This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call for a live quote.' : `From-fare seen ${esc(s.stamp)} · exact dates priced by phone`}</p>
         <button class="daymore" type="button" data-sail="${esc(s.id)}">Day by day</button>
-        <a class="go" href="tel:${PHONE_TEL}">📞 Call for better rates vs online<small>Unpublished bundle rates by phone</small></a>
+        <a class="go" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates<small>Unpublished bundle rates by phone</small></a>
         ${s.detailUrl?`<a class="more" href="${s.detailUrl}">View full itinerary</a>`:''}
       </div>
     </article>`;
@@ -822,7 +823,7 @@ function routeSVG(days){
       return `<li><span class="dno">Day ${d.n}</span><b>${esc(po.label)}</b>${cur}<span class="tm">${tm}${d.note?' · '+esc(d.note):''}</span>${first&&po.blurb?`<p>${esc(po.blurb)}</p>`:''}</li>`;
     }).join('');
     sheetOpen('sheet-day',s.name,`<p class="smeta2">${s.nights} nights · ${s.oneWay?'from':'round-trip from'} ${esc(s.portLabel)}</p><ol class="sdays">${rows}</ol>`,
-      `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for better rates</a>`);
+      `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a>`);
   });
   const note=document.getElementById('sailNote');
   if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call. Deployments change seasonally; specialists see the full live schedule.`;
