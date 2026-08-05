@@ -428,3 +428,235 @@ register("accessibility", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("couples-adults-only-cruising", {
+    "cat": "who",
+    "hero": "couples-adults-only-cruising.jpg",
+    "published": "2026-08-05",
+    "updated": "2026-08-05",
+    "title": {
+        "en": "Cruising for couples: adults-only spaces and quieter ships",
+        "es": "Cruceros en pareja: zonas solo para adultos y barcos más tranquilos",
+    },
+    "dek": {
+        "en": "A cruise can be one of the easiest holidays two people ever take together: unpack once, "
+              "wake up somewhere new, and nobody has to drive. Whether it feels romantic or feels like a "
+              "school playground depends almost entirely on choices you make before you book. Here is what "
+              "actually shapes a couples cruise.",
+        "es": "Un crucero puede ser una de las vacaciones más fáciles para dos personas: deshaces la maleta "
+              "una vez, despiertas en un lugar nuevo y nadie tiene que conducir. Que se sienta romántico o "
+              "como un patio de colegio depende casi por completo de decisiones previas a la reserva. Esto "
+              "es lo que de verdad define un crucero en pareja.",
+    },
+    "takeaways": {
+        "en": [
+            "When you sail matters more than which ship you pick. School holidays fill any ship with families; term time is a different holiday entirely.",
+            "Most big ships have an adults-only area, usually a quieter pool and sun deck. It is the single feature that changes a couples cruise the most.",
+            "Adults-only SHIPS exist too, where nobody under 18 sails at all, but they are a small part of the market and price accordingly.",
+            "A balcony is worth more to two people than to four. Morning coffee looking at the sea is the whole argument.",
+            "Speciality restaurants are where the quiet dinners are. The main dining room is sociable by design.",
+            "Ask about what is included before you book: a couples cruise often ends up costing less than expected once bundled, and more than expected if you buy everything on board.",
+        ],
+        "es": [
+            "Cuándo navegas importa más que qué barco eliges. Las vacaciones escolares llenan cualquier barco de familias; fuera de temporada es otro viaje.",
+            "Casi todos los barcos grandes tienen una zona solo para adultos, normalmente una piscina y cubierta más tranquilas. Es lo que más cambia un crucero en pareja.",
+            "También existen barcos solo para adultos, donde no viaja nadie menor de 18 años, pero son una parte pequeña del mercado y su precio lo refleja.",
+            "Un balcón vale más para dos personas que para cuatro. El café de la mañana mirando al mar es todo el argumento.",
+            "Los restaurantes de especialidad son donde están las cenas tranquilas. El comedor principal es sociable por diseño.",
+            "Pregunta qué incluye la tarifa antes de reservar: un crucero en pareja suele costar menos de lo esperado si se agrupa, y más si compras todo a bordo.",
+        ],
+    },
+    "sections": [
+        {"id": "timing", "h2": {"en": "When you sail decides almost everything",
+                                "es": "Cuándo navegas decide casi todo"},
+         "html": {
+            "en": "<p>People spend weeks choosing a ship and ten seconds choosing a week. That is backwards. "
+                  "The same ship, same cabin, same route feels like two different holidays depending on the "
+                  "calendar.</p>"
+                  + vcards([
+                      ("🏫", "School holidays", "Summer, Christmas, Easter and half terms fill every family-friendly ship. Pools are busy, the buffet is loud, and the good speciality tables book out early."),
+                      ("🍂", "Term time", "Late January to early March, and September to mid-November, skew heavily adult. Quieter decks, easier bookings, and often the better value of the year."),
+                      ("🌡️", "Shoulder season", "Spring and autumn give you gentler weather in the Caribbean and the Mediterranean, and a calmer crowd than peak summer."),
+                  ])
+                  + "<p>If your dates are flexible at all, this is the lever to pull first. It costs nothing "
+                  "and changes more than any other decision on this page.</p>",
+            "es": "<p>La gente dedica semanas a elegir barco y diez segundos a elegir la semana. Es al revés. "
+                  "El mismo barco, el mismo camarote y la misma ruta se sienten como dos viajes distintos "
+                  "según el calendario.</p>"
+                  + vcards([
+                      ("🏫", "Vacaciones escolares", "Verano, Navidad, Semana Santa y puentes llenan de familias cualquier barco. Piscinas concurridas, buffet ruidoso y las mejores mesas reservadas pronto."),
+                      ("🍂", "Fuera de temporada", "De finales de enero a principios de marzo, y de septiembre a mediados de noviembre, el pasaje es mucho más adulto. Cubiertas tranquilas y a menudo la mejor relación calidad-precio del año."),
+                      ("🌡️", "Temporada media", "Primavera y otoño dan mejor clima en el Caribe y el Mediterráneo, y menos gente que en pleno verano."),
+                  ])
+                  + "<p>Si tus fechas son algo flexibles, esta es la primera palanca. No cuesta nada y cambia "
+                  "más que cualquier otra decisión de esta guía.</p>",
+         }},
+        {"id": "adults-only-areas", "h2": {"en": "Adults-only areas: the feature worth checking first",
+                                           "es": "Zonas solo para adultos: lo primero que conviene mirar"},
+         "html": {
+            "en": "<p>Most large ships set aside a section of deck where under-18s are not allowed. Names vary "
+                  "by line, but the idea is consistent: a quieter pool or hot tubs, padded loungers, a bar, "
+                  "and sometimes a separate cafe.</p>"
+                  + define("Adults-only area",
+                           "a section of a mainstream ship reserved for guests 18 or older, typically a pool "
+                           "deck or solarium. The rest of the ship stays open to all ages.")
+                  + "<p>This matters more than it sounds. It means you can sail on a big, well-priced family "
+                  "ship and still have somewhere calm to spend a sea day. Some lines charge a small fee for "
+                  "the more elaborate versions; many include the basic one in your fare.</p>"
+                  + tip("Two questions worth asking before you book: is the adults-only area covered or open "
+                        "to the sun, and does it have its own bar and food service. An uncovered deck with no "
+                        "service is a very different proposition on a hot Caribbean afternoon."),
+            "es": "<p>Casi todos los barcos grandes reservan una zona de cubierta donde no se permiten menores "
+                  "de 18. Los nombres varían por línea, pero la idea es la misma: piscina o jacuzzis más "
+                  "tranquilos, tumbonas acolchadas, un bar y a veces una cafetería aparte.</p>"
+                  + define("Zona solo para adultos",
+                           "una sección de un barco convencional reservada a mayores de 18, normalmente una "
+                           "cubierta de piscina o solárium. El resto del barco sigue abierto a todas las edades.")
+                  + "<p>Importa más de lo que parece. Permite navegar en un barco familiar grande y bien de "
+                  "precio y aun así tener un sitio tranquilo para un día en el mar. Algunas líneas cobran una "
+                  "cuota pequeña por las versiones más elaboradas; muchas incluyen la básica en la tarifa.</p>"
+                  + tip("Dos preguntas antes de reservar: si la zona está cubierta o al sol, y si tiene bar y "
+                        "servicio de comida propios. Una cubierta descubierta y sin servicio es muy distinta "
+                        "en una tarde calurosa del Caribe."),
+         }},
+        {"id": "adults-only-ships", "h2": {"en": "Adults-only ships, and who they suit",
+                                           "es": "Barcos solo para adultos y a quién le encajan"},
+         "html": {
+            "en": "<p>A handful of lines sail ships where nobody under 18 is on board at all. It is a genuinely "
+                  "different atmosphere: no kids clubs, no waterslides, no family cabins, and a passenger "
+                  "profile that skews toward couples and friends travelling together.</p>"
+                  + vcards([
+                      ("🤫", "What you gain", "Consistent quiet, adult-paced entertainment, and dining rooms that stay calm at seven in the evening."),
+                      ("💷", "What it costs", "These ships are smaller and carry fewer guests, so the fare per person is usually higher than a comparable mainstream sailing."),
+                      ("🗓️", "Where they sail", "Deployment is narrower than the big lines, so your dates and destinations may be more limited."),
+                  ])
+                  + "<p>Worth knowing: you do not need an adults-only ship to get an adults-only holiday. A "
+                  "mainstream ship in term time, with a balcony and a couple of speciality dinners booked, "
+                  "gets most couples most of the way there for less money. We do not publish verified guides "
+                  "for the adults-only lines yet, so we will not rank them here.</p>",
+            "es": "<p>Unas pocas líneas operan barcos donde no viaja nadie menor de 18 años. El ambiente es "
+                  "realmente distinto: sin clubes infantiles, sin toboganes, sin camarotes familiares, y con "
+                  "un pasaje que tiende a parejas y grupos de amigos.</p>"
+                  + vcards([
+                      ("🤫", "Lo que ganas", "Tranquilidad constante, entretenimiento a ritmo adulto y comedores que siguen en calma a las siete de la tarde."),
+                      ("💷", "Lo que cuesta", "Son barcos más pequeños con menos huéspedes, así que la tarifa por persona suele ser más alta que en una salida convencional comparable."),
+                      ("🗓️", "Dónde navegan", "Su despliegue es más limitado que el de las grandes líneas, así que tus fechas y destinos pueden reducirse."),
+                  ])
+                  + "<p>Conviene saberlo: no necesitas un barco solo para adultos para tener unas vacaciones "
+                  "de adultos. Un barco convencional fuera de temporada, con balcón y un par de cenas de "
+                  "especialidad reservadas, lleva a la mayoría de las parejas casi al mismo sitio por menos "
+                  "dinero. Todavía no publicamos guías verificadas de las líneas solo para adultos, así que "
+                  "no las clasificamos aquí.</p>",
+         }},
+        {"id": "cabin", "h2": {"en": "The cabin question, for two", "es": "La cuestión del camarote, para dos"},
+         "html": {
+            "en": "<p>Cabin advice changes when there are only two of you. Space matters less; the view and the "
+                  "privacy matter more.</p>"
+                  + vcards([
+                      ("🌅", "Balcony", "The strongest upgrade for a couple. Coffee at sea in the morning, a quiet place to read while the pool deck fills up, and somewhere to be alone together that is not a corridor."),
+                      ("🪟", "Ocean view", "Natural light and a sense of where you are, without the balcony premium. A sensible middle if the fare gap is wide."),
+                      ("🛏️", "Interior", "Genuinely fine for two people who plan to be out all day, and the money saved buys a lot of dinners ashore."),
+                      ("🛎️", "Suite", "Worth it mainly for the extras attached: priority boarding, a quieter restaurant, sometimes a concierge. Ask what actually comes with it before paying for the square footage."),
+                  ])
+                  + "<p>Location deserves a thought too. Midship and lower decks feel the least motion, and a "
+                  "cabin away from the pool deck and the theatre is measurably quieter at night. That is "
+                  "covered properly in " + link("/en/guides/best-cabin-location/", "best cabin location") + ".</p>",
+            "es": "<p>Los consejos sobre camarotes cambian cuando solo van dos. El espacio importa menos; la "
+                  "vista y la privacidad importan más.</p>"
+                  + vcards([
+                      ("🌅", "Balcón", "La mejor mejora para una pareja. Café en el mar por la mañana, un sitio tranquilo para leer mientras se llena la piscina, y un lugar para estar a solas que no es un pasillo."),
+                      ("🪟", "Vista al mar", "Luz natural y sentido de dónde estás, sin el sobreprecio del balcón. Un punto medio sensato si la diferencia de tarifa es grande."),
+                      ("🛏️", "Interior", "Perfectamente válido para dos personas que piensan estar fuera todo el día, y lo ahorrado da para muchas cenas en tierra."),
+                      ("🛎️", "Suite", "Vale la pena sobre todo por los extras asociados: embarque prioritario, un restaurante más tranquilo, a veces conserje. Pregunta qué incluye de verdad antes de pagar por los metros."),
+                  ])
+                  + "<p>La ubicación también merece un pensamiento. El centro del barco y las cubiertas bajas "
+                  "sienten menos movimiento, y un camarote lejos de la piscina y del teatro es notablemente "
+                  "más silencioso de noche. Lo cubrimos en "
+                  + link("/es/guides/best-cabin-location/", "mejor ubicación del camarote") + ".</p>",
+         }},
+        {"id": "dining-evenings", "h2": {"en": "Dinner, and how to get a quiet one",
+                                         "es": "La cena, y cómo conseguir una tranquila"},
+         "html": {
+            "en": "<p>The main dining room is designed to be sociable. On many ships that means shared tables "
+                  "unless you ask otherwise, and a room that is lively rather than intimate.</p>"
+                  + vcards([
+                      ("🍽️", "Ask for a table for two", "Usually possible, but it is a request, not a guarantee, and it is far easier to arrange before you sail than on the first night."),
+                      ("🥂", "Book a speciality restaurant", "Smaller rooms, quieter service, and the closest thing to a restaurant dinner ashore. These carry an extra charge and the good nights book out early."),
+                      ("🌙", "Late seating", "If your line still runs fixed dining times, the later sitting is usually the calmer, more adult room."),
+                      ("🎭", "Evening entertainment", "Theatre shows are the loud option; piano bars, jazz lounges and the observation lounges are where couples actually end up."),
+                  ])
+                  + watch("<b>Speciality dining and drinks packages are where a couples cruise gets expensive "
+                          "quietly.</b> Two people, a package each, a few dinners out, and the total moves a "
+                          "long way from the headline fare. Decide before you sail which of these you actually "
+                          "want, rather than buying them one at a time on board."),
+            "es": "<p>El comedor principal está diseñado para ser sociable. En muchos barcos eso significa mesas "
+                  "compartidas salvo que pidas otra cosa, y una sala animada más que íntima.</p>"
+                  + vcards([
+                      ("🍽️", "Pide mesa para dos", "Suele ser posible, pero es una petición, no una garantía, y es mucho más fácil de organizar antes de zarpar que la primera noche."),
+                      ("🥂", "Reserva un restaurante de especialidad", "Salas más pequeñas, servicio más tranquilo y lo más parecido a cenar en un restaurante en tierra. Tienen coste extra y las mejores noches se agotan pronto."),
+                      ("🌙", "Segundo turno", "Si tu línea aún usa horarios fijos de cena, el turno tardío suele ser la sala más tranquila y adulta."),
+                      ("🎭", "Espectáculos", "El teatro es la opción ruidosa; los piano bares, los salones de jazz y los miradores son donde acaban las parejas."),
+                  ])
+                  + watch("<b>Los restaurantes de especialidad y los paquetes de bebidas son donde un crucero "
+                          "en pareja se encarece sin que lo notes.</b> Dos personas, un paquete cada uno, unas "
+                          "cuantas cenas fuera, y el total se aleja mucho de la tarifa anunciada. Decide antes "
+                          "de zarpar cuáles quieres de verdad, en vez de comprarlos uno a uno a bordo."),
+         }},
+        {"id": "occasions", "h2": {"en": "Honeymoons, anniversaries and birthdays",
+                                   "es": "Lunas de miel, aniversarios y cumpleaños"},
+         "html": {
+            "en": "<p>Cruise lines are well set up for occasions, but almost none of it happens automatically. "
+                  "Tell someone.</p>"
+                  + "<p>Noted at booking, an occasion can bring a cabin decoration, a cake at dinner, or a note "
+                  "from the captain. Some lines offer honeymoon or anniversary packages; what they contain "
+                  "varies a great deal, so it is worth asking what is actually in one rather than assuming. "
+                  "Onboard credit, if your booking comes with any, is often the more useful version of the "
+                  "same idea, because you spend it on what you want.</p>"
+                  + tip("Say it twice: once when you book, and once at guest services on embarkation day. "
+                        "Requests made months earlier do not always survive the journey to the ship."),
+            "es": "<p>Las líneas están bien preparadas para celebraciones, pero casi nada ocurre solo. "
+                  "Díselo a alguien.</p>"
+                  + "<p>Anotada al reservar, una ocasión puede traer decoración en el camarote, una tarta en la "
+                  "cena o una nota del capitán. Algunas líneas ofrecen paquetes de luna de miel o aniversario; "
+                  "su contenido varía mucho, así que conviene preguntar qué incluye en vez de suponerlo. El "
+                  "crédito a bordo, si tu reserva lo incluye, suele ser la versión más útil de la misma idea, "
+                  "porque lo gastas en lo que quieres.</p>"
+                  + tip("Dilo dos veces: al reservar y otra vez en recepción el día de embarque. Las "
+                        "peticiones hechas meses antes no siempre llegan al barco."),
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Which cruise is best for couples?", "The one sailing at the right time of year for you. Timing shapes the atmosphere more than the ship does: the same vessel in term time and in the school holidays are two different holidays. After that, look for an adults-only deck area, book a balcony if the fare gap is reasonable, and reserve a speciality dinner or two."),
+            ("Are there adults-only cruise ships?", "Yes. A small number of lines sail ships where nobody under 18 is on board, with no kids clubs or waterslides and a passenger profile of couples and friends. They are smaller ships with narrower deployment and usually a higher fare per person, so they are a genuine option rather than an obvious default."),
+            ("Do normal cruise ships have adults-only areas?", "Most large ships do, typically a quieter pool deck or solarium reserved for guests 18 or older, sometimes with its own bar. Names and layouts vary by line and by ship, and a few lines charge a small fee for the more elaborate versions, so it is worth confirming for the specific ship you are considering."),
+            ("Is a balcony worth it for a couple?", "For two people it is the upgrade that changes the trip most. It gives you somewhere private to have coffee in the morning and to sit while the public decks are busy, which matters more when there are two of you than when a cabin is shared by four. If the fare gap is large, an ocean view is a sensible middle."),
+            ("When is the quietest time to cruise as a couple?", "Outside school holidays. Late January to early March and September to mid-November are the most adult-skewed periods on most routes, and often the best value of the year. Avoid summer, Christmas, Easter and half terms if a calm ship matters to you."),
+            ("How do we get a table for two at dinner?", "Ask when you book rather than on board. Main dining rooms often seat guests at shared tables by default, and a table for two is a request that is much easier to accommodate in advance. Speciality restaurants are the more reliable route to a quiet dinner, and the popular nights book out early."),
+        ],
+        "es": [
+            ("¿Qué crucero es mejor para parejas?", "El que zarpa en la época del año adecuada para ti. El calendario define el ambiente más que el barco: el mismo buque fuera de temporada y en vacaciones escolares son dos viajes distintos. Después, busca una zona de cubierta solo para adultos, reserva balcón si la diferencia de tarifa es razonable, y aparta una o dos cenas de especialidad."),
+            ("¿Existen barcos solo para adultos?", "Sí. Unas pocas líneas operan barcos donde no viaja nadie menor de 18 años, sin clubes infantiles ni toboganes y con un pasaje de parejas y amigos. Son barcos más pequeños, con despliegue más limitado y normalmente tarifa por persona más alta, así que son una opción real más que la elección obvia."),
+            ("¿Los barcos normales tienen zonas solo para adultos?", "La mayoría de los grandes sí, normalmente una cubierta de piscina o solárium más tranquilos reservados a mayores de 18, a veces con bar propio. Los nombres y la distribución varían por línea y por barco, y algunas líneas cobran una cuota pequeña por las versiones más elaboradas, así que conviene confirmarlo para el barco concreto."),
+            ("¿Vale la pena un balcón para una pareja?", "Para dos personas es la mejora que más cambia el viaje. Te da un sitio privado para tomar café por la mañana y para sentarte cuando las cubiertas están llenas, algo que pesa más entre dos que cuando el camarote lo comparten cuatro. Si la diferencia de tarifa es grande, la vista al mar es un punto medio sensato."),
+            ("¿Cuál es la mejor época para navegar en pareja?", "Fuera de vacaciones escolares. De finales de enero a principios de marzo y de septiembre a mediados de noviembre el pasaje es más adulto en la mayoría de las rutas, y a menudo es la mejor relación calidad-precio del año. Evita verano, Navidad, Semana Santa y puentes si te importa un barco tranquilo."),
+            ("¿Cómo conseguimos mesa para dos en la cena?", "Pídelo al reservar, no a bordo. Los comedores principales suelen sentar a los huéspedes en mesas compartidas por defecto, y una mesa para dos es una petición mucho más fácil de atender con antelación. Los restaurantes de especialidad son la vía más fiable para una cena tranquila, y las noches populares se agotan pronto."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🛏️", "Choosing a cabin", "/en/guides/choosing-a-cabin/", "Interior, ocean view, balcony or suite."),
+            ("🧭", "Best cabin location", "/en/guides/best-cabin-location/", "Where on the ship your room should sit."),
+            ("🗓️", "When to cruise", "/en/guides/when-to-cruise/", "Season by season, region by region."),
+            ("🎚️", "Contemporary vs premium vs luxury", "/en/guides/contemporary-premium-luxury/", "Which tier suits the trip you want."),
+        ],
+        "es": [
+            ("🛏️", "Elegir camarote", "/es/guides/choosing-a-cabin/", "Interior, vista al mar, balcón o suite."),
+            ("🧭", "Mejor ubicación del camarote", "/es/guides/best-cabin-location/", "Dónde debe estar tu habitación en el barco."),
+            ("🗓️", "Cuándo hacer un crucero", "/es/guides/when-to-cruise/", "Temporada a temporada, región a región."),
+            ("🎚️", "Contemporánea vs premium vs lujo", "/es/guides/contemporary-premium-luxury/", "Qué nivel encaja con tu viaje."),
+        ],
+    },
+})

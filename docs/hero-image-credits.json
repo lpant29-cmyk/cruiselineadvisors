@@ -203,5 +203,14 @@
     "license": "Unsplash License (free, commercial use permitted, not Unsplash+)",
     "note": "Derived from the license-verified ship-hero asset; right edge already cropped to remove partial stern lettering. No hull name, wordmark or funnel logo legible in frame.",
     "downloaded": "2026-07-30"
+  },
+  "couples-adults-only-cruising": {
+    "file": "newsite/assets/guides/couples-adults-only-cruising.jpg",
+    "source": "unsplash",
+    "photographer": "Sheila Jellison",
+    "photo_page": "https://unsplash.com/photos/shBk33gUv3Q",
+    "license": "Unsplash License (free, commercial use, not Unsplash+)",
+    "note": "Ship promenade at blue hour, shot from on board looking out. No ship name, line wordmark or venue signage in frame.",
+    "downloaded": "2026-07-30"
   }
 }

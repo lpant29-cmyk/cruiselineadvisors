@@ -70,7 +70,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 | 🟡 | P1 | Groups & families | `groups-and-families` | family cruise tips, cruising with kids |
 | 🟡 | P2 | Accessibility at sea | `accessibility` | accessible cruise, wheelchair cruise |
 | ⬜ | P1 | Solo cruising & the single supplement | `solo-cruising` | solo cruise, single supplement, studio cabin |
-| ⬜ | P2 | Cruising for couples / adults-only at sea | `couples-adults-only-cruising` | couples cruise, adults-only cruise |
+| ✅ | P2 | Cruising for couples / adults-only at sea | `couples-adults-only-cruising` | couples cruise, adults-only cruise |
 | ⬜ | P3 | Multigenerational & group cruises | `group-multigen-cruises` | group cruise, multigenerational cruise |
 
 ### Pillar D — Choosing a line & ship  *(→ line/ship pages + compare)*

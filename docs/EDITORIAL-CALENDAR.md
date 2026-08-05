@@ -3,10 +3,10 @@
 > The publishing plan for a daily cadence. Goal: publish at least **one relevant, useful, original
 > guide every day**, each reinforcing the call-conversion path and the semantic-SEO web. Pairs with
 > `docs/CONTENT-PLAN.md` (strategy) and `docs/GUIDE-BACKLOG.md` (status). Repo-only, not indexed.
-> Last updated: 2026-07-30.
+> Last updated: 2026-08-05.
 
 ## Where we are
-**23 rich guides published** (all P1 + the first P2 batch + the 5 upgraded basics). Every guide is
+**24 rich guides published** (all P1 + the first P2 batch + the 5 upgraded basics). Every guide is
 bilingual, has a photo hero, key takeaways, graphic cards, an FAQ with schema, and contextual
 interlinks. They surface automatically on the home, line, ship and destination pages.
 
@@ -45,7 +45,7 @@ destination pages. Swap any day for a timely/seasonal post whenever one is warra
 3. ~~Onboard credit, explained~~ ✅ published 2026-07-26
 4. ~~Best cabin location (deck, midship, what to avoid)~~ ✅ published 2026-07-28
 5. ~~Contemporary vs premium vs luxury cruise lines~~ ✅ published 2026-07-30
-6. Cruising for couples / adults-only at sea
+6. ~~Cruising for couples / adults-only at sea~~ ✅ published 2026-08-05
 7. A–Z cruise glossary (terms every cruiser should know)
 
 **Week 2 — decisions, safety & the last how-tos**
