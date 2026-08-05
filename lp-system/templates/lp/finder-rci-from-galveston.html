@@ -400,6 +400,8 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 .price.nofare .a{font-size:17px;color:var(--sea-d)}
 .bundle-line{font-size:13.5px;font-weight:600;color:#3A5261;margin:10px 0 2px;line-height:1.5}.bundle-line .bl-short{display:none}@media(max-width:600px){.bundle-line .bl-full{display:none}.bundle-line .bl-short{display:inline}.bundle-line{font-size:13px}}.hero .bundle-line{color:#E4EFF6;text-shadow:0 1px 6px rgba(0,0,0,.5);margin-top:8px}
 .results-fine{font-size:12px;color:#7C8B95;margin:-4px 0 12px;line-height:1.5}
+.ship-notice{font-size:14px;font-weight:600;color:var(--deep);background:var(--foam);border:1px solid var(--line);border-radius:10px;padding:9px 13px;margin:0 0 10px}
+.linkbtn{border:0;background:none;padding:0;font:inherit;font-weight:700;color:var(--sea-d);text-decoration:underline;cursor:pointer}
 </style>
 </head>
 <body>
@@ -518,6 +520,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
     </div>
     <span class="count" id="resultCount"></span>
   </div>
+  <p class="ship-notice" id="shipNotice" hidden></p>
   <p class="results-fine" id="resultsFine"></p>
   <!-- FEATURED strip (mobile UX): featured=yes rows as a swipe slider; the
        full list below still contains them. Hidden on desktop and when no
@@ -726,9 +729,47 @@ function populateFilters(){
   const fM=document.getElementById('fMonth');
   months.forEach(m=>fM.insertAdjacentHTML('beforeend',`<option value="${m}">${mLabel(m)}</option>`));
   const q=new URLSearchParams(location.search);
+  /* ?v= swaps the H1 to mirror the ad's keyword (quality-score triangle).
+     Only whitelisted values baked from real inventory are accepted. */
+  const vq=(q.get('v')||'').toLowerCase();
+  if(vq && typeof H1_VARIANTS!=='undefined' && H1_VARIANTS[vq]){
+    const h1=document.querySelector('h1');
+    if(h1) h1.textContent=H1_VARIANTS[vq];
+    /* a ship variant also NARROWS the list: the headline promises that ship,
+       so the page must show that ship's sailings, not all of them */
+    if(typeof SHIP_SLUGS!=='undefined' && SHIP_SLUGS[vq]) SHIP_FOCUS=SHIP_SLUGS[vq];
+  }
   if(q.get('to')) fTo.value=q.get('to');
   if(q.get('month')) fM.value=q.get('month');
-  if(q.get('nights')) document.getElementById('fNights').value=q.get('nights');
+  const nq=q.get('nights');
+  if(nq){
+    const sel=document.getElementById('fNights');
+    /* a bare number from an ad URL (?nights=4) maps into the band that
+       contains it; a band value passes straight through */
+    const band=/^\d+$/.test(nq)
+      ? (+nq<=5?'2-5':(+nq<=8?'6-8':'9-99'))
+      : nq;
+    if([...sel.options].some(o=>o.value===band)) sel.value=band;
+  }
+}
+
+let SHIP_FOCUS='';
+
+function setShipNotice(){
+  const el=document.getElementById('shipNotice'); if(!el) return;
+  if(!SHIP_FOCUS){ el.hidden=true; el.innerHTML=''; return; }
+  const name=(ITINERARIES.find(i=>i.shipId===SHIP_FOCUS)||{}).ship||'this ship';
+  const total=ITINERARIES.length;
+  el.hidden=false;
+  el.innerHTML=`Showing ${esc(name)} sailings from ${esc(PAGE.portLabel.split(',')[0])}. `+
+    `<button type="button" class="linkbtn" id="shipReset">See all ${total} sailings</button>`;
+  const r=document.getElementById('shipReset');
+  if(r) r.addEventListener('click',()=>{
+    SHIP_FOCUS='';
+    const h1=document.querySelector('h1');
+    if(h1 && typeof H1_BASE!=='undefined') h1.textContent=H1_BASE;
+    setShipNotice(); runSearch(false);
+  });
 }
 
 function priceFor(it,month){ const px=it.prices||{}; return (month && px[month]!=null)? px[month] : px.default; }
@@ -740,7 +781,8 @@ function runSearch(scroll=true){
   let list=ITINERARIES.filter(i=>
     (!to || i.dest===to) &&
     (!month || i.months.includes(month)) &&
-    (!nb || (i.nights>=+nb.split('-')[0] && i.nights<=+nb.split('-')[1]))
+    (!nb || (i.nights>=+nb.split('-')[0] && i.nights<=+nb.split('-')[1])) &&
+    (!SHIP_FOCUS || i.shipId===SHIP_FOCUS)
   );
   const grid=document.getElementById('itinGrid');
   const count=document.getElementById('resultCount');
@@ -865,6 +907,7 @@ document.getElementById('knowTabs').addEventListener('click',e=>{if(!e.target.da
 populateFilters();
 renderOffers();
 renderKnow('term');
+setShipNotice();
 runSearch(false);
 
 /* ============ mobile UX modules (bottom sheet, featured strip, taps,

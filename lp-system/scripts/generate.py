@@ -278,6 +278,52 @@ def provenance_ok(row, whitelist):
     return any(host == d or host.endswith("." + d) for d in whitelist)
 
 
+def ship_slug_map(deals, reg):
+    """variant key -> ship_id, for the finder's ?v= ship focus. Built from the
+    page's own sailings so a variant can only narrow to a ship that is here."""
+    out = {}
+    for r in deals:
+        for sid in [x.strip() for x in r.get("ship_ids", "").split(";") if x.strip()]:
+            srow = reg["ships_by_id"].get(sid)
+            if not srow:
+                continue
+            slug = srow.get("slug", "")
+            if slug:
+                out[slug] = sid
+                out[slug.replace("-of-the-seas", "")] = sid
+    return out
+
+
+def h1_variants(deals, reg, page):
+    """Whitelisted H1 rewrites for ?v=, built from what this page actually
+    carries. An ad for "icon of the seas galveston" should not land on an H1
+    that says something else (the quality-score triangle), but the variant
+    must still be TRUE, so a ship only appears here if it has sailings on
+    this page. Unknown ?v= values are ignored by the template."""
+    port = deals[0]["port_label"].rsplit(" ", 1)[0] if deals else ""
+    out = {}
+    by_ship = {}
+    for r in deals:
+        for sid in [x.strip() for x in r.get("ship_ids", "").split(";") if x.strip()]:
+            by_ship.setdefault(sid, []).append(r)
+    for sid, rows in by_ship.items():
+        srow = reg["ships_by_id"].get(sid)
+        if not srow:
+            continue
+        slug = srow.get("slug", "")
+        name = srow.get("ship_name", "")
+        if not slug or not name:
+            continue
+        short = slug.replace("-of-the-seas", "")
+        label = f"{name} Cruises from {port}" if port else f"{name} Cruises"
+        out[slug] = label
+        out[short] = label
+    # duration variants, only for lengths this page can actually show
+    for n in sorted({int(r["nights"]) for r in deals}):
+        out[f"{n}night"] = f"{n}-Night Royal Caribbean Cruises from {port}"
+    return out
+
+
 def deals_for(page, itins, cap=6):
     """cap=6 for call-gen deal cards (ADS-LP-BRIEF: 3-6 cards); finder pages
     pass cap=None — the finder is a search UI over the FULL publishable
@@ -1139,6 +1185,14 @@ def bake(page, reg, today, used):
             # a single list-level stamp would then overstate freshness, so the
             # template falls back to per-card stamps (qa condition N1).
             f"const STAMP_MIXED = {json.dumps(len({r['date_checked'] for r in priced}) > 1)};\n"
+            # ?v= H1 variants, generated from the page's OWN inventory so a
+            # variant can never claim a ship or length the page cannot serve.
+            # Ad groups pass ?v=<ship-slug> or ?v=<n>night to mirror the query.
+            f"const H1_VARIANTS = {json.dumps(h1_variants(deals, reg, page))};\n"
+            # ?v=<ship> must narrow the list too, so the headline's promise and
+            # the sailings shown agree. Maps variant key -> ship_id.
+            f"const SHIP_SLUGS = {json.dumps(ship_slug_map(deals, reg))};\n"
+            f'const H1_BASE = {json.dumps(page["h1"])};\n'
             f"const HERO = {json.dumps(hero)};\n"
             f"const KNOW_IMG = {json.dumps(know_img)};\n"
             f"const PRE_CRUISE = {json.dumps(pre_cruise_obj(port_row))};\n"

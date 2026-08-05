@@ -1,204 +1,215 @@
 # Campaign brief: first test launch (2026-08-05)
 
-Scope: **only the three live pages.** No keyword in this brief points at a
-page that does not exist. Everything else in the research stays parked
-until its page is built.
+Scope: **only the three live pages.** Nothing here points at a page that
+does not exist.
 
 Account: Ads `AW-18339104693` · GA4 `G-JTQWHFMTB8` · GTM `GTM-NM78WCVF`
-Conversions and Google call forwarding are already configured.
+Conversions and Google call forwarding already configured.
 
 ---
 
-## What can actually launch
+## RULE: no cruise line trademarks in ad text
 
-| Page | Live URL | Campaign | Exact KWs | Volume |
-|---|---|---|---|---|
-| p002 finder | `/en/go/lines/royal-caribbean/from/galveston/` | RC-p002-BOOK | 9 | 17,230/mo |
-| p008 ship | `/en/go/ships/mariner-of-the-seas/` | RC-p008-SHIP-TEST | 4 | 41,910/mo* |
-| p007 itinerary | `/en/go/itineraries/5-night-...-mariner-of-the-seas/` | **none** | 0 | 70/mo |
+**Keywords may contain "Royal Caribbean", "Icon of the Seas" etc. Ad
+headlines, descriptions, callouts and sitelink text may NOT.**
 
-\* high volume but low intent, see the warning on that campaign.
+We are an independent referral service, not an authorised reseller, so
+using the line's marks in ad copy invites a trademark complaint and
+contradicts the disclosure on every page. Google permits trademarked terms
+as keywords; it restricts them in ad text.
 
-**p007 gets no campaign, deliberately.** The only keywords that match it
-are 10 to 70 searches a month. It is a supporting page: people reach it by
-clicking "View full itinerary" from the finder. Spending on it would buy
-almost nothing. It still earns its keep by deepening the funnel.
+Write around it: "the biggest ships sailing from Galveston", "major cruise
+lines", "your cruise". Never the brand or ship name.
 
 ---
 
-# CAMPAIGN 1 — RC-p002-BOOK (the real test)
+## Message match: how the pages adapt
 
-This is the one that matters. Tight theme, real inventory behind it,
-16 bookable sailings on the page.
+Each ad group passes a URL parameter and the page reshapes itself. This is
+now real, not cosmetic: the headline **and the sailings shown** both change.
+
+| Parameter | Headline becomes | Sailings shown |
+|---|---|---|
+| none | Royal Caribbean Cruises from Galveston | all 16 |
+| `?v=icon` | Icon of the Seas Cruises from Galveston | 3 (Icon only) |
+| `?v=symphony` | Symphony of the Seas Cruises from Galveston | 5 |
+| `?v=liberty` | Liberty of the Seas Cruises from Galveston | 6 |
+| `?v=mariner` | Mariner of the Seas Cruises from Galveston | 2 |
+| `?nights=4` | unchanged | 5 short sailings |
+| `?v=4night&nights=4` | 4-Night Royal Caribbean Cruises from Galveston | 5 |
+
+A visible notice tells the visitor the list is narrowed, with a one-click
+"See all 16 sailings" reset. Unknown values are ignored and the full page
+renders, so a mistyped ad URL can never break anything.
+
+The variant list is generated from the page's own inventory, so a headline
+can only name a ship that genuinely sails from Galveston.
+
+---
+
+# CAMPAIGN 1 — RC-p002-BOOK
 
 **Settings**
-- Type: Search only. **Turn OFF** Display network and Search Partners.
-- Final URL: `https://cruiselineadvisors.com/en/go/lines/royal-caribbean/from/galveston/`
-- Budget: $30/day to start
-- Bidding: **Maximize Conversions**. Move to tCPA only after 30+ conversions.
-- Locations: **TX and OK** (drive market for Galveston), then LA. Target
-  "people in or regularly in your targeted locations", not "interested in".
-- Ad schedule: **8am to 11pm ET, every day.** Nobody answers outside that,
-  and a missed call is a wasted click.
-- Conversions: primary = calls 60s+ and lead_submit. tel_click is
-  observational only, never a bidding signal.
+- Search only. **Off:** Display network, Search Partners.
+- Budget $30/day · Maximize Conversions
+- Locations: TX + OK, presence-based ("people in or regularly in"), not interest
+- Ad schedule 8am–11pm ET daily
+- Primary conversions: calls 60s+, lead_submit. Phone-click observational only.
 
-**Ad groups and keywords** (all exact match, `[...]`)
-
-`p002--core` — bid $0.80
+### Ad group `p002--core` — bid $0.80
+Final URL: `https://cruiselineadvisors.com/en/go/lines/royal-caribbean/from/galveston/`
 ```
-[royal caribbean cruises from galveston]      9,900/mo
-[royal caribbean galveston cruise port]       1,900/mo
-[royal caribbean out of galveston]              880/mo
-[royal caribbean galveston schedule]            480/mo
-[royal caribbean cruise port in galveston texas] 260/mo
+[royal caribbean cruises from galveston]          9,900
+[royal caribbean galveston cruise port]           1,900
+[royal caribbean out of galveston]                  880
+[royal caribbean galveston schedule]                480
+[royal caribbean cruise port in galveston texas]    260
 ```
 
-`p002--icon` — bid $0.70
+### Ad group `p002--icon` — bid $0.70
+Final URL: `.../from/galveston/?v=icon`
 ```
-[icon of the seas galveston]                  2,900/mo
-```
-
-`p002--symphony` — bid $0.90
-```
-[symphony of the seas galveston]                590/mo
+[icon of the seas galveston]                      2,900
 ```
 
-`p002--2-4-night` — bid $0.70 · URL gets `?nights=4`
+### Ad group `p002--symphony` — bid $0.90
+Final URL: `.../from/galveston/?v=symphony`
 ```
-[royal caribbean 4 day cruise from galveston]   210/mo
-```
-
-`p002--liberty` — bid $0.70
-```
-[liberty of the seas galveston]                 110/mo
+[symphony of the seas galveston]                    590
 ```
 
-**DO NOT create these two ad groups yet:**
-`p002--harmony` and `p002--allure`. Royal Caribbean's own data confirms
-neither ship sails from Galveston (Harmony is at Port Canaveral through
-2028). Bidding on them sends people to a page that cannot serve them.
-Evidence: `lp-system/out/verification-2026-07-29.md`.
+### Ad group `p002--liberty` — bid $0.70
+Final URL: `.../from/galveston/?v=liberty`
+```
+[liberty of the seas galveston]                     110
+```
 
-**Phrase-match discovery (optional, second week):** add
-`"royal caribbean cruises from galveston"` in its own ad group at a lower
-bid, purely to mine search terms. Do not add it on day one.
+### Ad group `p002--4night` — bid $0.70
+Final URL: `.../from/galveston/?v=4night&nights=4`
+```
+[royal caribbean 4 day cruise from galveston]       210
+```
+
+**Do not create harmony or allure ad groups.** Neither ship sails from
+Galveston (verified at source, `lp-system/out/verification-2026-07-29.md`).
 
 ---
 
-# CAMPAIGN 2 — RC-p008-SHIP-TEST (a genuine experiment)
+# CAMPAIGN 2 — RC-p008-SHIP-TEST
 
-**Read this before you launch it.** These keywords are parked in our own
-research as BROAD-BRAND, meaning someone typing "mariner of the seas" is
-usually looking at photos and deck plans, not booking. Our targeting policy
-would normally exclude them.
+An explicit experiment. These ship-name terms are parked in our research as
+broad-brand: most searchers want photos, not a booking. Worth testing only
+because the page match is exact and clicks should be cheap.
 
-They are worth testing anyway, for one reason: the page match is exact.
-Keyword "mariner of the seas" to a page titled "Mariner of the Seas:
-Cruises, Cabins and What's Onboard" at `/ships/mariner-of-the-seas/`. That
-is a textbook Quality Score triangle, so clicks should be cheap.
-
-The risk is real: 33,100/mo of mostly idle curiosity will spend a daily
-budget fast. Cap it hard and judge it on calls, not clicks.
-
-**Settings:** same as Campaign 1, but **budget $10/day** and
-**bid cap $0.40**.
+**Budget $10/day · max CPC $0.40**
 Final URL: `https://cruiselineadvisors.com/en/go/ships/mariner-of-the-seas/`
 
-`p008--ship-name` — exact match
+### Ad group `p008--ship-name`
 ```
-[mariner of the seas ship]                   33,100/mo
-[royal caribbean mariner of the seas]         6,600/mo
-[mariner of the seas cruise ship]             1,900/mo
-[royal caribbean cruise mariner of the seas]  1,300/mo
+[mariner of the seas ship]                       33,100
+[royal caribbean mariner of the seas]             6,600
+[mariner of the seas cruise ship]                 1,900
+[royal caribbean cruise mariner of the seas]      1,300
 ```
 
-**Kill criterion, decide it now:** if this campaign spends $70 (one week)
-with zero calls over 60 seconds, pause it. It will have told you that ship
-browsers do not dial, which is worth $70 to learn and not worth $700.
+**Campaign negatives** (Seven Seas Mariner is a different line entirely):
+```
+-[seven seas mariner]  -regent  -"seven seas"  -"deck plan"  -"deck plans"
+-webcam  -tracker  -wiki  -"dry dock"  -refurbishment
+```
 
-**Critical negatives for this campaign** (ship names collide across lines):
-```
--[seven seas mariner]  -regent  -"seven seas"  -deck plan  -deck plans
--webcam  -tracker  -position  -wiki  -refurbishment  -dry dock
-```
-"Seven Seas Mariner" is a Regent ship, a different cruise line entirely.
-Without these you will pay for their traffic.
+**Kill criterion:** $70 spent with zero 60-second calls, pause it. That is
+a cheap answer to a real question.
 
 ---
 
-## Account-level negatives (apply to BOTH campaigns)
+# CAMPAIGN 3 — none
 
-All 121 terms in `lp-system/data/rc_negatives.txt`. Add as a shared
-negative list named "RC service desk + info". They block people looking for
-Royal Caribbean's own customer service (check in, my booking, boarding
-pass, Crown and Anchor), researchers (deck plans, menus, drink prices,
-dress code), and the irrelevant (jobs, stock, lawsuits, Wikipedia).
-
-Without this list, brand keywords bleed budget on people who will never
-call.
+The itinerary page gets no campaign. Its only matching keywords run 10 to
+70 searches a month. It is a supporting page people reach by clicking
+"View full itinerary" from the finder, and it deepens the funnel there.
 
 ---
 
-## Ads to write (both campaigns)
+## Ad copy (trademark-free)
 
-Responsive search ads. Match the page, and keep every claim scoped the way
-the pages do.
+**Headlines** — max 30 chars each, 8 to 12 per ad group:
+```
+Cruises From Galveston
+Sailings From Galveston TX
+Talk To A Cruise Advisor
+Unadvertised Bundle Rates
+Call For Exclusive Rates
+16 Sailings From Galveston
+Advisors 8am To 11pm ET
+Free To Call, No Obligation
+Bundle Cruise Flight Hotel
+Ask About Onboard Credit
+Licensed Travel Advisors
+Your Dates Priced By Phone
+```
 
-**Headlines** (mix, 8 to 12):
-- Royal Caribbean From Galveston
-- Galveston Sailings And Dates
-- Talk To A Cruise Specialist
-- Unadvertised Bundle Rates
-- Call For Exclusive Rates
-- 16 Sailings From Galveston
-- Advisors 8am To 11pm ET
-- Free To Call, No Obligation
+For `p002--icon` / `--symphony` / `--liberty`, still no ship names. Use:
+```
+The Biggest Ships From Galveston
+Newest Ships, Galveston Sailings
+Ask Which Ship Fits You
+```
 
-**Descriptions:**
-- One call compares every Royal Caribbean sailing from Galveston for your
-  dates. Free, no pressure.
-- Bundle cruise, flight and hotel by phone. Advisors answering now,
-  8am to 11pm ET.
+**Descriptions** — max 90 chars:
+```
+One call compares every sailing from Galveston for your dates. Free, no pressure.
+Bundle cruise, flight and hotel by phone. Advisors answering 8am to 11pm ET.
+Unadvertised bundle rates and onboard credit on qualifying sailings. Call now.
+Licensed advisors price your exact dates and cabins. No obligation.
+```
 
-**Never write in ads:** "cheapest", "lowest price", "guaranteed",
-"% off", or any specific dollar figure. Prices change daily and Google's
-pricing-accuracy policy covers ad text as well as the page.
+**Never in ad text:** any cruise line or ship name · "cheapest" · "lowest
+price" · "guaranteed" · "% off" · any dollar figure.
 
-**Assets:** add the call asset (your forwarding number), sitelinks to the
-ship page and itinerary page, and a callout set: "Free to call",
-"No obligation", "Licensed partner agencies", "8am to 11pm ET".
+**Assets:** call asset (forwarding number) · callouts "Free to call",
+"No obligation", "Licensed advisors", "8am to 11pm ET" · sitelinks to the
+ship page and itinerary page, with trademark-free link text such as
+"Ship guide" and "5-night itinerary".
 
 ---
 
-## Bids: expect to raise them
+## Account-level negatives
 
-The bids above are roughly 3x Planner's low-range estimate, which is a
-realistic opening. Planner reports these terms at $0.15 to $0.45 low and
-$1.15 to $2.32 high, competition Low to Medium. If impression share is
-under 30% after three days, raise bids rather than budget: on 9 keywords
-you want to win the auctions you enter, not enter more of them.
+Add all 121 terms from `lp-system/data/rc_negatives.txt` as a shared list
+named "RC service desk + info", applied to both campaigns. They block the
+line's own customer-service seekers (check in, my booking, boarding pass),
+researchers (deck plans, menus, drink prices) and the irrelevant (jobs,
+stock, lawsuits).
+
+---
+
+## Bids
+
+Planner reports these at $0.15–$0.45 low, $1.15–$2.32 high, competition Low
+to Medium. The bids above are roughly 3x the low estimate. If impression
+share is under 30% after three days, raise bids rather than budget: with
+nine keywords you want to win the auctions you enter.
 
 ---
 
 ## First-week checklist
 
-1. Day 1: confirm a real call fires the conversion. Ring the forwarding
-   number yourself, stay on 60+ seconds, check it lands in Ads.
-2. Day 2: search-terms report. Add negatives for anything irrelevant.
-3. Day 3: check impression share, adjust bids not budget.
-4. Daily: run `/rate-update` so the fares on the page stay current. A page
-   whose prices went stale shows "Fare on request" instead, which converts
-   worse.
-5. End of week: if Campaign 2 has spent with no 60s calls, pause it.
+1. Day 1: call the forwarding number yourself, stay on 60+ seconds, confirm
+   the conversion lands in Ads.
+2. Day 1: click each ad group's URL and confirm the page narrows as the
+   table above says.
+3. Day 2: search-terms report, add negatives.
+4. Day 3: impression share, adjust bids not budget.
+5. Daily: run `/rate-update` so fares stay current. Stale fares render as
+   "Fare on request" and convert worse.
+6. End of week: apply Campaign 2's kill criterion honestly.
 
-## What this test is actually answering
+## What the test answers
 
-Not "do these keywords get clicks" — they will. The questions are whether
-Galveston brand-and-port searchers **call**, and whether ship-name browsers
-**call**. Two different bets, deliberately separated so one answer cannot
-hide inside the other.
+Whether Galveston brand-and-port searchers **call**, and separately whether
+ship-name browsers **call**. Two different bets, kept apart so one answer
+cannot hide inside the other.
 
-The 616,570 searches a month sitting in the research and pointing at pages
-that do not exist yet is the prize. This test tells you whether the model
-works before you build 40 more pages chasing it.
+The 616,570 monthly searches still pointing at pages that do not exist are
+the prize. This test says whether the model works before you build more.
