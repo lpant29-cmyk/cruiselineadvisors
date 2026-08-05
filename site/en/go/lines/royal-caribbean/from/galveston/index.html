@@ -633,7 +633,7 @@ const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
 const pricesCheckedOn = "August 2";
 const STAMP_MIXED = false;
-const H1_VARIANTS = {"icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "mariner-of-the-seas": "Mariner of the Seas Cruises from Galveston", "mariner": "Mariner of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston"};
+const H1_VARIANTS = {"port": "Royal Caribbean Galveston Cruise Port", "outof": "Royal Caribbean Cruises Out of Galveston", "schedule": "Royal Caribbean Galveston Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Galveston, Texas", "icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "mariner-of-the-seas": "Mariner of the Seas Cruises from Galveston", "mariner": "Mariner of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "4day": "4-Day Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "5day": "5-Day Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "6day": "6-Day Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "7day": "7-Day Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "8day": "8-Day Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "9day": "9-Day Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston", "10day": "10-Day Royal Caribbean Cruises from Galveston"};
 const SHIP_SLUGS = {"icon-of-the-seas": "s001", "icon": "s001", "mariner-of-the-seas": "s016", "mariner": "s016", "liberty-of-the-seas": "s017", "liberty": "s017", "symphony-of-the-seas": "s018", "symphony": "s018"};
 const H1_BASE = "Royal Caribbean Cruises from Galveston";
 const HERO = {"src": "/img/lp/port/galveston-hero.webp", "alt": "Galveston Island Historic Pleasure Pier at sunset, with amusement rides above the Gulf surf", "w": 1600, "h": 1280};
@@ -2253,28 +2253,39 @@ function populateFilters(){
   const nq=q.get('nights');
   if(nq){
     const sel=document.getElementById('fNights');
-    /* a bare number from an ad URL (?nights=4) maps into the band that
-       contains it; a band value passes straight through */
-    const band=/^\d+$/.test(nq)
-      ? (+nq<=5?'2-5':(+nq<=8?'6-8':'9-99'))
-      : nq;
-    if([...sel.options].some(o=>o.value===band)) sel.value=band;
+    if(/^\d+$/.test(nq)){
+      /* an ad for "4 day cruise" must show 4-night sailings, not the 2-5
+         band. EXACT_NIGHTS narrows to that single length. */
+      EXACT_NIGHTS=+nq;
+      const label=`${nq} nights`;
+      if(![...sel.options].some(o=>o.value==='exact')){
+        sel.insertAdjacentHTML('beforeend',`<option value="exact">${label}</option>`);
+      }
+      sel.value='exact';
+    } else if([...sel.options].some(o=>o.value===nq)){
+      sel.value=nq;
+    }
   }
 }
 
 let SHIP_FOCUS='';
+let EXACT_NIGHTS=0;
 
 function setShipNotice(){
   const el=document.getElementById('shipNotice'); if(!el) return;
-  if(!SHIP_FOCUS){ el.hidden=true; el.innerHTML=''; return; }
-  const name=(ITINERARIES.find(i=>i.shipId===SHIP_FOCUS)||{}).ship||'this ship';
+  if(!SHIP_FOCUS && !EXACT_NIGHTS){ el.hidden=true; el.innerHTML=''; return; }
+  const port=esc(PAGE.portLabel.split(',')[0]);
+  const what = SHIP_FOCUS
+    ? esc((ITINERARIES.find(i=>i.shipId===SHIP_FOCUS)||{}).ship||'this ship')+' sailings'
+    : EXACT_NIGHTS+'-night sailings';
   const total=ITINERARIES.length;
   el.hidden=false;
-  el.innerHTML=`Showing ${esc(name)} sailings from ${esc(PAGE.portLabel.split(',')[0])}. `+
+  el.innerHTML=`Showing ${what} from ${port}. `+
     `<button type="button" class="linkbtn" id="shipReset">See all ${total} sailings</button>`;
   const r=document.getElementById('shipReset');
   if(r) r.addEventListener('click',()=>{
-    SHIP_FOCUS='';
+    SHIP_FOCUS=''; EXACT_NIGHTS=0;
+    const sel=document.getElementById('fNights'); if(sel) sel.value='';
     const h1=document.querySelector('h1');
     if(h1 && typeof H1_BASE!=='undefined') h1.textContent=H1_BASE;
     setShipNotice(); runSearch(false);
@@ -2290,7 +2301,8 @@ function runSearch(scroll=true){
   let list=ITINERARIES.filter(i=>
     (!to || i.dest===to) &&
     (!month || i.months.includes(month)) &&
-    (!nb || (i.nights>=+nb.split('-')[0] && i.nights<=+nb.split('-')[1])) &&
+    (nb==='exact' ? i.nights===EXACT_NIGHTS
+                  : (!nb || (i.nights>=+nb.split('-')[0] && i.nights<=+nb.split('-')[1]))) &&
     (!SHIP_FOCUS || i.shipId===SHIP_FOCUS)
   );
   const grid=document.getElementById('itinGrid');

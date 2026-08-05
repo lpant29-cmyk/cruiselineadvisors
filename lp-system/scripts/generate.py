@@ -295,32 +295,40 @@ def ship_slug_map(deals, reg):
 
 
 def h1_variants(deals, reg, page):
-    """Whitelisted H1 rewrites for ?v=, built from what this page actually
-    carries. An ad for "icon of the seas galveston" should not land on an H1
-    that says something else (the quality-score triangle), but the variant
-    must still be TRUE, so a ship only appears here if it has sailings on
-    this page. Unknown ?v= values are ignored by the template."""
+    """Whitelisted H1 rewrites for ?v=. ONE VARIANT PER AD GROUP so every
+    keyword lands on a heading that mirrors it (the quality-score triangle).
+    Generated from this page's own inventory, so a heading can never claim a
+    ship or a length the page cannot show. Unknown values are ignored."""
     port = deals[0]["port_label"].rsplit(" ", 1)[0] if deals else ""
+    line = page.get("h1", "").split(" Cruises")[0] or "Royal Caribbean"
     out = {}
+
+    # port/schedule phrasings, one per core keyword
+    out["port"] = f"{line} {port} Cruise Port"
+    out["outof"] = f"{line} Cruises Out of {port}"
+    out["schedule"] = f"{line} {port} Cruise Schedule"
+    out["porttx"] = f"{line} Cruise Port in {port}, Texas"
+
+    # ship variants, only for ships with sailings here
     by_ship = {}
     for r in deals:
         for sid in [x.strip() for x in r.get("ship_ids", "").split(";") if x.strip()]:
             by_ship.setdefault(sid, []).append(r)
-    for sid, rows in by_ship.items():
+    for sid in by_ship:
         srow = reg["ships_by_id"].get(sid)
         if not srow:
             continue
-        slug = srow.get("slug", "")
-        name = srow.get("ship_name", "")
+        slug, name = srow.get("slug", ""), srow.get("ship_name", "")
         if not slug or not name:
             continue
-        short = slug.replace("-of-the-seas", "")
-        label = f"{name} Cruises from {port}" if port else f"{name} Cruises"
+        label = f"{name} Cruises from {port}"
         out[slug] = label
-        out[short] = label
-    # duration variants, only for lengths this page can actually show
+        out[slug.replace("-of-the-seas", "")] = label
+
+    # duration variants, only for lengths that exist on this page
     for n in sorted({int(r["nights"]) for r in deals}):
-        out[f"{n}night"] = f"{n}-Night Royal Caribbean Cruises from {port}"
+        out[f"{n}night"] = f"{n}-Night {line} Cruises from {port}"
+        out[f"{n}day"] = f"{n}-Day {line} Cruises from {port}"
     return out
 
 
