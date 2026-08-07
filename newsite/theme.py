@@ -881,4 +881,11 @@ a.rt-card:hover{transform:translateY(-2px)}
   .has-sub .sub a{font-size:.86rem;padding:.5em .7em;min-height:0;white-space:nowrap;color:var(--navy);font-weight:700}
   .has-sub .sub a:hover{background:var(--foam);color:var(--navy)}
 }
+
+/* glossary definition list (cruise-glossary guide) */
+.gloss{margin:.6rem 0 1.2rem;display:grid;gap:.6rem}
+.gloss dt{font-weight:800;color:var(--navy);font-size:1.03rem;margin-top:.35rem}
+.gloss dd{margin:.15rem 0 .4rem;color:#33485A;line-height:1.62}
+@media(max-width:600px){.gloss dt{font-size:1rem}}
+
 """

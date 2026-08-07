@@ -905,3 +905,194 @@ register("best-cabin-location", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+def _gl(items):
+    """Glossary block: term + plain-English definition, alphabetised by the caller."""
+    return ('<dl class="gloss">'
+            + "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in items)
+            + "</dl>")
+
+
+register("cruise-glossary", {
+    "cat": "planning",
+    "hero": "cruise-glossary.jpg",
+    "published": "2026-08-07",
+    "updated": "2026-08-07",
+    "title": {
+        "en": "Cruise glossary: the words everyone uses and nobody explains",
+        "es": "Glosario de cruceros: las palabras que todos usan y nadie explica",
+    },
+    "dek": {
+        "en": "Cruise booking has its own vocabulary, and most of it goes unexplained until it costs you "
+              "something. Here is the plain-English version, grouped by when you actually meet each term: "
+              "while you book, once you are on board, and when the ship is in port.",
+        "es": "Reservar un crucero tiene su propio vocabulario, y casi nadie lo explica hasta que te cuesta "
+              "algo. Aquí está la versión en lenguaje claro, agrupada por el momento en que te encuentras "
+              "cada término: al reservar, ya a bordo, y cuando el barco está en puerto.",
+    },
+    "takeaways": {
+        "en": [
+            "Double occupancy is the assumption behind almost every advertised fare: it is the price per person when two people share a cabin.",
+            "Closed-loop means the cruise starts and ends at the same US port, which changes what documents you need.",
+            "Final payment is the deadline that matters most. Before it you usually have flexibility; after it you usually do not.",
+            "Guarantee cabins are cheaper because the line, not you, picks the exact room.",
+            "Muster drill is the safety briefing you must complete before sailing. It is not optional.",
+            "Port fees and gratuities are separate from the fare on most lines, and they are the two costs first-timers miss.",
+        ],
+        "es": [
+            "La ocupación doble es el supuesto detrás de casi toda tarifa anunciada: es el precio por persona cuando dos comparten camarote.",
+            "Circuito cerrado significa que el crucero empieza y termina en el mismo puerto de EE.UU., lo que cambia los documentos que necesitas.",
+            "El pago final es la fecha límite que más importa. Antes suele haber flexibilidad; después normalmente no.",
+            "Los camarotes garantizados son más baratos porque la línea, no tú, elige la habitación exacta.",
+            "El simulacro de seguridad es obligatorio antes de zarpar. No es opcional.",
+            "Las tasas portuarias y las propinas van aparte de la tarifa en casi todas las líneas, y son los dos costes que más se pasan por alto.",
+        ],
+    },
+    "sections": [
+        {"id": "booking", "h2": {"en": "Words you meet while booking", "es": "Palabras al reservar"},
+         "html": {
+            "en": "<p>These are the terms that decide what you pay and how much freedom you keep.</p>"
+                  + _gl([
+                      ("Base fare", "The cruise price itself, before taxes, port expenses, gratuities and anything you buy on board. It is what the headline number usually refers to."),
+                      ("Cabin category", "The type of room: interior, ocean view, balcony or suite. Within each there are sub-grades that differ mainly by deck and position."),
+                      ("Closed-loop cruise", "A sailing that begins and ends at the same US port. It changes which travel documents US citizens need, which is covered in our documents guide."),
+                      ("Deposit", "The amount paid to hold a booking. Refundable and non-refundable deposit fares are priced differently, so check which one you are buying."),
+                      ("Double occupancy", "The assumption behind nearly every advertised fare: the price per person when two people share the cabin. One person alone usually pays more, not less."),
+                      ("Final payment date", "The deadline for paying the balance, typically two to three months before sailing. Before it you generally have flexibility; after it, cancellation penalties apply."),
+                      ("Guarantee cabin", "You book a category, and the line assigns the specific room later. Cheaper, but you cannot choose the location and you may be moved up or down within the grade."),
+                      ("Lead-in fare", "The least expensive fare in a category on a given sailing, usually one or two rooms in the least desirable spots. The phrase 'from' in any listing means this."),
+                      ("Obstructed view", "A cabin whose window or balcony is partly blocked by a lifeboat or structure. Often good value if you mainly want daylight."),
+                      ("Repositioning cruise", "A one-way sailing moving a ship between seasons, such as Europe to the Caribbean. Longer, more sea days, usually cheaper per night, and you fly home from a different place."),
+                      ("Single supplement", "The extra a solo traveller pays because the fare assumed two people in the room. It varies enormously by line and sailing."),
+                      ("Solo cabin", "A cabin designed and priced for one person, avoiding the supplement. Only some ships have them."),
+                  ])
+                  + "<p>Two of these do most of the damage when misunderstood: "
+                  + link("/en/guides/whats-included/", "what the fare actually includes")
+                  + " and the final payment date. Everything else is easier to recover from.</p>",
+            "es": "<p>Estos son los términos que deciden lo que pagas y cuánta libertad conservas.</p>"
+                  + _gl([
+                      ("Camarote garantizado", "Reservas una categoría y la línea asigna la habitación concreta más tarde. Más barato, pero no eliges la ubicación."),
+                      ("Categoría de camarote", "El tipo de habitación: interior, vista al mar, balcón o suite. Dentro de cada una hay subcategorías que varían sobre todo por cubierta y posición."),
+                      ("Crucero de circuito cerrado", "Una salida que empieza y termina en el mismo puerto de EE.UU. Cambia los documentos que necesitan los ciudadanos estadounidenses."),
+                      ("Crucero de reposicionamiento", "Una salida de ida moviendo un barco entre temporadas, por ejemplo de Europa al Caribe. Más largo, más días de mar, normalmente más barato por noche."),
+                      ("Depósito", "El importe para retener una reserva. Las tarifas con depósito reembolsable y no reembolsable tienen precios distintos."),
+                      ("Fecha de pago final", "La fecha límite para pagar el saldo, normalmente dos o tres meses antes de zarpar. Después se aplican penalizaciones por cancelación."),
+                      ("Ocupación doble", "El supuesto de casi toda tarifa anunciada: el precio por persona cuando dos comparten camarote. Viajar solo suele costar más, no menos."),
+                      ("Suplemento individual", "Lo que paga de más quien viaja solo porque la tarifa asumía dos personas. Varía muchísimo según la línea y la salida."),
+                      ("Tarifa base", "El precio del crucero en sí, antes de impuestos, gastos portuarios, propinas y lo que compres a bordo."),
+                      ("Tarifa inicial", "La tarifa menos cara de una categoría en una salida concreta, normalmente una o dos habitaciones en las peores posiciones. El 'desde' de cualquier anuncio se refiere a esto."),
+                      ("Vista obstruida", "Un camarote cuya ventana o balcón está parcialmente tapado por un bote salvavidas o una estructura. Suele ser buena relación calidad-precio."),
+                  ])
+                  + "<p>Dos de estos causan casi todo el daño cuando se malinterpretan: "
+                  + link("/es/guides/whats-included/", "qué incluye la tarifa")
+                  + " y la fecha de pago final.</p>",
+         }},
+        {"id": "onboard", "h2": {"en": "Words you meet on board", "es": "Palabras a bordo"},
+         "html": {
+            "en": "<p>Ship vocabulary is mostly nautical habit, but a few of these carry real money or real "
+                  "obligations.</p>"
+                  + _gl([
+                      ("Aft", "Toward the back of the ship. Aft cabins often have larger balconies and more motion."),
+                      ("Bridge", "Where the ship is navigated from. Some lines run tours of it."),
+                      ("Embarkation and disembarkation", "Getting on at the start and off at the end. Both have assigned time windows."),
+                      ("Forward", "Toward the front. Forward cabins feel more movement in rough water."),
+                      ("Gratuities", "A daily amount per guest added to your onboard account, sometimes called a service charge. Prepaying is usually possible."),
+                      ("Midship", "The middle of the ship, lengthwise. The steadiest place to sleep and the shortest walk to most things."),
+                      ("Muster drill", "The safety briefing every guest must complete before sailing. Most lines now run it partly through the app plus a short in-person check."),
+                      ("Onboard account", "The account your cabin key card charges to. Everything you buy on the ship lands here and settles at the end."),
+                      ("Onboard credit", "A spending allowance on that account, often from a promotion or your travel advisor. Some is refundable, some is not, and it is worth knowing which."),
+                      ("Sea day", "A full day with no port call. Ship facilities are at their busiest, which is why an adults-only deck matters to some travellers."),
+                      ("Speciality dining", "Restaurants that cost extra on top of your fare, usually smaller and quieter than the main dining room."),
+                      ("Stateroom", "The cruise word for cabin. The same thing."),
+                      ("Tender", "A small boat ferrying guests ashore where the ship cannot dock. Adds time at each end of a port day."),
+                  ])
+                  + tip("Two of these are worth acting on before you sail: complete the muster drill early on "
+                        "embarkation day so it is done, and check whether your onboard credit is refundable, "
+                        "because unspent non-refundable credit simply disappears."),
+            "es": "<p>El vocabulario de a bordo es sobre todo costumbre náutica, pero algunos términos implican "
+                  "dinero real u obligaciones reales.</p>"
+                  + _gl([
+                      ("Camarote", "La habitación del barco. En inglés se usa 'stateroom', que es lo mismo."),
+                      ("Centro del barco", "La parte media a lo largo. El sitio más estable para dormir y el paseo más corto a casi todo."),
+                      ("Cena de especialidad", "Restaurantes con coste extra sobre la tarifa, normalmente más pequeños y tranquilos que el comedor principal."),
+                      ("Crédito a bordo", "Un saldo para gastar en tu cuenta, a menudo de una promoción o de tu asesor. Parte puede ser reembolsable y parte no."),
+                      ("Cuenta a bordo", "La cuenta a la que carga tu tarjeta-llave. Todo lo que compras en el barco va aquí y se liquida al final."),
+                      ("Día de mar", "Un día completo sin escala. Las instalaciones están en su momento más concurrido."),
+                      ("Embarque y desembarque", "Subir al principio y bajar al final. Ambos tienen franjas horarias asignadas."),
+                      ("Popa", "Hacia la parte trasera. Los camarotes de popa suelen tener balcones más grandes y más movimiento."),
+                      ("Proa", "Hacia la parte delantera. Se siente más movimiento con mar agitado."),
+                      ("Propinas", "Un importe diario por huésped añadido a tu cuenta, a veces llamado cargo por servicio. Normalmente se puede prepagar."),
+                      ("Puente de mando", "Desde donde se navega el barco. Algunas líneas organizan visitas."),
+                      ("Simulacro de seguridad", "La sesión informativa obligatoria antes de zarpar. Hoy suele hacerse en parte por la app más una comprobación presencial."),
+                      ("Tender", "Una embarcación pequeña que lleva a los huéspedes a tierra donde el barco no puede atracar."),
+                  ])
+                  + tip("Dos cosas que conviene hacer antes de zarpar: completa el simulacro pronto el día de "
+                        "embarque, y comprueba si tu crédito a bordo es reembolsable, porque el no reembolsable "
+                        "que no gastes simplemente se pierde."),
+         }},
+        {"id": "ports", "h2": {"en": "Words about ports and itineraries",
+                               "es": "Palabras sobre puertos e itinerarios"},
+         "html": {
+            "en": _gl([
+                      ("Cabotage", "Shipping law that shapes which routes a foreign-flagged ship may sail between US ports. You will never deal with it directly, but it explains some odd itineraries."),
+                      ("Home port", "Where the cruise starts and finishes. Also called the departure or embarkation port."),
+                      ("Itinerary", "The specific sequence of ports and sea days on a sailing. The same ship runs different itineraries through the year."),
+                      ("Port of call", "A stop along the way, usually for a single day."),
+                      ("Port expenses", "Charges levied by the ports themselves, passed on to you. Whether they are inside or outside the advertised fare varies by line, which is why the same cruise can look cheaper on one site than another."),
+                      ("Private island", "A resort-style destination owned or leased by the cruise line. Most of it is included, though the best beaches and waterparks usually cost extra."),
+                      ("Shore excursion", "An organised trip in port, sold by the line or independently. Booking through the ship costs more but the ship waits for you if it runs late."),
+                      ("Transatlantic", "A crossing between North America and Europe, heavy on sea days, usually in spring and autumn."),
+                  ])
+                  + "<p>One of these has a direct effect on comparing prices: port expenses. If one quote "
+                  "includes them and another does not, the cheaper-looking fare may not be cheaper at all. "
+                  "It is the single most common reason two prices for the same sailing disagree.</p>",
+            "es": _gl([
+                      ("Cabotaje", "La normativa marítima que determina qué rutas puede hacer un barco de bandera extranjera entre puertos de EE.UU. Explica algunos itinerarios extraños."),
+                      ("Escala", "Una parada por el camino, normalmente de un día."),
+                      ("Excursión en tierra", "Una actividad organizada en puerto, vendida por la línea o por terceros. Reservarla con el barco cuesta más, pero el barco te espera si se retrasa."),
+                      ("Gastos portuarios", "Cargos de los propios puertos que se te repercuten. Que estén dentro o fuera de la tarifa anunciada varía por línea."),
+                      ("Isla privada", "Un destino tipo resort propiedad de la línea o arrendado por ella. Gran parte está incluida, aunque las mejores playas y parques acuáticos suelen costar aparte."),
+                      ("Itinerario", "La secuencia concreta de puertos y días de mar de una salida. El mismo barco hace itinerarios distintos a lo largo del año."),
+                      ("Puerto base", "Donde empieza y termina el crucero. También llamado puerto de salida o de embarque."),
+                      ("Transatlántico", "Una travesía entre Norteamérica y Europa, con muchos días de mar, normalmente en primavera y otoño."),
+                  ])
+                  + "<p>Uno de estos afecta directamente a comparar precios: los gastos portuarios. Si una "
+                  "cotización los incluye y otra no, la tarifa que parece más barata puede no serlo. Es la "
+                  "razón más común de que dos precios para la misma salida no coincidan.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What does double occupancy mean on a cruise?", "It means the advertised price is per person, assuming two people share the cabin. Almost every cruise fare you see quoted works this way. A solo traveller usually pays a single supplement on top, and a third or fourth guest in the same room is normally charged at a lower rate than the first two."),
+            ("What is a closed-loop cruise?", "A sailing that departs from and returns to the same US port. It matters mainly for paperwork: on closed-loop sailings US citizens can generally travel with a birth certificate and government photo ID rather than a passport, though a passport is still strongly recommended. Confirm the requirements for your exact sailing and nationality."),
+            ("What is a guarantee cabin?", "You book a cabin category at a lower price and the cruise line assigns the specific room later, sometimes close to sailing. You may end up anywhere in that grade, or occasionally upgraded. It suits travellers who care more about price than location, and not those who want a particular deck or a quiet spot."),
+            ("What is the final payment date?", "The deadline for paying your balance, usually two to three months before departure though it varies by line and cruise length. It is the most important date in your booking: before it you typically have flexibility to change or cancel with limited cost, and after it cancellation penalties apply."),
+            ("What is a muster drill?", "The mandatory safety briefing showing you where to go and what to do in an emergency. Every guest must complete it before the ship sails. Most lines now run it as a short video or app section plus a brief in-person check at your assigned station."),
+            ("What are port expenses on a cruise?", "Charges levied by the ports a ship visits, passed through to passengers. Some lines include them in the advertised fare and others add them at checkout, which is a common reason the same sailing appears to cost different amounts in different places. Always compare what is included, not just the headline number."),
+        ],
+        "es": [
+            ("¿Qué significa ocupación doble en un crucero?", "Que el precio anunciado es por persona, asumiendo que dos comparten camarote. Casi todas las tarifas de crucero funcionan así. Quien viaja solo suele pagar un suplemento, y el tercer o cuarto huésped en la misma habitación normalmente paga una tarifa menor."),
+            ("¿Qué es un crucero de circuito cerrado?", "Una salida que parte y regresa al mismo puerto de EE.UU. Importa sobre todo por el papeleo: en estas salidas los ciudadanos estadounidenses pueden viajar con acta de nacimiento e identificación oficial con foto en vez de pasaporte, aunque el pasaporte sigue siendo muy recomendable."),
+            ("¿Qué es un camarote garantizado?", "Reservas una categoría a menor precio y la línea asigna la habitación concreta más tarde, a veces cerca de la salida. Puedes acabar en cualquier punto de esa categoría, u ocasionalmente con una mejora. Conviene a quien prioriza el precio sobre la ubicación."),
+            ("¿Qué es la fecha de pago final?", "La fecha límite para pagar el saldo, normalmente dos o tres meses antes de zarpar aunque varía por línea y duración. Es la fecha más importante de tu reserva: antes sueles tener flexibilidad para cambiar o cancelar con poco coste, y después se aplican penalizaciones."),
+            ("¿Qué es el simulacro de seguridad?", "La sesión informativa obligatoria que muestra a dónde ir y qué hacer en una emergencia. Todo huésped debe completarla antes de zarpar. Hoy suele consistir en un vídeo o sección de la app más una breve comprobación presencial en tu punto de reunión."),
+            ("¿Qué son los gastos portuarios?", "Cargos que aplican los puertos visitados y que se repercuten a los pasajeros. Algunas líneas los incluyen en la tarifa anunciada y otras los añaden al final, lo que explica que la misma salida parezca costar distinto en sitios distintos. Compara siempre qué incluye cada precio."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "Which of these words costs you money."),
+            ("🛏️", "Choosing a cabin", "/en/guides/choosing-a-cabin/", "Category, grade and what the differences mean."),
+            ("🛂", "Cruise documents & ID", "/en/guides/cruise-documents-id/", "What closed-loop means for your paperwork."),
+            ("🧭", "Best cabin location", "/en/guides/best-cabin-location/", "Forward, aft, midship, and why it matters."),
+        ],
+        "es": [
+            ("🧾", "Qué incluye la tarifa", "/es/guides/whats-included/", "Cuáles de estas palabras te cuestan dinero."),
+            ("🛏️", "Elegir camarote", "/es/guides/choosing-a-cabin/", "Categoría, grado y qué significan las diferencias."),
+            ("🛂", "Documentos e identificación", "/es/guides/cruise-documents-id/", "Qué implica el circuito cerrado para tu papeleo."),
+            ("🧭", "Mejor ubicación del camarote", "/es/guides/best-cabin-location/", "Proa, popa, centro y por qué importa."),
+        ],
+    },
+})

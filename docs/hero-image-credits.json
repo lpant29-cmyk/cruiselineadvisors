@@ -212,5 +212,14 @@
     "license": "Unsplash License (free, commercial use, not Unsplash+)",
     "note": "Ship promenade at blue hour, shot from on board looking out. No ship name, line wordmark or venue signage in frame.",
     "downloaded": "2026-07-30"
+  },
+  "cruise-glossary": {
+    "file": "newsite/assets/guides/cruise-glossary.jpg",
+    "source": "pexels",
+    "photographer": "Jatinder Singh Kang",
+    "photo_page": "https://www.pexels.com/photo/20199321/",
+    "license": "Pexels License (free, commercial use)",
+    "note": "Looking down over a ship foredeck to open sea. Only operational deck marking visible; no ship name or line wordmark.",
+    "downloaded": "2026-07-30"
   }
 }

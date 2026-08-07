@@ -62,7 +62,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 | ⬜ | P1 | Cruise documents & ID (passport vs birth cert) | `cruise-documents-id` | cruise passport requirement, closed-loop |
 | ⬜ | P2 | What to pack for a cruise (+ checklist) | `what-to-pack-for-a-cruise` | cruise packing list, what to pack |
 | ⬜ | P2 | Embarkation day: what to expect | `cruise-embarkation-day` | cruise embarkation day, boarding process |
-| ⬜ | P2 | A–Z cruise glossary | `cruise-glossary` | cruise terms, cruise glossary |
+| ✅ | P2 | A–Z cruise glossary | `cruise-glossary` | cruise terms, cruise glossary |
 
 ### Pillar C — Who you're travelling with  *(→ finder personas)*
 | Status | Pri | Topic | Slug | Primary intent / keywords |
