@@ -221,5 +221,16 @@
     "license": "Pexels License (free, commercial use)",
     "note": "Looking down over a ship foredeck to open sea. Only operational deck marking visible; no ship name or line wordmark.",
     "downloaded": "2026-07-30"
+  },
+  "caribbean-vs-alaska-vs-med": {
+    "file": "newsite/assets/guides/caribbean-vs-alaska-vs-med.jpg",
+    "source": "pexels",
+    "photographer": "Aaron Houston (@thisishouston)",
+    "photo_page": "https://www.pexels.com/photo/34274948/",
+    "image_url": "https://images.pexels.com/photos/34274948/pexels-photo-34274948.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "license": "Pexels License (free for commercial use, no attribution required)",
+    "subject": "Blue tidewater glacier face below rugged snow-capped mountains in Alaska",
+    "note": "Landscape 1600x887, resized and recompressed from the Pexels 3200px file. Inspected at full resolution including zoomed crops: no ship, vessel, person, signage or text anywhere in frame, so no cruise line or ship branding is visible.",
+    "downloaded": "2026-08-13"
   }
 }
