@@ -85,7 +85,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 | Status | Pri | Topic | Slug | Primary intent / keywords |
 |---|---|---|---|---|
 | ⬜ | P1 | How to choose a cruise destination | `how-to-choose-a-destination` | how to choose a cruise destination |
-| ⬜ | P2 | Caribbean vs Alaska vs Mediterranean: how to decide | `caribbean-vs-alaska-vs-med` | caribbean vs alaska cruise |
+| ✅ | P2 | Caribbean vs Alaska vs Mediterranean: how to decide | `caribbean-vs-alaska-vs-med` | caribbean vs alaska cruise |
 | ⬜ | P3 | Port days vs sea days | `port-days-vs-sea-days` | port days vs sea days |
 | ⬜ | P3 | Repositioning cruises, explained | `repositioning-cruises` | repositioning cruise |
 

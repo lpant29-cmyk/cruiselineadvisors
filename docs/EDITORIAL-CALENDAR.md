@@ -49,7 +49,7 @@ destination pages. Swap any day for a timely/seasonal post whenever one is warra
 7. ~~A–Z cruise glossary (terms every cruiser should know)~~ ✅ published 2026-08-07
 
 **Week 2 — decisions, safety & the last how-tos**
-8. Caribbean vs Alaska vs Mediterranean: how to decide
+8. ~~Caribbean vs Alaska vs Mediterranean: how to decide~~ ✅ published 2026-08-13
 9. Port days vs sea days: what a cruise day is really like
 10. Repositioning cruises, explained
 11. Your cruise ticket contract & passenger rights

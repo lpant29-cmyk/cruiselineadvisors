@@ -66,8 +66,26 @@ done
 
 # fares must be fresh: generate.py withholds a stale price, but if EVERY
 # fare on a page is withheld that is a broken pipeline, not a safe default
-withheld=$( { grep -ro "Fare on request" "$ROOT/site" 2>/dev/null || true; } | wc -l | tr -d ' ')
-echo "  note $withheld fare(s) currently withheld as unstable/stale"
+# Counted from the DATA via generate.py's own price_ok(), not by grepping the
+# built HTML: fares render client-side, so the only "Fare on request" strings
+# in site/ are the JS fallback branches themselves. Grepping them always
+# returned a floor of 2 and could never see a genuinely withheld card, which
+# silently defeated the "did the refresh actually work" check.
+withheld=$(cd "$ROOT" && python3 - <<'PYEOF'
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path("lp-system/scripts").resolve()))
+import generate as g
+rows = [r for r in g.read_csv(pathlib.Path("lp-system/data/03_itineraries.csv"))
+        if r.get("itin_id", "").startswith("i")]
+if not rows:
+    raise SystemExit("ERR no itinerary rows parsed")
+print("%d of %d" % (sum(1 for r in rows if not g.price_ok(r)), len(rows)))
+PYEOF
+)
+case "$withheld" in
+  ""|ERR*) echo "  FAIL could not compute the withheld-fare count ($withheld)"; fail=1 ;;
+  *)       echo "  note $withheld fare(s) withheld as unstable/stale" ;;
+esac
 
 echo
 if [ "$fail" != "0" ]; then

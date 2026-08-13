@@ -266,3 +266,199 @@ register("when-to-cruise", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("caribbean-vs-alaska-vs-med", {
+    "cat": "dest",
+    "hero": "caribbean-vs-alaska-vs-med.jpg",
+    "published": "2026-08-13",
+    "updated": "2026-08-13",
+    "title": {
+        "en": "Caribbean vs Alaska vs Mediterranean: how to decide",
+        "es": "Caribe vs Alaska vs Mediterráneo: cómo decidir",
+    },
+    "dek": {
+        "en": "These three account for most first cruises, and people usually pick by photograph. That is "
+              "the wrong instrument. They differ in when you can go, how much you pack, what a day ashore "
+              "asks of you, and how tiring the week is. Here is the honest comparison.",
+        "es": "Estos tres concentran la mayoría de los primeros cruceros, y la gente suele elegir por una "
+              "foto. Es el instrumento equivocado. Se diferencian en cuándo puedes ir, cuánto equipaje "
+              "llevas, qué te exige un día en tierra y cuánto cansa la semana. Esta es la comparación honesta.",
+    },
+    "takeaways": {
+        "en": [
+            "Season decides more than preference. Alaska runs roughly May to September; the Mediterranean is best spring and autumn; the Caribbean sails year round.",
+            "The Caribbean is the easiest first cruise: short flights from most of the US, warm water, and days you can spend doing nothing.",
+            "Alaska is scenery-led. The ship is a moving viewing platform, and the best moments happen from the deck rather than ashore.",
+            "The Mediterranean is a city-hopping holiday that happens to float. Expect long, hot days on your feet and a lot of history.",
+            "Caribbean days ashore are optional. Mediterranean days ashore are the point, and skipping them wastes the trip.",
+            "Pack differently: swimwear for one, layers and waterproofs for another, walking shoes and modest cover for churches in the third.",
+        ],
+        "es": [
+            "La temporada decide más que la preferencia. Alaska va de mayo a septiembre; el Mediterráneo es mejor en primavera y otoño; el Caribe navega todo el año.",
+            "El Caribe es el primer crucero más fácil: vuelos cortos desde casi todo EE.UU., agua cálida y días en los que puedes no hacer nada.",
+            "Alaska va de paisaje. El barco es un mirador en movimiento y los mejores momentos ocurren desde la cubierta, no en tierra.",
+            "El Mediterráneo es unas vacaciones de ciudades que además flotan. Días largos, calurosos y de mucho caminar entre historia.",
+            "En el Caribe bajar a tierra es opcional. En el Mediterráneo es el objetivo, y saltárselo desaprovecha el viaje.",
+            "Haz maletas distintas: bañador para uno, capas e impermeable para otro, calzado cómodo y ropa discreta para iglesias en el tercero.",
+        ],
+    },
+    "sections": [
+        {"id": "season", "h2": {"en": "Start with the calendar, not the map",
+                                "es": "Empieza por el calendario, no por el mapa"},
+         "html": {
+            "en": "<p>Two of these three are seasonal, and that alone settles a lot of arguments.</p>"
+                  + vcards([
+                      ("🧊", "Alaska: May to September", "Outside that window the ships are not there. June and July give the longest daylight; May and September are quieter and often better value, with a slightly higher chance of grey days."),
+                      ("🏛️", "Mediterranean: April to October", "July and August are hot and crowded in every port. Late spring and early autumn give you the same cities at a temperature you can actually walk around in."),
+                      ("🌴", "Caribbean: year round", "Winter is peak season and peak price. Late summer into autumn is hurricane season, which is why fares drop, and why travel insurance stops being optional."),
+                  ])
+                  + "<p>If your leave is fixed to one week in July, you have effectively already chosen. If you "
+                  "can move your dates, that flexibility is worth more than any other decision on this page. "
+                  "Our " + link("/en/guides/when-to-cruise/", "when to cruise guide")
+                  + " goes region by region.</p>",
+            "es": "<p>Dos de los tres son estacionales, y eso solo ya zanja muchas discusiones.</p>"
+                  + vcards([
+                      ("🧊", "Alaska: de mayo a septiembre", "Fuera de esa ventana los barcos no están. Junio y julio dan más luz; mayo y septiembre son más tranquilos y suelen tener mejor precio, con algo más de probabilidad de días grises."),
+                      ("🏛️", "Mediterráneo: de abril a octubre", "Julio y agosto son calurosos y llenos en todos los puertos. Finales de primavera y principios de otoño dan las mismas ciudades a una temperatura por la que se puede caminar."),
+                      ("🌴", "Caribe: todo el año", "El invierno es temporada alta y precio alto. De finales de verano a otoño es temporada de huracanes, por eso bajan las tarifas y por eso el seguro deja de ser opcional."),
+                  ])
+                  + "<p>Si tus vacaciones son una semana fija de julio, ya has elegido de hecho. Si puedes mover "
+                  "las fechas, esa flexibilidad vale más que cualquier otra decisión de esta guía. Nuestra "
+                  + link("/es/guides/when-to-cruise/", "guía de cuándo navegar")
+                  + " lo desglosa por región.</p>",
+         }},
+        {"id": "day-ashore", "h2": {"en": "What a day ashore actually asks of you",
+                                    "es": "Qué te pide realmente un día en tierra"},
+         "html": {
+            "en": "<p>This is the difference people feel most and plan for least. All three put you in a "
+                  "port; what happens next could not be less alike.</p>"
+                  + vcards([
+                      ("🏖️", "Caribbean: optional", "A beach, a rum punch, or the ship's pool while everyone else goes ashore. Nothing is missed if you stay on board, which is exactly why it suits a rest."),
+                      ("🥾", "Alaska: outdoor and weather-led", "Whale watching, glaciers, trains, floatplanes. Excursions carry more of the value here than anywhere else, and rain does not cancel the day, it just changes the clothes."),
+                      ("🏛️", "Mediterranean: dense and demanding", "Old towns, museums, ruins, and often a drive between the port and the city that matters. Full days on your feet in heat, and the trip is largely wasted if you skip them."),
+                  ])
+                  + tip("A blunt test for the Mediterranean: if the idea of walking a hot city for six hours, "
+                        "then doing it again the next day in a different country, sounds tiring rather than "
+                        "thrilling, the Caribbean will make you happier. There is no wrong answer, only a "
+                        "wrong match."),
+            "es": "<p>Esta es la diferencia que más se nota y menos se planifica. Los tres te dejan en un "
+                  "puerto; lo que pasa después no puede ser más distinto.</p>"
+                  + vcards([
+                      ("🏖️", "Caribe: opcional", "Una playa, un ron con fruta, o la piscina del barco mientras el resto baja. No te pierdes nada si te quedas a bordo, y por eso funciona para descansar."),
+                      ("🥾", "Alaska: al aire libre y según el clima", "Avistamiento de ballenas, glaciares, trenes, hidroaviones. Las excursiones aportan aquí más valor que en ningún otro sitio, y la lluvia no cancela el día, solo cambia la ropa."),
+                      ("🏛️", "Mediterráneo: denso y exigente", "Cascos antiguos, museos, ruinas y a menudo un trayecto entre el puerto y la ciudad que importa. Días enteros de pie con calor, y el viaje se desaprovecha si te los saltas."),
+                  ])
+                  + tip("Una prueba directa para el Mediterráneo: si caminar seis horas por una ciudad "
+                        "calurosa, y repetirlo al día siguiente en otro país, suena agotador más que "
+                        "emocionante, el Caribe te hará más feliz. No hay respuesta incorrecta, solo mal encaje."),
+         }},
+        {"id": "ship-vs-place", "h2": {"en": "How much the ship matters",
+                                       "es": "Cuánto importa el barco"},
+         "html": {
+            "en": "<p>The same ship delivers a different share of the holiday in each region, which changes "
+                  "how much you should spend on it.</p>"
+                  + vcards([
+                      ("🛳️", "Caribbean: the ship is half the trip", "Sea days are frequent and the newest, biggest ships sail here. Waterslides and shows earn their keep. Paying up for a better ship makes obvious sense."),
+                      ("🪟", "Alaska: the ship is a viewing platform", "You will spend hours watching the coast go past. Big open decks, forward-facing lounges and a balcony matter far more than waterparks."),
+                      ("🛏️", "Mediterranean: the ship is a hotel", "You are ashore most days and asleep on board. A comfortable cabin and good dinners matter; the entertainment lineup barely gets used."),
+                  ])
+                  + "<p>That has a practical consequence for cabin choice. A balcony earns its money in Alaska, "
+                  "where the view is the product, more than in the Mediterranean, where you are rarely in the "
+                  "room in daylight. " + link("/en/guides/choosing-a-cabin/", "Choosing a cabin")
+                  + " covers the trade-offs.</p>",
+            "es": "<p>El mismo barco aporta una parte distinta del viaje en cada región, y eso cambia cuánto "
+                  "conviene gastar en él.</p>"
+                  + vcards([
+                      ("🛳️", "Caribe: el barco es medio viaje", "Hay muchos días de mar y aquí navegan los barcos más nuevos y grandes. Los toboganes y los espectáculos se aprovechan. Pagar por un barco mejor tiene sentido claro."),
+                      ("🪟", "Alaska: el barco es un mirador", "Pasarás horas viendo pasar la costa. Cubiertas abiertas, salones con vista a proa y un balcón importan mucho más que un parque acuático."),
+                      ("🛏️", "Mediterráneo: el barco es un hotel", "Estás en tierra casi todos los días y a bordo durmiendo. Un camarote cómodo y buenas cenas importan; el entretenimiento apenas se usa."),
+                  ])
+                  + "<p>Esto tiene una consecuencia práctica para el camarote. Un balcón rinde en Alaska, donde "
+                  "la vista es el producto, más que en el Mediterráneo, donde rara vez estás en la habitación "
+                  "de día. " + link("/es/guides/choosing-a-cabin/", "Elegir camarote")
+                  + " cubre los equilibrios.</p>",
+         }},
+        {"id": "cost-shape", "h2": {"en": "Where the money goes in each",
+                                    "es": "A dónde va el dinero en cada uno"},
+         "html": {
+            "en": "<p>We do not publish fares here, but the shape of the spending is different in a way worth "
+                  "knowing before you compare two quotes.</p>"
+                  + vcards([
+                      ("✈️", "Getting there", "The Caribbean is a short domestic hop for most of the US. Alaska usually means a flight to Seattle or Vancouver. The Mediterranean adds a transatlantic flight and often a hotel night either side."),
+                      ("🎟️", "Excursions", "Alaska carries the heaviest excursion spend, because the things worth doing are organised and not walkable. Mediterranean ports often can be done independently. Caribbean beach days can cost nothing."),
+                      ("🧾", "On board", "Similar across regions, but Caribbean sea days give you more hours in which to buy drinks and speciality dinners, which quietly raises the total."),
+                  ])
+                  + watch("<b>Compare total trips, not cruise fares.</b> A cheaper Mediterranean cruise plus "
+                          "long-haul flights and two hotel nights can easily cost more than a pricier "
+                          "Caribbean sailing you drive to. This is the single most common mistake in choosing "
+                          "between regions, and it is also where bundling flights and hotel with the cruise "
+                          "usually pays off."),
+            "es": "<p>Aquí no publicamos tarifas, pero la forma del gasto cambia de un modo que conviene "
+                  "conocer antes de comparar dos presupuestos.</p>"
+                  + vcards([
+                      ("✈️", "Llegar", "El Caribe es un vuelo nacional corto para casi todo EE.UU. Alaska suele implicar volar a Seattle o Vancouver. El Mediterráneo añade un vuelo transatlántico y a menudo una noche de hotel a cada lado."),
+                      ("🎟️", "Excursiones", "Alaska concentra el mayor gasto en excursiones, porque lo que merece la pena está organizado y no se llega a pie. Los puertos mediterráneos a menudo se pueden hacer por libre. Un día de playa en el Caribe puede costar cero."),
+                      ("🧾", "A bordo", "Parecido entre regiones, pero los días de mar del Caribe dan más horas para comprar bebidas y cenas de especialidad, lo que sube el total sin que lo notes."),
+                  ])
+                  + watch("<b>Compara viajes completos, no tarifas de crucero.</b> Un crucero mediterráneo más "
+                          "barato con vuelos de larga distancia y dos noches de hotel puede costar más que uno "
+                          "caribeño más caro al que llegas conduciendo. Es el error más común al elegir entre "
+                          "regiones, y también donde agrupar vuelos y hotel con el crucero suele compensar."),
+         }},
+        {"id": "which-fits", "h2": {"en": "So which one", "es": "Entonces cuál"},
+         "html": {
+            "en": vcards([
+                      ("🌴", "Choose the Caribbean if", "It is your first cruise, you are travelling with children, you want warmth and rest, your dates are inflexible, or you would rather drive to the port than fly."),
+                      ("🧊", "Choose Alaska if", "Scenery and wildlife are the reason you are going, you do not mind cool and changeable weather, and you can travel between May and September."),
+                      ("🏛️", "Choose the Mediterranean if", "You want cities and history more than beaches, you are happy on your feet all day, and you can add flights and a hotel night at each end."),
+                  ])
+                  + "<p>One more honest point. Most people who cruise more than once end up doing all three, "
+                  "and the order matters less than the timing. If you are undecided and your dates are "
+                  "flexible, the Caribbean is the low-risk starting point: shortest travel, lowest total cost, "
+                  "and the easiest to enjoy even if cruising turns out not to be your thing.</p>",
+            "es": vcards([
+                      ("🌴", "Elige el Caribe si", "Es tu primer crucero, viajas con niños, quieres calor y descanso, tus fechas son rígidas, o prefieres conducir al puerto antes que volar."),
+                      ("🧊", "Elige Alaska si", "El paisaje y la fauna son la razón del viaje, no te importa el clima fresco y cambiante, y puedes viajar entre mayo y septiembre."),
+                      ("🏛️", "Elige el Mediterráneo si", "Quieres ciudades e historia más que playas, estás a gusto caminando todo el día, y puedes añadir vuelos y una noche de hotel a cada lado."),
+                  ])
+                  + "<p>Un apunte honesto más. Casi todos los que repiten crucero acaban haciendo los tres, y "
+                  "el orden importa menos que el momento. Si dudas y tus fechas son flexibles, el Caribe es el "
+                  "punto de partida de menor riesgo: menos viaje, menor coste total y el más fácil de "
+                  "disfrutar aunque los cruceros resulten no ser lo tuyo.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Which is better, a Caribbean or Alaska cruise?", "Neither is better; they answer different questions. The Caribbean is warm, year round, reachable by a short flight or a drive for much of the US, and the days ashore are optional. Alaska is scenery-led, runs only from roughly May to September, and the excursions carry more of the value. Pick the Caribbean for rest and the Alaska sailing for landscape."),
+            ("Is a Mediterranean cruise good for a first cruise?", "It can be excellent, but it is the most demanding of the three. You are ashore most days, often walking a hot city for hours, and skipping ports wastes the trip. If your idea of a holiday is resting, a Caribbean sailing suits a first cruise better. If you want to see several countries in a week, the Mediterranean is hard to beat."),
+            ("When is the best time to cruise Alaska?", "The season runs roughly May to September because the ships are not there outside it. June and July give the longest daylight and the warmest weather. May and September are quieter and often better value, with a slightly higher chance of grey or wet days."),
+            ("Do I need a balcony in Alaska?", "It earns its money there more than in most regions, because the scenery is the product and a lot of it passes while you are in your cabin. In the Mediterranean, where you are ashore most daylight hours, the same money is often better spent elsewhere. Our cabin guide covers the trade-off."),
+            ("Which cruise region works out least expensive overall?", "Compare the whole trip rather than the cruise fare. For most US travellers the Caribbean adds up to the least because flights are short or unnecessary and beach days can cost nothing. A cheaper Mediterranean fare can end up costing more once long-haul flights, hotel nights either side and excursions are counted."),
+            ("Is hurricane season a reason to avoid the Caribbean?", "It is a reason to plan rather than to avoid. Roughly June to November brings a higher chance of storms, which is why fares are lower then. Ships routinely reroute around weather, so the usual outcome is a changed itinerary rather than a cancelled trip, and travel insurance matters more in that window."),
+        ],
+        "es": [
+            ("¿Qué es mejor, un crucero por el Caribe o por Alaska?", "Ninguno es mejor; responden a preguntas distintas. El Caribe es cálido, de todo el año, accesible con un vuelo corto o en coche desde gran parte de EE.UU., y bajar a tierra es opcional. Alaska va de paisaje, solo navega de mayo a septiembre, y las excursiones aportan más valor. Elige el Caribe para descansar y Alaska por el paisaje."),
+            ("¿Un crucero por el Mediterráneo es bueno como primer crucero?", "Puede ser excelente, pero es el más exigente de los tres. Estás en tierra casi todos los días, a menudo caminando por una ciudad calurosa durante horas, y saltarse puertos desaprovecha el viaje. Si tu idea de vacaciones es descansar, el Caribe encaja mejor como primer crucero."),
+            ("¿Cuándo es la mejor época para navegar en Alaska?", "La temporada va de mayo a septiembre porque fuera de ahí los barcos no están. Junio y julio dan más luz y mejor temperatura. Mayo y septiembre son más tranquilos y suelen tener mejor precio, con algo más de probabilidad de días grises o de lluvia."),
+            ("¿Necesito balcón en Alaska?", "Rinde allí más que en casi cualquier región, porque el paisaje es el producto y buena parte pasa mientras estás en el camarote. En el Mediterráneo, donde estás en tierra casi todas las horas de luz, ese dinero suele rendir más en otra cosa."),
+            ("¿Qué región de crucero es más barata en total?", "Compara el viaje completo, no la tarifa del crucero. Para la mayoría de viajeros de EE.UU. el Caribe tiene el total más bajo porque los vuelos son cortos o innecesarios y un día de playa puede costar cero. Una tarifa mediterránea más barata puede salir más cara al sumar vuelos largos, noches de hotel y excursiones."),
+            ("¿La temporada de huracanes es motivo para evitar el Caribe?", "Es motivo para planificar, no para evitarlo. De junio a noviembre aumenta la probabilidad de tormentas, y por eso las tarifas bajan. Los barcos desvían la ruta con normalidad, así que lo habitual es un itinerario cambiado y no un viaje cancelado, y el seguro importa más en esa ventana."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🗺️", "How to choose a destination", "/en/guides/how-to-choose-a-destination/", "The wider version of this decision."),
+            ("🗓️", "When to cruise", "/en/guides/when-to-cruise/", "Season by season, region by region."),
+            ("🛏️", "Choosing a cabin", "/en/guides/choosing-a-cabin/", "Where a balcony earns its money."),
+            ("🧾", "What's included in a cruise fare", "/en/guides/whats-included/", "Comparing total trips, not fares."),
+        ],
+        "es": [
+            ("🗺️", "Cómo elegir un destino", "/es/guides/how-to-choose-a-destination/", "La versión amplia de esta decisión."),
+            ("🗓️", "Cuándo hacer un crucero", "/es/guides/when-to-cruise/", "Temporada a temporada, región a región."),
+            ("🛏️", "Elegir camarote", "/es/guides/choosing-a-cabin/", "Dónde rinde de verdad un balcón."),
+            ("🧾", "Qué incluye la tarifa", "/es/guides/whats-included/", "Comparar viajes completos, no tarifas."),
+        ],
+    },
+})

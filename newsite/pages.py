@@ -593,6 +593,10 @@ GUIDES = [
      "t": {"en": "When to cruise", "es": "Cuándo hacer un crucero"},
      "d": {"en": "Season by season, region by region, timing beats everything.",
            "es": "Temporada por temporada, región por región, el momento lo es todo."}},
+    {"slug": "caribbean-vs-alaska-vs-med", "emo": "⚖️",
+     "t": {"en": "Caribbean vs Alaska vs Med", "es": "Caribe vs Alaska vs Med"},
+     "d": {"en": "The three big regions compared on season, effort and what a day ashore asks.",
+           "es": "Las tres grandes regiones comparadas: temporada, esfuerzo y qué exige cada día."}},
     {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
      "t": {"en": "Groups & families", "es": "Grupos y familias"},
      "d": {"en": "Connecting cabins, kids' clubs, group dining and split payments, sorted.",
@@ -646,6 +650,7 @@ GUIDE_META = {
     "solo-cruising": {"cat": "who", "ctx": ["line", "ship"]},
     "how-to-choose-a-destination": {"cat": "dest", "ctx": ["home", "dest"]},
     "when-to-cruise": {"cat": "dest", "ctx": ["dest"]},
+    "caribbean-vs-alaska-vs-med": {"cat": "dest", "ctx": ["home", "dest"]},
     "groups-and-families": {"cat": "who", "ctx": ["ship", "line"]},
     "accessibility": {"cat": "who", "ctx": ["ship", "line"]},
 }
