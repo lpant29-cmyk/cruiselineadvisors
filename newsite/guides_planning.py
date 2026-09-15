@@ -1096,3 +1096,190 @@ register("cruise-glossary", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("port-days-vs-sea-days", {
+    "cat": "planning",
+    "hero": "port-days-vs-sea-days.jpg",
+    "published": "2026-09-15",
+    "updated": "2026-09-15",
+    "title": {
+        "en": "Port days vs sea days: what a cruise day is really like",
+        "es": "Días en puerto y días de navegación: cómo es de verdad un día de crucero",
+    },
+    "dek": {
+        "en": "Every itinerary is really a schedule of two kinds of day, and they feel nothing alike. "
+              "One is an early alarm and a deadline; the other has no shape at all until you give it one. "
+              "Knowing the mix before you book matters more than the ports on the list.",
+        "es": "Todo itinerario es en realidad un calendario de dos tipos de día, y no se parecen en nada. "
+              "Uno es despertador temprano y hora límite; el otro no tiene forma hasta que tú se la das. "
+              "Saber la mezcla antes de reservar importa más que la lista de puertos.",
+    },
+    "takeaways": {
+        "en": [
+            "A port day runs on the ship's clock, not yours. The ship posts an all-aboard time, usually around half an hour before it sails, and it does not wait.",
+            "A sea day is the one with no schedule, which is why it is either the best day of the trip or the one you waste.",
+            "Count the mix before you book. Same length, same region, same ship can still mean four port days or two.",
+            "Sea days are when the ship itself gets used, so a bigger ship earns its money on an itinerary that has more of them.",
+            "Ports are not equal: some docks put you in the middle of town, others leave you a long ride or a tender boat away.",
+            "The ship usually keeps its own time, and it does not always match the time ashore. Getting that wrong is how people miss the ship.",
+        ],
+        "es": [
+            "El día en puerto va con el reloj del barco, no con el tuyo. El barco fija una hora límite de regreso, normalmente media hora antes de zarpar, y no espera.",
+            "El día de navegación es el que no tiene horario, y por eso es el mejor día del viaje o el que se desperdicia.",
+            "Cuenta la mezcla antes de reservar. La misma duración, región y barco pueden significar cuatro días en puerto o dos.",
+            "En los días de navegación es cuando se usa el barco, así que uno más grande rinde más en un itinerario que tenga varios.",
+            "Los puertos no son iguales: unos te dejan en pleno centro, otros a un trayecto largo o a un bote de transbordo.",
+            "El barco suele mantener su propia hora, y no siempre coincide con la de tierra. Confundirlo es como se pierde la salida.",
+        ],
+    },
+    "sections": [
+        {"id": "port-day", "h2": {"en": "What a port day actually asks of you",
+                                  "es": "Qué te pide de verdad un día en puerto"},
+         "html": {
+            "en": "<p>A port day is the one with edges. The ship arrives at a set hour and leaves at a set "
+                  "hour, and everything you want to do has to fit between them.</p>"
+                  + vcards([
+                      ("⏰", "It starts early", "Arrival is often first thing in the morning, and the good excursions leave soon after. A port day is not a lie-in."),
+                      ("🚦", "All-aboard is a hard line", "The posted time is usually about half an hour before sailing, and it is set in ship's time. Independent travellers who miss it are responsible for catching up to the ship at the next port."),
+                      ("🚌", "The dock is not always the place", "Some ports put you at the edge of the old town. Others are industrial terminals a long shuttle from anywhere you would want to be."),
+                      ("⛴️", "Some ports need a tender", "Where there is no berth, small boats ferry you ashore. It works, but it adds queueing at both ends and is the first thing cancelled in rough water."),
+                  ])
+                  + tip("Build in a buffer you would find embarrassing. An hour back at the dock before "
+                        "all-aboard costs you very little and removes the single most expensive mistake "
+                        "available on a cruise."),
+            "es": "<p>El día en puerto es el que tiene bordes. El barco llega a una hora fija y sale a una "
+                  "hora fija, y todo lo que quieras hacer tiene que caber entre las dos.</p>"
+                  + vcards([
+                      ("⏰", "Empieza temprano", "La llegada suele ser a primera hora, y las mejores excursiones salen poco después. Un día en puerto no es para dormir hasta tarde."),
+                      ("🚦", "La hora de regreso no se negocia", "Suele ser media hora antes de zarpar, y en hora del barco. Quien va por libre y no llega debe alcanzar el barco en el siguiente puerto por su cuenta."),
+                      ("🚌", "El muelle no siempre es el sitio", "Unos puertos te dejan al borde del casco antiguo. Otros son terminales industriales a un buen trayecto de cualquier sitio interesante."),
+                      ("⛴️", "Algunos puertos requieren transbordo", "Donde no hay atraque, botes pequeños te llevan a tierra. Funciona, pero añade colas a la ida y a la vuelta, y es lo primero que se cancela con mar movido."),
+                  ])
+                  + tip("Deja un margen que te parezca exagerado. Volver al muelle una hora antes del "
+                        "límite cuesta muy poco y elimina el error más caro que se puede cometer en un crucero."),
+         }},
+        {"id": "sea-day", "h2": {"en": "What a sea day actually is",
+                                 "es": "Qué es de verdad un día de navegación"},
+         "html": {
+            "en": "<p>A sea day is a day with no fixed points in it. The ship is moving, there is nowhere "
+                  "to be, and what happens is entirely down to what you decide.</p>"
+                  + vcards([
+                      ("🛳️", "The ship gets used", "This is when the pools, the slides, the top-deck activities and the daytime shows are actually busy. On a port-heavy itinerary much of it sits empty."),
+                      ("😴", "It is the real rest", "No alarm, no deadline, no queue to get off. For a lot of people this is the entire reason they chose a cruise over a land holiday."),
+                      ("📅", "It is also the busiest programme", "Because everyone is on board, the daily schedule is at its fullest: talks, classes, tournaments, tastings. Read it the night before or the day drifts past."),
+                      ("💳", "It is when you spend", "Everyone is aboard with time on their hands, so this is when the drinks, the spa and the speciality restaurants sell. Worth knowing before it surprises you on the final statement."),
+                  ])
+                  + watch("<b>A sea day is the easiest day to waste.</b> With no structure imposed on you, "
+                          "it is entirely possible to reach the evening having done nothing you actually "
+                          "wanted to do. Pick two or three things from the daily programme in advance and "
+                          "the day tends to look after itself."),
+            "es": "<p>El día de navegación no tiene puntos fijos. El barco se mueve, no hay que estar en "
+                  "ningún sitio, y lo que pase depende por completo de lo que decidas.</p>"
+                  + vcards([
+                      ("🛳️", "Se usa el barco", "Es cuando las piscinas, los toboganes, las actividades de cubierta y los espectáculos de día se llenan de verdad. En un itinerario con muchos puertos, buena parte queda vacío."),
+                      ("😴", "Es el descanso real", "Sin despertador, sin hora límite, sin cola para bajar. Para mucha gente esta es toda la razón de elegir un crucero en vez de un viaje en tierra."),
+                      ("📅", "Y el programa más lleno", "Como todo el mundo está a bordo, la agenda diaria está al máximo: charlas, clases, torneos, catas. Léela la noche antes o el día se te escapa."),
+                      ("💳", "Es cuando se gasta", "Todos a bordo y con tiempo libre: es cuando se venden las bebidas, el spa y los restaurantes de especialidad. Conviene saberlo antes de ver la cuenta final."),
+                  ])
+                  + watch("<b>Es el día más fácil de desperdiciar.</b> Sin estructura impuesta, se puede "
+                          "llegar a la noche sin haber hecho nada de lo que querías. Elige dos o tres cosas "
+                          "del programa por adelantado y el día se ordena solo."),
+         }},
+        {"id": "the-mix", "h2": {"en": "Read the mix, not just the ports",
+                                 "es": "Lee la mezcla, no solo los puertos"},
+         "html": {
+            "en": "<p>Two sailings of the same length to the same region can be built completely "
+                  "differently, and the itinerary list is where you see it.</p>"
+                  + vcards([
+                      ("🗺️", "Port-heavy", "More places, less rest. Good if you are there to see things and do not mind early starts. It also means you are ashore, and spending ashore, most days."),
+                      ("🌊", "Sea-day-heavy", "Fewer places, more ship. Good for resting, for families who want the pools, and for anyone who finds a new port every morning tiring rather than exciting."),
+                      ("📍", "Where the sea days fall", "A sea day straight after embarkation settles you in. One before disembarkation lets you pack without losing a day ashore. Two back to back in the middle is a different trip again."),
+                  ])
+                  + "<p>Distance forces the mix as much as design does. Itineraries that reach further from "
+                  "the home port need sea days to cover the water, which is why longer sailings and remoter "
+                  "regions tend to have more of them. Our "
+                  + link("/en/guides/how-to-choose-a-destination/", "destination guide")
+                  + " covers how region and season interact with this.</p>",
+            "es": "<p>Dos salidas de la misma duración a la misma región pueden estar construidas de forma "
+                  "muy distinta, y la lista del itinerario es donde se ve.</p>"
+                  + vcards([
+                      ("🗺️", "Con muchos puertos", "Más sitios, menos descanso. Bien si vas a ver cosas y no te importa madrugar. También significa estar en tierra, y gastar en tierra, casi todos los días."),
+                      ("🌊", "Con muchos días de mar", "Menos sitios, más barco. Bien para descansar, para familias que quieren las piscinas, y para quien encuentra agotador un puerto nuevo cada mañana."),
+                      ("📍", "Dónde caen los días de mar", "Uno justo tras el embarque te ayuda a instalarte. Uno antes del desembarque te deja hacer la maleta sin perder un día en tierra. Dos seguidos a mitad son otro viaje distinto."),
+                  ])
+                  + "<p>La distancia impone la mezcla tanto como el diseño. Los itinerarios que se alejan "
+                  "más del puerto de salida necesitan días de mar para cubrir la distancia, y por eso los "
+                  "cruceros largos y las regiones remotas suelen tener más. Nuestra "
+                  + link("/es/guides/how-to-choose-a-destination/", "guía de destinos")
+                  + " explica cómo se combinan región y temporada.</p>",
+         }},
+        {"id": "ships-time", "h2": {"en": "Ship's time, and how people miss the ship",
+                                    "es": "La hora del barco, y cómo se pierde la salida"},
+         "html": {
+            "en": "<p>This is the one piece of practical knowledge that actually protects your trip, and "
+                  "it catches out experienced travellers as well as first-timers.</p>"
+                  + define("Ship's time",
+                           "The time the ship runs on, which is the time every posted schedule and "
+                           "all-aboard deadline refers to. When you sail into a different time zone the "
+                           "ship does not always change its clocks, so the time ashore and the time on "
+                           "board can differ. Your phone follows the local network. The ship does not.")
+                  + vcards([
+                      ("📵", "Do not trust your phone ashore", "It updates to local time automatically. If the ship has stayed on its own clock, your phone is now showing you a time the all-aboard deadline does not use."),
+                      ("🎟️", "Ship excursions are held for", "If an excursion you booked through the ship runs late, the ship knows where you are and waits. That is most of what you are paying the difference for."),
+                      ("🧭", "Independent is fine, with margin", "Going it alone is usually cheaper and often better. It just moves the risk onto you, so leave a real buffer and carry the ship's port agent details."),
+                  ])
+                  + tip("Check the daily programme each evening for the next day's arrival and all-aboard "
+                        "times, and whether the ship is changing its clocks overnight. It is printed there "
+                        "precisely because it changes."),
+            "es": "<p>Este es el dato práctico que de verdad protege tu viaje, y pilla tanto a viajeros "
+                  "expertos como a primerizos.</p>"
+                  + define("Hora del barco",
+                           "La hora con la que funciona el barco, a la que se refieren todos los horarios "
+                           "publicados y la hora límite de regreso. Al navegar a otra zona horaria el barco "
+                           "no siempre cambia sus relojes, así que la hora en tierra y a bordo pueden no "
+                           "coincidir. Tu móvil sigue a la red local. El barco no.")
+                  + vcards([
+                      ("📵", "No te fíes del móvil en tierra", "Se actualiza solo a la hora local. Si el barco mantiene su propio reloj, tu móvil te está mostrando una hora que la hora límite no usa."),
+                      ("🎟️", "Las excursiones del barco sí se esperan", "Si una excursión contratada con el barco se retrasa, el barco sabe dónde estás y espera. Eso es buena parte de lo que pagas de más."),
+                      ("🧭", "Por libre está bien, con margen", "Ir por tu cuenta suele salir más barato y a menudo es mejor. Solo traslada el riesgo a ti: deja margen real y lleva los datos del agente portuario del barco."),
+                  ])
+                  + tip("Mira cada noche el programa del día siguiente: hora de llegada, hora límite de "
+                        "regreso y si el barco cambia los relojes de madrugada. Está impreso ahí "
+                        "precisamente porque cambia."),
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("What is a sea day on a cruise?", "A sea day is a full day when the ship is sailing and does not call at a port. There is no schedule to keep, so the ship's own facilities carry the day: pools, top-deck activities, talks, classes and daytime entertainment all run at their fullest because everyone is on board."),
+            ("Are sea days boring?", "They are the busiest day on the ship's programme, so there is usually far more on offer than on a port day. Whether they suit you depends on what you want from the trip: if you are cruising to rest, sea days are the point, and if you are cruising to see places, an itinerary with fewer of them will fit you better."),
+            ("How many sea days will my cruise have?", "It varies a lot, even between sailings of the same length in the same region, because distance from the home port forces the mix. The itinerary list for your specific sailing shows it day by day. Longer cruises and more remote regions generally carry more sea days."),
+            ("What happens if I miss the all-aboard time?", "The ship sails. If you were on an excursion booked through the ship it will normally wait, because it knows where you are. If you went independently, reaching the next port is your responsibility and your cost, which is why leaving a generous buffer matters."),
+            ("What is ship's time and why does it matter?", "It is the time the ship runs on, and every posted schedule and all-aboard deadline uses it. Sailing into a new time zone does not always mean the ship changes its clocks, so the time ashore and on board can differ while your phone quietly follows the local network. Check the daily programme each evening."),
+            ("Is a port day or a sea day better for families?", "Most families find a mix works best. Sea days are when the pools, waterslides and kids' clubs are in full swing and nobody has to be anywhere at a set hour. Port days can be excellent with children too, but they mean early starts, queues to get ashore and a deadline to get back."),
+        ],
+        "es": [
+            ("¿Qué es un día de navegación en un crucero?", "Es un día completo en el que el barco navega y no hace escala en ningún puerto. No hay horario que cumplir, así que las instalaciones del barco llevan el día: piscinas, actividades de cubierta, charlas, clases y entretenimiento diurno funcionan al máximo porque todo el mundo está a bordo."),
+            ("¿Son aburridos los días de navegación?", "Son el día con el programa más lleno del barco, así que suele haber mucho más que hacer que en un día en puerto. Que te encajen depende de qué quieras del viaje: si navegas para descansar, son justo el objetivo; si navegas para ver sitios, te convendrá un itinerario con menos."),
+            ("¿Cuántos días de navegación tendrá mi crucero?", "Varía mucho, incluso entre salidas de la misma duración y región, porque la distancia desde el puerto de salida impone la mezcla. La lista del itinerario de tu salida concreta lo muestra día a día. Los cruceros largos y las regiones remotas suelen llevar más."),
+            ("¿Qué pasa si no llego a la hora límite de regreso?", "El barco zarpa. Si estabas en una excursión contratada con el barco, normalmente espera, porque sabe dónde estás. Si fuiste por tu cuenta, llegar al siguiente puerto es tu responsabilidad y tu gasto, y por eso conviene dejar un margen amplio."),
+            ("¿Qué es la hora del barco y por qué importa?", "Es la hora con la que funciona el barco, y a ella se refieren todos los horarios y la hora límite de regreso. Navegar a otra zona horaria no siempre implica que el barco cambie sus relojes, así que la hora en tierra y a bordo pueden diferir mientras tu móvil sigue a la red local. Mira el programa cada noche."),
+            ("¿Es mejor día en puerto o de navegación para familias?", "A la mayoría de familias les funciona mejor una mezcla. En los días de mar las piscinas, los toboganes y los clubes infantiles están a pleno rendimiento y nadie tiene que estar en ningún sitio a una hora fija. Los días en puerto también pueden ser estupendos con niños, pero implican madrugar, colas para bajar y una hora límite."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🧭", "First-time cruisers", "/en/guides/first-time-cruisers/", "What nobody tells you before you sail."),
+            ("🗺️", "How to choose a destination", "/en/guides/how-to-choose-a-destination/", "Region and season set the day mix."),
+            ("🧾", "What's included", "/en/guides/whats-included/", "What sea days quietly add to the bill."),
+            ("👨‍👩‍👧", "Groups & families", "/en/guides/groups-and-families/", "Which days actually suit children."),
+        ],
+        "es": [
+            ("🧭", "Primer crucero", "/es/guides/first-time-cruisers/", "Lo que nadie te cuenta antes de zarpar."),
+            ("🗺️", "Cómo elegir un destino", "/es/guides/how-to-choose-a-destination/", "La región y la temporada fijan la mezcla."),
+            ("🧾", "Qué se incluye", "/es/guides/whats-included/", "Lo que los días de mar suman a la cuenta."),
+            ("👨‍👩‍👧", "Grupos y familias", "/es/guides/groups-and-families/", "Qué días encajan de verdad con niños."),
+        ],
+    },
+})

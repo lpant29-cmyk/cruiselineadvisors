@@ -232,5 +232,16 @@
     "subject": "Blue tidewater glacier face below rugged snow-capped mountains in Alaska",
     "note": "Landscape 1600x887, resized and recompressed from the Pexels 3200px file. Inspected at full resolution including zoomed crops: no ship, vessel, person, signage or text anywhere in frame, so no cruise line or ship branding is visible.",
     "downloaded": "2026-08-13"
+  },
+  "port-days-vs-sea-days": {
+    "file": "newsite/assets/guides/port-days-vs-sea-days.jpg",
+    "source": "pexels",
+    "photographer": "Timmy Siik (@timmy-siik-65954192)",
+    "photo_page": "https://www.pexels.com/photo/8347886/",
+    "image_url": "https://images.pexels.com/photos/8347886/pexels-photo-8347886.jpeg",
+    "license": "Pexels License (free for commercial use, no attribution required)",
+    "subject": "A ship's wake trailing away across deep blue open ocean to an empty horizon under a clear sky, seen looking astern from the vessel",
+    "note": "Landscape 1600x900, resized and recompressed from the Pexels 3840x2160 original. Inspected at full resolution in zoomed quadrant crops of the horizon band and the near foreground: the frame contains only water and sky, with no vessel structure, deck fitting, person, land, signage or lettering anywhere, so no cruise line or ship branding is visible. Chosen for the sea-day half of the guide; two stronger-composition candidates were rejected first, one for legible operator lettering on its tenders and one for a painted lifeboat-station marking.",
+    "downloaded": "2026-09-15"
   }
 }

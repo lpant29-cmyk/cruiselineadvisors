@@ -86,7 +86,7 @@ All ten below are DONE (rich + bilingual + validated). ✅ live · 🟣 built, a
 |---|---|---|---|---|
 | ⬜ | P1 | How to choose a cruise destination | `how-to-choose-a-destination` | how to choose a cruise destination |
 | ✅ | P2 | Caribbean vs Alaska vs Mediterranean: how to decide | `caribbean-vs-alaska-vs-med` | caribbean vs alaska cruise |
-| ⬜ | P3 | Port days vs sea days | `port-days-vs-sea-days` | port days vs sea days |
+| ✅ | P3 | Port days vs sea days | `port-days-vs-sea-days` | port days vs sea days |
 | ⬜ | P3 | Repositioning cruises, explained | `repositioning-cruises` | repositioning cruise |
 
 ### Pillar F — Safety, scams & consumer protection  *(trust / high E-E-A-T)*

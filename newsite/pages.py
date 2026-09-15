@@ -597,6 +597,10 @@ GUIDES = [
      "t": {"en": "Caribbean vs Alaska vs Med", "es": "Caribe vs Alaska vs Med"},
      "d": {"en": "The three big regions compared on season, effort and what a day ashore asks.",
            "es": "Las tres grandes regiones comparadas: temporada, esfuerzo y qué exige cada día."}},
+    {"slug": "port-days-vs-sea-days", "emo": "⚓",
+     "t": {"en": "Port days vs sea days", "es": "Puerto o navegación"},
+     "d": {"en": "The two kinds of cruise day, and why the mix matters more than the ports.",
+           "es": "Los dos tipos de día a bordo, y por qué la mezcla importa más que los puertos."}},
     {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
      "t": {"en": "Groups & families", "es": "Grupos y familias"},
      "d": {"en": "Connecting cabins, kids' clubs, group dining and split payments, sorted.",
@@ -651,6 +655,7 @@ GUIDE_META = {
     "how-to-choose-a-destination": {"cat": "dest", "ctx": ["home", "dest"]},
     "when-to-cruise": {"cat": "dest", "ctx": ["dest"]},
     "caribbean-vs-alaska-vs-med": {"cat": "dest", "ctx": ["home", "dest"]},
+    "port-days-vs-sea-days": {"cat": "planning", "ctx": ["home", "ship"]},
     "groups-and-families": {"cat": "who", "ctx": ["ship", "line"]},
     "accessibility": {"cat": "who", "ctx": ["ship", "line"]},
 }
