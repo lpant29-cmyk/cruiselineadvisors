@@ -249,8 +249,8 @@ _BULK = {
                              "es": "Pasaporte obligatorio para internacional; acta de nacimiento + identificación con foto en ciertos cruceros de ida y vuelta desde EE.UU. (Alaska, Canadá/Nueva Inglaterra, Caribe, Hawái, México)."},
                             "https://www.princess.com/en-int/faq/pre-cruise"),
     # Cunard (D & E flagged by user, left as gaps)
-    ("cunard", "included"): ({"en": "Included: main dining, buffet, gala nights, tea/coffee/juice/water, entertainment, enrichment (library, classes, gym, pools, kids' clubs). Extra: alcohol, specialty dining, Wi-Fi, spa.",
-                               "es": "Incluye: comedor principal, buffet, noches de gala, té/café/jugo/agua, entretenimiento, enriquecimiento (biblioteca, clases, gimnasio, piscinas, clubes infantiles). Extra: alcohol, restaurantes especiales, Wi-Fi, spa."},
+    ("cunard", "included"): ({"en": "Included: main dining, buffet, gala nights, tea/coffee/juice/water, entertainment, enrichment (library, classes, gym, pools, kids' clubs), basic My Voyage app access. Extra: alcohol, specialty dining, full Wi-Fi packages, spa.",
+                               "es": "Incluye: comedor principal, buffet, noches de gala, té/café/jugo/agua, entretenimiento, enriquecimiento (biblioteca, clases, gimnasio, piscinas, clubes infantiles), acceso básico a la app My Voyage. Extra: alcohol, restaurantes especiales, paquetes completos de Wi-Fi, spa."},
                               "https://www.cunard.com/en-gb/the-cunard-experience/whats-included"),
     ("cunard", "drink_pkg"): ({"en": "Yes, 'A World of Drinks' must be bought by all guests of legal drinking age (18+) in the stateroom (exceptions for pregnancy/medical).",
                                 "es": "Sí, 'A World of Drinks' debe comprarse por todos los adultos en edad legal (18+) del camarote (excepciones por embarazo/médicas)."},
@@ -270,7 +270,7 @@ _BULK = {
     # MSC (D & E flagged by user, left as gaps)
     ("msc", "included"): ({"en": "Included: main & buffet dining, entertainment, pools/sports/gym, kids & teens clubs. Extra: specialty dining, drinks, Wi-Fi, spa.",
                             "es": "Incluye: comedor principal y buffet, entretenimiento, piscinas/deportes/gimnasio, clubes de niños y adolescentes. Extra: restaurantes especiales, bebidas, Wi-Fi, spa."},
-                           "https://www.msccruisesusa.com/on-board"),
+                           "https://www.msccruisesusa.com/on-board/dining-drinks"),
     ("msc", "drink_pkg"): ({"en": "Underage guests must buy the Minors Package if an adult in the cabin has a drinks package.",
                              "es": "Los menores deben comprar el Paquete de Menores si un adulto del camarote tiene paquete de bebidas."},
                             "https://www.msccruisesusa.com/on-board/dining-drinks/drinks-packages"),
@@ -395,6 +395,40 @@ for _s in LINE_FACTS:
     for _k, _v in _GENERAL.items():
         if not LINE_FACTS[_s][_k]["v"]:
             LINE_FACTS[_s][_k] = {"v": _v, "src": None, "verified": "2026-07-18", "general": True}
+
+# ── 30-day re-verification, 2026-09-15 ──────────────────────────────────────
+# Read on each line's own site this date and confirmed against the page before
+# stamping. Applied here rather than at the definitions because several of
+# these live in _BULK, which stamps its whole set at once.
+#
+# Retrieval notes recorded for the audit trail:
+#   princess  gratuities: princess.com served en-int for an en-us request. The
+#             page labels its figures "Amounts shown above are in USD" and the
+#             session country was United States. AMOUNTS CONFIRMED UNCHANGED at
+#             $20/$19/$18. The en-int page labels the middle tier "Club Class",
+#             but our own verified cabin taxonomy (data/cruise-lines.json and
+#             data/ships/princess.json) calls that tier "Reserve Collection",
+#             and those render on the same site. Two official Princess pages
+#             therefore disagree on the label while agreeing on the amount, so
+#             the label is LEFT AS-IS for site-wide consistency rather than
+#             switched on the strength of a non-US page. Settle against a US
+#             princess.com page before changing it.
+#   cunard    both: cunard.com served en-gb for an en-us request, but quotes the
+#             service charge in US dollars explicitly. Same locale caveat as the
+#             deposit/cancel facts already carry.
+#   msc       both: msccruisesusa.com geo-redirects browsers to the EU site, so
+#             these were read from the live HTML of the official US URLs direct
+#             from MSC's own server. Official first-party source, different
+#             retrieval route, no snippet or third party involved.
+#   carnival  gratuities: value confirmed ($17 standard / $19 suite) but the
+#             reporting conflated two help-centre answers under one a_id, so the
+#             recorded src is left pointing at the topic page rather than being
+#             overwritten with a URL that may address the wrong answer.
+for _ln, _fld in [("carnival", "gratuities"), ("carnival", "included"),
+                  ("princess", "gratuities"), ("princess", "included"),
+                  ("cunard", "gratuities"), ("cunard", "included"),
+                  ("msc", "gratuities"), ("msc", "included")]:
+    LINE_FACTS[_ln][_fld]["verified"] = "2026-09-15"
 
 
 def fact_value(slug, key, lang):
