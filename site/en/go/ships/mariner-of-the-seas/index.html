@@ -579,8 +579,8 @@ footer a{color:#BDE0E5}
 const PAGE = {"type": "ship", "id": "p008", "h1": "Mariner of the Seas: Cruises, Cabins and What's Onboard", "shipName": "Mariner of the Seas", "cls": "Voyager class (Royal Amplified)", "tier": "large", "line": "royal-caribbean", "ship": "mariner-of-the-seas", "lineLabel": "Royal Caribbean"};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-const STAMP = "2026-08-15";
-const pricesCheckedOn = "August 15";
+const STAMP = "2026-09-15";
+const pricesCheckedOn = "September 15";
 const HERO = {"src": "/img/lp/ship-generic/ship-hero-hero.webp", "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud", "w": 1600, "h": 1125};
 const GLANCE = {"cls": "Voyager class (Royal Amplified)", "year": 2003, "tonnage": 139863, "guests": 3344, "features": ["Royal Escape Room", "FlowRider", "The Perfect Storm", "Laser Tag"], "overview": "A Royal Amplified Voyager-class ship blending signature thrills with an expanded dining and bar lineup.", "whoFor": "Families and groups wanting the FlowRider, twin Perfect Storm waterslides (Cyclone and Typhoon), mini golf and laser tag, plus adults drawn to a varied bar and lounge scene."};
 const INCLUDED = {"taxes": "Taxes and fees included in the listed fare", "deposit": {"rows": [{"len": "1-5 nights", "amt": "$100 pp"}, {"len": "6-9 nights", "amt": "$250 pp"}, {"len": "10-14 nights", "amt": "$450 pp"}, {"len": "15+ nights", "amt": "$500 pp"}], "pay": [{"len": "1-4 nights", "due": "75 days before sailing"}, {"len": "5-14 nights", "due": "90 days before sailing"}, {"len": "15+ nights", "due": "120 days before sailing"}], "prose": "Bermuda sailings always $250 pp. Suite deposits are 10% of the cruise fare or the standard amount, whichever is higher."}, "kids": "Adventure Ocean youth program covers ages 3-17 with separate programs per age group; on ships that carry the Royal Babies & Tots nursery it takes 6-36 month olds for an extra fee", "incDining": ["Main Dining Room"], "extraDining": ["Johnny Rockets", "Playmakers Bar & Arcade", "Jamie's Italian by Jamie Oliver", "Izumi"]};
@@ -661,22 +661,77 @@ const SHOPPING = {"desc": "Onboard shopping is listed on the ship's official thi
 const IMGS = {"dining": {"src": "/img/lp/ship-generic/dining-section.webp", "alt": "Three friends talking over dinner and wine at an elegantly set restaurant table in warm lamplight", "w": 1200, "h": 743}, "bars": {"src": "/img/lp/ship-generic/lounge-bar-section.webp", "alt": "Two friends toasting cocktails on a leather sofa in a dimly lit evening lounge", "w": 1200, "h": 1801}, "activities": {"src": "/img/lp/ship-generic/ship-sports-section.webp", "alt": "Climbers on a ship's outdoor rock wall above curved rows of brightly coloured open air seating, with a spiral waterslide alongside", "w": 1200, "h": 900}, "kids": {"src": "/img/lp/ship-generic/ship-waterslide-section.webp", "alt": "Blue and orange spiral waterslides coiling above a ship's upper deck in the last light of the evening", "w": 1200, "h": 1553}, "spa": {"src": "/img/lp/ship-generic/ship-interior-section.webp", "alt": "A glass-domed indoor pool on a ship, with a blue and green mosaic wave wall, two whirlpools and rows of empty loungers", "w": 1200, "h": 1040}, "cabins": {"src": "/img/lp/ship-generic/ship-balcony-section.webp", "alt": "Looking forward along a ship's open teak promenade deck at dusk, past the rail to calm water and a fading sunset", "w": 1200, "h": 900}};
 const SAILINGS = [
  {
-  "id": "i0005",
-  "name": "5-Night Western Caribbean",
-  "nights": 5,
+  "id": "i0008",
+  "name": "4-Night Western Caribbean",
+  "nights": 4,
   "portLabel": "Galveston TX",
   "months": [
-   "2026-08",
    "2026-09",
    "2026-10"
   ],
-  "from": 399,
-  "stamp": "2026-08-15",
+  "from": 319,
+  "stamp": "2026-09-15",
   "img": {
    "src": "/img/lp/ship-generic/ship-hero-card.webp",
    "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
    "w": 800,
    "h": 562
+  },
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "3:00 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "cozumel",
+    "arr": "7:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 4,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 5,
+    "p": "galveston",
+    "arr": "7:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "oneWay": false
+ },
+ {
+  "id": "i0005",
+  "name": "5-Night Western Caribbean",
+  "nights": 5,
+  "portLabel": "Galveston TX",
+  "months": [
+   "2026-09",
+   "2026-10"
+  ],
+  "from": 418,
+  "stamp": "2026-09-15",
+  "img": {
+   "src": "/img/lp/ship-generic/ship-bow-card.webp",
+   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
+   "w": 800,
+   "h": 1067
   },
   "days": [
    {
@@ -724,63 +779,6 @@ const SAILINGS = [
   ],
   "oneWay": false,
   "detailUrl": "/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/"
- },
- {
-  "id": "i0008",
-  "name": "4-Night Western Caribbean",
-  "nights": 4,
-  "portLabel": "Galveston TX",
-  "months": [
-   "2026-08",
-   "2026-09",
-   "2026-10"
-  ],
-  "from": 472,
-  "stamp": "2026-08-15",
-  "img": {
-   "src": "/img/lp/ship-generic/ship-bow-card.webp",
-   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
-   "w": 800,
-   "h": 1067
-  },
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "3:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "cozumel",
-    "arr": "7:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 4,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 5,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "oneWay": false
  }
 ];
 const PORTS = {"costa-maya": {"label": "Costa Maya Mexico", "short": "Costa Maya", "blurb": "", "story": "", "cur": []}, "cozumel": {"label": "Cozumel Mexico", "short": "Cozumel", "blurb": "Mexico's busiest cruise island is famous for reef snorkeling beach clubs and an easy walkable port area.", "story": "Mexico's busiest cruise island is famous for reef snorkeling beach clubs and an easy walkable port area.", "cur": ["USD", "MXN"]}, "galveston": {"label": "Galveston TX", "short": "Galveston", "blurb": "Texas cruising without the flight: three terminals on the Gulf a drive from the entire region with parking lots and seawall hotels built around the cruise routine.", "story": "Texas cruising without the flight: three terminals on the Gulf a drive from the entire region with parking lots and seawall hotels built around the cruise routine.", "cur": ["USD"]}};
