@@ -76,13 +76,13 @@ LINE_FACTS["royal-caribbean"]["gratuities"] = {
     "v": {"en": "$21.00/day in suites; $18.50/day in all other staterooms (per guest)",
           "es": "$21.00/día en suites; $18.50/día en los demás camarotes (por huésped)"},
     "src": "https://www.royalcaribbean.com/faq/questions/onboard-service-gratuity-expense",
-    "verified": "2026-07-18",
+    "verified": "2026-09-15",
 }
 LINE_FACTS["celebrity"]["gratuities"] = {
-    "v": {"en": "$18.00/day standard (Inside/Oceanview/Veranda); $19.00/day Concierge & AquaClass; $23.00/day The Retreat suites (per guest)",
-          "es": "$18.00/día estándar (Inside/Oceanview/Veranda); $19.00/día Concierge y AquaClass; $23.00/día suites The Retreat (por huésped)"},
+    "v": {"en": "$19.50/day standard (Inside/Oceanview/Veranda); $20.50/day Concierge & AquaClass; $24.50/day The Retreat suites (per guest)",
+          "es": "$19.50/día estándar (Inside/Oceanview/Veranda); $20.50/día Concierge y AquaClass; $24.50/día suites The Retreat (por huésped)"},
     "src": "https://www.celebritycruises.com/faqs/gratuity-program",
-    "verified": "2026-07-18",
+    "verified": "2026-09-15",
 }
 LINE_FACTS["celebrity"]["drink_pkg"] = {
     "v": {"en": "All guests of legal drinking age in the same stateroom must buy the same alcoholic package (exceptions for children, teens with a zero-proof package, and pregnant/medical cases).",
@@ -96,7 +96,7 @@ LINE_FACTS["holland-america"]["gratuities"] = {
     "v": {"en": "$20.00/day for suites; $18.00/day for all other staterooms (per guest, Crew Appreciation)",
           "es": "$20.00/día en suites; $18.00/día en los demás camarotes (por huésped, Crew Appreciation)"},
     "src": "https://www.hollandamerica.com/en/us/faq/onboard-cruise-experience/onboard-information/is-there-a-crew-appreciation-charge-gratuity-tip",
-    "verified": "2026-07-18",
+    "verified": "2026-09-15",
 }
 LINE_FACTS["holland-america"]["drink_pkg"] = {
     "v": {"en": "All guests of legal drinking age in the same stateroom must buy the same package for the whole cruise (Signature or Elite).",
@@ -122,10 +122,10 @@ LINE_FACTS["holland-america"]["kids"] = {
     "src": "https://www.hollandamerica.com/en/us/faq/cruise-planning/family-travel/is-there-a-minimum-age-for-cruising-on-holland-america-line",
     "verified": "2026-07-18"}
 LINE_FACTS["margaritaville-at-sea"]["gratuities"] = {
-    "v": {"en": "$25.00/night for suites; $22.00/night for Interior & Ocean View (per person)",
-          "es": "$25.00/noche en suites; $22.00/noche en Interior y Ocean View (por persona)"},
+    "v": {"en": "$25.00/night for Suites; $22.00/night for all other staterooms (per person)",
+          "es": "$25.00/noche en Suites; $22.00/noche en los demás camarotes (por persona)"},
     "src": "https://www.margaritavilleatsea.com/policies/onboard-charges",
-    "verified": "2026-07-18",
+    "verified": "2026-09-15",
 }
 # 2026-07-18, user-supplied from each official page (fetch tool couldn't read these).
 LINE_FACTS["carnival"]["gratuities"] = {
@@ -310,11 +310,11 @@ LINE_FACTS["holland-america"]["wifi"] = {
 LINE_FACTS["royal-caribbean"]["included"] = {
     "v": {"en": "Included: main dining & buffet, casual venues, water/tea/select juices/classic coffee, pools & whirlpools, thrill activities, fitness centre, Adventure Ocean youth program, shows & entertainment, private-destination access. Extra: beverage packages, specialty dining, shore excursions, Wi-Fi, spa, arcade, casino.",
           "es": "Incluye: comedor principal y buffet, opciones casuales, agua/té/jugos selectos/café clásico, piscinas y jacuzzis, actividades de aventura, gimnasio, programa juvenil Adventure Ocean, espectáculos y entretenimiento, acceso a destinos privados. Extra: paquetes de bebidas, restaurantes especiales, excursiones, Wi-Fi, spa, arcade, casino."},
-    "src": "https://www.royalcaribbean.com/faq/questions/cruise-vacation-price", "verified": "2026-07-18"}
+    "src": "https://www.royalcaribbean.com/faq/questions/cruise-vacation-price", "verified": "2026-09-15"}
 LINE_FACTS["celebrity"]["included"] = {
-    "v": {"en": "Main dining, entertainment, pools and fitness are included. The optional 'All Included' rate adds a Classic Drinks Package, Basic Wi-Fi and tips; otherwise drinks, Wi-Fi and specialty dining cost extra.",
-          "es": "Comedor principal, entretenimiento, piscinas y gimnasio incluidos. La tarifa opcional 'All Included' añade un Classic Drinks Package, Basic Wi-Fi y propinas; de lo contrario bebidas, Wi-Fi y restaurantes especiales son extra."},
-    "src": "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/all-included", "verified": "2026-07-18"}
+    "v": {"en": "Main dining, entertainment, pools and fitness are included. The optional 'All Included' rate adds a Classic Drinks Package and unlimited Basic Wi-Fi, and can only be added at the time of booking; otherwise drinks, Wi-Fi and specialty dining cost extra.",
+          "es": "Comedor principal, entretenimiento, piscinas y gimnasio incluidos. La tarifa opcional 'All Included' añade un Classic Drinks Package y Wi-Fi básico ilimitado, y solo puede contratarse al reservar; de lo contrario bebidas, Wi-Fi y restaurantes especiales son extra."},
+    "src": "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/all-included", "verified": "2026-09-15"}
 LINE_FACTS["margaritaville-at-sea"]["deposit"] = {
     "v": {"en": "Final payment: 76 days before sailing (2-5 nights); 91 days (6-7 nights); 121 days (8+ nights).",
           "es": "Pago final: 76 días antes (2-5 noches); 91 días (6-7 noches); 121 días (8+ noches)."},
@@ -336,7 +336,7 @@ LINE_FACTS["holland-america"]["included"] = {
     "v": {"en": "Dining and entertainment are included, and all taxes/fees are in the advertised fare. Extra: shore excursions, spa, beverage packages, Wi-Fi, specialty dining.",
           "es": "Comida y entretenimiento incluidos, y todos los impuestos/tasas están en la tarifa anunciada. Extra: excursiones, spa, paquetes de bebidas, Wi-Fi, restaurantes especiales."},
     "src": "https://www.hollandamerica.com/en/us/faq/cruise-planning/general-information/how-much-does-it-cost-to-go-on-a-cruise",
-    "verified": "2026-07-18"}
+    "verified": "2026-09-15"}
 LINE_FACTS["margaritaville-at-sea"]["drink_pkg"] = {
     "v": {"en": "Yes, all guests 21+ in the same stateroom must buy the beverage package (limited exceptions for documented medical conditions).",
           "es": "Sí, todos los adultos 21+ del mismo camarote deben comprar el paquete de bebidas (excepciones limitadas por condiciones médicas documentadas)."},
@@ -374,7 +374,7 @@ LINE_FACTS["msc"]["cancel"] = {
 LINE_FACTS["margaritaville-at-sea"]["included"] = {
     "v": {"en": "Main dining, buffet and entertainment are included. Extra: specialty dining, drinks, Wi-Fi, spa and gratuities.",
           "es": "Comedor principal, buffet y entretenimiento incluidos. Extra: restaurantes especiales, bebidas, Wi-Fi, spa y propinas."},
-    "src": "https://www.margaritavilleatsea.com/policies/faq", "verified": "2026-07-18"}
+    "src": "https://www.margaritavilleatsea.com/policies/faq", "verified": "2026-09-15"}
 LINE_FACTS["margaritaville-at-sea"]["loyalty"] = {
     "v": {"en": "No general cruise-loyalty tier programme; a casino Players Club is available.",
           "es": "Sin programa general de fidelidad por niveles; hay un Players Club de casino."},
