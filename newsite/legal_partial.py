@@ -17,8 +17,8 @@ from config import BRAND
 DISC = {
     "en": [
         ("What we are", f"{BRAND} is a marketing and referral service. We are not a cruise line, "
-         "travel agency, tour operator or seller of travel. We do not sell, book, ticket or take "
-         "payment for travel, and we do not set prices or hold inventory. Calls may be connected to "
+         "travel agency or tour operator, and we are not an agent of any cruise line. We do not sell, "
+         "book, ticket or take payment for cruise travel, and we do not set prices or hold inventory. Calls may be connected to "
          "one of several independent, licensed third-party travel agencies, and we may receive a "
          "referral fee. All quotes, bookings and customer service are provided by that agency under its own terms."),
         ("Trademarks", "All cruise line names, ship names and marks are the property of their respective "
@@ -37,8 +37,9 @@ DISC = {
     ],
     "es": [
         ("Qué somos", f"{BRAND} es un servicio de marketing y referencia. No somos una línea de crucero, "
-         "agencia de viajes, operador turístico ni vendedor de viajes. No vendemos, reservamos, emitimos "
-         "boletos ni cobramos por viajes, y no fijamos precios ni tenemos inventario. Las llamadas pueden "
+         "agencia de viajes ni operador turístico, y no somos agentes de ninguna línea de crucero. No "
+         "vendemos, reservamos, emitimos boletos ni cobramos por viajes en crucero, y no fijamos precios "
+         "ni tenemos inventario. Las llamadas pueden "
          "conectarse con una de varias agencias de viajes independientes y con licencia, y podemos recibir "
          "una comisión de referencia. Todas las cotizaciones, reservas y atención al cliente las proporciona "
          "esa agencia según sus propios términos."),

@@ -20,13 +20,13 @@ LEGAL = {
         "sec": [
             ({"en": "What we are", "es": "Qué somos"},
              {"en": f"{BRAND} is a marketing and referral service. We are not a cruise line, travel agency, tour "
-                    "operator or seller of travel. We do not sell, book, ticket or take payment for travel, and we do "
+                    "operator, and we are not an agent of any cruise line. We do not sell, book, ticket or take payment for cruise travel, and we do "
                     "not set prices or hold inventory. When you call, you may be connected to one of several independent, "
                     "licensed third-party travel agencies. All quotes, bookings, payments and customer service are "
                     "provided by that agency under its own terms, and we may receive a referral fee.",
               "es": f"{BRAND} es un servicio de marketing y referencia. No somos una línea de crucero, agencia de "
-                    "viajes, operador turístico ni vendedor de viajes. No vendemos, reservamos, emitimos boletos ni "
-                    "cobramos por viajes, y no fijamos precios ni tenemos inventario. Cuando llamas, puedes ser "
+                    "viajes ni operador turístico, y no somos agentes de ninguna línea de crucero. No vendemos, "
+                    "reservamos, emitimos boletos ni cobramos por viajes en crucero, y no fijamos precios ni tenemos inventario. Cuando llamas, puedes ser "
                     "conectado con una de varias agencias de viajes independientes y con licencia. Todas las "
                     "cotizaciones, reservas, pagos y atención al cliente los proporciona esa agencia según sus propios "
                     "términos, y podemos recibir una comisión de referencia."}),

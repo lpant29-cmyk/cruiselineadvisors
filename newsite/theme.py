@@ -829,6 +829,23 @@ a.rt-card:hover{transform:translateY(-2px)}
 .ftr .disc p{margin-bottom:.6rem}
 .ftr .legalrow{display:flex;flex-wrap:wrap;gap:.4em 1em;margin-top:.4rem}
 
+/* operator credential badges (ASTA + FL Seller of Travel). The credentials
+   belong to the operating entity, so the row leads with "Operated by". */
+.trustbadges{margin-top:1rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.1)}
+.tb-op{margin-bottom:.6rem;color:#87B0BA;font-size:.75rem}
+.tb-op b{color:#CDE7EB}
+.tb-row{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.1rem}
+.ftr .tb{display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .8rem;border-radius:10px;
+  background:rgba(255,255,255,.95);text-decoration:none;line-height:1.2;transition:transform .15s ease,box-shadow .15s ease}
+.ftr .tb:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ftr .tb:focus-visible{outline:2px solid #E0A84E;outline-offset:2px}
+.tb-asta img{display:block;width:auto;height:30px;max-width:100%}
+.tb-cap{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ftr .tb-fsot{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
+.ftr .tb-fsot:hover{background:rgba(255,255,255,.14)}
+.tb-fsot-txt{color:#CDE7EB;font-size:.76rem;font-weight:700;letter-spacing:.01em}
+@media(min-width:900px){.tb-asta img{height:34px}}
+
 /* sticky mobile call */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:flex;align-items:center;gap:12px;background:rgba(8,44,66,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.12);padding:9px 14px;box-shadow:0 -8px 24px rgba(0,0,0,.22)}
 .callbar .cbtxt{flex:1;min-width:0;color:#fff;line-height:1.15}

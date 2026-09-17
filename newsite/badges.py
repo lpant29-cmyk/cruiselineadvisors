@@ -75,3 +75,47 @@ def verified_seal(lang, date=None):
         f'<line x1="91" y1="114" x2="109" y2="114"/>'
         f'<path d="M87 120 Q100 132 113 120 M87 120 L84 115 M113 120 L116 115"/></g>'
         f'</svg></span>')
+
+
+# ── Operator credential badges (2026-09-17) ────────────────────────────────
+# ASTA membership and the Florida Seller of Travel registration are held by the
+# OPERATING ENTITY (BookMeCheapest LLC), not by the CruiseLine Advisors referral
+# service. The wording below is deliberate: it says "Operated by ... " so the
+# credential attaches to the company, and never implies that this site sells,
+# books or takes payment for cruise travel. Both badges link out to the issuer's
+# own public lookup so a visitor can check them rather than take our word.
+#
+# Hard Rule 5 applies: these are real registrations, never decoration. If either
+# lapses, remove it the same day. We show no ASTA member number because ASTA
+# publishes none for this member; we do not invent one.
+_TRUST = {
+    "en": {"op": "Operated by", "asta": "Proud ASTA member",
+           "asta_alt": "ASTA member, American Society of Travel Advisors",
+           "fsot": "FL Seller of Travel Ref.",
+           "verify": "verify"},
+    "es": {"op": "Operado por", "asta": "Miembro orgulloso de ASTA",
+           "asta_alt": "Miembro de ASTA, American Society of Travel Advisors",
+           "fsot": "Vendedor de Viajes de Florida Ref.",
+           "verify": "verificar"},
+}
+
+
+def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True):
+    """Operator credential row. Renders nothing for a credential we don't hold."""
+    t = _TRUST[lang]
+    items = []
+    if show_asta:
+        items.append(
+            f'<a class="tb tb-asta" href="{asta_url}" target="_blank" rel="noopener nofollow" '
+            f'title="{t["asta"]} ({t["verify"]})">'
+            f'<img src="/badges/asta-member.png" alt="{t["asta_alt"]}" width="526" height="224" loading="lazy">'
+            f'<span class="tb-cap">{t["asta"]}</span></a>')
+    if fsot_ref:
+        items.append(
+            f'<a class="tb tb-fsot" href="{fsot_url}" target="_blank" rel="noopener nofollow" '
+            f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
+            f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
+    if not items:
+        return ""
+    return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'
+            f'<div class="tb-row">{"".join(items)}</div></div>')

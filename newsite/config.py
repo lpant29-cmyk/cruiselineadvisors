@@ -22,6 +22,17 @@ COMPANY       = "BookMeCheapest LLC"
 COMPANY_ADDR  = "6501 Arlington Expressway #2177, Jacksonville, FL 32211, United States"
 PRIVACY_EMAIL = "privacy@cruiselineadvisors.com"  # TODO: confirm this inbox exists
 
+# ── Operator credentials (2026-09-17) ───────────────────────────────────────
+# These belong to the OPERATING ENTITY (COMPANY above), not to the CruiseLine
+# Advisors referral service, and must be presented that way. Mirrored from the
+# same company's bargainairticket.com, where they already run. Real, verifiable
+# registrations, never decoration: if either lapses, remove it the same day.
+# ASTA_MEMBER has no public member number, so we make no numeric claim.
+ASTA_MEMBER     = True
+ASTA_URL        = "https://www.asta.org/content/Membership/public-member-directory.aspx"
+FSOT_REF        = "ST150081"          # Florida Seller of Travel, held by COMPANY
+FSOT_URL        = "https://www.fdacs.gov/Consumer-Resources/Business-Search"
+
 # ── Coverage hours (NEVER "24/7", Hard Rule 6) ────────────────────────────
 HOURS = {
     "en": "8am-11pm ET, every day",

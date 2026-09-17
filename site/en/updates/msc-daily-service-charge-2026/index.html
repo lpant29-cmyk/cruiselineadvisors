@@ -862,6 +862,23 @@ a.rt-card:hover{transform:translateY(-2px)}
 .ftr .disc p{margin-bottom:.6rem}
 .ftr .legalrow{display:flex;flex-wrap:wrap;gap:.4em 1em;margin-top:.4rem}
 
+/* operator credential badges (ASTA + FL Seller of Travel). The credentials
+   belong to the operating entity, so the row leads with "Operated by". */
+.trustbadges{margin-top:1rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.1)}
+.tb-op{margin-bottom:.6rem;color:#87B0BA;font-size:.75rem}
+.tb-op b{color:#CDE7EB}
+.tb-row{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.1rem}
+.ftr .tb{display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .8rem;border-radius:10px;
+  background:rgba(255,255,255,.95);text-decoration:none;line-height:1.2;transition:transform .15s ease,box-shadow .15s ease}
+.ftr .tb:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ftr .tb:focus-visible{outline:2px solid #E0A84E;outline-offset:2px}
+.tb-asta img{display:block;width:auto;height:30px;max-width:100%}
+.tb-cap{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ftr .tb-fsot{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
+.ftr .tb-fsot:hover{background:rgba(255,255,255,.14)}
+.tb-fsot-txt{color:#CDE7EB;font-size:.76rem;font-weight:700;letter-spacing:.01em}
+@media(min-width:900px){.tb-asta img{height:34px}}
+
 /* sticky mobile call */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:flex;align-items:center;gap:12px;background:rgba(8,44,66,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.12);padding:9px 14px;box-shadow:0 -8px 24px rgba(0,0,0,.22)}
 .callbar .cbtxt{flex:1;min-width:0;color:#fff;line-height:1.15}
@@ -1062,8 +1079,9 @@ a.rt-card:hover{transform:translateY(-2px)}
         <a href="/en/legal/terms/">Terms</a><a href="/en/legal/privacy/">Privacy</a><a href="/en/legal/consent/">Calling & SMS Consent</a><a href="/en/legal/do-not-sell/">Do Not Sell or Share</a>
       </div>
       <div class="disc">
-        <p><b>What we are:</b> CruiseLine Advisors is a marketing and referral service. We are not a cruise line, travel agency, tour operator or seller of travel. We do not sell, book, ticket or take payment for travel, and we do not set prices or hold inventory. Calls may be connected to one of several independent, licensed third-party travel agencies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p><p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by, or an agent of any cruise line.</p><p><b>Pricing:</b> Fares shown anywhere on this site are indicative, observed from public sources on the date stamped, and are not an offer to sell travel; all quotes and bookings are provided by independent licensed agencies.</p><p><b>How we verify:</b> The facts shown on this site are gathered from each cruise line's official website and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap, never guessed. Always confirm the details that matter to you with the licensed agency that books your trip.</p><p><b>Photography:</b> Destination, port and ship photos are illustrative stock images from royalty-free sources (Pexels and Unsplash), used under their licenses, which permit commercial use without attribution. We credit the sources here as a courtesy. Images are representative only and may not show the exact ship, port, view or sailing; any private-island or venue names are for reference.</p>
+        <p><b>What we are:</b> CruiseLine Advisors is a marketing and referral service. We are not a cruise line, travel agency or tour operator, and we are not an agent of any cruise line. We do not sell, book, ticket or take payment for cruise travel, and we do not set prices or hold inventory. Calls may be connected to one of several independent, licensed third-party travel agencies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p><p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by, or an agent of any cruise line.</p><p><b>Pricing:</b> Fares shown anywhere on this site are indicative, observed from public sources on the date stamped, and are not an offer to sell travel; all quotes and bookings are provided by independent licensed agencies.</p><p><b>How we verify:</b> The facts shown on this site are gathered from each cruise line's official website and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap, never guessed. Always confirm the details that matter to you with the licensed agency that books your trip.</p><p><b>Photography:</b> Destination, port and ship photos are illustrative stock images from royalty-free sources (Pexels and Unsplash), used under their licenses, which permit commercial use without attribution. We credit the sources here as a courtesy. Images are representative only and may not show the exact ship, port, view or sailing; any private-island or venue names are for reference.</p>
         <div class="legalrow"><a href="/en/legal/terms/">Terms</a><a href="/en/legal/privacy/">Privacy</a><a href="/en/legal/consent/">Calling & SMS Consent</a><a href="/en/legal/do-not-sell/">Do Not Sell or Share</a></div>
+        <div class="trustbadges"><p class="tb-op">Operated by <b>BookMeCheapest LLC</b></p><div class="tb-row"><a class="tb tb-asta" href="https://www.asta.org/content/Membership/public-member-directory.aspx" target="_blank" rel="noopener nofollow" title="Proud ASTA member (verify)"><img src="/badges/asta-member.png" alt="ASTA member, American Society of Travel Advisors" width="526" height="224" loading="lazy"><span class="tb-cap">Proud ASTA member</span></a><a class="tb tb-fsot" href="https://www.fdacs.gov/Consumer-Resources/Business-Search" target="_blank" rel="noopener nofollow" title="FL Seller of Travel Ref. ST150081 (verify)"><span class="tb-fsot-txt">FL Seller of Travel Ref. ST150081</span></a></div></div>
         <p style="margin-top:.6rem">© 2026 BookMeCheapest LLC. Florida, USA.</p>
       </div>
     </div>
