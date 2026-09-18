@@ -3,6 +3,7 @@
 line pages, the compare tools, and ship pages, with the date the data was last checked.
 It only ever claims official-source verification; unverified fields still render as visible gaps."""
 import datetime
+import os
 
 _LABEL = {
     "en": "Verified from official sources",
@@ -99,8 +100,28 @@ _TRUST = {
            "verify": "verificar"},
 }
 
+# Entity-scoped, deliberately singular, and deliberately NOT "our specialists":
+# advisors work for the independent partner agencies, not for us (Hard Rule 5).
+_BAHAMAS = {
+    "en": ("{co} holds a Certified Bahamas Specialist diploma from "
+           "The Islands of The Bahamas.", "Certified Bahamas Specialist diploma"),
+    "es": ("{co} posee un diploma de Certified Bahamas Specialist de "
+           "The Islands of The Bahamas.", "Diploma de Certified Bahamas Specialist"),
+}
 
-def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True):
+
+def _asset_exists(webpath):
+    """True if a /-rooted asset URL maps to a real file under assets/.
+    Lets a credential degrade to text-only instead of shipping a broken image
+    or a link to a document we are not actually hosting."""
+    if not webpath:
+        return False
+    here = os.path.dirname(os.path.abspath(__file__))
+    return os.path.isfile(os.path.join(here, "assets", webpath.lstrip("/")))
+
+
+def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
+                 bahamas=False, bahamas_crest=None, bahamas_doc=None):
     """Operator credential row. Renders nothing for a credential we don't hold."""
     t = _TRUST[lang]
     items = []
@@ -115,7 +136,21 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True):
             f'<a class="tb tb-fsot" href="{fsot_url}" target="_blank" rel="noopener nofollow" '
             f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
             f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
-    if not items:
+    note = ""
+    if bahamas:
+        sentence, doc_label = _BAHAMAS[lang]
+        sentence = sentence.format(co=company)
+        have_crest, have_doc = _asset_exists(bahamas_crest), _asset_exists(bahamas_doc)
+        if have_crest:
+            crest = (f'<img src="{bahamas_crest}" alt="{doc_label}" height="34" loading="lazy">'
+                     f'<span class="tb-cap">{doc_label}</span>')
+            if have_doc:
+                items.append(f'<a class="tb tb-bah" href="{bahamas_doc}" target="_blank" '
+                             f'rel="noopener" title="{doc_label} ({t["verify"]})">{crest}</a>')
+            else:
+                items.append(f'<span class="tb tb-bah">{crest}</span>')
+        note = f'<p class="tb-note">{sentence}</p>'
+    if not items and not note:
         return ""
     return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'
-            f'<div class="tb-row">{"".join(items)}</div></div>')
+            f'<div class="tb-row">{"".join(items)}</div>{note}</div>')

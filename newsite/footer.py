@@ -2,7 +2,8 @@
 """Site footer, one file. Link columns + the compliance disclaimers (bilingual).
 The disclaimers are legally load-bearing; edit with care."""
 from config import (PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY,
-                    ASTA_MEMBER, ASTA_URL, FSOT_REF, FSOT_URL)
+                    ASTA_MEMBER, ASTA_URL, FSOT_REF, FSOT_URL,
+                    BAHAMAS_SPECIALIST, BAHAMAS_CREST, BAHAMAS_DOC)
 from i18n import T
 from badges import verified_seal, trust_badges
 from facts import latest_verified_all
@@ -23,7 +24,9 @@ def footer(lang):
     t = T[lang]
     disc = legal_blocks_html(lang)
     legal = legal_links_html(lang)
-    trust = trust_badges(lang, COMPANY, ASTA_URL, FSOT_REF, FSOT_URL, show_asta=ASTA_MEMBER)
+    trust = trust_badges(lang, COMPANY, ASTA_URL, FSOT_REF, FSOT_URL, show_asta=ASTA_MEMBER,
+                         bahamas=BAHAMAS_SPECIALIST, bahamas_crest=BAHAMAS_CREST,
+                         bahamas_doc=BAHAMAS_DOC)
     return f"""<footer class="ftr">
   <div class="wrap">
     <div class="cols">

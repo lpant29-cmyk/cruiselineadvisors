@@ -33,6 +33,17 @@ ASTA_URL        = "https://www.asta.org/content/Membership/public-member-directo
 FSOT_REF        = "ST150081"          # Florida Seller of Travel, held by COMPANY
 FSOT_URL        = "/docs/fl-seller-of-travel.pdf"
 
+# Certified Bahamas Specialist, held by a principal of COMPANY (confirmed by the
+# operator 2026-09-18). Scoped to the entity for the same reason as the two
+# above: we have no in-house travel advisors, so this must never read as "our
+# specialists". ONE diploma is on file, so the claim stays singular; if a second
+# person certifies, that is when plural wording becomes supportable.
+# The crest and the diploma link render ONLY when both files are actually
+# present on disk. The sentence stands on its own without them.
+BAHAMAS_SPECIALIST = True
+BAHAMAS_CREST      = "/badges/bahamas-specialist.png"          # crest cropped from the diploma
+BAHAMAS_DOC        = "/docs/bahamas-specialist-diploma.png"    # the full diploma, self-hosted
+
 # ── Coverage hours (NEVER "24/7", Hard Rule 6) ────────────────────────────
 HOURS = {
     "en": "8am-11pm ET, every day",
