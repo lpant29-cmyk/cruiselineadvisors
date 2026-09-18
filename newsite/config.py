@@ -31,7 +31,7 @@ PRIVACY_EMAIL = "privacy@cruiselineadvisors.com"  # TODO: confirm this inbox exi
 ASTA_MEMBER     = True
 ASTA_URL        = "https://www.asta.org/content/Membership/public-member-directory.aspx"
 FSOT_REF        = "ST150081"          # Florida Seller of Travel, held by COMPANY
-FSOT_URL        = "https://www.fdacs.gov/Consumer-Resources/Business-Search"
+FSOT_URL        = "/docs/fl-seller-of-travel.pdf"
 
 # ── Coverage hours (NEVER "24/7", Hard Rule 6) ────────────────────────────
 HOURS = {
