@@ -44,6 +44,11 @@ BAHAMAS_SPECIALIST = True
 BAHAMAS_CREST      = "/badges/bahamas-specialist.png"          # crest cropped from the diploma
 BAHAMAS_DOC        = "/docs/bahamas-specialist-diploma.png"    # the full diploma, self-hosted
 
+# Bahamas Romance Specialist badge. Display-only logo in the footer credential
+# row; renders ONLY when the image file is actually present on disk.
+ROMANCE_SPECIALIST = True
+ROMANCE_BADGE      = "/badges/romance.png"
+
 # ── Coverage hours (NEVER "24/7", Hard Rule 6) ────────────────────────────
 HOURS = {
     "en": "8am-11pm ET, every day",

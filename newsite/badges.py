@@ -92,10 +92,12 @@ def verified_seal(lang, date=None):
 _TRUST = {
     "en": {"op": "Operated by", "asta": "Proud ASTA member",
            "asta_alt": "ASTA member, American Society of Travel Advisors",
+           "romance_alt": "Bahamas Romance Specialist certification",
            "fsot": "FL Seller of Travel Ref.",
            "verify": "verify"},
     "es": {"op": "Operado por", "asta": "Miembro orgulloso de ASTA",
            "asta_alt": "Miembro de ASTA, American Society of Travel Advisors",
+           "romance_alt": "Certificación de Especialista en Romance de las Bahamas",
            "fsot": "Vendedor de Viajes de Florida Ref.",
            "verify": "verificar"},
 }
@@ -121,7 +123,8 @@ def _asset_exists(webpath):
 
 
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
-                 bahamas=False, bahamas_crest=None, bahamas_doc=None):
+                 bahamas=False, bahamas_crest=None, bahamas_doc=None,
+                 romance=False, romance_img=None):
     """Operator credential row. Renders nothing for a credential we don't hold."""
     t = _TRUST[lang]
     items = []
@@ -150,6 +153,10 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
             else:
                 items.append(f'<span class="tb tb-bah">{crest}</span>')
         note = f'<p class="tb-note">{sentence}</p>'
+    if romance and _asset_exists(romance_img):
+        items.append(
+            f'<span class="tb tb-romance">'
+            f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy"></span>')
     if not items and not note:
         return ""
     return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'
