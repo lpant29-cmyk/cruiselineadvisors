@@ -847,8 +847,8 @@ a.rt-card:hover{transform:translateY(-2px)}
 @media(min-width:900px){.tb-asta img{height:34px}}
 .ftr .tb-bah{background:rgba(255,255,255,.95);padding:.4rem .7rem}
 .tb-bah img{display:block;width:auto;height:34px;max-width:100%}
-.ftr .tb-romance{background:rgba(255,255,255,.95);padding:.3rem .5rem}
-.tb-romance img{display:block;width:auto;height:48px;max-width:100%}
+.ftr .tb-romance{background:rgba(255,255,255,.95);padding:.25rem .45rem}
+.tb-romance img{display:block;width:auto;height:40px;max-width:100%}
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 
 /* sticky mobile call */
