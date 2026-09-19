@@ -6,7 +6,7 @@ from config import (PHONE_HREF, SITE_URL, BRAND, LANGS, DEFAULT_LANG, IS_PLACEHO
                     GTM_ID, GA4_ID, CLARITY_ID, GSC_VERIFICATION)
 from theme import CSS
 from header import header
-from footer import footer
+from footer import footer, credentials_band
 from cta import sticky_callbar
 
 
@@ -121,6 +121,7 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 <a href="#main" class="skip">{'Skip to content' if lang=='en' else 'Saltar al contenido'}</a>
 {header(lang, page_path)}
 <main id="main">{content}</main>
+{credentials_band(lang)}
 {footer(lang)}
 {sticky_callbar(lang)}
 <button id="goBack" class="goback" aria-label="{'Go back to the previous page' if lang=='en' else 'Volver a la página anterior'}"><span aria-hidden="true">←</span> {'Back' if lang=='en' else 'Atrás'}</button>

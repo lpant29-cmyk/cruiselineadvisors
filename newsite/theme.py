@@ -849,6 +849,27 @@ a.rt-card:hover{transform:translateY(-2px)}
 .tb-bah img{display:block;width:auto;height:34px;max-width:100%}
 .ftr .tb-romance{background:rgba(255,255,255,.95);padding:.25rem .45rem}
 .tb-romance img{display:block;width:auto;height:40px;max-width:100%}
+/* Sitewide credentials band (before footer) --------------------------------- */
+.credband{background:#0c2735;text-align:center;border-top:1px solid rgba(127,212,208,.16)}
+.credband .credband-head .eyebrow{color:#7FD4D0;letter-spacing:.09em;text-transform:uppercase;font-size:.78rem;font-weight:800}
+.credband .credband-head h2{color:#fff;margin:.35rem 0 0;font-size:clamp(1.3rem,3.5vw,1.9rem)}
+.credband .credband-head p{color:#9fc0cb;max-width:60ch;margin:.6rem auto 0;line-height:1.6}
+.credband .trustbadges{border-top:0;margin-top:1.5rem;padding-top:0}
+.credband .tb-op{color:#9fc0cb;margin-bottom:1.1rem;font-size:.85rem}
+.credband .tb-op b{color:#fff}
+.credband .tb-row{justify-content:center;align-items:center;gap:1.1rem 1.9rem}
+.credband .tb{display:inline-flex;align-items:center;transition:transform .15s ease}
+.credband a.tb:hover{transform:translateY(-2px)}
+.credband .tb-asta{background:#fff;border-radius:12px;padding:.6rem .9rem}
+.credband .tb-asta img{display:block;width:auto;height:54px;max-width:100%}
+.credband .tb-fsot{background:#12384a;border:1px solid rgba(127,212,208,.4);border-radius:12px;padding:.85rem 1.1rem}
+.credband .tb-fsot-txt{color:#CDE7EB;font-weight:700;font-size:.95rem;letter-spacing:.01em}
+.credband .tb-bah{background:#fff;border-radius:12px;padding:.55rem .85rem}
+.credband .tb-bah img{display:block;width:auto;height:60px;max-width:100%}
+.credband .tb-romance{background:#fff;border-radius:12px;padding:.4rem .6rem}
+.credband .tb-romance img{display:block;width:auto;height:72px;max-width:100%}
+.credband .tb-note{color:#87a7b2;max-width:70ch;margin:1.3rem auto 0}
+@media(min-width:900px){.credband .tb-asta img{height:62px}.credband .tb-bah img{height:66px}.credband .tb-romance img{height:82px}}
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 
 /* sticky mobile call */

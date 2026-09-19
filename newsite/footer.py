@@ -21,14 +21,37 @@ _SEAL_CAP = {
 
 
 
-def footer(lang):
-    t = T[lang]
-    disc = legal_blocks_html(lang)
-    legal = legal_links_html(lang)
+_CRED_BAND = {
+    "en": {"eyebrow": "Credentials you can check",
+           "h": "Accredited, licensed and Bahamas-certified",
+           "sub": "You are in good hands. We hold recognised travel-industry credentials and the official "
+                  "Islands of the Bahamas certifications. Tap a badge to verify it."},
+    "es": {"eyebrow": "Credenciales que puedes verificar",
+           "h": "Acreditados, con licencia y certificados en las Bahamas",
+           "sub": "Estás en buenas manos. Tenemos credenciales reconocidas del sector de viajes y las "
+                  "certificaciones oficiales de las Islas de las Bahamas. Toca un distintivo para verificarlo."},
+}
+
+
+def credentials_band(lang):
+    """Full-width credential band shown on every page (before the footer). Covers all trust and
+    specialist badges at a readable size; specialist badges link to the self-hosted diploma."""
+    c = _CRED_BAND[lang]
     trust = trust_badges(lang, COMPANY, ASTA_URL, FSOT_REF, FSOT_URL, show_asta=ASTA_MEMBER,
                          bahamas=BAHAMAS_SPECIALIST, bahamas_crest=BAHAMAS_CREST,
                          bahamas_doc=BAHAMAS_DOC, romance=ROMANCE_SPECIALIST,
                          romance_img=ROMANCE_BADGE)
+    if not trust:
+        return ""
+    return (f'<section class="section credband"><div class="wrap">'
+            f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
+            f'<h2>{c["h"]}</h2><p>{c["sub"]}</p></div>{trust}</div></section>')
+
+
+def footer(lang):
+    t = T[lang]
+    disc = legal_blocks_html(lang)
+    legal = legal_links_html(lang)
     return f"""<footer class="ftr">
   <div class="wrap">
     <div class="cols">
@@ -60,7 +83,6 @@ def footer(lang):
       <div class="disc">
         {disc}
         <div class="legalrow">{legal}</div>
-        {trust}
         <p style="margin-top:.6rem">© {YEAR} {COMPANY}. Florida, USA.</p>
       </div>
     </div>

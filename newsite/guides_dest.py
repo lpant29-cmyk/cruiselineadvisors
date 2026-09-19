@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Rich guides cluster: dest. Hand-written, no prices, no em dashes."""
-from guidepage import register, tip, watch, define, vcards, link
+from guidepage import register, tip, watch, define, vcards, link, photo_band
 
 
 # ══════════════════════════════════════════════════════════════════════════════════════════════════
@@ -459,6 +459,375 @@ register("caribbean-vs-alaska-vs-med", {
             ("🗓️", "Cuándo hacer un crucero", "/es/guides/when-to-cruise/", "Temporada a temporada, región a región."),
             ("🛏️", "Elegir camarote", "/es/guides/choosing-a-cabin/", "Dónde rinde de verdad un balcón."),
             ("🧾", "Qué incluye la tarifa", "/es/guides/whats-included/", "Comparar viajes completos, no tarifas."),
+        ],
+    },
+})
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+# Credential + media snippets reused inside the Bahamas romance guide.
+_BR_CRED = {
+    "en": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
+           '<b>Certified for the Bahamas.</b> CruiseLine Advisors holds the official Islands of the Bahamas '
+           'Specialist and Bahamas Romance Specialist certifications. When you call, we connect you with '
+           'licensed partner advisors who plan Bahamas honeymoons, weddings, proposals and romantic getaways.'
+           '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
+           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
+           'style="background:#fff;border-radius:10px;padding:.35rem .5rem;display:inline-flex">'
+           '<img src="/badges/bahamas-specialist.png" alt="Certified Bahamas Specialist diploma" height="34" loading="lazy"></a>'
+           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
+           'style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
+           '<img src="/badges/romance.png" alt="Bahamas Romance Specialist certification" height="46" loading="lazy"></a>'
+           '</span></div></div>'),
+    "es": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
+           '<b>Certificados para las Bahamas.</b> CruiseLine Advisors tiene las certificaciones oficiales de '
+           'Especialista de las Islas de las Bahamas y Especialista en Romance de las Bahamas. Cuando llamas, '
+           'te conectamos con asesores asociados con licencia que planean lunas de miel, bodas, pedidas de mano '
+           'y escapadas románticas en las Bahamas.'
+           '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
+           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
+           'style="background:#fff;border-radius:10px;padding:.35rem .5rem;display:inline-flex">'
+           '<img src="/badges/bahamas-specialist.png" alt="Diploma de Especialista de las Bahamas" height="34" loading="lazy"></a>'
+           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
+           'style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
+           '<img src="/badges/romance.png" alt="Certificación de Especialista en Romance de las Bahamas" height="46" loading="lazy"></a>'
+           '</span></div></div>'),
+}
+_BR_VIDEO = {
+    "en": ('<figure class="gband"><video controls preload="none" playsinline '
+           'poster="/guides/bahamas-romance-travel/garden-ceremony.jpg" '
+           'style="width:100%;display:block;border-radius:14px">'
+           '<source src="/guides/bahamas-romance-travel/tales-of-romance.mp4" type="video/mp4"></video>'
+           '<figcaption class="gband-cap">Tales of romance across the Islands of the Bahamas.</figcaption></figure>'),
+    "es": ('<figure class="gband"><video controls preload="none" playsinline '
+           'poster="/guides/bahamas-romance-travel/garden-ceremony.jpg" '
+           'style="width:100%;display:block;border-radius:14px">'
+           '<source src="/guides/bahamas-romance-travel/tales-of-romance.mp4" type="video/mp4"></video>'
+           '<figcaption class="gband-cap">Historias de romance por las Islas de las Bahamas.</figcaption></figure>'),
+}
+_BR_CREDIT = {
+    "en": ('<p class="tb-note" style="margin-top:1.2rem">Photography and video courtesy of the Islands of the '
+           'Bahamas (Bahamas Ministry of Tourism) promotional materials.</p>'),
+    "es": ('<p class="tb-note" style="margin-top:1.2rem">Fotografía y video cortesía de los materiales '
+           'promocionales de las Islas de las Bahamas (Ministerio de Turismo de las Bahamas).</p>'),
+}
+
+register("bahamas-romance-travel", {
+    "cat": "dest", "hero": "bahamas-romance-travel.jpg", "published": "2026-09-19", "updated": "2026-09-19",
+    "title": {"en": "Romance in the Bahamas: honeymoons, weddings and where to say I do",
+              "es": "Romance en las Bahamas: lunas de miel, bodas y dónde decir sí"},
+    "dek": {
+        "en": "The Bahamas is billed as the world's leading wedding destination, and it is just as good for a "
+              "honeymoon, a proposal or a quiet escape for two. With about 700 islands, pink-sand beaches and a "
+              "wedding process that is refreshingly simple, it is one of the easiest places to turn a big "
+              "moment into a great trip. Here is how to plan it.",
+        "es": "Las Bahamas son consideradas el principal destino de bodas del mundo, y son igual de buenas para "
+              "una luna de miel, una pedida de mano o una escapada tranquila para dos. Con unas 700 islas, "
+              "playas de arena rosada y un proceso de boda sorprendentemente simple, es uno de los lugares más "
+              "fáciles para convertir un gran momento en un gran viaje. Así se planea.",
+    },
+    "takeaways": {
+        "en": [
+            "The Bahamas is positioned as the world's leading wedding destination, with simple rules and hundreds of islands to choose from.",
+            "Romance travel here is far more than honeymoons: proposals, vow renewals, mini-moons, babymoons, micro-weddings and private buyouts all fit.",
+            "To marry, you must be in the Bahamas in person. You can apply the day after you arrive and marry the day after that.",
+            "Cruisers can marry too: you need a short letter from the ship's purser confirming at least 24 hours in Bahamian waters.",
+            "Each island has its own mood, from lively Nassau and Paradise Island to the pink sands of Harbour Island and the deep seclusion of the Out Islands.",
+        ],
+        "es": [
+            "Las Bahamas se posicionan como el principal destino de bodas del mundo, con reglas simples y cientos de islas para elegir.",
+            "El turismo romántico aquí es mucho más que lunas de miel: pedidas de mano, renovación de votos, mini-lunas, babymoons, microbodas y alquileres privados encajan todos.",
+            "Para casarte debes estar en las Bahamas en persona. Puedes solicitar la licencia el día después de llegar y casarte al día siguiente.",
+            "Los cruceristas también pueden casarse: necesitas una breve carta del comisario del barco que confirme al menos 24 horas en aguas bahameñas.",
+            "Cada isla tiene su propio ánimo, desde la animada Nassau y Paradise Island hasta las arenas rosadas de Harbour Island y el profundo aislamiento de las Out Islands.",
+        ],
+    },
+    "sections": [
+        {"id": "why-bahamas", "h2": {"en": "Why couples choose the Bahamas", "es": "Por qué las parejas eligen las Bahamas"},
+         "html": {
+            "en": "<p>The Bahamas is not one island. It is a chain of about 700 islands and cays spread across "
+                  "clear, shallow water, which is why it can feel like a busy resort one day and a private "
+                  "sandbar the next. That range is the whole appeal for couples: you pick the mood, and the "
+                  "islands deliver it.</p>"
+                  "<p>It also has a serious romance reputation. The Bahamas is billed as the world's leading "
+                  "wedding destination, and the Exumas were named among the most romantic islands in the world by "
+                  "a major travel magazine. Couples tend to invest far more in a honeymoon than in an ordinary "
+                  "trip, often several times as much, so it is worth getting the choice right the first time.</p>"
+                  + _BR_CRED["en"]
+                  + _BR_VIDEO["en"],
+            "es": "<p>Las Bahamas no son una sola isla. Son una cadena de unas 700 islas y cayos repartidos sobre "
+                  "aguas claras y poco profundas, por eso pueden sentirse como un resort concurrido un día y un "
+                  "banco de arena privado al siguiente. Ese rango es todo el atractivo para las parejas: tú eliges "
+                  "el ánimo y las islas lo entregan.</p>"
+                  "<p>También tiene una seria reputación romántica. Las Bahamas son consideradas el principal "
+                  "destino de bodas del mundo, y una importante revista de viajes nombró a las Exumas entre las "
+                  "islas más románticas del planeta. Las parejas suelen invertir mucho más en una luna de miel que "
+                  "en un viaje normal, a menudo varias veces más, así que conviene acertar a la primera.</p>"
+                  + _BR_CRED["es"]
+                  + _BR_VIDEO["es"],
+         }},
+        {"id": "more-than-honeymoon", "h2": {"en": "More than a honeymoon", "es": "Mucho más que una luna de miel"},
+         "html": {
+            "en": "<p>Romance travel has grown well beyond newlyweds. The Bahamas works for almost every version "
+                  "of a couple's trip:</p>"
+                  + vcards([
+                      ("💍", "Proposals", "A private beach, a sunset sail or a quiet cove make the question easy to ask and hard to forget."),
+                      ("🥂", "Mini-moons", "A short getaway right after the wedding when a long honeymoon has to wait."),
+                      ("🤍", "Vow renewals", "A relaxed celebration of an anniversary, with no license needed."),
+                      ("👶", "Babymoons", "A calm, comfortable escape before a baby arrives."),
+                      ("🎉", "Micro-weddings", "A small ceremony with just your closest people, often at a single resort."),
+                      ("🏝️", "Private buyouts", "A whole small resort or villa taken over for a wedding party or a family celebration."),
+                  ])
+                  + photo_band("bahamas-romance-travel/proposal-pier.jpg",
+                               "A beachfront proposal in the Bahamas.")
+                  + "<p>Family-moons that bring the kids, adults-only trips, and multi-island honeymoons that pair "
+                  "a lively island with a quiet one are all common. If you are weighing the couples-only angle, "
+                  "our guide to " + link("/en/guides/couples-adults-only-cruising/", "couples and adults-only travel")
+                  + " pairs well with this one.</p>",
+            "es": "<p>El turismo romántico creció mucho más allá de los recién casados. Las Bahamas funcionan para "
+                  "casi toda versión de un viaje en pareja:</p>"
+                  + vcards([
+                      ("💍", "Pedidas de mano", "Una playa privada, un velero al atardecer o una cala tranquila hacen la pregunta fácil de hacer y difícil de olvidar."),
+                      ("🥂", "Mini-lunas", "Una escapada corta justo después de la boda cuando la luna de miel larga debe esperar."),
+                      ("🤍", "Renovación de votos", "Una celebración relajada de un aniversario, sin licencia necesaria."),
+                      ("👶", "Babymoons", "Una escapada tranquila y cómoda antes de que llegue el bebé."),
+                      ("🎉", "Microbodas", "Una ceremonia pequeña con solo tus personas más cercanas, a menudo en un solo resort."),
+                      ("🏝️", "Alquileres privados", "Un pequeño resort o villa entero reservado para una boda o una celebración familiar."),
+                  ])
+                  + photo_band("bahamas-romance-travel/proposal-pier.jpg",
+                               "Una pedida de mano frente al mar en las Bahamas.")
+                  + "<p>Los family-moons con los niños, los viajes solo para adultos y las lunas de miel de varias "
+                  "islas que combinan una isla animada con una tranquila son todos comunes. Si estás sopesando el "
+                  "enfoque solo para parejas, nuestra guía de " + link("/es/guides/couples-adults-only-cruising/", "viajes en pareja y solo para adultos")
+                  + " combina bien con esta.</p>",
+         }},
+        {"id": "getting-married", "h2": {"en": "Getting married in the Bahamas: the simple version", "es": "Casarse en las Bahamas: la versión simple"},
+         "html": {
+            "en": "<p>One reason the Bahamas is so popular for weddings is that the process is short and clear. "
+                  "The key rule: you must be in the Bahamas in person to apply. You can lodge the application the "
+                  "day after you arrive and marry the day after that, so even a fairly short trip can include the "
+                  "wedding itself.</p>"
+                  "<p>Applications go through the Registrar General's Department in Nassau, or an Administrator's "
+                  "Office in the Out Islands. You will generally need:</p>"
+                  "<ul>"
+                  "<li>Valid <b>passports</b>, <b>birth certificates</b> and <b>photo ID</b> for both partners.</li>"
+                  "<li><b>Proof of arrival</b> in the Bahamas.</li>"
+                  "<li><b>Two witnesses</b> aged 18 or over to sign, though the officiant can often supply them.</li>"
+                  "</ul>"
+                  "<p>There is no blood test. A marriage license carries a set government fee that includes one "
+                  "certified copy of the certificate. Vow renewals do not need a license at all. Rules can change, "
+                  "so confirm the current requirements with the Registrar General's Department before you travel.</p>"
+                  + watch("<b>Marrying on a cruise?</b> You can, but there is one extra step: cruisers need a short "
+                          "letter from the ship's purser confirming you have spent at least 24 hours in Bahamian "
+                          "waters. Plan your sailing and your paperwork around that, and a call to a specialist "
+                          "makes it simple.")
+                  + photo_band("bahamas-romance-travel/wedding-cake.jpg",
+                               "Cutting the cake at a Bahamas wedding.")
+                  + "<p>For planning, couples can also build a free gift and RSVP page through the official "
+                  "Islands of the Bahamas honeymoon registry, a handy way to organise guests and wishes in one place.</p>",
+            "es": "<p>Una razón por la que las Bahamas son tan populares para bodas es que el proceso es corto y "
+                  "claro. La regla clave: debes estar en las Bahamas en persona para solicitar. Puedes presentar la "
+                  "solicitud el día después de llegar y casarte al día siguiente, así que incluso un viaje bastante "
+                  "corto puede incluir la boda misma.</p>"
+                  "<p>Las solicitudes se tramitan en el Registrar General's Department en Nassau, o en una Oficina "
+                  "del Administrador en las Out Islands. Por lo general necesitarás:</p>"
+                  "<ul>"
+                  "<li><b>Pasaportes</b>, <b>actas de nacimiento</b> e <b>identificación con foto</b> válidos de ambos.</li>"
+                  "<li><b>Prueba de llegada</b> a las Bahamas.</li>"
+                  "<li><b>Dos testigos</b> de 18 años o más para firmar, aunque el oficiante suele poder aportarlos.</li>"
+                  "</ul>"
+                  "<p>No hay análisis de sangre. Una licencia de matrimonio tiene una tarifa gubernamental fija que "
+                  "incluye una copia certificada del certificado. La renovación de votos no necesita licencia. Las "
+                  "reglas pueden cambiar, así que confirma los requisitos actuales con el Registrar General's "
+                  "Department antes de viajar.</p>"
+                  + watch("<b>¿Casarte en un crucero?</b> Puedes, pero hay un paso extra: los cruceristas necesitan "
+                          "una breve carta del comisario del barco que confirme que pasaron al menos 24 horas en "
+                          "aguas bahameñas. Planea tu travesía y tus papeles en torno a eso, y una llamada a un "
+                          "especialista lo hace simple.")
+                  + photo_band("bahamas-romance-travel/wedding-cake.jpg",
+                               "Cortando el pastel en una boda en las Bahamas.")
+                  + "<p>Para planear, las parejas también pueden crear una página gratuita de regalos y "
+                  "confirmaciones a través del registro oficial de lunas de miel de las Islas de las Bahamas, una "
+                  "forma práctica de organizar invitados y deseos en un solo lugar.</p>",
+         }},
+        {"id": "where-i-do", "h2": {"en": "Where to say 'I do'", "es": "Dónde decir 'sí, quiero'"},
+         "html": {
+            "en": "<p>Half the fun is the setting. The Bahamas offers a wide spread, from grand and historic to "
+                  "barefoot and remote:</p>"
+                  + vcards([
+                      ("⛪", "Churches", "Many faiths are represented across the islands, including small historic chapels."),
+                      ("🏛️", "The Cloisters", "A medieval French cloister reassembled stone by stone on Paradise Island, a striking garden ceremony spot."),
+                      ("🌺", "Botanical gardens", "Lush garden settings in Nassau and Freeport."),
+                      ("⛵", "On the water", "Catamaran and boat ceremonies out on the turquoise shallows."),
+                      ("🐬", "Underwater", "For divers, a reef or dolphin-side ceremony is genuinely possible."),
+                      ("🏝️", "A private sandbar", "A secluded strip of sand with nobody else in sight."),
+                  ])
+                  + photo_band("bahamas-romance-travel/garden-ceremony.jpg",
+                               "A garden ceremony framed by palms.")
+                  + "<p>If you want local colour, some couples build the celebration around Junkanoo, the "
+                  "islands' vibrant music-and-costume tradition, for a reception nobody forgets.</p>",
+            "es": "<p>La mitad de la diversión es el escenario. Las Bahamas ofrecen una gran variedad, de lo "
+                  "grandioso e histórico a lo descalzo y remoto:</p>"
+                  + vcards([
+                      ("⛪", "Iglesias", "Muchas religiones están representadas en las islas, incluidas pequeñas capillas históricas."),
+                      ("🏛️", "Los Claustros", "Un claustro medieval francés reensamblado piedra por piedra en Paradise Island, un llamativo lugar para una ceremonia en jardín."),
+                      ("🌺", "Jardines botánicos", "Escenarios de jardín exuberantes en Nassau y Freeport."),
+                      ("⛵", "Sobre el agua", "Ceremonias en catamarán y barco sobre los bajos turquesa."),
+                      ("🐬", "Bajo el agua", "Para buzos, una ceremonia en el arrecife o junto a delfines es realmente posible."),
+                      ("🏝️", "Un banco de arena privado", "Una franja de arena apartada sin nadie más a la vista."),
+                  ])
+                  + photo_band("bahamas-romance-travel/garden-ceremony.jpg",
+                               "Una ceremonia en jardín enmarcada por palmeras.")
+                  + "<p>Si quieres color local, algunas parejas arman la celebración en torno al Junkanoo, la "
+                  "vibrante tradición de música y disfraces de las islas, para una recepción que nadie olvida.</p>",
+         }},
+        {"id": "islands", "h2": {"en": "Island by island: the romantic shortlist", "es": "Isla por isla: la lista romántica"},
+         "html": {
+            "en": "<p>These are the islands most couples start with, each with a different personality:</p>"
+                  + vcards([
+                      ("🎰", "Nassau & Paradise Island", "The lively heart: resorts, nightlife, the Atlantis aquarium and marine habitat, dolphin encounters and top spas. Easy to reach and full of energy."),
+                      ("🌴", "Grand Bahama", "Lucayan National Park's cave system, the marinas and market at Port Lucaya, dolphin swims and a relaxed pace."),
+                      ("⛵", "The Abacos", "Sailing country: calm water, pastel colonial towns and Hope Town's candy-striped lighthouse, a signature photo."),
+                      ("🌊", "Andros", "The biggest and least developed island, edged by a huge barrier reef and dotted with blue holes. True off-the-beaten-path romance."),
+                      ("🩷", "Eleuthera & Harbour Island", "Famous pink-sand beaches, the dramatic Glass Window Bridge and historic little chapels for weddings."),
+                      ("🐷", "The Exumas", "Named among the world's most romantic islands: swimming pigs, the Thunderball Grotto and a protected land-and-sea park."),
+                  ])
+                  + photo_band("bahamas-romance-travel/harbour-island-bikes.jpg",
+                               "Cycling past the pastel cottages of Harbour Island.")
+                  + "<p>Harbour Island's pink sand is one of the most photographed stretches in the country, and "
+                  "the Abacos' lighthouse country is quietly one of the most romantic. Many couples pair two "
+                  "islands: somewhere lively to celebrate, then somewhere quiet to unwind.</p>"
+                  + photo_band("bahamas-romance-travel/lighthouse.jpg",
+                               "The lighthouse and flame trees of the Abacos."),
+            "es": "<p>Estas son las islas por las que empiezan la mayoría de las parejas, cada una con una "
+                  "personalidad distinta:</p>"
+                  + vcards([
+                      ("🎰", "Nassau y Paradise Island", "El corazón animado: resorts, vida nocturna, el acuario y hábitat marino de Atlantis, encuentros con delfines y spas de primer nivel. Fácil de llegar y llena de energía."),
+                      ("🌴", "Gran Bahama", "El sistema de cuevas del Parque Nacional Lucayan, las marinas y el mercado de Port Lucaya, nados con delfines y un ritmo relajado."),
+                      ("⛵", "Los Abacos", "Tierra de vela: aguas tranquilas, pueblos coloniales en tonos pastel y el faro a rayas de Hope Town, una foto insignia."),
+                      ("🌊", "Andros", "La isla más grande y menos desarrollada, bordeada por un enorme arrecife de barrera y salpicada de agujeros azules. Romance genuino fuera de lo común."),
+                      ("🩷", "Eleuthera y Harbour Island", "Famosas playas de arena rosada, el espectacular Glass Window Bridge y pequeñas capillas históricas para bodas."),
+                      ("🐷", "Las Exumas", "Nombradas entre las islas más románticas del mundo: cerdos nadadores, la gruta Thunderball y un parque protegido de tierra y mar."),
+                  ])
+                  + photo_band("bahamas-romance-travel/harbour-island-bikes.jpg",
+                               "En bicicleta entre las casitas pastel de Harbour Island.")
+                  + "<p>La arena rosada de Harbour Island es uno de los tramos más fotografiados del país, y la "
+                  "tierra de faros de los Abacos es, en silencio, una de las más románticas. Muchas parejas "
+                  "combinan dos islas: una animada para celebrar y otra tranquila para descansar.</p>"
+                  + photo_band("bahamas-romance-travel/lighthouse.jpg",
+                               "El faro y los flamboyanes de los Abacos."),
+         }},
+        {"id": "out-islands", "h2": {"en": "For total seclusion: the Out Islands", "es": "Para aislamiento total: las Out Islands"},
+         "html": {
+            "en": "<p>If the goal is privacy, the far-flung Out Islands deliver it. These are quiet, low-key and "
+                  "sometimes very remote, reached by small plane or boat:</p>"
+                  + vcards([
+                      ("🕳️", "Long Island", "Scenic and narrow, home to one of the world's deepest blue holes, a bucket-list swim or dive."),
+                      ("⛰️", "Cat Island", "Laid-back and untouched, crowned by a hand-built hilltop hermitage."),
+                      ("🎣", "Bimini", "The closest islands to Florida, known for sport fishing and an easygoing waterfront."),
+                      ("🚤", "Berry Islands", "Dozens of tiny islands and cays, private and focused on diving and fishing."),
+                      ("⛵", "San Salvador & Crooked Island", "Columbus-landing history, quiet reefs and superb bonefishing."),
+                      ("🤫", "Mayaguana & Inagua", "The most isolated and least developed, with very limited lodging, for couples who want to disappear."),
+                  ])
+                  + photo_band("bahamas-romance-travel/seaplane-sunset.jpg",
+                               "Island-hopping to the Out Islands by seaplane.")
+                  + "<p>Andros has a romantic footnote worth sharing: the settlement of Love Hill, where locals "
+                  "brew a tea from a plant known as the 'love vine'. It is exactly the kind of small story that "
+                  "makes an Out Island trip feel like your own discovery.</p>",
+            "es": "<p>Si la meta es la privacidad, las lejanas Out Islands la entregan. Son tranquilas, discretas y "
+                  "a veces muy remotas, a las que se llega en avioneta o barco:</p>"
+                  + vcards([
+                      ("🕳️", "Long Island", "Escénica y angosta, hogar de uno de los agujeros azules más profundos del mundo, un nado o buceo de lista de deseos."),
+                      ("⛰️", "Cat Island", "Relajada e intacta, coronada por una ermita construida a mano en la cima de un cerro."),
+                      ("🎣", "Bimini", "Las islas más cercanas a Florida, conocidas por la pesca deportiva y un malecón tranquilo."),
+                      ("🚤", "Berry Islands", "Decenas de islitas y cayos, privados y enfocados en el buceo y la pesca."),
+                      ("⛵", "San Salvador y Crooked Island", "Historia del desembarco de Colón, arrecifes tranquilos y excelente pesca de bonefish."),
+                      ("🤫", "Mayaguana e Inagua", "Las más aisladas y menos desarrolladas, con alojamiento muy limitado, para parejas que quieren desaparecer."),
+                  ])
+                  + photo_band("bahamas-romance-travel/seaplane-sunset.jpg",
+                               "Saltando de isla en isla hacia las Out Islands en hidroavión.")
+                  + "<p>Andros tiene una nota romántica que vale la pena contar: el poblado de Love Hill, donde los "
+                  "locales preparan un té de una planta conocida como 'love vine'. Es justo el tipo de pequeña "
+                  "historia que hace que un viaje a las Out Islands se sienta como tu propio descubrimiento.</p>",
+         }},
+        {"id": "planning", "h2": {"en": "Planning it (and arriving by cruise)", "es": "Cómo planearlo (y llegar en crucero)"},
+         "html": {
+            "en": "<p>Plenty of couples first meet the Bahamas from a cruise deck. Nassau, Freeport and the lines' "
+                  "private islands are among the most visited stops in the region, which makes a cruise an easy, "
+                  "low-commitment way to sample the islands before a longer romantic trip, or even to marry aboard "
+                  "using the purser's-letter route above.</p>"
+                  "<p>Whether you are cruising in or flying to a single island, the two decisions that shape the "
+                  "trip are which island (or pair of islands) fits your mood, and the timing. Our guide to "
+                  + link("/en/guides/when-to-cruise/", "when to cruise") + " helps with the season, and the "
+                  + link("/en/destinations/bahamas/", "Bahamas destination guide") + " covers the ports and how to "
+                  "reach them.</p>"
+                  + photo_band("bahamas-romance-travel/beach-hammock.jpg",
+                               "The reward: a quiet beach and nowhere to be.")
+                  + _BR_CRED["en"],
+            "es": "<p>Muchas parejas conocen las Bahamas por primera vez desde la cubierta de un crucero. Nassau, "
+                  "Freeport y las islas privadas de las líneas están entre las paradas más visitadas de la región, "
+                  "lo que hace del crucero una forma fácil y de bajo compromiso de probar las islas antes de un "
+                  "viaje romántico más largo, o incluso de casarse a bordo usando la ruta de la carta del comisario "
+                  "de arriba.</p>"
+                  "<p>Ya sea que llegues en crucero o en avión a una sola isla, las dos decisiones que moldean el "
+                  "viaje son qué isla (o par de islas) encaja con tu ánimo, y las fechas. Nuestra guía de "
+                  + link("/es/guides/when-to-cruise/", "cuándo hacer un crucero") + " ayuda con la temporada, y la "
+                  + link("/es/destinations/bahamas/", "guía de destino de las Bahamas") + " cubre los puertos y "
+                  "cómo llegar.</p>"
+                  + photo_band("bahamas-romance-travel/beach-hammock.jpg",
+                               "La recompensa: una playa tranquila y ningún lugar al que ir.")
+                  + _BR_CRED["es"],
+         }},
+        {"id": "bottom-line", "h2": {"en": "The bottom line", "es": "En conclusión"},
+         "html": {
+            "en": "<p>The Bahamas earns its romance reputation. The wedding process is simple, the islands cover "
+                  "every mood from party to total peace, and you can be as social or as hidden away as you like. "
+                  "Decide what the trip is really about, celebrating, relaxing or a bit of both, pick the island "
+                  "to match, and the rest falls into place.</p>"
+                  "<p>When you want a certified Bahamas specialist to help choose the island, handle the timing and "
+                  "connect you with a licensed advisor for the details, that is one call away, free, with no "
+                  "obligation, and never a payment to us.</p>"
+                  + _BR_CREDIT["en"],
+            "es": "<p>Las Bahamas se ganan su fama romántica. El proceso de boda es simple, las islas cubren todos "
+                  "los ánimos, de la fiesta a la paz total, y puedes ser tan social o tan escondido como quieras. "
+                  "Decide de qué se trata realmente el viaje, celebrar, descansar o un poco de ambos, elige la isla "
+                  "que combine, y lo demás cae en su lugar.</p>"
+                  "<p>Cuando quieras que un especialista certificado en las Bahamas te ayude a elegir la isla, "
+                  "manejar las fechas y conectarte con un asesor con licencia para los detalles, eso está a una "
+                  "llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>"
+                  + _BR_CREDIT["es"],
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("Do you have to be in the Bahamas to get married there?", "Yes. Both partners must be physically present in the Bahamas to apply for the marriage license. You can apply the day after you arrive and marry the day after that, so a short trip can still include the ceremony. Confirm current rules with the Registrar General's Department before you travel."),
+            ("What documents do you need to marry in the Bahamas?", "Generally valid passports, birth certificates and photo ID for both partners, plus proof of arrival in the Bahamas. Two witnesses aged 18 or over must sign, though the officiant can often provide them. There is no blood test required."),
+            ("Can you get married on a Bahamas cruise?", "Yes. Cruisers need one extra document: a letter from the ship's purser confirming you have spent at least 24 hours in Bahamian waters. With that and the standard documents, the same license process applies. A specialist can help line up the timing."),
+            ("Do vow renewals need a license in the Bahamas?", "No. Vow renewals do not require a marriage license, which makes them one of the simplest celebrations to arrange. You can hold one almost anywhere, from a beach to a garden to the deck of a boat."),
+            ("Which Bahamas island is best for a honeymoon?", "It depends on your mood. Nassau and Paradise Island are lively and easy to reach; Harbour Island has the famous pink sand; the Exumas are prized for seclusion and were named among the world's most romantic islands; and the Out Islands offer near-total privacy. Many couples pair a lively island with a quiet one."),
+            ("Is the Bahamas good for a destination wedding?", "Very. It is billed as the world's leading wedding destination, with a short and clear legal process, hundreds of islands and settings that run from historic churches to private sandbars. It is also easy to combine the wedding with the honeymoon in one trip."),
+        ],
+        "es": [
+            ("¿Hay que estar en las Bahamas para casarse allí?", "Sí. Ambos deben estar físicamente en las Bahamas para solicitar la licencia de matrimonio. Puedes solicitarla el día después de llegar y casarte al día siguiente, así que un viaje corto puede incluir la ceremonia. Confirma las reglas actuales con el Registrar General's Department antes de viajar."),
+            ("¿Qué documentos se necesitan para casarse en las Bahamas?", "Por lo general pasaportes, actas de nacimiento e identificación con foto válidos de ambos, más prueba de llegada a las Bahamas. Dos testigos de 18 años o más deben firmar, aunque el oficiante suele poder aportarlos. No se requiere análisis de sangre."),
+            ("¿Se puede uno casar en un crucero por las Bahamas?", "Sí. Los cruceristas necesitan un documento extra: una carta del comisario del barco que confirme al menos 24 horas en aguas bahameñas. Con eso y los documentos habituales, aplica el mismo proceso de licencia. Un especialista puede ayudar a cuadrar las fechas."),
+            ("¿La renovación de votos necesita licencia en las Bahamas?", "No. La renovación de votos no requiere licencia de matrimonio, lo que la hace una de las celebraciones más simples de organizar. Puedes hacerla casi en cualquier lugar, de una playa a un jardín o la cubierta de un barco."),
+            ("¿Cuál isla de las Bahamas es mejor para una luna de miel?", "Depende de tu ánimo. Nassau y Paradise Island son animadas y fáciles de llegar; Harbour Island tiene la famosa arena rosada; las Exumas son apreciadas por el aislamiento y fueron nombradas entre las más románticas del mundo; y las Out Islands ofrecen privacidad casi total. Muchas parejas combinan una isla animada con una tranquila."),
+            ("¿Las Bahamas son buenas para una boda de destino?", "Mucho. Son consideradas el principal destino de bodas del mundo, con un proceso legal corto y claro, cientos de islas y escenarios que van de iglesias históricas a bancos de arena privados. También es fácil combinar la boda con la luna de miel en un solo viaje."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("🏝️", "Bahamas destination guide", "/en/destinations/bahamas/", "Ports, how to reach the islands and what to do."),
+            ("💞", "Couples & adults-only travel", "/en/guides/couples-adults-only-cruising/", "Planning a trip built around just the two of you."),
+            ("🗺️", "How to choose a destination", "/en/guides/how-to-choose-a-destination/", "Match the place to the trip you want."),
+            ("🧭", "Find a cruise that fits", "/en/compare/", "Talk through Bahamas dates and islands in one call."),
+        ],
+        "es": [
+            ("🏝️", "Guía de destino de las Bahamas", "/es/destinations/bahamas/", "Puertos, cómo llegar a las islas y qué hacer."),
+            ("💞", "Viajes en pareja y solo para adultos", "/es/guides/couples-adults-only-cruising/", "Planear un viaje pensado solo para ustedes dos."),
+            ("🗺️", "Cómo elegir un destino", "/es/guides/how-to-choose-a-destination/", "Combina el lugar con el viaje que quieres."),
+            ("🧭", "Encuentra un crucero que encaje", "/es/compare/", "Conversa fechas e islas de las Bahamas en una llamada."),
         ],
     },
 })

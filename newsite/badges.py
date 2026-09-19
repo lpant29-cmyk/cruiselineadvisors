@@ -154,9 +154,12 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                 items.append(f'<span class="tb tb-bah">{crest}</span>')
         note = f'<p class="tb-note">{sentence}</p>'
     if romance and _asset_exists(romance_img):
-        items.append(
-            f'<span class="tb tb-romance">'
-            f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy"></span>')
+        _rimg = f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy">'
+        if _asset_exists(bahamas_doc):
+            items.append(f'<a class="tb tb-romance" href="{bahamas_doc}" target="_blank" rel="noopener" '
+                         f'title="{t["romance_alt"]} ({t["verify"]})">{_rimg}</a>')
+        else:
+            items.append(f'<span class="tb tb-romance">{_rimg}</span>')
     if not items and not note:
         return ""
     return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'
