@@ -13,6 +13,26 @@
 - **Host agency:** signing with an outside host next week → unlocks a **CLIA/IATA number**, which most cruise-line and Disney portals require.
 - Most **tourism-board destination** programs accept ASTA/FSOT or are open to any travel professional (no CLIA needed). Most **cruise-line** portals need the agency/CLIA number.
 
+## Company-wide accreditation status (applies to both cruiselineadvisors.com AND bargainairticket.com)
+> **Display rule:** only show a badge for a credential ACTUALLY held/approved. Entity-level or truthfully-named individuals only (Hard Rule 5). Never imply airline/cruise-line affiliation.
+
+| Credential | Status | Displayable now? |
+|---|---|---|
+| ASTA member | ✅ have | Yes (badge + link) |
+| FL Seller of Travel (ST150081) | ✅ have | Yes (with ref no.) |
+| TIDS (via CCRA) | ⏳ signing up | It's an ID, NOT an accreditation — never show as "IATA Accredited Agent" |
+| ARC | ⏳ in process | Only once approved |
+| IATA / IATAN | ⏳ later, via host agency | Only once approved (IATAN card issued) |
+| BBB | 🟡 profile exists, NOT accredited | NO accredited seal/claim until BBB approves accreditation |
+
+**Who completes what:** agency-level accreditations (ARC/IATA/IATAN/TIDS/ASTA/BBB/Seller of Travel) are held by the COMPANY, earned once — one owner applies on behalf of the entity; owners do NOT each redo them. Per-person specialist/skill courses (destination specialists; GDS Sabre/Amadeus/Travelport for air) should go to the customer-facing team — the India call agents especially, since that training shows up on calls. Only claim "certified team" if it's true.
+
+### bargainairticket.com (air) — relevant set (different from cruise)
+- Air accreditations: **ARC**, **IATA/IATAN**, **TIDS** (free starter via CCRA/IATA), ASTA, Seller of Travel, BBB (when accredited).
+- Skill certs: **GDS** — Sabre / Amadeus / Travelport — for whoever quotes/tickets.
+- Content: cheap-flight guides, baggage/change/refund explainers by airline, when-to-book, visa/passport basics, route/deal guides, FAQ, trust + secure-payment signals.
+- **Compliance:** DOT full-fare advertising rule (advertised fares must include ALL taxes/fees), DOT 24-hour free-cancellation rule, Seller of Travel disclosures, TCPA for calls. This is the air analog of the cruise no-price discipline. A dedicated tracker/site doc can be built when we work on that project.
+
 **Status legend:** ✅ earned · ⏳ enrolled, awaiting approval · 🔒 blocked (needs CLIA/IATA via host agency) · ⬜ to do
 
 ---
