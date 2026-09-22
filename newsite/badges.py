@@ -154,12 +154,17 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                 items.append(f'<span class="tb tb-bah">{crest}</span>')
         note = f'<p class="tb-note">{sentence}</p>'
     if romance and _asset_exists(romance_img):
+        # DISPLAY-ONLY, deliberately not a link (qa-auditor find, 2026-09-22).
+        # It previously linked to bahamas_doc, i.e. a badge inviting you to
+        # verify a "Bahamas Romance Specialist certification" opened the
+        # GENERAL Bahamas Specialist diploma instead: a different credential.
+        # Offering the wrong document as proof is worse than offering none,
+        # because it devalues the three badges beside it that DO verify.
+        # No romance-specific certificate is on file. If one is supplied,
+        # host it in assets/docs/ and give this its own ROMANCE_DOC constant;
+        # do NOT point it back at bahamas_doc.
         _rimg = f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy">'
-        if _asset_exists(bahamas_doc):
-            items.append(f'<a class="tb tb-romance" href="{bahamas_doc}" target="_blank" rel="noopener" '
-                         f'title="{t["romance_alt"]} ({t["verify"]})">{_rimg}</a>')
-        else:
-            items.append(f'<span class="tb tb-romance">{_rimg}</span>')
+        items.append(f'<span class="tb tb-romance">{_rimg}</span>')
     if not items and not note:
         return ""
     return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'

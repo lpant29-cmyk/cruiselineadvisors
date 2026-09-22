@@ -4,7 +4,16 @@ Maintained by tracking-guardian. Nothing here is granted until the operator
 says so and records it. I never create containers, properties, or conversion
 actions myself; until access exists I output click-through instructions.
 
-Last updated: 2026-07-30 (audit #9, operator design batch + bugfixes: NO
+Last updated: 2026-09-22 (audit #10, 2026-09-22 release gate). SCOPE CHANGE
+for GTM request #1, position values only: the POS map now maps the header
+nav CTA, hero CTA, callrows, inline ask-panels and the content bottom
+sheets, so `position` now carries topbar/callzone/deal-card/phoneband/
+sticky on every conversion surface. NO new dataLayer KEYS and NO new event
+names - `position` is still one Data Layer Variable, so the click-through
+instructions below need NO edit; only the reporting breakdown gets richer.
+'other' is now exactly one link per page (the footer legal-block phone).
+
+Earlier: 2026-07-30 (audit #9, operator design batch + bugfixes: NO
 scope change - no new dataLayer keys, event names, position values, or POS
 selectors; zero drift in the tracking blocks, audit-#8 baselines still
 current. The batch's new NAV_UI_JS block, back-to-top + header Back button,

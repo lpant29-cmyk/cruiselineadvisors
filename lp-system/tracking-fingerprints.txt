@@ -130,3 +130,38 @@ p008 | 2026-07-30 | build (lp-system/out/preview/en/go/ships/mariner-of-the-seas
 # predicted (body/CSS only). Full jsdom suites also re-run clean on the
 # rebakes (36/36 + 26/26 + 22/22, incl. clicking the new legal URLs:
 # zero dataLayer events). Baselines above remain current.
+
+# ============================================================
+# AUDIT #10 — 2026-09-22 release gate (tracking-guardian)
+# ============================================================
+# Trigger: qa-auditor BLOCK 3 (HOLD-2026-09-22) — tel_click POSITION MAP
+# defect. CONFIRMED at source, then FIXED in generate.py tracking_events()
+# POS array. Rebuilt with lp-system/scripts/deploy.sh (clean, 0 skipped).
+#
+# DRIFT PROFILE (exactly as intended — only the events block moved):
+#   head dataLayer block  UNCHANGED  p002 a9912eebe9f7de4c
+#                                    p007 d17f091b2c9947ab
+#                                    p008 e3ad76f2aa165317
+#   GTM+Clarity block     UNCHANGED  1295a91c03a6802a (identical all 3)
+#   events block          CHANGED (expected — the fix lives here)
+#       p002 152b99565e1b2aa9 -> 3227058fe699dd29
+#       p007 29499f0d6f036b36 -> 5c361cec8f7fd9be
+#       p008 917e9f7d309f0331 -> 49d4e9cb3150ca5c
+#   POS array md5         274053320ccaa3bc -> cee279ea28bd7576
+#                         (identical across all three pages, as required)
+#   (hashes = sha256[:16] of the block; POS = md5[:16] of `var POS=[...];`)
+#
+# DATALAYER-SURFACE CENSUS: unchanged and still invariant on all three —
+#   6 <script> blocks | 3 dataLayer.push sites | exactly 2 event names
+#   (tel_click, lead_submit). No new measurement surface was introduced.
+#
+# POSITION CENSUS AFTER FIX (real-DOM jsdom, incl. JS-rendered surfaces):
+#   p002  25 tel links: topbar 2, callzone 2, deal-card 18, phoneband 1,
+#                       sticky 1, other 1 (footer legal line)
+#   p007  13 tel links: topbar 2, callzone 6, deal-card 2, phoneband 1,
+#                       sticky 1, other 1 (footer legal line)
+#   p008  15 tel links: topbar 2, callzone 8, deal-card 2, phoneband 1,
+#                       sticky 1, other 1 (footer legal line)
+#   Every link fires exactly ONE tel_click. 'other' is now EXACTLY ONE per
+#   page and is always the footer legal-block phone. Any 'other' count > 1
+#   is drift: re-audit before accepting the bake.
