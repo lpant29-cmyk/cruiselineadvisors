@@ -205,8 +205,8 @@ _BULK = {
     ("carnival", "drink_pkg"): ({"en": "Yes, CHEERS! must be bought for every adult (21+) in the stateroom.",
                                   "es": "Sí, CHEERS! debe comprarse para todos los adultos (21+) del camarote."},
                                  "https://help.carnival.com"),
-    ("carnival", "wifi"): ({"en": "Paid tiers only, Social, Value, Premium and Premium Multi-Device. No free option.",
-                             "es": "Solo niveles de pago, Social, Value, Premium y Premium Multi-Device. Sin opción gratuita."},
+    ("carnival", "wifi"): ({"en": "Paid tiers only: Social, Value and Premium. No tier is included in the fare. Each plan covers one device at a time; advance plans run the whole cruise, daily plans are sold on board.",
+                             "es": "Solo niveles de pago: Social, Value y Premium. Ninguno se incluye en la tarifa. Cada plan cubre un dispositivo a la vez; los planes anticipados cubren todo el crucero y los diarios se venden a bordo."},
                             "https://help.carnival.com"),
     ("carnival", "deposit"): ({"en": "Final payment 76 days out (cruises ≤5 days); 91 days out (6+ days, and Alaska/Europe/Panama/Transatlantic/Transpacific).",
                                 "es": "Pago final 76 días antes (cruceros ≤5 días); 91 días antes (6+ días, y Alaska/Europa/Panamá/Transatlántico/Transpacífico)."},
@@ -217,8 +217,8 @@ _BULK = {
     ("carnival", "kids"): ({"en": "Min age 6 months (domestic) / 12 months (transoceanic). Camp Ocean: Turtles under 2, Penguins 2-5, Stingrays 6-8, Sharks 9-11; Circle 'C' 12-14; Club O2 15-17.",
                              "es": "Edad mínima 6 meses (nacional) / 12 meses (transoceánico). Camp Ocean: Turtles <2, Penguins 2-5, Stingrays 6-8, Sharks 9-11; Circle 'C' 12-14; Club O2 15-17."},
                             "https://help.carnival.com/app/answers/detail/a_id/2545"),
-    ("carnival", "loyalty"): ({"en": "VIFP Club, Blue (1st cruise), Red (2nd / 24 pts), Gold (25-74 pts), Platinum (75-199), Diamond (200+).",
-                                "es": "VIFP Club, Blue (1er crucero), Red (2º / 24 pts), Gold (25-74 pts), Platinum (75-199), Diamond (200+)."},
+    ("carnival", "loyalty"): ({"en": "Carnival Rewards, which replaced VIFP in September 2026. Tiers: Red, Gold, Platinum, Diamond. Status is earned with Status Qualifying Stars from eligible spending and casino play, no longer by nights or cruises sailed. The first earning window runs 1 Sep 2026 to 31 Dec 2028 and Stars reset at the start of each window.",
+                                "es": "Carnival Rewards, que sustituyó a VIFP en septiembre de 2026. Niveles: Red, Gold, Platinum, Diamond. El estatus se gana con Status Qualifying Stars por gasto elegible y casino, ya no por noches ni cruceros. La primera ventana va del 1 sep 2026 al 31 dic 2028 y las Stars se reinician en cada ventana."},
                                "https://www.carnival.com/vifp/benefits"),
     ("carnival", "docs"): ({"en": "Passport strongly recommended; birth certificate + government photo ID accepted on closed-loop U.S. domestic sailings.",
                              "es": "Pasaporte muy recomendado; acta de nacimiento + identificación con foto aceptadas en cruceros nacionales de ida y vuelta desde EE.UU."},
@@ -230,17 +230,17 @@ _BULK = {
     ("princess", "drink_pkg"): ({"en": "The package applies to the first two guests on the booking, both must buy in.",
                                   "es": "El paquete aplica a los dos primeros huéspedes de la reserva, ambos deben comprarlo."},
                                  "https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages"),
-    ("princess", "wifi"): ({"en": "MedallionNet Wi-Fi is included in the Plus/Premier packages; otherwise paid separately (1- or 4-device plans).",
-                             "es": "MedallionNet está incluido en los paquetes Plus/Premier; de lo contrario se paga aparte (planes de 1 o 4 dispositivos)."},
+    ("princess", "wifi"): ({"en": "MedallionNet Max is included with Princess Premier (4 devices per guest) and Princess Plus (1 device). Without a package, MedallionNet Classic is bought separately. No Wi-Fi is included in the base Standard fare.",
+                             "es": "MedallionNet Max se incluye con Princess Premier (4 dispositivos por huésped) y Princess Plus (1 dispositivo). Sin paquete, MedallionNet Classic se compra aparte. La tarifa Standard no incluye Wi-Fi."},
                             "https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages"),
-    ("princess", "deposit"): ({"en": "Final payment 90 days out (1-13 day cruises); 120 days out (14+ days).",
-                                "es": "Pago final 90 días antes (cruceros de 1-13 días); 120 días antes (14+ días)."},
+    ("princess", "deposit"): ({"en": "Bookings made from 2 Sep 2026: final payment 120 days before departure for every cruise length. Booked before then: 90 days (1-13 day cruises), 120 days (14+ days). Cruises of 45+ days also take 10% at booking and a further 20% at 320 days out.",
+                                "es": "Reservas desde el 2 sep 2026: pago final 120 días antes de la salida para cualquier duración. Reservado antes: 90 días (cruceros de 1-13 días), 120 días (14+ días). Los cruceros de 45+ días pagan además 10% al reservar y otro 20% a 320 días."},
                                "https://www.princess.com/en-int/plan/standard-cancellation-refund-policy"),
-    ("princess", "cancel"): ({"en": "Tiered by length; e.g. 1-13 day cruises: 25% at 75 days out, 50% at 61, 75% at 31, 100% at 0 days.",
-                               "es": "Por tramos según duración; ej. cruceros de 1-13 días: 25% a 75 días, 50% a 61, 75% a 31, 100% a 0 días."},
+    ("princess", "cancel"): ({"en": "Bookings from 2 Sep 2026, cruises up to 44 days: 120+ days = deposit; 113-119 = 25%; 91-112 = 50%; 61-90 = 75%; 60 or fewer = 100%. Booked before then, 1-13 day cruises: 90+ days = deposit; 75-89 = 25%; 61-74 = 50%; 31-60 = 75%; 30 or fewer = 100%. Cruises of 45+ days run a longer schedule.",
+                               "es": "Reservas desde el 2 sep 2026, cruceros de hasta 44 días: 120+ días = depósito; 113-119 = 25%; 91-112 = 50%; 61-90 = 75%; 60 o menos = 100%. Reservado antes, cruceros de 1-13 días: 90+ días = depósito; 75-89 = 25%; 61-74 = 50%; 31-60 = 75%; 30 o menos = 100%. Los de 45+ días tienen un calendario más largo."},
                               "https://www.princess.com/en-int/plan/standard-cancellation-refund-policy"),
-    ("princess", "kids"): ({"en": "Min age 6 months; youth programs ages 3-17; teens 13-17 get 'The Beach House.'",
-                             "es": "Edad mínima 6 meses; programas juveniles 3-17; adolescentes 13-17 tienen 'The Beach House.'"},
+    ("princess", "kids"): ({"en": "Infants must be at least 6 months old; 12 months for trans-ocean crossings and remote itineraries with more than two consecutive sea days. Clubs: The Treehouse 3-7, The Lodge 8-12, The Beach House 13-17.",
+                             "es": "Los bebés deben tener al menos 6 meses; 12 meses en travesías transoceánicas e itinerarios remotos con más de dos días de mar seguidos. Clubes: The Treehouse 3-7, The Lodge 8-12, The Beach House 13-17."},
                             "https://www.princess.com/en-int/faq/pre-cruise"),
     ("princess", "loyalty"): ({"en": "Captain's Circle, Gold (1st cruise), Ruby (3 cruises / 30 days), Platinum (5 / 50), Elite (15 / 150).",
                                 "es": "Captain's Circle, Gold (1er crucero), Ruby (3 cruceros / 30 días), Platinum (5 / 50), Elite (15 / 150)."},
@@ -252,14 +252,14 @@ _BULK = {
     ("cunard", "included"): ({"en": "Included: main dining, buffet, gala nights, tea/coffee/juice/water, entertainment, enrichment (library, classes, gym, pools, kids' clubs), basic My Voyage app access. Extra: alcohol, specialty dining, full Wi-Fi packages, spa.",
                                "es": "Incluye: comedor principal, buffet, noches de gala, té/café/jugo/agua, entretenimiento, enriquecimiento (biblioteca, clases, gimnasio, piscinas, clubes infantiles), acceso básico a la app My Voyage. Extra: alcohol, restaurantes especiales, paquetes completos de Wi-Fi, spa."},
                               "https://www.cunard.com/en-gb/the-cunard-experience/whats-included"),
-    ("cunard", "drink_pkg"): ({"en": "Yes, 'A World of Drinks' must be bought by all guests of legal drinking age (18+) in the stateroom (exceptions for pregnancy/medical).",
-                                "es": "Sí, 'A World of Drinks' debe comprarse por todos los adultos en edad legal (18+) del camarote (excepciones por embarazo/médicas)."},
+    ("cunard", "drink_pkg"): ({"en": "Each adult in the same stateroom must buy the same World of Drinks collection, and collections cannot be shared. Minimum purchase age 18, though port laws may raise the age for service. The alcohol-free collections are open to all ages and infants of 3 and under are exempt.",
+                                "es": "Cada adulto del mismo camarote debe comprar la misma colección World of Drinks, y no se pueden compartir. Edad mínima de compra 18 años, aunque las leyes de cada puerto pueden elevar la edad de servicio. Las colecciones sin alcohol no tienen límite de edad y los menores de 3 años están exentos."},
                                "https://www.cunard.com/en-gb/the-cunard-experience/activity-types/bars-and-lounges/a-world-of-drinks"),
-    ("cunard", "wifi"): ({"en": "Paid Wi-Fi packages (the My Voyage app is free); Gold/Platinum/Diamond loyalty members receive complimentary Wi-Fi credit.",
-                           "es": "Paquetes de Wi-Fi de pago (la app My Voyage es gratis); los miembros Gold/Platinum/Diamond reciben crédito de Wi-Fi gratuito."},
+    ("cunard", "wifi"): ({"en": "Two paid plans: Essential (email, social, images and text) and Premium (adds music and video streaming and video calls). Neither is in the base fare, though the Signature packages bundle one. The My Voyage app is free, and Gold, Platinum and Diamond World Club members receive internet credit.",
+                           "es": "Dos planes de pago: Essential (correo, redes, imágenes y texto) y Premium (añade streaming de música y vídeo y videollamadas). Ninguno va en la tarifa base, aunque los paquetes Signature incluyen uno. La app My Voyage es gratuita y los miembros Gold, Platinum y Diamond reciben crédito de internet."},
                           "https://www.cunard.com/en-gb/the-cunard-experience/whats-included"),
-    ("cunard", "kids"): ({"en": "Children's clubs from 6 months to 17; Play Zone 2-7; teens 13-17.",
-                           "es": "Clubes infantiles de 6 meses a 17; Play Zone 2-7; adolescentes 13-17."},
+    ("cunard", "kids"): ({"en": "Minimum age 6 months; 12 months on cruises with more than two consecutive sea days. Clubs: The Play Zone 2-7 and The Kids' Zone 8-12, with supervised play for 6-23 months alongside a parent. The Youth Team covers 2-17, but no separate teen club is named.",
+                           "es": "Edad mínima 6 meses; 12 meses en cruceros con más de dos días de mar seguidos. Clubes: The Play Zone 2-7 y The Kids' Zone 8-12, con juego supervisado de 6 a 23 meses acompañados de un adulto. El Youth Team cubre de 2 a 17, pero no se nombra un club de adolescentes aparte."},
                           "https://www.cunard.com/en-gb/the-cunard-experience/activity-types/Children"),
     ("cunard", "loyalty"): ({"en": "Cunard World Club, Silver (1 voyage), Gold (2 voyages / 20 nights), Platinum (7 / 70), Diamond (15 / 150).",
                               "es": "Cunard World Club, Silver (1 viaje), Gold (2 viajes / 20 noches), Platinum (7 / 70), Diamond (15 / 150)."},
@@ -274,11 +274,11 @@ _BULK = {
     ("msc", "drink_pkg"): ({"en": "Underage guests must buy the Minors Package if an adult in the cabin has a drinks package.",
                              "es": "Los menores deben comprar el Paquete de Menores si un adulto del camarote tiene paquete de bebidas."},
                             "https://www.msccruisesusa.com/on-board/dining-drinks/drinks-packages"),
-    ("msc", "wifi"): ({"en": "Two paid tiers only, Browse and Browse & Stream. No free option beyond the app.",
-                        "es": "Solo dos niveles de pago, Browse y Browse & Stream. Sin opción gratuita más allá de la app."},
+    ("msc", "wifi"): ({"en": "Two paid tiers, Browse Cruise and Browse & Stream, with no free tier beyond the app. MSC publishes these tier names on its EU site; the US site confirms only that Wi-Fi is available on all ships.",
+                        "es": "Dos niveles de pago, Browse Cruise y Browse & Stream, sin opción gratuita más allá de la app. MSC publica estos nombres en su sitio europeo; el sitio de EE.UU. solo confirma que hay Wi-Fi en todos los barcos."},
                        "https://www.msccruisesusa.com/on-board/internet-apps/wifi"),
-    ("msc", "kids"): ({"en": "Five clubs, Baby 0-3, Mini 3-6, Junior 7-11, Young 12-14, Teen 15-17.",
-                        "es": "Cinco clubes, Baby 0-3, Mini 3-6, Junior 7-11, Young 12-14, Teen 15-17."},
+    ("msc", "kids"): ({"en": "Infants under 2 may sail, except on cruises of 11 nights or more where every guest must be at least 2. Clubs: Mini 3-6, Junior 7-11, Young 12-14, Teen 15-17, plus a Baby Club for which no age range is published.",
+                        "es": "Los menores de 2 años pueden navegar, salvo en cruceros de 11 noches o más, donde todos deben tener al menos 2. Clubes: Mini 3-6, Junior 7-11, Young 12-14, Teen 15-17, más un Baby Club cuyo rango de edad no se publica."},
                        "https://www.msccruisesusa.com/on-board/cruise-for-kids/clubs"),
     ("msc", "loyalty"): ({"en": "MSC Voyagers Club, Welcome, Classic, Silver, Gold, Diamond and Blue Diamond (by points; Blue Diamond 25,000+).",
                            "es": "MSC Voyagers Club, Welcome, Classic, Silver, Gold, Diamond y Blue Diamond (por puntos; Blue Diamond 25,000+)."},
@@ -351,13 +351,13 @@ LINE_FACTS["margaritaville-at-sea"]["docs"] = {
     "src": "https://www.margaritavilleatsea.com/resort-at-sea/travel-requirements", "verified": "2026-07-18"}
 # Cunard D/E user-sourced from Cunard's UK Booking Conditions PDF (US-specific doc not found, verify).
 LINE_FACTS["cunard"]["deposit"] = {
-    "v": {"en": "Balance due 90 days before departure for cruises ≤74 nights (current); 120 days for bookings from 10 Mar 2026 departing on/after 1 Dec 2026. (From Cunard's UK booking conditions, verify against US terms.)",
-          "es": "Saldo 90 días antes para cruceros ≤74 noches (actual); 120 días para reservas desde 10 mar 2026 con salida desde 1 dic 2026. (Condiciones del Reino Unido de Cunard, verificar con términos de EE.UU.)"},
+    "v": {"en": "Cunard does not publish a final-payment day count for the US market: it is absent from the US Passage Contract, and the US FAQ is not reachable. The figures circulating elsewhere come from Cunard's UK booking conditions, which need not match US terms, so we do not publish them. Confirm your own due date with the agency that books you.",
+          "es": "Cunard no publica un plazo de pago final para el mercado de EE.UU.: no aparece en el contrato de pasaje estadounidense y su FAQ de EE.UU. no es accesible. Las cifras que circulan provienen de las condiciones del Reino Unido, que no tienen por qué coincidir, así que no las publicamos. Confirma tu fecha con la agencia que te reserve."},
     "src": "https://www.cunard.com/content/dam/cunard/marketing-assets/pdf/booking-condition-pdf/cunard-gb-booking-conditions-may2026.pdf",
     "verified": "2026-07-18"}
 LINE_FACTS["cunard"]["cancel"] = {
-    "v": {"en": "Cruises ≤74 nights (current): 91+ days = deposit only; 90-57 = 50%; 56-42 = 60%; 41-16 = 75%; 15-6 = 90%; under 6 days = 100%. (Cunard UK booking conditions, verify against US terms.)",
-          "es": "Cruceros ≤74 noches (actual): 91+ días = solo depósito; 90-57 = 50%; 56-42 = 60%; 41-16 = 75%; 15-6 = 90%; menos de 6 días = 100%. (Condiciones del Reino Unido, verificar con EE.UU.)"},
+    "v": {"en": "From the US Passage Contract. Voyages of 30 nights or fewer: 121+ days = no fee; 120-90 = 25% or the deposit; 89-61 = 40%; 60-31 = 50%; 30-15 = 75%; 14 or fewer, or no-show = 100%. Voyages of 31+ nights: 151+ days = no fee; 150-120 = 20% or the deposit; 119-91 = 40%; 90-64 = 50%; 63-43 = 75%; 42 or fewer = 100%.",
+          "es": "Del contrato de pasaje de EE.UU. Viajes de 30 noches o menos: 121+ días = sin cargo; 120-90 = 25% o el depósito; 89-61 = 40%; 60-31 = 50%; 30-15 = 75%; 14 o menos, o no presentarse = 100%. Viajes de 31+ noches: 151+ días = sin cargo; 150-120 = 20% o el depósito; 119-91 = 40%; 90-64 = 50%; 63-43 = 75%; 42 o menos = 100%."},
     "src": "https://www.cunard.com/content/dam/cunard/marketing-assets/pdf/booking-condition-pdf/cunard-gb-booking-conditions-may2026.pdf",
     "verified": "2026-07-18"}
 LINE_FACTS["msc"]["deposit"] = {
@@ -481,4 +481,14 @@ def latest_verified_all():
 # 1 (celebrity/deposit) rewritten because no Celebrity page publishes a
 # final-payment day count. Nothing stamped that was not actually re-read.
 for _ln, _fld in [('royal-caribbean', 'drink_pkg'), ('royal-caribbean', 'wifi'), ('royal-caribbean', 'deposit'), ('royal-caribbean', 'cancel'), ('royal-caribbean', 'kids'), ('royal-caribbean', 'loyalty'), ('royal-caribbean', 'docs'), ('celebrity', 'drink_pkg'), ('celebrity', 'wifi'), ('celebrity', 'deposit'), ('celebrity', 'cancel'), ('celebrity', 'kids'), ('celebrity', 'loyalty'), ('celebrity', 'docs'), ('holland-america', 'drink_pkg'), ('holland-america', 'wifi'), ('holland-america', 'deposit'), ('holland-america', 'cancel'), ('holland-america', 'kids'), ('holland-america', 'loyalty'), ('holland-america', 'docs'), ('margaritaville-at-sea', 'drink_pkg'), ('margaritaville-at-sea', 'wifi'), ('margaritaville-at-sea', 'deposit'), ('margaritaville-at-sea', 'cancel'), ('margaritaville-at-sea', 'kids'), ('margaritaville-at-sea', 'loyalty'), ('margaritaville-at-sea', 'docs')]:
+    LINE_FACTS[_ln][_fld]["verified"] = "2026-09-23"
+
+# ── Re-verification, 2026-09-23 (operator-supplied browser read) ───────────
+# The four lines our fetch cannot reach. Read in a browser on each line's own
+# site. Locale caveats recorded because they are load-bearing: princess.com and
+# cunard.com force en-int/en-gb, and msccruisesusa.com geo-redirects to the EU
+# site, so US figures for those came from the US pages via a direct fetcher.
+# Biggest finds: Carnival retired VIFP entirely for Carnival Rewards, and our
+# Cunard cancellation schedule was UK terms shown to US customers.
+for _ln, _fld in [('carnival', 'drink_pkg'), ('carnival', 'wifi'), ('carnival', 'deposit'), ('carnival', 'cancel'), ('carnival', 'kids'), ('carnival', 'loyalty'), ('carnival', 'docs'), ('princess', 'drink_pkg'), ('princess', 'wifi'), ('princess', 'deposit'), ('princess', 'cancel'), ('princess', 'kids'), ('princess', 'loyalty'), ('princess', 'docs'), ('cunard', 'drink_pkg'), ('cunard', 'wifi'), ('cunard', 'deposit'), ('cunard', 'cancel'), ('cunard', 'kids'), ('cunard', 'loyalty'), ('cunard', 'docs'), ('msc', 'drink_pkg'), ('msc', 'wifi'), ('msc', 'deposit'), ('msc', 'cancel'), ('msc', 'kids'), ('msc', 'loyalty'), ('msc', 'docs')]:
     LINE_FACTS[_ln][_fld]["verified"] = "2026-09-23"
