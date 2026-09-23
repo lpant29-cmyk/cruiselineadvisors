@@ -104,12 +104,12 @@ LINE_FACTS["holland-america"]["drink_pkg"] = {
     "src": "https://www.hollandamerica.com/en/us/faq/onboard-cruise-experience/beverage/what-if-my-traveling-companion-doesnt-drink-do-they-still-have-to-purchase-a-beverage-package",
     "verified": "2026-07-18"}
 LINE_FACTS["holland-america"]["deposit"] = {
-    "v": {"en": "Final payment due 120 days before departure for most cruises (some shorter cruises 90 or 75 days).",
-          "es": "Pago final 120 días antes de la salida para la mayoría (algunos cruceros cortos 90 o 75 días)."},
+    "v": {"en": "Final payment due 90 days before departure for cruises of 13 days or less (excluding Asia, Australia and South America). Bookings opened from 29 Sep 2026 departing 2027 or later: 120 days.",
+          "es": "Pago final 90 días antes de la salida en cruceros de 13 días o menos (excepto Asia, Australia y Sudamérica). Reservas abiertas desde el 29 sep 2026 con salida en 2027 o después: 120 días."},
     "src": "https://www.hollandamerica.com/en/us/legal-privacy/cancellation-policy-US-default", "verified": "2026-07-18"}
 LINE_FACTS["holland-america"]["cancel"] = {
-    "v": {"en": "Typical schedule: 120+ days before = full refund; 91-119 days = 25% penalty; 61-90 days = 50%; 60 days or fewer = 100% (no refund). Longer/shorter voyages differ.",
-          "es": "Calendario típico: 120+ días = reembolso completo; 91-119 días = 25% de penalidad; 61-90 días = 50%; 60 días o menos = 100% (sin reembolso). Los viajes más largos/cortos varían."},
+    "v": {"en": "Cruises of 13 days or less booked now: 90+ days before departure = full refund; 89-83 days = full refund less the deposit; 82-46 days = 50% refunded; 45 days or fewer = no refund. Bookings opened from 29 Sep 2026 departing 2027 or later: 120+ days = full refund; 119-91 = 75% refunded; 90-61 = 50% refunded; 60 or fewer = no refund. Grand World and Grand Voyages differ.",
+          "es": "Cruceros de 13 días o menos reservados ahora: 90+ días antes = reembolso completo; 89-83 días = reembolso completo menos el depósito; 82-46 días = 50% reembolsado; 45 días o menos = sin reembolso. Reservas abiertas desde el 29 sep 2026 con salida en 2027 o después: 120+ días = completo; 119-91 = 75%; 90-61 = 50%; 60 o menos = sin reembolso. Grand World y Grand Voyages difieren."},
     "src": "https://www.hollandamerica.com/en/us/legal-privacy/cancellation-policy-US-default", "verified": "2026-07-18"}
 LINE_FACTS["holland-america"]["loyalty"] = {
     "v": {"en": "Mariner Society, Cruise Day credits from cruise days, onboard purchases and double days in suites; five Star Mariner tiers.",
@@ -117,8 +117,8 @@ LINE_FACTS["holland-america"]["loyalty"] = {
     "src": "https://www.hollandamerica.com/en/us/faq/loyalty-program/loyalty-program-general-information/what-is-the-mariner-society-rewards-program",
     "verified": "2026-07-18"}
 LINE_FACTS["holland-america"]["kids"] = {
-    "v": {"en": "Infants must be at least 6 months old to sail; 12 months for transoceanic, South America, Asia, South Pacific and Hawaii voyages. Kids programme: Club HAL (ages 3-17).",
-          "es": "Los bebés deben tener al menos 6 meses; 12 meses en travesías transoceánicas, Sudamérica, Asia, Pacífico Sur y Hawái. Programa infantil: Club HAL (3-17 años)."},
+    "v": {"en": "Infants must be at least 6 months old to sail; 12 months for transoceanic, South America, Asia, South Pacific and Hawaii voyages. Kids programmes ages 3-17: Kids Club 3-6, Tweens 7-11, Teens 12-17.",
+          "es": "Los bebés deben tener al menos 6 meses; 12 meses en travesías transoceánicas, Sudamérica, Asia, Pacífico Sur y Hawái. Programas infantiles de 3 a 17 años: Kids Club 3-6, Tweens 7-11, Teens 12-17."},
     "src": "https://www.hollandamerica.com/en/us/faq/cruise-planning/family-travel/is-there-a-minimum-age-for-cruising-on-holland-america-line",
     "verified": "2026-07-18"}
 LINE_FACTS["margaritaville-at-sea"]["gratuities"] = {
@@ -155,8 +155,8 @@ LINE_FACTS["msc"]["gratuities"] = {
 
 # ── Royal Caribbean (read from official FAQ pages 2026-07-18) ──
 LINE_FACTS["royal-caribbean"]["drink_pkg"] = {
-    "v": {"en": "Alcohol (Deluxe) package: every guest of legal drinking age in the same stateroom must buy it. Non-alcoholic packages can be bought individually.",
-          "es": "Paquete de alcohol (Deluxe): todos los adultos en edad legal del mismo camarote deben comprarlo. Los no alcohólicos se compran por separado."},
+    "v": {"en": "Alcohol (Deluxe) package: every guest of legal drinking age in the same stateroom must buy it. Not sold on 2-4 night sailings departing Australia.",
+          "es": "Paquete de alcohol (Deluxe): todos los adultos en edad legal del mismo camarote deben comprarlo. No se vende en salidas de 2-4 noches desde Australia."},
     "src": "https://www.royalcaribbean.com/faq/questions/does-everyone-need-to-buy-the-deluxe-beverage-package",
     "verified": "2026-07-18"}
 LINE_FACTS["royal-caribbean"]["deposit"] = {
@@ -187,9 +187,9 @@ LINE_FACTS["royal-caribbean"]["cancel"] = {
           "es": "Por duración (contrato de EE.UU.): 1-4 noches, 75+ días = sin cargo, 74-61 = 50%, 60-31 = 75%, 30 o menos = 100%. 5-14 noches, 90+ = sin cargo, 89-75 = 25%, 74-61 = 50%, 60-31 = 75%, 30 o menos = 100%. 15+ noches, 120+ = sin cargo, 119-61 = 25%, 60-41 = 50%, 40-25 = 75%, 24 o menos = 100%."},
     "src": "https://www.royalcaribbean.com/guest-terms/us/united-states-english/", "verified": "2026-07-18"}
 LINE_FACTS["celebrity"]["deposit"] = {
-    "v": {"en": "Generally 90 days before sailing; the ticket contract's no-charge cutoff actually varies by length, 75 days (1-4 nights), 90 days (5-14 nights), 120 days (15+ nights).",
-          "es": "Generalmente 90 días antes; el corte sin cargo del contrato varía por duración, 75 días (1-4 noches), 90 días (5-14 noches), 120 días (15+ noches)."},
-    "src": "https://www.celebritycruises.com/faqs", "verified": "2026-07-18"}
+    "v": {"en": "Celebrity does not publish a final-payment day count on its FAQ or ticket contract. The contract's no-charge cancellation cutoffs are 75 days (1-4 nights), 90 days (5-14 nights) and 120 days (15+ nights); confirm your own due date with the agency that books you.",
+          "es": "Celebrity no publica un plazo de pago final en su FAQ ni en su contrato. Los cortes de cancelación sin cargo del contrato son 75 días (1-4 noches), 90 días (5-14 noches) y 120 días (15+ noches); confirma tu fecha con la agencia que te reserve."},
+    "src": "https://www.celebritycruises.com/guest-terms/united-states-english/", "verified": "2026-07-18"}
 LINE_FACTS["celebrity"]["cancel"] = {
     "v": {"en": "By cruise length (US ticket contract): 1-4 nights, 75+ days = no charge, 74-61 = 50%, 60-31 = 75%, 30 or fewer = 100%. 5-14 nights, 90+ = none, 89-75 = 25%, 74-61 = 50%, 60-31 = 75%, 30 or fewer = 100%. 15+ nights, 120+ = none, 119-75 = 25%, 74-61 = 50%, 60-31 = 75%, 30 or fewer = 100%.",
           "es": "Por duración (contrato de EE.UU.): 1-4 noches, 75+ días = sin cargo, 74-61 = 50%, 60-31 = 75%, 30 o menos = 100%. 5-14 noches, 90+ = sin cargo, 89-75 = 25%, 74-61 = 50%, 60-31 = 75%, 30 o menos = 100%. 15+ noches, 120+ = sin cargo, 119-75 = 25%, 74-61 = 50%, 60-31 = 75%, 30 o menos = 100%."},
@@ -396,6 +396,17 @@ for _s in LINE_FACTS:
         if not LINE_FACTS[_s][_k]["v"]:
             LINE_FACTS[_s][_k] = {"v": _v, "src": None, "verified": "2026-07-18", "general": True}
 
+# ── Secondary sources, 2026-09-23 re-verification ──────────────────────────
+# Two "kids" values combine an age policy and a programme name that live on
+# DIFFERENT official pages. The schema holds one src per fact, so src points at
+# the age policy (the load-bearing claim) and the programme-name source is
+# recorded here so the trail is not lost:
+#   royal-caribbean/kids  programme name "Adventure Ocean Youth Program, ages 3-17"
+#     verified at https://www.royalcaribbean.com/faq/questions/children-teen-activities
+#   holland-america/kids  programme names "Kids Club 3-6, Tweens 7-11, Teens 12-17"
+#     verified at https://www.hollandamerica.com/en/us/onboard-experiences/activities/kids-club
+#     ("Club HAL" is retired consumer-facing branding and no longer appears.)
+
 # ── 30-day re-verification, 2026-09-15 ──────────────────────────────────────
 # Read on each line's own site this date and confirmed against the page before
 # stamping. Applied here rather than at the definitions because several of
@@ -464,3 +475,10 @@ def latest_verified_all():
     ds = [c["verified"] for s in LINE_FACTS.values() for c in s.values()
           if c.get("v") and c.get("verified")]
     return max(ds) if ds else None
+
+# ── Re-verification, 2026-09-23 ────────────────────────────────────────────
+# All 28 read on each line's own site this date; 22 unchanged, 5 corrected,
+# 1 (celebrity/deposit) rewritten because no Celebrity page publishes a
+# final-payment day count. Nothing stamped that was not actually re-read.
+for _ln, _fld in [('royal-caribbean', 'drink_pkg'), ('royal-caribbean', 'wifi'), ('royal-caribbean', 'deposit'), ('royal-caribbean', 'cancel'), ('royal-caribbean', 'kids'), ('royal-caribbean', 'loyalty'), ('royal-caribbean', 'docs'), ('celebrity', 'drink_pkg'), ('celebrity', 'wifi'), ('celebrity', 'deposit'), ('celebrity', 'cancel'), ('celebrity', 'kids'), ('celebrity', 'loyalty'), ('celebrity', 'docs'), ('holland-america', 'drink_pkg'), ('holland-america', 'wifi'), ('holland-america', 'deposit'), ('holland-america', 'cancel'), ('holland-america', 'kids'), ('holland-america', 'loyalty'), ('holland-america', 'docs'), ('margaritaville-at-sea', 'drink_pkg'), ('margaritaville-at-sea', 'wifi'), ('margaritaville-at-sea', 'deposit'), ('margaritaville-at-sea', 'cancel'), ('margaritaville-at-sea', 'kids'), ('margaritaville-at-sea', 'loyalty'), ('margaritaville-at-sea', 'docs')]:
+    LINE_FACTS[_ln][_fld]["verified"] = "2026-09-23"
