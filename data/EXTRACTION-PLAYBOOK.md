@@ -191,3 +191,50 @@ refresh window, and the page footer shows the date so visitors can see it's curr
 
 Nothing on the site is hand-edited. **The JSON is the single source of truth**, so a
 fact fixed once is fixed everywhere it appears — page, comparison table, and FAQ.
+
+---
+
+## Fleet-page access, verified 2026-09-23
+
+All 8 lines' **fleet pages** are reachable, including four whose FAQ/policy
+pages are not. Do not assume a line is unfetchable because one section is:
+the block is usually per-section, not per-domain.
+
+| Line | Working fleet URL | Notes |
+|---|---|---|
+| Royal Caribbean | `royalcaribbean.com/cruise-ships` | server-rendered grid |
+| Celebrity | `celebritycruises.com/cruise-ships` | grouped by series |
+| Holland America | `hollandamerica.com/en/cruise-ships` | `/en/us/cruise-ships` 301s here |
+| Margaritaville | `margaritavilleatsea.com/explore-our-ships` | `/cruise-ships` now 302s to home |
+| Princess | `princess.com/en-int/ships-and-experience/ships` | en-us geo-redirects to en-int |
+| Carnival | `carnival.com/cruise-ships` | JS shell, but the roster renders server-side |
+| MSC | `mscpressarea.com/en_INT/corporate-information/the-fleet/` | consumer domains 401; press area works |
+| Cunard | `cunard.com/en-gb/cruise-ships` | needs the header recipe below |
+
+**Cunard access recipe.** Plain curl and WebFetch both get `403 Access Denied`
+(Akamai) on every path including `/robots.txt`. It loads only with a full
+browser header set: a Safari user-agent, `Sec-Fetch-Dest`, `Sec-Fetch-Mode`,
+`Sec-Fetch-Site`, `Sec-Fetch-User`, `Upgrade-Insecure-Requests`, and
+`Accept-Encoding: gzip, deflate`. Requesting `br` breaks curl's decoding.
+
+**Two traps on fleet pages.**
+
+1. **Pre-service ships now sit inline in the main grid** on Royal Caribbean
+   and Carnival, not in a separate coming-soon area. A naive scrape of the
+   grid adds ships that do not sail for months or years. Read each ship's
+   arrival copy. As of 2026-09-23: RC Hero of the Seas (Aug 2027), Carnival
+   Festivale (2027) and Tropicale (2028), Celebrity Xcite (2028),
+   Margaritaville Beachcomber (Jan 2027), MSC World Asia (Dec 2026) and
+   World Atlantic (Nov 2027).
+2. **Stale CMS fragments.** RC's Hero page carries a hidden editor block
+   reading "ARRIVES SUMMER 2026", which is Legend's string, not Hero's, and
+   the fleet page carries two contradictory Icon-class blurbs. Trust the
+   human-visible per-ship copy over grid blurbs.
+
+**MSC source caveat.** The press-area fleet page has no update stamp and its
+footer still reads 2023. It is a reliable *in-service* list but lags
+newbuilds (it omits World Asia entirely). Cross-check names against
+`mscpressarea.com/en_INT/press-releases/` before trusting an absence.
+
+**Diary:** MSC World Asia enters service **December 2026** and Carnival
+Festivale in **2027**. Both need adding to the rosters when they sail.

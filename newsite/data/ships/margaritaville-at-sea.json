@@ -1,8 +1,8 @@
 {
   "line": "margaritaville-at-sea",
-  "roster_source": "https://www.margaritavilleatsea.com/cruise-ships",
+  "roster_source": "https://www.margaritavilleatsea.com/explore-our-ships",
   "specs_source": "https://www.margaritavilleatsea.com/about-us",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "ships": [
     {
       "name": "Margaritaville at Sea Paradise",
@@ -311,5 +311,6 @@
     "Islander number of decks, not published officially",
     "Ship class for both vessels, not stated officially"
   ],
-  "flag": "Beachcomber EXCLUDED from active roster, official cruise-ships page states \"Sailing from PortMiami in 2027\" (about-us: January 2027); upcoming, not yet in service. No tonnage/capacity/deck specs are published anywhere on the official site; all such fields null and flagged needs_manual."
+  "flag": "Beachcomber EXCLUDED from active roster, official fleet page states it \"begins sailing in January 2027\" from Miami and later Galveston; upcoming, not yet in service. No tonnage/capacity/deck specs are published anywhere on the official site; all such fields null and flagged needs_manual.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

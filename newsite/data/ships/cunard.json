@@ -2,7 +2,7 @@
   "line": "cunard",
   "roster_source": "https://www.cunard.com/en-gb/cruise-ships",
   "specs_source": "https://www.cunard.com/en-gb/cruise-ships/{ship}",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "ships": [
     {
       "name": "Queen Mary 2",
@@ -82,5 +82,6 @@
     "ship class (Cunard does not label one)",
     "on-board features"
   ],
-  "flag": "Guests/crew/length read directly from each official cunard.com ship page (user-confirmed 2026-07-19). Tonnage and year are genuinely not published on Cunard's site."
+  "flag": "Guests/crew/length read directly from each official cunard.com ship page (user-confirmed 2026-07-19). Tonnage and year are genuinely not published on Cunard's site.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

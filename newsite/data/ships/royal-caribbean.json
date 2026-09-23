@@ -2,7 +2,7 @@
   "line": "royal-caribbean",
   "roster_source": "https://www.royalcaribbean.com/cruise-ships",
   "specs_source": "https://www.royalcaribbeanpresscenter.com/ (official ship Fact Sheets served from royalcaribbeanmedia.com)",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "ships": [
     {
       "name": "Icon of the Seas",
@@ -4024,5 +4024,6 @@
     "ALL ships: maximum (non-double) occupancy, official fact sheets publish only double-occupancy guest counts.",
     "Hero of the Seas, EXCLUDED: official fact sheet lists maiden voyage August 11, 2027 (future / not yet in service)."
   ],
-  "flag": "30 in-service '...of the Seas' ships. Roster confirmed against official royalcaribbean.com/cruise-ships fleet page AND the official press-center LoadShips API (which also supplied each ship's class grouping). Per-ship year/tonnage/guests/features read directly from official Royal Caribbean 'Fast Facts' fact-sheet images (royalcaribbeanmedia.com, first-party, one per ship). 'year' is derived from the printed MAIDEN VOYAGE date. All guest figures are DOUBLE OCCUPANCY; no official page publishes max occupancy. Hero of the Seas (Icon class) excluded as not-yet-in-service (maiden voyage Aug 11, 2027). No third-party sources used. No prices present on fact sheets."
+  "flag": "30 in-service '...of the Seas' ships. Roster confirmed against official royalcaribbean.com/cruise-ships fleet page AND the official press-center LoadShips API (which also supplied each ship's class grouping). Per-ship year/tonnage/guests/features read directly from official Royal Caribbean 'Fast Facts' fact-sheet images (royalcaribbeanmedia.com, first-party, one per ship). 'year' is derived from the printed MAIDEN VOYAGE date. All guest figures are DOUBLE OCCUPANCY; no official page publishes max occupancy. Hero of the Seas (Icon class) excluded as not-yet-in-service (maiden voyage Aug 11, 2027). No third-party sources used. No prices present on fact sheets. WARNING 2026-09-23: this line now lists pre-service ships inline in its main fleet grid rather than in a separate coming-soon area, so the grid is NOT safe to treat as the in-service fleet. Read each ship's arrival copy before adding it.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

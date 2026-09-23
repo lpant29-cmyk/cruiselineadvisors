@@ -2,7 +2,7 @@
   "line": "msc",
   "roster_source": "https://www.mscpressarea.com/en_INT/corporate-information/the-fleet/",
   "specs_source": "",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "ships": [
     {
       "name": "MSC World America",
@@ -1761,5 +1761,6 @@
     "MSC Sinfonia: year + tonnage + guests (no readable official spec page)",
     "Best manual official source for legacy-ship specs: each ship's page on msccruisesusa.com/cruise/ships/<ship> and the deck-plan PDFs at virtual-tours.msccruises.com (both 403 to automated fetch; readable in a normal browser)."
   ],
-  "flag": "Roster CONFIRMED officially: the MSC press-area 'The Fleet' page (mscpressarea.com/en_INT/corporate-information/the-fleet/) was readable and lists all 23 in-service ships with their class order; it does NOT carry per-ship year/tonnage/guests. Consumer fleet pages (msccruises.com/discover/fleet, msccruisesusa.com, msccruises.com/int/our-cruises/ships) and the virtual-tours deck-plan PDFs all returned HTTP 403 to automated fetch. Per-ship specs were sourced from official MSC press-area press releases and christening pages, which only carry hard specs for Meraviglia-generation-and-newer ships (2017+). All 12 pre-2017 ships (Fantasia, Musica, Lirica classes) have class confirmed but year/tonnage/guests unreadable officially -> null + needs_manual. No third-party sources used."
+  "flag": "Roster CONFIRMED officially: the MSC press-area 'The Fleet' page (mscpressarea.com/en_INT/corporate-information/the-fleet/) was readable and lists all 23 in-service ships with their class order; it does NOT carry per-ship year/tonnage/guests. Consumer fleet pages (msccruises.com/discover/fleet, msccruisesusa.com, msccruises.com/int/our-cruises/ships) and the virtual-tours deck-plan PDFs all returned HTTP 403 to automated fetch. Per-ship specs were sourced from official MSC press-area press releases and christening pages, which only carry hard specs for Meraviglia-generation-and-newer ships (2017+). All 12 pre-2017 ships (Fantasia, Musica, Lirica classes) have class confirmed but year/tonnage/guests unreadable officially -> null + needs_manual. No third-party sources used.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

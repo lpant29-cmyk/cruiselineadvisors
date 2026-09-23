@@ -2,7 +2,7 @@
   "line": "holland-america",
   "roster_source": "https://www.hollandamerica.com/en/us/cruise-ships",
   "specs_source": "https://www.hollandamerica.com/content/dam/hal/inventory-assets/newsroom/presskits/Alaska/holland-america-line-fleet-facts-ada.pdf",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "capacity_basis": "double occupancy (HAL Fleet Specifications 'Capacity' row); 'Maximum Passengers' full-occupancy figure recorded in each ship's notes",
   "ships": [
     {
@@ -1247,5 +1247,6 @@
     }
   ],
   "needs_manual": [],
-  "flag": "All 11 ships have officially-sourced class, year, tonnage and guests. IMPORTANT: the official fleet-page 'Ships at a Glance' PDF (/content/dam/hal/inventory-assets/ships/at-a-glance/hal-ships-at-a-glance.pdf, updated 11/27/25) is a DINING/AMENITIES/ENTERTAINMENT comparison chart ONLY and contains NO tonnage/guests/year. Specs were instead taken from the official Holland America Line Fleet Specifications fact sheet PDF (newsroom press kit, effective date Nov 17, 2020) - authoritative and first-party, but ~5 years old; capacity/tonnage/year are stable but a fresh official fact sheet should be re-checked before publish. Features were read from each ship's official hollandamerica.com/en/us/cruise-ships/<ship> detail page. No prices recorded. No third-party sources used."
+  "flag": "All 11 ships have officially-sourced class, year, tonnage and guests. IMPORTANT: the official fleet-page 'Ships at a Glance' PDF (/content/dam/hal/inventory-assets/ships/at-a-glance/hal-ships-at-a-glance.pdf, updated 11/27/25) is a DINING/AMENITIES/ENTERTAINMENT comparison chart ONLY and contains NO tonnage/guests/year. Specs were instead taken from the official Holland America Line Fleet Specifications fact sheet PDF (newsroom press kit, effective date Nov 17, 2020) - authoritative and first-party, but ~5 years old; capacity/tonnage/year are stable but a fresh official fact sheet should be re-checked before publish. Features were read from each ship's official hollandamerica.com/en/us/cruise-ships/<ship> detail page. No prices recorded. No third-party sources used.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

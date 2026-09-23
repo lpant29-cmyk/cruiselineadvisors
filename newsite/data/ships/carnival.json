@@ -2,7 +2,7 @@
   "line": "carnival",
   "roster_source": "https://www.carnival.com/cruise-ships",
   "specs_source": "https://www.carnival-news.com/ship/ (per-ship official fact sheets)",
-  "verified": "2026-07-19",
+  "verified": "2026-09-23",
   "ships": [
     {
       "name": "Carnival Jubilee",
@@ -4170,5 +4170,6 @@
   "needs_manual": [
     "features: Official fact sheets list no named onboard venues/features for any ship; per-ship features left empty. Named features would need to be read from each carnival.com/cruise-ships/<ship> page if desired."
   ],
-  "flag": "All 29 in-service ships have official specs (name/class/year/tonnage/guests) from Carnival newsroom fact sheets. Roster confirmed against carnival.com/cruise-ships; excluded not-yet-in-service Carnival Tropicale (2028) and Carnival Festivale (2027). Class labels are Carnival's official fact-sheet wording (e.g. 'Venice Class' for Firenze/Venezia, 'Adventure Class' for Adventure/Encounter, 'Splendor Class', 'Sunshine Class'). Carnival Sunrise year (1999) is the vessel's original service entry per its official fact sheet; renamed 2019."
+  "flag": "All 29 in-service ships have official specs (name/class/year/tonnage/guests) from Carnival newsroom fact sheets. Roster confirmed against carnival.com/cruise-ships; excluded not-yet-in-service Carnival Tropicale (2028) and Carnival Festivale (2027). Class labels are Carnival's official fact-sheet wording (e.g. 'Venice Class' for Firenze/Venezia, 'Adventure Class' for Adventure/Encounter, 'Splendor Class', 'Sunshine Class'). Carnival Sunrise year (1999) is the vessel's original service entry per its official fact sheet; renamed 2019. WARNING 2026-09-23: this line now lists pre-service ships inline in its main fleet grid rather than in a separate coming-soon area, so the grid is NOT safe to treat as the in-service fleet. Read each ship's arrival copy before adding it.",
+  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }
