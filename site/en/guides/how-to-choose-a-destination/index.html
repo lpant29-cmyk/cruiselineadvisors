@@ -136,7 +136,11 @@ img,svg{max-width:100%}
 .btn-block{display:flex;width:100%}
 
 /* ═══ animated ocean hero ═══ */
-.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero{position:relative;overflow:hidden;isolation:isolate;
+  /* fill the screen down to the first scroll. 66px is .nav height. svh keeps
+     mobile stable when browser chrome shows/hides; vh is the fallback. */
+  min-height:calc(100vh - 66px);min-height:calc(100svh - 66px);
+  display:flex;flex-direction:column;justify-content:center}
 .ocean{position:absolute;inset:0;z-index:0;
   background:linear-gradient(180deg,#7FD3EE 0%,#A9E4F2 34%,#DFF3F0 60%,var(--horizon) 74%,#FFDf9E 100%)}
 .sun{position:absolute;top:8%;right:16%;width:96px;height:96px;border-radius:50%;
@@ -170,7 +174,7 @@ img,svg{max-width:100%}
 .dolphin-hero{position:absolute;left:13%;bottom:150px;width:78px;z-index:3;animation:leap 6.5s ease-in-out infinite}
 @keyframes leap{0%,50%,100%{transform:translateY(48px) rotate(40deg)}68%{transform:translateY(-50px) rotate(2deg)}82%{transform:translateY(-12px) rotate(-44deg)}90%{transform:translateY(36px) rotate(-64deg)}}
 .dolphin-scroll{position:fixed;left:0;bottom:118px;width:62px;z-index:80;pointer-events:none;will-change:transform}
-.hero-grid{padding:24px 20px 200px}
+.hero-grid{padding:44px 20px 200px;width:100%}
 .hero-content{position:relative;z-index:6}
 .finder-open{display:inline-flex}
 .hide-mobile{display:none!important}
@@ -935,7 +939,7 @@ a.rt-card:hover{transform:translateY(-2px)}
   body{padding-bottom:0}
 }
 @media(min-width:960px){
-  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;padding:52px 20px 250px}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;padding:76px 20px 250px}
   .hero-cta{flex-direction:row;max-width:none;align-items:stretch;flex-wrap:wrap}
   .hero-cta .btn{flex:none}
   .finder-open{display:none!important}
