@@ -60,7 +60,7 @@ destination pages. Swap any day for a timely/seasonal post whenever one is warra
 **Week 3 — destination deep-guides (feed the destination pages)**
 15. Caribbean cruise guide (ports, best time, which lines)
 16. Alaska cruise guide (glaciers, when to go, what to book)
-17. Bahamas cruise guide
+17. ~~Bahamas cruise guide~~ ✅ published 2026-09-25
 18. Bermuda cruise guide
 19. Mexican Riviera cruise guide
 20. Canada & New England cruise guide (fall foliage)

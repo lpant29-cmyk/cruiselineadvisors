@@ -605,6 +605,10 @@ GUIDES = [
      "t": {"en": "Port days vs sea days", "es": "Puerto o navegación"},
      "d": {"en": "The two kinds of cruise day, and why the mix matters more than the ports.",
            "es": "Los dos tipos de día a bordo, y por qué la mezcla importa más que los puertos."}},
+    {"slug": "bahamas-cruise-guide", "emo": "🏝️",
+     "t": {"en": "Bahamas cruise guide", "es": "Guía de cruceros por Bahamas"},
+     "d": {"en": "Short trips, private islands, and why the ship matters more than the ports.",
+           "es": "Viajes cortos, islas privadas y por qué el barco importa más que los puertos."}},
     {"slug": "groups-and-families", "emo": "👨‍👩‍👧",
      "t": {"en": "Groups & families", "es": "Grupos y familias"},
      "d": {"en": "Connecting cabins, kids' clubs, group dining and split payments, sorted.",
@@ -661,6 +665,7 @@ GUIDE_META = {
     "when-to-cruise": {"cat": "dest", "ctx": ["dest"]},
     "caribbean-vs-alaska-vs-med": {"cat": "dest", "ctx": ["home", "dest"]},
     "port-days-vs-sea-days": {"cat": "planning", "ctx": ["home", "ship"]},
+    "bahamas-cruise-guide": {"cat": "dest", "ctx": ["home", "dest"]},
     "groups-and-families": {"cat": "who", "ctx": ["ship", "line"]},
     "accessibility": {"cat": "who", "ctx": ["ship", "line"]},
 }

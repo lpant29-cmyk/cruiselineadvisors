@@ -243,5 +243,17 @@
     "subject": "A ship's wake trailing away across deep blue open ocean to an empty horizon under a clear sky, seen looking astern from the vessel",
     "note": "Landscape 1600x900, resized and recompressed from the Pexels 3840x2160 original. Inspected at full resolution in zoomed quadrant crops of the horizon band and the near foreground: the frame contains only water and sky, with no vessel structure, deck fitting, person, land, signage or lettering anywhere, so no cruise line or ship branding is visible. Chosen for the sea-day half of the guide; two stronger-composition candidates were rejected first, one for legible operator lettering on its tenders and one for a painted lifeboat-station marking.",
     "downloaded": "2026-09-15"
+  },
+  "bahamas-cruise-guide": {
+    "file": "newsite/assets/guides/bahamas-cruise-guide.jpg",
+    "source": "pexels",
+    "photographer": "Katie Cerami (@katie-cerami-110690626)",
+    "photo_page": "https://www.pexels.com/photo/birds-eye-view-of-islands-surrounded-by-ocean-11807182/",
+    "image_url": "https://images.pexels.com/photos/11807182/pexels-photo-11807182.jpeg",
+    "license": "Pexels License (free for commercial use, no attribution required)",
+    "subject": "Drone view straight down onto two small low green cays edged with pale sand, sitting in a wide shelf of calm, very shallow turquoise water that shades to deeper blue at the top of the frame",
+    "note": "Landscape 1600x1066, resized and recompressed from the Pexels 5464x3640 original. Inspected at full resolution in zoomed crops of both cays, their jetties and the surrounding water: the only man-made things in frame are a few small unbranded timber docks, a shed, a low house, some beach umbrellas and one dinghy, all shot from far enough up that nothing carries readable text. No ship, no funnel, no hull lettering, no livery, no signage and no legible text anywhere, so no cruise line or ship branding is visible. The photographer's Pexels tags name several different Caribbean locations, so the location is treated as unverified and neither the subject line above nor the page alt text asserts a specific island or country. Chosen over five rejected candidates: two portrait-orientation Bahamas aerials (wrong shape for a hero), and three Nassau/Cable Beach and Harbour Island drone frames that were dominated by an identifiable resort strip, one of which also had a cruise ship on the horizon.",
+    "distinctiveness_check": "Compared side by side against the published tropical heroes before accepting: bahamas-romance-travel.jpg (couple at eye level on a fort walkway, people-led, no water), when-to-cruise.jpg (eye-level shoreline framed by heavy palm fronds), ports/caribbean.jpg (eye-level sunset surf on white sand), ports/bahamas.jpg (low-oblique aerial of the Baha Mar resort strip, buildings and sun loungers) and guides/bahamas-romance-travel/beach-hammock.jpg (hammock under palms). This frame is the only top-down, land-minimal, no-horizon composition in the set, so it does not read as a repeat of any neighbouring guide.",
+    "downloaded": "2026-09-25"
   }
 }

@@ -831,3 +831,215 @@ register("bahamas-romance-travel", {
         ],
     },
 })
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════════
+register("bahamas-cruise-guide", {
+    "cat": "dest",
+    "hero": "bahamas-cruise-guide.jpg",
+    "published": "2026-09-25",
+    "updated": "2026-09-25",
+    "title": {
+        "en": "Bahamas cruise guide: short trips, private islands and when to go",
+        "es": "Guía de cruceros por las Bahamas: viajes cortos, islas privadas y cuándo ir",
+    },
+    "dek": {
+        "en": "More first cruises start in the Bahamas than anywhere else, and the reason is simple "
+              "geography: it sits a short hop off Florida, which makes a three or four night trip "
+              "genuinely possible. That shapes everything about how these cruises feel, and it is worth "
+              "understanding before you book one.",
+        "es": "Más primeros cruceros empiezan en las Bahamas que en ningún otro sitio, y la razón es pura "
+              "geografía: están a un salto de Florida, lo que hace posible un viaje de tres o cuatro "
+              "noches. Eso condiciona todo el carácter de estos cruceros, y conviene entenderlo antes de reservar.",
+    },
+    "takeaways": {
+        "en": [
+            "The Bahamas is the short-cruise capital: three and four night sailings from Florida are the standard, which is why so many people start here.",
+            "A private island day is often the highlight, and on a short itinerary it can be most of the point.",
+            "Nassau is the busiest port in the region. How your day feels depends heavily on how many other ships are in that morning.",
+            "It sails year round, which no other nearby region manages. Winter is peak, and hurricane season runs roughly June to November.",
+            "Because the sailings are short, the ship matters more than the ports. You are rarely ashore for long.",
+            "It is the easiest cruise to get to. For much of the eastern US you can drive to the port, which removes the biggest cost and the biggest risk.",
+        ],
+        "es": [
+            "Las Bahamas son la capital del crucero corto: salidas de tres y cuatro noches desde Florida son lo habitual, y por eso tanta gente empieza aquí.",
+            "El día en una isla privada suele ser lo mejor del viaje, y en un itinerario corto puede ser casi todo el sentido.",
+            "Nassau es el puerto más concurrido de la región. Cómo te resulte el día depende mucho de cuántos barcos más lleguen esa mañana.",
+            "Navega todo el año, algo que ninguna región cercana consigue. El invierno es temporada alta y la de huracanes va de junio a noviembre.",
+            "Como las salidas son cortas, el barco importa más que los puertos. Pasas poco tiempo en tierra.",
+            "Es el crucero más fácil de alcanzar. Desde buena parte del este de EE.UU. puedes conducir al puerto, lo que elimina el mayor gasto y el mayor riesgo.",
+        ],
+    },
+    "sections": [
+        {"id": "why-short", "h2": {"en": "Why almost every short cruise goes here",
+                                   "es": "Por qué casi todos los cruceros cortos van aquí"},
+         "html": {
+            "en": "<p>The Bahamas begin about fifty miles off the Florida coast. That single fact explains "
+                  "the whole market.</p>"
+                  + vcards([
+                      ("🗓️", "Three and four nights work", "A ship can leave Friday evening, call at two places and be back Monday morning. Almost nowhere else in cruising can do a real itinerary in a long weekend."),
+                      ("🚗", "You can often drive to it", "Most sailings leave from Florida ports. For a lot of the eastern US that means no flights, which removes both the largest expense and the most common way a cruise goes wrong."),
+                      ("🧪", "It is the natural first cruise", "Short, warm, close to home and cheap to reach. If cruising turns out not to suit you, you have lost a weekend rather than a fortnight."),
+                  ])
+                  + tip("If you are testing whether you like cruising at all, a three-night Bahamas sailing is "
+                        "the lowest-risk way to find out. Just go in knowing it is a sampler. One short trip "
+                        "will not tell you what a seven-night itinerary feels like, because the rhythm is "
+                        "completely different."),
+            "es": "<p>Las Bahamas empiezan a unos ochenta kilómetros de la costa de Florida. Ese solo dato "
+                  "explica todo el mercado.</p>"
+                  + vcards([
+                      ("🗓️", "Tres y cuatro noches funcionan", "Un barco puede salir el viernes por la tarde, hacer dos escalas y volver el lunes. Casi ningún otro destino permite un itinerario real en un fin de semana largo."),
+                      ("🚗", "A menudo puedes ir en coche", "La mayoría de las salidas son desde puertos de Florida. Para buena parte del este de EE.UU. eso significa no volar, lo que elimina el mayor gasto y la causa más común de que un crucero salga mal."),
+                      ("🧪", "Es el primer crucero natural", "Corto, cálido, cerca de casa y barato de alcanzar. Si los cruceros no te convencen, has perdido un fin de semana y no quince días."),
+                  ])
+                  + tip("Si quieres probar si te gustan los cruceros, una salida de tres noches a las Bahamas "
+                        "es la forma de menor riesgo. Eso sí, ve sabiendo que es una muestra. Un viaje corto "
+                        "no te dirá cómo se siente un itinerario de siete noches, porque el ritmo es distinto."),
+         }},
+        {"id": "private-islands", "h2": {"en": "The private island day",
+                                         "es": "El día en la isla privada"},
+         "html": {
+            "en": "<p>This is the part of Bahamas cruising that surprises people, and on a short sailing it "
+                  "is frequently the best day of the trip.</p>"
+                  + define("Private island",
+                           "A stretch of Bahamian coast that a cruise line owns or leases and uses "
+                           "exclusively for its own ships. Most of the major lines have one. Your ship "
+                           "docks or tenders, the beach is set up for the day, and the food is usually "
+                           "included in the same way it is on board.")
+                  + vcards([
+                      ("🏝️", "It is a beach day, run properly", "Loungers, shade, restrooms, lifeguards, included lunch. The predictability is the appeal: nothing to arrange and no way to get lost or be late."),
+                      ("👨‍👩‍👧", "It suits families unusually well", "Shallow water, staff everywhere, and the ship is right there if a nap or a change of clothes is needed."),
+                      ("💳", "The extras are where it costs", "The beach itself is included. Cabanas, waterparks, jet skis, speciality food and drinks are not, and on the more developed islands there are a lot of them."),
+                      ("🌊", "Weather can cancel it", "Where ships tender rather than dock, rough water can mean the call is skipped entirely. It happens, and no itinerary is guaranteed."),
+                  ])
+                  + watch("<b>On a three-night sailing, check whether a private island day is actually on "
+                          "your itinerary.</b> Two ships leaving the same port on the same weekend can have "
+                          "quite different stops, and for many people this single day is the reason to pick "
+                          "one over the other. It is worth asking about specifically."),
+            "es": "<p>Esta es la parte que sorprende a la gente, y en una salida corta suele ser el mejor día "
+                  "del viaje.</p>"
+                  + define("Isla privada",
+                           "Un tramo de costa bahameña que una naviera posee o alquila y usa en exclusiva "
+                           "para sus barcos. La mayoría de las grandes líneas tienen una. Tu barco atraca o "
+                           "usa botes, la playa está preparada para el día y la comida suele estar incluida "
+                           "igual que a bordo.")
+                  + vcards([
+                      ("🏝️", "Un día de playa bien organizado", "Hamacas, sombra, baños, socorristas, comida incluida. Lo previsible es el atractivo: nada que organizar y ninguna forma de perderse ni llegar tarde."),
+                      ("👨‍👩‍👧", "Encaja muy bien con familias", "Agua poco profunda, personal por todas partes y el barco justo ahí si hace falta una siesta o ropa limpia."),
+                      ("💳", "Los extras son lo que cuesta", "La playa está incluida. Las cabañas, los parques acuáticos, las motos de agua y la comida y bebida de especialidad no, y en las islas más desarrolladas hay muchos."),
+                      ("🌊", "El clima puede cancelarlo", "Donde se llega en botes en vez de atracar, el mar movido puede hacer que se salte la escala. Pasa, y ningún itinerario está garantizado."),
+                  ])
+                  + watch("<b>En una salida de tres noches, comprueba si tu itinerario incluye día en isla "
+                          "privada.</b> Dos barcos que salen del mismo puerto el mismo fin de semana pueden "
+                          "tener escalas distintas, y para mucha gente ese día es la razón de elegir uno u "
+                          "otro. Conviene preguntarlo expresamente."),
+         }},
+        {"id": "nassau", "h2": {"en": "Nassau, and why your day there varies so much",
+                                "es": "Nassau, y por qué tu día allí varía tanto"},
+         "html": {
+            "en": "<p>Nassau is the capital and the region's busiest cruise port. Almost every Bahamas "
+                  "itinerary calls there, which is precisely the thing to understand about it.</p>"
+                  + vcards([
+                      ("🚢", "Ship count changes everything", "The port can host several large ships at once. Arrive on a quiet morning and the town is pleasant; arrive alongside four others and every beach, taxi and attraction is absorbing thousands of extra people."),
+                      ("🚶", "The terminal is walkable to town", "Unusually for a cruise port, you step off into the middle of things. That is convenient, and it also means the crowding is concentrated right where you land."),
+                      ("🏖️", "The good beaches need a short trip", "The well-known stretches are a taxi or ferry ride away rather than at the dock. Budget the travel time, especially against an early all-aboard."),
+                  ])
+                  + tip("Ask which other ships are scheduled in port the same day. It is a question most "
+                        "people never think to ask, and it predicts the character of your day in Nassau "
+                        "better than any review will."),
+            "es": "<p>Nassau es la capital y el puerto de cruceros más concurrido de la región. Casi todos "
+                  "los itinerarios paran allí, que es justo lo que hay que entender.</p>"
+                  + vcards([
+                      ("🚢", "El número de barcos lo cambia todo", "El puerto puede recibir varios barcos grandes a la vez. Si llegas una mañana tranquila la ciudad es agradable; si llegas junto a otros cuatro, cada playa, taxi y atracción absorbe miles de personas más."),
+                      ("🚶", "La terminal está a pie del centro", "Algo poco habitual en un puerto de cruceros: bajas directamente al centro. Es cómodo, y también concentra la aglomeración justo donde desembarcas."),
+                      ("🏖️", "Las buenas playas quedan a un trayecto", "Las más conocidas están a un taxi o ferry, no en el muelle. Cuenta el tiempo de ida y vuelta, sobre todo con una hora límite temprana."),
+                  ])
+                  + tip("Pregunta qué otros barcos coinciden ese día en puerto. Es una pregunta que casi "
+                        "nadie hace, y predice el carácter de tu día en Nassau mejor que cualquier reseña."),
+         }},
+        {"id": "when", "h2": {"en": "When to go", "es": "Cuándo ir"},
+         "html": {
+            "en": "<p>The Bahamas sails all year, which is rarer than it sounds and is a genuine advantage "
+                  "if your dates are fixed.</p>"
+                  + vcards([
+                      ("❄️", "Winter into spring is peak", "Warm, dry, and the reason fares and crowds are at their highest. School holidays concentrate families into specific weeks."),
+                      ("☀️", "Summer is hot and busy", "Hotter and more humid than the brochures suggest, and busy with families. The sea is at its warmest."),
+                      ("🌀", "Hurricane season is roughly June to November", "Fares soften for a reason. Ships reroute around storms routinely, so the usual outcome is a changed itinerary rather than a cancelled trip, but this is the window where travel insurance stops being optional."),
+                  ])
+                  + "<p>Because the sailings are short, a weather disruption bites harder here than on a long "
+                  "itinerary. Lose one call from a three-night cruise and you have lost a third of your "
+                  "stops. Our " + link("/en/guides/when-to-cruise/", "when to cruise guide")
+                  + " covers the seasonal picture across regions.</p>",
+            "es": "<p>Las Bahamas navegan todo el año, algo menos común de lo que parece y una ventaja real "
+                  "si tus fechas son fijas.</p>"
+                  + vcards([
+                      ("❄️", "De invierno a primavera es temporada alta", "Cálido, seco, y por eso las tarifas y la afluencia están en su punto más alto. Las vacaciones escolares concentran a las familias en semanas concretas."),
+                      ("☀️", "El verano es caluroso y concurrido", "Más caluroso y húmedo de lo que sugieren los folletos, y lleno de familias. El mar está en su punto más cálido."),
+                      ("🌀", "La temporada de huracanes va de junio a noviembre", "Las tarifas bajan por algo. Los barcos desvían la ruta con normalidad, así que lo habitual es un itinerario cambiado y no un viaje cancelado, pero es la ventana en la que el seguro deja de ser opcional."),
+                  ])
+                  + "<p>Como las salidas son cortas, una alteración por clima duele más aquí que en un "
+                  "itinerario largo. Si pierdes una escala de un crucero de tres noches, has perdido un "
+                  "tercio de tus paradas. Nuestra "
+                  + link("/es/guides/when-to-cruise/", "guía de cuándo navegar")
+                  + " cubre el panorama por regiones.</p>",
+         }},
+        {"id": "ship-matters", "h2": {"en": "On a short sailing, the ship is the destination",
+                                      "es": "En una salida corta, el barco es el destino"},
+         "html": {
+            "en": "<p>This is the thing most first-timers get wrong. On a three or four night Bahamas cruise "
+                  "you are ashore for parts of one or two days. The rest of the time you are on the ship.</p>"
+                  + vcards([
+                      ("🛳️", "Pick the ship, not the ports", "The itineraries are broadly similar. What differs is what you are sitting on, and on a short trip that is where nearly all your hours go."),
+                      ("⏱️", "Embarkation and disembarkation eat into it", "The first afternoon and the last morning are largely logistics. A three-night cruise is really about two full days of holiday, which is worth knowing before you set expectations."),
+                      ("🎉", "Short sailings have their own atmosphere", "Weekend trips draw a livelier, more party-leaning crowd than week-long itineraries. For some people that is the appeal and for others it is the thing to avoid, so it is worth asking about."),
+                  ])
+                  + "<p>If the ship is carrying the trip, it is worth understanding what varies between them. "
+                  + link("/en/guides/big-ship-vs-small-ship/", "Big ship vs small ship")
+                  + " and " + link("/en/guides/choosing-a-cabin/", "choosing a cabin")
+                  + " both matter more on a short sailing than they would on a longer one.</p>",
+            "es": "<p>Esto es lo que más malinterpretan los primerizos. En un crucero de tres o cuatro noches "
+                  "por las Bahamas estás en tierra parte de uno o dos días. El resto del tiempo estás en el barco.</p>"
+                  + vcards([
+                      ("🛳️", "Elige el barco, no los puertos", "Los itinerarios son parecidos. Lo que cambia es aquello en lo que vas sentado, y en un viaje corto ahí se van casi todas tus horas."),
+                      ("⏱️", "El embarque y el desembarque restan", "La primera tarde y la última mañana son sobre todo logística. Un crucero de tres noches son en realidad unos dos días completos de vacaciones."),
+                      ("🎉", "Las salidas cortas tienen su propio ambiente", "Los viajes de fin de semana atraen a un público más animado y fiestero que los itinerarios de una semana. Para unos es el atractivo y para otros lo que evitar, así que conviene preguntar."),
+                  ])
+                  + "<p>Si el barco sostiene el viaje, conviene saber en qué se diferencian. "
+                  + link("/es/guides/big-ship-vs-small-ship/", "Barco grande o pequeño")
+                  + " y " + link("/es/guides/choosing-a-cabin/", "elegir camarote")
+                  + " importan más en una salida corta que en una larga.</p>",
+         }},
+    ],
+    "faqs": {
+        "en": [
+            ("How long is a typical Bahamas cruise?", "Three and four nights are the standard, which is what makes the region distinctive: it is close enough to Florida that a real itinerary fits into a long weekend. Longer sailings exist and often combine the Bahamas with other Caribbean stops, but the short trip is the classic."),
+            ("Are Bahamas cruises good for first-time cruisers?", "They are the most common way people start, and for good reason. They are short, warm, easy to reach without flying for much of the eastern US, and low commitment. The one thing to be clear about is that a short sailing is a sampler: the rhythm of a three-night trip is quite different from a week at sea."),
+            ("What is a cruise line's private island?", "A stretch of Bahamian coast that a line owns or leases and uses only for its own ships. Most major lines have one. Your ship docks or tenders in, the beach is set up for the day and lunch is generally included the same way it is on board. Cabanas, watersports and speciality food and drink cost extra."),
+            ("Do Bahamas cruises always stop in Nassau?", "Most do, since it is the capital and the region's busiest cruise port. How the day feels depends a great deal on how many other ships are scheduled the same morning, because the port can host several large ones at once. It is worth asking before you book."),
+            ("When is the best time for a Bahamas cruise?", "The region sails year round, which is unusual. Winter into spring is the peak for warm dry weather, and also the busiest and priciest. Roughly June to November is hurricane season, when fares soften and travel insurance matters more. Ships routinely reroute around weather, so a changed itinerary is far more likely than a cancelled trip."),
+            ("Can I cruise to the Bahamas without flying?", "Often yes, and it is one of the region's real advantages. Most sailings leave from Florida ports, so a large part of the eastern US can drive. That removes the biggest single cost for many families and the most common cause of missing a ship."),
+        ],
+        "es": [
+            ("¿Cuánto dura un crucero típico por las Bahamas?", "Tres y cuatro noches es lo habitual, y eso distingue a la región: está tan cerca de Florida que cabe un itinerario real en un fin de semana largo. Hay salidas más largas que combinan las Bahamas con otras escalas del Caribe, pero el viaje corto es el clásico."),
+            ("¿Son buenos para un primer crucero?", "Es la forma más común de empezar, y con razón. Son cortos, cálidos, fáciles de alcanzar sin volar desde buena parte del este de EE.UU. y de poco compromiso. Eso sí: una salida corta es una muestra, y el ritmo de tres noches es muy distinto al de una semana en el mar."),
+            ("¿Qué es la isla privada de una naviera?", "Un tramo de costa bahameña que una línea posee o alquila y usa solo para sus barcos. La mayoría de las grandes tienen una. El barco atraca o llega en botes, la playa está preparada y la comida suele estar incluida como a bordo. Cabañas, deportes acuáticos y comida y bebida de especialidad se pagan aparte."),
+            ("¿Todos los cruceros paran en Nassau?", "Casi todos, por ser la capital y el puerto más concurrido de la región. Cómo resulte el día depende mucho de cuántos barcos coincidan esa mañana, porque el puerto puede recibir varios grandes a la vez. Conviene preguntarlo antes de reservar."),
+            ("¿Cuál es la mejor época?", "La región navega todo el año, algo poco común. De invierno a primavera es lo mejor por clima cálido y seco, y también lo más concurrido y caro. De junio a noviembre es temporada de huracanes: bajan las tarifas y el seguro importa más. Los barcos desvían la ruta con normalidad, así que un itinerario cambiado es mucho más probable que un viaje cancelado."),
+            ("¿Puedo ir sin volar?", "A menudo sí, y es una de las ventajas reales de la región. La mayoría de las salidas son desde puertos de Florida, así que buena parte del este de EE.UU. puede conducir. Eso elimina el mayor gasto para muchas familias y la causa más común de perder el barco."),
+        ],
+    },
+    "related": {
+        "en": [
+            ("💍", "Romance in the Bahamas", "/en/guides/bahamas-romance-travel/", "Honeymoons, weddings and quiet escapes."),
+            ("🧭", "First-time cruisers", "/en/guides/first-time-cruisers/", "What nobody tells you before you sail."),
+            ("⚓", "Port days vs sea days", "/en/guides/port-days-vs-sea-days/", "Why short sailings feel different."),
+            ("🗓️", "When to cruise", "/en/guides/when-to-cruise/", "Season by season, region by region."),
+        ],
+        "es": [
+            ("💍", "Romance en las Bahamas", "/es/guides/bahamas-romance-travel/", "Lunas de miel, bodas y escapadas."),
+            ("🧭", "Primer crucero", "/es/guides/first-time-cruisers/", "Lo que nadie te cuenta antes de zarpar."),
+            ("⚓", "Puerto o navegación", "/es/guides/port-days-vs-sea-days/", "Por qué las salidas cortas se sienten distintas."),
+            ("🗓️", "Cuándo hacer un crucero", "/es/guides/when-to-cruise/", "Temporada a temporada, región por región."),
+        ],
+    },
+})
