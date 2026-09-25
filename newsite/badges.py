@@ -94,12 +94,12 @@ _TRUST = {
            "asta_alt": "ASTA member, American Society of Travel Advisors",
            "romance_alt": "Bahamas Romance Specialist certification",
            "fsot": "FL Seller of Travel Ref.",
-           "verify": "verify", "prev": "Previous certifications", "next": "More certifications"},
+           "verify": "verify"},
     "es": {"op": "Operado por", "asta": "Miembro orgulloso de ASTA",
            "asta_alt": "Miembro de ASTA, American Society of Travel Advisors",
            "romance_alt": "Certificación de Especialista en Romance de las Bahamas",
            "fsot": "Vendedor de Viajes de Florida Ref.",
-           "verify": "verificar", "prev": "Certificaciones anteriores", "next": "Más certificaciones"},
+           "verify": "verificar"},
 }
 
 # Entity-scoped, deliberately singular, and deliberately NOT "our specialists":
@@ -157,7 +157,7 @@ def _asset_exists(webpath):
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
                  romance=False, romance_img=None,
-                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None, certs=None):
+                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None):
     """Two separate blocks, deliberately not one row (operator ruling 2026-09-25).
 
     COMPANY CREDENTIALS are registrations held by the operating entity: ASTA
@@ -186,29 +186,35 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
             f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
             f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
 
-    # ── personal training (scroller) ───────────────────────────────────────
-    # Shows three at a time; the rest are reachable by swipe or the arrows.
-    # A cert with no document renders as a non-clickable chip rather than
-    # being pointed at some other cert's file.
+    # ── personal training ──────────────────────────────────────────────────
     personal_items, lines = [], []
     if bahamas:
-        lines.append(_BAHAMAS[lang][0].format(co=company))
-    if rcu and rcu_holder:
-        lines.append(_RCU[lang][0].format(who=rcu_holder))
-    for c in (certs or []):
-        label = c.get(lang) or c.get("en")
-        img, doc = c.get("img"), c.get("doc")
-        if img and _asset_exists(img):
-            inner = (f'<img src="{img}" alt="{label}" loading="lazy">'
-                     f'<span class="tb-cap">{label}</span>')
+        sentence, doc_label = _BAHAMAS[lang]
+        lines.append(sentence.format(co=company))
+        if _asset_exists(bahamas_crest):
+            crest = (f'<img src="{bahamas_crest}" alt="{doc_label}" height="34" loading="lazy">'
+                     f'<span class="tb-cap">{doc_label}</span>')
+            if _asset_exists(bahamas_doc):
+                personal_items.append(f'<a class="tb tb-bah" href="{bahamas_doc}" target="_blank" '
+                                      f'rel="noopener" title="{doc_label} ({t["verify"]})">{crest}</a>')
+            else:
+                personal_items.append(f'<span class="tb tb-bah">{crest}</span>')
+    if romance and _asset_exists(romance_img):
+        # Display-only: no romance-specific document exists, and pointing it at
+        # the general Bahamas diploma would offer the wrong thing as proof.
+        personal_items.append(
+            f'<span class="tb tb-romance">'
+            f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy"></span>')
+    if rcu and _asset_exists(rcu_badge):
+        rsent, rlabel = _RCU[lang]
+        lines.append(rsent.format(who=rcu_holder))
+        rimg = (f'<img src="{rcu_badge}" alt="{rlabel}" height="38" loading="lazy">'
+                f'<span class="tb-cap">{rlabel}</span>')
+        if _asset_exists(rcu_doc):
+            personal_items.append(f'<a class="tb tb-rcu" href="{rcu_doc}" target="_blank" '
+                                  f'rel="noopener" title="{rlabel} ({t["verify"]})">{rimg}</a>')
         else:
-            inner = f'<span class="tb-chip">{label}</span>'
-        cls = f'tb tb-cert tb-cert-{c.get("key","x")}'
-        if doc and _asset_exists(doc):
-            personal_items.append(f'<a class="{cls}" href="{doc}" target="_blank" rel="noopener" '
-                                  f'title="{label} ({t["verify"]})">{inner}</a>')
-        else:
-            personal_items.append(f'<span class="{cls}" title="{label}">{inner}</span>')
+            personal_items.append(f'<span class="tb tb-rcu">{rimg}</span>')
 
     blocks = []
     if company_items:
@@ -217,26 +223,10 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
     if personal_items:
         body = " ".join(lines)
         disclaimer = _PERSONAL_NOTE[lang].format(co=company)
-        nav = (f'<button class="tb-nav tb-prev" type="button" aria-label="{t["prev"]}">‹</button>'
-               f'<button class="tb-nav tb-next" type="button" aria-label="{t["next"]}">›</button>'
-               ) if len(personal_items) > 3 else ""
         blocks.append(f'<div class="tb-group tb-group-personal"><p class="tb-op">{sec["personal"]}</p>'
-                      f'<div class="tb-slider">{nav}'
-                      f'<div class="tb-row tb-scroll">{"".join(personal_items)}</div></div>'
+                      f'<div class="tb-row">{"".join(personal_items)}</div>'
                       f'<p class="tb-note">{body}</p>'
                       f'<p class="tb-note tb-disclaim">{disclaimer}</p></div>')
     if not blocks:
         return ""
-    # Arrows. Own IIFE with a null guard on line one, per the known pitfall:
-    # a missing element must never take out later scripts on the page.
-    js = ("<script>(function(){var s=document.querySelectorAll('.tb-slider');if(!s.length)return;"
-          "s.forEach(function(sl){var r=sl.querySelector('.tb-scroll');if(!r)return;"
-          "var p=sl.querySelector('.tb-prev'),n=sl.querySelector('.tb-next');"
-          "function w(){var c=r.querySelector('.tb-cert');return c?c.offsetWidth+14:160;}"
-          "function sync(){if(!p||!n)return;var m=r.scrollWidth-r.clientWidth-2;"
-          "p.style.opacity=r.scrollLeft<=2?'.35':'1';n.style.opacity=r.scrollLeft>=m?'.35':'1';}"
-          "if(p)p.addEventListener('click',function(){r.scrollBy({left:-w(),behavior:'smooth'});});"
-          "if(n)n.addEventListener('click',function(){r.scrollBy({left:w(),behavior:'smooth'});});"
-          "r.addEventListener('scroll',sync,{passive:true});"
-          "window.addEventListener('resize',sync,{passive:true});sync();});})();</script>")
-    return f'<div class="trustbadges">{"".join(blocks)}</div>{js}'
+    return f'<div class="trustbadges">{"".join(blocks)}</div>'
