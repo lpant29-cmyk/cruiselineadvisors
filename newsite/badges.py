@@ -113,16 +113,20 @@ _SECTIONS = {
 # cruise line's own training mark on a site that bids that line's brand terms.
 # It must sit in the SAME block as the badges, not in the footer small print.
 _PERSONAL_NOTE = {
-    "en": ("Training completed by individuals at {co}. These are professional development "
-           "courses run by tourist boards and cruise lines for travel professionals. "
-           "Completing one is a training achievement, not a partnership, appointment or "
-           "endorsement. We are not affiliated with, authorised by, or an agent of any "
-           "cruise line or tourist board."),
-    "es": ("Formación completada por personas de {co}. Son cursos de desarrollo profesional "
-           "que las oficinas de turismo y las líneas de crucero ofrecen a profesionales del "
-           "sector. Completar uno es un logro formativo, no una asociación, nombramiento ni "
-           "respaldo. No estamos afiliados, autorizados por, ni somos agentes de ninguna "
-           "línea de crucero ni oficina de turismo."),
+    "en": ("Training completed by individuals at {co}, the team that researches and publishes "
+           "this site. Calls are answered by independent licensed travel agencies who hold "
+           "their own credentials, not by the people named here. These are professional "
+           "development courses run by tourist boards and cruise lines for travel "
+           "professionals. Completing one is a training achievement, not a partnership, "
+           "appointment or endorsement. We are not affiliated with, authorised by, or an "
+           "agent of any cruise line or tourist board."),
+    "es": ("Formación completada por personas de {co}, el equipo que investiga y publica este "
+           "sitio. Las llamadas las atienden agencias de viajes independientes con licencia, "
+           "que tienen sus propias credenciales, no las personas nombradas aquí. Son cursos de "
+           "desarrollo profesional que las oficinas de turismo y las líneas de crucero ofrecen "
+           "a profesionales del sector. Completar uno es un logro formativo, no una asociación, "
+           "nombramiento ni respaldo. No estamos afiliados, autorizados por, ni somos agentes "
+           "de ninguna línea de crucero ni oficina de turismo."),
 }
 
 _RCU = {
