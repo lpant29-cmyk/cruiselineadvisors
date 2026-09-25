@@ -255,5 +255,160 @@
     "note": "Landscape 1600x1066, resized and recompressed from the Pexels 5464x3640 original. Inspected at full resolution in zoomed crops of both cays, their jetties and the surrounding water: the only man-made things in frame are a few small unbranded timber docks, a shed, a low house, some beach umbrellas and one dinghy, all shot from far enough up that nothing carries readable text. No ship, no funnel, no hull lettering, no livery, no signage and no legible text anywhere, so no cruise line or ship branding is visible. The photographer's Pexels tags name several different Caribbean locations, so the location is treated as unverified and neither the subject line above nor the page alt text asserts a specific island or country. Chosen over five rejected candidates: two portrait-orientation Bahamas aerials (wrong shape for a hero), and three Nassau/Cable Beach and Harbour Island drone frames that were dominated by an identifiable resort strip, one of which also had a cruise ship on the horizon.",
     "distinctiveness_check": "Compared side by side against the published tropical heroes before accepting: bahamas-romance-travel.jpg (couple at eye level on a fort walkway, people-led, no water), when-to-cruise.jpg (eye-level shoreline framed by heavy palm fronds), ports/caribbean.jpg (eye-level sunset surf on white sand), ports/bahamas.jpg (low-oblique aerial of the Baha Mar resort strip, buildings and sun loungers) and guides/bahamas-romance-travel/beach-hammock.jpg (hammock under palms). This frame is the only top-down, land-minimal, no-horizon composition in the set, so it does not read as a repeat of any neighbouring guide.",
     "downloaded": "2026-09-25"
+  },
+
+  "bahamas-romance-replacement-batch": {
+    "downloaded": "2026-09-25",
+    "reason": "The eight photographs previously on the bahamas-romance-travel guide were Bahamas Ministry of Tourism promotional assets, one of them carrying a visible 'The Islands of The Bahamas' watermark. The operator ruled that all eight be replaced with properly licensed stock. Every replacement below is Pexels only, was opened and inspected at full resolution before acceptance, and carries no watermark, logo, brand mark or legible text of any kind, and no cruise line or ship branding. Files were replaced in place at the same paths and filenames so no code change is required. All eight are 4:3 to match the 1024x768 originals: the hero at 1600x1200, the in-body images at 1400x1050, resized and recompressed with sips from the Pexels originals.",
+    "images": [
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel.jpg",
+        "slot": "guide hero",
+        "source": "pexels",
+        "photographer": "Trần Long (@tr-n-long)",
+        "photo_page": "https://www.pexels.com/photo/couple-standing-on-beach-13114900/",
+        "image_url": "https://images.pexels.com/photos/13114900/pexels-photo-13114900.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A couple seen from behind, hand in hand at the top of a white sand beach, framed by leaning coconut palms with open sea and a hazy headland beyond",
+        "note": "Landscape 1600x1200. Inspected at full resolution across the whole frame including the thatched parasol and loungers at right: no signage, no lettering, no logo on any clothing or furniture. Both faces are turned away from camera, so it reads as a candid moment rather than an advertisement with models. Location is not asserted anywhere; the photographer does not state one."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/proposal-pier.jpg",
+        "slot": "proposal / intimate moment on a pier",
+        "source": "pexels",
+        "photographer": "Didi Lecatompessy (@didi-lecatompessy)",
+        "photo_page": "https://www.pexels.com/photo/romantic-couple-on-tropical-pier-at-sunset-32530345/",
+        "image_url": "https://images.pexels.com/photos/32530345/pexels-photo-32530345.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A couple standing close together, foreheads touching, on a weathered timber jetty running out over calm water between thatched over-water pavilions in late golden light",
+        "note": "Landscape 1400x1050. Inspected at full resolution over the jetty decking, both pavilions and the far shore: no signage, no name boards, no lettering anywhere. Photographer states the location as East Nusa Tenggara, Indonesia, so no Bahamian location is claimed here or implied for the page."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/wedding-cake.jpg",
+        "slot": "wedding detail",
+        "source": "pexels",
+        "photographer": "Alexander Mass (@rebornfilmes)",
+        "photo_page": "https://www.pexels.com/photo/seashell-wedding-rings-on-starfish-at-beach-35760207/",
+        "image_url": "https://images.pexels.com/photos/35760207/pexels-photo-35760207.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "Close, shallow-focus still life on pale sand: two plain gold wedding bands beside a dried starfish, a spiral shell and a spray of pale blue hydrangea",
+        "note": "Landscape 1400x1050, cropped from the centre band of the portrait original. Inspected at full resolution: nothing man-made in frame beyond the two unengraved bands, so no maker's mark, no engraving and no text. Subject is a rings-and-florals detail rather than a cake, which the slot brief allows. Same photographer as garden-ceremony.jpg, which helps the two wedding frames sit together."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/garden-ceremony.jpg",
+        "slot": "outdoor ceremony setup, also the standalone poster frame for the removed video",
+        "source": "pexels",
+        "photographer": "Alexander Mass (@rebornfilmes)",
+        "photo_page": "https://www.pexels.com/photo/beautiful-beach-wedding-setup-by-the-ocean-38531660/",
+        "image_url": "https://images.pexels.com/photos/38531660/pexels-photo-38531660.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "An outdoor ceremony set up on sand facing the sea: a low floral arch heavy with mixed blooms, a matting aisle runner, white chairs tied with ribbon and two fringed parasols, all in strong backlit afternoon sun",
+        "note": "Landscape 1400x1050, cropped from the middle of the portrait original so the arch, aisle, chairs, parasols and horizon all sit in frame and the image stands alone without a video behind it. Inspected at full resolution over the chairs, the arch ribbon and the runner: no order of service, no monogram, no signage, no lettering."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/harbour-island-bikes.jpg",
+        "slot": "relaxed island transport",
+        "source": "pexels",
+        "photographer": "Maor Attias (@maorattias)",
+        "photo_page": "https://www.pexels.com/photo/person-riding-a-bike-on-dirt-road-5152641/",
+        "image_url": "https://images.pexels.com/photos/5152641/pexels-photo-5152641.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A cyclist with a front basket riding slowly up an unpaved sandy lane walled on both sides by tall fan palms, in warm low evening light",
+        "note": "Landscape 1400x1050. Inspected at full resolution including the distant figures, the small building at the end of the lane and the bicycle itself: no shopfront, no road sign, no number plate and no legible frame branding on the bike. Partial substitution: this is a bicycle on a sandy palm-lined lane but there are no pastel buildings in it, because every pastel-village-plus-bicycle candidate on Pexels carried shop signage or graffiti lettering. Photographer states no location."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/lighthouse.jpg",
+        "slot": "lighthouse on a tropical coast",
+        "source": "pexels",
+        "photographer": "Tweesak C. (@tweesak-c)",
+        "photo_page": "https://www.pexels.com/photo/lighthouse-at-sea-in-clear-blue-sky-14783334/",
+        "image_url": "https://images.pexels.com/photos/14783334/pexels-photo-14783334.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A small white beacon tower on a low rock outcrop offshore, with a bright turquoise sea and a foreground of moss-green tidal rocks softened by a long exposure",
+        "note": "Landscape 1400x1050. Inspected at full resolution including the tower gallery and base: no name plate, no navigation placard, no lettering, and no people or boats in frame. Photographer's tags place it in Thailand, so no Bahamian lighthouse is claimed. Chosen over five rejected candidates, including one Pexels-titled 'Bimini lighthouse' aerial that was dropped because the red-and-white striped tower and beach-club setting read as one identifiable private island, and two others that had a legible DANGER sign and a legible interpretive sign respectively."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/seaplane-sunset.jpg",
+        "slot": "seaplane at golden hour",
+        "source": "pexels",
+        "photographer": "Malcolm Gillanders (@mgnationstudios)",
+        "photo_page": "https://www.pexels.com/photo/a-seaplane-over-scenic-sunset-in-british-columbia-34180343/",
+        "image_url": "https://images.pexels.com/photos/34180343/pexels-photo-34180343.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A single float plane in level flight, small in the frame, silhouetted against a warm gold sky above a low sunlit bank of cloud with a dark distant shoreline along the bottom edge",
+        "note": "Landscape 1400x1050, cropped from the upper third of the tall original. Inspected at full resolution with the aircraft enlarged: at this distance the fuselage carries no readable registration, operator name or livery. Every tropical seaplane frame on Pexels was rejected for exactly that reason, having checked four at maximum zoom and found legible 'Maldivian', 'Trans Maldivian Airways / 8Q-MAF', 'JOALI / 8Q-TMI' and 'N373PV' markings. Photographer states British Columbia, Canada, so the alt text must describe a float plane at golden hour and must not place it in the Bahamas."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/beach-hammock.jpg",
+        "slot": "hammock between palms, replaces the watermarked tourism-board image",
+        "source": "pexels",
+        "photographer": "Alion N (@alion-n)",
+        "photo_page": "https://www.pexels.com/photo/tranquil-tropical-beach-with-hammock-and-palm-trees-39592035/",
+        "image_url": "https://images.pexels.com/photos/39592035/pexels-photo-39592035.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "An empty rope hammock slung between two coconut palms on quiet white sand, with a flat turquoise lagoon and a pale horizon behind and the corner of a thatched shelter at the left edge",
+        "note": "Landscape 1400x1050. Inspected at full resolution including the hammock spreader bars, the tree ties and the thatched shelter: no maker's label, no resort marker, no signage, no lettering, and no people. This is the direct replacement for the frame that carried the visible 'The Islands of The Bahamas' watermark."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-romance-travel/island-buggy.jpg",
+        "action": "deleted",
+        "reason": "Bahamas Ministry of Tourism promotional image sitting on disk but referenced by no template or page. Removed as part of the 2026-09-25 replacement so no tourism-board asset remains in the guide folder. Nothing replaced it; no slot was left empty because nothing pointed at it.",
+        "deleted": "2026-09-25"
+      }
+    ]
+  },
+
+  "bahamas-cruise-guide-photo-bands": {
+    "downloaded": "2026-09-25",
+    "reason": "Four new in-body photographs sourced for the text-only bahamas-cruise-guide, one per section, saved to newsite/assets/guides/bahamas-cruise-guide/. Pexels only, all opened and inspected at full resolution, all free of watermarks, logos, legible text and any cruise line or ship branding. All four 1400x1050, resized and recompressed with sips from the Pexels originals.",
+    "images": [
+      {
+        "file": "newsite/assets/guides/bahamas-cruise-guide/florida-departure.jpg",
+        "slot": "Why almost every short cruise goes here",
+        "source": "pexels",
+        "photographer": "Brendon Spring (@lee81)",
+        "photo_page": "https://www.pexels.com/photo/drone-shot-of-the-miami-part-at-sunset-8530566/",
+        "image_url": "https://images.pexels.com/photos/8530566/pexels-photo-8530566.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "Wide dusk view down a broad harbour channel at Miami, with a single white cruise ship lying stern-on at a lit terminal on the left bank and the city skyline strung along a pink and gold horizon",
+        "location_stated_by_photographer": "Miami, FL, United States",
+        "note": "Landscape 1400x1050. Inspected at full resolution with the ship's stern enlarged to maximum: no hull name, no wordmark and no funnel logo is readable, the stern lettering dissolving into noise before it resolves. The only other candidate text in frame is distant illuminated skyline signage a few pixels high that carries no readable word. Four stronger departure frames were rejected first for legible ship branding: 'Wonder of the Seas' with the Royal Caribbean mark, 'Celebrity Millennium' with the Celebrity mark, a 'VIKING' funnel wordmark at San Juan, and a Carnival funnel logo."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-cruise-guide/private-island-beach.jpg",
+        "slot": "The private island day",
+        "source": "pexels",
+        "photographer": "Ismael Juárez (@ismael-juarez)",
+        "photo_page": "https://www.pexels.com/photo/tropical-resort-on-the-coast-12004337/",
+        "image_url": "https://images.pexels.com/photos/12004337/pexels-photo-12004337.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "An organised beach day seen from above: rows of cream canvas parasols and timber loungers laid out on pale sand along the edge of a sheltered, very clear green-blue cove backed by low limestone rock and dense greenery",
+        "location_stated_by_photographer": "Mexico",
+        "note": "Landscape 1400x1050, cropped from the middle of the portrait original. Inspected at full resolution across every parasol, the bar hut at left and the few small figures: no towel logo, no signage, no price board and no lettering anywhere. Photographer states Mexico, so the page must not call this a Bahamian private island; it illustrates what a set-up beach day looks like."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-cruise-guide/nassau-harbour.jpg",
+        "slot": "Nassau, and why your day there varies so much",
+        "source": "pexels",
+        "photographer": "Douglas Woolfolk (@doug-woolfolk)",
+        "photo_page": "https://www.pexels.com/photo/buildings-on-sea-shore-in-nassau-on-bahamas-4119236/",
+        "image_url": "https://images.pexels.com/photos/4119236/pexels-photo-4119236.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "A terrace of pastel waterfront buildings in lime, turquoise, blue and cream with metal roofs and palms along a low sea wall, seen across choppy turquoise harbour water",
+        "location_stated_by_photographer": "Nassau, New Providence, Bahamas",
+        "note": "Landscape 1400x1050. Inspected at full resolution along the whole terrace and the sea wall: no shop signage, no hoarding, no vessel name and no lettering; what looks like a small red sign at the centre is a patio umbrella. The only genuinely Bahamian frame of the four, and the photographer's own stated location, so the page may name Nassau for this one image."
+      },
+      {
+        "file": "newsite/assets/guides/bahamas-cruise-guide/ship-pool-deck.jpg",
+        "slot": "On a short sailing, the ship is the destination",
+        "source": "pexels",
+        "photographer": "Leo Willians (@leo-willians)",
+        "photo_page": "https://www.pexels.com/photo/scenic-ocean-view-from-a-cruise-ship-deck-34137983/",
+        "image_url": "https://images.pexels.com/photos/34137983/pexels-photo-34137983.jpeg",
+        "license": "Pexels License (free for commercial use, no attribution required)",
+        "subject": "Looking straight down from high on a ship onto the curved teak of a stern sun deck, its white rail and glass screen, a stack of folded loungers and an orange lifebuoy, with the turquoise churn of the wake filling the top of the frame",
+        "note": "Landscape 1400x1050, cropped from the lower half of the portrait original. Inspected at full resolution over the deck, the rail, the lifebuoy and the lounger stack: no ship name on the lifebuoy, no funnel, no livery, no towel logo and no lettering of any kind. This is an upper sun deck rather than a pool deck, which the slot brief allows; the two genuine pool-deck candidates were rejected, one for a Carnival funnel logo and one for a small deck-number sign that could not be cropped out without losing the pools."
+      }
+    ]
   }
 }

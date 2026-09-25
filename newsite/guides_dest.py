@@ -468,48 +468,28 @@ register("caribbean-vs-alaska-vs-med", {
 # Credential + media snippets reused inside the Bahamas romance guide.
 _BR_CRED = {
     "en": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
-           '<b>Certified for the Bahamas.</b> CruiseLine Advisors holds the official Islands of the Bahamas '
-           'Specialist and Bahamas Romance Specialist certifications. When you call, we connect you with '
+           '<b>Certified for the Bahamas.</b> A principal of BookMeCheapest LLC, which operates CruiseLine '
+           'Advisors, holds the official Islands of the Bahamas Specialist diploma. When you call, we connect you with '
            'licensed partner advisors who plan Bahamas honeymoons, weddings, proposals and romantic getaways.'
            '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
            '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
            'style="background:#fff;border-radius:10px;padding:.35rem .5rem;display:inline-flex">'
            '<img src="/badges/bahamas-specialist.png" alt="Certified Bahamas Specialist diploma" height="34" loading="lazy"></a>'
-           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
-           'style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
-           '<img src="/badges/romance.png" alt="Bahamas Romance Specialist certification" height="46" loading="lazy"></a>'
+           '<span style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
+           '<img src="/badges/romance.png" alt="Bahamas Romance Specialist programme" height="46" loading="lazy"></span>'
            '</span></div></div>'),
     "es": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
-           '<b>Certificados para las Bahamas.</b> CruiseLine Advisors tiene las certificaciones oficiales de '
-           'Especialista de las Islas de las Bahamas y Especialista en Romance de las Bahamas. Cuando llamas, '
+           '<b>Certificados para las Bahamas.</b> Un socio de BookMeCheapest LLC, que opera CruiseLine Advisors, '
+           'posee el diploma oficial de Especialista de las Islas de las Bahamas. Cuando llamas, '
            'te conectamos con asesores asociados con licencia que planean lunas de miel, bodas, pedidas de mano '
            'y escapadas románticas en las Bahamas.'
            '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
            '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
            'style="background:#fff;border-radius:10px;padding:.35rem .5rem;display:inline-flex">'
            '<img src="/badges/bahamas-specialist.png" alt="Diploma de Especialista de las Bahamas" height="34" loading="lazy"></a>'
-           '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
-           'style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
-           '<img src="/badges/romance.png" alt="Certificación de Especialista en Romance de las Bahamas" height="46" loading="lazy"></a>'
+           '<span style="background:#fff;border-radius:10px;padding:.3rem .45rem;display:inline-flex">'
+           '<img src="/badges/romance.png" alt="Programa de Especialista en Romance de las Bahamas" height="46" loading="lazy"></span>'
            '</span></div></div>'),
-}
-_BR_VIDEO = {
-    "en": ('<figure class="gband"><video controls preload="none" playsinline '
-           'poster="/guides/bahamas-romance-travel/garden-ceremony.jpg" '
-           'style="width:100%;display:block;border-radius:14px">'
-           '<source src="/guides/bahamas-romance-travel/tales-of-romance.mp4" type="video/mp4"></video>'
-           '<figcaption class="gband-cap">Tales of romance across the Islands of the Bahamas.</figcaption></figure>'),
-    "es": ('<figure class="gband"><video controls preload="none" playsinline '
-           'poster="/guides/bahamas-romance-travel/garden-ceremony.jpg" '
-           'style="width:100%;display:block;border-radius:14px">'
-           '<source src="/guides/bahamas-romance-travel/tales-of-romance.mp4" type="video/mp4"></video>'
-           '<figcaption class="gband-cap">Historias de romance por las Islas de las Bahamas.</figcaption></figure>'),
-}
-_BR_CREDIT = {
-    "en": ('<p class="tb-note" style="margin-top:1.2rem">Photography and video courtesy of the Islands of the '
-           'Bahamas (Bahamas Ministry of Tourism) promotional materials.</p>'),
-    "es": ('<p class="tb-note" style="margin-top:1.2rem">Fotografía y video cortesía de los materiales '
-           'promocionales de las Islas de las Bahamas (Ministerio de Turismo de las Bahamas).</p>'),
 }
 
 register("bahamas-romance-travel", {
@@ -553,8 +533,7 @@ register("bahamas-romance-travel", {
                   "wedding destination, and the Exumas were named among the most romantic islands in the world by "
                   "a major travel magazine. Couples tend to invest far more in a honeymoon than in an ordinary "
                   "trip, often several times as much, so it is worth getting the choice right the first time.</p>"
-                  + _BR_CRED["en"]
-                  + _BR_VIDEO["en"],
+                  + _BR_CRED["en"],
             "es": "<p>Las Bahamas no son una sola isla. Son una cadena de unas 700 islas y cayos repartidos sobre "
                   "aguas claras y poco profundas, por eso pueden sentirse como un resort concurrido un día y un "
                   "banco de arena privado al siguiente. Ese rango es todo el atractivo para las parejas: tú eliges "
@@ -563,8 +542,7 @@ register("bahamas-romance-travel", {
                   "destino de bodas del mundo, y una importante revista de viajes nombró a las Exumas entre las "
                   "islas más románticas del planeta. Las parejas suelen invertir mucho más en una luna de miel que "
                   "en un viaje normal, a menudo varias veces más, así que conviene acertar a la primera.</p>"
-                  + _BR_CRED["es"]
-                  + _BR_VIDEO["es"],
+                  + _BR_CRED["es"],
          }},
         {"id": "more-than-honeymoon", "h2": {"en": "More than a honeymoon", "es": "Mucho más que una luna de miel"},
          "html": {
@@ -579,7 +557,7 @@ register("bahamas-romance-travel", {
                       ("🏝️", "Private buyouts", "A whole small resort or villa taken over for a wedding party or a family celebration."),
                   ])
                   + photo_band("bahamas-romance-travel/proposal-pier.jpg",
-                               "A beachfront proposal in the Bahamas.")
+                               "A proposal at the water's edge.")
                   + "<p>Family-moons that bring the kids, adults-only trips, and multi-island honeymoons that pair "
                   "a lively island with a quiet one are all common. If you are weighing the couples-only angle, "
                   "our guide to " + link("/en/guides/couples-adults-only-cruising/", "couples and adults-only travel")
@@ -595,7 +573,7 @@ register("bahamas-romance-travel", {
                       ("🏝️", "Alquileres privados", "Un pequeño resort o villa entero reservado para una boda o una celebración familiar."),
                   ])
                   + photo_band("bahamas-romance-travel/proposal-pier.jpg",
-                               "Una pedida de mano frente al mar en las Bahamas.")
+                               "Una pedida de mano a la orilla del agua.")
                   + "<p>Los family-moons con los niños, los viajes solo para adultos y las lunas de miel de varias "
                   "islas que combinan una isla animada con una tranquila son todos comunes. Si estás sopesando el "
                   "enfoque solo para parejas, nuestra guía de " + link("/es/guides/couples-adults-only-cruising/", "viajes en pareja y solo para adultos")
@@ -622,7 +600,7 @@ register("bahamas-romance-travel", {
                           "waters. Plan your sailing and your paperwork around that, and a call to a specialist "
                           "makes it simple.")
                   + photo_band("bahamas-romance-travel/wedding-cake.jpg",
-                               "Cutting the cake at a Bahamas wedding.")
+                               "Rings, shells and flowers: the small details of a beach wedding.")
                   + "<p>For planning, couples can also build a free gift and RSVP page through the official "
                   "Islands of the Bahamas honeymoon registry, a handy way to organise guests and wishes in one place.</p>",
             "es": "<p>Una razón por la que las Bahamas son tan populares para bodas es que el proceso es corto y "
@@ -645,7 +623,7 @@ register("bahamas-romance-travel", {
                           "aguas bahameñas. Planea tu travesía y tus papeles en torno a eso, y una llamada a un "
                           "especialista lo hace simple.")
                   + photo_band("bahamas-romance-travel/wedding-cake.jpg",
-                               "Cortando el pastel en una boda en las Bahamas.")
+                               "Anillos, conchas y flores: los pequeños detalles de una boda en la playa.")
                   + "<p>Para planear, las parejas también pueden crear una página gratuita de regalos y "
                   "confirmaciones a través del registro oficial de lunas de miel de las Islas de las Bahamas, una "
                   "forma práctica de organizar invitados y deseos en un solo lugar.</p>",
@@ -663,7 +641,7 @@ register("bahamas-romance-travel", {
                       ("🏝️", "A private sandbar", "A secluded strip of sand with nobody else in sight."),
                   ])
                   + photo_band("bahamas-romance-travel/garden-ceremony.jpg",
-                               "A garden ceremony framed by palms.")
+                               "A ceremony set up beside the water.")
                   + "<p>If you want local colour, some couples build the celebration around Junkanoo, the "
                   "islands' vibrant music-and-costume tradition, for a reception nobody forgets.</p>",
             "es": "<p>La mitad de la diversión es el escenario. Las Bahamas ofrecen una gran variedad, de lo "
@@ -677,7 +655,7 @@ register("bahamas-romance-travel", {
                       ("🏝️", "Un banco de arena privado", "Una franja de arena apartada sin nadie más a la vista."),
                   ])
                   + photo_band("bahamas-romance-travel/garden-ceremony.jpg",
-                               "Una ceremonia en jardín enmarcada por palmeras.")
+                               "Una ceremonia montada junto al mar.")
                   + "<p>Si quieres color local, algunas parejas arman la celebración en torno al Junkanoo, la "
                   "vibrante tradición de música y disfraces de las islas, para una recepción que nadie olvida.</p>",
          }},
@@ -693,12 +671,12 @@ register("bahamas-romance-travel", {
                       ("🐷", "The Exumas", "Named among the world's most romantic islands: swimming pigs, the Thunderball Grotto and a protected land-and-sea park."),
                   ])
                   + photo_band("bahamas-romance-travel/harbour-island-bikes.jpg",
-                               "Cycling past the pastel cottages of Harbour Island.")
+                               "On a small island, a bicycle is often the easiest way to get around.")
                   + "<p>Harbour Island's pink sand is one of the most photographed stretches in the country, and "
                   "the Abacos' lighthouse country is quietly one of the most romantic. Many couples pair two "
                   "islands: somewhere lively to celebrate, then somewhere quiet to unwind.</p>"
                   + photo_band("bahamas-romance-travel/lighthouse.jpg",
-                               "The lighthouse and flame trees of the Abacos."),
+                               "A lighthouse on a tropical coast."),
             "es": "<p>Estas son las islas por las que empiezan la mayoría de las parejas, cada una con una "
                   "personalidad distinta:</p>"
                   + vcards([
@@ -710,12 +688,12 @@ register("bahamas-romance-travel", {
                       ("🐷", "Las Exumas", "Nombradas entre las islas más románticas del mundo: cerdos nadadores, la gruta Thunderball y un parque protegido de tierra y mar."),
                   ])
                   + photo_band("bahamas-romance-travel/harbour-island-bikes.jpg",
-                               "En bicicleta entre las casitas pastel de Harbour Island.")
+                               "En una isla pequeña, la bicicleta suele ser la forma más fácil de moverse.")
                   + "<p>La arena rosada de Harbour Island es uno de los tramos más fotografiados del país, y la "
                   "tierra de faros de los Abacos es, en silencio, una de las más románticas. Muchas parejas "
                   "combinan dos islas: una animada para celebrar y otra tranquila para descansar.</p>"
                   + photo_band("bahamas-romance-travel/lighthouse.jpg",
-                               "El faro y los flamboyanes de los Abacos."),
+                               "Un faro en una costa tropical."),
          }},
         {"id": "out-islands", "h2": {"en": "For total seclusion: the Out Islands", "es": "Para aislamiento total: las Out Islands"},
          "html": {
@@ -730,7 +708,7 @@ register("bahamas-romance-travel", {
                       ("🤫", "Mayaguana & Inagua", "The most isolated and least developed, with very limited lodging, for couples who want to disappear."),
                   ])
                   + photo_band("bahamas-romance-travel/seaplane-sunset.jpg",
-                               "Island-hopping to the Out Islands by seaplane.")
+                               "A float plane at golden hour. Small aircraft link the quieter islands.")
                   + "<p>Andros has a romantic footnote worth sharing: the settlement of Love Hill, where locals "
                   "brew a tea from a plant known as the 'love vine'. It is exactly the kind of small story that "
                   "makes an Out Island trip feel like your own discovery.</p>",
@@ -745,7 +723,7 @@ register("bahamas-romance-travel", {
                       ("🤫", "Mayaguana e Inagua", "Las más aisladas y menos desarrolladas, con alojamiento muy limitado, para parejas que quieren desaparecer."),
                   ])
                   + photo_band("bahamas-romance-travel/seaplane-sunset.jpg",
-                               "Saltando de isla en isla hacia las Out Islands en hidroavión.")
+                               "Un hidroavión al atardecer. Las avionetas conectan las islas más tranquilas.")
                   + "<p>Andros tiene una nota romántica que vale la pena contar: el poblado de Love Hill, donde los "
                   "locales preparan un té de una planta conocida como 'love vine'. Es justo el tipo de pequeña "
                   "historia que hace que un viaje a las Out Islands se sienta como tu propio descubrimiento.</p>",
@@ -758,7 +736,9 @@ register("bahamas-romance-travel", {
                   "using the purser's-letter route above.</p>"
                   "<p>Whether you are cruising in or flying to a single island, the two decisions that shape the "
                   "trip are which island (or pair of islands) fits your mood, and the timing. Our guide to "
-                  + link("/en/guides/when-to-cruise/", "when to cruise") + " helps with the season, and the "
+                  + link("/en/guides/when-to-cruise/", "when to cruise") + " helps with the season, our "
+                  + link("/en/guides/bahamas-cruise-guide/", "Bahamas cruise guide") + " explains how the short "
+                  "sailings actually work, and the "
                   + link("/en/destinations/bahamas/", "Bahamas destination guide") + " covers the ports and how to "
                   "reach them.</p>"
                   + photo_band("bahamas-romance-travel/beach-hammock.jpg",
@@ -786,16 +766,14 @@ register("bahamas-romance-travel", {
                   "to match, and the rest falls into place.</p>"
                   "<p>When you want a certified Bahamas specialist to help choose the island, handle the timing and "
                   "connect you with a licensed advisor for the details, that is one call away, free, with no "
-                  "obligation, and never a payment to us.</p>"
-                  + _BR_CREDIT["en"],
+                  "obligation, and never a payment to us.</p>",
             "es": "<p>Las Bahamas se ganan su fama romántica. El proceso de boda es simple, las islas cubren todos "
                   "los ánimos, de la fiesta a la paz total, y puedes ser tan social o tan escondido como quieras. "
                   "Decide de qué se trata realmente el viaje, celebrar, descansar o un poco de ambos, elige la isla "
                   "que combine, y lo demás cae en su lugar.</p>"
                   "<p>Cuando quieras que un especialista certificado en las Bahamas te ayude a elegir la isla, "
                   "manejar las fechas y conectarte con un asesor con licencia para los detalles, eso está a una "
-                  "llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>"
-                  + _BR_CREDIT["es"],
+                  "llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>",
          }},
     ],
     "faqs": {
@@ -884,7 +862,9 @@ register("bahamas-cruise-guide", {
                   + tip("If you are testing whether you like cruising at all, a three-night Bahamas sailing is "
                         "the lowest-risk way to find out. Just go in knowing it is a sampler. One short trip "
                         "will not tell you what a seven-night itinerary feels like, because the rhythm is "
-                        "completely different."),
+                        "completely different.")
+                  + photo_band("bahamas-cruise-guide/florida-departure.jpg",
+                               "Most Bahamas sailings leave from a Florida port."),
             "es": "<p>Las Bahamas empiezan a unos ochenta kilómetros de la costa de Florida. Ese solo dato "
                   "explica todo el mercado.</p>"
                   + vcards([
@@ -894,7 +874,9 @@ register("bahamas-cruise-guide", {
                   ])
                   + tip("Si quieres probar si te gustan los cruceros, una salida de tres noches a las Bahamas "
                         "es la forma de menor riesgo. Eso sí, ve sabiendo que es una muestra. Un viaje corto "
-                        "no te dirá cómo se siente un itinerario de siete noches, porque el ritmo es distinto."),
+                        "no te dirá cómo se siente un itinerario de siete noches, porque el ritmo es distinto.")
+                  + photo_band("bahamas-cruise-guide/florida-departure.jpg",
+                               "La mayoría de las salidas a las Bahamas parten de un puerto de Florida."),
          }},
         {"id": "private-islands", "h2": {"en": "The private island day",
                                          "es": "El día en la isla privada"},
@@ -915,7 +897,9 @@ register("bahamas-cruise-guide", {
                   + watch("<b>On a three-night sailing, check whether a private island day is actually on "
                           "your itinerary.</b> Two ships leaving the same port on the same weekend can have "
                           "quite different stops, and for many people this single day is the reason to pick "
-                          "one over the other. It is worth asking about specifically."),
+                          "one over the other. It is worth asking about specifically.")
+                  + photo_band("bahamas-cruise-guide/private-island-beach.jpg",
+                               "A beach day set up in advance: loungers, shade and lunch included."),
             "es": "<p>Esta es la parte que sorprende a la gente, y en una salida corta suele ser el mejor día "
                   "del viaje.</p>"
                   + define("Isla privada",
@@ -932,7 +916,9 @@ register("bahamas-cruise-guide", {
                   + watch("<b>En una salida de tres noches, comprueba si tu itinerario incluye día en isla "
                           "privada.</b> Dos barcos que salen del mismo puerto el mismo fin de semana pueden "
                           "tener escalas distintas, y para mucha gente ese día es la razón de elegir uno u "
-                          "otro. Conviene preguntarlo expresamente."),
+                          "otro. Conviene preguntarlo expresamente.")
+                  + photo_band("bahamas-cruise-guide/private-island-beach.jpg",
+                               "Un día de playa preparado de antemano: hamacas, sombra y comida incluida."),
          }},
         {"id": "nassau", "h2": {"en": "Nassau, and why your day there varies so much",
                                 "es": "Nassau, y por qué tu día allí varía tanto"},
@@ -946,7 +932,9 @@ register("bahamas-cruise-guide", {
                   ])
                   + tip("Ask which other ships are scheduled in port the same day. It is a question most "
                         "people never think to ask, and it predicts the character of your day in Nassau "
-                        "better than any review will."),
+                        "better than any review will.")
+                  + photo_band("bahamas-cruise-guide/nassau-harbour.jpg",
+                               "Nassau, the busiest cruise port in the region."),
             "es": "<p>Nassau es la capital y el puerto de cruceros más concurrido de la región. Casi todos "
                   "los itinerarios paran allí, que es justo lo que hay que entender.</p>"
                   + vcards([
@@ -955,7 +943,9 @@ register("bahamas-cruise-guide", {
                       ("🏖️", "Las buenas playas quedan a un trayecto", "Las más conocidas están a un taxi o ferry, no en el muelle. Cuenta el tiempo de ida y vuelta, sobre todo con una hora límite temprana."),
                   ])
                   + tip("Pregunta qué otros barcos coinciden ese día en puerto. Es una pregunta que casi "
-                        "nadie hace, y predice el carácter de tu día en Nassau mejor que cualquier reseña."),
+                        "nadie hace, y predice el carácter de tu día en Nassau mejor que cualquier reseña.")
+                  + photo_band("bahamas-cruise-guide/nassau-harbour.jpg",
+                               "Nassau, el puerto de cruceros más concurrido de la región."),
          }},
         {"id": "when", "h2": {"en": "When to go", "es": "Cuándo ir"},
          "html": {
@@ -996,7 +986,9 @@ register("bahamas-cruise-guide", {
                   + "<p>If the ship is carrying the trip, it is worth understanding what varies between them. "
                   + link("/en/guides/big-ship-vs-small-ship/", "Big ship vs small ship")
                   + " and " + link("/en/guides/choosing-a-cabin/", "choosing a cabin")
-                  + " both matter more on a short sailing than they would on a longer one.</p>",
+                  + " both matter more on a short sailing than they would on a longer one.</p>"
+                  + photo_band("bahamas-cruise-guide/ship-pool-deck.jpg",
+                               "On a three-night sailing, this is where most of your hours go."),
             "es": "<p>Esto es lo que más malinterpretan los primerizos. En un crucero de tres o cuatro noches "
                   "por las Bahamas estás en tierra parte de uno o dos días. El resto del tiempo estás en el barco.</p>"
                   + vcards([
@@ -1007,7 +999,9 @@ register("bahamas-cruise-guide", {
                   + "<p>Si el barco sostiene el viaje, conviene saber en qué se diferencian. "
                   + link("/es/guides/big-ship-vs-small-ship/", "Barco grande o pequeño")
                   + " y " + link("/es/guides/choosing-a-cabin/", "elegir camarote")
-                  + " importan más en una salida corta que en una larga.</p>",
+                  + " importan más en una salida corta que en una larga.</p>"
+                  + photo_band("bahamas-cruise-guide/ship-pool-deck.jpg",
+                               "En una salida de tres noches, aquí se van la mayoría de tus horas."),
          }},
     ],
     "faqs": {
@@ -1033,13 +1027,13 @@ register("bahamas-cruise-guide", {
             ("💍", "Romance in the Bahamas", "/en/guides/bahamas-romance-travel/", "Honeymoons, weddings and quiet escapes."),
             ("🧭", "First-time cruisers", "/en/guides/first-time-cruisers/", "What nobody tells you before you sail."),
             ("⚓", "Port days vs sea days", "/en/guides/port-days-vs-sea-days/", "Why short sailings feel different."),
-            ("🗓️", "When to cruise", "/en/guides/when-to-cruise/", "Season by season, region by region."),
+            ("🏝️", "Bahamas destination guide", "/en/destinations/bahamas/", "Ports, how to reach the islands and what to do."),
         ],
         "es": [
             ("💍", "Romance en las Bahamas", "/es/guides/bahamas-romance-travel/", "Lunas de miel, bodas y escapadas."),
             ("🧭", "Primer crucero", "/es/guides/first-time-cruisers/", "Lo que nadie te cuenta antes de zarpar."),
             ("⚓", "Puerto o navegación", "/es/guides/port-days-vs-sea-days/", "Por qué las salidas cortas se sienten distintas."),
-            ("🗓️", "Cuándo hacer un crucero", "/es/guides/when-to-cruise/", "Temporada a temporada, región por región."),
+            ("🏝️", "Guía de destino de las Bahamas", "/es/destinations/bahamas/", "Puertos, cómo llegar a las islas y qué hacer."),
         ],
     },
 })
