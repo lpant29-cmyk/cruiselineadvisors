@@ -871,6 +871,10 @@ a.rt-card:hover{transform:translateY(-2px)}
 .credband .tb-note{color:#87a7b2;max-width:70ch;margin:1.3rem auto 0}
 @media(min-width:900px){.credband .tb-asta img{height:62px}.credband .tb-bah img{height:66px}.credband .tb-romance img{height:82px}}
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
+.tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
+.ftr .tb-rcu{background:#fff;padding:.3rem .55rem}
+.tb-rcu img{display:block;width:auto;height:38px;max-width:100%}
+.tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
 
 /* sticky mobile call */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:120;display:flex;align-items:center;gap:12px;background:rgba(8,44,66,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.12);padding:9px 14px;box-shadow:0 -8px 24px rgba(0,0,0,.22)}

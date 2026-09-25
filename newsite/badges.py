@@ -104,10 +104,38 @@ _TRUST = {
 
 # Entity-scoped, deliberately singular, and deliberately NOT "our specialists":
 # advisors work for the independent partner agencies, not for us (Hard Rule 5).
+_SECTIONS = {
+    "en": {"company": "Company credentials", "personal": "Training and certifications"},
+    "es": {"company": "Credenciales de la empresa", "personal": "Formación y certificaciones"},
+}
+
+# The non-affiliation line. This is the sentence that makes it safe to show a
+# cruise line's own training mark on a site that bids that line's brand terms.
+# It must sit in the SAME block as the badges, not in the footer small print.
+_PERSONAL_NOTE = {
+    "en": ("Training completed by individuals at {co}. These are professional development "
+           "courses run by tourist boards and cruise lines for travel professionals. "
+           "Completing one is a training achievement, not a partnership, appointment or "
+           "endorsement. We are not affiliated with, authorised by, or an agent of any "
+           "cruise line or tourist board."),
+    "es": ("Formación completada por personas de {co}. Son cursos de desarrollo profesional "
+           "que las oficinas de turismo y las líneas de crucero ofrecen a profesionales del "
+           "sector. Completar uno es un logro formativo, no una asociación, nombramiento ni "
+           "respaldo. No estamos afiliados, autorizados por, ni somos agentes de ninguna "
+           "línea de crucero ni oficina de turismo."),
+}
+
+_RCU = {
+    "en": ("{who} has completed Royal Caribbean University's Master of Adventure certification.",
+           "Royal Caribbean University Master of Adventure certificate"),
+    "es": ("{who} ha completado la certificación Master of Adventure de Royal Caribbean University.",
+           "Certificado Master of Adventure de Royal Caribbean University"),
+}
+
 _BAHAMAS = {
-    "en": ("{co} holds a Certified Bahamas Specialist diploma from "
+    "en": ("A principal of {co} holds the Certified Bahamas Specialist diploma from "
            "The Islands of The Bahamas.", "Certified Bahamas Specialist diploma"),
-    "es": ("{co} posee un diploma de Certified Bahamas Specialist de "
+    "es": ("Un socio de {co} posee el diploma de Certified Bahamas Specialist de "
            "The Islands of The Bahamas.", "Diploma de Certified Bahamas Specialist"),
 }
 
@@ -124,48 +152,77 @@ def _asset_exists(webpath):
 
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
-                 romance=False, romance_img=None):
-    """Operator credential row. Renders nothing for a credential we don't hold."""
-    t = _TRUST[lang]
-    items = []
+                 romance=False, romance_img=None,
+                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None):
+    """Two separate blocks, deliberately not one row (operator ruling 2026-09-25).
+
+    COMPANY CREDENTIALS are registrations held by the operating entity: ASTA
+    membership and the Florida Seller of Travel licence. They say something
+    about the business.
+
+    TRAINING AND CERTIFICATIONS are courses completed by named individuals.
+    They say something about a person's product knowledge. Mixing the two
+    implies the company is accredited by a cruise line or tourist board, which
+    is exactly the affiliation our disclaimers deny. The non-affiliation note
+    renders with the personal block and is not optional.
+    """
+    t, sec = _TRUST[lang], _SECTIONS[lang]
+
+    # ── company credentials ────────────────────────────────────────────────
+    company_items = []
     if show_asta:
-        items.append(
+        company_items.append(
             f'<a class="tb tb-asta" href="{asta_url}" target="_blank" rel="noopener nofollow" '
             f'title="{t["asta"]} ({t["verify"]})">'
             f'<img src="/badges/asta-member.png" alt="{t["asta_alt"]}" width="526" height="224" loading="lazy">'
             f'<span class="tb-cap">{t["asta"]}</span></a>')
     if fsot_ref:
-        items.append(
+        company_items.append(
             f'<a class="tb tb-fsot" href="{fsot_url}" target="_blank" rel="noopener nofollow" '
             f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
             f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
-    note = ""
+
+    # ── personal training ──────────────────────────────────────────────────
+    personal_items, lines = [], []
     if bahamas:
         sentence, doc_label = _BAHAMAS[lang]
-        sentence = sentence.format(co=company)
-        have_crest, have_doc = _asset_exists(bahamas_crest), _asset_exists(bahamas_doc)
-        if have_crest:
+        lines.append(sentence.format(co=company))
+        if _asset_exists(bahamas_crest):
             crest = (f'<img src="{bahamas_crest}" alt="{doc_label}" height="34" loading="lazy">'
                      f'<span class="tb-cap">{doc_label}</span>')
-            if have_doc:
-                items.append(f'<a class="tb tb-bah" href="{bahamas_doc}" target="_blank" '
-                             f'rel="noopener" title="{doc_label} ({t["verify"]})">{crest}</a>')
+            if _asset_exists(bahamas_doc):
+                personal_items.append(f'<a class="tb tb-bah" href="{bahamas_doc}" target="_blank" '
+                                      f'rel="noopener" title="{doc_label} ({t["verify"]})">{crest}</a>')
             else:
-                items.append(f'<span class="tb tb-bah">{crest}</span>')
-        note = f'<p class="tb-note">{sentence}</p>'
+                personal_items.append(f'<span class="tb tb-bah">{crest}</span>')
     if romance and _asset_exists(romance_img):
-        # DISPLAY-ONLY, deliberately not a link (qa-auditor find, 2026-09-22).
-        # It previously linked to bahamas_doc, i.e. a badge inviting you to
-        # verify a "Bahamas Romance Specialist certification" opened the
-        # GENERAL Bahamas Specialist diploma instead: a different credential.
-        # Offering the wrong document as proof is worse than offering none,
-        # because it devalues the three badges beside it that DO verify.
-        # No romance-specific certificate is on file. If one is supplied,
-        # host it in assets/docs/ and give this its own ROMANCE_DOC constant;
-        # do NOT point it back at bahamas_doc.
-        _rimg = f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy">'
-        items.append(f'<span class="tb tb-romance">{_rimg}</span>')
-    if not items and not note:
+        # Display-only: no romance-specific document exists, and pointing it at
+        # the general Bahamas diploma would offer the wrong thing as proof.
+        personal_items.append(
+            f'<span class="tb tb-romance">'
+            f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy"></span>')
+    if rcu and _asset_exists(rcu_badge):
+        rsent, rlabel = _RCU[lang]
+        lines.append(rsent.format(who=rcu_holder))
+        rimg = (f'<img src="{rcu_badge}" alt="{rlabel}" height="38" loading="lazy">'
+                f'<span class="tb-cap">{rlabel}</span>')
+        if _asset_exists(rcu_doc):
+            personal_items.append(f'<a class="tb tb-rcu" href="{rcu_doc}" target="_blank" '
+                                  f'rel="noopener" title="{rlabel} ({t["verify"]})">{rimg}</a>')
+        else:
+            personal_items.append(f'<span class="tb tb-rcu">{rimg}</span>')
+
+    blocks = []
+    if company_items:
+        blocks.append(f'<div class="tb-group"><p class="tb-op">{sec["company"]}: '
+                      f'<b>{company}</b></p><div class="tb-row">{"".join(company_items)}</div></div>')
+    if personal_items:
+        body = " ".join(lines)
+        disclaimer = _PERSONAL_NOTE[lang].format(co=company)
+        blocks.append(f'<div class="tb-group tb-group-personal"><p class="tb-op">{sec["personal"]}</p>'
+                      f'<div class="tb-row">{"".join(personal_items)}</div>'
+                      f'<p class="tb-note">{body}</p>'
+                      f'<p class="tb-note tb-disclaim">{disclaimer}</p></div>')
+    if not blocks:
         return ""
-    return (f'<div class="trustbadges"><p class="tb-op">{t["op"]} <b>{company}</b></p>'
-            f'<div class="tb-row">{"".join(items)}</div>{note}</div>')
+    return f'<div class="trustbadges">{"".join(blocks)}</div>'

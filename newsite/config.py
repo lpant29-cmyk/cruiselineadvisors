@@ -44,6 +44,21 @@ BAHAMAS_SPECIALIST = True
 BAHAMAS_CREST      = "/badges/bahamas-specialist.png"          # crest cropped from the diploma
 BAHAMAS_DOC        = "/docs/bahamas-specialist-diploma.png"    # the full diploma, self-hosted
 
+# Royal Caribbean University "Master of Adventure", completed 2026-09-23 by a
+# named individual. Sits in the PERSONAL TRAINING section, never the company
+# credential section, and never without the non-affiliation line beside it.
+# This one is more sensitive than the others: it carries a cruise line's own
+# wordmark on a site that bids that line's brand keywords and states in its
+# footer that it is not an agent of any cruise line. RCU is Royal Caribbean's
+# training programme for travel professionals and completing it is a training
+# achievement, NOT a partnership, appointment, endorsement or authorised-agent
+# status. If the wording beside this badge ever drifts toward implying any of
+# those, remove the badge rather than reword around it.
+RCU_ACCOLADE = True
+RCU_HOLDER   = "Lokesh Pant"
+RCU_BADGE    = "/badges/rcu-master-of-adventure.png"
+RCU_DOC      = "/docs/rcu-master-of-adventure-certificate.jpg"
+
 # Bahamas Romance Specialist badge. Display-only logo in the footer credential
 # row; renders ONLY when the image file is actually present on disk.
 ROMANCE_SPECIALIST = True
