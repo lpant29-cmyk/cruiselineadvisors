@@ -59,6 +59,44 @@ RCU_HOLDER   = "Lokesh Pant"
 RCU_BADGE    = "/badges/rcu-master-of-adventure.png"
 RCU_DOC      = "/docs/rcu-master-of-adventure-certificate.jpg"
 
+# ── Specialist certifications, held by named INDIVIDUALS ────────────────────
+# Rendered in the footer's personal-training slider, never the company block.
+# Order matters: the first three are what shows before scrolling, so the
+# cruise-relevant ones lead on a cruise site.
+#   img  badge logo under assets/badges/ (None renders a text chip instead)
+#   doc  the certificate itself under assets/docs/ (None = display-only, no link)
+# A cert with no doc must never be made clickable to a DIFFERENT cert's
+# document; offering the wrong thing as proof is worse than offering none.
+#
+# DELIBERATELY EXCLUDED: "Princess Hotels & Resorts Weddings Specialist".
+# It is a hotel brand, but on a cruise site it sits beside our Princess
+# Cruises line pages and would be read as a Princess Cruises credential,
+# which we do not hold. It stays on bargainairticket where it is unambiguous.
+SPECIALIST_CERTS = [
+    {"key": "bahamas",  "img": "/badges/bahamas-specialist.png",
+     "doc": "/docs/bahamas-specialist-diploma.png",
+     "en": "Certified Bahamas Specialist", "es": "Especialista Certificado de las Bahamas"},
+    {"key": "rcu",      "img": "/badges/rcu-master-of-adventure.png",
+     "doc": "/docs/rcu-master-of-adventure-certificate.jpg",
+     "en": "Royal Caribbean University Master of Adventure",
+     "es": "Master of Adventure de Royal Caribbean University"},
+    {"key": "romance",  "img": "/badges/romance.png", "doc": None,
+     "en": "Bahamas Romance Specialist", "es": "Especialista en Romance de las Bahamas"},
+    {"key": "iata",     "img": "/badges/iata-foundation.png",
+     "doc": "/docs/iata-foundation-diploma.jpg",
+     "en": "IATA Foundation in Travel and Tourism",
+     "es": "IATA Foundation en Viajes y Turismo"},
+    {"key": "domrep",   "img": "/badges/dominican-republic-specialist.png",
+     "doc": "/docs/dominican-republic-specialist-certificate.pdf",
+     "en": "Dominican Republic Specialist", "es": "Especialista de República Dominicana"},
+    {"key": "xcaret",   "img": "/badges/xcaret-xpert.png",
+     "doc": "/docs/xcaret-xpert-certificate.jpg",
+     "en": "Xcaret Xpert", "es": "Xcaret Xpert"},
+    {"key": "majestic", "img": None,
+     "doc": "/docs/majestic-resorts-certificate.jpg",
+     "en": "Majestic Resorts Specialist", "es": "Especialista de Majestic Resorts"},
+]
+
 # Bahamas Romance Specialist badge. Display-only logo in the footer credential
 # row; renders ONLY when the image file is actually present on disk.
 ROMANCE_SPECIALIST = True
