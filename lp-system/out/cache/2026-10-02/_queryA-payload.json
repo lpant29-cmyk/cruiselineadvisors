@@ -1,0 +1,15 @@
+{
+ "operationName": "cruiseSearch",
+ "variables": {
+  "filters": "departurePort:GAL",
+  "pagination": {
+   "count": 500,
+   "skip": 0
+  },
+  "sort": {
+   "by": "RECOMMENDED",
+   "order": "ASC"
+  }
+ },
+ "query": "query cruiseSearch($filters: String, $sort: CruiseSearchSort, $pagination: CruiseSearchPagination) { cruiseSearch(filters: $filters, sort: $sort, pagination: $pagination) { results { total cruises { id productViewLink sailings { id sailDate startDate endDate taxesAndFees { value } taxesAndFeesIncluded stateroomClassPricing { stateroomClass { id name } price { value currency { code } } } itinerary { name code totalNights departurePort { code } ship { code name } } } } } } }"
+}
