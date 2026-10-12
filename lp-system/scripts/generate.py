@@ -1277,9 +1277,16 @@ def bake(page, reg, today, used):
         no_int = months_without_interior(r)
         no_bal = months_without_balcony(r)
         month_list = months_of(r, today)
+        # The freshness fuse applies HERE too. Until 2026-10-12 this
+        # comprehension ignored price_ok(), so the finder and ship pages
+        # degraded to "Fare on request" past PRICE_MAX_AGE_DAYS while the
+        # itinerary page kept printing its number under a stale stamp
+        # (qa-auditor: baking with today=2026-11-11 still emitted i=700 under
+        # an "October 12" stamp). Two of three page types were protected.
+        fresh = price_ok(r, today)
         months = [{"m": m,
-                   "i": None if m in no_int else ov.get(m, {}).get("i", i_def),
-                   "b": None if m in no_bal else ov.get(m, {}).get("b", b_def)}
+                   "i": None if (not fresh or m in no_int) else ov.get(m, {}).get("i", i_def),
+                   "b": None if (not fresh or m in no_bal) else ov.get(m, {}).get("b", b_def)}
                   for m in month_list]
         page_obj = {
             "type": "itinerary", "id": page["page_id"], "h1": page["h1"],
