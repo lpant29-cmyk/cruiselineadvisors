@@ -103,8 +103,18 @@ def main():
     prev = {r["itin_id"]: r for r in (head_version("lp-system/data/03_itineraries.csv") or [])}
 
     # --- 1-3: per-row price checks -------------------------------------
+    whitelist = load_whitelist()
     for r in itins:
         rid = r["itin_id"]
+        # A row that cannot publish cannot mislead anyone, so it must not keep
+        # the gate red. Blocked seed rows and deliberately frozen rows (i0011,
+        # whose group vanished from source) were flagging "stale" on every run
+        # for weeks. The freeze IS the correct state: we keep the honest old
+        # stamp precisely because we could not re-verify. Their provenance flag
+        # below still reports them, so nothing is hidden, but a gate that is red
+        # every single run trains everyone to stop reading it (qa-auditor,
+        # 2026-10-16). Price and swing checks still run on every row.
+        publishable = provenance_ok(r, whitelist)
         for field in ("price_interior", "price_balcony"):
             raw = r.get(field, "").strip()
             if not raw:
@@ -128,10 +138,10 @@ def main():
             if changed and r.get("date_checked") != today.isoformat():
                 flags.append((rid, "date_checked",
                               f"price changed but stamp is {r.get('date_checked')!r}, not today"))
-        # stale stamps
+        # stale stamps (publishable rows only, see note above)
         try:
             checked = dt.date.fromisoformat(r.get("date_checked", ""))
-            if (today - checked).days > STALE_DAYS:
+            if publishable and (today - checked).days > STALE_DAYS:
                 flags.append((rid, "date_checked",
                               f"stale: {checked} is {(today - checked).days} days old (>{STALE_DAYS})"))
         except ValueError:
@@ -161,7 +171,6 @@ def main():
             w.writerows(offers)
 
     # --- 5 + 7: page inventory under provenance rules -------------------
-    whitelist = load_whitelist()
     live_statuses = {"approved", "building", "built", "built-template", "live", "pilot"}
     for p in pages:
         if p.get("status") not in live_statuses:
