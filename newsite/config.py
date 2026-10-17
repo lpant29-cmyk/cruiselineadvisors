@@ -59,6 +59,20 @@ RCU_HOLDER   = "Lokesh Pant"
 RCU_BADGE    = "/badges/rcu-master-of-adventure.png"
 RCU_DOC      = "/docs/rcu-master-of-adventure-certificate.jpg"
 
+# Carnival "Learn & Earn" graduate certificate, held by Kerry Driver.
+# Same treatment and same reasoning as the Royal Caribbean one: it sits in
+# the PERSONAL training section, never the company block, and never without
+# the non-affiliation line. The certificate reads "graduated from Carnival's
+# Learn & Earn Training Program", i.e. a completed training course, which is
+# why it can ship. It also says "becoming a Carnival expert"; we deliberately
+# do NOT reuse that phrasing, because "expert" reads as a status Carnival
+# conferred on the business rather than a course an individual finished.
+# NOTE: the certificate carries NO date, so we publish none. Do not infer one.
+CARNIVAL_LE        = True
+CARNIVAL_LE_HOLDER = "Kerry Driver"
+CARNIVAL_LE_BADGE  = "/badges/carnival-learn-and-earn.png"
+CARNIVAL_LE_DOC    = "/docs/carnival-learn-and-earn-certificate.jpg"
+
 # Bahamas Romance Specialist badge. Display-only logo in the footer credential
 # row; renders ONLY when the image file is actually present on disk.
 ROMANCE_SPECIALIST = True

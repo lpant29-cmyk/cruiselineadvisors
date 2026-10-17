@@ -59,6 +59,22 @@ def source_ok(url, whitelist):
     return any(host == d or host.endswith("." + d) for d in whitelist)
 
 
+def has_future_sailing(row, today):
+    """True if any of the row's months still has a sailing to come.
+
+    The inventory rule used to count matching ROWS, so a page whose every
+    sailing had already departed still passed >=1 and the gate stayed green
+    while the page advertised a ship that had left (qa-auditor, 2026-10-16).
+    month_last_sail carries each month's final sail date, so we can ask the
+    real question. A row with no month_last_sail data is treated as having
+    inventory: missing data must not silently retire a page."""
+    table = row.get("month_last_sail", "").strip()
+    if not table:
+        return True
+    dates = [d.strip() for _, _, d in (p.partition(":") for p in table.split(";")) if d.strip()]
+    return any(d >= today.isoformat() for d in dates) if dates else True
+
+
 def provenance_ok(row, whitelist):
     if UNVERIFIED_MARK in row.get("notes", "").upper():
         return False
@@ -194,6 +210,10 @@ def main():
                               f"feeds {p['page_id']} but source {r.get('source', '')!r} "
                               "is not an official whitelisted URL "
                               "(lp-system/data/source_whitelist.txt)"))
+            elif not has_future_sailing(r, today):
+                flags.append((r["itin_id"], "inventory",
+                              f"feeds {p['page_id']} but every sailing has departed; "
+                              "the row can no longer supply this page"))
             else:
                 clean.append(r)
         if len(clean) < need:

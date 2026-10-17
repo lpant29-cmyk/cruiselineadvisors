@@ -5,6 +5,7 @@ from config import (PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY,
                     ASTA_MEMBER, ASTA_URL, FSOT_REF, FSOT_URL,
                     BAHAMAS_SPECIALIST, BAHAMAS_CREST, BAHAMAS_DOC,
                     RCU_ACCOLADE, RCU_BADGE, RCU_DOC, RCU_HOLDER,
+                    CARNIVAL_LE, CARNIVAL_LE_BADGE, CARNIVAL_LE_DOC, CARNIVAL_LE_HOLDER,
                     ROMANCE_SPECIALIST, ROMANCE_BADGE)
 from i18n import T
 from badges import verified_seal, trust_badges
@@ -43,7 +44,9 @@ def credentials_band(lang):
                          bahamas_doc=BAHAMAS_DOC, romance=ROMANCE_SPECIALIST,
                          romance_img=ROMANCE_BADGE,
                          rcu=RCU_ACCOLADE, rcu_badge=RCU_BADGE, rcu_doc=RCU_DOC,
-                         rcu_holder=RCU_HOLDER)
+                         rcu_holder=RCU_HOLDER,
+                         carnival=CARNIVAL_LE, carnival_badge=CARNIVAL_LE_BADGE,
+                         carnival_doc=CARNIVAL_LE_DOC, carnival_holder=CARNIVAL_LE_HOLDER)
     if not trust:
         return ""
     return (f'<section class="section credband"><div class="wrap">'

@@ -129,6 +129,13 @@ _PERSONAL_NOTE = {
            "de ninguna línea de crucero ni oficina de turismo."),
 }
 
+_CARNIVAL = {
+    "en": ("{who} has graduated from Carnival's Learn and Earn training programme.",
+           "Carnival Learn and Earn certificate"),
+    "es": ("{who} se ha graduado del programa de formación Learn and Earn de Carnival.",
+           "Certificado Learn and Earn de Carnival"),
+}
+
 _RCU = {
     "en": ("{who} has completed Royal Caribbean University's Master of Adventure certification.",
            "Royal Caribbean University Master of Adventure certificate"),
@@ -157,7 +164,9 @@ def _asset_exists(webpath):
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
                  romance=False, romance_img=None,
-                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None):
+                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None,
+                 carnival=False, carnival_badge=None, carnival_doc=None,
+                 carnival_holder=None):
     """Two separate blocks, deliberately not one row (operator ruling 2026-09-25).
 
     COMPANY CREDENTIALS are registrations held by the operating entity: ASTA
@@ -215,6 +224,17 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                                   f'rel="noopener" title="{rlabel} ({t["verify"]})">{rimg}</a>')
         else:
             personal_items.append(f'<span class="tb tb-rcu">{rimg}</span>')
+
+    if carnival and _asset_exists(carnival_badge):
+        csent, clabel = _CARNIVAL[lang]
+        lines.append(csent.format(who=carnival_holder))
+        cimg = (f'<img src="{carnival_badge}" alt="{clabel}" height="34" loading="lazy">'
+                f'<span class="tb-cap">{clabel}</span>')
+        if _asset_exists(carnival_doc):
+            personal_items.append(f'<a class="tb tb-carnival" href="{carnival_doc}" target="_blank" '
+                                  f'rel="noopener" title="{clabel} ({t["verify"]})">{cimg}</a>')
+        else:
+            personal_items.append(f'<span class="tb tb-carnival">{cimg}</span>')
 
     blocks = []
     if company_items:

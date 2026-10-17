@@ -878,6 +878,8 @@ a.rt-card:hover{transform:translateY(-2px)}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .ftr .tb-rcu{background:#fff;padding:.3rem .55rem}
 .tb-rcu img{display:block;width:auto;height:38px;max-width:100%}
+.ftr .tb-carnival{background:#fff;padding:.3rem .55rem}
+.tb-carnival img{display:block;width:auto;height:34px;max-width:100%}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
 
 /* sticky mobile call */

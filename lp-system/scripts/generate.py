@@ -391,6 +391,31 @@ def ship_names(row, ships):
     return "; ".join(ships.get(i, i) for i in ids) or row["line_id"].upper()
 
 
+def _departed(row, month, today):
+    """True once a month's LAST sailing has left port.
+
+    Until 2026-10-17 months_of() was month-granular with no day-level filter,
+    because the sheet stored only sail_months and threw the individual sail
+    dates away. A page therefore kept advertising "October" for the rest of
+    the month after its last October ship had sailed, and a rate run kept the
+    stamp looking fresh while it did (qa-auditor, 2026-10-16). The >=1
+    inventory rule could not catch it either: it counts rows, not whether
+    their sailings are still in the future.
+
+    month_last_sail carries "YYYY-MM:YYYY-MM-DD;..." so a month now expires on
+    its own, with no run required. A row with no entry for the month is left
+    alone rather than hidden: absence of data must not delete inventory."""
+    table = row.get("month_last_sail", "")
+    for part in table.split(";"):
+        m, _, dt = part.partition(":")
+        if m.strip() == month and dt.strip():
+            try:
+                return dt.strip() < today.isoformat()
+            except (TypeError, AttributeError):
+                return False
+    return False
+
+
 def months_of(row, today):
     """Sail months as YYYY-MM list. 'year-round' rows: prefer the months that
     actually carry a price in month_price_overrides (registrar task queued to
@@ -399,11 +424,12 @@ def months_of(row, today):
     the next 6 months only when no overrides exist."""
     raw = row.get("sail_months", "").strip()
     if raw != "year-round":
-        return [t.strip() for t in raw.split(";") if t.strip()]
+        return [t.strip() for t in raw.split(";") if t.strip()
+                and not _departed(row, t.strip(), today)]
     override_months = sorted({m.group(1) for m in
                               re.finditer(r"(\d{4}-\d{2}):", row.get("month_price_overrides", ""))})
     if override_months:
-        return override_months
+        return [m for m in override_months if not _departed(row, m, today)]
     out, y, m = [], today.year, today.month
     for _ in range(6):
         out.append(f"{y:04d}-{m:02d}")
