@@ -1,0 +1,160 @@
+name: Fare refresh
+
+# Scheduled, unattended version of the /rate-update skill.
+#
+# Why this exists: every freshness gate in generate.py runs at BUILD time. A
+# deployed page expires nothing by itself, so a skipped refresh does not fail
+# safe, it keeps serving old fares as current. The schedule IS the safety
+# mechanism, and a human who gets busy is a publishing risk.
+#
+# What it is allowed to do on its own: re-fetch fares from Royal Caribbean's
+# own cruiseSearch endpoint twice in two independently shaped queries, publish
+# only what both return to the cent, rebuild, commit and push (Render deploys
+# the push). What it is NOT allowed to do: write prose, write an offer, or
+# publish a page that has no inventory left. Those stop and ask.
+
+on:
+  schedule:
+    # Every third day at 11:00 UTC (07:00 ET). Lines up with
+    # PRICE_MAX_AGE_DAYS = 3 in generate.py: the longest gap this pattern
+    # produces is 3 days, so a fare is never served past its fuse.
+    - cron: "0 11 */3 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Fetch and gate, write nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write        # commit the refreshed data + rebuilt site
+  issues: write          # open/update the one notification issue
+
+concurrency:
+  group: fare-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2        # validate.py diffs against HEAD:<path>
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh fares from source
+        id: rates
+        run: |
+          set +e
+          python3 lp-system/scripts/auto_rates.py \
+            ${{ inputs.dry_run && '--dry-run' || '' }} | tee /tmp/rates.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Stop if source could not be reached
+        if: steps.rates.outputs.code == '2'
+        run: |
+          echo "::error::Could not complete the fetch. Nothing was written, the"
+          echo "::error::live pages keep their last values and the 3-day fuse"
+          echo "::error::will withhold fares if this keeps failing."
+          cat /tmp/rates.log
+          exit 1
+
+      - name: Validate
+        id: validate
+        run: |
+          set +e
+          python3 lp-system/scripts/validate.py | tee /tmp/validate.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          # A flag is normal and does not stop the deploy: it means "prove it",
+          # and the row it names is already held with its older stamp, so the
+          # build-time fuse withholds that fare on its own. Blocking the push
+          # would be worse than letting it through, because the copy already
+          # live is the stale one.
+
+      - name: Build and run the pre-deploy checks
+        id: build
+        # deploy.sh is the real gate: noindex, no sitemap leak, no inbound
+        # links, no placeholders, and a hard stop if every fare is withheld.
+        # It reports a page that has run out of inventory as a GAP and keeps
+        # building the healthy ones, so one dead row cannot take the site down.
+        if: ${{ !inputs.dry_run }}
+        run: bash lp-system/scripts/deploy.sh
+
+      - name: Commit and push
+        id: push
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing changed, nothing to push"
+            echo "pushed=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "fare-refresh[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # written with printf, not an indented heredoc: a heredoc inside a
+          # YAML block keeps the YAML indentation in the commit message
+          printf '%s\n' \
+            'Fare refresh (scheduled)' \
+            '' \
+            'Values come from two independently shaped official cruiseSearch' \
+            'queries and publish only where both agree to the cent. Rows that' \
+            'disagreed, moved more than the swing gate, or returned no sailings' \
+            'keep their previous values and their older date_checked stamp, so' \
+            'the build-time fuse withholds those fares rather than serving a' \
+            'number we could not confirm twice.' \
+            '' \
+            'Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>' \
+            > /tmp/commit-msg.txt
+          git commit -F /tmp/commit-msg.txt
+          git push
+          echo "pushed=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Notify
+        if: always() && !inputs.dry_run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          PUSH_OUTCOME: ${{ steps.push.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 .github/scripts/notify_rates.py
+        # Reads the run report and keeps exactly one issue open. It comments
+        # (which is what pushes to the phone) only when the set of problems
+        # actually changes, and closes the issue when there are none left, so
+        # a row that is held every cycle does not mail every cycle.
+
+      - name: Push straight to the phone (optional)
+        # Only fires if a PUSH_WEBHOOK secret exists, so it costs nothing and
+        # breaks nothing while it is unset. Set it to an ntfy.sh topic URL or a
+        # Pushover/Slack webhook to get the alert without opening an app.
+        # The body carries no customer data and no credentials.
+        if: always() && !inputs.dry_run && env.PUSH_WEBHOOK != ''
+        env:
+          PUSH_WEBHOOK: ${{ secrets.PUSH_WEBHOOK }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -s /tmp/phone-alert.txt ]; then
+            curl -sS -m 20 --retry 2 -d "$(cat /tmp/phone-alert.txt)" \
+              -H "Title: Cruise fares" -H "Tags: ship" \
+              "$PUSH_WEBHOOK" || echo "webhook failed, the issue is still the record"
+          else
+            echo "nothing to push"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Fare refresh"
+            echo '```'
+            cat /tmp/rates.log 2>/dev/null || echo "(no run log)"
+            echo '```'
+            echo '```'
+            cat /tmp/validate.log 2>/dev/null || echo "(validate did not run)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

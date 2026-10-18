@@ -1,0 +1,17 @@
+itin_id,field,old_value,new_value,pct_change,queryA,queryB,decision,reason,retrieved_at
+i0003,date_checked,2026-10-18,2026-10-18,,7 sailings,7 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0004,date_checked,2026-10-18,2026-10-18,,6 sailings,6 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0005,(row),held at 2026-10-16,(unchanged),,0 sailings,0 sailings,frozen,group absent from both queries,2026-10-18T05:03:33Z
+i0006,date_checked,2026-10-18,2026-10-18,,69 sailings,69 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0007,date_checked,2026-10-18,2026-10-18,,39 sailings,39 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0008,date_checked,2026-10-18,2026-10-18,,2 sailings,2 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0009,date_checked,2026-10-18,2026-10-18,,7 sailings,7 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0010,(row),held at 2026-10-16,(unchanged),,26 sailings,26 sailings,hold,moved more than 25%: 2026-10 b 697->1237 +77.5%,2026-10-18T05:03:33Z
+i0011,(row),held at 2026-09-22,(unchanged),,0 sailings,0 sailings,frozen,group absent from both queries,2026-10-18T05:03:33Z
+i0012,date_checked,2026-10-18,2026-10-18,,1 sailings,1 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0013,date_checked,2026-10-18,2026-10-18,,2 sailings,2 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0014,date_checked,2026-10-18,2026-10-18,,1 sailings,1 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0015,date_checked,2026-10-18,2026-10-18,,7 sailings,7 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0016,date_checked,2026-10-18,2026-10-18,,1 sailings,1 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0017,date_checked,2026-10-18,2026-10-18,,23 sailings,23 sailings,publish,both queries agree,2026-10-18T05:03:33Z
+i0018,date_checked,2026-10-18,2026-10-18,,1 sailings,1 sailings,publish,both queries agree,2026-10-18T05:03:33Z

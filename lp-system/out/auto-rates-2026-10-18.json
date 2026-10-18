@@ -1,0 +1,160 @@
+{
+ "date": "2026-10-18",
+ "ok": true,
+ "started": "2026-10-18T05:03:33Z",
+ "fetch": {
+  "A": "cache",
+  "B:IC": "cache",
+  "B:LB": "cache",
+  "B:MA": "cache",
+  "B:SY": "cache"
+ },
+ "published": [
+  "i0003",
+  "i0004",
+  "i0006",
+  "i0007",
+  "i0008",
+  "i0009",
+  "i0012",
+  "i0013",
+  "i0014",
+  "i0015",
+  "i0016",
+  "i0017",
+  "i0018"
+ ],
+ "held": [
+  "i0010"
+ ],
+ "frozen": [
+  "i0005",
+  "i0011"
+ ],
+ "fields_changed": 0,
+ "notable": [],
+ "untracked_groups": [
+  "LB15GAL-573006281"
+ ],
+ "retired_offers": [],
+ "rows": {
+  "i0003": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 7,
+   "stamp": "2026-10-18"
+  },
+  "i0004": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 6,
+   "stamp": "2026-10-18"
+  },
+  "i0005": {
+   "decision": "frozen",
+   "reasons": [
+    "group absent from both queries"
+   ],
+   "moved": [],
+   "sailings": 0,
+   "stamp": "2026-10-16"
+  },
+  "i0006": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 69,
+   "stamp": "2026-10-18"
+  },
+  "i0007": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 39,
+   "stamp": "2026-10-18"
+  },
+  "i0008": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 2,
+   "stamp": "2026-10-18"
+  },
+  "i0009": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 7,
+   "stamp": "2026-10-18"
+  },
+  "i0010": {
+   "decision": "hold",
+   "reasons": [
+    "moved more than 25%: 2026-10 b 697->1237 +77.5%"
+   ],
+   "moved": [],
+   "sailings": 26,
+   "stamp": "2026-10-16"
+  },
+  "i0011": {
+   "decision": "frozen",
+   "reasons": [
+    "group absent from both queries"
+   ],
+   "moved": [],
+   "sailings": 0,
+   "stamp": "2026-09-22"
+  },
+  "i0012": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 1,
+   "stamp": "2026-10-18"
+  },
+  "i0013": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 2,
+   "stamp": "2026-10-18"
+  },
+  "i0014": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 1,
+   "stamp": "2026-10-18"
+  },
+  "i0015": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 7,
+   "stamp": "2026-10-18"
+  },
+  "i0016": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 1,
+   "stamp": "2026-10-18"
+  },
+  "i0017": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 23,
+   "stamp": "2026-10-18"
+  },
+  "i0018": {
+   "decision": "publish",
+   "reasons": [],
+   "moved": [],
+   "sailings": 1,
+   "stamp": "2026-10-18"
+  }
+ }
+}

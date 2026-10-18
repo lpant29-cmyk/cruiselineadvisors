@@ -271,6 +271,13 @@ def provenance_ok(row, whitelist):
         return False
     if "UNVERIFIED" in row.get("notes", "").upper():
         return False
+    # auto_status is the scheduled refresh's own channel (auto_rates.py). It is
+    # a column, not a note, precisely so it can be CLEARED: "UNVERIFIED" written
+    # into the append-only notes field would block the row forever, including
+    # after the sailings came back. "frozen" means the itinerary group returned
+    # no sailings from either official query, so we no longer know it is real.
+    if row.get("auto_status", "").strip().startswith("frozen"):
+        return False
     src = row.get("source", "")
     if not src.startswith(("http://", "https://")):
         return False

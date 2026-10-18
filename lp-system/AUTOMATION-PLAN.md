@@ -1,10 +1,48 @@
-# LP SYSTEM — AUTOMATION PLAN (parked 2026-07-30)
+# LP SYSTEM — AUTOMATION PLAN
 
-Operator decision, 2026-07-30: **do not build this yet.** Launch the three
-pilot pages, create the ad campaigns, run the account, and refresh prices
-daily. Revisit this plan after 1-2 weeks of live data.
+**BUILT 2026-10-18.** Option 1 below (GitHub Actions) is live as
+`.github/workflows/rates.yml`. Read that file and
+`lp-system/scripts/auto_rates.py` first; everything from section 2 down is the
+reasoning that produced them and is kept because the reasoning still applies.
 
-This file exists so the reasoning is not lost between sessions.
+What shipped, and the one thing that changed on the way:
+
+- `lp-system/scripts/auto_rates.py` does the whole refresh with **no model in
+  the loop**. Section 1 assumed the scheduler would need to run an agent and
+  therefore an API key as a repo secret. It does not. Every number the manual
+  runs produced came from two official `cruiseSearch` queries and a
+  derivation; the only part that needed a model was the English prose, and
+  that part is exactly where qa-auditor twice caught invented note history.
+  So the script writes **no prose at all** and never touches `notes`, and
+  there is **no API key secret**. The job runs on `GITHUB_TOKEN` alone.
+- The gate is the two independently shaped queries: one by departure port,
+  one per ship. A value publishes only where both return it to the cent.
+  Anything else keeps its previous value **and its older `date_checked`
+  stamp**, which means `PRICE_MAX_AGE_DAYS = 3` withholds that fare within
+  three days on its own. A hold degrades to "Fare on request", never to a
+  wrong number.
+- Offers are still a human job. The script may only switch off a banner whose
+  `end_date` has passed. It may not write offer copy, because offer copy is a
+  claim in our own words and the one time a run imported a line's own `$299`
+  figure, qa-auditor blocked the deploy.
+- A row the queries no longer return is marked `frozen` in a new
+  `auto_status` column, which `provenance_ok()` honours in both
+  `generate.py` and `validate.py`. It is a column and not a note on purpose:
+  writing "UNVERIFIED" into the append-only `notes` field would have blocked
+  that row forever, including after its sailings came back.
+- Notification is one GitHub issue, kept current, assigned to the operator.
+  It comments (which is what reaches the phone) only when the set of problems
+  changes, so a permanently volatile row does not mail every cycle. An
+  optional `PUSH_WEBHOOK` secret adds a direct push if one is ever wanted.
+
+Still a human decision every time, by design: retiring a row or a page,
+pausing an ad group, and writing an offer.
+
+---
+
+Original note, kept for the record — operator decision 2026-07-30: *do not
+build this yet. Launch the three pilot pages, create the ad campaigns, run
+the account, and refresh prices daily. Revisit after 1-2 weeks of live data.*
 
 ---
 

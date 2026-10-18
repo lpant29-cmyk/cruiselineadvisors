@@ -15,7 +15,27 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 ROOT="$PWD"
 
-LP_PAGES=("p002" "p007" "p008")   # the live /go/ pages
+# The live /go/ pages come from the registry, not from a list in this script,
+# so retiring one is a one-word data edit (status=retired in 09_pages.csv) the
+# way every other fact in this system is a data edit. Hardcoding them here
+# meant a page that lost its inventory hard-failed the whole deploy, taking
+# the healthy pages down with it.
+# read with a while loop, not mapfile: macOS still ships bash 3.2 and this
+# script has to run both there and on the scheduler's ubuntu runner
+lp_page_list=$(python3 - <<'PYLIST'
+import csv
+with open("lp-system/data/09_pages.csv", newline="", encoding="utf-8") as f:
+    for r in csv.DictReader(f):
+        if r["status"].strip() in ("building", "live"):
+            print(r["page_id"])
+PYLIST
+)
+LP_PAGES=()
+while IFS= read -r pg; do
+  [ -n "$pg" ] && LP_PAGES+=("$pg")
+done <<< "$lp_page_list"
+[ "${#LP_PAGES[@]}" -gt 0 ] || { echo "FAIL no live pages in 09_pages.csv"; exit 1; }
+echo "live /go/ pages: ${LP_PAGES[*]}"
 
 echo "==> 1/4  main site"
 ( cd newsite && python3 build.py )
@@ -26,8 +46,23 @@ mkdir -p "$ROOT/site"
 cp -R "$ROOT/newsite/dist/." "$ROOT/site/"
 
 echo "==> 3/4  /go/ landing pages"
+# generate.py exits non-zero when it SKIPs a page, and a skip for want of
+# publishable inventory is a CORRECT refusal: better no page than a page of
+# empty inventory. Under set -e that refusal used to abort the loop, so one
+# dead page stopped every later page from being rebuilt at all. Record it and
+# carry on; the page still gets reported, loudly, at step 4.
+empty_pages=""
 for pg in "${LP_PAGES[@]}"; do
-  python3 lp-system/scripts/generate.py --page "$pg" --deploy-dir site
+  if out=$(python3 lp-system/scripts/generate.py --page "$pg" --deploy-dir site 2>&1); then
+    echo "$out"
+  else
+    echo "$out"
+    if echo "$out" | grep -q "SKIP: $pg: only 0 publishable deals"; then
+      empty_pages="$empty_pages $pg"
+    else
+      echo "  FAIL generate.py could not build $pg"; exit 1
+    fi
+  fi
 done
 
 echo "==> 4/4  pre-deploy checks"
@@ -54,15 +89,27 @@ else
 fi
 
 for pg in "${LP_PAGES[@]}"; do
+  case " $empty_pages " in
+    *" $pg "*)
+      # An ad group is still pointing at this URL and Render never prunes, so
+      # the previously published copy stays served until the ads are paused.
+      # That is the only thing that actually takes it out of circulation.
+      echo "  GAP  $pg has no publishable inventory and was not rebuilt."
+      echo "       PAUSE ITS AD GROUPS. The old copy stays served until you do."
+      echo "       Then set status=retired for $pg in 09_pages.csv."
+      continue ;;
+  esac
   f=$( { grep -rl "\"page_id\": \"$pg\"" "$ROOT/site" 2>/dev/null || true; } | head -1)
-  [ -z "$f" ] && { echo "  FAIL $pg not found in site/"; fail=1; continue; }
+  if [ -z "$f" ]; then
+    echo "  FAIL $pg not found in site/"; fail=1; continue
+  fi
   grep -q 'name="robots" content="noindex' "$f" || { echo "  FAIL $pg missing noindex"; fail=1; }
   if grep -q "1-833-555-0100" "$f"; then echo "  FAIL $pg still has the placeholder phone"; fail=1; fi
   if grep -q "#CALLBACK_ACTION" "$f"; then echo "  FAIL $pg still has the placeholder form action"; fail=1; fi
   if grep -q "IMG SLOT" "$f"; then echo "  FAIL $pg has an unresolved image slot"; fail=1; fi
   if grep -q "AGENCY NAME" "$f"; then echo "  FAIL $pg has an unresolved brand placeholder"; fail=1; fi
 done
-[ "$fail" = "0" ] && echo "  ok   all $((${#LP_PAGES[@]})) LP pages: noindex, real phone, real form action, no placeholders"
+[ "$fail" = "0" ] && echo "  ok   LP pages checked: noindex, real phone, real form action, no placeholders"
 
 # fares must be fresh: generate.py withholds a stale price, but if EVERY
 # fare on a page is withheld that is a broken pipeline, not a safe default
@@ -91,6 +138,10 @@ echo
 if [ "$fail" != "0" ]; then
   echo "DEPLOY BLOCKED: fix the FAIL lines above."
   exit 1
+fi
+if [ -n "$empty_pages" ]; then
+  echo "NOTE: no inventory left for:$empty_pages"
+  echo "      The healthy pages were built and checked. Pause those ad groups."
 fi
 echo "Built and checked. Nothing committed."
 echo "Next:  git add -A && git commit   then push (Render deploys main)."

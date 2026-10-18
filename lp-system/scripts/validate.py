@@ -78,6 +78,9 @@ def has_future_sailing(row, today):
 def provenance_ok(row, whitelist):
     if UNVERIFIED_MARK in row.get("notes", "").upper():
         return False
+    # mirror of generate.py: a row the scheduled refresh froze is not publishable
+    if row.get("auto_status", "").strip().startswith("frozen"):
+        return False
     return source_ok(row.get("source", ""), whitelist)
 
 

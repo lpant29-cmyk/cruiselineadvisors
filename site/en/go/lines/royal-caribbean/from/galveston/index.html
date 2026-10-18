@@ -631,8 +631,8 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 const PAGE = {"type": "combo", "filter": "royal-caribbean-galveston", "h1": "Royal Caribbean Cruises from Galveston", "line": "royal-caribbean", "port": "galveston", "lineLabel": "Royal Caribbean", "portLabel": "Galveston TX"};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-const pricesCheckedOn = "October 16";
-const STAMP_MIXED = false;
+const pricesCheckedOn = "October 18";
+const STAMP_MIXED = true;
 const H1_VARIANTS = {"port": "Royal Caribbean Galveston Cruise Port", "outof": "Royal Caribbean Cruises Out of Galveston", "schedule": "Royal Caribbean Galveston Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Galveston, Texas", "icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "mariner-of-the-seas": "Mariner of the Seas Cruises from Galveston", "mariner": "Mariner of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "4day": "4-Day Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "5day": "5-Day Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "6day": "6-Day Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "7day": "7-Day Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "8day": "8-Day Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "9day": "9-Day Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston", "10day": "10-Day Royal Caribbean Cruises from Galveston"};
 const SHIP_SLUGS = {"icon-of-the-seas": "s001", "icon": "s001", "liberty-of-the-seas": "s017", "liberty": "s017", "mariner-of-the-seas": "s016", "mariner": "s016", "symphony-of-the-seas": "s018", "symphony": "s018"};
 const H1_BASE = "Royal Caribbean Cruises from Galveston";
@@ -895,7 +895,7 @@ const ITINERARIES = [
    "2027-11": 472,
    "2027-12": 472,
    "2028-01": 475,
-   "2028-02": 579,
+   "2028-02": 598,
    "2028-03": 668,
    "2028-04": 622
   },
@@ -983,7 +983,7 @@ const ITINERARIES = [
   "prices": {
    "default": 395,
    "2026-11": 640,
-   "2026-12": 776,
+   "2026-12": 805,
    "2027-01": 395,
    "2027-02": 502,
    "2027-03": 493,
@@ -1059,8 +1059,8 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 557,
-   "2026-10": 557
+   "default": 498,
+   "2026-10": 498
   },
   "noPrice": false,
   "days": [
@@ -1356,75 +1356,6 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0005",
-  "name": "5-Night Western Caribbean",
-  "ship": "Mariner of the Seas",
-  "shipId": "s016",
-  "nights": 5,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2026-10"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 740,
-   "2026-10": 740
-  },
-  "noPrice": false,
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "3:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "costa-maya",
-    "arr": "11:59 AM",
-    "dep": "7:00 PM",
-    "note": ""
-   },
-   {
-    "n": 4,
-    "p": "cozumel",
-    "arr": "7:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 5,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 6,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
-   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
-   "w": 800,
-   "h": 450
-  },
-  "detailUrl": "/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/"
- },
- {
   "id": "i0013",
   "name": "6-Night Western Caribbean (Roatan)",
   "ship": "Liberty of the Seas",
@@ -1495,10 +1426,10 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
-   "alt": "A cruise ship seen from directly overhead, under way on deep blue open ocean with sunlight rippling across the water",
+   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
+   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
    "w": 800,
-   "h": 449
+   "h": 450
   }
  },
  {
@@ -1563,10 +1494,10 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-docked-card.webp",
-   "alt": "Overhead view of a cruise ship tied up alongside a concrete pier, with its pools, funnel and lifeboat decks laid out below",
+   "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
+   "alt": "A cruise ship seen from directly overhead, under way on deep blue open ocean with sunlight rippling across the water",
    "w": 800,
-   "h": 600
+   "h": 449
   }
  },
  {
@@ -1666,8 +1597,8 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-balcony-card.webp",
-   "alt": "Looking forward along a ship's open teak promenade deck at dusk, past the rail to calm water and a fading sunset",
+   "src": "/img/lp/ship-generic/ship-docked-card.webp",
+   "alt": "Overhead view of a cruise ship tied up alongside a concrete pier, with its pools, funnel and lifeboat decks laid out below",
    "w": 800,
    "h": 600
   }
@@ -1758,8 +1689,8 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-decks-card.webp",
-   "alt": "A ship's pool deck at twilight, its long pool and hot tubs lit blue beneath a floodlit funnel and strings of deck lights",
+   "src": "/img/lp/ship-generic/ship-balcony-card.webp",
+   "alt": "Looking forward along a ship's open teak promenade deck at dusk, past the rail to calm water and a fading sunset",
    "w": 800,
    "h": 600
   }
@@ -1854,8 +1785,8 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-foredeck-card.webp",
-   "alt": "Looking down over a ship's foredeck and rows of empty loungers toward a flat grey sea under a low bank of cloud",
+   "src": "/img/lp/ship-generic/ship-decks-card.webp",
+   "alt": "A ship's pool deck at twilight, its long pool and hot tubs lit blue beneath a floodlit funnel and strings of deck lights",
    "w": 800,
    "h": 600
   }
@@ -2042,10 +1973,10 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/deck-scene-card.webp",
-   "alt": "Looking down on a ship's aft pool deck at dusk, with hot tubs, stacked loungers and the wake trailing behind",
+   "src": "/img/lp/ship-generic/ship-foredeck-card.webp",
+   "alt": "Looking down over a ship's foredeck and rows of empty loungers toward a flat grey sea under a low bank of cloud",
    "w": 800,
-   "h": 1036
+   "h": 600
   }
  }
 ];
