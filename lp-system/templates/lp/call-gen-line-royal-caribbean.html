@@ -361,7 +361,10 @@ function renderDeals(){
          <p class="stamp">Priced by phone for your dates and cabin</p>`;
     return `
     <article class="scard">
-      <div class="imgbox">${d.img}</div>
+      <div class="imgbox">${d.img && d.img.src
+        ? `<img src="${d.img.src}" alt="${(d.img.alt || '').replace(/"/g, '&quot;')}"${
+            d.img.w ? ` width="${d.img.w}" height="${d.img.h}"` : ''} loading="lazy" decoding="async">`
+        : ''}</div>
       <div class="b">
         <h3>${d.name}</h3>
         <p class="meta">${d.meta}</p>

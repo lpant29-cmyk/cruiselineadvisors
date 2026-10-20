@@ -346,7 +346,12 @@ const DEALS = [
     "months": "2027-08;2027-09;2027-10",
     "from": 1169,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/dest/western-caribbean-card.webp",
+      "alt": "Turquoise waves breaking onto a sandy Caribbean beach near Cancun, Mexico",
+      "w": 800,
+      "h": 534
+    }
   },
   {
     "name": "4-Night Western Caribbean",
@@ -355,7 +360,12 @@ const DEALS = [
     "months": "2026-10",
     "from": 349,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/ship-generic/ship-bow-card.webp",
+      "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
+      "w": 800,
+      "h": 1067
+    }
   },
   {
     "name": "5-Night Western Caribbean",
@@ -364,7 +374,12 @@ const DEALS = [
     "months": "year-round",
     "from": 360,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/dest/western-caribbean-card.webp",
+      "alt": "Turquoise waves breaking onto a sandy Caribbean beach near Cancun, Mexico",
+      "w": 800,
+      "h": 534
+    }
   },
   {
     "name": "4-Night Western Caribbean",
@@ -373,7 +388,12 @@ const DEALS = [
     "months": "year-round",
     "from": 395,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/ship-generic/ship-aerial-card.webp",
+      "alt": "Looking down from high on a ship at its bow and forward decks, with crew on the foredeck and deep blue open water alongside",
+      "w": 800,
+      "h": 1067
+    }
   },
   {
     "name": "7-Night Western Caribbean",
@@ -382,7 +402,12 @@ const DEALS = [
     "months": "2026-11;2026-12;2027-01;2027-02;2027-03;2027-04",
     "from": 607,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/dest/western-caribbean-card.webp",
+      "alt": "Turquoise waves breaking onto a sandy Caribbean beach near Cancun, Mexico",
+      "w": 800,
+      "h": 534
+    }
   },
   {
     "name": "6-Night Western Caribbean",
@@ -391,7 +416,12 @@ const DEALS = [
     "months": "2027-05;2027-06;2027-07",
     "from": 659,
     "stamp": "2026-10-20",
-    "img": "asset:western-caribbean"
+    "img": {
+      "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
+      "alt": "A cruise ship seen from directly overhead, under way on deep blue open ocean with sunlight rippling across the water",
+      "w": 800,
+      "h": 449
+    }
   }
 ];
 const OFFERS = [
@@ -505,7 +535,10 @@ function renderDeals(){
          <p class="stamp">Priced by phone for your dates and cabin</p>`;
     return `
     <article class="scard">
-      <div class="imgbox">${d.img}</div>
+      <div class="imgbox">${d.img && d.img.src
+        ? `<img src="${d.img.src}" alt="${(d.img.alt || '').replace(/"/g, '&quot;')}"${
+            d.img.w ? ` width="${d.img.w}" height="${d.img.h}"` : ''} loading="lazy" decoding="async">`
+        : ''}</div>
       <div class="b">
         <h3>${d.name}</h3>
         <p class="meta">${d.meta}</p>
