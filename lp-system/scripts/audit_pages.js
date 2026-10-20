@@ -124,7 +124,7 @@ const audit = (maxAgeDays) => {
 (async () => {
   const [outDir, ...pairs] = process.argv.slice(2);
   const browser = await puppeteer.launch({
-    executablePath: CHROME, headless: 'new',
+    executablePath: CHROME, headless: 'new', protocolTimeout: 180000,
     args: ['--no-sandbox', '--disable-gpu', '--hide-scrollbars'],
   });
   const results = [];
@@ -139,7 +139,25 @@ const audit = (maxAgeDays) => {
       await page.setViewport({ width: vp.width, height: vp.height, isMobile: vp.mobile, hasTouch: vp.mobile,
         deviceScaleFactor: 1 });
       await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });
-      await new Promise((r) => setTimeout(r, 600));
+      // Scroll the whole page first: loading="lazy" images below the fold are
+      // not fetched otherwise, so the screenshot showed empty frames on cards
+      // that are perfectly fine, which is a false defect in a design review.
+      await page.evaluate(async () => {
+        const step = window.innerHeight;
+        const maxY = Math.min(document.body.scrollHeight, 40000);
+        for (let y = 0; y < maxY; y += step) {
+          window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60));
+        }
+        window.scrollTo(0, 0);
+      });
+      // Bounded wait: an image that never re-enters the viewport would otherwise
+      // never settle and the whole run would hang on the protocol timeout.
+      await page.evaluate(() => Promise.race([
+        Promise.all([...document.images].filter((i) => !i.complete)
+          .map((i) => new Promise((r) => { i.onload = i.onerror = r; }))),
+        new Promise((r) => setTimeout(r, 4000)),
+      ]));
+      await new Promise((r) => setTimeout(r, 500));
       const data = await page.evaluate(audit, MAX_AGE_DAYS);
       // settle each image with a HEAD request against the same origin
       const base = new URL(url);

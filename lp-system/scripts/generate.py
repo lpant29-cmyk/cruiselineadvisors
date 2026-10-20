@@ -1349,6 +1349,16 @@ def bake(page, reg, today, used):
     # Ship pages set line + ship only: their intent spans ports/destinations
     # (deployments move), so port/dest stay honestly empty.
     line_slug, port_slug, dest_slug = url_facets(page["url"])
+    # A line-level URL (/go/lines/{line}/) carries no port segment, so port_slug
+    # came back empty and every port asset and port-guide panel silently fell
+    # back to a labelled grey frame: side by side with the Galveston page it was
+    # missing the terminal photograph and one whole guide tab. When every sailing
+    # on the page departs the same port, that IS the page's port, so derive it.
+    if not port_slug and deals:
+        dp = {(d.get("port_slug") or "").strip() for d in deals}
+        dp.discard("")
+        if len(dp) == 1:
+            port_slug = dp.pop()
     ship_slug = ""
     if page["page_type"] == "itinerary" and deals:
         t0 = targets_of(deals[0])
