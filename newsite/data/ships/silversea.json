@@ -1,0 +1,121 @@
+{
+  "line": "silversea",
+  "roster_source": "https://www.silversea.com/ships.html",
+  "specs_source": "https://www.silversea.com/ships.html",
+  "verified": "2026-10-20",
+  "ships": [
+    {
+      "name": "Silver Dawn",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 596,
+      "features": [],
+      "notes": "411 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Moon",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 596,
+      "features": [],
+      "notes": "411 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Muse",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 632,
+      "features": [],
+      "notes": "415 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Nova",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 728,
+      "features": [],
+      "notes": "544 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Ray",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 728,
+      "features": [],
+      "notes": "544 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Shadow",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 392,
+      "features": [],
+      "notes": "302 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Spirit",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 636,
+      "features": [],
+      "notes": "415 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Whisper",
+      "class": "Classic",
+      "year": null,
+      "tonnage": null,
+      "guests": 392,
+      "features": [],
+      "notes": "302 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Cloud",
+      "class": "Expedition",
+      "year": null,
+      "tonnage": null,
+      "guests": 254,
+      "features": [],
+      "notes": "212 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Endeavour",
+      "class": "Expedition",
+      "year": null,
+      "tonnage": null,
+      "guests": 220,
+      "features": [],
+      "notes": "207 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Origin",
+      "class": "Expedition",
+      "year": null,
+      "tonnage": null,
+      "guests": 100,
+      "features": [],
+      "notes": "90 crew, per the line's ships page."
+    },
+    {
+      "name": "Silver Wind",
+      "class": "Expedition",
+      "year": null,
+      "tonnage": null,
+      "guests": 274,
+      "features": [],
+      "notes": "239 crew, per the line's ships page."
+    }
+  ],
+  "needs_manual": [
+    "year",
+    "tonnage"
+  ],
+  "flag": "Twelve ships, eight Classic and four Expedition, matching the fleet size the company page states. Silversea publishes guests and crew but not year or tonnage."
+}

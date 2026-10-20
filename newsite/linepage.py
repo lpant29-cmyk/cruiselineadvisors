@@ -371,6 +371,12 @@ def rich_sections(lang, slug):
     if hp:
         cards = "".join(_port_card(x) for x in hp)
         ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b></p><div class="port-grid">{cards}</div>'
+    elif not _gap(it.get("us_departure_note")):
+        # "This line has no US departure port" is a FACT, and rendering it as "Not yet verified"
+        # would hide a verified answer behind a gap. Costa is the case: a visitor searching for a
+        # Costa cruise from a US port needs the real answer, not silence.
+        ports_html = (f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> '
+                      f'{it["us_departure_note"]}</p>')
     else:
         ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> <span class="cmp-gap">{GAP[lang]}</span></p>'
     out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>{ports_html}'); pres.append("sails")

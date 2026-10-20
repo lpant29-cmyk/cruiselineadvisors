@@ -39,6 +39,28 @@ LINES = [
      "cat": {"en": "Short getaways", "es": "Escapadas cortas"},
      "tag": {"en": "Laid-back, casual short getaways.",
              "es": "Escapadas cortas, informales y relajadas."}},
+    # Added 2026-10-20. Appended rather than slotted in by prominence so the existing eight keep
+    # their order on the hub and home grids; reorder here if the shopfront should lead differently.
+    {"slug": "norwegian", "emo": "🛳️", "name": "Norwegian",
+     "cat": {"en": "Big-ship flexible", "es": "Flexible en barco grande"},
+     "tag": {"en": "No fixed dining times, no formal nights, and 15 US departure ports.",
+             "es": "Sin horarios fijos de comida, sin noches formales, y 15 puertos de salida en EE.UU."}},
+    {"slug": "disney", "emo": "🏰", "name": "Disney",
+     "cat": {"en": "Family storytelling", "es": "Historias en familia"},
+     "tag": {"en": "Family-first ships built around storytelling and children's programming.",
+             "es": "Barcos para familias, construidos en torno a las historias y los programas infantiles."}},
+    {"slug": "virgin-voyages", "emo": "🍸", "name": "Virgin Voyages",
+     "cat": {"en": "Adults only", "es": "Solo adultos"},
+     "tag": {"en": "Adults-only ships with the tips, the wifi and the restaurants in the fare.",
+             "es": "Barcos solo para adultos con propinas, wifi y restaurantes incluidos en la tarifa."}},
+    {"slug": "silversea", "emo": "✨", "name": "Silversea",
+     "cat": {"en": "Ultra luxury", "es": "Ultra lujo"},
+     "tag": {"en": "Small all-inclusive ships, classic voyages and expedition sailings.",
+             "es": "Barcos pequeños todo incluido, travesías clásicas y expediciones."}},
+    {"slug": "costa", "emo": "🏛️", "name": "Costa",
+     "cat": {"en": "Italian style", "es": "Estilo italiano"},
+     "tag": {"en": "Italian-style ships sailing Europe and Asia, with no US departure port.",
+             "es": "Barcos de estilo italiano por Europa y Asia, sin puerto de salida en EE.UU."}},
 ]
 
 DESTINATIONS = [

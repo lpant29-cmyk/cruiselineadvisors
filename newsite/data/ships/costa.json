@@ -1,0 +1,87 @@
+{
+  "line": "costa",
+  "roster_source": "https://www.costacruises.com/fleet/",
+  "specs_source": null,
+  "verified": "2026-10-20",
+  "ships": [
+    {
+      "name": "Costa Deliziosa",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Favolosa",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Firenze",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Fortuna",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Serena",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Smeralda",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Toscana",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Costa Venezia",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    }
+  ],
+  "needs_manual": [
+    "year",
+    "tonnage",
+    "guests",
+    "class"
+  ],
+  "flag": "Eight ships, taken from the fleet pages that exist under costacruises.com/fleet/. Costa's fleet index did not load for us, so this may not be the complete current roster. No specifications published on the pages we reached."
+}

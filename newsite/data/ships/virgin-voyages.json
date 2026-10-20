@@ -1,0 +1,66 @@
+{
+  "line": "virgin-voyages",
+  "roster_source": "https://www.virginvoyages.com/ships",
+  "specs_source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+  "verified": "2026-10-20",
+  "ships": [
+    {
+      "name": "Scarlet Lady",
+      "class": "Lady",
+      "year": 2020,
+      "tonnage": null,
+      "guests": 2770,
+      "features": [
+        "The Manor",
+        "Richard's Rooftop",
+        "Red Room theatre"
+      ],
+      "notes": "Delivered 14 February 2020. First US sailing 6 October 2021. 1,290 cabins and 102 RockStar Quarters. Guests = max Sailors, a fleet-wide figure from the line's media fact sheet, not a per-ship published capacity."
+    },
+    {
+      "name": "Valiant Lady",
+      "class": "Lady",
+      "year": 2022,
+      "tonnage": null,
+      "guests": 2770,
+      "features": [
+        "The Manor",
+        "Richard's Rooftop",
+        "Red Room theatre"
+      ],
+      "notes": "First voyage from Barcelona 15 May 2022. 1,330 cabins and 78 RockStar Quarters. Sails from PortMiami. Guests = fleet-wide max Sailors figure."
+    },
+    {
+      "name": "Resilient Lady",
+      "class": "Lady",
+      "year": 2023,
+      "tonnage": null,
+      "guests": 2770,
+      "features": [
+        "The Manor",
+        "Richard's Rooftop",
+        "Red Room theatre"
+      ],
+      "notes": "Launched 14 May 2023 from Athens. 1,330 cabins and 78 RockStar Quarters. Guests = fleet-wide max Sailors figure."
+    },
+    {
+      "name": "Brilliant Lady",
+      "class": "Lady",
+      "year": 2025,
+      "tonnage": null,
+      "guests": 2770,
+      "features": [
+        "The Manor",
+        "Richard's Rooftop",
+        "Red Room theatre",
+        "Rojo"
+      ],
+      "notes": "Debuted September 2025 from New York City. 1,330 cabins and 78 RockStar Quarters. Guests = fleet-wide max Sailors figure."
+    }
+  ],
+  "needs_manual": [
+    "tonnage",
+    "per-ship guest capacity"
+  ],
+  "flag": "Guest capacity is the fact sheet's fleet-wide 2,770 max Sailors, applied to all four because the line publishes it that way. It is not a per-ship published figure."
+}

@@ -3758,6 +3758,785 @@
       ],
       "last_built": null,
       "seasonal_deployment": "Two-ship fleet with fixed year-round U.S. homeports: Paradise sails from the Port of Palm Beach (Florida) on short Bahamas and Key West getaways; Islander sails from Port Tampa Bay (Florida) on longer Key West, Mexico and Caribbean voyages. No seasonal repositioning between coasts, each ship stays on its homeport program year-round."
+    },
+    {
+      "slug": "disney",
+      "name": "Disney",
+      "legal_name": "Disney Cruise Line",
+      "theme": {
+        "c1": "#0a2a66",
+        "c2": "#1b4fa8",
+        "accent": "#58b0ef",
+        "emoji": "🏰"
+      },
+      "positioning": "family-storytelling",
+      "one_line": "Cruising built around storytelling, with the rotational dining and the children's programming that families book it for.",
+      "last_built": null,
+      "company": {
+        "founded": null,
+        "headquarters": null,
+        "parent": null,
+        "fleet_size": null,
+        "loyalty_program": "Castaway Club",
+        "source": "https://disneycruise.disney.go.com/why-cruise-disney/whats-included/",
+        "verified": "2026-10-20",
+        "_note": "Founding year, headquarters, parent company and published fleet size are not stated on the Disney Cruise Line pages we read. Left as gaps."
+      },
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [],
+        "extra_cost": [],
+        "_note": "Disney's What's Included page is a navigation menu that links to the content rather than carrying it, so we have no itemised list from an official source yet."
+      },
+      "cabins": {
+        "categories": []
+      },
+      "family": {
+        "kids_club_name": "Disney's Oceaneer Club and Oceaneer Lab",
+        "age_bands": "Ages 3 to 10, and children must be fully toilet-trained to check in",
+        "minimum_sailing_age": "6 months on most itineraries; 1 year on Transatlantic, Hawaii, Panama Canal and other select longer itineraries",
+        "source": "https://disneycruise.disney.go.com/contracts-terms-safety/terms-conditions/united-states/",
+        "verified": "2026-10-20",
+        "_note": "Oceaneer age band read from https://disneycruise.disney.go.com/en-au/faq/kids-teens/oceaneer-club-and-lab/, which is Disney's Australian site. Re-verify against the US site before treating the band as a US fact."
+      },
+      "accessibility": {
+        "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
+      },
+      "itineraries": {
+        "home_ports": [],
+        "typical_lengths": [],
+        "regions": []
+      },
+      "editorial": {
+        "_note": "Our own words throughout, never the line's.",
+        "who_its_for": [
+          "Families travelling with young children",
+          "Anyone who wants the children's programming to be the reason they booked",
+          "Multi-generational groups sailing together",
+          "Repeat guests who already know the rotational dining format"
+        ],
+        "who_its_not_for": [
+          "Adults looking for a quiet, child-free sailing",
+          "Travellers who want the lowest possible fare for the nights on board",
+          "Anyone who wants a casino on board"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "School holidays",
+            "detail": "Sailings over the school holidays are the busiest weeks of the year on a family line, and they price accordingly."
+          },
+          {
+            "factor": "Cabin occupancy",
+            "detail": "A family of five needs a cabin that sleeps five, and on any ship those are a small part of the inventory. The constraint is availability, not just fare."
+          },
+          {
+            "factor": "Connecting cabins",
+            "detail": "Two connecting cabins can work out differently from one larger one. Worth pricing both ways for your dates."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "How young can a baby be to sail?",
+          "a": "Disney's US terms set the minimum at 6 months on most itineraries, and 1 year on Transatlantic, Hawaii, Panama Canal and other select longer sailings. Call and we will confirm which rule applies to the exact sailing you are looking at."
+        },
+        {
+          "q": "Are gratuities included in the fare?",
+          "a": "No. Disney's terms list gratuities as excluded from the cruise fare and added to your onboard account, and they can be adjusted on board. We have not yet verified the current per-night amount from an official Disney page, so we show it as a gap rather than guess."
+        },
+        {
+          "q": "Which ships are in the fleet?",
+          "a": "Disney's own fleet page currently names nine: Disney Adventure, Believe, Destiny, Dream, Fantasy, Magic, Treasure, Wish and Wonder. It publishes no tonnage or guest capacity, so our ship pages show those as gaps."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Disney Cruise Line fleet",
+          "url": "https://disneycruise.disney.go.com/ships/",
+          "used_for": "Ship roster"
+        },
+        {
+          "label": "Disney Cruise Line US terms",
+          "url": "https://disneycruise.disney.go.com/contracts-terms-safety/terms-conditions/united-states/",
+          "used_for": "Minimum sailing age"
+        }
+      ]
+    },
+    {
+      "slug": "norwegian",
+      "name": "Norwegian",
+      "legal_name": "Norwegian Cruise Line",
+      "theme": {
+        "c1": "#0a2f5e",
+        "c2": "#15589c",
+        "accent": "#49a8e8",
+        "emoji": "⚓"
+      },
+      "positioning": "big-ship-flexible",
+      "one_line": "Big ships run without fixed dining times or a formal dress code, from more US home ports than almost any other line.",
+      "last_built": null,
+      "company": {
+        "founded": null,
+        "headquarters": null,
+        "parent": null,
+        "fleet_size": "21",
+        "loyalty_program": "Latitudes Rewards",
+        "source": "https://www.ncl.com/cruise-ship",
+        "verified": "2026-10-20",
+        "_note": "Fleet size is a count of the ships Norwegian's own fleet page lists. Founding year, headquarters and parent company are not stated on the pages we read, so they are gaps. Do not fill them from a holding-company figure: Norwegian Cruise Line Holdings reports a combined fleet across three brands, which is not this line's fleet."
+      },
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [],
+        "extra_cost": []
+      },
+      "cabins": {
+        "categories": []
+      },
+      "family": {
+        "kids_club_name": "Splash Academy (ages 3 to 12) and Entourage (ages 13 to 17)",
+        "age_bands": "Splash Academy ages 3 to 12; Entourage ages 13 to 17",
+        "minimum_sailing_age": null,
+        "source": "https://www.ncl.com/faq/what-ages-are-eligible-for-splash-academy-and-entourage-",
+        "verified": "2026-10-20",
+        "_note": "Norwegian's own FAQ sets registration at 3 for Splash Academy and 13 for Entourage. A separate Guppies open-play session is referenced for younger children but the pages conflict on whether drop-off is offered, so we state only the two we verified."
+      },
+      "accessibility": {
+        "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
+      },
+      "itineraries": {
+        "home_ports": [
+          "Boston, Massachusetts",
+          "Galveston, Texas",
+          "Honolulu, Oahu",
+          "Jacksonville, Florida",
+          "Los Angeles, California",
+          "Miami, Florida",
+          "New Orleans, Louisiana",
+          "New York, New York",
+          "Orlando (Port Canaveral), Florida",
+          "Philadelphia, Pennsylvania",
+          "San Diego, California",
+          "San Francisco, California",
+          "Seattle, Washington",
+          "Tampa, Florida",
+          "Whittier, Alaska"
+        ],
+        "typical_lengths": [],
+        "regions": [],
+        "source": "https://www.ncl.com/cruise-ports",
+        "verified": "2026-10-20",
+        "_note": "The 15 ports Norwegian's own Cruise Ports page labels United States. San Juan is also a departure port but the page labels it Puerto Rico, so it is listed separately there and we have not merged it in. Deployment rotates; re-check each season."
+      },
+      "editorial": {
+        "_note": "Our own words throughout, never the line's.",
+        "who_its_for": [
+          "Travellers who do not want an assigned dining time",
+          "Anyone sailing from a port closer to home than Florida",
+          "Groups who want to eat and do different things on the same night",
+          "First-time cruisers who dislike formal nights"
+        ],
+        "who_its_not_for": [
+          "Anyone who wants a fixed table and the same waiter all week",
+          "Travellers who prefer a small ship",
+          "Guests who want everything bundled into one fare with no add-ons to decide on"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Which bundle you take",
+            "detail": "Norwegian sells its drinks, dining, wifi and excursion perks as a package attached to the fare. Whether you take it, and which tier, moves the total more than the cabin does on a short sailing."
+          },
+          {
+            "factor": "The service charge",
+            "detail": "A daily onboard service charge is added per guest and varies by stateroom category. We have not yet verified the current US amount from Norwegian's US page, so we show it as a gap rather than publish a figure from another market."
+          },
+          {
+            "factor": "Home port",
+            "detail": "The same ship and the same week can cost very differently depending on which of 15 US ports you sail from, once you add the flights to get there."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Do I have to eat at a set time?",
+          "a": "No. Norwegian's format has no fixed dining time or assigned table in the main dining rooms. Specialty restaurants are bookable and carry a cover."
+        },
+        {
+          "q": "Which US ports does Norwegian sail from?",
+          "a": "Norwegian's own Cruise Ports page lists 15 US departure ports: Boston, Galveston, Honolulu, Jacksonville, Los Angeles, Miami, New Orleans, New York, Orlando (Port Canaveral), Philadelphia, San Diego, San Francisco, Seattle, Tampa and Whittier. San Juan is also a departure port. Which ships sail from where changes by season."
+        },
+        {
+          "q": "How big are the ships?",
+          "a": "Guest capacity runs from about 1,878 on Norwegian Sun to about 4,218 on Norwegian Escape, at double occupancy. Norwegian does not publish gross tonnage on its ship pages, so we show that as a gap rather than repeat a figure we cannot source."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Norwegian fleet",
+          "url": "https://www.ncl.com/cruise-ship",
+          "used_for": "Ship roster, capacity, build year"
+        },
+        {
+          "label": "Norwegian Cruise Ports",
+          "url": "https://www.ncl.com/cruise-ports",
+          "used_for": "US departure ports"
+        },
+        {
+          "label": "Norwegian youth programmes FAQ",
+          "url": "https://www.ncl.com/faq/what-ages-are-eligible-for-splash-academy-and-entourage-",
+          "used_for": "Kids club age bands"
+        }
+      ]
+    },
+    {
+      "slug": "virgin-voyages",
+      "name": "Virgin Voyages",
+      "legal_name": "Virgin Voyages",
+      "theme": {
+        "c1": "#8a0f2e",
+        "c2": "#c2183f",
+        "accent": "#ff5c7a",
+        "emoji": "🍸"
+      },
+      "positioning": "adults-only",
+      "one_line": "Four ships that take no one under 18, with the tips, the wifi and the restaurants already in the fare.",
+      "last_built": null,
+      "company": {
+        "founded": null,
+        "headquarters": null,
+        "parent": null,
+        "fleet_size": "4",
+        "loyalty_program": null,
+        "source": "https://www.virginvoyages.com/ships",
+        "verified": "2026-10-20",
+        "_note": "Fleet size is stated on the line's own ships page. Founding year, headquarters, parent company and the loyalty programme name are not stated on the ships page, the FAQ or the media fact sheet we read, so they are gaps."
+      },
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Dining at more than 20 eateries",
+            "note": "no specialty-restaurant cover charge",
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "All gratuities",
+            "note": "covered in the voyage fare",
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Wifi",
+            "note": null,
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Essential drinks",
+            "note": "soft drinks, water and drip coffee",
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Unlimited group fitness classes",
+            "note": null,
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Alcoholic and specialty drinks",
+            "note": null,
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Shore excursions",
+            "note": null,
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Spa treatments",
+            "note": null,
+            "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+            "verified": "2026-10-20"
+          }
+        ],
+        "gratuity_per_person_per_day": "Included in the fare",
+        "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+        "verified": "2026-10-20"
+      },
+      "cabins": {
+        "categories": [
+          "XL Sea Terrace",
+          "Sea Terrace",
+          "Sea View",
+          "Insider",
+          "Social Insider",
+          "Solo Insider",
+          "RockStar Quarters"
+        ],
+        "solo_cabins": {
+          "available": "True",
+          "note": "Solo Insider cabins are designed and sold for one traveller",
+          "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+          "verified": "2026-10-20"
+        },
+        "suite_program": {
+          "name": "RockStar Quarters",
+          "tiers": [
+            "Brilliant Suite",
+            "Cheeky Corner Suite",
+            "Seriously Suite",
+            "Sweet Aft Suite",
+            "Gorgeous Suite"
+          ],
+          "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+          "verified": "2026-10-20"
+        },
+        "_note": "86 per cent of cabins have a balcony and 93 per cent have an ocean view, per the line's media fact sheet. Valiant Lady, Resilient Lady and Brilliant Lady each have 1,330 cabins and 78 RockStar Quarters; Scarlet Lady has 1,290 and 102.",
+        "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+        "verified": "2026-10-20"
+      },
+      "family": {
+        "kids_club_name": "None. The ships take no guests under 18, so there is no children's programming on board",
+        "age_bands": "Not applicable, adults only",
+        "minimum_sailing_age": "18. The line states the minimum age to book and sail is 18 years old",
+        "source": "https://www.virginvoyages.com/faq/before-you-sail/pre-voyage-policies",
+        "verified": "2026-10-20"
+      },
+      "accessibility": {
+        "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
+      },
+      "itineraries": {
+        "home_ports": [
+          "Miami, Florida",
+          "New York, New York"
+        ],
+        "typical_lengths": [
+          "4 night",
+          "5 night",
+          "16 night (Panama Canal)"
+        ],
+        "regions": [
+          {
+            "region": "Caribbean",
+            "months": "Winter",
+            "note": "mixed-length sailings from Miami"
+          },
+          {
+            "region": "Mexico",
+            "months": "Winter",
+            "note": "Cozumel, Playa del Carmen, Costa Maya"
+          },
+          {
+            "region": "Bahamas",
+            "months": "Year-round",
+            "note": "the line's Beach Club at Bimini is included on Miami sailings"
+          },
+          {
+            "region": "Mediterranean",
+            "months": "Summer and fall",
+            "note": "from Barcelona"
+          },
+          {
+            "region": "Greek Isles and Adriatic",
+            "months": "Summer",
+            "note": "from Athens"
+          },
+          {
+            "region": "Northern Europe",
+            "months": "Summer",
+            "note": "Iceland, Norway and Amsterdam, from Portsmouth"
+          },
+          {
+            "region": "Bermuda and Canada",
+            "months": "Summer",
+            "note": "from New York"
+          },
+          {
+            "region": "Alaska",
+            "months": "Summer",
+            "note": null
+          },
+          {
+            "region": "Panama Canal",
+            "months": "Repositioning",
+            "note": "a 16-night voyage"
+          }
+        ],
+        "private_destination": {
+          "name": "The Beach Club at Bimini",
+          "location": "The Bahamas",
+          "note": "Included on the line's Miami Caribbean and Mexico itineraries",
+          "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+          "verified": "2026-10-20"
+        },
+        "source": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+        "verified": "2026-10-20",
+        "_note": "US home ports are the two the media fact sheet names as departure points: PortMiami and New York City. The fact sheet describes a 2025 and winter deployment; re-verify each season."
+      },
+      "editorial": {
+        "_note": "Our own words throughout, never the line's.",
+        "who_its_for": [
+          "Adults who want a sailing with no children on board",
+          "Couples and friend groups",
+          "Solo travellers, who have cabins built and priced for one",
+          "Anyone who would rather the tips and the wifi were already paid"
+        ],
+        "who_its_not_for": [
+          "Anyone travelling with children, who cannot sail at all",
+          "Guests who want a traditional formal night",
+          "Travellers who want a large choice of ships and itineraries, since the fleet is four"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "What is already in the fare",
+            "detail": "Tips, wifi, the restaurants and the fitness classes are included, so compare this line against another by total trip cost rather than by fare alone."
+          },
+          {
+            "factor": "Cabin category",
+            "detail": "The gap between an Insider with no window and a Sea Terrace with a balcony is the single biggest decision on these ships, since 86 per cent of cabins have a terrace and the few that do not sell differently."
+          },
+          {
+            "factor": "Sailing from Miami or New York",
+            "detail": "Only two of the four ships are in US waters at any one time, so the date you want may only exist from one coast."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Can children sail?",
+          "a": "No. The line states the minimum age to book and sail is 18 years old, and describes the ships as exclusively adult. There is no children's programming on board."
+        },
+        {
+          "q": "Are tips really included?",
+          "a": "The line's own media fact sheet says all gratuities are covered in the voyage fare, along with dining at more than 20 eateries, wifi, essential drinks and unlimited group fitness classes. Alcohol, specialty drinks, shore excursions and the spa cost extra."
+        },
+        {
+          "q": "Is there a cabin for one person?",
+          "a": "Yes. Solo Insider cabins are designed and priced for a single traveller, which is unusual and worth asking about, because the alternative on most lines is paying a supplement for a double cabin."
+        },
+        {
+          "q": "Which ships sail from the US?",
+          "a": "The fact sheet has Valiant Lady from PortMiami on four- and five-night Caribbean and Mexico itineraries, and Brilliant Lady debuting from New York. Scarlet Lady and Resilient Lady spend part of the year in Europe and return to Miami for the winter. Call and we will confirm which ship is where for your dates."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Virgin Voyages ships",
+          "url": "https://www.virginvoyages.com/ships",
+          "used_for": "Fleet size, ship names"
+        },
+        {
+          "label": "Virgin Voyages media fact sheet",
+          "url": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/Virgin%20Voyages%20Full%20Fact%20Sheet.pdf",
+          "used_for": "Capacity, cabins, inclusions, deployment, Beach Club"
+        },
+        {
+          "label": "Virgin Voyages pre-voyage policies",
+          "url": "https://www.virginvoyages.com/faq/before-you-sail/pre-voyage-policies",
+          "used_for": "Minimum age"
+        }
+      ]
+    },
+    {
+      "slug": "costa",
+      "name": "Costa",
+      "legal_name": "Costa Cruises",
+      "theme": {
+        "c1": "#0b3f6e",
+        "c2": "#1668a4",
+        "accent": "#f2b230",
+        "emoji": "🇮🇹"
+      },
+      "positioning": "italian-style",
+      "one_line": "An Italian-style fleet that sails the Mediterranean, northern Europe and Asia, with no United States departure port.",
+      "last_built": null,
+      "company": {
+        "founded": null,
+        "headquarters": null,
+        "parent": null,
+        "fleet_size": "8",
+        "loyalty_program": "C|Club",
+        "source": "https://www.costacruises.com/c-club.html",
+        "verified": "2026-10-20",
+        "_note": "Fleet size is a count of the ships with a page under costacruises.com/fleet/. Costa's own company page times out for our fetcher, so founding year, headquarters, parent company and its own published fleet size are gaps. Fill them from that page when it loads, not from a third party."
+      },
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [],
+        "extra_cost": []
+      },
+      "cabins": {
+        "categories": []
+      },
+      "family": {
+        "kids_club_name": null,
+        "minimum_sailing_age": null
+      },
+      "accessibility": {
+        "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
+      },
+      "itineraries": {
+        "home_ports": [],
+        "typical_lengths": [],
+        "regions": [],
+        "us_departure_note": "Costa has no United States departure port. Its ships sail from European and Asian home ports, so a Costa cruise from the US means flying to the ship. We have not yet verified the current season's home ports from Costa's own pages.",
+        "verified": "2026-10-20"
+      },
+      "editorial": {
+        "_note": "Our own words throughout, never the line's.",
+        "who_its_for": [
+          "Travellers already going to Europe who want to add a cruise",
+          "Anyone who wants a European rather than an American crowd on board",
+          "Guests comfortable with announcements and service in several languages"
+        ],
+        "who_its_not_for": [
+          "Anyone who wants to drive to the port",
+          "Travellers who want a US-style cruise experience",
+          "Guests who need everything in English"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Getting to the ship",
+            "detail": "With no US home port, the flights are part of the real cost of a Costa cruise and can exceed the cruise fare on a short sailing."
+          },
+          {
+            "factor": "Season",
+            "detail": "Mediterranean sailings are priced very differently in August and in November for the same ship and the same route."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Can I sail Costa from a US port?",
+          "a": "No. Costa has no United States departure port, so a Costa cruise means flying to the ship. If you want an Italian-style ship sailing from the US, call and we will point you at the lines that do."
+        },
+        {
+          "q": "Which ships are in the fleet?",
+          "a": "Eight have a page on Costa's own site: Costa Deliziosa, Favolosa, Firenze, Fortuna, Serena, Smeralda, Toscana and Venezia. Costa publishes no tonnage or guest capacity on those pages, so our ship pages show those as gaps."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Costa fleet",
+          "url": "https://www.costacruises.com/fleet/",
+          "used_for": "Ship roster"
+        },
+        {
+          "label": "Costa C|Club",
+          "url": "https://www.costacruises.com/c-club.html",
+          "used_for": "Loyalty programme name"
+        }
+      ]
+    },
+    {
+      "slug": "silversea",
+      "name": "Silversea",
+      "legal_name": "Silversea Cruises",
+      "theme": {
+        "c1": "#1b2a3a",
+        "c2": "#2f4d6b",
+        "accent": "#c9a227",
+        "emoji": "🥂"
+      },
+      "positioning": "ultra-luxury",
+      "one_line": "Small ships where the fare already covers the drinks, the tips and the wifi, split between classic voyages and expedition sailings.",
+      "last_built": null,
+      "company": {
+        "founded": "1994",
+        "headquarters": "Miami, Florida",
+        "parent": "Royal Caribbean Group",
+        "fleet_size": "12",
+        "loyalty_program": "Venetian Society",
+        "source": "https://www.silversea.com/about-silversea/the-company.html",
+        "verified": "2026-10-20",
+        "_note": "The company page states a fleet of 12, eight Classic and four Expedition, and places the corporate headquarters in Miami alongside Royal Caribbean Group. The Group took a stake in July 2018 and full ownership in July 2020."
+      },
+      "inclusions": {
+        "_refresh": "30 days",
+        "included": [
+          {
+            "item": "Butler service for every suite",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Dining",
+            "note": "up to 6 options and 24-hour in-suite dining, varying by ship",
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "In-suite bar",
+            "note": "stocked with preferred beverages and spirits",
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Wines, spirits and champagne",
+            "note": "including up to 50 wines from the ship's cellar",
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Coffees, teas, sodas and sparkling water",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Onboard gratuities",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Wifi",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Port taxes and fees",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Enrichment lectures and onboard entertainment",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Fitness centre, sauna, steam room and relaxation areas",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Self-service launderettes",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "City centre transportation",
+            "note": "where the destination requires it",
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          }
+        ],
+        "extra_cost": [
+          {
+            "item": "Shore excursions and land experiences",
+            "note": "on the All-Inclusive fare",
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Pre- and post-voyage air, hotel and transfers",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          },
+          {
+            "item": "Spa treatments",
+            "note": null,
+            "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+            "verified": "2026-10-20"
+          }
+        ],
+        "gratuity_per_person_per_day": "Included in the fare",
+        "source": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+        "verified": "2026-10-20",
+        "_note": "These are the All-Inclusive fare's inclusions, which the page states is available on Classic voyages. Silversea sells several fares and what they cover differs, most of all on shore excursions and air. Which fare a sailing is sold under decides this."
+      },
+      "cabins": {
+        "categories": []
+      },
+      "family": {
+        "kids_club_name": null,
+        "minimum_sailing_age": null
+      },
+      "accessibility": {
+        "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
+      },
+      "itineraries": {
+        "home_ports": [],
+        "typical_lengths": [],
+        "regions": []
+      },
+      "editorial": {
+        "_note": "Our own words throughout, never the line's.",
+        "who_its_for": [
+          "Travellers who want a ship measured in hundreds of guests rather than thousands",
+          "Anyone who would rather pay once and not sign for drinks all week",
+          "Guests going somewhere a large ship cannot, on the expedition ships",
+          "Repeat cruisers who have done the big-ship lines"
+        ],
+        "who_its_not_for": [
+          "Families looking for children's programming",
+          "Anyone who wants waterslides, a casino floor and a theatre show every night",
+          "Travellers booking on fare alone, since these are the most expensive ships we cover"
+        ],
+        "cost_drivers": [
+          {
+            "factor": "Which fare the sailing is sold under",
+            "detail": "Silversea sells several fares and the difference between them is mostly whether shore excursions and flights are in or out. Two quotes for the same voyage can be comparing different things."
+          },
+          {
+            "factor": "Classic or expedition",
+            "detail": "The expedition ships carry 100 to 274 guests and go where the classic ships do not. They are priced on where they go, not on what is on board."
+          },
+          {
+            "factor": "Suite category",
+            "detail": "Every cabin is a suite with a butler, so the decision is about size and position rather than whether you get a window."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Are drinks and tips included?",
+          "a": "On the All-Inclusive fare, yes. The line's own fare page lists onboard gratuities, an in-suite bar, unlimited pours of champagne and spirits, up to 50 wines from the ship's cellar, wifi and port taxes. It states that fare is available on Classic voyages."
+        },
+        {
+          "q": "Are shore excursions included?",
+          "a": "It depends which fare the sailing is sold under, and this is the detail that catches people out. On the All-Inclusive fare, excursions are bought separately. Other Silversea fares include them. Call and we will have a partner agency confirm which fare applies to the voyage you are looking at."
+        },
+        {
+          "q": "How big are the ships?",
+          "a": "The classic ships carry 392 to 728 guests and the four expedition ships carry 100 to 274, per the line's own ships page. Silversea publishes crew numbers alongside, which is unusual and tells you more about the service than tonnage would."
+        }
+      ],
+      "sources_master": [
+        {
+          "label": "Silversea, The Company",
+          "url": "https://www.silversea.com/about-silversea/the-company.html",
+          "used_for": "Founded, headquarters, parent, fleet size"
+        },
+        {
+          "label": "Silversea ships",
+          "url": "https://www.silversea.com/ships.html",
+          "used_for": "Ship roster, guests, crew"
+        },
+        {
+          "label": "Silversea All-Inclusive fare",
+          "url": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+          "used_for": "Inclusions"
+        },
+        {
+          "label": "Silversea Venetian Society",
+          "url": "https://www.silversea.com/other-resources/venetian-society/points-choice.html",
+          "used_for": "Loyalty programme"
+        }
+      ]
     }
   ],
   "destinations": [

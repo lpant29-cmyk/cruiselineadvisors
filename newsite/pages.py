@@ -144,10 +144,14 @@ def p_lines_hub(lang):
            "accessibility and timing. Then one call to a specialist who books it." if lang == "en"
            else "Guías honestas y verificadas, barcos clase por clase, qué cubre la tarifa, camarotes, familias, "
                 "accesibilidad y temporada. Luego una llamada a un especialista que lo reserva.")
-    note = ("These eight lines are our first in-depth guides. We cover 36 lines boardable from the Americas, "
-            "call for any line not yet listed." if lang == "en"
-            else "Estas ocho líneas son nuestras primeras guías. Cubrimos 36 líneas desde las Américas, "
-                 "llama por cualquiera que aún no esté listada.")
+    # Derived, not written out: this sentence was hardcoded to "eight" and silently went wrong the
+    # day a ninth guide shipped. The directory count stays a literal because it comes from a
+    # different registry (directory.json), which this page already renders below.
+    n = len(LINES)
+    note = (f"These {n} lines are our first in-depth guides. We cover 36 lines boardable from the "
+            "Americas, call for any line not yet listed." if lang == "en"
+            else f"Estas {n} líneas son nuestras primeras guías. Cubrimos 36 líneas desde las "
+                 "Américas, llama por cualquiera que aún no esté listada.")
     return (phero(lang, kick, h1, sub, _crumb(lang, kick))
             + f'<section class="section"><div class="wrap"><div class="linegrid">{cards}</div>'
               f'<p class="note-line">{note}</p></div></section>'

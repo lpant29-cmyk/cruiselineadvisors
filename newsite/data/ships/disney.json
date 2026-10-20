@@ -1,0 +1,97 @@
+{
+  "line": "disney",
+  "roster_source": "https://disneycruise.disney.go.com/ships/",
+  "specs_source": null,
+  "verified": "2026-10-20",
+  "ships": [
+    {
+      "name": "Disney Adventure",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Believe",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Destiny",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Dream",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Fantasy",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Magic",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Treasure",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Wish",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    },
+    {
+      "name": "Disney Wonder",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": null
+    }
+  ],
+  "needs_manual": [
+    "year",
+    "tonnage",
+    "guests",
+    "class"
+  ],
+  "flag": "Disney's fleet page names the ships and publishes no specifications. Every spec is a gap until sourced from an official Disney fact sheet.",
+  "roster_note": "Nine ships, including Disney Believe, which was not on our original build list."
+}

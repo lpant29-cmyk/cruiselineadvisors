@@ -442,6 +442,130 @@ for _ln, _fld in [("carnival", "gratuities"), ("carnival", "included"),
     LINE_FACTS[_ln][_fld]["verified"] = "2026-09-15"
 
 
+# ── The five lines added 2026-10-20 ───────────────────────────────────────
+# Only cells we actually read at an official source today. Everything else on
+# these five lines stays an honest gap; see the build report for the list.
+# Two deliberate refusals worth keeping in writing:
+#   norwegian/gratuities  the amounts ($25 Haven and suites, $20 Club Balcony
+#       Suite and below) exist, but the only page we could reach stating them is
+#       ncl.com/ca/en/..., the Canadian site. The US path 404s for us. We do not
+#       publish a non-US page's fee as a US fee, so this stays a gap.
+#   disney/gratuities  Disney's terms confirm gratuities are excluded from the
+#       fare and added on board, but no official page we reached gives the
+#       amount. "Excluded, amount unverified" is not a value, so this stays a gap.
+LINE_FACTS["norwegian"]["kids"] = {
+    "v": {"en": "Splash Academy takes ages 3 to 12 and Entourage takes ages 13 to 17; a child must "
+                "be 3 to register for Splash Academy and 13 for Entourage. Splash Academy runs while "
+                "the ship is at sea, not in port or at anchor.",
+          "es": "Splash Academy admite de 3 a 12 años y Entourage de 13 a 17; hay que tener 3 años "
+                "para inscribirse en Splash Academy y 13 en Entourage. Splash Academy funciona "
+                "navegando, no en puerto ni fondeados."},
+    "src": "https://www.ncl.com/faq/what-ages-are-eligible-for-splash-academy-and-entourage-",
+    "verified": "2026-10-20"}
+LINE_FACTS["norwegian"]["loyalty"] = {
+    "v": {"en": "Latitudes Rewards. Guests are enrolled automatically within 48 hours of completing "
+                "a first sailing. Points are not earned on sister brands Oceania and Regent Seven "
+                "Seas, though tier status is honoured across them.",
+          "es": "Latitudes Rewards. La inscripción es automática dentro de las 48 horas del primer "
+                "crucero. No se acumulan puntos en Oceania ni Regent Seven Seas, aunque el nivel sí "
+                "se reconoce entre las marcas."},
+    "src": "https://www.ncl.com/latitudes-rewards", "verified": "2026-10-20"}
+LINE_FACTS["disney"]["kids"] = {
+    "v": {"en": "Minimum sailing age is 6 months on most itineraries, and 1 year on Transatlantic, "
+                "Hawaii, Panama Canal and other select longer itineraries. The Oceaneer Club and "
+                "Oceaneer Lab take ages 3 to 10, and a child must be fully toilet-trained to check in.",
+          "es": "La edad mínima para navegar es 6 meses en la mayoría de itinerarios, y 1 año en "
+                "travesías transatlánticas, Hawái, Canal de Panamá y otros itinerarios largos "
+                "seleccionados. Oceaneer Club y Oceaneer Lab admiten de 3 a 10 años, y el niño debe "
+                "no usar pañal para poder quedarse."},
+    "src": "https://disneycruise.disney.go.com/contracts-terms-safety/terms-conditions/united-states/",
+    "verified": "2026-10-20"}
+LINE_FACTS["disney"]["loyalty"] = {
+    "v": {"en": "Castaway Club. Some member benefits are restricted to guests 18 or 21 and over.",
+          "es": "Castaway Club. Algunos beneficios se limitan a mayores de 18 o 21 años."},
+    "src": "https://disneycruise.disney.go.com/contracts-terms-safety/castaway-club-terms-conditions/",
+    "verified": "2026-10-20"}
+LINE_FACTS["costa"]["loyalty"] = {
+    "v": {"en": "C|Club. Members earn points on each cruise and move up levels; points can expire, "
+                "so a level depends on continuing to sail.",
+          "es": "C|Club. Los socios acumulan puntos en cada crucero y suben de nivel; los puntos "
+                "pueden caducar, así que el nivel depende de seguir navegando."},
+    "src": "https://www.costacruises.com/c-club.html", "verified": "2026-10-20"}
+LINE_FACTS["virgin-voyages"]["gratuities"] = {
+    "v": {"en": "None to pay. The line states all gratuities are covered in the voyage fare.",
+          "es": "No hay que pagarlas. La línea indica que todas las propinas están incluidas en la "
+                "tarifa del viaje."},
+    "src": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/"
+           "Virgin%20Voyages%20Full%20Fact%20Sheet.pdf", "verified": "2026-10-20"}
+LINE_FACTS["virgin-voyages"]["included"] = {
+    "v": {"en": "Dining at more than 20 eateries with no specialty cover charge, all gratuities, "
+                "wifi, essential drinks (soft drinks, water and drip coffee) and unlimited group "
+                "fitness classes. Alcoholic and specialty drinks, shore excursions and the spa are extra.",
+          "es": "Comidas en más de 20 restaurantes sin cargo por especialidad, todas las propinas, "
+                "wifi, bebidas esenciales (refrescos, agua y café de filtro) y clases de fitness en "
+                "grupo ilimitadas. Alcohol y bebidas especiales, excursiones y spa son aparte."},
+    "src": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/"
+           "Virgin%20Voyages%20Full%20Fact%20Sheet.pdf", "verified": "2026-10-20"}
+LINE_FACTS["virgin-voyages"]["wifi"] = {
+    "v": {"en": "Included in the voyage fare. The line's own pages describe it in places as basic "
+                "wifi, so the speed or data tier is not something we can state.",
+          "es": "Incluido en la tarifa. Las propias páginas de la línea lo describen en algunos "
+                "sitios como wifi básico, así que no podemos afirmar la velocidad ni el nivel de datos."},
+    "src": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/"
+           "Virgin%20Voyages%20Full%20Fact%20Sheet.pdf", "verified": "2026-10-20"}
+LINE_FACTS["virgin-voyages"]["kids"] = {
+    "v": {"en": "Children cannot sail. The line states the minimum age to book and sail is 18 years "
+                "old, so there is no kids club, nursery or teen programme on board.",
+          "es": "Los niños no pueden viajar. La línea indica que la edad mínima para reservar y "
+                "navegar es 18 años, así que no hay club infantil, guardería ni programa juvenil."},
+    "src": "https://www.virginvoyages.com/faq/before-you-sail/pre-voyage-policies",
+    "verified": "2026-10-20"}
+LINE_FACTS["virgin-voyages"]["solo"] = {
+    "v": {"en": "Solo Insider cabins are designed and sold for one traveller, so a single guest is "
+                "not automatically paying for a two-person cabin. Availability is limited per ship.",
+          "es": "Los camarotes Solo Insider están diseñados y vendidos para un solo viajero, así que "
+                "no se paga automáticamente por un camarote doble. La disponibilidad es limitada."},
+    "src": "https://www.virginvoyages.com/dam/jcr:059a20a4-67b6-49e4-9c3b-7198d4f76b1d/"
+           "Virgin%20Voyages%20Full%20Fact%20Sheet.pdf", "verified": "2026-10-20"}
+LINE_FACTS["silversea"]["gratuities"] = {
+    "v": {"en": "None to pay on board. The All-Inclusive fare lists onboard gratuities as included. "
+                "Spa gratuities have been excluded under older terms, so confirm for your fare.",
+          "es": "No hay que pagarlas a bordo. La tarifa All-Inclusive incluye las propinas a bordo. "
+                "Las propinas del spa quedaban excluidas en términos anteriores; confírmalo."},
+    "src": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+    "verified": "2026-10-20"}
+LINE_FACTS["silversea"]["included"] = {
+    "v": {"en": "On the All-Inclusive fare: butler service in every suite, dining with 24-hour "
+                "in-suite service, an in-suite bar, wines spirits and champagne, onboard gratuities, "
+                "wifi, port taxes and fees, enrichment lectures and entertainment, the fitness centre "
+                "and sauna, and self-service laundry. Shore excursions, pre- and post-voyage air and "
+                "hotels, and the spa are extra. The line sells several fares and they differ most on "
+                "whether excursions and flights are in, so which fare your sailing is sold under decides it.",
+          "es": "En la tarifa All-Inclusive: mayordomo en cada suite, restaurantes con servicio en "
+                "suite 24 horas, bar en la suite, vinos licores y champán, propinas a bordo, wifi, "
+                "tasas portuarias, conferencias y entretenimiento, gimnasio y sauna, y lavandería de "
+                "autoservicio. Excursiones, vuelos y hoteles pre y post viaje, y el spa son aparte. "
+                "La línea vende varias tarifas y difieren sobre todo en si incluyen excursiones y vuelos."},
+    "src": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+    "verified": "2026-10-20"}
+LINE_FACTS["silversea"]["wifi"] = {
+    "v": {"en": "Included in the All-Inclusive fare. Terms have indicated the tier can vary by suite "
+                "category on the classic ships.",
+          "es": "Incluido en la tarifa All-Inclusive. Los términos han indicado que el nivel puede "
+                "variar según la categoría de suite en los barcos clásicos."},
+    "src": "https://www.silversea.com/best-luxury-cruise-deals/all-inclusive-fare.html",
+    "verified": "2026-10-20"}
+LINE_FACTS["silversea"]["loyalty"] = {
+    "v": {"en": "Venetian Society. Members earn one Venetian Society Day per completed sailing day, "
+                "with status milestones at 1, 15, 50, 100, 250, 350 and 500 days. Since 30 January "
+                "2026 days can be applied across Royal Caribbean Group's three loyalty programmes.",
+          "es": "Venetian Society. Se gana un Venetian Society Day por cada día navegado, con niveles "
+                "a 1, 15, 50, 100, 250, 350 y 500 días. Desde el 30 de enero de 2026 los días se "
+                "pueden aplicar entre los tres programas de Royal Caribbean Group."},
+    "src": "https://www.silversea.com/other-resources/venetian-society/points-choice.html",
+    "verified": "2026-10-20"}
+
+
 def fact_value(slug, key, lang):
     """Rendered value or a visible 'Not yet verified' gap. Never invents."""
     cell = LINE_FACTS.get(slug, {}).get(key)

@@ -1,0 +1,202 @@
+{
+  "line": "norwegian",
+  "roster_source": "https://www.ncl.com/cruise-ship",
+  "specs_source": "https://www.ncl.com/cruise-ship",
+  "verified": "2026-10-20",
+  "ships": [
+    {
+      "name": "Norwegian Aura",
+      "class": null,
+      "year": 2027,
+      "tonnage": null,
+      "guests": 3879,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Bella",
+      "class": null,
+      "year": 2028,
+      "tonnage": null,
+      "guests": 3921,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Bliss",
+      "class": null,
+      "year": 2018,
+      "tonnage": null,
+      "guests": 4010,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Breakaway",
+      "class": null,
+      "year": 2013,
+      "tonnage": null,
+      "guests": 3903,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Dawn",
+      "class": null,
+      "year": 2002,
+      "tonnage": null,
+      "guests": 2290,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Encore",
+      "class": null,
+      "year": 2019,
+      "tonnage": null,
+      "guests": 3958,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Epic",
+      "class": null,
+      "year": 2010,
+      "tonnage": null,
+      "guests": 4070,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Escape",
+      "class": null,
+      "year": 2015,
+      "tonnage": null,
+      "guests": 4218,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Gem",
+      "class": null,
+      "year": 2007,
+      "tonnage": null,
+      "guests": 2388,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Getaway",
+      "class": null,
+      "year": 2014,
+      "tonnage": null,
+      "guests": 3903,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Jade",
+      "class": null,
+      "year": 2006,
+      "tonnage": null,
+      "guests": 2352,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Jewel",
+      "class": null,
+      "year": 2005,
+      "tonnage": null,
+      "guests": 2368,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Joy",
+      "class": null,
+      "year": 2017,
+      "tonnage": null,
+      "guests": 3776,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Luna",
+      "class": null,
+      "year": 2026,
+      "tonnage": null,
+      "guests": 3565,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Pearl",
+      "class": null,
+      "year": 2006,
+      "tonnage": null,
+      "guests": 2344,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Prima",
+      "class": null,
+      "year": 2022,
+      "tonnage": null,
+      "guests": 3195,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Spirit",
+      "class": null,
+      "year": 1998,
+      "tonnage": null,
+      "guests": 1972,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Star",
+      "class": null,
+      "year": 2001,
+      "tonnage": null,
+      "guests": 2298,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Sun",
+      "class": null,
+      "year": 2001,
+      "tonnage": null,
+      "guests": 1878,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Norwegian Viva",
+      "class": null,
+      "year": 2023,
+      "tonnage": null,
+      "guests": 3195,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    },
+    {
+      "name": "Pride of America",
+      "class": null,
+      "year": 2005,
+      "tonnage": null,
+      "guests": 2180,
+      "features": [],
+      "notes": "Guests = double occupancy, per the line's fleet page."
+    }
+  ],
+  "needs_manual": [
+    "tonnage",
+    "class"
+  ],
+  "flag": "TONNAGE DELIBERATELY NULL. ncl.com/cruise-ship shows a column that reads as gross tonnage and is not: it gives Norwegian Bliss 475,519, roughly twice the largest ship afloat. The ship's own page publishes no tonnage at all. Do not import that column."
+}
