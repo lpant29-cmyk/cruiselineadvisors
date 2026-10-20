@@ -40,6 +40,7 @@ Usage:
 
 import argparse
 import csv
+import html as html_mod
 import datetime as dt
 import json
 import os
@@ -739,6 +740,44 @@ def asset_obj(assets, subject_type, slug, variant, used):
     return _register_asset(rows[0][0], rows[0][1], used)
 
 
+# Two image frames in the line template are static markup that no data block
+# fills, so they shipped as literal "IMG SLOT" text and deploy.sh failed the page.
+# They are filled from the generic, brand-neutral registry subjects (no livery and
+# no ship name, per the photo rule), because a line page is about the line and
+# must not imply we hold that line's photography.
+LINE_STATIC_SLOTS = [
+    # (exact placeholder in the template, subject, variant, above the fold?)
+    ('<div class="imgbox">IMG SLOT \u00b7 large cruise ship at sea, generic '
+     '(assets: theme/megaship-hero.webp \u2014 no livery/logo)</div>',
+     "ship-hero", "hero", True),
+    ('<div class="imgbox" id="classImg">IMG SLOT \u00b7 generic ship class photo</div>',
+     "ship-lowangle", "section", False),
+]
+
+
+def fill_static_slots(html, assets, used):
+    """Resolve the line template's static image frames through 10_assets.csv.
+
+    An unresolved subject is left exactly as it is: deploy.sh then fails the page
+    on the remaining IMG SLOT text, which is the behaviour we want. A missing photo
+    should block the page, not be quietly swapped for a different subject.
+    """
+    for placeholder, subject, variant, eager in LINE_STATIC_SLOTS:
+        if placeholder not in html:
+            continue
+        obj = asset_obj(assets, "ship-generic", subject, variant, used)
+        if not obj:
+            continue
+        dim = f' width="{obj["w"]}" height="{obj["h"]}"' if obj.get("w") else ""
+        load = (' loading="eager" fetchpriority="high"' if eager
+                else ' loading="lazy" decoding="async"')
+        img = (f'<img src="{obj["src"]}" alt="{html_mod.escape(obj.get("alt") or "", quote=True)}"'
+               f'{dim}{load}>')
+        keep_id = ' id="classImg"' if 'id="classImg"' in placeholder else ''
+        html = html.replace(placeholder, f'<div class="imgbox"{keep_id}>{img}</div>', 1)
+    return html
+
+
 def asset_pick(assets, subject_type, slug, variant, used, index):
     """Like asset_obj but cycles through ALL registry matches (index mod
     count) so repeated subjects (e.g. Galveston on embark day AND return
@@ -1270,6 +1309,7 @@ def bake(page, reg, today, used):
             "/* ===== END RATES DATA ===== */"
         )
         html = RATES_RE.sub(lambda _: block, html, count=1)
+        html = fill_static_slots(html, assets, used)
         html = re.sub(r'let pricesCheckedOn = "[^"]*";',
                       f'let pricesCheckedOn = "{month_label(newest)}";', html)
     elif is_finder:

@@ -347,17 +347,29 @@ const OFFERS = [
 
 function renderDeals(){
   const grid = document.getElementById('dealGrid');
-  grid.innerHTML = DEALS.map(d => `
+  if(!grid) return;                       // null guard: no element, no throw
+  grid.innerHTML = DEALS.map(d => {
+    // A fare is absent whenever generate.py withheld it at build time (price_ok
+    // failed) or the client fuse withheld it in the browser. Both set from=null.
+    // Reading .toLocaleString() on that threw a TypeError and, per the orphaned
+    // -reference pitfall, killed every script after it on the page.
+    const hasFare = !d.noPrice && d.from != null;
+    const priceRow = hasFare
+      ? `<div class="price"><span class="f">Recently from</span><span class="a">$${d.from.toLocaleString()}</span></div>
+         <p class="stamp">Fare seen ${pricesCheckedOn} · changes daily · promos may lower it</p>`
+      : `<div class="price"><span class="a">Call for current fares</span></div>
+         <p class="stamp">Priced by phone for your dates and cabin</p>`;
+    return `
     <article class="scard">
       <div class="imgbox">${d.img}</div>
       <div class="b">
         <h3>${d.name}</h3>
         <p class="meta">${d.meta}</p>
-        <div class="price"><span class="f">Recently from</span><span class="a">$${d.from.toLocaleString()}</span></div>
-        <p class="stamp">Fare seen ${pricesCheckedOn} · changes daily · promos may lower it</p>
+        ${priceRow}
         <a class="go" href="tel:${PHONE_TEL}">📞 Call for today's fare<small>${PHONE_DISPLAY} · takes ~10 min</small></a>
       </div>
-    </article>`).join('');
+    </article>`;
+  }).join('');
 }
 renderDeals();
 function renderOffers(){
@@ -374,7 +386,21 @@ const CLASSES = {
   quantum:{t:"Quantum & Anthem class — the innovators",d:"Indoor pools, skydiving simulators, glass observation pods — built for variable weather, which is why they own Alaska and the Northeast.",l:["Best for Alaska & cooler routes","Great tech and indoor spaces","Slightly calmer pace than Oasis","Strong shoulder-season value"]},
   voyager:{t:"Voyager & classic ships — the values",d:"The classic big-ship experience at the sharpest prices, often on shorter sailings — ideal for testing whether cruising is your thing.",l:["Lowest lead-in fares in the fleet","Short 3–5 night getaways","Ice shows, rock walls, the classics","Perfect first-cruise budget pick"]}
 };
-function renderClass(k){const c=CLASSES[k];document.getElementById('classTitle').textContent=c.t;document.getElementById('classDesc').textContent=c.d;document.getElementById('classList').innerHTML=c.l.map(x=>`<li>${x}</li>`).join('');document.getElementById('classImg').textContent=`IMG SLOT · ${c.t.split(' — ')[0]}`;}
+function renderClass(k){
+  const c = CLASSES[k]; if(!c) return;
+  const t = document.getElementById('classTitle');
+  const d = document.getElementById('classDesc');
+  const l = document.getElementById('classList');
+  if(t) t.textContent = c.t;
+  if(d) d.textContent = c.d;
+  if(l) l.innerHTML = c.l.map(x => `<li>${x}</li>`).join('');
+  // The old line here reset classImg.textContent to the unresolved-slot
+  // placeholder on every tab click, which wiped out the photograph generate.py
+  // had resolved and put that marker back into the live DOM, where deploy.sh's
+  // guard is meant to catch it. Deliberately not naming the marker literally
+  // here: that guard is a plain substring scan and a comment would trip it.
+  // The panel keeps its one generic, brand-neutral photo.
+}
 document.getElementById('classTabs').addEventListener('click',e=>{if(!e.target.dataset.c)return;document.querySelectorAll('#classTabs .tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');renderClass(e.target.dataset.c);});
 renderClass('icon');
 const links=[...document.querySelectorAll('.anchors a')];

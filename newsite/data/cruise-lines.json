@@ -1059,19 +1059,19 @@
       },
       "itineraries": {
         "home_ports": [
-          "Baltimore, MD",
-          "Galveston, TX",
-          "Jacksonville, FL",
-          "Long Beach (Los Angeles), CA",
-          "Miami, FL",
-          "Mobile, AL",
-          "New Orleans, LA",
-          "New York, NY",
-          "Norfolk, VA",
-          "Port Canaveral (Orlando), FL",
-          "San Francisco, CA",
-          "Seattle, WA",
-          "Tampa, FL"
+          "Baltimore, Maryland",
+          "Galveston, Texas",
+          "Jacksonville, Florida",
+          "Long Beach (Los Angeles), California",
+          "Miami, Florida",
+          "Mobile, Alabama",
+          "New Orleans, Louisiana",
+          "New York, New York",
+          "Norfolk, Virginia",
+          "Port Canaveral (Orlando), Florida",
+          "San Francisco, California",
+          "Seattle, Washington",
+          "Tampa, Florida"
         ],
         "typical_lengths": "2 to 8 nights (most are 3-7 nights)",
         "regions": [
@@ -1116,8 +1116,9 @@
           "location": "",
           "note": "VERIFY"
         },
-        "source": "VERIFY",
-        "verified": "PENDING"
+        "source": "https://www.carnival.com/cruise-from",
+        "verified": "2026-10-20",
+        "_ports_note": "The 13 US ports Carnival's own Cruise From page lists. Deployment rotates by season."
       },
       "policies": {
         "deposit_timing": "VERIFY",
@@ -1952,17 +1953,16 @@
       },
       "itineraries": {
         "home_ports": [
-          "Fort Lauderdale, FL",
-          "Miami, FL",
-          "Orlando (Port Canaveral), FL",
-          "Tampa, FL",
-          "Boston, MA",
-          "Cape Liberty, NJ",
-          "Seattle, WA",
-          "Los Angeles, CA",
-          "Honolulu, HI",
-          "Seward, AK",
-          "Vancouver, BC"
+          "Boston, Massachusetts",
+          "Cape Liberty, New Jersey",
+          "Fort Lauderdale, Florida",
+          "Honolulu, Hawaii",
+          "Los Angeles, California",
+          "Miami, Florida",
+          "Orlando (Port Canaveral), Florida",
+          "Seattle, Washington",
+          "Seward, Alaska",
+          "Tampa, Florida"
         ],
         "typical_lengths": "3 to 14 nights",
         "regions": [
@@ -1997,8 +1997,9 @@
           "location": "",
           "note": "VERIFY"
         },
-        "source": "VERIFY",
-        "verified": "PENDING"
+        "source": "https://www.celebritycruises.com/ports/embarkation-ports",
+        "verified": "2026-10-20",
+        "_ports_note": "The US ports Celebrity's own embarkation-ports page lists. San Juan, Puerto Rico is also an embarkation port there; it is a US territory and the page lists it separately, so it is not merged in. New York and San Diego appear only in that page's Featured Ports menu, not in the embarkation list, so they are left out until confirmed."
       },
       "policies": {
         "deposit_timing": "VERIFY",
@@ -2423,19 +2424,16 @@
       },
       "itineraries": {
         "home_ports": [
-          "Anchorage (Whittier), AK",
-          "Boston, MA",
-          "Fort Lauderdale, FL",
-          "Honolulu, HI",
-          "Los Angeles, CA",
-          "Miami, FL",
-          "New York, NY",
-          "Port Canaveral, FL",
-          "San Diego, CA",
-          "San Francisco, CA",
-          "Seattle, WA",
-          "Vancouver, BC",
-          "Quebec City, QC"
+          "Anchorage (Whittier), Alaska",
+          "Boston, Massachusetts",
+          "Fort Lauderdale, Florida",
+          "Honolulu, Hawaii",
+          "Los Angeles, California",
+          "Miami, Florida",
+          "New York, New York",
+          "Port Canaveral, Florida",
+          "San Francisco, California",
+          "Seattle, Washington"
         ],
         "typical_lengths": "3 to 14 nights, plus longer world voyages",
         "regions": [
@@ -2475,8 +2473,9 @@
           "location": "",
           "note": "VERIFY"
         },
-        "source": "VERIFY",
-        "verified": "PENDING"
+        "source": "https://www.princess.com/en-us/cruise-destinations/departure-ports",
+        "verified": "2026-10-20",
+        "_ports_note": "The 10 US ports Princess's own departure-ports page lists under North America. The page notes Anchorage sailings actually use Whittier, about 90 minutes away."
       },
       "policies": {
         "deposit_timing": "VERIFY",
@@ -2921,7 +2920,8 @@
           "note": "VERIFY"
         },
         "source": "VERIFY",
-        "verified": "PENDING"
+        "verified": "PENDING",
+        "_ports_note": "msccruisesusa.com returns HTTP 401 to our fetcher, with a browser user-agent too. Hard blocked. Needs an operator browser read."
       },
       "policies": {
         "deposit_timing": "VERIFY",
@@ -3805,7 +3805,8 @@
       "itineraries": {
         "home_ports": [],
         "typical_lengths": [],
-        "regions": []
+        "regions": [],
+        "_ports_note": "Disney's own departure-ports pages are navigation shells that name no ports where our fetcher can read them. Needs an operator browser read."
       },
       "editorial": {
         "_note": "Our own words throughout, never the line's.",
@@ -4471,7 +4472,8 @@
       "itineraries": {
         "home_ports": [],
         "typical_lengths": [],
-        "regions": []
+        "regions": [],
+        "_ports_note": "Silversea publishes no US embarkation-port list; its voyages are largely one-way and listed individually. Fort Lauderdale recurs but a homeport list is not published."
       },
       "editorial": {
         "_note": "Our own words throughout, never the line's.",
