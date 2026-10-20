@@ -648,7 +648,11 @@ function routeSVG(days){
   const f=document.getElementById('heroFare');
   if(f&&lo!=null)f.textContent='$'+lo.toLocaleString()+' pp';
   const st=document.getElementById('heroStamp');
-  if(st)st.textContent='fare seen '+pricesCheckedOn+' · call for today\'s fare';
+  /* only stamp the hero when the hero is actually showing a fare: lo is null
+     once the client fuse has withheld this itinerary's month table. */
+  if(st)st.textContent=(lo==null)
+    ? 'call for today\'s fare'
+    : 'fare seen '+pricesCheckedOn+' · call for today\'s fare';
   const intro=document.getElementById('introLine');
   if(intro)intro.textContent=`${PAGE.nights} nights ${PAGE.oneWay?'from':'round-trip from'} ${portOf(DAYS[0].p).short} on ${PAGE.shipName}. Below is the full day-by-day route, the ship in plain terms, and recent from-fares by sail month. The exact price for your date, cabin and current promotions is a ten-minute call.`;
 })();
@@ -732,7 +736,7 @@ function routeSVG(days){
 
 (function(){const el=document.getElementById('incGrid');if(!el)return; /* included vs extras, registry facts only */
   const inFare=[];
-  if(BOOKING.taxes)inFare.push(BOOKING.taxes+' (seen '+pricesCheckedOn+')');
+  if(BOOKING.taxes)inFare.push(BOOKING.taxes+((window.__faresShown&&!window.__faresShown())?'':' (seen '+pricesCheckedOn+')'));
   (BOOKING.kids||'').split(';').map(s=>s.trim()).filter(Boolean).forEach(x=>inFare.push(x));
   if(BOOKING.privateIsland)inFare.push('This route calls at the line\'s private island');
   const cards=[];
@@ -765,7 +769,7 @@ function routeSVG(days){
     return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a></td></tr>`;
   }).join('');
   const note=document.getElementById('fareNote');
-  if(note)note.textContent=`${BOOKING.taxes||''}${BOOKING.taxes?'. ':''}From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.${BOOKING.season?' '+BOOKING.season+'.':''}`;
+  if(note)note.textContent=`${BOOKING.taxes||''}${BOOKING.taxes?'. ':''}`+((window.__faresShown&&!window.__faresShown())?`Fares here are older than we publish, so your exact date is quoted live on the call.`:`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.`)+`${BOOKING.season?' '+BOOKING.season+'.':''}`;
   if(when){
     const sub=document.getElementById('faresSub');
     if(sub){sub.textContent=WHEN_LINES[when];sub.hidden=false;}

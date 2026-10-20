@@ -53,3 +53,18 @@ services:
       - type: redirect
         source: /
         destination: /en/
+
+      # --- departed /go/ sailings -------------------------------------------
+      # A real server-side 301 for a landing page whose every sailing has left
+      # port. generate.py ALSO replaces such a page with a redirecting stub
+      # (see departed_redirect there), because the stub works whether or not
+      # Blueprint sync is honouring this block, and the root rule above is
+      # known not to fire. Belt and braces on purpose: the failure we are
+      # guarding against is an ad group still paying to land people on a
+      # cruise that has sailed.
+      #
+      # Add one entry per retired page and keep the stub as the fallback.
+      # Remove an entry only once the ad groups pointing at it are paused.
+      - type: redirect
+        source: /en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/*
+        destination: /en/go/lines/royal-caribbean/from/galveston/

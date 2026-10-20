@@ -74,19 +74,27 @@ OUT = ROOT / "lp-system" / "out"
 
 ENDPOINT = "https://www.royalcaribbean.com/cruises/graph"
 UA = "CruiseLineAdvisorsBot/1.0 (rate research; +https://cruiselineadvisors.com)"
-SWING_PCT = 25.0
-SWING_HOLDS = True
-# SWING_HOLDS is the operator's call of 2026-10-17: a published value that moves
-# more than SWING_PCT holds the row even when both queries confirm it to the
-# cent. It is the cautious reading and it never ships a number we did not see.
-# The cost is real and worth re-reading before changing it: a genuinely volatile
-# row (i0010's October balcony has swung -32% then +78% in consecutive runs) will
-# be held most runs, so its fares drop to "Fare on request" within three days and
-# it mails on every cycle. Setting this False publishes a big move WHEN AND ONLY
-# WHEN both independent queries agree to the cent, and still reports it. That is
-# what the /rate-update skill means by "a flag means prove it, not hide it" —
-# the second query IS the proof. Flip this one constant to switch; nothing else
-# needs to change.
+# Two thresholds, not one. Operator ruling 2026-10-20, replacing the single
+# 25% hold of 2026-10-17.
+#
+# REPORT_PCT  a move this big is worth telling you about, and publishes.
+# HOLD_PCT    a move this big is not credible even with agreement, and holds.
+#
+# Why it changed: the 25% hold was costing more than it bought. This inventory
+# reprices hard close to departure, which is the line clearing cabins and is
+# completely normal: inside one week i0008's October interior went 557 -> 498
+# -> 349 and i0010's November balcony 1057 -> 1360 -> 975, every step confirmed
+# to the cent by both independent queries. Holding those meant the correct
+# number never published, the stamp never advanced, and the fuse then withheld
+# the fare entirely. The page went call-only on exactly its best-moving
+# sailings while the stale figure stayed live until it timed out.
+#
+# The second query is the proof the 25% rule was asking for, so agreement
+# publishes. HOLD_PCT stays as a ceiling for the case agreement cannot rule
+# out: both queries reading the same upstream mistake, a decimal shift or a
+# currency change, where the number is consistent and still wrong.
+REPORT_PCT = 25.0
+HOLD_PCT = 60.0
 
 QUERY = (
     "query cruiseSearch($filters: String, $sort: CruiseSearchSort, "
@@ -331,10 +339,12 @@ def gate(row, d):
             moves.append((abs(pc), f"{field} {row[field].strip()}"
                                    f"->{round(val)} {pc:+.1f}%"))
 
-    big = [t for mag, t in moves if mag > SWING_PCT]
-    noted = [f"moved more than {SWING_PCT:.0f}%: {t}" for t in big]
-    if SWING_HOLDS:
-        reasons += noted
+    # over HOLD_PCT the row does not publish; between the two it publishes and
+    # is reported. Both lists are built from the same moves.
+    reasons += [f"moved more than {HOLD_PCT:.0f}%, not published: {t}"
+                for mag, t in moves if mag > HOLD_PCT]
+    noted = [f"moved more than {REPORT_PCT:.0f}%: {t}" for mag, t in moves
+             if REPORT_PCT < mag <= HOLD_PCT]
 
     proposed = {
         "sail_months": (row["sail_months"] if row["sail_months"] == "year-round"
@@ -347,8 +357,8 @@ def gate(row, d):
                           else str(round(d["lead_balcony"]))),
     }
     decision = "hold" if reasons else "publish"
-    # a big move that both queries confirmed still gets reported even when it
-    # publishes, so the notification never hides it
+    # a move both queries confirmed still gets reported even when it publishes,
+    # so the notification never hides it
     return decision, reasons or noted, proposed
 
 

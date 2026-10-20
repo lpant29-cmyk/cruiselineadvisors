@@ -673,7 +673,7 @@ function routeSVG(days){
 
 (function(){const el=document.getElementById('incGrid');if(!el)return; /* included vs extras, registry facts only */
   const inFare=[];
-  if(INCLUDED.taxes)inFare.push(INCLUDED.taxes+' (seen '+pricesCheckedOn+')');
+  if(INCLUDED.taxes)inFare.push(INCLUDED.taxes+((window.__faresShown&&!window.__faresShown())?'':' (seen '+pricesCheckedOn+')'));
   (INCLUDED.incDining||[]).forEach(n=>inFare.push(n+' (dining included in the fare)'));
   (INCLUDED.kids||'').split(';').map(s=>s.trim()).filter(Boolean).forEach(x=>inFare.push(x));
   const extras=(INCLUDED.extraDining||[]).map(n=>n+' (specialty dining)');
@@ -826,7 +826,7 @@ function routeSVG(days){
       `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a>`);
   });
   const note=document.getElementById('sailNote');
-  if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call. Deployments change seasonally; specialists see the full live schedule.`;
+  if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+((window.__faresShown&&!window.__faresShown())?`Fares here are older than we publish, so your exact date is quoted live on the call.`:`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.`)+` Deployments change seasonally; specialists see the full live schedule.`;
 })();
 
 (function(){const el=document.getElementById('faqList');if(!el)return; /* FAQ module */

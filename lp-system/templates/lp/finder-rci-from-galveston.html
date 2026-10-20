@@ -860,15 +860,23 @@ function runSearch(scroll=true){
   );
   const grid=document.getElementById('itinGrid');
   const count=document.getElementById('resultCount');
-  count.textContent = list.length ? `${list.length} itinerar${list.length===1?'y':'ies'} · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}` : '';
+  /* the " · seen <date>" clause describes fares, so it is dropped once the
+     client fuse has withheld every one of them (window.__faresShown). */
+  count.textContent = list.length
+    ? `${list.length} itinerar${list.length===1?'y':'ies'}` + (window.__faresShown && !window.__faresShown()
+        ? ' · call for current fares'
+        : ` · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}`)
+    : '';
   /* the stamp moved off the cards (operator, 2026-07-31) and sits here once as
      fine print. If the rendered fares do NOT share one date, STAMP_MIXED is
      baked true and we say so rather than let one date speak for all of them. */
   const fine=document.getElementById('resultsFine');
   if(fine) fine.textContent = list.length
-    ? ((typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
-        ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
-        : `From-fares seen ${pricesCheckedOn} · exact dates priced by phone`)
+    ? ((window.__faresShown && !window.__faresShown())
+        ? 'These fares are older than we are willing to publish, so your exact date is priced live on the call'
+        : (typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
+          ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
+          : `From-fares seen ${pricesCheckedOn} · exact dates priced by phone`)
     : '';
   if(!list.length){
     grid.innerHTML=`<div class="noresults" style="grid-column:1/-1">
@@ -1073,7 +1081,9 @@ function dealSheet(it){ /* row/slide bottom sheet: route, month fares, both CTAs
       <div class="imgbox${it.img&&it.img.src?' has-img':''}">${imgHTML(it.img,it.destLabel)}</div>
       <div class="fb"><h3>${esc(it.name)}</h3>
       <p class="fmeta">${esc(it.ship)} · ${it.nights} nights</p>
-      <p class="fmeta"><b>From $${it.prices.default.toLocaleString()}</b> pp · seen ${pricesCheckedOn}</p></div>
+      ${(it.noPrice||!it.prices||it.prices.default==null)
+        ? `<p class="fmeta"><b>Call for today's fare</b></p>`
+        : `<p class="fmeta"><b>From $${it.prices.default.toLocaleString()}</b> pp · seen ${pricesCheckedOn}</p>`}</div>
     </button>`).join('');
   wrapEl.hidden=false;
 })();

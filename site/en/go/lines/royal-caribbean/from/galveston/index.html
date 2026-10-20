@@ -631,10 +631,10 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 const PAGE = {"type": "combo", "filter": "royal-caribbean-galveston", "h1": "Royal Caribbean Cruises from Galveston", "line": "royal-caribbean", "port": "galveston", "lineLabel": "Royal Caribbean", "portLabel": "Galveston TX"};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-const pricesCheckedOn = "October 18";
-const STAMP_MIXED = true;
-const H1_VARIANTS = {"port": "Royal Caribbean Galveston Cruise Port", "outof": "Royal Caribbean Cruises Out of Galveston", "schedule": "Royal Caribbean Galveston Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Galveston, Texas", "icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "mariner-of-the-seas": "Mariner of the Seas Cruises from Galveston", "mariner": "Mariner of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "4day": "4-Day Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "5day": "5-Day Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "6day": "6-Day Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "7day": "7-Day Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "8day": "8-Day Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "9day": "9-Day Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston", "10day": "10-Day Royal Caribbean Cruises from Galveston"};
-const SHIP_SLUGS = {"icon-of-the-seas": "s001", "icon": "s001", "liberty-of-the-seas": "s017", "liberty": "s017", "mariner-of-the-seas": "s016", "mariner": "s016", "symphony-of-the-seas": "s018", "symphony": "s018"};
+let pricesCheckedOn = "October 20";
+const STAMP_MIXED = false;
+const H1_VARIANTS = {"port": "Royal Caribbean Galveston Cruise Port", "outof": "Royal Caribbean Cruises Out of Galveston", "schedule": "Royal Caribbean Galveston Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Galveston, Texas", "icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "mariner-of-the-seas": "Mariner of the Seas Cruises from Galveston", "mariner": "Mariner of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "4day": "4-Day Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "5day": "5-Day Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "6day": "6-Day Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "7day": "7-Day Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "8day": "8-Day Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "9day": "9-Day Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston", "10day": "10-Day Royal Caribbean Cruises from Galveston"};
+const SHIP_SLUGS = {"icon-of-the-seas": "s001", "icon": "s001", "mariner-of-the-seas": "s016", "mariner": "s016", "liberty-of-the-seas": "s017", "liberty": "s017", "symphony-of-the-seas": "s018", "symphony": "s018"};
 const H1_BASE = "Royal Caribbean Cruises from Galveston";
 const HERO = {"src": "/img/lp/port/galveston-hero.webp", "alt": "Galveston Island Historic Pleasure Pier at sunset, with amusement rides above the Gulf surf", "w": 1600, "h": 1280};
 const KNOW_IMG = {"src": "/img/lp/port/galveston-hero.webp", "alt": "Galveston Island Historic Pleasure Pier at sunset, with amusement rides above the Gulf surf", "w": 1600, "h": 1280};
@@ -675,37 +675,6 @@ const SHIPS = [
   }
  },
  {
-  "id": "s017",
-  "name": "Liberty of the Seas",
-  "cls": "Royal Amplified (class not stated on official page)",
-  "tier": "large",
-  "fit": [
-   "family",
-   "value"
-  ],
-  "high": [
-   "Perfect Storm waterslides with boomerang slide",
-   "Splashaway Bay aqua park",
-   "escape room"
-  ],
-  "family": "Splashaway Bay aimed at younger kids",
-  "seaLine": "A full day on board. Ship time on Liberty of the Seas: Perfect Storm waterslides with boomerang slide, Splashaway Bay aqua park and escape room.",
-  "ds": {
-   "year": 2007,
-   "guests": 3948,
-   "tonnage": 154407,
-   "dineInc": 3,
-   "dineExtra": 2,
-   "famLine": "Splashaway Bay aqua park for families; new Casitas private poolside cabins for adults seeking shade."
-  },
-  "img": {
-   "src": "/img/lp/ship-generic/ship-bow-card.webp",
-   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
-   "w": 800,
-   "h": 1067
-  }
- },
- {
   "id": "s016",
   "name": "Mariner of the Seas",
   "cls": "Voyager class (Royal Amplified)",
@@ -729,6 +698,37 @@ const SHIPS = [
    "dineInc": 1,
    "dineExtra": 4,
    "famLine": "Family-oriented activities and age-appropriate programming across the ship."
+  },
+  "img": {
+   "src": "/img/lp/ship-generic/ship-bow-card.webp",
+   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
+   "w": 800,
+   "h": 1067
+  }
+ },
+ {
+  "id": "s017",
+  "name": "Liberty of the Seas",
+  "cls": "Royal Amplified (class not stated on official page)",
+  "tier": "large",
+  "fit": [
+   "family",
+   "value"
+  ],
+  "high": [
+   "Perfect Storm waterslides with boomerang slide",
+   "Splashaway Bay aqua park",
+   "escape room"
+  ],
+  "family": "Splashaway Bay aimed at younger kids",
+  "seaLine": "A full day on board. Ship time on Liberty of the Seas: Perfect Storm waterslides with boomerang slide, Splashaway Bay aqua park and escape room.",
+  "ds": {
+   "year": 2007,
+   "guests": 3948,
+   "tonnage": 154407,
+   "dineInc": 3,
+   "dineExtra": 2,
+   "famLine": "Splashaway Bay aqua park for families; new Casitas private poolside cabins for adults seeking shade."
   },
   "img": {
    "src": "/img/lp/ship-generic/ship-lowangle-card.webp",
@@ -791,6 +791,7 @@ const ITINERARIES = [
    "2027-10": 1169
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -850,6 +851,68 @@ const ITINERARIES = [
   }
  },
  {
+  "id": "i0008",
+  "name": "4-Night Western Caribbean",
+  "ship": "Mariner of the Seas",
+  "shipId": "s016",
+  "nights": 4,
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
+  "months": [
+   "2026-10"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 349,
+   "2026-10": 349
+  },
+  "noPrice": false,
+  "stamp": "2026-10-20",
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "3:00 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "cozumel",
+    "arr": "7:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 4,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 5,
+    "p": "galveston",
+    "arr": "7:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-hero-card.webp",
+   "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
+   "w": 800,
+   "h": 562
+  }
+ },
+ {
   "id": "i0006",
   "name": "5-Night Western Caribbean",
   "ship": "Liberty of the Seas",
@@ -880,18 +943,18 @@ const ITINERARIES = [
   "featured": false,
   "prices": {
    "default": 360,
-   "2026-11": 443,
-   "2026-12": 443,
+   "2026-11": 403,
+   "2026-12": 403,
    "2027-01": 360,
-   "2027-02": 405,
+   "2027-02": 420,
    "2027-03": 474,
-   "2027-04": 443,
+   "2027-04": 470,
    "2027-05": 644,
    "2027-06": 831,
    "2027-07": 814,
    "2027-08": 510,
    "2027-09": 502,
-   "2027-10": 485,
+   "2027-10": 495,
    "2027-11": 472,
    "2027-12": 472,
    "2028-01": 475,
@@ -900,6 +963,7 @@ const ITINERARIES = [
    "2028-04": 622
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -983,11 +1047,11 @@ const ITINERARIES = [
   "prices": {
    "default": 395,
    "2026-11": 640,
-   "2026-12": 805,
+   "2026-12": 727,
    "2027-01": 395,
    "2027-02": 502,
    "2027-03": 493,
-   "2027-04": 412,
+   "2027-04": 439,
    "2027-05": 605,
    "2027-06": 721,
    "2027-07": 700,
@@ -1002,73 +1066,13 @@ const ITINERARIES = [
    "2028-04": 593
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
     "p": "galveston",
     "arr": "",
     "dep": "4:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "cozumel",
-    "arr": "7:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 4,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 5,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-hero-card.webp",
-   "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
-   "w": 800,
-   "h": 562
-  }
- },
- {
-  "id": "i0008",
-  "name": "4-Night Western Caribbean",
-  "ship": "Mariner of the Seas",
-  "shipId": "s016",
-  "nights": 4,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2026-10"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 498,
-   "2026-10": 498
-  },
-  "noPrice": false,
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "3:00 PM",
     "note": "Embarkation day"
    },
    {
@@ -1116,8 +1120,6 @@ const ITINERARIES = [
   "dest": "western-caribbean",
   "destLabel": "Western Caribbean",
   "months": [
-   "2026-10",
-   "2026-11",
    "2026-12",
    "2027-01",
    "2027-02",
@@ -1127,15 +1129,14 @@ const ITINERARIES = [
   "featured": false,
   "prices": {
    "default": 607,
-   "2026-10": 899,
-   "2026-11": 812,
-   "2026-12": 1273,
+   "2026-12": 1611,
    "2027-01": 620,
    "2027-02": 607,
    "2027-03": 758,
    "2027-04": 608
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1222,6 +1223,7 @@ const ITINERARIES = [
    "2027-07": 1026
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1297,6 +1299,7 @@ const ITINERARIES = [
    "2028-02": 667
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1356,6 +1359,75 @@ const ITINERARIES = [
   }
  },
  {
+  "id": "i0014",
+  "name": "5-Night Western Caribbean Holiday",
+  "ship": "Liberty of the Seas",
+  "shipId": "s017",
+  "nights": 5,
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
+  "months": [
+   "2026-12"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 734,
+   "2026-12": 734
+  },
+  "noPrice": false,
+  "stamp": "2026-10-20",
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "4:00 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "cozumel",
+    "arr": "6:00 PM",
+    "dep": "",
+    "note": "Evening arrival - overnight in port"
+   },
+   {
+    "n": 4,
+    "p": "cozumel",
+    "arr": "",
+    "dep": "5:00 PM",
+    "note": "Overnight continues - full day in port"
+   },
+   {
+    "n": 5,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 6,
+    "p": "galveston",
+    "arr": "7:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
+   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
+   "w": 800,
+   "h": 450
+  }
+ },
+ {
   "id": "i0013",
   "name": "6-Night Western Caribbean (Roatan)",
   "ship": "Liberty of the Seas",
@@ -1374,6 +1446,7 @@ const ITINERARIES = [
    "2028-04": 742
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1426,74 +1499,6 @@ const ITINERARIES = [
    }
   ],
   "img": {
-   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
-   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
-   "w": 800,
-   "h": 450
-  }
- },
- {
-  "id": "i0014",
-  "name": "5-Night Western Caribbean Holiday",
-  "ship": "Liberty of the Seas",
-  "shipId": "s017",
-  "nights": 5,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2026-12"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 811,
-   "2026-12": 811
-  },
-  "noPrice": false,
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "4:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "cozumel",
-    "arr": "6:00 PM",
-    "dep": "",
-    "note": "Evening arrival - overnight in port"
-   },
-   {
-    "n": 4,
-    "p": "cozumel",
-    "arr": "",
-    "dep": "5:00 PM",
-    "note": "Overnight continues - full day in port"
-   },
-   {
-    "n": 5,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 6,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
    "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
    "alt": "A cruise ship seen from directly overhead, under way on deep blue open ocean with sunlight rippling across the water",
    "w": 800,
@@ -1517,6 +1522,7 @@ const ITINERARIES = [
    "2027-08": 982
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1630,6 +1636,7 @@ const ITINERARIES = [
    "2028-04": 1351
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1712,6 +1719,7 @@ const ITINERARIES = [
    "2027-08": 1163
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1812,6 +1820,7 @@ const ITINERARIES = [
    "2027-07": 1238
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -1907,6 +1916,7 @@ const ITINERARIES = [
    "2027-11": 1718
   },
   "noPrice": false,
+  "stamp": "2026-10-20",
   "days": [
    {
     "n": 1,
@@ -2002,6 +2012,91 @@ const OFFERS = [
     "endLabel": "Oct 22"
   }
 ];
+/* ---- CLIENT FUSE ------------------------------------------------------------
+   Injected into every /go/ page that prints a fare. generate.py reads this
+   file and substitutes 3 from PRICE_MAX_AGE_DAYS, so there is one
+   number and one copy of this logic.
+
+   WHY THIS EXISTS
+   price_ok() in generate.py decides what gets printed when the page is BUILT,
+   and for a long time that was the only gate. A deployed page expires nothing
+   by itself: the moment a refresh is missed it keeps serving the same figures
+   under the same stamp, looking exactly as current as the day it was built. On
+   2026-10-20 the live Galveston page was still showing a 4-night interior at
+   557 that the line had repriced to 348.55, and a 5-night sailing that had
+   already left port, because nothing had rebuilt it since the 16th.
+
+   This reads each row's own stamp against the VISITOR's clock, so a page that
+   stops being rebuilt degrades to "Fare on request" on its own rather than
+   going quietly wrong.
+
+   IT CAN ONLY REMOVE A FARE. There is no path here that prints a number the
+   build withheld. It writes to the same fields the templates already use for
+   a missing fare (noPrice / prices / from / a month's i and b), so the
+   fallback copy a visitor sees is copy that was already written and reviewed
+   for that case.
+
+   Runs inside its own IIFE with a guard on every global it touches: a page
+   carries one of these data shapes, never all of them, and a bare reference
+   to a missing one would throw and kill every later script on the page
+   (CLAUDE.md, known pitfall 1).
+   -------------------------------------------------------------------------- */
+(function () {
+  var MAX_AGE = 3;
+  var now = new Date();
+  var live = [];
+  var withheld = 0;
+
+  function stale(s) {
+    if (!s) return false;                        // no stamp, not ours to judge
+    var d = new Date(s + "T00:00:00");
+    if (isNaN(d.getTime())) return false;        // unparseable, leave it alone
+    return Math.floor((now - d) / 86400000) > MAX_AGE;
+  }
+
+  function strip(o) {
+    if (!o || typeof o !== "object") return;
+    if (!stale(o.stamp)) {
+      if (o.stamp) live.push(o.stamp);
+      return;
+    }
+    if (!o.noPrice) withheld++;        // count what THIS pass removed
+    o.noPrice = true;
+    o.prices = {};
+    o.from = null;
+  }
+
+  // the list shapes generate.py emits, one per page type
+  if (typeof ITINERARIES !== "undefined" && Array.isArray(ITINERARIES)) {
+    ITINERARIES.forEach(strip);
+  }
+  if (typeof SAILINGS !== "undefined" && Array.isArray(SAILINGS)) {
+    SAILINGS.forEach(strip);
+  }
+  if (typeof DEALS !== "undefined" && Array.isArray(DEALS)) {
+    DEALS.forEach(strip);
+  }
+
+  // a single-itinerary page carries one STAMP covering its whole month table
+  if (typeof STAMP !== "undefined" && stale(STAMP) &&
+      typeof MONTHS !== "undefined" && Array.isArray(MONTHS)) {
+    MONTHS.forEach(function (m) {
+      if (m) { m.i = null; m.b = null; }
+    });
+    withheld++;
+  }
+
+  // The fine print must not outlive the fares it describes. Rather than blank
+  // the stamp (which leaves a dangling "seen " at every interpolation site),
+  // expose the state and let the four list-level strings ask. Per-card copy
+  // already branches on noPrice / from == null and needs nothing.
+  window.__fareFuse = { withheld: withheld, anyLive: live.length > 0 };
+
+  // the one question the list-level fine print needs to ask
+  window.__faresShown = function () {
+    return !window.__fareFuse || window.__fareFuse.anyLive;
+  };
+})();
 /* ================== END GENERATED DATA ====================== */
 
 const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -2201,15 +2296,23 @@ function runSearch(scroll=true){
   );
   const grid=document.getElementById('itinGrid');
   const count=document.getElementById('resultCount');
-  count.textContent = list.length ? `${list.length} itinerar${list.length===1?'y':'ies'} · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}` : '';
+  /* the " · seen <date>" clause describes fares, so it is dropped once the
+     client fuse has withheld every one of them (window.__faresShown). */
+  count.textContent = list.length
+    ? `${list.length} itinerar${list.length===1?'y':'ies'}` + (window.__faresShown && !window.__faresShown()
+        ? ' · call for current fares'
+        : ` · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}`)
+    : '';
   /* the stamp moved off the cards (operator, 2026-07-31) and sits here once as
      fine print. If the rendered fares do NOT share one date, STAMP_MIXED is
      baked true and we say so rather than let one date speak for all of them. */
   const fine=document.getElementById('resultsFine');
   if(fine) fine.textContent = list.length
-    ? ((typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
-        ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
-        : `From-fares seen ${pricesCheckedOn} · exact dates priced by phone`)
+    ? ((window.__faresShown && !window.__faresShown())
+        ? 'These fares are older than we are willing to publish, so your exact date is priced live on the call'
+        : (typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
+          ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
+          : `From-fares seen ${pricesCheckedOn} · exact dates priced by phone`)
     : '';
   if(!list.length){
     grid.innerHTML=`<div class="noresults" style="grid-column:1/-1">
@@ -2414,7 +2517,9 @@ function dealSheet(it){ /* row/slide bottom sheet: route, month fares, both CTAs
       <div class="imgbox${it.img&&it.img.src?' has-img':''}">${imgHTML(it.img,it.destLabel)}</div>
       <div class="fb"><h3>${esc(it.name)}</h3>
       <p class="fmeta">${esc(it.ship)} · ${it.nights} nights</p>
-      <p class="fmeta"><b>From $${it.prices.default.toLocaleString()}</b> pp · seen ${pricesCheckedOn}</p></div>
+      ${(it.noPrice||!it.prices||it.prices.default==null)
+        ? `<p class="fmeta"><b>Call for today's fare</b></p>`
+        : `<p class="fmeta"><b>From $${it.prices.default.toLocaleString()}</b> pp · seen ${pricesCheckedOn}</p>`}</div>
     </button>`).join('');
   wrapEl.hidden=false;
 })();

@@ -579,8 +579,8 @@ footer a{color:#BDE0E5}
 const PAGE = {"type": "ship", "id": "p008", "h1": "Mariner of the Seas: Cruises, Cabins and What's Onboard", "shipName": "Mariner of the Seas", "cls": "Voyager class (Royal Amplified)", "tier": "large", "line": "royal-caribbean", "ship": "mariner-of-the-seas", "lineLabel": "Royal Caribbean"};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-const STAMP = "2026-10-18";
-const pricesCheckedOn = "October 18";
+const STAMP = "2026-10-20";
+let pricesCheckedOn = "October 20";
 const HERO = {"src": "/img/lp/ship-generic/ship-hero-hero.webp", "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud", "w": 1600, "h": 1125};
 const GLANCE = {"cls": "Voyager class (Royal Amplified)", "year": 2003, "tonnage": 139863, "guests": 3344, "features": ["Royal Escape Room", "FlowRider", "The Perfect Storm", "Laser Tag"], "overview": "A Royal Amplified Voyager-class ship blending signature thrills with an expanded dining and bar lineup.", "whoFor": "Families and groups wanting the FlowRider, twin Perfect Storm waterslides (Cyclone and Typhoon), mini golf and laser tag, plus adults drawn to a varied bar and lounge scene."};
 const INCLUDED = {"taxes": "Taxes and fees included in the listed fare", "deposit": {"rows": [{"len": "1-5 nights", "amt": "$100 pp"}, {"len": "6-9 nights", "amt": "$250 pp"}, {"len": "10-14 nights", "amt": "$450 pp"}, {"len": "15+ nights", "amt": "$500 pp"}], "pay": [{"len": "1-4 nights", "due": "75 days before sailing"}, {"len": "5-14 nights", "due": "90 days before sailing"}, {"len": "15+ nights", "due": "120 days before sailing"}], "prose": "Bermuda sailings always $250 pp. Suite deposits are 10% of the cruise fare or the standard amount, whichever is higher."}, "kids": "Adventure Ocean youth program covers ages 3-17 with separate programs per age group; on ships that carry the Royal Babies & Tots nursery it takes 6-36 month olds for an extra fee", "incDining": ["Main Dining Room"], "extraDining": ["Johnny Rockets", "Playmakers Bar & Arcade", "Jamie's Italian by Jamie Oliver", "Izumi"]};
@@ -668,8 +668,8 @@ const SAILINGS = [
   "months": [
    "2026-10"
   ],
-  "from": 498,
-  "stamp": "2026-10-18",
+  "from": 349,
+  "stamp": "2026-10-20",
   "img": {
    "src": "/img/lp/ship-generic/ship-hero-card.webp",
    "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
@@ -732,6 +732,91 @@ const FAQS = [
  }
 ];
 const OFFERS = [];
+/* ---- CLIENT FUSE ------------------------------------------------------------
+   Injected into every /go/ page that prints a fare. generate.py reads this
+   file and substitutes 3 from PRICE_MAX_AGE_DAYS, so there is one
+   number and one copy of this logic.
+
+   WHY THIS EXISTS
+   price_ok() in generate.py decides what gets printed when the page is BUILT,
+   and for a long time that was the only gate. A deployed page expires nothing
+   by itself: the moment a refresh is missed it keeps serving the same figures
+   under the same stamp, looking exactly as current as the day it was built. On
+   2026-10-20 the live Galveston page was still showing a 4-night interior at
+   557 that the line had repriced to 348.55, and a 5-night sailing that had
+   already left port, because nothing had rebuilt it since the 16th.
+
+   This reads each row's own stamp against the VISITOR's clock, so a page that
+   stops being rebuilt degrades to "Fare on request" on its own rather than
+   going quietly wrong.
+
+   IT CAN ONLY REMOVE A FARE. There is no path here that prints a number the
+   build withheld. It writes to the same fields the templates already use for
+   a missing fare (noPrice / prices / from / a month's i and b), so the
+   fallback copy a visitor sees is copy that was already written and reviewed
+   for that case.
+
+   Runs inside its own IIFE with a guard on every global it touches: a page
+   carries one of these data shapes, never all of them, and a bare reference
+   to a missing one would throw and kill every later script on the page
+   (CLAUDE.md, known pitfall 1).
+   -------------------------------------------------------------------------- */
+(function () {
+  var MAX_AGE = 3;
+  var now = new Date();
+  var live = [];
+  var withheld = 0;
+
+  function stale(s) {
+    if (!s) return false;                        // no stamp, not ours to judge
+    var d = new Date(s + "T00:00:00");
+    if (isNaN(d.getTime())) return false;        // unparseable, leave it alone
+    return Math.floor((now - d) / 86400000) > MAX_AGE;
+  }
+
+  function strip(o) {
+    if (!o || typeof o !== "object") return;
+    if (!stale(o.stamp)) {
+      if (o.stamp) live.push(o.stamp);
+      return;
+    }
+    if (!o.noPrice) withheld++;        // count what THIS pass removed
+    o.noPrice = true;
+    o.prices = {};
+    o.from = null;
+  }
+
+  // the list shapes generate.py emits, one per page type
+  if (typeof ITINERARIES !== "undefined" && Array.isArray(ITINERARIES)) {
+    ITINERARIES.forEach(strip);
+  }
+  if (typeof SAILINGS !== "undefined" && Array.isArray(SAILINGS)) {
+    SAILINGS.forEach(strip);
+  }
+  if (typeof DEALS !== "undefined" && Array.isArray(DEALS)) {
+    DEALS.forEach(strip);
+  }
+
+  // a single-itinerary page carries one STAMP covering its whole month table
+  if (typeof STAMP !== "undefined" && stale(STAMP) &&
+      typeof MONTHS !== "undefined" && Array.isArray(MONTHS)) {
+    MONTHS.forEach(function (m) {
+      if (m) { m.i = null; m.b = null; }
+    });
+    withheld++;
+  }
+
+  // The fine print must not outlive the fares it describes. Rather than blank
+  // the stamp (which leaves a dangling "seen " at every interpolation site),
+  // expose the state and let the four list-level strings ask. Per-card copy
+  // already branches on noPrice / from == null and needs nothing.
+  window.__fareFuse = { withheld: withheld, anyLive: live.length > 0 };
+
+  // the one question the list-level fine print needs to ask
+  window.__faresShown = function () {
+    return !window.__fareFuse || window.__fareFuse.anyLive;
+  };
+})();
 /* ================== END GENERATED DATA ====================== */
 
 const MONTH_NAMES=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -791,7 +876,7 @@ function routeSVG(days){
 
 (function(){const el=document.getElementById('incGrid');if(!el)return; /* included vs extras, registry facts only */
   const inFare=[];
-  if(INCLUDED.taxes)inFare.push(INCLUDED.taxes+' (seen '+pricesCheckedOn+')');
+  if(INCLUDED.taxes)inFare.push(INCLUDED.taxes+((window.__faresShown&&!window.__faresShown())?'':' (seen '+pricesCheckedOn+')'));
   (INCLUDED.incDining||[]).forEach(n=>inFare.push(n+' (dining included in the fare)'));
   (INCLUDED.kids||'').split(';').map(s=>s.trim()).filter(Boolean).forEach(x=>inFare.push(x));
   const extras=(INCLUDED.extraDining||[]).map(n=>n+' (specialty dining)');
@@ -944,7 +1029,7 @@ function routeSVG(days){
       `<a class="btn" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a>`);
   });
   const note=document.getElementById('sailNote');
-  if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call. Deployments change seasonally; specialists see the full live schedule.`;
+  if(note)note.textContent=(INCLUDED.taxes?INCLUDED.taxes+'. ':'')+((window.__faresShown&&!window.__faresShown())?`Fares here are older than we publish, so your exact date is quoted live on the call.`:`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.`)+` Deployments change seasonally; specialists see the full live schedule.`;
 })();
 
 (function(){const el=document.getElementById('faqList');if(!el)return; /* FAQ module */

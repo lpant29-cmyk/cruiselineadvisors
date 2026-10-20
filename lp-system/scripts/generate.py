@@ -58,16 +58,20 @@ def _site_phone():
     """The phone number lives in newsite/config.py and ONLY there (same rule
     as the GTM/Clarity IDs). LP pages inherit it so the site and the ads
     layer can never drift. Per-campaign tracking numbers still override per
-    page via 09_pages.csv tracking_number; env vars override for testing."""
+    page via 09_pages.csv tracking_number; env vars override for testing.
+
+    Also returns SITE_URL, which the departed-page stub needs for its
+    canonical, from the same single source for the same reason."""
     sys.path.insert(0, str(ROOT / "newsite"))
     try:
         import config as site_config
-        return site_config.PHONE_HREF, site_config.PHONE_DISPLAY
+        return (site_config.PHONE_HREF, site_config.PHONE_DISPLAY,
+                site_config.SITE_URL)
     finally:
         sys.path.pop(0)
 
 
-_SITE_TEL, _SITE_DISPLAY = _site_phone()
+_SITE_TEL, _SITE_DISPLAY, SITE_URL = _site_phone()
 # Per-campaign tracking numbers are assigned per page (ADS-LP-BRIEF §8);
 # qa-auditor's placeholder check still runs before any deploy.
 PHONE_TEL = os.environ.get("LP_PHONE_TEL", _SITE_TEL)
@@ -283,6 +287,95 @@ def provenance_ok(row, whitelist):
         return False
     host = (urlparse(src).netloc or "").lower().split(":")[0]
     return any(host == d or host.endswith("." + d) for d in whitelist)
+
+
+def client_fuse():
+    """The browser-side half of the freshness gate, read from its own file.
+
+    price_ok() gates at BUILD time only, so a page that stops being rebuilt
+    keeps serving its fares under their original stamp. _client-fuse.js
+    re-checks each row against the visitor's clock and withholds anything
+    past PRICE_MAX_AGE_DAYS. It can only ever remove a fare. The file
+    carries the full reasoning; this just substitutes the one number so
+    there is a single definition of "too old".
+    """
+    js = (TPL / "_client-fuse.js").read_text(encoding="utf-8")
+    if "__MAX_AGE__" not in js:
+        raise ValueError("_client-fuse.js lost its __MAX_AGE__ placeholder")
+    return js.replace("__MAX_AGE__", str(PRICE_MAX_AGE_DAYS)).rstrip()
+
+
+NO_INVENTORY = "only 0 publishable deals"
+
+_DEPARTED_DISCLOSURE = (
+    "All quotes, availability, bookings and payments are handled by "
+    "independent licensed travel agencies. We do not sell, book or take "
+    "payment for travel. Cruise line and ship names are property of their "
+    "respective owners, used descriptively only; we are not affiliated with "
+    "or endorsed by any cruise line."
+)
+
+
+def all_sailings_departed(page, reg, today):
+    """True when this page HAD rows and every one of them has sailed.
+
+    The distinction matters. A page with no rows because nothing was ever
+    collected, or because its rows are blocked on provenance, is an unfinished
+    page and should stay unbuilt so somebody looks at it. A page whose rows
+    all departed is a finished page with nothing left to say, and it is still
+    taking paid clicks, so it gets replaced rather than abandoned.
+    """
+    flt = page.get("deal_filter", "")
+    matching = [r for r in reg["itins"] if flt in targets_of(r)]
+    return bool(matching) and not any(months_of(r, today) for r in matching)
+
+
+def parent_page_url(page, reg):
+    """The live page one level broader than this one: same line and port.
+
+    Derived from the registry rather than hardcoded, so retiring or renaming
+    the parent cannot leave a redirect pointing at a 404. Returns "" when
+    there is no live parent, and the caller then leaves the page unbuilt.
+    """
+    flt = page.get("deal_filter", "")
+    rows = [r for r in reg["itins"] if flt in targets_of(r)]
+    if not rows:
+        return ""
+    want = {t for r in rows for t in targets_of(r) if t.startswith("combo:")}
+    for kind in ("combo:", "line:"):
+        for cand in reg["pages"]:
+            if (cand["page_id"] != page["page_id"]
+                    and cand.get("status") in BUILDABLE
+                    and cand.get("deal_filter", "").startswith(kind)
+                    and (kind != "combo:" or cand["deal_filter"] in want)):
+                return cand["url"]
+    return ""
+
+
+def departed_redirect(page, target):
+    """Replace a page whose sailings have all gone with a redirect to target.
+
+    Not a true 301: a static host serves what is in the published tree, and we
+    cannot set a status code from here. render.yaml carries the server-side
+    route for that. This is the layer that works regardless, and the reason it
+    has to exist at all is that the host publishes additively and never
+    prunes. A page we merely STOP generating keeps being served byte for byte,
+    which is how a 5-night sailing that left port on 2026-10-17 was still
+    being advertised at $740 three days later.
+    """
+    html = (TPL / "_departed-redirect.html").read_text(encoding="utf-8")
+    for token, value in (("__TITLE__", "That sailing has departed"),
+                         ("__PAGE_ID__", page["page_id"]),
+                         ("__TARGET__", target),
+                         ("__SITE__", SITE_URL),
+                         ("__PHONE_TEL__", PHONE_TEL),
+                         ("__PHONE_DISPLAY__", PHONE_DISPLAY),
+                         ("__DISCLOSURE__", _DEPARTED_DISCLOSURE)):
+        html = html.replace(token, value)
+    left = [t for t in re.findall(r"__[A-Z_]+__", html)]
+    if left:
+        raise ValueError(f"departed stub left placeholders: {sorted(set(left))}")
+    return html
 
 
 def ship_slug_map(deals, reg):
@@ -1173,11 +1266,12 @@ def bake(page, reg, today, used):
             "/* ===== RATES DATA — GENERATED by generate.py, DO NOT HAND-EDIT ===== */\n"
             f"const DEALS = {json.dumps(deal_objs, indent=2)};\n"
             f"const OFFERS = {json.dumps(offer_objs, indent=2)};\n"
+            + client_fuse() + "\n"
             "/* ===== END RATES DATA ===== */"
         )
         html = RATES_RE.sub(lambda _: block, html, count=1)
-        html = re.sub(r'const pricesCheckedOn = "[^"]*";',
-                      f'const pricesCheckedOn = "{month_label(newest)}";', html)
+        html = re.sub(r'let pricesCheckedOn = "[^"]*";',
+                      f'let pricesCheckedOn = "{month_label(newest)}";', html)
     elif is_finder:
         kind, rest = facet_parts(page["deal_filter"])
         itin_objs = []
@@ -1197,6 +1291,9 @@ def bake(page, reg, today, used):
                 "featured": r.get("featured", "").strip() == "yes",
                 "prices": price_map(r) if price_ok(r, today) else {},
                 "noPrice": not price_ok(r, today),
+                # this row's own date_checked, so the client fuse can
+                # withhold THIS card's fare on the visitor's clock
+                "stamp": r["date_checked"],
                 "days": day_objs(r["itin_id"], reg["days"]),
             }
             obj["img"] = itinerary_card_img(
@@ -1255,7 +1352,7 @@ def bake(page, reg, today, used):
             f"const PAGE = {json.dumps(page_obj)};\n"
             f'const PHONE_TEL = "{PHONE_TEL}";\n'
             f'const PHONE_DISPLAY = "{PHONE_DISPLAY}";\n'
-            f'const pricesCheckedOn = "{month_label(newest)}";\n'
+            f'let pricesCheckedOn = "{month_label(newest)}";\n'
             # True when the fare-printing rows do NOT share one date_checked:
             # a single list-level stamp would then overstate freshness, so the
             # template falls back to per-card stamps (qa condition N1).
@@ -1277,6 +1374,7 @@ def bake(page, reg, today, used):
             f"const ITINERARIES = {json.dumps(itin_objs, indent=1)};\n"
             f"const FAQS = {json.dumps(faqs_for(page, deals, reg['faqs']), indent=1)};\n"
             f"const OFFERS = {json.dumps(offer_objs, indent=2)};\n"
+            + client_fuse() + "\n"
             "/* ================== END GENERATED DATA ====================== */"
         )
         html = FINDER_RE.sub(lambda _: block, html, count=1)
@@ -1348,7 +1446,7 @@ def bake(page, reg, today, used):
             f'const PHONE_TEL = "{PHONE_TEL}";\n'
             f'const PHONE_DISPLAY = "{PHONE_DISPLAY}";\n'
             f'const STAMP = "{r["date_checked"]}";\n'
-            f'const pricesCheckedOn = "{month_label(newest)}";\n'
+            f'let pricesCheckedOn = "{month_label(newest)}";\n'
             f"const HERO = {json.dumps(hero)};\n"
             f"const SHIP = {json.dumps(ship, indent=1)};\n"
             f"const DAYS = {json.dumps(days)};\n"
@@ -1358,6 +1456,7 @@ def bake(page, reg, today, used):
             f"const BOOKING = {json.dumps(booking)};\n"
             f"const FAQS = {json.dumps(faqs_for(page, deals, reg['faqs']), indent=1)};\n"
             f"const OFFERS = {json.dumps(offer_objs, indent=2)};\n"
+            + client_fuse() + "\n"
             "/* ================== END GENERATED DATA ====================== */"
         )
         html = ITIN_RE.sub(lambda _: block, html, count=1)
@@ -1458,7 +1557,7 @@ def bake(page, reg, today, used):
             f'const PHONE_TEL = "{PHONE_TEL}";\n'
             f'const PHONE_DISPLAY = "{PHONE_DISPLAY}";\n'
             f'const STAMP = "{newest}";\n'
-            f'const pricesCheckedOn = "{month_label(newest)}";\n'
+            f'let pricesCheckedOn = "{month_label(newest)}";\n'
             f"const HERO = {json.dumps(hero)};\n"
             f"const GLANCE = {json.dumps(glance)};\n"
             f"const INCLUDED = {json.dumps(included)};\n"
@@ -1476,6 +1575,7 @@ def bake(page, reg, today, used):
             f"const PORTS = {json.dumps(ports_const)};\n"
             f"const FAQS = {json.dumps(faqs_for(page, deals, reg['faqs']), indent=1)};\n"
             f"const OFFERS = {json.dumps(offer_objs, indent=2)};\n"
+            + client_fuse() + "\n"
             "/* ================== END GENERATED DATA ====================== */"
         )
         html = SHIP_RE.sub(lambda _: block, html, count=1)
@@ -1578,8 +1678,22 @@ def main():
         try:
             html = bake(page, reg, today, used)
         except ValueError as e:
-            print(f"SKIP: {e}")
-            errors += 1
+            # a page whose rows have ALL departed is replaced with a redirect to
+            # its parent instead of being abandoned mid-campaign: see
+            # departed_redirect() for why abandoning it does not take it down
+            target = (parent_page_url(page, reg)
+                      if NO_INVENTORY in str(e) and all_sailings_departed(page, reg, today)
+                      else "")
+            if not target:
+                print(f"SKIP: {e}")
+                errors += 1
+                continue
+            dest = out_root / page["url"].strip("/") / "index.html"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(departed_redirect(page, target), encoding="utf-8")
+            print(f"DEPARTED: {page['page_id']} -> redirects to {target} "
+                  f"(every sailing has gone; PAUSE ITS ADS)")
+            built += 1
             continue
         dest = out_root / page["url"].strip("/") / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
