@@ -8,15 +8,16 @@ from config import PHONE_HREF
 from data import LINES
 from facts import FACTS, FACT_KEYS, LINE_FACTS, coverage, latest_verified_all
 from badges import verified_stamp
+from cta import ask_advisor
 
 _NAME = {L["slug"]: L["name"] for L in LINES}
 _EMO = {L["slug"]: L["emo"] for L in LINES}
 
 _T = {
-    "en": {"a": "Line A", "b": "Line B", "vs": "vs", "gap": "Not yet verified",
+    "en": {"a": "Line A", "b": "Line B", "vs": "vs", "gap": "",  # filled from ask_advisor() in _payload
            "cta": "These differences add up. Call and we'll sort them for your trip.",
            "call": "Get your options, call now", "flag": "facts verified from official sources"},
-    "es": {"a": "Línea A", "b": "Línea B", "vs": "vs", "gap": "No verificado aún",
+    "es": {"a": "Línea A", "b": "Línea B", "vs": "vs", "gap": "",  # filled from ask_advisor() in _payload
            "cta": "Estas diferencias suman. Llama y las resolvemos para tu viaje.",
            "call": "Ver tus opciones, llama ahora", "flag": "datos verificados de fuentes oficiales"},
 }
@@ -33,7 +34,7 @@ def _payload(lang):
     return {
         "facts": [{"key": f["key"], "label": f["label"][lang], "note": f["note"][lang],
                    "imp": bool(f.get("imp")), "fee": bool(f.get("fee"))} for f in FACTS],
-        "names": _NAME, "vals": vals, "gap": _T[lang]["gap"],
+        "names": _NAME, "vals": vals, "gap": ask_advisor(lang, "compare"),
     }
 
 
@@ -79,7 +80,7 @@ def compare_tool(lang, default_a="royal-caribbean", default_b="carnival"):
   if(!A||!body) return;
   function nm(s){{return D.names[s]||s;}}
   function cell(slug,key){{var c=(D.vals[slug]||{{}})[key]||{{}};
-    if(!c.v) return '<span class="cmp-gap">'+D.gap+'</span>';
+    if(!c.v) return D.gap;
     return c.v;}}
   function render(){{
     var a=A.value,b=B.value,na=nm(a),nb=nm(b),h='';

@@ -9,6 +9,7 @@ bilingual), full ES translation of this content is a flagged follow-up."""
 import json
 import os
 from config import PHONE_HREF, PHONE_DISPLAY
+from cta import ask_advisor
 from ships import ships_for, slugify as ship_slug
 
 _CL = {L["slug"]: L for L in json.load(
@@ -47,11 +48,12 @@ def _gap(v):
 
 
 def _v(v, lang):
+    # An unverified cell prints no value and offers the call instead of dead-ending.
     if _gap(v):
-        return f'<span class="cmp-gap">{GAP[lang]}</span>'
+        return ask_advisor(lang, "line")
     if isinstance(v, list):
         vv = ", ".join(str(x) for x in v if not _gap(x) and not isinstance(x, dict))
-        return vv or f'<span class="cmp-gap">{GAP[lang]}</span>'
+        return vv or ask_advisor(lang, "line")
     return str(v)
 
 
@@ -359,7 +361,8 @@ def rich_sections(lang, slug):
     # ── Accessibility ──
     acc = L.get("accessibility", {})
     note = acc.get("tender_port_note")
-    acc_inner = f'<p class="rsec-sub">{note}</p>' if note and not _gap(note) else f'<p class="rsec-sub cmp-gap">{GAP[lang]}</p>'
+    acc_inner = (f'<p class="rsec-sub">{note}</p>' if note and not _gap(note)
+                 else f'<p class="rsec-sub">{ask_advisor(lang, "access")}</p>')
     out += _sec("cream", "access", lang, acc_inner); pres.append("access")
 
     # ── Where & when ── regions + lengths as cells; home ports as chips (readable for long lists)
@@ -378,7 +381,8 @@ def rich_sections(lang, slug):
         ports_html = (f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> '
                       f'{it["us_departure_note"]}</p>')
     else:
-        ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> <span class="cmp-gap">{GAP[lang]}</span></p>'
+        ports_html = (f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> '
+                      f'{ask_advisor(lang, "ports")}</p>')
     out += _sec("", "sails", lang, f'<div class="glance-grid">{igrid}</div>{ports_html}'); pres.append("sails")
 
     # ── Cost drivers ──

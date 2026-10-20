@@ -5,6 +5,7 @@ only, no prices, real hours, per-line disclaimers, and unverified facts shown as
 import datetime
 from config import PHONE_HREF, PHONE_DISPLAY, HOURS, SINCE_YEAR, BRAND
 from data import LINES, DESTINATIONS
+from cta import ask_advisor
 from facts import FACTS, LINE_FACTS, latest_verified
 from badges import verified_stamp, verified_seal
 from compare import compare_tool, line_compare_hero
@@ -57,7 +58,6 @@ def _crumb(lang, *parts):
 
 
 def facts_table(lang, slug):
-    gap = "Not yet verified" if lang == "en" else "No verificado aún"
     rows = ""
     for f in FACTS:
         cell = LINE_FACTS[slug][f["key"]]
@@ -67,7 +67,8 @@ def facts_table(lang, slug):
             core = f"<b>{val}</b>"
             valhtml = f'<span class="fee">{core}</span>' if f.get("fee") else core
         else:
-            valhtml = f'<span class="cmp-gap">{gap}</span>'
+            # Not verified, so we print no value. The cell offers the call instead.
+            valhtml = ask_advisor(lang, f["key"])
         imp = ' class="imp"' if f.get("imp") else ""
         rows += (f'<tr{imp}><th class="fact">{f["label"][lang]}<small>{f["note"][lang]}</small></th>'
                  f'<td class="cmp-cell">{valhtml}</td></tr>')
@@ -172,8 +173,8 @@ def p_line(lang, slug):
         who_h = "Is it right for you?"
         facts_h = "The facts that cost money"
         facts_sub = ("These are the details that quietly change your final bill and vary by fare, cabin and sailing. "
-                     "We verify each from its source and re-check every 30 days; anything not yet verified is shown "
-                     "as a gap rather than guessed.")
+                     "We verify each from its source and re-check every 30 days. Where we have not verified "
+                     "something we say so and put you through to an advisor, rather than guess at it.")
         disc = (f"We are an independent referral service. We are not affiliated with, sponsored by, endorsed by, "
                 f"authorised by, or an agent of {L['name']}. {L['name']} and its ship names and logos are trademarks "
                 f"of their owner, used here descriptively only.")
@@ -185,8 +186,8 @@ def p_line(lang, slug):
         who_h = "¿Es adecuada para ti?"
         facts_h = "Los datos que cuestan dinero"
         facts_sub = ("Son los detalles que cambian tu factura final y varían por tarifa, camarote y salida. "
-                     "Verificamos cada uno desde su fuente y lo revisamos cada 30 días; lo que aún no está verificado "
-                     "se muestra como un vacío, no se adivina.")
+                     "Verificamos cada uno desde su fuente y lo revisamos cada 30 días. Si no hemos verificado algo, "
+                     "lo decimos y te pasamos con un asesor, en vez de adivinarlo.")
         disc = (f"Somos un servicio de referencia independiente. No estamos afiliados, patrocinados, respaldados, "
                 f"autorizados por, ni somos agentes de {L['name']}. {L['name']} y sus nombres de barcos y logotipos "
                 f"son marcas de su propietario, usadas aquí solo de forma descriptiva.")
@@ -248,7 +249,8 @@ def _num(n):
 
 
 def _spec(label, val, lang, gap):
-    inner = f"<b>{val}</b>" if val not in (None, "") else f'<span class="cmp-gap">{gap}</span>'
+    """gap is kept in the signature for callers; an unfilled spec now offers the call."""
+    inner = f"<b>{val}</b>" if val not in (None, "") else ask_advisor(lang, "spec")
     return f'<div class="glance-cell"><b>{label}</b><span>{inner}</span></div>'
 
 
@@ -294,8 +296,8 @@ def p_ship(lang, line_slug, sslug):
                  "constantly, one call to a specialist confirms exactly what's open for your dates and the best "
                  "rate our partners can offer.")
         specs_h = "The basics, verified"
-        note = ("Every figure here traces to a published source and is re-checked on our normal schedule. Anything "
-                "we haven't confirmed shows as a gap rather than a guess.")
+        note = ("Every figure here traces to a published source and is re-checked on our normal schedule. "
+                "Where the line publishes no figure, we do not invent one; that cell offers a call instead.")
         sisters_h = f"Other {cls} ships" if cls else f"More {L['name']} ships"
         nudge_txt = (f"Want {name} for your dates? A specialist checks live availability and holds the best cabin "
                      "for you, call now.")
@@ -310,8 +312,8 @@ def p_ship(lang, line_slug, sslug):
                  "constantemente, una llamada a un especialista confirma qué hay disponible para tus fechas y la "
                  "mejor tarifa que nuestros socios pueden ofrecer.")
         specs_h = "Los datos, verificados"
-        note = ("Cada cifra proviene de una fuente publicada y se revisa en nuestro calendario habitual. Lo que no "
-                "hemos confirmado se muestra como un vacío, no como una suposición.")
+        note = ("Cada cifra proviene de una fuente publicada y se revisa en nuestro calendario habitual. "
+                "Si la línea no publica una cifra, no la inventamos; esa casilla ofrece una llamada.")
         sisters_h = f"Otros barcos clase {cls}" if cls else f"Más barcos de {L['name']}"
         nudge_txt = (f"¿Quieres {name} para tus fechas? Un especialista revisa la disponibilidad en vivo y te reserva "
                      "el mejor camarote, llama ahora.")

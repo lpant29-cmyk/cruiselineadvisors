@@ -381,20 +381,36 @@ LINE_FACTS["margaritaville-at-sea"]["loyalty"] = {
     "src": "https://www.margaritavilleatsea.com/policies/faq", "verified": "2026-07-18"}
 
 # ── General industry facts (refundable / solo / onboard credit) ──
-# These aren't published as fixed per-line values, they're industry-uniform mechanics. Filled with
-# accurate GENERAL statements (src=None, marked "General") for every line. Truthful, not invented.
+# These aren't published as fixed per-line values, they're industry-uniform mechanics,
+# so each carries the "(General ...)" marker in its own text. Filled for every line that
+# has no line-specific value of its own.
+#
+# RE-READ 2026-10-20. They were stamped 2026-07-18 with src=None, which meant a 90-day
+# window was counting down against nothing: there was no source to re-check. Each now
+# carries the official page we actually read to confirm the mechanic, so the stamp is
+# earned and the next re-check has somewhere to go. The src is internal provenance only,
+# nothing renders it, so citing one line's page on another line's page shows no visitor
+# a wrong attribution. A line that publishes its own value overrides this (see
+# virgin-voyages/solo, set below, which is why Virgin keeps its Solo Insider answer).
 _GENERAL = {
-    "refundable": {"en": "Most lines sell both a refundable-deposit fare and a lower non-refundable-deposit fare; a non-refundable deposit is forfeited if you cancel and change fees can apply. (General, fare types vary by sailing.)",
-                   "es": "La mayoría vende una tarifa con depósito reembolsable y otra más baja no reembolsable; el depósito no reembolsable se pierde al cancelar y pueden aplicarse cargos por cambio. (General, varía por crucero.)"},
-    "solo": {"en": "A single supplement usually applies to solo travellers (roughly the cost of two fares); some ships offer dedicated solo cabins. Availability varies by ship and sailing, an advisor can find the solo-friendly options.",
-             "es": "Suele aplicarse un suplemento individual al viajero solo (aprox. el costo de dos tarifas); algunos barcos tienen camarotes individuales. La disponibilidad varía por barco y crucero, un asesor encuentra las opciones."},
-    "obc": {"en": "Onboard credit comes from promotions or loyalty status, not the base fare. Refundable credit can be withdrawn as cash at the end of the sailing; non-refundable credit must be spent onboard. (General, amounts and terms vary by offer.)",
-            "es": "El crédito a bordo proviene de promociones o del nivel de fidelidad, no de la tarifa base. El reembolsable puede retirarse como efectivo al final; el no reembolsable debe gastarse a bordo. (General, varía por oferta.)"},
+    "refundable": {
+        "v": {"en": "Most lines sell both a refundable-deposit fare and a lower non-refundable-deposit fare. On a non-refundable fare the full deposit is held in penalty if you cancel, although payments beyond the deposit are refunded, and change fees apply to the booking. (General, fare types and penalties vary by line and sailing.)",
+              "es": "La mayoría vende una tarifa con depósito reembolsable y otra más baja no reembolsable. En la no reembolsable el depósito completo se retiene como penalidad si cancelas, aunque los pagos por encima del depósito se devuelven, y se aplican cargos por cambio. (General, varía por línea y crucero.)"},
+        "src": "https://www.royalcaribbean.com/faq/topics/reservation-payment-cancellation-policy"},
+    "solo": {
+        "v": {"en": "A solo traveller in a two-person cabin normally pays a single supplement, roughly the cost of two fares. Some ships have cabins built and sold for one person, where double-occupancy rates do not apply, but they are a small part of the inventory and availability varies by ship and sailing. (General, the supplement and the cabin types vary by line.)",
+              "es": "Un viajero solo en un camarote doble suele pagar un suplemento individual, aproximadamente el costo de dos tarifas. Algunos barcos tienen camarotes construidos y vendidos para una persona, donde no se aplican tarifas de ocupación doble, pero son una parte pequeña del inventario y la disponibilidad varía por barco y crucero. (General, varía por línea.)"},
+        "src": "https://www.ncl.com/staterooms/studio-and-solo"},
+    "obc": {
+        "v": {"en": "Onboard credit comes from a promotion or your loyalty status, not the base fare, and it comes in two kinds. Complimentary credit is non-refundable and has no cash value, so it has to be spent on board. Purchased credit is refundable to you before you leave the ship. Where you hold both, the non-refundable credit is normally spent first, and anything left at the end of the last evening is forfeited. (General, terms vary by line and offer.)",
+              "es": "El crédito a bordo proviene de una promoción o de tu nivel de fidelidad, no de la tarifa base, y hay dos tipos. El crédito de cortesía no es reembolsable y no tiene valor en efectivo, así que hay que gastarlo a bordo. El crédito comprado se te puede reembolsar antes de dejar el barco. Si tienes ambos, primero se gasta el no reembolsable, y lo que quede al final de la última noche se pierde. (General, varía por línea y oferta.)"},
+        "src": "https://www.celebritycruises.com/ways-to-spend-onboard-credit"},
 }
 for _s in LINE_FACTS:
-    for _k, _v in _GENERAL.items():
+    for _k, _d in _GENERAL.items():
         if not LINE_FACTS[_s][_k]["v"]:
-            LINE_FACTS[_s][_k] = {"v": _v, "src": None, "verified": "2026-07-18", "general": True}
+            LINE_FACTS[_s][_k] = {"v": _d["v"], "src": _d["src"],
+                                  "verified": "2026-10-20", "general": True}
 
 # ── Secondary sources, 2026-09-23 re-verification ──────────────────────────
 # Two "kids" values combine an age policy and a programme name that live on
@@ -616,3 +632,68 @@ for _ln, _fld in [('royal-caribbean', 'drink_pkg'), ('royal-caribbean', 'wifi'),
 # Cunard cancellation schedule was UK terms shown to US customers.
 for _ln, _fld in [('carnival', 'drink_pkg'), ('carnival', 'wifi'), ('carnival', 'deposit'), ('carnival', 'cancel'), ('carnival', 'kids'), ('carnival', 'loyalty'), ('carnival', 'docs'), ('princess', 'drink_pkg'), ('princess', 'wifi'), ('princess', 'deposit'), ('princess', 'cancel'), ('princess', 'kids'), ('princess', 'loyalty'), ('princess', 'docs'), ('cunard', 'drink_pkg'), ('cunard', 'wifi'), ('cunard', 'deposit'), ('cunard', 'cancel'), ('cunard', 'kids'), ('cunard', 'loyalty'), ('cunard', 'docs'), ('msc', 'drink_pkg'), ('msc', 'wifi'), ('msc', 'deposit'), ('msc', 'cancel'), ('msc', 'kids'), ('msc', 'loyalty'), ('msc', 'docs')]:
     LINE_FACTS[_ln][_fld]["verified"] = "2026-09-23"
+
+# ── Re-verification, 2026-10-20 ───────────────────────────────────────────
+# Each page below was fetched and read today and its value still matched what we
+# publish, so the stamp moves and the value does not. Nothing was re-stamped that
+# was not actually re-read.
+#
+# HARD-BLOCKED, deliberately NOT re-stamped. All three refuse our fetcher with a
+# browser user-agent as well (403 / 401 / 403), so they need an operator browser
+# read, exactly as in the 2026-09-23 pass:
+#   cunard   gratuities + included   cunard.com/en-us/the-cunard-experience/service-charges
+#                                    cunard.com/en-us/the-cunard-experience/whats-included
+#   msc      gratuities + included   msccruisesusa.com/manage-booking/before-you-go/service-charges
+#                                    msccruisesusa.com/on-board/dining-drinks
+#   carnival included                help.carnival.com/app/answers/detail/a_id/3861
+#     Carnival's gratuities DID re-read cleanly from carnival.com/help?topicid=1123,
+#     which also settles the old note questioning that URL: it is the right page and
+#     it states $17.00 standard / $19.00 suites. Only "included" is still blocked.
+#     The one readable alternative, carnival.com/awaywego/.../cruising, is a marketing
+#     blog and is WRONG: it lists Guy's Burger Joint and BlueIguana Cantina as costing
+#     extra. Do not source this fact from there.
+for _ln, _fld in [("royal-caribbean", "gratuities"), ("royal-caribbean", "included"),
+                  ("celebrity", "gratuities"),
+                  ("holland-america", "gratuities"), ("holland-america", "included"),
+                  ("margaritaville-at-sea", "gratuities"),
+                  ("carnival", "gratuities"),
+                  ("princess", "gratuities"), ("princess", "included")]:
+    LINE_FACTS[_ln][_fld]["verified"] = "2026-10-20"
+
+# Carnival's gratuities src now points at the page that actually renders and carries
+# the answer, replacing the topic-page URL the 2026-09-23 note flagged as uncertain.
+LINE_FACTS["carnival"]["gratuities"]["src"] = "https://www.carnival.com/help?topicid=1123"
+
+# Re-read today and REWRITTEN, because the re-read was richer or more exact than what
+# we had. Celebrity moves to the line's own "what's included" page, which carries the
+# base-fare list; the page we cited before only covers the optional All Included rate.
+LINE_FACTS["celebrity"]["included"] = {
+    "v": {"en": "Included: your stateroom with twice-daily housekeeping and continental breakfast "
+                "room service, breakfast lunch and dinner at the main restaurants and Oceanview "
+                "Cafe, theatre shows, live music, bars and lounges, pools, the fitness centre and "
+                "running track, the adults-only solarium, Camp at Sea and the Teens Club. Extra: "
+                "specialty dining, 24-hour room service, laundry, the spa and salon, the casino and "
+                "bingo. Drinks and Wi-Fi are not in the base fare; the optional All Included rate "
+                "adds a Classic Drinks Package and Basic Wi-Fi.",
+          "es": "Incluido: tu camarote con limpieza dos veces al día y desayuno continental al "
+                "camarote, desayuno comida y cena en los restaurantes principales y Oceanview Cafe, "
+                "espectáculos, música en vivo, bares y salones, piscinas, gimnasio y pista para "
+                "correr, el solarium solo para adultos, Camp at Sea y el Teens Club. Aparte: "
+                "restaurantes de especialidad, servicio al camarote 24 horas, lavandería, spa y "
+                "salón, casino y bingo. Las bebidas y el Wi-Fi no están en la tarifa base; la "
+                "tarifa opcional All Included añade el Classic Drinks Package y Basic Wi-Fi."},
+    "src": "https://www.celebritycruises.com/whats-included", "verified": "2026-10-20"}
+LINE_FACTS["margaritaville-at-sea"]["included"] = {
+    "v": {"en": "Included: multi-course meals at Fins Main Dining, High Tide Market and the Port of "
+                "Indecision Buffet, filtered water, coffee, tea, juices and lemonade, Broadway-style "
+                "shows, indoor and outdoor activities, supervised kids club activities, the fitness "
+                "centre, twice-daily housekeeping, and most government taxes and cruise fees. Extra: "
+                "shore excursions, bar drinks, soft drinks, specialty dining, the casino, "
+                "photographs, Wi-Fi packages, kids club fees, port parking and gratuities.",
+          "es": "Incluido: comidas de varios platos en Fins Main Dining, High Tide Market y el Port "
+                "of Indecision Buffet, agua filtrada, café, té, jugos y limonada, espectáculos, "
+                "actividades interiores y exteriores, club infantil supervisado, gimnasio, limpieza "
+                "dos veces al día, y la mayoría de impuestos y tasas. Aparte: excursiones, bebidas "
+                "del bar, refrescos, restaurantes de especialidad, casino, fotografías, paquetes de "
+                "Wi-Fi, cargos del club infantil, estacionamiento en el puerto y propinas."},
+    "src": "https://www.margaritavilleatsea.com/policies/faq", "verified": "2026-10-20"}

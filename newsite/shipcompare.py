@@ -6,6 +6,7 @@ gap. Data comes from ships.py (official-sourced). NO PRICES."""
 import json
 from config import PHONE_HREF, PHONE_DISPLAY
 from data import LINES
+from cta import ask_advisor
 from ships import all_ships, slugify, SHIPS, kids_family_display, _kids_is_gap
 from badges import verified_stamp
 from facts import LINE_FACTS
@@ -89,7 +90,7 @@ _NAME = {L["slug"]: L["name"] for L in LINES}
 _EMO = {L["slug"]: L["emo"] for L in LINES}
 
 _T = {
-    "en": {"a": "Ship A", "b": "Ship B", "vs": "vs", "gap": "Not yet verified",
+    "en": {"a": "Ship A", "b": "Ship B", "vs": "vs", "gap": "",  # filled from the payload below
            "rows": [("class", "Ship class"), ("year", "Entered service"),
                     ("guests", "Guests"), ("tonnage", "Gross tonnage"),
                     ("who", "Best for"), ("route", "Where it sails")],
@@ -97,7 +98,7 @@ _T = {
            "cta": "The right ship depends on your dates, party and budget. Call and we'll match you.",
            "call": "Find the right ship, call now",
            "flag": "specs verified from official cruise-line sources"},
-    "es": {"a": "Barco A", "b": "Barco B", "vs": "vs", "gap": "No verificado aún",
+    "es": {"a": "Barco A", "b": "Barco B", "vs": "vs", "gap": "",  # filled from the payload below
            "rows": [("class", "Clase"), ("year", "En servicio desde"),
                     ("guests", "Huéspedes"), ("tonnage", "Tonelaje bruto"),
                     ("who", "Ideal para"), ("route", "Dónde navega")],
@@ -170,7 +171,7 @@ def _payload(lang):
            "consider": "¿Prefieres un barco más pequeño, tranquilo y fácil de recorrer? Elige {x}.",
            "tie": "Están muy parejos, la elección depende de tus fechas, grupo y presupuesto.",
            "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal, y la mejor tarifa que nuestros socios pueden ofrecer."})
-    return {"ships": ships, "gap": _T[lang]["gap"], "rows": _ROWS[lang],
+    return {"ships": ships, "gap": ask_advisor(lang, "shipcompare"), "rows": _ROWS[lang],
             "lineLabel": _T[lang]["line"], "vd": vd}
 
 
@@ -230,7 +231,7 @@ def ship_compare_tool(lang, default_a=None, default_b=None):
     if(k==='dine'||k==='acts') return s[k]>0?String(s[k]):null;
     return (s[k]===null||s[k]===undefined||s[k]==='')?null:String(s[k]);
   }}
-  function val(s,k){{var v=fmt(s,k); return v?v:'<span class="cmp-gap">'+D.gap+'</span>';}}
+  function val(s,k){{var v=fmt(s,k); return v?v:D.gap;}}
   function num2(n){{return num(n);}}
   function verdict(a,b){{
     var V=D.vd, vd=document.getElementById('scmpVerdict');
