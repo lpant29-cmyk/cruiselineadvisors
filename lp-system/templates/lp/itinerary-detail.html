@@ -369,7 +369,7 @@ footer a{color:#BDE0E5}
 <nav class="nav">
   <div class="wrap">
     <span class="brand">[AGENCY NAME]</span>
-    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for Exclusive Rates</span><span class="cta-i" aria-hidden="true">📞</span></a>
+    <a class="cta" href="tel:+18335550100" aria-label="Call 1-833-555-0100"><span class="cta-t">Call for Current Fares</span><span class="cta-i" aria-hidden="true">📞</span></a>
   </div>
 </nav>
 
@@ -388,7 +388,7 @@ footer a{color:#BDE0E5}
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <!-- static route ribbon removed (mobile polish item 9): the day
            slider and the SVG schematic are the route representations -->
-      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
+      <a class="btn" style="margin-top:12px" href="tel:+18335550100">📞 Call for Current Fares</a>
     </div>
   </div>
 </header>
@@ -398,7 +398,7 @@ footer a{color:#BDE0E5}
   <div class="card">
     <div class="main">
       <h2>Unlock Unpublished Rates by Phone</h2>
-      <p class="why">Call an advisor now to apply exclusive promos, cabin upgrades, and secret bundle savings for your exact dates.</p>
+      <p class="why">Call to have a licensed partner agency price your exact dates and cabin, including any promotion the line is running at the time.</p>
       <a class="bigcall" href="tel:+18335550100">
         <span class="ic">📞</span>
         <span><span class="num">1-833-555-0100</span><br><span class="lbl">TAP TO CALL · FREE, NO OBLIGATION</span></span>
@@ -498,7 +498,7 @@ footer a{color:#BDE0E5}
   </div>
   <!-- mobile: single call CTA for the whole table (per-row links hidden);
        lives inside .fares so tel_click position resolves to deal-card -->
-  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
+  <a class="btn fare-cta" href="tel:+18335550100">📞 Call for Current Fares</a>
   <p class="note" id="fareNote"></p>
 </section>
 
@@ -542,7 +542,7 @@ footer a{color:#BDE0E5}
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn" href="tel:+18335550100">📞 Call for Exclusive Rates</a>
+  <a class="btn" href="tel:+18335550100">📞 Call for Current Fares</a>
   <a class="btn cb-btn" href="#fares">See fares</a>
 </div>
 
@@ -766,7 +766,7 @@ function routeSVG(days){
   el.innerHTML=MONTHS.map(x=>{
     const hit=x.m===when;
     const cell=v=>v==null?`<a class="call" href="tel:${PHONE_TEL}">Call for rates</a>`:`<span class="a">$${v.toLocaleString()}</span><span class="st">pp · seen ${pricesCheckedOn}</span>`;
-    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for Exclusive Rates</a></td></tr>`;
+    return `<tr${hit?' class="hit"':''}><td><span class="mn">${mFull(x.m)}</span>${hit?'<span class="yours">Your month</span>':''}</td><td>${cell(x.i)}</td><td>${cell(x.b)}</td><td><a class="call" href="tel:${PHONE_TEL}">📞 Call for Current Fares</a></td></tr>`;
   }).join('');
   const note=document.getElementById('fareNote');
   if(note)note.textContent=`${BOOKING.taxes||''}${BOOKING.taxes?'. ':''}`+((window.__faresShown&&!window.__faresShown())?`Fares here are older than we publish, so your exact date is quoted live on the call.`:`From-fares seen ${pricesCheckedOn}; cruise fares reprice constantly by date and cabin, so your exact date is quoted live on the call.`)+`${BOOKING.season?' '+BOOKING.season+'.':''}`;

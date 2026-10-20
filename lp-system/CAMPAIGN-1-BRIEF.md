@@ -65,13 +65,22 @@ Galveston (verified at source).
 
 **Pin #1 to position 1** as instructed.
 
+> **Headlines 4 and 5 changed 2026-10-20 and must be edited IN THE GOOGLE ADS
+> ACCOUNT, which nothing in this repo can do.** They read `Call For Exclusive
+> Rates` and `Unadvertised Bundle Rates`. Both claimed rates we do not hold:
+> this is a referral site that does not set prices, hold inventory or take
+> payment, and "savings" is one of the terms Hard Rule 1 bans outright. The
+> landing pages no longer say either, so until the account is edited the ads
+> promise something the page does not, which is both an FTC exposure and a
+> Google ad-relevance drag.
+
 | # | Headline | Chars |
 |---|---|---|
 | 1 | `CruiseLine Advisors` | 19 |
 | 2 | `Cruises From Galveston` | 22 |
 | 3 | `Check Today's Cruise Rates` | 26 |
-| 4 | `Call For Exclusive Rates` | 24 |
-| 5 | `Unadvertised Bundle Rates` | 25 |
+| 4 | `Call For Current Fares` | 22 |
+| 5 | `Sailings Priced By Phone` | 24 |
 | 6 | `Galveston Sailings By Month` | 27 |
 | 7 | `Talk To A Cruise Advisor` | 24 |
 | 8 | `Advisors 8am-11pm ET Daily` | 26 |
