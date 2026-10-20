@@ -22,26 +22,26 @@ LEGAL = {
              {"en": f"{BRAND} is a marketing and referral service. We are not a cruise line, travel agency, tour "
                     "operator, and we are not an agent of any cruise line. We do not sell, book, ticket or take payment for cruise travel, and we do "
                     "not set prices or hold inventory. When you call, you may be connected to one of several independent, "
-                    "licensed third-party travel agencies. All quotes, bookings, payments and customer service are "
+                    "independent third-party travel companies. All quotes, bookings, payments and customer service are "
                     "provided by that agency under its own terms, and we may receive a referral fee.",
               "es": f"{BRAND} es un servicio de marketing y referencia. No somos una línea de crucero, agencia de "
                     "viajes ni operador turístico, y no somos agentes de ninguna línea de crucero. No vendemos, "
                     "reservamos, emitimos boletos ni cobramos por viajes en crucero, y no fijamos precios ni tenemos inventario. Cuando llamas, puedes ser "
-                    "conectado con una de varias agencias de viajes independientes y con licencia. Todas las "
+                    "conectado con una de varias empresas de viajes independientes. Todas las "
                     "cotizaciones, reservas, pagos y atención al cliente los proporciona esa agencia según sus propios "
                     "términos, y podemos recibir una comisión de referencia."}),
             ({"en": "Information, not advice or offers", "es": "Información, no asesoría ni ofertas"},
              {"en": "The information on this site is general and for planning purposes only. It is not a quote, an "
                     "offer, or professional advice. Any fares shown anywhere on this site are indicative, observed "
                     "from public sources on the date stamped, and are not an offer to sell travel; all quotes and "
-                    "bookings are provided by independent licensed agencies. Cruise "
+                    "bookings are provided by independent travel companies. Cruise "
                     "line policies change; we verify facts against their sources and mark anything unverified as such, "
                     "but you should confirm details that matter to you with the agency that books your trip.",
               "es": "La información de este sitio es general y solo para fines de planificación. No es una cotización, "
                     "una oferta ni asesoría profesional. Las tarifas mostradas en cualquier parte de este sitio son "
                     "indicativas, observadas de fuentes públicas en la fecha indicada, y no constituyen una oferta de "
-                    "venta de viajes; todas las cotizaciones y reservas las proporcionan agencias independientes con "
-                    "licencia. Las "
+                    "venta de viajes; todas las cotizaciones y reservas las proporcionan empresas de viajes "
+                    "independientes. Las "
                     "políticas de las líneas cambian; verificamos los datos con sus fuentes y marcamos lo no verificado, "
                     "pero debes confirmar los detalles importantes con la agencia que reserve tu viaje."}),
             ({"en": "Trademarks", "es": "Marcas registradas"},
@@ -73,11 +73,11 @@ LEGAL = {
                     "proporciones y los detalles del viaje que consultas. Nuestro sitio puede usar analíticas estándar "
                     "(como páginas vistas y clics en el botón de llamada) para medir el rendimiento."}),
             ({"en": "How we use and share it", "es": "Cómo lo usamos y compartimos"},
-             {"en": "We use your information to connect you with a licensed partner travel agency and to improve our "
+             {"en": "We use your information to connect you with an independent partner travel company and to improve our "
                     "service. Because we share enquiry details with independent partner agencies so they can assist you, "
                     "this sharing may be treated as a 'sale' or 'share' under some state privacy laws. See Do Not Sell "
                     "or Share to opt out.",
-              "es": "Usamos tu información para conectarte con una agencia de viajes asociada con licencia y para mejorar "
+              "es": "Usamos tu información para conectarte con una empresa de viajes asociada independiente y para mejorar "
                     "nuestro servicio. Como compartimos los detalles de la consulta con agencias asociadas "
                     "independientes para que te ayuden, este intercambio puede considerarse una 'venta' o 'compartición' "
                     "bajo algunas leyes estatales. Consulta No vender ni compartir para excluirte."}),

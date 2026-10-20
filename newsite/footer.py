@@ -25,11 +25,11 @@ _SEAL_CAP = {
 
 _CRED_BAND = {
     "en": {"eyebrow": "Credentials you can check",
-           "h": "Accredited, licensed and Bahamas-certified",
+           "h": "Licensed, ASTA member and Bahamas-certified",
            "sub": "You are in good hands. We hold recognised travel-industry credentials and the official "
                   "Islands of the Bahamas certifications. Tap a badge to verify it."},
     "es": {"eyebrow": "Credenciales que puedes verificar",
-           "h": "Acreditados, con licencia y certificados en las Bahamas",
+           "h": "Con licencia, miembro de ASTA y certificados en las Bahamas",
            "sub": "Estás en buenas manos. Tenemos credenciales reconocidas del sector de viajes y las "
                   "certificaciones oficiales de las Islas de las Bahamas. Toca un distintivo para verificarlo."},
 }

@@ -178,7 +178,10 @@ def p_line(lang, slug):
         disc = (f"We are an independent referral service. We are not affiliated with, sponsored by, endorsed by, "
                 f"authorised by, or an agent of {L['name']}. {L['name']} and its ship names and logos are trademarks "
                 f"of their owner, used here descriptively only.")
-        cta_t, cta_s = f"Talk to a {L['name']} specialist", "Free, no obligation, and we never take payment for travel."
+        # NOT f"Talk to a {line} specialist": naming a line immediately before
+        # "specialist" reads as that line's staff, on a site whose whole exposure
+        # is implied affiliation. The guard in build.py now fails on it.
+        cta_t, cta_s = "Talk to a cruise specialist", "Free, no obligation, and we never take payment for travel."
     else:
         intro = (f"{L['name']} se describe mejor como <b>{L['cat']['es'].lower()}</b>. {L['tag']['es']} "
                  f"A continuación, una mirada independiente y verificada a lo que realmente importa antes de reservar, "
@@ -191,7 +194,7 @@ def p_line(lang, slug):
         disc = (f"Somos un servicio de referencia independiente. No estamos afiliados, patrocinados, respaldados, "
                 f"autorizados por, ni somos agentes de {L['name']}. {L['name']} y sus nombres de barcos y logotipos "
                 f"son marcas de su propietario, usadas aquí solo de forma descriptiva.")
-        cta_t, cta_s = f"Habla con un especialista en {L['name']}", "Gratis, sin compromiso, y nunca cobramos por el viaje."
+        cta_t, cta_s = "Habla con un especialista en cruceros", "Gratis, sin compromiso, y nunca cobramos por el viaje."
     name = L["name"]
     cmp_kick = "Compare" if lang == "en" else "Comparar"
     cmp_h2 = f"How does {name} compare?" if lang == "en" else f"¿Cómo se compara {name}?"

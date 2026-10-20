@@ -42,7 +42,7 @@ T = {
         "why_1_t": "Straight answers on the costly stuff",
         "why_1_b": "Gratuities, drink-package rules, final-payment deadlines, cancellation penalties, the details that quietly change your final bill.",
         "why_2_t": "A specialist, not a script",
-        "why_2_b": "You talk to a licensed advisor at a partner agency who actually knows the ships, cabins and seasons, and who does the comparing for you.",
+        "why_2_b": "You talk to a cruise specialist at an independent travel company who actually knows the ships, cabins and seasons, and who does the comparing for you.",
         "why_3_t": "No pressure, ever",
         "why_3_b": "Free to call, no obligation, and we never take payment for travel. We're paid a referral fee, you're never charged by us.",
         # comparison
@@ -108,7 +108,7 @@ T = {
         "why_1_t": "Respuestas claras sobre lo que cuesta",
         "why_1_b": "Propinas, reglas de paquetes de bebidas, fechas límite de pago, penalidades de cancelación, los detalles que cambian tu factura final.",
         "why_2_t": "Un especialista, no un guion",
-        "why_2_b": "Hablas con un asesor con licencia de una agencia asociada que conoce los barcos, camarotes y temporadas, y que compara por ti.",
+        "why_2_b": "Hablas con un especialista en cruceros de una empresa de viajes independiente que conoce los barcos, camarotes y temporadas, y que compara por ti.",
         "why_3_t": "Sin presión, nunca",
         "why_3_b": "Llamar es gratis, sin compromiso, y nunca cobramos por el viaje. Recibimos una comisión de referencia, tú nunca nos pagas.",
         "cmp_h2": "Compara los detalles que de verdad cuestan dinero",

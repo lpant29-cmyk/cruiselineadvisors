@@ -65,6 +65,19 @@ img,svg{max-width:100%}
 .call-btn .tx{display:flex;flex-direction:column;line-height:1.08}
 .call-btn .tx small{display:none;font-size:.56rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;opacity:.75}
 .call-btn .tx b{font-size:.9rem;font-weight:800;white-space:nowrap}
+/* Narrow phones: the header carries search + language + a call button whose
+   number is white-space:nowrap + the burger, and .hdr-right is flex:none, so at
+   390px the row measured 332px and pushed the PAGE to 413px wide. That is the
+   horizontal scroll on every indexed page, not just the new ones. The number
+   itself is not lost: it stays in the top bar and in the sticky call bar, both
+   of which are on screen. No new component, colour or button style, the gold
+   call button just goes icon-only below 430px. */
+@media(max-width:430px){
+  .hdr-right{gap:5px}
+  .call-btn .tx{display:none}
+  .call-btn{padding:.5em .66em}
+  .brand-txt{min-width:0;overflow:hidden}
+}
 .burger{display:inline-flex;flex:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
 .burger span{display:block;width:20px;height:2px;border-radius:2px;background:var(--navy);transition:.2s}
 .navcb:checked~.hdr-right .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}

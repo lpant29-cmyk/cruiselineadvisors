@@ -470,7 +470,7 @@ _BR_CRED = {
     "en": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
            '<b>Certified for the Bahamas.</b> A principal of BookMeCheapest LLC, which operates CruiseLine '
            'Advisors, holds the official Islands of the Bahamas Specialist diploma. When you call, we connect you with '
-           'licensed partner advisors who plan Bahamas honeymoons, weddings, proposals and romantic getaways.'
+           'partner travel companies who plan Bahamas honeymoons, weddings, proposals and romantic getaways.'
            '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
            '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
            'style="background:#fff;border-radius:10px;padding:.35rem .5rem;display:inline-flex">'
@@ -481,7 +481,7 @@ _BR_CRED = {
     "es": ('<div class="gd-callout gd-tip"><span class="gd-cl-ic" aria-hidden="true">🎓</span><div>'
            '<b>Certificados para las Bahamas.</b> Un socio de BookMeCheapest LLC, que opera CruiseLine Advisors, '
            'posee el diploma oficial de Especialista de las Islas de las Bahamas. Cuando llamas, '
-           'te conectamos con asesores asociados con licencia que planean lunas de miel, bodas, pedidas de mano '
+           'te conectamos con empresas de viajes asociadas que planean lunas de miel, bodas, pedidas de mano '
            'y escapadas románticas en las Bahamas.'
            '<span style="display:flex;gap:.7rem;align-items:center;margin-top:.6rem;flex-wrap:wrap">'
            '<a href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" '
@@ -765,14 +765,14 @@ register("bahamas-romance-travel", {
                   "Decide what the trip is really about, celebrating, relaxing or a bit of both, pick the island "
                   "to match, and the rest falls into place.</p>"
                   "<p>When you want a certified Bahamas specialist to help choose the island, handle the timing and "
-                  "connect you with a licensed advisor for the details, that is one call away, free, with no "
+                  "connect you with a cruise specialist for the details, that is one call away, free, with no "
                   "obligation, and never a payment to us.</p>",
             "es": "<p>Las Bahamas se ganan su fama romántica. El proceso de boda es simple, las islas cubren todos "
                   "los ánimos, de la fiesta a la paz total, y puedes ser tan social o tan escondido como quieras. "
                   "Decide de qué se trata realmente el viaje, celebrar, descansar o un poco de ambos, elige la isla "
                   "que combine, y lo demás cae en su lugar.</p>"
                   "<p>Cuando quieras que un especialista certificado en las Bahamas te ayude a elegir la isla, "
-                  "manejar las fechas y conectarte con un asesor con licencia para los detalles, eso está a una "
+                  "manejar las fechas y conectarte con un especialista en cruceros para los detalles, eso está a una "
                   "llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>",
          }},
     ],

@@ -859,7 +859,7 @@ register("best-cabin-location", {
                   "above and below to dodge the noise. Read the deck plan once with these points in mind and you will "
                   "avoid the mistakes that quietly spoil a good cabin.</p>"
                   + "<p>When you want a second pair of eyes on a specific deck plan, which cabins on a given ship are "
-                  "the quiet ones and which to skip, that is exactly the kind of thing a licensed specialist knows "
+                  "the quiet ones and which to skip, that is exactly the kind of thing a cruise specialist knows "
                   "sailing by sailing, and will walk you through in one call, free, with no obligation, and never a "
                   "payment to us.</p>",
             "es": "<p>Elige tu categoría por la habitación que quieres, y luego tu ubicación por cómo quieres que se "
@@ -867,7 +867,7 @@ register("best-cabin-location", {
                   "qué hay arriba y abajo para esquivar el ruido. Lee el plano de cubiertas una vez con estos puntos en "
                   "mente y evitarás los errores que en silencio arruinan un buen camarote.</p>"
                   + "<p>Cuando quieras un segundo par de ojos sobre un plano de cubiertas específico, qué camarotes de "
-                  "un barco dado son los silenciosos y cuáles saltarte, eso es justo lo que un especialista con licencia "
+                  "un barco dado son los silenciosos y cuáles saltarte, eso es justo lo que un especialista en cruceros "
                   "conoce crucero por crucero, y te lo explicará en una llamada, gratis, sin compromiso, y nunca un pago "
                   "para nosotros.</p>",
          }},

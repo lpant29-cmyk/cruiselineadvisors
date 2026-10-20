@@ -1592,7 +1592,7 @@ register("cruise-travel-insurance", {
                   "</ul>"
                   "<p>Answer those, then choose a policy by its terms rather than its name, checking the medical limit, "
                   "the evacuation limit, the exclusions and any waiver deadline.</p>"
-                  + "<p>If you would rather not sort through it alone, that is a good moment to call. A licensed specialist "
+                  + "<p>If you would rather not sort through it alone, that is a good moment to call. A cruise specialist "
                   "can walk you through what protection fits your specific sailing and your situation, in plain language, "
                   "for free, with no obligation, and never a payment to us.</p>",
             "es": "<p>No necesitas volverte experto en seguros. Tres preguntas te llevan casi todo el camino:</p>"
@@ -1842,14 +1842,14 @@ register("onboard-credit-explained", {
                   "you already planned to enjoy.</p>"
                   + "<p>When you want to know exactly what onboard credit a specific sailing includes, whether it is "
                   "refundable, and how it stacks with the current promotions, that is precisely the kind of detail a "
-                  "licensed specialist confirms for you in one call, free, with no obligation, and never a payment to us.</p>",
+                  "cruise specialist confirms for you in one call, free, with no obligation, and never a payment to us.</p>",
             "es": "<p>El crédito a bordo es un beneficio genuino, pero solo si sabes qué tienes en la mano. Es dinero "
                   "para gastar en el barco, viene de unas pocas fuentes, y su rasgo más importante es si es reembolsable. "
                   "Aprende eso, gasta primero la parte que se pierde si no se usa, y destina el resto a cosas que ya "
                   "planeabas disfrutar.</p>"
                   + "<p>Cuando quieras saber exactamente qué crédito a bordo incluye un crucero específico, si es "
                   "reembolsable y cómo se combina con las promociones actuales, ese es justo el detalle que un "
-                  "especialista con licencia te confirma en una llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>",
+                  "especialista en cruceros te confirma en una llamada, gratis, sin compromiso, y nunca un pago para nosotros.</p>",
          }},
     ],
     "faqs": {

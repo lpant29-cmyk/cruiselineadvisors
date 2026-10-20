@@ -86,7 +86,7 @@ _T = {
            "who": "Who's travelling?", "any": "Any", "anyport": "Any US/Canada port",
            "search": "Find my cruise", "match": "ships match your search", "reco": "Top match",
            "guests": "guests", "eat": "dining", "do": "things to do", "sails": "Sails",
-           "view": "Ship details", "book": "Call a licensed agent", "agentsub": "Free · 8am-11pm ET",
+           "view": "Ship details", "book": "Call a cruise specialist", "agentsub": "Free · 8am-11pm ET",
            "loadmore": "Load more ships", "showing": "Showing", "of": "of",
            "off": "is off-season for", "sweet": "is the sweet spot, ask us about the best time.",
            "compare": "Compare", "compared": "Comparing", "added": "Added",

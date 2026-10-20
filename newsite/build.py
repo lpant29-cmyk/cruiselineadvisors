@@ -5,6 +5,7 @@ banned-term guard on each <main>, and writes root redirect + 404 + sitemap.xml +
 Output → newsite/dist/. The LIVE site/ folder is never touched. Run: python3 build.py"""
 import os
 import re
+import sys
 import shutil
 import datetime
 from config import LANGS, DEFAULT_LANG, SITE_URL, BRAND, COMPANY
@@ -24,7 +25,7 @@ DIST = os.path.join(ROOT, "dist")
 TODAY = datetime.date.today().isoformat()
 BANNED = ("$", "usd", "from $", "save ", "discount", "% off", "cheapest", "lowest price")
 
-HOME_TITLE = {"en": "CruiseLine Advisors, Talk to a Licensed Cruise Specialist",
+HOME_TITLE = {"en": "CruiseLine Advisors, Talk to a Cruise Specialist",
               "es": "CruiseLine Advisors, Habla con un especialista en cruceros"}
 
 
@@ -197,6 +198,20 @@ def build():
         print("  ⚠ BANNED-TERM HITS:", hits)
     else:
         print("  ✓ banned-term guard clean")
+
+    # No page may call anyone a cruise line's or ship's own specialist/agent/team.
+    # Runs over what was actually written, so it catches wording from any
+    # generator, not just the ones we remembered to check.
+    import subprocess
+    aff = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "affiliation_guard.py"), DIST],
+                         capture_output=True, text=True)
+    print("  " + (aff.stdout.strip().splitlines() or ["affiliation guard: no output"])[0]
+          .replace("AFFILIATION GUARD: clean, no", "✓ affiliation guard clean, no"))
+    if aff.returncode != 0:
+        for line in aff.stdout.strip().splitlines()[1:]:
+            print("   " + line.strip())
+        raise SystemExit("affiliation guard failed: a page names a cruise line or ship "
+                         "immediately before specialist/expert/advisor/agent/representative/team")
 
 
 if __name__ == "__main__":

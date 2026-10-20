@@ -53,7 +53,7 @@ def _org_jsonld():
     org = {
         "@context": "https://schema.org", "@type": "Organization", "name": BRAND, "url": SITE_URL,
         "description": ("Independent cruise information and referral service that connects travellers "
-                        "with licensed cruise specialists at independent partner agencies. We are not a "
+                        "with cruise specialists at independent travel companies. We are not a "
                         "cruise line or a travel agency."),
         "areaServed": {"@type": "Country", "name": "United States"},
         "knowsLanguage": ["en", "es"],

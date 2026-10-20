@@ -310,7 +310,7 @@ NO_INVENTORY = "only 0 publishable deals"
 
 _DEPARTED_DISCLOSURE = (
     "All quotes, availability, bookings and payments are handled by "
-    "independent licensed travel agencies. We do not sell, book or take "
+    "independent travel companies. We do not sell, book or take "
     "payment for travel. Cruise line and ship names are property of their "
     "respective owners, used descriptively only; we are not affiliated with "
     "or endorsed by any cruise line."
@@ -1240,6 +1240,77 @@ form.addEventListener('submit',function(e){
                 json.dumps(page["page_id"]))
 
 
+
+# Canadian provinces that appear in our port labels. A "Departs from" list on a
+# US-targeted ad page must not quietly include Vancouver or Quebec City.
+_NON_US_SUFFIX = ("bc", "qc", "on", "ns", "nb", "nl", "pe", "mb", "sk", "ab")
+
+
+def port_city(label):
+    """The bare city from a port label, for comparing labels that disagree on
+    punctuation. Our data carries both "Galveston, TX" and "Galveston TX", and a
+    naive split on the comma left the second as "galveston tx", so the port the
+    page actually covers failed to match and got listed as one we do not cover.
+    """
+    city = str(label or "").split("(")[0].split(",")[0].strip()
+    parts = city.split()
+    if len(parts) > 1 and len(parts[-1]) == 2 and parts[-1].isalpha():
+        city = " ".join(parts[:-1])          # trailing bare state code
+    return city.strip()
+
+
+def _is_non_us(label):
+    low = str(label or "").lower()
+    if "canada" in low:
+        return True
+    tail = low.replace("(", " ").replace(")", " ").replace(",", " ").split()
+    return bool(tail) and tail[-1] in _NON_US_SUFFIX
+
+
+def line_other_ports(page, deals, reg):
+    """US home ports for a LINE-level /go/ page that we do NOT have fares for.
+
+    Only Galveston is collected today, so a page at /go/lines/{line}/ would
+    otherwise read as whole-line coverage on the strength of one port's data.
+    These render as call-first chips: no fare, no implied inventory. Ports the
+    page's own sailings already cover are excluded, and so is anything outside
+    the US, because this list sits under a "Departs from" heading on a
+    US-targeted ad page.
+    """
+    slug = url_facets(page["url"])[0]
+    if not slug or "/from/" in page["url"]:
+        return [], ""
+    covered = {port_city(d.get("port_label")).lower() for d in deals}
+    covered.discard("")
+    try:
+        doc = json.loads((ROOT / "newsite" / "data" / "cruise-lines.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return [], ""
+    rec = next((l for l in doc.get("lines", []) if l.get("slug") == slug), None)
+    if not rec:
+        return [], ""
+    ports = list(rec.get("itineraries", {}).get("home_ports") or [])
+    if not ports:
+        sd = rec.get("seasonal_deployment", {}) or {}
+        seen = []
+        for season in ("summer", "winter", "spring", "fall"):
+            for e in sd.get(season, []) or []:
+                if isinstance(e, dict) and e.get("port") and e["port"] not in seen:
+                    seen.append(e["port"])
+        ports = seen
+    out, done = [], set()
+    for lbl in ports:
+        city = port_city(lbl)
+        key = city.lower()
+        if not city or key in covered or key in done or _is_non_us(lbl):
+            continue
+        done.add(key)
+        out.append({"label": city, "slug": re.sub(r"[^a-z0-9]+", "-", key).strip("-")})
+    port_labels = {port_city(d.get("port_label")) for d in deals if d.get("port_label")}
+    port_labels.discard("")
+    title = f"Sailings from {port_labels.pop()}" if len(port_labels) == 1 else ""
+    return out, title
+
 # ------------------------------------------------------------------ bake
 
 def bake(page, reg, today, used):
@@ -1323,8 +1394,21 @@ def bake(page, reg, today, used):
         )
         html = RATES_RE.sub(lambda _: block, html, count=1)
         html = fill_static_slots(html, assets, used)
-        html = re.sub(r'let pricesCheckedOn = "[^"]*";',
-                      f'let pricesCheckedOn = "{month_label(newest)}";', html)
+        # The stamp lives OUTSIDE the RATES block in these templates, so it needs
+        # its own substitution. This matched only `let` while every call-gen
+        # template declares `const`, so the sub silently did nothing and the
+        # template's hardcoded placeholder ("July 27") shipped as the seen-date on
+        # fares collected in October. Accept any declaration keyword, and emit
+        # `let` so the client fuse can reassign it. Then FAIL LOUD: a page whose
+        # fares are stamped with a literal from the template is exactly the kind of
+        # wrong-and-confident output that must never reach a build artifact.
+        html, n_stamp = re.subn(r'\b(?:const|let|var)\s+pricesCheckedOn\s*=\s*"[^"]*";',
+                                f'let pricesCheckedOn = "{month_label(newest)}";', html)
+        if n_stamp == 0:
+            raise ValueError(
+                f"{page['page_id']}: template {tpl_name} carries a RATES block but no "
+                "pricesCheckedOn declaration to stamp. Every printed fare must carry "
+                "the date it was seen.")
     elif is_finder:
         kind, rest = facet_parts(page["deal_filter"])
         itin_objs = []
@@ -1398,6 +1482,14 @@ def bake(page, reg, today, used):
         if not page_obj["lineLabel"] or not page_obj["portLabel"]:
             raise ValueError(f"{page['page_id']}: missing lineLabel/portLabel "
                              "for finder PAGE object")
+        # A line-level page (/go/lines/{line}/ with no /from/) carries fares for
+        # the one port we collect, so it says which port, and lists the line's
+        # other US home ports as call-first rather than implying we price them.
+        other_ports, results_title = line_other_ports(page, deals, reg)
+        if other_ports:
+            page_obj["otherPorts"] = other_ports
+        if results_title:
+            page_obj["resultsTitle"] = results_title
         block = (
             "/* ============================================================\n"
             "   PAGE PARAMS + DATA - GENERATED by generate.py, DO NOT HAND-EDIT\n"

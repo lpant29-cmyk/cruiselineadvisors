@@ -112,7 +112,7 @@ register("avoid-cruise-scams", {
             "h2": {"en": "How a trustworthy referral actually works", "es": "Cómo funciona una referencia confiable"},
             "html": {
                 "en": "<p>For the record, here is how we operate, and what any honest service should look like. We "
-                      "publish verified, source-checked facts, and we connect you by phone to a licensed, independent "
+                      "publish verified, source-checked facts, and we connect you by phone to an independent "
                       "partner travel agency that quotes and books your trip under its own terms. We never cold-call "
                       "you, never pressure you, and never take payment for travel ourselves.</p>"
                       "<p>You call us, on your terms, when you are ready. That is the opposite of how a scam works, "
