@@ -115,6 +115,56 @@ def lp_footer_html(final_tel, final_display):
 </footer>"""
 
 
+def line_intro(page_obj):
+    """Intro for a LINE-LEVEL page, from the page's own numbers.
+
+    The template's intro described one port's purpose-built terminal and that
+    port's itinerary mix, which is true of the port page and wrong on a page
+    about the whole line. This says what this page actually is: the line's US
+    footprint, the one port we price today, and the call for everything else.
+    """
+    ports = len(page_obj.get("allPorts") or [])
+    line = page_obj.get("lineLabel", "")
+    city = (page_obj.get("portLabel") or "").split(",")[0].strip()
+    where = f"{line} sails from {ports} US home ports. " if ports else ""
+    priced = (f"This page publishes recent from-fares for {city} by sail month. "
+              if city else "")
+    return (where + priced + "For every other port, and for your exact dates, cabin "
+            "and any promotion running, the price comes on the call.")
+
+
+def strip_port_chrome(html, port_label):
+    """Remove the one-port furniture from a LINE-LEVEL page, IN THE SERVED HTML.
+
+    The first version of this did it in JavaScript on load, and that was wrong
+    in a way that looking at the rendered page could not show: view-source, a
+    JS-blocked visitor and an ads reviewer all still got a page about Galveston,
+    with a locked port menu, a "Galveston guide" nav link and an intro about one
+    terminal. A page is what it serves, not what it becomes.
+
+    Out go: the disabled "Sail from" field, the guide nav link, the whole port
+    guide section (terminal, parking, night before, documents, and the "Ask a
+    {port} specialist" button inside it) and the one-port intro. The port page
+    at /from/{port}/ keeps every one of them, because there they are the
+    subject rather than leftover scenery.
+    """
+    city = (port_label or "").split(",")[0].strip()
+    removals = [
+        # the locked single-option port menu
+        (r'\s*<div class="f">\s*<label for="fFrom">.*?</div>\s*</div>', "port menu"),
+        # the guide link in the sticky nav
+        (r'\s*<li id="navKnow">.*?</li>', "nav guide link"),
+        # the whole port guide section
+        (r'\s*<section class="blk wrap" id="know">.*?</section>', "port guide section"),
+    ]
+    for pattern, what in removals:
+        html, n = re.subn(pattern, "", html, count=1, flags=re.S)
+        if n == 0:
+            raise ValueError(f"line-level page: could not remove the {what}; "
+                             "the template changed and this page would ship it")
+    return html
+
+
 def lp_credentials_html():
     """The MAIN SITE's credentials band (newsite/footer.py) on every /go/ page,
     above the footer, with its CSS from newsite/cred_css.py.
@@ -1803,6 +1853,20 @@ def bake(page, reg, today, used):
             "/* ================== END GENERATED DATA ====================== */"
         )
         html = FINDER_RE.sub(lambda _: block, html, count=1)
+        if line_level:
+            # Served HTML, not a load-time edit: see strip_port_chrome.
+            html = strip_port_chrome(html, page_obj.get("portLabel", ""))
+            # "The ships sailing this route" is true of a port page, which has
+            # one route. This page has twelve departure ports and no route, and
+            # the ships shown are the ones on the sailings it prices.
+            _city = (page_obj.get("portLabel") or "").split(",")[0].strip()
+            html = html.replace(
+                '<h2 id="shipsH2">The ships sailing this route</h2>',
+                f'<h2 id="shipsH2">The ships on these {html_mod.escape(_city)} sailings</h2>'
+                if _city else '<h2 id="shipsH2">The ships on these sailings</h2>', 1)
+            html = re.sub(r'(<p id="introCopy">).*?(</p>)',
+                          lambda m: m.group(1) + html_mod.escape(line_intro(page_obj)) + m.group(2),
+                          html, count=1, flags=re.S)
     elif is_itin:
         r = deals[0]
         days = day_objs(r["itin_id"], reg["days"])

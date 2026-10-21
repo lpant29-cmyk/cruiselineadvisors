@@ -627,7 +627,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
      line). Sea-day lines in the day expanders anchor here (#ships). -->
 <section class="blk wrap" id="ships">
   <p class="kicker">The ships</p>
-  <h2>The ships sailing this route</h2>
+  <h2 id="shipsH2">The ships sailing this route</h2>
   <div class="tabs" id="shipTabs"></div>
   <div class="shipcard" id="shipPanel" style="max-width:760px"></div>
 </section>
@@ -1133,7 +1133,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["carnival"];
-const KW_OTHER = ["holland america", "royal carribean", "royal caribbean", "virgin voyages", "margaritaville", "norwegian", "silversea", "celebrity", "princess", "cunard", "disney", "virgin", "costa", "rccl", "msc", "hal", "ncl"];
+const KW_OTHER = ["royal carribean", "holland america", "royal caribbean", "virgin voyages", "margaritaville", "celebrity", "norwegian", "silversea", "princess", "virgin", "disney", "cunard", "costa", "rccl", "msc", "hal", "ncl"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1824,13 +1824,27 @@ const KNOW = {
     tabs.insertBefore(b,tabs.querySelector('[data-k="docs"]'));
   }
 })();
+/* NULL GUARDS, not decoration. The line-level page ships without the port
+   guide section, and this module addressed #knowTabs and #knowTitle without
+   checking. The bare addEventListener below threw on load and took every
+   statement after it with it: populateFilters, renderOffers, setShipNotice and
+   runSearch all stopped, so the page rendered ZERO sailings. One missing
+   element, whole page dead, which is the failure this codebase has already
+   written down once. */
 function renderKnow(k){const c=KNOW[k];if(!c)return;
-  document.getElementById('knowTitle').textContent=c.t;
-  document.getElementById('knowDesc').innerHTML=c.d;
-  document.getElementById('knowList').innerHTML=c.l.map(x=>`<li>${esc(x)}</li>`).join('');
+  const title=document.getElementById('knowTitle');
+  if(!title) return;                       /* no port guide on this page */
+  title.textContent=c.t;
+  const d=document.getElementById('knowDesc'); if(d) d.innerHTML=c.d;
+  const l=document.getElementById('knowList');
+  if(l) l.innerHTML=c.l.map(x=>`<li>${esc(x)}</li>`).join('');
   fillBox(document.getElementById('knowImg'), typeof KNOW_IMG!=='undefined'?KNOW_IMG:null, c.t);
 }
-document.getElementById('knowTabs').addEventListener('click',e=>{if(!e.target.dataset.k)return;document.querySelectorAll('#knowTabs .tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');renderKnow(e.target.dataset.k);});
+(function(){
+  const tabs=document.getElementById('knowTabs');
+  if(!tabs) return;
+  tabs.addEventListener('click',e=>{if(!e.target.dataset.k)return;document.querySelectorAll('#knowTabs .tab').forEach(t=>t.classList.remove('on'));e.target.classList.add('on');renderKnow(e.target.dataset.k);});
+})();
 
 populateFilters();
 renderOffers();
@@ -1863,32 +1877,14 @@ renderCallFirst();
       +((port&&!lineLevel)?' \u00b7 FROM '+port.toUpperCase():'');
     chip.hidden=false;
   }
-  /* The intro described one port's terminal and that port's itineraries, on
-     a page about the whole line. Rewritten from the page's own data: how many
-     US ports the line publishes, and the honest statement that we price one of
-     them today. No itinerary type is named, because the only ones we hold are
-     that one port's. */
-  if(lineLevel){
-    var ic=document.getElementById('introCopy');
-    var ports=(PAGE.allPorts||[]).length;
-    if(ic&&ports){
-      ic.textContent=lbl+' sails from '+ports+' US home port'+(ports===1?'':'s')+'. '
-        +'This page publishes recent from-fares for '+(port?port.split(',')[0]:'one port')
-        +' by sail month. For every other port, and for your exact dates, cabin and any '
-        +'promotion running, the price comes on the call.';
-    }
-  }
+  /* The intro, the guide nav link, the locked port menu and the port guide
+     section are removed from the SERVED HTML for a line-level page, by
+     strip_port_chrome() in generate.py. They used to be removed here, on load,
+     which left view-source, a JS-blocked visitor and an ads reviewer looking
+     at a Galveston page. Nothing to do here but relabel the link on a page
+     that still has one. */
   var nk=document.getElementById('navKnow');
-  if(nk&&lineLevel){ nk.remove(); }
-  else if(nk&&port){ nk.querySelector('a').textContent=port.split(',')[0]+' guide'; }
-  /* The "Sail from" menu was a disabled control holding one hardcoded port.
-     On a line page that is a dead end: it looks like a chooser, it cannot
-     choose, and the ports it will not offer are the point of the page. The
-     departure list below does that job with a call. */
-  if(lineLevel){
-    var ff=document.getElementById('fFrom');
-    if(ff&&ff.closest('.f')) ff.closest('.f').remove();
-  }
+  if(nk&&port&&!lineLevel) nk.querySelector('a').textContent=port.split(',')[0]+' guide';
 })();
 
 /* ============ mobile UX modules (bottom sheet, featured strip, taps,
