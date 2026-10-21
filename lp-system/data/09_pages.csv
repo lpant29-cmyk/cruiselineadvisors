@@ -8,3 +8,11 @@ p006,audience,family,/en/go/family-cruises/,Family Cruises,aud:family,family cru
 p007,itinerary,5n-west-caribbean-mariner-galveston,/en/go/itineraries/5-night-western-caribbean-from-galveston-mariner-of-the-seas/,5-Night Western Caribbean Cruise from Galveston on Mariner of the Seas,itin:5n-west-caribbean-mariner-galveston,,building,1
 p008,ship,mariner-of-the-seas,/en/go/ships/mariner-of-the-seas/,"Mariner of the Seas: Cruises, Cabins and What's Onboard",ship:mariner-of-the-seas,,building,1
 p009,line-call,carnival,/en/go/lines/carnival/,Carnival Cruises,line:carnival,carnival cruises; carnival cruise deals; carnival cruise line,building,2
+p010,line-call,norwegian,/en/go/lines/norwegian/,Norwegian Cruises,line:norwegian,norwegian cruises; norwegian cruise deals,building,3
+p011,line-call,msc,/en/go/lines/msc/,MSC Cruises,line:msc,msc cruises cruises; msc cruises cruise deals,building,3
+p012,line-call,disney,/en/go/lines/disney/,Disney Cruises,line:disney,disney cruises; disney cruise deals,building,3
+p013,line-call,princess,/en/go/lines/princess/,Princess Cruises,line:princess,princess cruises cruises; princess cruises cruise deals,building,3
+p014,line-call,celebrity,/en/go/lines/celebrity/,Celebrity Cruises,line:celebrity,celebrity cruises cruises; celebrity cruises cruise deals,building,3
+p015,line-call,virgin-voyages,/en/go/lines/virgin-voyages/,Virgin Voyages,line:virgin-voyages,virgin voyages cruises; virgin voyages cruise deals,building,3
+p016,line-call,costa,/en/go/lines/costa/,Costa Cruises,line:costa,costa cruises; costa cruise deals,building,3
+p017,line-call,silversea,/en/go/lines/silversea/,Silversea Cruises,line:silversea,silversea cruises; silversea cruise deals,building,3

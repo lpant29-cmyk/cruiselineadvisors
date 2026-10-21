@@ -356,9 +356,13 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   .itin{display:flex;flex-direction:row;align-items:center;gap:10px;border-radius:12px;cursor:pointer;padding:8px 10px}
   .itin .imgbox{flex:0 0 44px;width:44px;height:44px;min-height:0;border-radius:9px;overflow:hidden;font-size:7px}
   .itin .b{padding:0;display:flex;flex-direction:row;align-items:center;gap:8px;flex:1;min-width:0}
-  .itin h3{font-size:14.5px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* Was nowrap+ellipsis, which cut every ship and itinerary name at 390px
+     ("Carnival Jub...", "4-Night Western Caribb..."). Wraps to two lines
+     instead, with the guest/night chip shrunk slightly to give it the room. */
+  .itin h3{font-size:14px;line-height:1.22;margin:0;flex:1;min-width:0;white-space:normal;
+    overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
   .itin .meta,.itin .ribbon,.itin .dd,.itin .months,.itin .stamp,.itin .go,.itin .more{display:none}
-  .itin .nchip{display:block;flex:0 0 auto;font-size:12.5px;font-weight:700;color:#4E6B75;white-space:nowrap}
+  .itin .nchip{display:block;flex:0 0 auto;font-size:11.5px;font-weight:700;color:#4E6B75;white-space:nowrap}
   .itin .price{margin:0;flex:0 0 auto;gap:4px;white-space:nowrap}
   .itin .price .f{font-size:10.5px}
   .itin .price .a{font-size:15px}
@@ -1128,7 +1132,52 @@ const OFFERS = [];
   window.__faresShown = function () {
     return !window.__fareFuse || window.__fareFuse.anyLive;
   };
+})();/* "Advisors answering now" must be true at the moment it says it.
+
+   Coverage is 8am-11pm ET every day (Hard Rule 6: never claim 24/7). The badge
+   was static markup, so at 3am it still told visitors someone was answering,
+   and the green live-dot said the same thing in colour.
+
+   The hour is read in America/New_York, not on the visitor's clock: a visitor
+   in London at 1pm is looking at an 8am ET office, and our own clock is what
+   decides whether anyone is there. Intl handles the DST switch by itself, so
+   there is no offset to maintain twice a year.
+
+   Fails open-safe: if Intl is unavailable the markup is left exactly as shipped
+   rather than guessed at, and the whole thing is wrapped so a throw here can
+   never take down the scripts after it. */
+(function () {
+  var OPEN_HOUR = 8, CLOSE_HOUR = 23;   // 8am to 11pm, inclusive of 10:59pm
+  var hour;
+  try {
+    hour = +new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York", hour: "numeric", hour12: false,
+    }).format(new Date());
+  } catch (e) {
+    return;
+  }
+  if (!isFinite(hour) || (hour >= OPEN_HOUR && hour < CLOSE_HOUR)) return;
+
+  var CLOSED = "Call now. Advisors back at 8am ET";
+  var now = document.querySelector(".topbar .now");
+  if (now) now.textContent = CLOSED + " · ";
+
+  var metas = document.querySelectorAll(".callmeta span, .hours");
+  for (var i = 0; i < metas.length; i++) {
+    var el = metas[i];
+    if (!/advisors answering now/i.test(el.textContent)) continue;
+    // keep whatever structure the element already has, swap only the claim
+    el.innerHTML = el.innerHTML.replace(/Advisors answering now/i, CLOSED);
+  }
+
+  // The green dot reads as "live" on its own, so it goes quiet too.
+  var dots = document.querySelectorAll(".dot, .callmeta b");
+  for (var j = 0; j < dots.length; j++) dots[j].style.background = "transparent";
+  for (var k = 0; k < dots.length; k++) {
+    if (dots[k].tagName === "B") dots[k].style.color = "#8aa0ab";
+  }
 })();
+
 /* ================== END GENERATED DATA ====================== */
 
 const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];

@@ -355,9 +355,13 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   .itin{display:flex;flex-direction:row;align-items:center;gap:10px;border-radius:12px;cursor:pointer;padding:8px 10px}
   .itin .imgbox{flex:0 0 44px;width:44px;height:44px;min-height:0;border-radius:9px;overflow:hidden;font-size:7px}
   .itin .b{padding:0;display:flex;flex-direction:row;align-items:center;gap:8px;flex:1;min-width:0}
-  .itin h3{font-size:14.5px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* Was nowrap+ellipsis, which cut every ship and itinerary name at 390px
+     ("Carnival Jub...", "4-Night Western Caribb..."). Wraps to two lines
+     instead, with the guest/night chip shrunk slightly to give it the room. */
+  .itin h3{font-size:14px;line-height:1.22;margin:0;flex:1;min-width:0;white-space:normal;
+    overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
   .itin .meta,.itin .ribbon,.itin .dd,.itin .months,.itin .stamp,.itin .go,.itin .more{display:none}
-  .itin .nchip{display:block;flex:0 0 auto;font-size:12.5px;font-weight:700;color:#4E6B75;white-space:nowrap}
+  .itin .nchip{display:block;flex:0 0 auto;font-size:11.5px;font-weight:700;color:#4E6B75;white-space:nowrap}
   .itin .price{margin:0;flex:0 0 auto;gap:4px;white-space:nowrap}
   .itin .price .f{font-size:10.5px}
   .itin .price .a{font-size:15px}
