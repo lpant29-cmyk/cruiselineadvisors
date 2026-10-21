@@ -423,7 +423,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
     <ul>
       <li><a href="#results">Sailings</a></li>
       <li><a href="#ships">Ships</a></li>
-      <li><a href="#know">Galveston guide</a></li>
+      <li id="navKnow"><a href="#know">Galveston guide</a></li>
       <li><a href="#whycall">Why call us</a></li>
     </ul>
     <a class="cta" href="tel:+18336844250" aria-label="Call +1-833-684-4250"><span class="cta-t">Call for Current Fares</span><span class="cta-i" aria-hidden="true">📞</span></a>
@@ -436,11 +436,11 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   <div class="shade"></div>
   <div class="content">
     <div class="wrap">
-      <span class="linelogo">🚢 ROYAL CARIBBEAN · FROM GALVESTON, TEXAS</span>
-      <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
+      <span class="linelogo" id="heroChip" hidden></span>
+      <p class="hero-ind" id="heroInd">Independent referral service.</p>
       <h1>Royal Caribbean Cruises from Galveston</h1>
-      <p class="tagline">Search real itineraries by month and length, then one call gets exact dates, cabins and often better rates than booking online once your travel is bundled.</p>
-      <p class="bundle-line"><span class="bl-full">Call for Unadvertised Bundle Rates &amp; Phone-Only Deals</span><span class="bl-short">Unadvertised bundle rates, phone only</span></p>
+      <p class="tagline" id="heroTag">Search real itineraries by month and length, then one call gets exact dates, cabins and often better rates than booking online once your travel is bundled.</p>
+      <p class="bundle-line"><span class="bl-full">Today's fare for your dates and cabin, priced by phone</span><span class="bl-short">Today's fare, priced by phone</span></p>
       
     </div>
   </div>
@@ -511,7 +511,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 </div>
 
 <section class="intro wrap">
-  <p>Royal Caribbean sails from Galveston year-round out of its purpose-built terminal, with Western Caribbean runs, holiday sailings and longer repositioning voyages. Fares below are recent from-prices by sail month. The exact price for your dates, cabin and current promotions is a ten-minute call.</p>
+  <p id="introCopy">Royal Caribbean sails from Galveston year-round out of its purpose-built terminal, with Western Caribbean runs, holiday sailings and longer repositioning voyages. Fares below are recent from-prices by sail month. The exact price for your dates, cabin and current promotions is a ten-minute call.</p>
   <div id="offerSlot"></div>
 </section>
 
@@ -524,8 +524,10 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
     <span class="count" id="resultCount"></span>
   </div>
   <p class="ship-notice" id="shipNotice" hidden></p>
-  <div id="departsFrom" hidden></div>
   <p class="results-fine" id="resultsFine"></p>
+  <!-- ports block sits AFTER the explanatory line: it read as one run-on
+       paragraph colliding with the regions list when it came first -->
+  <div id="departsFrom" hidden style="margin:14px 0 4px"></div>
   <!-- FEATURED strip (mobile UX): featured=yes rows as a swipe slider; the
        full list below still contains them. Hidden on desktop and when no
        featured rows are baked. -->
@@ -568,11 +570,11 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 
 <section class="blk wrap" id="whycall">
   <p class="kicker">Why call us</p>
-  <h2>The search shows the itinerary. The call gets your price.</h2>
+  <h2 id="whyH2">The search shows the itinerary. The call gets your price.</h2>
   <div class="why">
-    <div class="wcard"><div class="ic">🏷️</div><h3>Exact dates, exact price</h3><p>From-fares by month are the map; your sail date, cabin and current promos set the real number. A specialist quotes it live.</p></div>
+    <div class="wcard"><div class="ic">🏷️</div><h3>Exact dates, exact price</h3><p id="whyPrice">From-fares by month are the map; your sail date, cabin and current promos set the real number. A specialist quotes it live.</p></div>
     <div class="wcard"><div class="ic">🛏️</div><h3>The right cabin</h3><p>Which balconies, which decks, which quads actually fit a family, advice from people who book this ship weekly.</p></div>
-    <div class="wcard"><div class="ic">🤝</div><h3>No pressure, ever</h3><p>Free to call, no obligation, and we never take payment for travel. Licensed partner agencies handle every booking.</p></div>
+    <div class="wcard"><div class="ic">🤝</div><h3>No pressure, ever</h3><p>Free to call, no obligation, and we never take payment for travel. Independent partner travel companies handle every booking.</p></div>
     <div class="wcard"><div class="ic">🛡️</div><h3>Straight answers</h3><p>Gratuities, deposits, drink packages, cancellation windows: explained plainly before you commit.</p></div>
   </div>
 </section>
@@ -611,7 +613,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 
 <div class="sticky-cta">
   <a class="btn" href="tel:+18336844250">📞 Call for Current Fares</a>
-  <a class="btn cb-btn" href="#finder" onclick="document.getElementById('fTo').focus();return false;">Search</a>
+  <a class="btn cb-btn" id="cbSearch" href="#finder" onclick="document.getElementById('fTo').focus();return false;">Search</a>
 </div>
 
 <!-- BOTTOM SHEET (mobile UX): single dialog reused by the row/slide taps;
@@ -2285,6 +2287,9 @@ function setShipNotice(){
 function priceFor(it,month){ const px=it.prices||{}; return (month && px[month]!=null)? px[month] : px.default; }
 
 function runSearch(scroll=true){
+  /* A call-first line page has no sailings to filter. Without this the search
+     would overwrite the fleet cards with its "no tracked sailings" message. */
+  if(PAGE.callFirst) return;
   const to=document.getElementById('fTo').value;
   const month=document.getElementById('fMonth').value;
   const nb=document.getElementById('fNights').value;
@@ -2373,6 +2378,93 @@ function renderDepartsFrom(){
 }
 renderDepartsFrom();
 
+function renderCallFirst(){
+  /* CALL-FIRST LINE PAGE. No fare pipeline exists for this line, so the page
+     prints no price anywhere: each card's fare slot is a call instead. These
+     are the line's SHIPS, not sailings. We do not hold this line's sailings and
+     will not invent one, so the card says what we can stand behind: the ship,
+     its class and capacity, the US ports the line publishes, and trip lengths. */
+  if(!PAGE.callFirst || typeof CALLFIRST==='undefined' || !CALLFIRST) return false;
+  var grid=document.getElementById('itinGrid');
+  if(!grid) return false;
+
+  var t=document.getElementById('resultsTitle');
+  if(t) t.textContent='The '+CALLFIRST.lineLabel+' fleet';
+  var c=document.getElementById('resultCount');
+  if(c) c.textContent=CALLFIRST.ships.length+' ships';
+  var fine=document.getElementById('resultsFine');
+  if(fine) fine.textContent='We do not publish '+CALLFIRST.lineLabel
+    +' fares. Your dates and cabin are priced live on the call.';
+
+  var dep=document.getElementById('departsFrom');
+  if(dep && CALLFIRST.ports && CALLFIRST.ports.length){
+    dep.hidden=false;
+    dep.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
+      +'<p class="results-fine" style="margin:0 0 10px">'+esc(CALLFIRST.lineLabel)
+      +' publishes these US departure ports'
+      +(CALLFIRST.portsVerified?' (verified '+esc(CALLFIRST.portsVerified)+')':'')+'.</p>'
+      +'<div class="months" style="gap:8px">'
+      +CALLFIRST.ports.map(function(p){return '<span class="mchip">'+esc(p)+'</span>';}).join('')
+      +'</div>'
+      +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
+        +esc(CALLFIRST.lengths)+'</p>':'')
+      +(CALLFIRST.regions&&CALLFIRST.regions.length
+        ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
+         +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
+  }
+
+  grid.classList.remove('allrows');
+  grid.innerHTML=CALLFIRST.ships.map(function(sh,ix){
+    var meta=[CALLFIRST.lineLabel];
+    if(sh.cls) meta.push(esc(sh.cls)+' class');
+    if(sh.year) meta.push('from '+sh.year);
+    return '<article class="itin'+(ix>5?' xrow':'')+'">'
+      +'<div class="imgbox'+(sh.img&&sh.img.src?' has-img':'')+'">'+imgHTML(sh.img,'')+'</div>'
+      +'<div class="b">'
+      +'<h3>'+esc(sh.name)+'</h3>'
+      +(sh.guests?'<span class="nchip">'+Number(sh.guests).toLocaleString()+' guests</span>':'')
+      +'<p class="meta">'+meta.join(' · ')+'</p>'
+      +'<div class="price nofare"><span class="a">Fare by phone</span></div>'
+      +'<a class="go" href="tel:'+PHONE_TEL+'" onclick="try{trackCall(\'callfirst-ship\')}catch(e){}">'
+      +'\uD83D\uDCDE Get Today\u2019s Fare by Phone<small>'+PHONE_DISPLAY+' \u00b7 free, no obligation</small></a>'
+      +'</div></article>';
+  }).join('')+(CALLFIRST.ships.length>6
+    ?'<button class="showall" type="button">Show all '+CALLFIRST.ships.length+' ships</button>':'');
+
+  /* Port guide and the deep ship module are port- and sailing-scoped. With no
+     port and no sailings they would render as empty blocks, so they come out. */
+  ['know','ships'].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.remove();
+  });
+  var f=document.getElementById('finder'); if(f) f.remove();
+  /* The hero sub-copy sells the itinerary search, and the sticky bar's Search
+     button jumps to it. Neither exists on a call-first page. */
+  var tag=document.getElementById('heroTag');
+  if(tag) tag.textContent='Every '+CALLFIRST.lineLabel+' ship, the US ports it sails from and '
+    +'typical trip lengths. One call prices your dates and cabin.';
+  var cb=document.getElementById('cbSearch'); if(cb) cb.remove();
+  var nk=document.getElementById('navKnow'); if(nk) nk.remove();
+  /* This section sells the itinerary search and talks about from-fares by
+     month. A call-first page has neither. */
+  var wh=document.getElementById('whyH2');
+  if(wh) wh.textContent='No prices here. The call gets your price.';
+  var wp=document.getElementById('whyPrice');
+  if(wp) wp.textContent='We do not publish '+CALLFIRST.lineLabel+' fares, so this page shows none. '
+    +'Your sail date, cabin and any promotion running set the real number, quoted live on the call.';
+  /* The intro described Royal Caribbean sailing from Galveston, on every page
+     that used this template. Replaced with copy built from this line's data. */
+  var intro=document.getElementById('introCopy');
+  if(intro){
+    var where=(CALLFIRST.regions&&CALLFIRST.regions.length)
+      ? CALLFIRST.regions.slice(0,4).join(', ') : '';
+    intro.textContent=CALLFIRST.lineLabel+' sails '+(CALLFIRST.ships.length)+' ships'
+      +(CALLFIRST.ports.length?' from '+CALLFIRST.ports.length+' US departure ports':'')
+      +(where?', across '+where:'')+'. We do not publish '+CALLFIRST.lineLabel
+      +' fares, so there are no prices on this page: one call prices your exact dates and cabin.';
+  }
+  return true;
+}
+
 function renderOffers(){
   const el=document.getElementById('offerSlot');
   if(!el)return;
@@ -2449,6 +2541,27 @@ renderOffers();
 renderKnow('term');
 setShipNotice();
 runSearch(false);
+/* Last, so nothing downstream can overwrite the fleet cards. */
+renderCallFirst();
+
+/* The non-affiliation line names THIS page's line. It used to be hardcoded to
+   Royal Caribbean, so the Carnival page disclaimed affiliation with the wrong
+   company, in the one sentence whose entire job is that disclaimer. */
+(function(){
+  var lbl=(typeof PAGE!=='undefined'&&PAGE&&PAGE.lineLabel)?PAGE.lineLabel:'';
+  var port=(typeof PAGE!=='undefined'&&PAGE&&PAGE.portLabel)?PAGE.portLabel:'';
+  var ind=document.getElementById('heroInd');
+  if(ind) ind.textContent='Independent referral service'+(lbl?', not '+lbl:'')+'.';
+  /* The hero chip was the line and port baked into markup, so the Carnival
+     page wore a "ROYAL CARIBBEAN - FROM GALVESTON" badge. */
+  var chip=document.getElementById('heroChip');
+  if(chip&&lbl){
+    chip.textContent='\uD83D\uDEA2 '+lbl.toUpperCase()+(port?' \u00b7 FROM '+port.toUpperCase():'');
+    chip.hidden=false;
+  }
+  var nk=document.getElementById('navKnow');
+  if(nk&&port) nk.querySelector('a').textContent=port.split(',')[0]+' guide';
+})();
 
 /* ============ mobile UX modules (bottom sheet, featured strip, taps,
    scroll reveals). Presentation only: all content comes from the baked

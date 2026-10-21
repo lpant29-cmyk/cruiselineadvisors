@@ -349,10 +349,10 @@ footer a{color:#BDE0E5}
   <div class="content">
     <div class="wrap">
       <span class="linelogo">🚢 <span id="heroKicker">ROYAL CARIBBEAN · SHIP GUIDE</span></span>
-      <p class="hero-ind">Independent referral service, not Royal Caribbean.</p>
+      <p class="hero-ind" id="heroInd">Independent referral service.</p>
       <h1>Mariner of the Seas: Cruises, Cabins and What's Onboard</h1>
       <p class="sub" id="heroSub"></p>
-      <p class="bundle-line"><span class="bl-full">Call for Unadvertised Bundle Rates &amp; Phone-Only Deals</span><span class="bl-short">Unadvertised bundle rates, phone only</span></p>
+      <p class="bundle-line"><span class="bl-full">Today's fare for your dates and cabin, priced by phone</span><span class="bl-short">Today's fare, priced by phone</span></p>
       
       <div class="fareline"><span class="s">Recently from</span><span class="a" id="heroFare"></span><span class="s" id="heroStamp"></span></div>
       <br>
@@ -941,6 +941,16 @@ function sheetClose(){
     cb.classList.add('open');t.setAttribute('aria-expanded','true');
     var f=cb.querySelector('input');if(f&&f.focus)try{f.focus();}catch(e){}
   });
+})();
+
+/* The non-affiliation line names THIS page's line. It used to be hardcoded to
+   Royal Caribbean, so the Carnival page disclaimed affiliation with the wrong
+   company, in the one sentence whose entire job is that disclaimer. */
+(function(){
+  var ind=document.getElementById('heroInd');
+  if(!ind) return;
+  var lbl=(typeof PAGE!=='undefined'&&PAGE&&PAGE.lineLabel)?PAGE.lineLabel:'';
+  ind.textContent='Independent referral service'+(lbl?', not '+lbl:'')+'.';
 })();
 </script>
 </body>

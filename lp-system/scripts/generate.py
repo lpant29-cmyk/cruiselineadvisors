@@ -193,6 +193,8 @@ def _site_tag_ids():
 
 TEMPLATE_BY_TYPE = {
     "line": "call-gen-line-royal-caribbean.html",
+    # Call-first line pages: the Galveston template, fed no fares at all.
+    "line-call": "finder-rci-from-galveston.html",
     "port": "call-gen-port-galveston.html",
     # ship template v2 (operator ruling 2026-07-29, SHIP PAGES): full
     # master-enrichment page fed by the newsite ships dataset + the LP CSVs
@@ -1311,6 +1313,65 @@ def line_other_ports(page, deals, reg):
     title = f"Sailings from {port_labels.pop()}" if len(port_labels) == 1 else ""
     return out, title
 
+
+def _line_record(slug):
+    try:
+        doc = json.loads((ROOT / "newsite" / "data" / "cruise-lines.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return next((l for l in doc.get("lines", []) if l.get("slug") == slug), None)
+
+
+def callfirst_obj(slug, assets, used):
+    """Everything a CALL-FIRST line page shows, from verified data only.
+
+    Nine of the ten lines have no fare pipeline, so these pages print no price
+    anywhere. What they can honestly show is the fleet, the US ports the line
+    publishes, and its typical trip lengths, each straight out of the registries
+    with the source and date they were read. Nothing here is a sailing: we do not
+    have this line's sailings, and inventing one would be the exact failure this
+    system is built to prevent.
+    """
+    rec = _line_record(slug)
+    if not rec:
+        return None
+    it = rec.get("itineraries", {}) or {}
+    roster_path = ROOT / "newsite" / "data" / "ships" / f"{slug}.json"
+    try:
+        roster = json.loads(roster_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        roster = {}
+    ships = []
+    for i, sh in enumerate(roster.get("ships", [])):
+        if not sh.get("name"):
+            continue
+        ships.append({
+            "name": sh["name"],
+            "cls": sh.get("class") or "",
+            "guests": sh.get("guests"),
+            "year": sh.get("year"),
+            "img": ship_card_img(assets, used, i),
+        })
+    ports = [pp for pp in (it.get("home_ports") or []) if pp and not str(pp).startswith("VERIFY")]
+    regions = [r.get("region") for r in (it.get("regions") or [])
+               if isinstance(r, dict) and r.get("region") and not str(r["region"]).startswith("VERIFY")]
+    lengths = it.get("typical_lengths")
+    if isinstance(lengths, list):
+        lengths = ", ".join(str(x) for x in lengths if x and not str(x).startswith("VERIFY"))
+    return {
+        "lineLabel": rec.get("name") or slug,
+        "ships": ships,
+        "ports": ports,
+        "portsNote": it.get("_ports_note") or "",
+        "lengths": lengths if lengths and not str(lengths).startswith("VERIFY") else "",
+        "regions": regions,
+        "shipsSource": roster.get("roster_source") or roster.get("specs_source") or "",
+        "shipsVerified": roster.get("verified") or "",
+        "portsSource": it.get("source") or "",
+        "portsVerified": it.get("verified") or "",
+    }
+
+
 # ------------------------------------------------------------------ bake
 
 def bake(page, reg, today, used):
@@ -1328,7 +1389,9 @@ def bake(page, reg, today, used):
         deals = deals_for_ship(page, reg)
     else:
         deals = deals_for(page, reg["itins"], cap=None if (is_finder or is_itin) else 6)
-    need = 1 if page["page_type"] in ("itinerary", "ship") else 3
+    # A call-first line page has no fares by design, so it requires no deals.
+    need = 0 if page["page_type"] == "line-call" else (
+        1 if page["page_type"] in ("itinerary", "ship") else 3)
     if len(deals) < need:
         raise ValueError(f"{page['page_id']}: only {len(deals)} publishable deals "
                          f"for filter {page['deal_filter']!r}, needs >={need}")
@@ -1419,6 +1482,53 @@ def bake(page, reg, today, used):
                 f"{page['page_id']}: template {tpl_name} carries a RATES block but no "
                 "pricesCheckedOn declaration to stamp. Every printed fare must carry "
                 "the date it was seen.")
+    elif page["page_type"] == "line-call":
+        # CALL-FIRST LINE PAGE. Same template as the Galveston page, deliberately
+        # given an empty ITINERARIES array: there is no fare pipeline for this
+        # line, so the page prints no price anywhere and the fare slot becomes a
+        # call. Sections that are inherently port-scoped (the port guide) are
+        # switched off rather than rendered empty.
+        cf = callfirst_obj(line_slug, assets, used)
+        if not cf:
+            raise ValueError(f"{page['page_id']}: no line record for {line_slug!r}")
+        if not cf["ships"]:
+            raise ValueError(f"{page['page_id']}: {line_slug} has no ship roster, "
+                             "a call-first page with an empty fleet is an empty page")
+        hero = (asset_obj(assets, "ship-generic", "ship-hero", "hero", used)
+                or asset_obj(assets, "ship-generic", "ship-at-sea", "hero", used))
+        page_obj = {
+            "type": "line-call", "filter": rest if (rest := facet_parts(page["deal_filter"])[1]) else "",
+            "h1": page["h1"], "line": line_slug, "port": "",
+            "lineLabel": cf["lineLabel"], "portLabel": "",
+            "callFirst": True,
+        }
+        block = (
+            "/* ============================================================\n"
+            "   PAGE PARAMS + DATA - GENERATED by generate.py, DO NOT HAND-EDIT\n"
+            "   ============================================================ */\n"
+            f"const PAGE = {json.dumps(page_obj)};\n"
+            f'const PHONE_TEL = "{PHONE_TEL}";\n'
+            f'const PHONE_DISPLAY = "{PHONE_DISPLAY}";\n'
+            'let pricesCheckedOn = "";\n'
+            "const STAMP_MIXED = false;\n"
+            f"const H1_VARIANTS = {json.dumps({})};\n"
+            f"const SHIP_SLUGS = {json.dumps({})};\n"
+            f'const H1_BASE = {json.dumps(page["h1"])};\n'
+            f"const HERO = {json.dumps(hero)};\n"
+            f"const KNOW_IMG = {json.dumps(None)};\n"
+            f"const PRE_CRUISE = {json.dumps({})};\n"
+            f"const DOCS_SUMMARY = {json.dumps(docs_summary(reg['faqs']))};\n"
+            f"const PORTS = {json.dumps({})};\n"
+            f"const SHIPS = {json.dumps([], indent=1)};\n"
+            f"const ITINERARIES = {json.dumps([], indent=1)};\n"
+            f"const CALLFIRST = {json.dumps(cf, indent=1)};\n"
+            f"const FAQS = {json.dumps(faqs_for(page, [], reg['faqs']), indent=1)};\n"
+            f"const OFFERS = {json.dumps([], indent=2)};\n"
+            + client_fuse() + "\n"
+            "/* ================== END GENERATED DATA ====================== */"
+        )
+        html = FINDER_RE.sub(lambda _: block, html, count=1)
+
     elif is_finder:
         kind, rest = facet_parts(page["deal_filter"])
         itin_objs = []
