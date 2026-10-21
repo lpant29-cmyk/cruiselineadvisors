@@ -165,20 +165,37 @@ def graph(filters, dest, cache_dir, offline):
     return doc, "fetched"
 
 
+def ports_of(cfg):
+    """Every departure port this job refreshes.
+
+    _port was a single code when Galveston was the only port we priced. Miami
+    and Port Canaveral joined on 2026-10-21, so the job reads _ports (slug ->
+    code) and falls back to _port, which keeps an older config file working.
+    """
+    codes = list((cfg.get("_ports") or {}).values())
+    if cfg.get("_port") and cfg["_port"] not in codes:
+        codes.insert(0, cfg["_port"])
+    return codes
+
+
 def fetch_all(cache_dir, cfg, offline):
-    """Query A once, query B once per ship. Any failure aborts the whole run."""
+    """Query A once PER PORT, query B once per ship. Any failure aborts the run."""
     stamps = {}
-    a_doc, how = graph(f"departurePort:{cfg['_port']}",
-                       cache_dir / "graph-departurePort-GAL.json",
-                       cache_dir, offline)
-    stamps["A"] = how
+    a_docs = []
+    for code in ports_of(cfg):
+        doc, how = graph(f"departurePort:{code}",
+                         cache_dir / f"graph-departurePort-{code}.json",
+                         cache_dir, offline)
+        a_docs.append((code, doc))
+        stamps[f"A:{code}"] = how
+    a_doc = a_docs[0][1] if a_docs else None
     b_docs = {}
     for ship in cfg["_ships"]:
         b_docs[ship], how = graph(f"ship:{ship}",
                                   cache_dir / f"graph-ship-{ship}.json",
                                   cache_dir, offline)
         stamps[f"B:{ship}"] = how
-    return a_doc, b_docs, stamps
+    return a_docs, b_docs, stamps
 
 
 # ───────────────────────────────────────────────────────── derive
@@ -427,10 +444,17 @@ def main():
             json.dumps(report, indent=1), encoding="utf-8")
         return 2
 
-    a_idx = index(a_doc)
+    # Query A is now one response per port; merge their indexes. Query B is per
+    # ship and spans ports, so it is filtered to the ports we actually price
+    # rather than to one of them.
+    a_idx = {}
+    for _code, _doc in a_doc:
+        a_idx.update(index(_doc))
     b_idx = {}
+    _codes = set(ports_of(cfg))
     for ship, doc in b_docs.items():
-        b_idx.update(index(doc, port=cfg["_port"]))
+        for _code in _codes:
+            b_idx.update(index(doc, port=_code))
     derived = derive(a_idx, b_idx, groups, cutoff)
     (cache_dir / "_derived.json").write_text(
         json.dumps(derived, indent=1, default=str), encoding="utf-8")

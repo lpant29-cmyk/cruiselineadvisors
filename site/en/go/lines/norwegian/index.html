@@ -17,7 +17,7 @@
      Visual layer = cruiselineadvisors.com design system (navy #0A2540, teal #12919A,
      gold #FFB23E/#F0891F, coral #FF6B5A, Fraunces display + Inter UI). -->
 <title>Norwegian Cruises | CruiseLine Advisors</title>
-<meta name="description" content="Search real Royal Caribbean itineraries from Galveston by destination, month and length. Recent from-fares by month; call +1-833-684-4250 for exact dates and today's price.">
+<meta name="description" content="Norwegian Cruises. Real itineraries by destination, month and length, with recent from-fares where we have them. Call +1-833-684-4250 for exact dates, cabins and today&#x27;s fare.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800;900&display=swap">
@@ -1007,7 +1007,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["norwegian", "ncl"];
-const KW_OTHER = ["royal carribean", "royal caribbean", "holland america", "margaritaville", "virgin voyages", "celebrity", "silversea", "carnival", "princess", "virgin", "cunard", "disney", "costa", "rccl", "msc", "hal"];
+const KW_OTHER = ["royal carribean", "holland america", "royal caribbean", "margaritaville", "virgin voyages", "silversea", "celebrity", "princess", "carnival", "disney", "virgin", "cunard", "costa", "rccl", "msc", "hal"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1430,16 +1430,20 @@ function runSearch(scroll=true){
   /* the " · seen <date>" clause describes fares, so it is dropped once the
      client fuse has withheld every one of them (window.__faresShown). */
   count.textContent = list.length
-    ? `${list.length} itinerar${list.length===1?'y':'ies'}` + (window.__faresShown && !window.__faresShown()
-        ? ' · call for current fares'
-        : ` · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}`)
+    ? `${list.length} itinerar${list.length===1?'y':'ies'}` + (PAGE.noFares
+        ? ' · fares by phone'
+        : (window.__faresShown && !window.__faresShown()
+            ? ' · call for current fares'
+            : ` · from-fares ${month? 'for '+mLabel(month):'by month'} · seen ${pricesCheckedOn}`))
     : '';
   /* the stamp moved off the cards (operator, 2026-07-31) and sits here once as
      fine print. If the rendered fares do NOT share one date, STAMP_MIXED is
      baked true and we say so rather than let one date speak for all of them. */
   const fine=document.getElementById('resultsFine');
   if(fine) fine.textContent = list.length
-    ? ((window.__faresShown && !window.__faresShown())
+    ? (PAGE.noFares
+        ? 'We do not publish '+PAGE.lineLabel+' fares. Your dates, cabin and today\'s fare are quoted live on the call.'
+        : (window.__faresShown && !window.__faresShown())
         ? 'These fares are older than we are willing to publish, so your exact date is priced live on the call'
         : (typeof STAMP_MIXED!=='undefined' && STAMP_MIXED)
           ? 'From-fares checked on different dates within the last few days · exact dates priced by phone'
@@ -1469,7 +1473,7 @@ function runSearch(scroll=true){
           ${expanderHTML(it)}
           <div class="months">${chips}</div>
           ${it.noPrice
-            ? `<div class="price nofare"><span class="a">Fare on request</span></div>
+            ? `<div class="price nofare"><span class="a">${PAGE.noFares?'Fare by phone':'Fare on request'}</span></div>
           <p class="stamp">This sailing is repricing right now, so we are not publishing a figure we cannot stand behind. Call and we will quote it live.</p>`
             : `<div class="price"><span class="f">From</span><span class="a">$${p.toLocaleString()}</span><span class="f">pp${month? ' · '+mLabel(month):''}</span></div>
           `}
@@ -1682,7 +1686,13 @@ function renderOffers(){
 })();
 
 const KNOW = {
-  term:{t:"Royal Caribbean's Galveston terminal",d:"Purpose-built for the biggest ships, with fast check-in when you arrive at your assigned slot.",l:["Arrive at your check-in window, not before","Choose the earliest slot the moment it opens","Ask us which terminal your sailing uses","Porters take bags kerbside, tip cash"]},
+  /* PORT-LEVEL, NOT LINE-LEVEL. This read "Royal Caribbean's Galveston
+     terminal" and the Carnival page inherited it, naming the wrong line's
+     terminal on a Carnival sailing. Galveston has several cruise terminals
+     and which one a sailing uses depends on the ship, so the honest version
+     describes the port and tells the visitor to ask which terminal is theirs,
+     which is what the last bullet already said. */
+  term:{t:"The Galveston cruise terminals",d:"Galveston runs several cruise terminals on the Gulf side of the island, and which one your ship uses depends on the sailing. Check-in runs to assigned arrival slots.",l:["Arrive at your check-in window, not before","Choose the earliest slot the moment it opens","Ask us which terminal your sailing uses","Porters take bags kerbside, tip cash"]},
   park:{t:"Parking, solved",d:"Official port lots and established shuttle lots both work; the difference is price and walk time.",l:["Official lots: closest, premium price","Independent shuttle lots: cheaper","Book parking as early as the cruise","We send current recommendations with your quote"]},
   stay:{t:"The night before",d:"Flying in through Houston? Always stay the night before: the seawall puts you minutes from the ship.",l:["Hobby airport ~50 min, IAH ~75+ min","Seawall hotels: views + quick access","Park-and-cruise packages can save money","We'll suggest options for your budget"]},
   docs:{t:"Travel documents",d:"Closed-loop rules allow birth certificate + photo ID for US citizens; a passport protects you if plans change abroad.",l:["Passport recommended for everyone","Kids: birth certificates accepted closed-loop","Names must match documents exactly","We double-check for your exact sailing"]}
@@ -1692,7 +1702,10 @@ const KNOW = {
     KNOW.docs.d=esc(DOCS_SUMMARY)+' <a href="#faq">Full answer in Quick answers below.</a>';
   }
   if(typeof PRE_CRUISE!=='undefined'&&PRE_CRUISE&&PRE_CRUISE.text){
-    KNOW.explore={t:"A day early in Galveston",d:esc(PRE_CRUISE.text),l:PRE_CRUISE.items||[]};
+    /* the port's own name, not the template's: this tab shipped the word
+       Galveston into every page built from this file */
+    var _pc=((typeof PAGE!=='undefined'&&PAGE.portLabel)||'').split(',')[0].trim();
+    KNOW.explore={t:"A day early"+(_pc?" in "+_pc:""),d:esc(PRE_CRUISE.text),l:PRE_CRUISE.items||[]};
     const tabs=document.getElementById('knowTabs');
     const b=document.createElement('button');b.className='tab';b.dataset.k='explore';b.type='button';b.textContent='A day early';
     tabs.insertBefore(b,tabs.querySelector('[data-k="docs"]'));

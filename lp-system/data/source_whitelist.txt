@@ -12,6 +12,10 @@ royalcaribbean.com
 # official ship Fast Facts fact-sheet images (spec_source in newsite ships dataset) live here.
 royalcaribbeanmedia.com
 
+# Carnival - sailings, dates, ships and itineraries (NOT prices: the Carnival
+# rows store no fare, see bootstrap_carnival_port.py)
+carnival.com
+
 # Port authorities — port facts (terminals, parking, directions)
 portofgalveston.com
 

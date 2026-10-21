@@ -16,3 +16,8 @@ p014,line-call,celebrity,/en/go/lines/celebrity/,Celebrity Cruises,line:celebrit
 p015,line-call,virgin-voyages,/en/go/lines/virgin-voyages/,Virgin Voyages,line:virgin-voyages,virgin voyages cruises; virgin voyages cruise deals,building,3
 p016,line-call,costa,/en/go/lines/costa/,Costa Cruises,line:costa,costa cruises; costa cruise deals,building,3
 p017,line-call,silversea,/en/go/lines/silversea/,Silversea Cruises,line:silversea,silversea cruises; silversea cruise deals,building,3
+p018,combo,royal-caribbean-miami,/en/go/lines/royal-caribbean/from/miami/,Royal Caribbean Cruises from Miami,combo:royal-caribbean-miami,royal caribbean cruises from miami;royal caribbean miami cruise port;royal caribbean out of miami,building,1
+p019,combo,royal-caribbean-port-canaveral,/en/go/lines/royal-caribbean/from/port-canaveral/,Royal Caribbean Cruises from Port Canaveral,combo:royal-caribbean-port-canaveral,royal caribbean cruises from port canaveral;royal caribbean port canaveral;royal caribbean orlando cruise,building,1
+p020,combo,carnival-galveston,/en/go/lines/carnival/from/galveston/,Carnival Cruises from Galveston,combo:carnival-galveston,carnival cruises from galveston;carnival galveston cruise port;carnival out of galveston texas,building,1
+p021,combo,carnival-new-orleans,/en/go/lines/carnival/from/new-orleans/,Carnival Cruises from New Orleans,combo:carnival-new-orleans,carnival cruises from new orleans;carnival new orleans cruise port;carnival out of new orleans,building,1
+p022,combo,carnival-baltimore,/en/go/lines/carnival/from/baltimore/,Carnival Cruises from Baltimore,combo:carnival-baltimore,carnival cruises from baltimore;carnival baltimore cruise port;carnival out of baltimore maryland,building,1

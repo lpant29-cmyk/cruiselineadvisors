@@ -134,10 +134,18 @@ def main():
         # every single run trains everyone to stop reading it (qa-auditor,
         # 2026-10-16). Price and swing checks still run on every row.
         publishable = provenance_ok(r, whitelist)
+        # Some sources are SAILINGS-ONLY by ruling, not by accident. The
+        # Carnival rows store no fare at all (see bootstrap_carnival_port.py):
+        # their feed returns banded lead-in numbers we are not willing to
+        # publish, so every card asks for the fare by phone. "price missing" is
+        # the correct state for those rows, and flagging it on every run is the
+        # same red-every-run noise the comment above is about.
+        no_price_source = "no-price source" in (r.get("auto_status") or "")
         for field in ("price_interior", "price_balcony"):
             raw = r.get(field, "").strip()
             if not raw:
-                flags.append((rid, field, "price missing"))
+                if not no_price_source:
+                    flags.append((rid, field, "price missing"))
                 continue
             p = parse_price(raw)
             if p is None:

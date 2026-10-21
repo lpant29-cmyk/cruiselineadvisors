@@ -111,7 +111,18 @@ for pg in "${LP_PAGES[@]}"; do
       echo "       Then set status=retired for $pg in 09_pages.csv."
       continue ;;
   esac
-  f=$( { grep -rl "\"page_id\": \"$pg\"" "$ROOT/site" 2>/dev/null || true; } | head -1)
+  # The page's own URL from the registry, not a grep of the whole tree: that
+  # grep walked 220MB once PER PAGE, and at 18 pages it was several minutes of
+  # every deploy. The registry is the source of truth for where a page lives.
+  u=$(python3 - "$pg" <<'PYURL'
+import csv, sys
+for r in csv.DictReader(open("lp-system/data/09_pages.csv", encoding="utf-8")):
+    if r["page_id"] == sys.argv[1]:
+        print(r["url"].strip("/")); break
+PYURL
+)
+  f="$ROOT/site/$u/index.html"
+  [ -f "$f" ] || f=$( { grep -rl "\"page_id\": \"$pg\"" "$ROOT/site" 2>/dev/null || true; } | head -1)
   if [ -z "$f" ]; then
     echo "  FAIL $pg not found in site/"; fail=1; continue
   fi
@@ -138,7 +149,15 @@ rows = [r for r in g.read_csv(pathlib.Path("lp-system/data/03_itineraries.csv"))
         if r.get("itin_id", "").startswith("i")]
 if not rows:
     raise SystemExit("ERR no itinerary rows parsed")
-print("%d of %d" % (sum(1 for r in rows if not g.price_ok(r)), len(rows)))
+# Rows from a SAILINGS-ONLY source (the Carnival feed) carry no fare by ruling,
+# so counting them as "withheld" buries the signal this check exists for: a
+# number that is always huge is a number nobody reads. They are reported
+# separately instead.
+priced = [r for r in rows if "no-price source" not in (r.get("auto_status") or "")]
+nofare = len(rows) - len(priced)
+print("%d of %d%s" % (sum(1 for r in priced if not g.price_ok(r)), len(priced),
+                      (" (+%d sailings-only rows that carry no fare by design)" % nofare)
+                      if nofare else ""))
 PYEOF
 )
 case "$withheld" in

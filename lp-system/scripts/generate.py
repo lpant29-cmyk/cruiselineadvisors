@@ -133,6 +133,94 @@ def line_intro(page_obj):
             "and any promotion running, the price comes on the call.")
 
 
+def port_guide_ok(port_row):
+    """Does this port have a guide we are entitled to publish?
+
+    The template's guide prose is Galveston's: its terminal, its parking lots,
+    the drive from Houston's two airports, the seawall hotels. None of that is
+    generic. Printing it under "Miami" would be inventing facts about a
+    terminal nobody here has checked, which is the one thing this site does not
+    do. So the guide renders only for a port whose content row carries a source
+    URL and a retrieved date, and today that is Galveston
+    (portofgalveston.com, read 2026-07-29) and nothing else.
+
+    Miami and Port Canaveral have a blurb and highlights but no source and no
+    date, so they get the advisor instead, which is the honest answer to a
+    question we have not researched.
+    """
+    row = port_row or {}
+    return (str(row.get("source", "")).startswith("http")
+            and bool(str(row.get("retrieved_date", "")).strip()))
+
+
+ASK_ADVISOR_BLOCK = (
+    '<section class="blk wrap" id="portask">'
+    '<p class="kicker">{city}</p>'
+    '<h2>Ask an advisor about {city}</h2>'
+    '<p class="results-fine" style="max-width:62ch;margin:0 0 14px">'
+    'We publish terminal, parking and night-before detail only for ports we have '
+    'checked with the port authority, and we have not done that for {city} yet. '
+    'Rather than repeat another port&rsquo;s advice here, the answer comes from '
+    'someone on the phone.</p>'
+    '<a class="btn" href="tel:{tel}" onclick="try{{trackCall(\'port-ask\')}}catch(e){{}}">'
+    '\U0001F4DE Ask an advisor about {city}</a>'
+    '</section>')
+
+
+def port_page_chrome(html, page_obj, port_row):
+    """Make a PORT page say its own port's name, in the served HTML.
+
+    The template was written for Galveston and hardcodes it five times: the
+    locked "Sail from" option, the intro paragraph, the guide kicker and
+    heading, the guide's own content, and an "Ask a Galveston specialist"
+    button. Generated for Miami, every one of those shipped the word Galveston
+    onto a Miami page, which is the same leak that put "not Royal Caribbean" on
+    the Carnival page.
+    """
+    label = page_obj.get("portLabel") or ""
+    # port_city handles both punctuations in our data AND the bare trailing
+    # state code, so "New Orleans LA" becomes "New Orleans" and not "New".
+    city = port_city(label) or label
+    line = page_obj.get("lineLabel") or ""
+
+    # the locked port menu names THIS port
+    html, n = re.subn(r'(<select id="fFrom" disabled><option>)[^<]*(</option></select>)',
+                      lambda m: m.group(1) + html_mod.escape(label) + m.group(2),
+                      html, count=1)
+    if n == 0:
+        raise ValueError("port page: could not set the Sail-from label")
+
+    intro = (f"{line} sails from {label}. The fares below are recent from-prices by sail "
+             "month. The exact price for your dates, cabin and any promotion running is a "
+             "ten-minute call.")
+    html = re.sub(r'(<p id="introCopy">).*?(</p>)',
+                  lambda m: m.group(1) + html_mod.escape(intro) + m.group(2),
+                  html, count=1, flags=re.S)
+
+    if port_guide_ok(port_row):
+        return html
+
+    # No verified guide for this port: the section goes, and the advisor
+    # answers in its place rather than Galveston's parking advice.
+    html, n = re.subn(r'\s*<section class="blk wrap" id="know">.*?</section>',
+                      "\n" + ASK_ADVISOR_BLOCK.format(city=html_mod.escape(city), tel=PHONE_TEL),
+                      html, count=1, flags=re.S)
+    if n == 0:
+        raise ValueError("port page without a verified guide: could not remove the guide section")
+    html, n = re.subn(r'(<li id="navKnow"><a href="#)know(">)[^<]*(</a></li>)',
+                      lambda m: m.group(1) + "portask" + m.group(2)
+                      + html_mod.escape(city) + " Q&amp;A" + m.group(3),
+                      html, count=1)
+    # The guide's prose is a JS const. With the section gone it never renders,
+    # but it still SHIPS: a reviewer reading the Miami page's source finds
+    # Galveston's terminal, its parking lots and the drive from Houston. Dead
+    # code that names the wrong port is still the wrong port on the page.
+    html = re.sub(r"const KNOW = \{.*?\n\};",
+                  "const KNOW = {};  /* no verified guide for this port */",
+                  html, count=1, flags=re.S)
+    return html
+
+
 def strip_port_chrome(html, port_label):
     """Remove the one-port furniture from a LINE-LEVEL page, IN THE SERVED HTML.
 
@@ -1796,6 +1884,13 @@ def bake(page, reg, today, used):
         # A line-level page (/go/lines/{line}/ with no /from/) carries fares for
         # the one port we collect, so it says which port, and lists the line's
         # other US home ports as call-first rather than implying we price them.
+        # Does this page publish a fare AT ALL? The Carnival rows carry no price
+        # by design, and without this the page still announced "from-fares by
+        # month" above twelve cards that each said otherwise, and stamped the
+        # announcement with today's date. A page may not advertise a kind of
+        # information it does not have.
+        page_obj["noFares"] = not any(
+            (d.get("price_interior") or d.get("price_balcony")) and price_ok(d) for d in deals)
         other_ports, results_title = line_other_ports(page, deals, reg)
         if other_ports:
             page_obj["otherPorts"] = other_ports
@@ -1853,6 +1948,10 @@ def bake(page, reg, today, used):
             "/* ================== END GENERATED DATA ====================== */"
         )
         html = FINDER_RE.sub(lambda _: block, html, count=1)
+        if not line_level:
+            # A PORT page: make the template say this port's name, and drop the
+            # guide unless this port's facts are sourced. See port_page_chrome.
+            html = port_page_chrome(html, page_obj, port_row)
         if line_level:
             # Served HTML, not a load-time edit: see strip_port_chrome.
             html = strip_port_chrome(html, page_obj.get("portLabel", ""))
@@ -2087,6 +2186,15 @@ def bake(page, reg, today, used):
     html = re.sub(r"<h1>.*?</h1>", f"<h1>{page['h1']}</h1>", html, count=1, flags=re.S)
     html = re.sub(r"<title>.*?</title>",
                   f"<title>{page['h1']} | {AGENCY_NAME}</title>", html, count=1, flags=re.S)
+    # The template's meta description names Galveston, so every page generated
+    # from it described Galveston: the Miami page told a reviewer it was about
+    # a different port before a single pixel rendered.
+    _desc = (f"{page['h1']}. Real itineraries by destination, month and length, with recent "
+             f"from-fares where we have them. Call {PHONE_DISPLAY} for exact dates, cabins "
+             "and today's fare.")
+    html = re.sub(r'(<meta name="description" content=")[^"]*(">)',
+                  lambda m: m.group(1) + html_mod.escape(_desc, quote=True) + m.group(2),
+                  html, count=1)
 
     if 'name="robots" content="noindex' not in html:
         html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">', 1)
