@@ -253,7 +253,7 @@ def strip_port_chrome(html, port_label):
     return html
 
 
-def lp_credentials_html():
+def lp_credentials_html(line_slug=None):
     """The MAIN SITE's credentials band (newsite/footer.py) on every /go/ page,
     above the footer, with its CSS from newsite/cred_css.py.
 
@@ -275,7 +275,7 @@ def lp_credentials_html():
     try:
         import footer as site_footer
         import cred_css
-        band = site_footer.credentials_band("en", section_class="blk")
+        band = site_footer.credentials_band("en", section_class="blk", line_slug=line_slug)
         return "<style>" + cred_css.CRED_CSS + "</style>", band
     finally:
         sys.path.pop(0)
@@ -2201,7 +2201,7 @@ def bake(page, reg, today, used):
 
     # shared legal footer (operator ruling): replace the template's footer
     # with the partial-sourced compact block; link the TCPA consent line
-    cred_css_tag, cred_band = lp_credentials_html()
+    cred_css_tag, cred_band = lp_credentials_html(line_slug)
     html = re.sub(r"<footer>.*?</footer>",
                   lambda _: cred_band + lp_footer_html(final_tel, final_display),
                   html, count=1, flags=re.S)
