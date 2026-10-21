@@ -1052,6 +1052,21 @@ function renderCallFirst(){
         ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
          +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
   }
+  /* No fixed home-port list. Not a gap: for Silversea the port genuinely varies
+     by voyage, and Costa sails from no US port, and both lines publish that. The
+     heading drops the "US departure ports" claim, because the answer here is
+     that there is no such list. */
+  else if(dep && CALLFIRST.portsVaries){
+    dep.hidden=false;
+    dep.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
+      +'<p class="results-fine" style="margin:0 0 10px">'+esc(CALLFIRST.portsVaries)
+      +(CALLFIRST.portsVerified?' (verified '+esc(CALLFIRST.portsVerified)+')':'')+'</p>'
+      +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
+        +esc(CALLFIRST.lengths)+'</p>':'')
+      +(CALLFIRST.regions&&CALLFIRST.regions.length
+        ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
+         +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
+  }
 
   grid.classList.remove('allrows');
   grid.innerHTML=CALLFIRST.ships.map(function(sh,ix){

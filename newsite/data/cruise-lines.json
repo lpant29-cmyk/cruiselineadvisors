@@ -2897,9 +2897,10 @@
       "itineraries": {
         "home_ports": [
           "Miami, FL",
-          "Port Canaveral, FL",
-          "New York, NY",
-          "Galveston, TX"
+          "Port Canaveral (Orlando), FL",
+          "Galveston, TX",
+          "Seattle, WA",
+          "New York (Brooklyn), NY"
         ],
         "typical_lengths": "3 to 21 nights",
         "regions": [
@@ -2919,9 +2920,9 @@
           "location": "",
           "note": "VERIFY"
         },
-        "source": "VERIFY",
-        "verified": "PENDING",
-        "_ports_note": "msccruisesusa.com returns HTTP 401 to our fetcher, with a browser user-agent too. Hard blocked. Needs an operator browser read."
+        "source": "https://www.msccruisesusa.com/cruise-from",
+        "verified": "2026-10-21",
+        "_ports_note": "Read in a normal browser 2026-10-21 from MSC's own 'Cruise From' menu and the port pages behind it; msccruisesusa.com returns HTTP 401 to every automated fetch, browser user-agent included. /ports/new-orleans, /ports/fort-lauderdale and /ports/baltimore all return 404, so MSC does not publish those as departure ports and we do not list them."
       },
       "policies": {
         "deposit_timing": "VERIFY",
@@ -3803,10 +3804,21 @@
         "tender_port_note": "Some ports are reached by tender, a small boat that ferries guests ashore from a ship at anchor. Tendering can be difficult or impossible with a wheelchair or scooter, and the captain can cancel a tender call for weather on the day. If a specific port matters to your trip, confirm before booking whether it is a dock or a tender call."
       },
       "itineraries": {
-        "home_ports": [],
+        "home_ports": [
+          "Fort Lauderdale, FL",
+          "Galveston, TX",
+          "New Orleans, LA",
+          "New York, NY",
+          "Port Canaveral, FL",
+          "San Diego, CA",
+          "San Juan, PR",
+          "Vancouver, BC"
+        ],
         "typical_lengths": [],
         "regions": [],
-        "_ports_note": "Disney's own departure-ports pages are navigation shells that name no ports where our fetcher can read them. Needs an operator browser read."
+        "_ports_note": "Read in a normal browser 2026-10-21. Disney served its EU-locale version of the departure-ports overview, so this is Disney's own list as that locale presents it. Vancouver, BC is listed by Disney and is not a US port.",
+        "source": "https://disneycruise.disney.go.com/ports/overview/departure-ports/",
+        "verified": "2026-10-21"
       },
       "editorial": {
         "_note": "Our own words throughout, never the line's.",
@@ -4286,7 +4298,10 @@
         "home_ports": [],
         "typical_lengths": [],
         "regions": [],
-        "us_departure_note": "Costa has no United States departure port. Its ships sail from European and Asian home ports, so a Costa cruise from the US means flying to the ship. We have not yet verified the current season's home ports from Costa's own pages.",
+        "us_departure_note": {
+          "en": "Costa has no United States departure port. Its ships sail from European and Asian home ports, so a Costa cruise from the US means flying to the ship. We have not yet verified the current season's home ports from Costa's own pages.",
+          "es": "Costa no tiene ningún puerto de salida en Estados Unidos. Sus barcos navegan desde puertos base europeos y asiáticos, así que un crucero de Costa desde EE.UU. implica volar hasta el barco. Todavía no hemos verificado los puertos base de la temporada actual en las propias páginas de Costa."
+        },
         "verified": "2026-10-20"
       },
       "editorial": {
@@ -4473,7 +4488,13 @@
         "home_ports": [],
         "typical_lengths": [],
         "regions": [],
-        "_ports_note": "Silversea publishes no US embarkation-port list; its voyages are largely one-way and listed individually. Fort Lauderdale recurs but a homeport list is not published."
+        "_ports_note": "Checked in a normal browser 2026-10-21: Silversea publishes no US embarkation-port list. Voyages are listed individually with their own embark and disembark ports. Do not synthesise a home-port list from them.",
+        "us_departure_note": {
+          "en": "Silversea publishes no fixed United States home-port list. Each voyage is sold with its own embarkation port and many are one-way, so the departure port varies by voyage: Silver Dawn, for example, sails Miami to Los Angeles from 21 December 2026 to 8 January 2027, and several voyages leave from Fort Lauderdale. Ask an advisor which port your sailing leaves from.",
+          "es": "Silversea no publica una lista fija de puertos base en Estados Unidos. Cada travesía se vende con su propio puerto de embarque y muchas son de solo ida, así que el puerto de salida varía según la travesía: el Silver Dawn, por ejemplo, navega de Miami a Los Ángeles del 21 de diciembre de 2026 al 8 de enero de 2027, y varias travesías salen de Fort Lauderdale. Pregunta a un asesor de qué puerto sale tu salida."
+        },
+        "source": "https://www.silversea.com/destinations/central-america-caribbean-cruise/miami-fl-to-los-angeles-california-da261221018.html",
+        "verified": "2026-10-21"
       },
       "editorial": {
         "_note": "Our own words throughout, never the line's.",

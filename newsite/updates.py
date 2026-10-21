@@ -20,7 +20,7 @@ UPDATES = [
               "es": "Para cruceros reservados desde el 11 de mayo de 2026 (EE.UU. y Caribe), cambió el cargo por servicio diario de MSC."},
      "detail": {"en": "For MSC cruises booked from 11 May 2026 in the US and Caribbean region, the daily hotel service charge was updated. This charge is added automatically to your onboard account each night and is not part of the base fare. Bookings made before that date keep the earlier rate, and the amounts also vary by other regions. The current per-person amounts are on our MSC guide and comparison, and an advisor can confirm the exact charge for your specific sailing, region and cabin before you book.",
                 "es": "Para los cruceros de MSC reservados desde el 11 de mayo de 2026 en EE.UU. y el Caribe, se actualizó el cargo por servicio diario. Este cargo se añade automáticamente a tu cuenta a bordo cada noche y no forma parte de la tarifa base. Las reservas anteriores mantienen la tarifa previa, y los montos también varían por región. Los montos actuales están en nuestra guía y comparación de MSC, y un asesor puede confirmar el cargo exacto para tu crucero, región y camarote antes de reservar."},
-     "src": "https://www.msccruisesusa.com/manage-booking/before-you-go/service-charges"},
+     "src": "https://www.msccruisesusa.com/service-charges"},
 ]
 
 _BY_SLUG = {u["slug"]: u for u in UPDATES}

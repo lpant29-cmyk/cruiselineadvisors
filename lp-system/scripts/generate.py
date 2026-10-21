@@ -1623,6 +1623,21 @@ def callfirst_obj(slug, assets, used):
     _ok = _src.startswith(("http://", "https://")) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", _ver)
     ports = ([pp for pp in (it.get("home_ports") or []) if pp and not str(pp).startswith("VERIFY")]
              if _ok else [])
+    # The template prints this list under "publishes these US departure ports",
+    # so a Canadian port in it makes the heading a false statement. Disney's own
+    # departure-ports page lists Vancouver, BC alongside its seven US ports, and
+    # the main-site line page is right to carry the whole list; this field is the
+    # one that carries a US claim, so it is the one that has to filter.
+    ports = [pp for pp in ports if not _is_non_us(pp)]
+    # A line with no fixed home-port list is not a gap: "the departure port varies
+    # by voyage" is the answer the visitor came for. Silversea sells each voyage
+    # with its own embarkation port, Costa sails from no US port at all, and both
+    # publish that. Rendered only with a verified date behind it.
+    # The note may be {"en","es"}: the /go/ pages are English-only, so take "en".
+    varies = it.get("us_departure_note") or ""
+    varies = str(varies.get("en") or "") if isinstance(varies, dict) else str(varies)
+    if ports or not varies or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", _ver):
+        varies = ""
     regions = [r.get("region") for r in (it.get("regions") or [])
                if isinstance(r, dict) and r.get("region") and not str(r["region"]).startswith("VERIFY")]
     lengths = it.get("typical_lengths")
@@ -1632,6 +1647,7 @@ def callfirst_obj(slug, assets, used):
         "lineLabel": rec.get("name") or slug,
         "ships": ships,
         "ports": ports,
+        "portsVaries": varies,
         "portsNote": it.get("_ports_note") or "",
         "lengths": lengths if lengths and not str(lengths).startswith("VERIFY") else "",
         "regions": regions,

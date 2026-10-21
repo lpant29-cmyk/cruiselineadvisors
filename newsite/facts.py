@@ -712,3 +712,85 @@ LINE_FACTS["margaritaville-at-sea"]["included"] = {
 # move the stamp. A link we have not read is still a better link than one we know
 # is out of date, but it is not a re-verification and is not stamped as one.
 LINE_FACTS["msc"]["gratuities"]["src"] = "https://www.msccruisesusa.com/service-charges"
+
+# ── Operator browser read, 2026-10-21 ────────────────────────────────────
+# The five cells below were on the operator browser-read list because every
+# automated fetch of these domains fails (MSC 401, Cunard 403, Carnival's help
+# centre 403). An operator opened each page in a normal browser today and read
+# the values back, so these are first-party reads and they carry today's stamp.
+#
+# Two of the cells go the other way: they LOSE a published value. MSC and Cunard
+# both publish gratuity pages but neither publishes a "what's included" page the
+# operator could find today, and the prose we were serving had last been read on
+# 2026-07-18. The inclusions refresh window is 30 days, so Hard Rule 7 already
+# said that prose could not be presented as current. It becomes an "Ask an
+# advisor" gap rather than a sentence nobody has checked in three months.
+
+# MSC. The value already matched what the page says, which is the whole point of
+# the browser read: it confirms the figures and now also carries the under-2
+# exemption and the Far East tier, both printed on the same page.
+LINE_FACTS["msc"]["gratuities"] = {
+    "v": {"en": "Caribbean, Alaska and USA sailings booked from 11 May 2026: $17.00/night standard, "
+                "$23.00/night MSC Yacht Club, per guest. No charge for children under 2. "
+                "Far East sailings: $18.00/night standard, $21.00/night Yacht Club.",
+          "es": "Salidas al Caribe, Alaska y EE.UU. reservadas desde el 11 may 2026: $17.00/noche "
+                "estándar, $23.00/noche MSC Yacht Club, por huésped. Sin cargo para menores de 2 años. "
+                "Salidas a Lejano Oriente: $18.00/noche estándar, $21.00/noche Yacht Club."},
+    "src": "https://www.msccruisesusa.com/service-charges", "verified": "2026-10-21"}
+
+# No official MSC "what's included" page exists that the operator could find, so
+# the 2026-07-18 dining-drinks prose comes down. See the block comment above.
+LINE_FACTS["msc"]["included"] = {
+    "v": None, "src": None, "verified": None}
+
+# Cunard. Same figures we published, read today from the US page. The old src was
+# the en-gb path; US customers are quoted the en-us page and that is what was read.
+# The 18% bar service charge is on the same page and was not published before.
+LINE_FACTS["cunard"]["gratuities"] = {
+    "v": {"en": "$19.00/day per person for Queens Grill and Princess Grill Suites; $18.00/day per "
+                "person for Britannia and Britannia Club staterooms. An 18% service charge is added "
+                "to bar purchases.",
+          "es": "$19.00/día por persona en Queens Grill y Princess Grill Suites; $18.00/día por "
+                "persona en camarotes Britannia y Britannia Club. Se añade un cargo por servicio "
+                "del 18% a las compras en el bar."},
+    "src": "https://www.cunard.com/en-us/the-cunard-experience/service-charges",
+    "verified": "2026-10-21"}
+
+LINE_FACTS["cunard"]["included"] = {
+    "v": None, "src": None, "verified": None}
+
+# Carnival. The one cell the 2026-10-20 pass left blocked, now read in a browser
+# from the help-centre answer. Replaces the 2026-07-18 summary, which was right
+# but thin, and settles the warning in that pass's note: Guy's Burger Joint and
+# BlueIguana Cantina ARE included on the ships that carry them.
+LINE_FACTS["carnival"]["included"] = {
+    "v": {"en": "Included: your stateroom, production shows and comedians, lounges with live music, "
+                "the fitness centre, pools, hot tubs and waterslides, youth programmes for ages 2 to "
+                "17, Main Dining Room and Lido meals, the pizzeria, soft-serve ice cream, select "
+                "casual spots on some ships such as Guy's Burger Joint and BlueIguana Cantina, and "
+                "non-bottled water, lemonade, iced tea, hot chocolate, regular coffee and tea. "
+                "Extra: specialty restaurants such as The Steakhouse, Bonsai Sushi and Chef's Table, "
+                "cafes and coffee bars, room-service pizza delivery, alcohol, soda, specialty coffee "
+                "and bottled water.",
+          "es": "Incluido: tu camarote, espectáculos y comediantes, salones con música en vivo, "
+                "gimnasio, piscinas, jacuzzis y toboganes, programas juveniles de 2 a 17 años, "
+                "comidas en el Main Dining Room y el Lido, la pizzería, helado soft, algunos puntos "
+                "casuales en ciertos barcos como Guy's Burger Joint y BlueIguana Cantina, y agua no "
+                "embotellada, limonada, té helado, chocolate caliente, café y té regulares. "
+                "Aparte: restaurantes de especialidad como The Steakhouse, Bonsai Sushi y Chef's "
+                "Table, cafés y barras de café, entrega de pizza al camarote, alcohol, refrescos, "
+                "café de especialidad y agua embotellada."},
+    "src": "https://help.carnival.com/app/answers/detail/a_id/3861/", "verified": "2026-10-21"}
+
+# Disney. The US terms page states plainly that gratuities are NOT included in the
+# fare, and that is a verified fact worth publishing. Disney publishes no
+# per-night amount anywhere the operator could find, so the amount is not stated.
+# Same shape as the Celebrity deposit cell: say what the line publishes, say what
+# it does not, and send the number to the call.
+LINE_FACTS["disney"]["gratuities"] = {
+    "v": {"en": "Gratuities are not included in the cruise fare. Disney does not publish a "
+                "per-night amount, so ask the advisor what your sailing will add.",
+          "es": "Las propinas no están incluidas en la tarifa del crucero. Disney no publica un "
+                "monto por noche, así que pregunta al asesor cuánto añadirá tu salida."},
+    "src": "https://disneycruise.disney.go.com/contracts-terms-safety/terms-conditions/united-states/",
+    "verified": "2026-10-21"}

@@ -3318,7 +3318,7 @@ const OFFERS = [
   }
 ];
 const KW_OWN = ["royal caribbean", "rccl", "royal carribean"];
-const KW_OTHER = ["holland america", "virgin voyages", "margaritaville", "norwegian", "celebrity", "silversea", "carnival", "princess", "virgin", "disney", "cunard", "costa", "msc", "ncl", "hal"];
+const KW_OTHER = ["holland america", "virgin voyages", "margaritaville", "celebrity", "norwegian", "silversea", "carnival", "princess", "cunard", "disney", "virgin", "costa", "msc", "hal", "ncl"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -3890,6 +3890,21 @@ function renderCallFirst(){
       +'<div class="months" style="gap:8px">'
       +CALLFIRST.ports.map(function(p){return '<span class="mchip">'+esc(p)+'</span>';}).join('')
       +'</div>'
+      +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
+        +esc(CALLFIRST.lengths)+'</p>':'')
+      +(CALLFIRST.regions&&CALLFIRST.regions.length
+        ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
+         +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
+  }
+  /* No fixed home-port list. Not a gap: for Silversea the port genuinely varies
+     by voyage, and Costa sails from no US port, and both lines publish that. The
+     heading drops the "US departure ports" claim, because the answer here is
+     that there is no such list. */
+  else if(dep && CALLFIRST.portsVaries){
+    dep.hidden=false;
+    dep.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
+      +'<p class="results-fine" style="margin:0 0 10px">'+esc(CALLFIRST.portsVaries)
+      +(CALLFIRST.portsVerified?' (verified '+esc(CALLFIRST.portsVerified)+')':'')+'</p>'
       +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
         +esc(CALLFIRST.lengths)+'</p>':'')
       +(CALLFIRST.regions&&CALLFIRST.regions.length

@@ -822,14 +822,23 @@ const CALLFIRST = {
    }
   }
  ],
- "ports": [],
- "portsNote": "Disney's own departure-ports pages are navigation shells that name no ports where our fetcher can read them. Needs an operator browser read.",
+ "ports": [
+  "Fort Lauderdale, FL",
+  "Galveston, TX",
+  "New Orleans, LA",
+  "New York, NY",
+  "Port Canaveral, FL",
+  "San Diego, CA",
+  "San Juan, PR"
+ ],
+ "portsVaries": "",
+ "portsNote": "Read in a normal browser 2026-10-21. Disney served its EU-locale version of the departure-ports overview, so this is Disney's own list as that locale presents it. Vancouver, BC is listed by Disney and is not a US port.",
  "lengths": "",
  "regions": [],
  "shipsSource": "https://disneycruise.disney.go.com/ships/",
  "shipsVerified": "2026-10-20",
- "portsSource": "",
- "portsVerified": ""
+ "portsSource": "https://disneycruise.disney.go.com/ports/overview/departure-ports/",
+ "portsVerified": "2026-10-21"
 };
 const FAQS = [
  {
@@ -847,7 +856,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["disney"];
-const KW_OTHER = ["royal caribbean", "holland america", "royal carribean", "margaritaville", "virgin voyages", "norwegian", "celebrity", "silversea", "carnival", "princess", "cunard", "virgin", "costa", "rccl", "msc", "ncl", "hal"];
+const KW_OTHER = ["holland america", "royal carribean", "royal caribbean", "virgin voyages", "margaritaville", "norwegian", "celebrity", "silversea", "carnival", "princess", "cunard", "virgin", "costa", "rccl", "ncl", "msc", "hal"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1419,6 +1428,21 @@ function renderCallFirst(){
       +'<div class="months" style="gap:8px">'
       +CALLFIRST.ports.map(function(p){return '<span class="mchip">'+esc(p)+'</span>';}).join('')
       +'</div>'
+      +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
+        +esc(CALLFIRST.lengths)+'</p>':'')
+      +(CALLFIRST.regions&&CALLFIRST.regions.length
+        ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
+         +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
+  }
+  /* No fixed home-port list. Not a gap: for Silversea the port genuinely varies
+     by voyage, and Costa sails from no US port, and both lines publish that. The
+     heading drops the "US departure ports" claim, because the answer here is
+     that there is no such list. */
+  else if(dep && CALLFIRST.portsVaries){
+    dep.hidden=false;
+    dep.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
+      +'<p class="results-fine" style="margin:0 0 10px">'+esc(CALLFIRST.portsVaries)
+      +(CALLFIRST.portsVerified?' (verified '+esc(CALLFIRST.portsVerified)+')':'')+'</p>'
       +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
         +esc(CALLFIRST.lengths)+'</p>':'')
       +(CALLFIRST.regions&&CALLFIRST.regions.length

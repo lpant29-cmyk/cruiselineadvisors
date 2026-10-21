@@ -1101,6 +1101,7 @@ const CALLFIRST = {
   "Seattle, Washington",
   "Tampa, Florida"
  ],
+ "portsVaries": "",
  "portsNote": "The 13 US ports Carnival's own Cruise From page lists. Deployment rotates by season.",
  "lengths": "2 to 8 nights (most are 3-7 nights)",
  "regions": [
@@ -1133,7 +1134,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["carnival"];
-const KW_OTHER = ["holland america", "royal caribbean", "royal carribean", "virgin voyages", "margaritaville", "silversea", "norwegian", "celebrity", "princess", "disney", "cunard", "virgin", "costa", "rccl", "hal", "ncl", "msc"];
+const KW_OTHER = ["royal carribean", "holland america", "royal caribbean", "virgin voyages", "margaritaville", "silversea", "norwegian", "celebrity", "princess", "virgin", "disney", "cunard", "costa", "rccl", "msc", "hal", "ncl"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1705,6 +1706,21 @@ function renderCallFirst(){
       +'<div class="months" style="gap:8px">'
       +CALLFIRST.ports.map(function(p){return '<span class="mchip">'+esc(p)+'</span>';}).join('')
       +'</div>'
+      +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
+        +esc(CALLFIRST.lengths)+'</p>':'')
+      +(CALLFIRST.regions&&CALLFIRST.regions.length
+        ?'<p class="results-fine" style="margin:4px 0 0"><b>Where it sails:</b> '
+         +CALLFIRST.regions.map(esc).join(' · ')+'</p>':'');
+  }
+  /* No fixed home-port list. Not a gap: for Silversea the port genuinely varies
+     by voyage, and Costa sails from no US port, and both lines publish that. The
+     heading drops the "US departure ports" claim, because the answer here is
+     that there is no such list. */
+  else if(dep && CALLFIRST.portsVaries){
+    dep.hidden=false;
+    dep.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
+      +'<p class="results-fine" style="margin:0 0 10px">'+esc(CALLFIRST.portsVaries)
+      +(CALLFIRST.portsVerified?' (verified '+esc(CALLFIRST.portsVerified)+')':'')+'</p>'
       +(CALLFIRST.lengths?'<p class="results-fine" style="margin:10px 0 0"><b>Trip lengths:</b> '
         +esc(CALLFIRST.lengths)+'</p>':'')
       +(CALLFIRST.regions&&CALLFIRST.regions.length

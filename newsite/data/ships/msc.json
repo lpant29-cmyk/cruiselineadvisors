@@ -2,8 +2,42 @@
   "line": "msc",
   "roster_source": "https://www.mscpressarea.com/en_INT/corporate-information/the-fleet/",
   "specs_source": "",
-  "verified": "2026-09-23",
+  "verified": "2026-10-21",
   "ships": [
+    {
+      "name": "MSC World Atlantic",
+      "class": "World",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Read in a normal browser 2026-10-21 from msccruisesusa.com/ships/msc-world-atlantic: new World-class ship sailing from Port Canaveral to the Eastern and Western Caribbean from winter 2027. The page publishes no tonnage, guest capacity or delivery year, so those stay empty.",
+      "spec_source": "https://www.msccruisesusa.com/ships/msc-world-atlantic",
+      "exp": {
+        "deploy_note": {
+          "en": "Eastern and Western Caribbean sailings from Port Canaveral, Florida, from winter 2027.",
+          "es": "Salidas al Caribe Oriental y Occidental desde Port Canaveral, Florida, a partir del invierno de 2027."
+        },
+        "exp_source": "https://www.msccruisesusa.com/ships/msc-world-atlantic"
+      }
+    },
+    {
+      "name": "MSC World Asia",
+      "class": "World",
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Read in a normal browser 2026-10-21 from msccruisesusa.com/ships/msc-world-asia: new World-class ship sailing the Mediterranean from winter 2026, 7-night itineraries from Marseille, Civitavecchia (Rome) and Genoa. Not a US ship, no US departure port. The page publishes no tonnage, guest capacity or delivery year, so those stay empty.",
+      "spec_source": "https://www.msccruisesusa.com/ships/msc-world-asia",
+      "exp": {
+        "deploy_note": {
+          "en": "Seven-night Mediterranean sailings from winter 2026, leaving from Marseille, Civitavecchia for Rome, and Genoa. She does not sail from a United States port.",
+          "es": "Salidas de siete noches por el Mediterráneo desde el invierno de 2026, desde Marsella, Civitavecchia para Roma, y Génova. No navega desde ningún puerto de Estados Unidos."
+        },
+        "exp_source": "https://www.msccruisesusa.com/ships/msc-world-asia"
+      }
+    },
     {
       "name": "MSC World America",
       "class": "World",
@@ -1743,6 +1777,8 @@
     }
   ],
   "needs_manual": [
+    "MSC World Atlantic: gross tonnage + guest capacity + delivery year (not printed on the ship page)",
+    "MSC World Asia: gross tonnage + guest capacity + delivery year (not printed on the ship page)",
     "MSC Virtuosa: gross tonnage + guest capacity (not printed on official delivery/christening pages)",
     "MSC Meraviglia: year entered service + gross tonnage (christening page gave guests only)",
     "MSC Seascape: gross tonnage + guest capacity (official pages gave cabins/features only)",
@@ -1762,5 +1798,5 @@
     "Best manual official source for legacy-ship specs: each ship's page on msccruisesusa.com/cruise/ships/<ship> and the deck-plan PDFs at virtual-tours.msccruises.com (both 403 to automated fetch; readable in a normal browser)."
   ],
   "flag": "Roster CONFIRMED officially: the MSC press-area 'The Fleet' page (mscpressarea.com/en_INT/corporate-information/the-fleet/) was readable and lists all 23 in-service ships with their class order; it does NOT carry per-ship year/tonnage/guests. Consumer fleet pages (msccruises.com/discover/fleet, msccruisesusa.com, msccruises.com/int/our-cruises/ships) and the virtual-tours deck-plan PDFs all returned HTTP 403 to automated fetch. Per-ship specs were sourced from official MSC press-area press releases and christening pages, which only carry hard specs for Meraviglia-generation-and-newer ships (2017+). All 12 pre-2017 ships (Fantasia, Musica, Lirica classes) have class confirmed but year/tonnage/guests unreadable officially -> null + needs_manual. No third-party sources used.",
-  "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
+  "roster_note": "Roster re-checked 2026-10-21 against MSC's own USA fleet page (msccruisesusa.com/ships), read in a normal browser because that domain returns HTTP 401 to every automated fetch. That page lists 25 ships. We held 23 and were missing exactly MSC World Atlantic and MSC World Asia; both are now added and the count reconciles at 25, with no removals or renames. Specs were NOT re-checked this pass and still carry their original spec_source dates. Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

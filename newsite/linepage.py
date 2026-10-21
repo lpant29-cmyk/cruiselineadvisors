@@ -47,6 +47,20 @@ def _gap(v):
     return v is None or (isinstance(v, str) and (v.strip() == "" or v.startswith("VERIFY") or v == "PENDING"))
 
 
+def _dep_note(note, lang):
+    """us_departure_note in the page's own language, or "" if we have none.
+
+    This field is a SENTENCE, not a place fragment, so a plain string renders
+    English prose on the /es/ page. Costa's note did exactly that. A dict
+    {"en","es"} is the shape to use; a bare string is still accepted for any row
+    that has not been translated yet, and falls back to English rather than
+    going silent, because the fact itself matters more than the language.
+    """
+    if isinstance(note, dict):
+        note = note.get(lang) or note.get("en")
+    return "" if _gap(note) else note
+
+
 def _v(v, lang):
     # An unverified cell prints no value and offers the call instead of dead-ending.
     if _gap(v):
@@ -374,12 +388,12 @@ def rich_sections(lang, slug):
     if hp:
         cards = "".join(_port_card(x) for x in hp)
         ports_html = f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b></p><div class="port-grid">{cards}</div>'
-    elif not _gap(it.get("us_departure_note")):
+    elif _dep_note(it.get("us_departure_note"), lang):
         # "This line has no US departure port" is a FACT, and rendering it as "Not yet verified"
         # would hide a verified answer behind a gap. Costa is the case: a visitor searching for a
         # Costa cruise from a US port needs the real answer, not silence.
         ports_html = (f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> '
-                      f'{it["us_departure_note"]}</p>')
+                      f'{_dep_note(it.get("us_departure_note"), lang)}</p>')
     else:
         ports_html = (f'<p class="rsec-sub" style="margin-top:16px"><b>{_L["ports"][lang]}:</b> '
                       f'{ask_advisor(lang, "ports")}</p>')
