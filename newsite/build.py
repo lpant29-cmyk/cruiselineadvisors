@@ -177,6 +177,18 @@ def build():
           f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{body}</urlset>')
     write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 
+    # Ships that left a line's fleet keep their old URL served by the host, so
+    # the page that made the now-false claim is REPLACED rather than deleted.
+    # See newsite/retired.py for why a deletion is not enough here.
+    from retired import RETIRED_SHIPS, stub_html
+    from config import PHONE_HREF, PHONE_DISPLAY
+    n_retired = 0
+    for entry in RETIRED_SHIPS:
+        for lang in LANGS:
+            rel = f"{lang}/lines/{entry['from_line']}/ships/{entry['slug']}/index.html"
+            write(rel, stub_html(lang, entry, PHONE_HREF, PHONE_DISPLAY, SITE_URL))
+            n_retired += 1
+
     # static assets → dist root (favicon, icons, og-image, manifest)
     assets = os.path.join(ROOT, "assets")
     n_assets = 0
@@ -194,6 +206,7 @@ def build():
     print(f"Built {len(written)} pages (+ root, 404, sitemap, robots) into dist/")
     print(f"  facts verified: {done}/{total}")
     print(f"  ship rosters: {sl} lines, {sn} ships")
+    print(f"  retired-ship stubs: {n_retired} (URLs kept answering, claim removed)")
     if hits:
         print("  ⚠ BANNED-TERM HITS:", hits)
     else:

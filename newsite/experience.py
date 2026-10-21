@@ -216,6 +216,7 @@ def _note_is_clean(note):
     return bool(note) and not any(m in low for m in _AWKWARD_NOTE)
 
 
+
 def _where_when(lang, line_slug, exp):
     """Render 'Where & when it sails' as visual region cards derived from the ship's itinerary
     (metasearch.ship_regions), each linking to its destination guide. Awkward scraped deploy_notes
@@ -227,7 +228,13 @@ def _where_when(lang, line_slug, exp):
     reg_info = {r["id"]: r for r in _REGIONS}
     dest_slugs = {d["slug"] for d in DESTINATIONS}
     regions = ship_regions(line_slug, exp or {})
-    note = (exp or {}).get("deploy_note")
+    # deploy_note is a plain string for the 104 notes the enrichment pass wrote,
+    # which are place fragments ("Galveston, TX, year-round Western Caribbean")
+    # that read the same either way. A note written as a SENTENCE has to be
+    # bilingual or the /es/ page shows English prose, so it may also be a
+    # {"en": ..., "es": ...} dict and is picked by language here.
+    from metasearch import note_text
+    note = note_text((exp or {}).get("deploy_note"), lang)
 
     if _note_is_clean(note) and len(note) < 200:
         lead = f'<p class="xsub xsub-lead">{note}</p>'

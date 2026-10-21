@@ -82,10 +82,12 @@ else
 fi
 
 # No page may promise a better/exclusive/unpublished rate from calling us.
-# newsite/build.py runs this over the main site; it has to run again HERE
-# because the /go/ pages are generated after that build, and they are the
-# pages where this wording keeps appearing.
-if python3 "$ROOT/newsite/rate_claim_guard.py" "$ROOT/site" > /tmp/rate_claim_guard.out 2>&1; then
+# newsite/build.py already ran this over the whole main site in step 1, and
+# site/ is that build plus the /go/ pages. So this run covers ONLY /go/, which
+# is generated after that build and is where the wording keeps coming back.
+# Pointing it at all of site/ re-scanned 539 pages that were just cleared and
+# put another minute on every deploy for nothing.
+if python3 "$ROOT/newsite/rate_claim_guard.py" "$ROOT/site/en/go" > /tmp/rate_claim_guard.out 2>&1; then
   echo "  ok   no better/exclusive/unpublished rate claims"
 else
   echo "  FAIL rate-claim guard:"; sed 's/^/       /' /tmp/rate_claim_guard.out; fail=1

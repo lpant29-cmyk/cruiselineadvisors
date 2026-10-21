@@ -2,7 +2,7 @@
   "line": "carnival",
   "roster_source": "https://www.carnival.com/cruise-ships",
   "specs_source": "https://www.carnival-news.com/ship/ (per-ship official fact sheets)",
-  "verified": "2026-09-23",
+  "verified": "2026-10-21",
   "ships": [
     {
       "name": "Carnival Jubilee",
@@ -4165,11 +4165,47 @@
         "who_for": "Australian families and groups after a big-ship South Pacific holiday from local ports.",
         "deploy_note": "Australia, South Pacific & Australia"
       }
+    },
+    {
+      "name": "Carnival Festivale",
+      "class": "Excel",
+      "year": 2027,
+      "tonnage": null,
+      "guests": null,
+      "guests_basis": null,
+      "features": [],
+      "notes": "Announced, not yet in service. carnival.com/cruise-ships: 'Carnival Festivale is our next ship... Cruise from Port Canaveral in 2027. joining the award-winning Excel Class'. No capacity or tonnage published yet, and the ship has no fact sheet on carnival-news.com, so those stay empty.",
+      "spec_source": "https://www.carnival.com/cruise-ships/carnival-festivale",
+      "exp": {
+        "deploy_note": {
+          "en": "Sailing from Port Canaveral, Florida, from 2027.",
+          "es": "Navegará desde Port Canaveral, Florida, a partir de 2027."
+        },
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-festivale"
+      }
+    },
+    {
+      "name": "Carnival Tropicale",
+      "class": null,
+      "year": 2028,
+      "tonnage": null,
+      "guests": null,
+      "guests_basis": null,
+      "features": [],
+      "notes": "Announced, not yet in service. carnival.com/cruise-ships: 'Our next ship, Carnival Tropicale, will set sail with a tropical flair from Galveston in 2028.' Carnival publishes no class, capacity or tonnage for it yet.",
+      "spec_source": "https://www.carnival.com/cruise-ships/carnival-tropicale",
+      "exp": {
+        "deploy_note": {
+          "en": "Sailing from Galveston, Texas, from 2028.",
+          "es": "Navegará desde Galveston, Texas, a partir de 2028."
+        },
+        "exp_source": "https://www.carnival.com/cruise-ships/carnival-tropicale"
+      }
     }
   ],
   "needs_manual": [
     "features: Official fact sheets list no named onboard venues/features for any ship; per-ship features left empty. Named features would need to be read from each carnival.com/cruise-ships/<ship> page if desired."
   ],
-  "flag": "All 29 in-service ships have official specs (name/class/year/tonnage/guests) from Carnival newsroom fact sheets. Roster confirmed against carnival.com/cruise-ships; excluded not-yet-in-service Carnival Tropicale (2028) and Carnival Festivale (2027). Class labels are Carnival's official fact-sheet wording (e.g. 'Venice Class' for Firenze/Venezia, 'Adventure Class' for Adventure/Encounter, 'Splendor Class', 'Sunshine Class'). Carnival Sunrise year (1999) is the vessel's original service entry per its official fact sheet; renamed 2019. WARNING 2026-09-23: this line now lists pre-service ships inline in its main fleet grid rather than in a separate coming-soon area, so the grid is NOT safe to treat as the in-service fleet. Read each ship's arrival copy before adding it.",
+  "flag": "All 29 in-service ships have official specs (name/class/year/tonnage/guests) from Carnival newsroom fact sheets. Roster confirmed against carnival.com/cruise-ships; excluded not-yet-in-service Carnival Tropicale (2028) and Carnival Festivale (2027). Class labels are Carnival's official fact-sheet wording (e.g. 'Venice Class' for Firenze/Venezia, 'Adventure Class' for Adventure/Encounter, 'Splendor Class', 'Sunshine Class'). Carnival Sunrise year (1999) is the vessel's original service entry per its official fact sheet; renamed 2019. WARNING 2026-09-23: this line now lists pre-service ships inline in its main fleet grid rather than in a separate coming-soon area, so the grid is NOT safe to treat as the in-service fleet. Read each ship's arrival copy before adding it. Re-checked against carnival.com/cruise-ships on 2026-10-21: that page links 31 ships, two of which were missing here. Carnival Festivale (Port Canaveral 2027, Excel Class) and Carnival Tropicale (Galveston 2028) are now included with only the facts Carnival actually publishes for them, which is the name, the year and the home port.",
   "roster_note": "Roster membership re-confirmed 2026-09-23 against the line's own fleet page; all 131 ships across the 8 lines matched with no additions, removals or renames. Specs (tonnage, year, guests) were NOT re-checked this pass and still carry their original spec_source dates."
 }

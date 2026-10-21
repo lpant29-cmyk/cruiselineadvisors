@@ -36,9 +36,24 @@ _REGION_ALIAS = {
 _VALID_REGIONS = {r["id"] for r in _REGIONS}
 
 
+def note_text(note, lang="en"):
+    """deploy_note as a plain string.
+
+    Most notes are place fragments written once and read the same in both
+    languages ("Galveston, TX, year-round Western Caribbean"). A note written
+    as a sentence has to be bilingual, so it may instead be {"en": ..., "es":
+    ...}; everything that reads a note goes through here so a dict can never
+    reach a .lower() again. Region matching always uses the English text, since
+    the region aliases are English.
+    """
+    if isinstance(note, dict):
+        return note.get(lang) or note.get("en") or ""
+    return note or ""
+
+
 def region_ids_for_note(note):
     """Region ids a ship actually sails, derived from its itinerary note (single source of truth)."""
-    s = (note or "").lower()
+    s = note_text(note, "en").lower()
     return [rid for rid, al in _REGION_ALIAS.items() if rid in _VALID_REGIONS and any(a in s for a in al)]
 
 
@@ -58,8 +73,9 @@ _REG_BY_ID = {r["id"]: r for r in _REGIONS}
 
 
 def note_is_clean(note):
-    low = (note or "").lower()
-    return bool(note) and not any(m in low for m in _AWKWARD_NOTE)
+    txt = note_text(note)
+    low = txt.lower()
+    return bool(txt) and not any(m in low for m in _AWKWARD_NOTE)
 
 
 def route_display(line_slug, exp, lang="en"):

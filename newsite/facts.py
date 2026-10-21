@@ -697,3 +697,18 @@ LINE_FACTS["margaritaville-at-sea"]["included"] = {
                 "del bar, refrescos, restaurantes de especialidad, casino, fotografías, paquetes de "
                 "Wi-Fi, cargos del club infantil, estacionamiento en el puerto y propinas."},
     "src": "https://www.margaritavilleatsea.com/policies/faq", "verified": "2026-10-20"}
+
+# ── MSC service-charges link, 2026-10-21 ──────────────────────────────────
+# The path we cited, msccruisesusa.com/manage-booking/before-you-go/service-charges,
+# no longer carries the current rates: it still shows the $16 / $20 figures that
+# applied to bookings made before 11 May 2026. MSC's live page is now
+# msccruisesusa.com/service-charges, titled "Hotel Service Charges & Gratuities",
+# and it carries the $17 / $23 figures we already publish.
+#
+# ONLY THE LINK MOVES. The verified stamp stays at 2026-09-23, because MSC returns
+# 401 to our fetcher on every path, browser user-agent included, so nobody here has
+# actually read the new page: its content is known only from a search index. This
+# cell stays on the operator browser-read list, and an operator read is what will
+# move the stamp. A link we have not read is still a better link than one we know
+# is out of date, but it is not a re-verification and is not stamped as one.
+LINE_FACTS["msc"]["gratuities"]["src"] = "https://www.msccruisesusa.com/service-charges"

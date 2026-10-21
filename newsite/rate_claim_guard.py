@@ -33,6 +33,11 @@ counting "you" would flag the entire pricing guide.
 The exclusive/unpublished group needs no self-reference: nothing on this site
 has a legitimate reason to call a fare unpublished, secret or insider.
 
+Runs about a minute over the built tree, which is most of what it costs to
+scan every page's prose AND its scripts. The /go/ copy lives in template
+literals inside each page's own JavaScript, which is exactly where the worst
+of these sentences was found, so narrowing the scan to <main> would miss them.
+
 usage: python3 rate_claim_guard.py <dir> [<dir>...]   exit 1 on any hit
 """
 import html, pathlib, re, sys
@@ -66,6 +71,9 @@ PATTERNS = [
     # "unlock ... rates"
     (r"\bunlock\w*\b[^.;]{0,30}" + MONEY, "unlock-a-rate claim", True),
 ]
+# Nine separate passes, deliberately. Folding them into one alternation was
+# tried and came out SLOWER (65s vs 54s over the built tree): the combined
+# branch set backtracks more than nine cheap scans do.
 RX = [(re.compile(p, re.I), why, needs) for p, why, needs in PATTERNS]
 
 targets = sys.argv[1:] or [str(pathlib.Path(__file__).resolve().parent.parent / "site")]
@@ -85,12 +93,20 @@ for base in targets:
         for rx, why, needs_self in RX:
             for m in rx.finditer(text):
                 if needs_self:
-                    # the sentence the match sits in, not a fixed character window:
-                    # a window straddles two sentences and borrows the wrong subject
-                    lo = max((text.rfind(c, 0, m.start()) for c in ".;!?¡¿"), default=-1) + 1
-                    hi = min((h for h in (text.find(c, m.end()) for c in ".;!?") if h != -1),
-                             default=len(text))
-                    if not SELF.search(text[lo:hi]):
+                    # The sentence the match sits in, not a fixed character window:
+                    # a window straddles two sentences and borrows the wrong subject.
+                    # Searched inside a bounded slice, because the first version
+                    # called rfind from the match back to byte zero for each of six
+                    # terminators, on every match, on a 470KB page. That is
+                    # quadratic and it hung the build for minutes. A sentence longer
+                    # than SPAN characters does not exist in this copy.
+                    SPAN = 400
+                    a, b = max(0, m.start() - SPAN), min(len(text), m.end() + SPAN)
+                    before, after = text[a:m.start()], text[m.end():b]
+                    lo = max((before.rfind(c) for c in ".;!?¡¿"), default=-1) + 1
+                    ends = [h for h in (after.find(c) for c in ".;!?") if h != -1]
+                    hi = m.end() + (min(ends) if ends else len(after))
+                    if not SELF.search(text[a + lo:hi]):
                         continue
                 hits.setdefault((m.group(0).strip().lower(), why), set()).add(str(f))
 

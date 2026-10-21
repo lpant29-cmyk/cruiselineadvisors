@@ -1,8 +1,8 @@
 {
   "line": "costa",
-  "roster_source": "https://www.costacruises.com/fleet/",
+  "roster_source": "https://www.costacruises.com/fleet.html",
   "specs_source": null,
-  "verified": "2026-10-20",
+  "verified": "2026-10-21",
   "ships": [
     {
       "name": "Costa Deliziosa",
@@ -14,6 +14,24 @@
       "notes": null
     },
     {
+      "name": "Costa Diadema",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Listed on costacruises.com/fleet.html. Costa's ship pages render their specifications in JavaScript and serve none in the HTML, so no figures are published here rather than taken from a third party."
+    },
+    {
+      "name": "Costa Fascinosa",
+      "class": null,
+      "year": null,
+      "tonnage": null,
+      "guests": null,
+      "features": [],
+      "notes": "Listed on costacruises.com/fleet.html. Costa's ship pages render their specifications in JavaScript and serve none in the HTML, so no figures are published here rather than taken from a third party."
+    },
+    {
       "name": "Costa Favolosa",
       "class": null,
       "year": null,
@@ -23,22 +41,13 @@
       "notes": null
     },
     {
-      "name": "Costa Firenze",
+      "name": "Costa Pacifica",
       "class": null,
       "year": null,
       "tonnage": null,
       "guests": null,
       "features": [],
-      "notes": null
-    },
-    {
-      "name": "Costa Fortuna",
-      "class": null,
-      "year": null,
-      "tonnage": null,
-      "guests": null,
-      "features": [],
-      "notes": null
+      "notes": "Listed on costacruises.com/fleet.html. Costa's ship pages render their specifications in JavaScript and serve none in the HTML, so no figures are published here rather than taken from a third party."
     },
     {
       "name": "Costa Serena",
@@ -66,15 +75,6 @@
       "guests": null,
       "features": [],
       "notes": null
-    },
-    {
-      "name": "Costa Venezia",
-      "class": null,
-      "year": null,
-      "tonnage": null,
-      "guests": null,
-      "features": [],
-      "notes": null
     }
   ],
   "needs_manual": [
@@ -83,5 +83,5 @@
     "guests",
     "class"
   ],
-  "flag": "Eight ships, taken from the fleet pages that exist under costacruises.com/fleet/. Costa's fleet index did not load for us, so this may not be the complete current roster. No specifications published on the pages we reached."
+  "flag": "Eight ships, the exact set linked from costacruises.com/fleet.html on 2026-10-21. Costa Firenze and Costa Venezia were removed: they sail for Carnival now and appear nowhere on Costa's fleet page. Costa Fortuna was removed for the same reason, no mention on the fleet page, so we do not call it a current Costa ship. The ship pages are JavaScript-rendered and serve no specifications in HTML, so year, tonnage, guests and class stay null for the whole roster."
 }

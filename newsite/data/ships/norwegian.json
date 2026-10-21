@@ -5,20 +5,20 @@
   "verified": "2026-10-20",
   "ships": [
     {
+      "name": "Norwegian Aqua",
+      "class": "Prima Plus",
+      "year": 2025,
+      "tonnage": null,
+      "guests": 3565,
+      "features": [],
+      "notes": "Class and year read from ncl.com/cruise-ships/norwegian-aqua: 'Prima Plus Class', Year Built 2025, 3,565 guests at double occupancy. NCL publishes no tonnage for this ship, so tonnage stays null (see the roster flag)."
+    },
+    {
       "name": "Norwegian Aura",
       "class": null,
       "year": 2027,
       "tonnage": null,
       "guests": 3879,
-      "features": [],
-      "notes": "Guests = double occupancy, per the line's fleet page."
-    },
-    {
-      "name": "Norwegian Bella",
-      "class": null,
-      "year": 2028,
-      "tonnage": null,
-      "guests": 3921,
       "features": [],
       "notes": "Guests = double occupancy, per the line's fleet page."
     },
