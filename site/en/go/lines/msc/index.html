@@ -488,7 +488,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
       <span class="linelogo" id="heroChip" hidden></span>
       <p class="hero-ind" id="heroInd">Independent referral service.</p>
       <h1>MSC Cruises</h1>
-      <p class="tagline" id="heroTag">Search real itineraries by month and length, then one call gets your exact dates, your cabin and today&rsquo;s fare.</p>
+      <p class="tagline" id="heroTag">Search real itineraries by month and length, then one call gets your exact dates and your cabin. Ask about cruise + flight + hotel packages in the same call.</p>
       <p class="fare-line"><span class="bl-full">Today's fare for your dates and cabin, priced by phone</span><span class="bl-short">Today's fare, priced by phone</span></p>
       
     </div>
@@ -1003,7 +1003,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["msc"];
-const KW_OTHER = ["royal carribean", "royal caribbean", "holland america", "margaritaville", "virgin voyages", "silversea", "celebrity", "norwegian", "princess", "carnival", "virgin", "disney", "cunard", "costa", "rccl", "ncl", "hal"];
+const KW_OTHER = ["royal caribbean", "royal carribean", "holland america", "virgin voyages", "margaritaville", "norwegian", "celebrity", "silversea", "princess", "carnival", "disney", "cunard", "virgin", "costa", "rccl", "ncl", "hal"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1525,7 +1525,8 @@ function renderCallFirst(){
      button jumps to it. Neither exists on a call-first page. */
   var tag=document.getElementById('heroTag');
   if(tag) tag.textContent='Every '+CALLFIRST.lineLabel+' ship, the US ports it sails from and '
-    +'typical trip lengths. One call prices your dates and cabin.';
+    +'typical trip lengths. One call prices your dates and cabin. Ask about cruise + flight + '
+    +'hotel packages in the same call.';
   var cb=document.getElementById('cbSearch'); if(cb) cb.remove();
   var nk=document.getElementById('navKnow'); if(nk) nk.remove();
   /* This section sells the itinerary search and talks about from-fares by
