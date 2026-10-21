@@ -315,7 +315,12 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 .nchip{display:none}
 .showall{display:none}
 .featwrap{display:none}
-.featwrap[hidden]{display:none!important}
+/* The hidden ATTRIBUTE only carries UA-default display:none, so any class
+   rule with a display beats it. .featwrap needed this once; .results-head
+   is display:flex and hit it again, leaving "Sailings from Galveston"
+   standing over a no-match answer. Make the attribute mean what it says
+   for every element, not one at a time. */
+[hidden]{display:none!important}
 .mchip.xtra{display:none}
 /* bottom sheet: single dialog, slide-up 200ms, backdrop + X + swipe-down.
    The off state is TRULY gone: visibility:hidden + pointer-events:none
@@ -575,8 +580,18 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   <p class="ship-notice" id="shipNotice" hidden></p>
   <p class="results-fine" id="resultsFine"></p>
   <!-- ports block sits AFTER the explanatory line: it read as one run-on
-       paragraph colliding with the regions list when it came first -->
+       paragraph colliding with the regions list when it came first.
+       On a LINE-LEVEL page it is promoted above the sailings instead: the
+       departure list is the page's subject and the one priced port is an
+       example of it, not the other way round. -->
   <div id="departsFrom" hidden style="margin:14px 0 4px"></div>
+  <!-- sub-heading for the priced port's sailings; line-level pages only -->
+  <div class="results-head" id="paredHead" hidden style="margin-top:22px">
+    <div>
+      <p class="kicker">Live fares</p>
+      <h2 style="margin:0" id="paredTitle"></h2>
+    </div>
+  </div>
   <!-- FEATURED strip (mobile UX): featured=yes rows as a swipe slider; the
        full list below still contains them. Hidden on desktop and when no
        featured rows are baked. -->
@@ -946,7 +961,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["princess"];
-const KW_OTHER = ["holland america", "royal carribean", "royal caribbean", "virgin voyages", "margaritaville", "celebrity", "norwegian", "silversea", "carnival", "virgin", "cunard", "disney", "costa", "rccl", "msc", "ncl", "hal"];
+const KW_OTHER = ["royal carribean", "holland america", "royal caribbean", "virgin voyages", "margaritaville", "norwegian", "silversea", "celebrity", "carnival", "virgin", "cunard", "disney", "costa", "rccl", "ncl", "msc", "hal"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -1258,6 +1273,25 @@ function populateFilters(){
         .find(d=>low.indexOf(d.replace(/-/g,' '))!==-1);
       if(dm){ const ft=document.getElementById('fTo'); if(ft) ft.value=dm; }
     }
+
+    /* THE HEADLINE MUST NOT PROMISE WHAT THE CARDS CANNOT SHOW.
+       ?kw=royal caribbean alaska swapped the H1 to Alaska and left the
+       Galveston Caribbean sailings sitting underneath it. The keyword is
+       still echoed, because that is what makes the ad relevant, but a
+       keyword naming a region we have no sailing for, or a trip length we
+       have no sailing at, answers with the call instead of with cards for
+       somewhere else. */
+    if(PAGE.lineLevel){
+      var unserved=(PAGE.kwUnserved||[]).find(function(r){
+        return low.indexOf(r.words)!==-1;
+      });
+      var nights=(PAGE.kwNights||[]);
+      var askedN=nm?+nm[1]:0;
+      var noNight=askedN>0 && nights.length && nights.indexOf(askedN)===-1;
+      if(unserved||noNight){
+        KW_NO_MATCH = unserved ? (unserved.label+' fares') : (askedN+'-night sailings');
+      }
+    }
   }
   const vq=(q.get('v')||'').toLowerCase();
   if(vq && typeof H1_VARIANTS!=='undefined' && H1_VARIANTS[vq]){
@@ -1289,6 +1323,7 @@ function populateFilters(){
 
 let SHIP_FOCUS='';
 let EXACT_NIGHTS=0;
+let KW_NO_MATCH = '';
 
 function setShipNotice(){
   const el=document.getElementById('shipNotice'); if(!el) return;
@@ -1317,6 +1352,23 @@ function runSearch(scroll=true){
   /* A call-first line page has no sailings to filter. Without this the search
      would overwrite the fleet cards with its "no tracked sailings" message. */
   if(PAGE.callFirst) return;
+
+  /* The keyword named somewhere, or a trip length, this page has no sailing
+     for. The H1 still echoes it, so the cards must not contradict it: we say
+     plainly that we do not publish that one and put the call there instead. */
+  if(KW_NO_MATCH){
+    const g=document.getElementById('itinGrid');
+    const c0=document.getElementById('resultCount'); if(c0) c0.textContent='';
+    const f0=document.getElementById('resultsFine'); if(f0) f0.textContent='';
+    const ph=document.getElementById('paredHead'); if(ph) ph.hidden=true;
+    const fw=document.getElementById('featWrap'); if(fw) fw.hidden=true;
+    if(g) g.innerHTML=`<div class="noresults" style="grid-column:1/-1">
+      <h3>We do not publish ${esc(KW_NO_MATCH)} on this page</h3>
+      <p>${esc(PAGE.lineLabel)} does sail them. Dates, cabins and today's fare are quoted live on the call.</p>
+      <a class="btn" href="tel:${PHONE_TEL}" onclick="try{trackCall('kw-nomatch')}catch(e){}">📞 Call for today's fare</a></div>`;
+    return;
+  }
+
   const to=document.getElementById('fTo').value;
   const month=document.getElementById('fMonth').value;
   const nb=document.getElementById('fNights').value;
@@ -1389,8 +1441,52 @@ function renderDepartsFrom(){
      whole-line coverage. The other US home ports are listed as call-first:
      no fare, no implied inventory, just the number. */
   var el=document.getElementById('departsFrom');
-  if(!el||!PAGE.otherPorts||!PAGE.otherPorts.length) return;
+  if(!el) return;
   var t=document.getElementById('resultsTitle');
+
+  /* LINE-LEVEL PAGE. The departure list leads, because the page is about the
+     line and a visitor who came for Miami needs to see Miami before the
+     Galveston cards. Every US port the line publishes is here, the one we
+     price included and marked, so the list is the line's real footprint
+     rather than a leftovers list. No fare appears against any of them: we
+     price one port today and say so. */
+  if(PAGE.lineLevel && PAGE.allPorts && PAGE.allPorts.length){
+    var n=PAGE.allPorts.length;
+    if(t) t.textContent='Departs from '+n+' US port'+(n===1?'':'s');
+    el.hidden=false;
+    el.innerHTML='<p class="results-fine" style="margin:0 0 10px">'+esc(PAGE.lineLabel)
+      +' sails from these US home ports. Fares are quoted live on the call for '
+      +'whichever one you leave from.</p>'
+      +'<div class="months" style="gap:8px">'
+      +PAGE.allPorts.map(function(p){
+          return '<a class="mchip" style="text-decoration:none" href="tel:'+PHONE_TEL+'"'
+            +' onclick="try{trackCall(\'departs-'+esc(p.slug)+'\')}catch(e){}">'+esc(p.label)+'</a>';
+        }).join('')
+      +'</div>'
+      +'<a class="btn" style="margin-top:14px" href="tel:'+PHONE_TEL+'"'
+      +' onclick="try{trackCall(\'departs-cta\')}catch(e){}">'
+      +'\uD83D\uDCDE Call for fares from your port</a>';
+    /* The priced port's sailings get their own heading below the list, and
+       the count and the from-fares stamp go WITH them. Left where they were
+       they sat under "Departs from 12 US ports" and read as a claim about
+       all twelve, when they describe one. runSearch writes to these two
+       nodes by id, so they are moved rather than copied. */
+    var ph=document.getElementById('paredHead'), pt=document.getElementById('paredTitle');
+    if(ph&&pt&&PAGE.resultsTitle){
+      pt.textContent=PAGE.resultsTitle;
+      ph.hidden=false;
+      var cnt=document.getElementById('resultCount');
+      var fin=document.getElementById('resultsFine');
+      if(cnt) ph.appendChild(cnt);
+      if(fin) ph.parentNode.insertBefore(fin, ph.nextSibling);
+    }
+    return;
+  }
+
+  /* PORT PAGE. Only Galveston fares are collected today, so this page must not
+     read as whole-line coverage. The other US home ports are listed as
+     call-first: no fare, no implied inventory, just the number. */
+  if(!PAGE.otherPorts||!PAGE.otherPorts.length) return;
   if(t&&PAGE.resultsTitle) t.textContent=PAGE.resultsTitle;
   el.hidden=false;
   el.innerHTML='<p class="kicker" style="margin-top:18px">Departs from</p>'
@@ -1582,13 +1678,45 @@ renderCallFirst();
   if(ind) ind.textContent='Independent referral service'+(lbl?', not '+lbl:'')+'.';
   /* The hero chip was the line and port baked into markup, so the Carnival
      page wore a "ROYAL CARIBBEAN - FROM GALVESTON" badge. */
+  /* A LINE-LEVEL page names no port in its furniture. The badge read
+     "ROYAL CARIBBEAN - FROM GALVESTON TX" and the nav read "Galveston TX
+     guide" on a page whose subject is the whole line, which told a visitor
+     searching for Miami that they were on the wrong page. The port guide
+     section stays, below the sailings it belongs to; only the chrome that
+     framed the WHOLE page as Galveston goes. */
+  var lineLevel=(typeof PAGE!=='undefined'&&PAGE&&PAGE.lineLevel);
   var chip=document.getElementById('heroChip');
   if(chip&&lbl){
-    chip.textContent='\uD83D\uDEA2 '+lbl.toUpperCase()+(port?' \u00b7 FROM '+port.toUpperCase():'');
+    chip.textContent='\uD83D\uDEA2 '+lbl.toUpperCase()
+      +((port&&!lineLevel)?' \u00b7 FROM '+port.toUpperCase():'');
     chip.hidden=false;
   }
+  /* The intro described one port's terminal and that port's itineraries, on
+     a page about the whole line. Rewritten from the page's own data: how many
+     US ports the line publishes, and the honest statement that we price one of
+     them today. No itinerary type is named, because the only ones we hold are
+     that one port's. */
+  if(lineLevel){
+    var ic=document.getElementById('introCopy');
+    var ports=(PAGE.allPorts||[]).length;
+    if(ic&&ports){
+      ic.textContent=lbl+' sails from '+ports+' US home port'+(ports===1?'':'s')+'. '
+        +'This page publishes recent from-fares for '+(port?port.split(',')[0]:'one port')
+        +' by sail month. For every other port, and for your exact dates, cabin and any '
+        +'promotion running, the price comes on the call.';
+    }
+  }
   var nk=document.getElementById('navKnow');
-  if(nk&&port) nk.querySelector('a').textContent=port.split(',')[0]+' guide';
+  if(nk&&lineLevel){ nk.remove(); }
+  else if(nk&&port){ nk.querySelector('a').textContent=port.split(',')[0]+' guide'; }
+  /* The "Sail from" menu was a disabled control holding one hardcoded port.
+     On a line page that is a dead end: it looks like a chooser, it cannot
+     choose, and the ports it will not offer are the point of the page. The
+     departure list below does that job with a call. */
+  if(lineLevel){
+    var ff=document.getElementById('fFrom');
+    if(ff&&ff.closest('.f')) ff.closest('.f').remove();
+  }
 })();
 
 /* ============ mobile UX modules (bottom sheet, featured strip, taps,
@@ -1674,6 +1802,11 @@ function dealSheet(it){ /* row/slide bottom sheet: route, month fares, both CTAs
   });
 })();
 (function(){var wrapEl=document.getElementById('featWrap');if(!wrapEl)return; /* featured sailings strip (mobile, max 4 slides) */
+  /* This strip builds itself from ITINERARIES and un-hides itself, so it ran
+     straight past the no-match branch in runSearch and left a Galveston
+     "From $1,169" under an Alaska headline. The keyword check belongs here,
+     at the point the strip decides to exist at all. */
+  if(typeof KW_NO_MATCH!=='undefined' && KW_NO_MATCH) return;
   var feats=(typeof ITINERARIES!=='undefined'?ITINERARIES:[]).filter(function(i){return i.featured;}).slice(0,4);
   if(!feats.length)return;
   document.getElementById('featStrip').innerHTML=feats.map(it=>`<button class="fslide" type="button" data-id="${esc(it.id)}">
