@@ -957,6 +957,86 @@ const FAQS = [
  }
 ];
 const OFFERS = [];
+const KW_OWN = ["msc"];
+const KW_OTHER = ["royal caribbean", "royal carribean", "holland america", "margaritaville", "virgin voyages", "norwegian", "celebrity", "silversea", "carnival", "princess", "disney", "virgin", "cunard", "costa", "rccl", "hal", "ncl"];
+/* ?kw= personalisation, shared by every /go/ template.
+
+   Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
+   H1 lifts ad relevance, and it is also the single easiest way to publish a
+   sentence nobody wrote and nobody can stand behind. So this is a gate, not a
+   feature: the keyword has to earn its way onto the page.
+
+   Order of the checks is load-bearing. Everything is tested against the RAW
+   parameter BEFORE any character stripping, because the sanitiser turns % and
+   $ into spaces, and testing afterwards let "50% off" through as "50 off".
+
+   The module only ever writes textContent, never innerHTML.
+
+   Reads two generated constants, so one page's own line is allowed and every
+   other line is not:
+     KW_OWN    tokens for THIS page's line, stripped before content matching
+     KW_OTHER  every other line's name, blocked outright
+   Exposes window.__kwAccepted: the cleaned keyword, or null if rejected. */
+(function () {
+  window.__kwAccepted = null;
+  var q;
+  try { q = new URLSearchParams(location.search); } catch (e) { return; }
+  var raw = q.get("kw") || "";
+  if (!raw) return;
+
+  /* PHONE INTENT. Someone searching "royal caribbean phone number" wants the
+     cruise line's switchboard. Echoing that into our H1 makes this page look
+     like it, which is precisely the impression the footer disclaimer exists to
+     prevent, on the keywords where it is most expensive to be wrong. These
+     never personalise; the page keeps the headline it shipped with. */
+  var BAD_PHONE = /(\bphones?\b|\bnumbers?\b|\bcontact|\bcall(ing)?\b|\b800\b|\btoll[\s-]?free|\bhelp\s?line|\bhelpline|\bsupport\b|\blive person|\btalk to\b|\bspeak to\b|\brepresentative)/i;
+  if (BAD_PHONE.test(raw)) return;
+
+  /* Money and superlative claims we cannot support. No \b before the symbol
+     alternatives: \b needs a word character to its left, which made \$
+     unmatchable at the start of a string. */
+  var BAD_KW = /(\bcheap|\bcheapest|\blowest|\bfree\b|\bguarantee|\bdiscount|\bdeal of\b|\ball[\s-]inclusive|%|\$|\bsave\b|\bper person\b)/i;
+
+  /* Affiliation and identity claims. We are a referral service and say so on
+     every page; echoing "official site" into our own H1 contradicts that and is
+     trademark exposure on brand keywords. */
+  var BAD_AFFIL = /\b(official|officially|authorized|authorised|accredited|partner|direct|agent|agency|reservations?|customer (service|care)|headquarters|corporate|complaints?|refunds?)\b/i;
+
+  if (BAD_KW.test(raw) || BAD_AFFIL.test(raw)) return;
+
+  /* OTHER lines only. This used to block every line name on every page, so a
+     Carnival ad landing on the Carnival page could not use its own keyword.
+     A page may echo its own line; it may never echo a competitor it has no
+     inventory for. */
+  var other = (typeof KW_OTHER !== "undefined" && KW_OTHER) ? KW_OTHER : [];
+  for (var i = 0; i < other.length; i++) {
+    if (new RegExp("\\b" + other[i].replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&") + "\\b", "i").test(raw)) return;
+  }
+
+  var kw = raw.replace(/[+_]/g, " ").replace(/[^A-Za-z0-9 '’-]/g, " ")
+              .replace(/\s+/g, " ").trim().slice(0, 70);
+  if (!kw || BAD_KW.test(kw) || BAD_AFFIL.test(kw)) return;
+
+  var SMALL = /^(a|an|and|the|from|to|for|of|on|in|by|at|with|out)$/i;
+  var title = kw.split(" ").map(function (w, i) {
+    if (/^(rccl|ncl|msc|usa|tx|fl|ny|nj|ca|wa|la)$/i.test(w)) return w.toUpperCase();
+    if (i > 0 && SMALL.test(w)) return w.toLowerCase();
+    return w.charAt(0).toUpperCase() + w.slice(1);
+  }).join(" ");
+
+  var h1 = document.querySelector("h1");
+  if (h1) h1.textContent = title;
+
+  /* Strip this page's own line name before any content matching: on the Royal
+     Caribbean page "royal CARIBBEAN" would otherwise match the Caribbean
+     destination and hide almost every sailing. */
+  var low = kw.toLowerCase();
+  var own = (typeof KW_OWN !== "undefined" && KW_OWN) ? KW_OWN : [];
+  for (var j = 0; j < own.length; j++) {
+    low = low.split(own[j]).join(" ");
+  }
+  window.__kwAccepted = { kw: kw, title: title, low: low.replace(/\s+/g, " ").trim() };
+})();
 /* ---- CLIENT FUSE ------------------------------------------------------------
    Injected into every /go/ page that prints a fare. generate.py reads this
    file and substitutes 3 from PRICE_MAX_AGE_DAYS, so there is one
@@ -1157,62 +1237,34 @@ function populateFilters(){
   const q=new URLSearchParams(location.search);
   /* ?v= swaps the H1 to mirror the ad's keyword (quality-score triangle).
      Only whitelisted values baked from real inventory are accepted. */
-  /* ?kw= carries the ad's own keyword (Google ValueTrack {keyword}). The
-     page echoes it as the heading and narrows the list to whatever the
-     keyword actually names. Guards, in order:
-       textContent only, never innerHTML, so nothing can be injected
-       strip anything that is not a letter, digit, space, hyphen or apostrophe
-       cap the length so a crafted URL cannot produce a banner of text
-       reject claim words we cannot stand behind, falling back to the real H1
-     A rejected or empty keyword leaves the page exactly as it ships. */
-  /* Two denylists, both tested against the RAW parameter BEFORE any character
-     stripping. Order is load-bearing: the sanitiser replaces % and $ with a
-     space, so testing after it meant "50% off" sailed through as "50 off"
-     (qa-auditor, 2026-10-12). No \b on the symbol alternatives either; \b
-     needs a word character to its left, which made \$ unmatchable at the
-     start of a string. */
-  const BAD_KW=/(\bcheap|\bcheapest|\blowest|\bfree\b|\bguarantee|\bdiscount|\bdeal of\b|\ball[- ]inclusive|%|\$|\bsave\b|\bper person\b)/i;
-  /* Affiliation and identity claims. We are a referral service and say so on
-     every page; echoing a searcher's "official site" into our own H1 would
-     contradict that and is trademark exposure on brand keywords. Also blocks
-     competing line names, which we have no inventory for. */
-  const BAD_AFFIL=/\b(official|officially|authorized|authorised|accredited|partner|direct|agent|agency|reservations?|customer (service|care)|headquarters|corporate|complaints?|refunds?|carnival|norwegian|ncl|princess|celebrity|msc|holland america|disney|virgin|cunard|costa)\b/i;
-  const kwRaw=q.get('kw')||'';
-  if(kwRaw && !BAD_KW.test(kwRaw) && !BAD_AFFIL.test(kwRaw)){
-    let kw=kwRaw.replace(/[+_]/g,' ').replace(/[^A-Za-z0-9 '’-]/g,' ')
-                .replace(/\s+/g,' ').trim().slice(0,70);
-    if(kw && !BAD_KW.test(kw) && !BAD_AFFIL.test(kw)){
-      const SMALL=/^(a|an|and|the|from|to|for|of|on|in|by|at|with|out)$/i;
-      const title=kw.split(' ').map((w,i)=>{
-        if(/^(rccl|usa|tx)$/i.test(w)) return w.toUpperCase();
-        if(i>0 && SMALL.test(w)) return w.toLowerCase();
-        return w.charAt(0).toUpperCase()+w.slice(1);
-      }).join(' ');
-      const h1=document.querySelector('h1');
-      if(h1) h1.textContent=title;
-      /* narrow the content to whatever the keyword names, when we can.
-         Strip the line name first: "royal CARIBBEAN" would otherwise match
-         the Caribbean destination and hide almost every sailing. */
-      const low=kw.toLowerCase()
-        .replace(/royal\s+caribbean/g,' ').replace(/\brccl\b/g,' ');
-      if(typeof SHIP_SLUGS!=='undefined'){
-        for(const key in SHIP_SLUGS){
-          if(key.indexOf('-')===-1 && low.indexOf(key)!==-1){ SHIP_FOCUS=SHIP_SLUGS[key]; break; }
+  /* ?kw= is handled by the shared gate in _kw-personalise.js, which runs in
+     the generated data block above and has already swapped the H1 if the
+     keyword passed. All that is left here is narrowing the list to whatever
+     the keyword named. The denylists used to live inline in this one template,
+     which is why ship and itinerary pages had no gate at all, and why the
+     competitor block was a hardcoded list that also blocked a page's own line. */
+  var acc = window.__kwAccepted;
+  if (acc) {
+    const low = acc.low;
+    if(typeof SHIP_SLUGS!=='undefined'){
+      for(const key in SHIP_SLUGS){
+        if(key.indexOf('-')===-1 && low.indexOf(key)!==-1){ SHIP_FOCUS=SHIP_SLUGS[key]; break; }
+      }
+    }
+    const nm=low.match(/(\d+)\s*(night|day)/);
+    if(nm){
+      const n=+nm[1];
+      if(typeof ITINERARIES!=='undefined' && ITINERARIES.some(i=>i.nights===n)){
+        EXACT_NIGHTS=n;
+        const sel=document.getElementById('fNights');
+        if(sel){
+          if(![...sel.options].some(o=>o.value==='exact'))
+            sel.insertAdjacentHTML('beforeend',`<option value="exact">${n} nights</option>`);
+          sel.value='exact';
         }
       }
-      const nm=low.match(/(\d+)\s*(night|day)/);
-      if(nm){
-        const n=+nm[1];
-        if(ITINERARIES.some(i=>i.nights===n)){
-          EXACT_NIGHTS=n;
-          const sel=document.getElementById('fNights');
-          if(sel){
-            if(![...sel.options].some(o=>o.value==='exact'))
-              sel.insertAdjacentHTML('beforeend',`<option value="exact">${n} nights</option>`);
-            sel.value='exact';
-          }
-        }
-      }
+    }
+    if(typeof ITINERARIES!=='undefined'){
       const dm=[...new Set(ITINERARIES.map(i=>i.dest))]
         .filter(d=>d.indexOf('-')!==-1)          /* skip bare "caribbean" */
         .find(d=>low.indexOf(d.replace(/-/g,' '))!==-1);

@@ -738,62 +738,34 @@ function populateFilters(){
   const q=new URLSearchParams(location.search);
   /* ?v= swaps the H1 to mirror the ad's keyword (quality-score triangle).
      Only whitelisted values baked from real inventory are accepted. */
-  /* ?kw= carries the ad's own keyword (Google ValueTrack {keyword}). The
-     page echoes it as the heading and narrows the list to whatever the
-     keyword actually names. Guards, in order:
-       textContent only, never innerHTML, so nothing can be injected
-       strip anything that is not a letter, digit, space, hyphen or apostrophe
-       cap the length so a crafted URL cannot produce a banner of text
-       reject claim words we cannot stand behind, falling back to the real H1
-     A rejected or empty keyword leaves the page exactly as it ships. */
-  /* Two denylists, both tested against the RAW parameter BEFORE any character
-     stripping. Order is load-bearing: the sanitiser replaces % and $ with a
-     space, so testing after it meant "50% off" sailed through as "50 off"
-     (qa-auditor, 2026-10-12). No \b on the symbol alternatives either; \b
-     needs a word character to its left, which made \$ unmatchable at the
-     start of a string. */
-  const BAD_KW=/(\bcheap|\bcheapest|\blowest|\bfree\b|\bguarantee|\bdiscount|\bdeal of\b|\ball[- ]inclusive|%|\$|\bsave\b|\bper person\b)/i;
-  /* Affiliation and identity claims. We are a referral service and say so on
-     every page; echoing a searcher's "official site" into our own H1 would
-     contradict that and is trademark exposure on brand keywords. Also blocks
-     competing line names, which we have no inventory for. */
-  const BAD_AFFIL=/\b(official|officially|authorized|authorised|accredited|partner|direct|agent|agency|reservations?|customer (service|care)|headquarters|corporate|complaints?|refunds?|carnival|norwegian|ncl|princess|celebrity|msc|holland america|disney|virgin|cunard|costa)\b/i;
-  const kwRaw=q.get('kw')||'';
-  if(kwRaw && !BAD_KW.test(kwRaw) && !BAD_AFFIL.test(kwRaw)){
-    let kw=kwRaw.replace(/[+_]/g,' ').replace(/[^A-Za-z0-9 '’-]/g,' ')
-                .replace(/\s+/g,' ').trim().slice(0,70);
-    if(kw && !BAD_KW.test(kw) && !BAD_AFFIL.test(kw)){
-      const SMALL=/^(a|an|and|the|from|to|for|of|on|in|by|at|with|out)$/i;
-      const title=kw.split(' ').map((w,i)=>{
-        if(/^(rccl|usa|tx)$/i.test(w)) return w.toUpperCase();
-        if(i>0 && SMALL.test(w)) return w.toLowerCase();
-        return w.charAt(0).toUpperCase()+w.slice(1);
-      }).join(' ');
-      const h1=document.querySelector('h1');
-      if(h1) h1.textContent=title;
-      /* narrow the content to whatever the keyword names, when we can.
-         Strip the line name first: "royal CARIBBEAN" would otherwise match
-         the Caribbean destination and hide almost every sailing. */
-      const low=kw.toLowerCase()
-        .replace(/royal\s+caribbean/g,' ').replace(/\brccl\b/g,' ');
-      if(typeof SHIP_SLUGS!=='undefined'){
-        for(const key in SHIP_SLUGS){
-          if(key.indexOf('-')===-1 && low.indexOf(key)!==-1){ SHIP_FOCUS=SHIP_SLUGS[key]; break; }
+  /* ?kw= is handled by the shared gate in _kw-personalise.js, which runs in
+     the generated data block above and has already swapped the H1 if the
+     keyword passed. All that is left here is narrowing the list to whatever
+     the keyword named. The denylists used to live inline in this one template,
+     which is why ship and itinerary pages had no gate at all, and why the
+     competitor block was a hardcoded list that also blocked a page's own line. */
+  var acc = window.__kwAccepted;
+  if (acc) {
+    const low = acc.low;
+    if(typeof SHIP_SLUGS!=='undefined'){
+      for(const key in SHIP_SLUGS){
+        if(key.indexOf('-')===-1 && low.indexOf(key)!==-1){ SHIP_FOCUS=SHIP_SLUGS[key]; break; }
+      }
+    }
+    const nm=low.match(/(\d+)\s*(night|day)/);
+    if(nm){
+      const n=+nm[1];
+      if(typeof ITINERARIES!=='undefined' && ITINERARIES.some(i=>i.nights===n)){
+        EXACT_NIGHTS=n;
+        const sel=document.getElementById('fNights');
+        if(sel){
+          if(![...sel.options].some(o=>o.value==='exact'))
+            sel.insertAdjacentHTML('beforeend',`<option value="exact">${n} nights</option>`);
+          sel.value='exact';
         }
       }
-      const nm=low.match(/(\d+)\s*(night|day)/);
-      if(nm){
-        const n=+nm[1];
-        if(ITINERARIES.some(i=>i.nights===n)){
-          EXACT_NIGHTS=n;
-          const sel=document.getElementById('fNights');
-          if(sel){
-            if(![...sel.options].some(o=>o.value==='exact'))
-              sel.insertAdjacentHTML('beforeend',`<option value="exact">${n} nights</option>`);
-            sel.value='exact';
-          }
-        }
-      }
+    }
+    if(typeof ITINERARIES!=='undefined'){
       const dm=[...new Set(ITINERARIES.map(i=>i.dest))]
         .filter(d=>d.indexOf('-')!==-1)          /* skip bare "caribbean" */
         .find(d=>low.indexOf(d.replace(/-/g,' '))!==-1);
