@@ -207,10 +207,10 @@ def p_line(lang, slug):
     faq = faq_section(lang, slug)
     toc_keys = ["facts"] + sections_present(slug) + ["updates"] + (["faq"] if faq else [])
     facts_cta = ("These are exactly the details that surprise people at the pier and on the final bill. "
-                 "Call and we'll confirm every one for your ship, cabin and dates, and the best rate our partners can offer."
+                 "Call and we'll confirm every one for your ship, cabin and dates, with today's fare."
                  if lang == "en" else
                  "Son justo los detalles que sorprenden en el muelle y en la factura final. Llama y confirmamos cada uno "
-                 "para tu barco, camarote y fechas, y la mejor tarifa que nuestros socios pueden ofrecer.")
+                 "para tu barco, camarote y fechas, con la tarifa de hoy.")
     # "The facts that cost money", moved high on the page (a strong attention section) with its own CTA.
     facts_section = (f'<section id="s-facts" class="section foam"><div class="wrap">'
                      f'<div class="sec-head"><span class="eyebrow">{kick}</span>'
@@ -296,8 +296,8 @@ def p_ship(lang, line_slug, sslug):
         intro = (f"{name} is part of {L['name']}'s fleet"
                  + (f", built to the {cls} class" if cls else "") + ". "
                  "Below are the verified basics; sailings, itineraries, cabins and the current rate change "
-                 "constantly, one call to a specialist confirms exactly what's open for your dates and the best "
-                 "rate our partners can offer.")
+                 "constantly, one call to a specialist confirms exactly what's open for your dates, with "
+                 "today's fare.")
         specs_h = "The basics, verified"
         note = ("Every figure here traces to a published source and is re-checked on our normal schedule. "
                 "Where the line publishes no figure, we do not invent one; that cell offers a call instead.")
@@ -312,8 +312,8 @@ def p_ship(lang, line_slug, sslug):
         intro = (f"{name} forma parte de la flota de {L['name']}"
                  + (f", de la clase {cls}" if cls else "") + ". "
                  "Abajo están los datos verificados; las salidas, itinerarios, camarotes y la tarifa actual cambian "
-                 "constantemente, una llamada a un especialista confirma qué hay disponible para tus fechas y la "
-                 "mejor tarifa que nuestros socios pueden ofrecer.")
+                 "constantemente, una llamada a un especialista confirma qué hay disponible para tus fechas y "
+                 "la tarifa de hoy.")
         specs_h = "Los datos, verificados"
         note = ("Cada cifra proviene de una fuente publicada y se revisa en nuestro calendario habitual. "
                 "Si la línea no publica una cifra, no la inventamos; esa casilla ofrece una llamada.")
@@ -377,9 +377,9 @@ def p_compare(lang):
     kick = "Find a cruise" if lang == "en" else "Encuentra tu crucero"
     h1 = "Find your cruise, then call to book it" if lang == "en" else "Encuentra tu crucero, luego llama para reservar"
     sub = ("Skip scrolling hundreds of pages. Tell us where and when, we'll line up the ships that fit, and one "
-           "call books the right one at the best rate our partners can offer." if lang == "en"
+           "call gets the right one priced for your dates." if lang == "en"
            else "Sin revisar cientos de páginas. Dinos dónde y cuándo, alineamos los barcos que encajan, y una "
-                "llamada reserva el correcto a la mejor tarifa que nuestros socios pueden ofrecer.")
+                "llamada te da el correcto con la tarifa de hoy para tus fechas.")
     also = ("Prefer to compare two lines head-to-head? Every line and ship page has its own compare tool at the top."
             if lang == "en" else
             "¿Prefieres comparar dos líneas? Cada página de línea y barco tiene su comparador arriba.")

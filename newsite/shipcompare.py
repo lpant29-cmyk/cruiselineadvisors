@@ -73,12 +73,12 @@ def compare_hero(lang, default_a=None, ship_name=None):
         h = f"Compare {nm} with any other ship, and find the winner in seconds."
         sub = ("No more digging through hundreds of pages. Line it up against any ship, from any line, on "
                "what actually matters, size, dining, what's included and the fine print. Then one call gets "
-               "you the best rate our partners can offer.")
+               "you today's fare for your dates and cabin.")
     else:
         h = f"Compara {nm} con cualquier otro barco, y encuentra al ganador en segundos."
         sub = ("Sin revisar cientos de páginas. Compáralo con cualquier barco, de cualquier línea, en lo que "
                "importa, tamaño, restaurantes, qué se incluye y la letra pequeña. Luego una llamada te da la "
-               "mejor tarifa que nuestros socios pueden ofrecer.")
+               "tarifa de hoy para tus fechas y tu camarote.")
     return compare_band(lang, kick, h, sub, ship_compare_tool(lang, default_a=default_a))
 
 
@@ -163,14 +163,14 @@ def _payload(lang):
            "moredine": "more dining choice",
            "consider": "Prefer a smaller, calmer, easier-to-navigate ship? Go with {x}.",
            "tie": "These two are closely matched, the right one really comes down to your dates, party and budget.",
-           "close": "Either way, tell us your dates and party and we'll match the right ship, and the best rate our partners can offer."}
+           "close": "Either way, tell us your dates and party and we'll match the right ship, then you get today's fare on the call."}
           if lang == "en" else
           {"h": "¿Cuál elegir?", "take": "Nuestra recomendación",
            "newer": "más nuevo", "bigger": "más grande, más espacio y más que hacer",
            "moredine": "más opciones de comida",
            "consider": "¿Prefieres un barco más pequeño, tranquilo y fácil de recorrer? Elige {x}.",
            "tie": "Están muy parejos, la elección depende de tus fechas, grupo y presupuesto.",
-           "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal, y la mejor tarifa que nuestros socios pueden ofrecer."})
+           "close": "En cualquier caso, dinos tus fechas y grupo y encontramos el barco ideal, y recibes la tarifa de hoy en la llamada."})
     return {"ships": ships, "gap": ask_advisor(lang, "shipcompare"), "rows": _ROWS[lang],
             "lineLabel": _T[lang]["line"], "vd": vd}
 

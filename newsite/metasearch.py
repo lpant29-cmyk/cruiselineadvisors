@@ -122,7 +122,7 @@ _T = {
            "none0": "Ningún barco coincide con todos tus filtros.",
            "trythis": "Prueba quitar", "unlocks": ", eso solo devuelve",
            "orcall": "O llama, nuestros especialistas cubren aún más barcos y salidas.",
-           "cta": "Las tarifas cambian a diario. Una llamada te da el número real y la mejor tarifa de nuestros socios.",
+           "cta": "Las tarifas cambian a diario. Una llamada te da el número real para tus fechas y tu camarote.",
            "call": "Llama ahora", "filt": "Refinar:", "showall": "Ver todos",
            "accnote": "Todas estas líneas ofrecen camarotes accesibles, el acceso sin escalones y el tipo de camarote varían por barco y puerto; llama y confirmamos lo que funciona para ti.",
            "parties": [("any", "Solo explorando"), ("family", "Familia"), ("couple", "Pareja"),

@@ -390,9 +390,9 @@ def rich_sections(lang, slug):
     if cd:
         items = "".join(f'<div class="cd-row"><b>{d.get("factor")}</b><span>{d.get("detail")}</span></div>'
                         for d in cd if isinstance(d, dict) and not _gap(d.get("factor")))
-        nudge = (_nudge(lang, "Prices move daily by ship, date and cabin. One call gets you the real number for your trip, and the best rate our partners can offer."
+        nudge = (_nudge(lang, "Prices move daily by ship, date and cabin. One call gets you the real number for your trip."
                  if lang == "en" else
-                 "Los precios cambian a diario por barco, fecha y camarote. Una llamada te da el número real, y la mejor tarifa que nuestros socios pueden ofrecer."))
+                 "Los precios cambian a diario por barco, fecha y camarote. Una llamada te da el número real para tu viaje."))
         out += _sec("cream", "cost", lang, f'<div class="cd-list">{items}</div>{nudge}'); pres.append("cost")
 
     _LAST_SECTIONS[slug] = pres

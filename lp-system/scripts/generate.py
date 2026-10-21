@@ -115,6 +115,34 @@ def lp_footer_html(final_tel, final_display):
 </footer>"""
 
 
+def lp_credentials_html():
+    """The MAIN SITE's credentials band (newsite/footer.py) on every /go/ page,
+    above the footer, with its CSS from newsite/cred_css.py.
+
+    Added 2026-10-21: no /go/ page carried the licence number or the ASTA
+    membership anywhere in its HTML, and every one of them is a paid-search
+    destination bidding on cruise line brand terms. A visitor who lands on an
+    ad page is exactly the visitor with most reason to ask who we are, and the
+    answer was only on the pages ads do not point at.
+
+    Same component, not a copy: the markup comes from credentials_band() and
+    the styling from the shared CRED_CSS, so an edit on the main site lands
+    here too. .blk is the /go/ templates' own section-padding class.
+
+    Two structural differences from the main site, both deliberate: /go/ pages
+    are English-only, and the band's badge links open in a new tab, so they do
+    not count as page exits.
+    """
+    sys.path.insert(0, str(ROOT / "newsite"))
+    try:
+        import footer as site_footer
+        import cred_css
+        band = site_footer.credentials_band("en", section_class="blk")
+        return "<style>" + cred_css.CRED_CSS + "</style>", band
+    finally:
+        sys.path.pop(0)
+
+
 def lp_brand_html():
     """The MAIN SITE's logo lockup (newsite/logo.py, single source) for the
     LP slim header — mark + wordmark, deliberately NOT linked (no exits on
@@ -1940,8 +1968,11 @@ def bake(page, reg, today, used):
 
     # shared legal footer (operator ruling): replace the template's footer
     # with the partial-sourced compact block; link the TCPA consent line
-    html = re.sub(r"<footer>.*?</footer>", lambda _: lp_footer_html(final_tel, final_display),
+    cred_css_tag, cred_band = lp_credentials_html()
+    html = re.sub(r"<footer>.*?</footer>",
+                  lambda _: cred_band + lp_footer_html(final_tel, final_display),
                   html, count=1, flags=re.S)
+    html = html.replace("</head>", cred_css_tag + "\n</head>", 1)
     html = html.replace(CONSENT_SENTENCE, CONSENT_LINKED)
     html = html.replace("#CALLBACK_ACTION", CALLBACK_ACTION)
 

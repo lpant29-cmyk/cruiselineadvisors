@@ -56,7 +56,8 @@ BAHAMAS_DOC        = "/docs/bahamas-specialist-diploma.png"    # the full diplom
 # those, remove the badge rather than reword around it.
 RCU_ACCOLADE = True
 RCU_HOLDER   = "Lokesh Pant"
-RCU_BADGE    = "/badges/rcu-master-of-adventure.png"
+# RCU_BADGE / CARNIVAL_LE_BADGE retired 2026-10-21: cruise line training
+# marks render as text, never as the line's logo (see badges.py).
 RCU_DOC      = "/docs/rcu-master-of-adventure-certificate.jpg"
 
 # Carnival "Learn & Earn" graduate certificate, held by Kerry Driver.
@@ -70,7 +71,6 @@ RCU_DOC      = "/docs/rcu-master-of-adventure-certificate.jpg"
 # NOTE: the certificate carries NO date, so we publish none. Do not infer one.
 CARNIVAL_LE        = True
 CARNIVAL_LE_HOLDER = "Kerry Driver"
-CARNIVAL_LE_BADGE  = "/badges/carnival-learn-and-earn.png"
 CARNIVAL_LE_DOC    = "/docs/carnival-learn-and-earn-certificate.jpg"
 
 # Bahamas Romance Specialist badge. Display-only logo in the footer credential

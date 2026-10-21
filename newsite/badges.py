@@ -160,13 +160,29 @@ def _asset_exists(webpath):
     here = os.path.dirname(os.path.abspath(__file__))
     return os.path.isfile(os.path.join(here, "assets", webpath.lstrip("/")))
 
+# Short display names for the two training credentials, used by the text pill.
+# The long sentence beside the badges still carries the full description.
+_RCU_NAME = "Royal Caribbean University · Master of Adventure"
+_CARNIVAL_NAME = "Carnival Learn and Earn graduate"
+
+
+def _text_cred(t, label, doc, name):
+    """A credential as a text pill, reusing the Seller-of-Travel pill styling
+    (.tb-fsot / .tb-fsot-txt) that already renders in both the footer and the
+    credentials band. Links to the hosted certificate when we have one, so the
+    claim is still checkable; degrades to plain text when we do not."""
+    inner = f'<span class="tb-fsot-txt">{name}</span>'
+    if _asset_exists(doc):
+        return (f'<a class="tb tb-fsot" href="{doc}" target="_blank" rel="noopener" '
+                f'title="{label} ({t["verify"]})">{inner}</a>')
+    return f'<span class="tb tb-fsot">{inner}</span>'
+
 
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
                  romance=False, romance_img=None,
-                 rcu=False, rcu_badge=None, rcu_doc=None, rcu_holder=None,
-                 carnival=False, carnival_badge=None, carnival_doc=None,
-                 carnival_holder=None):
+                 rcu=False, rcu_doc=None, rcu_holder=None,
+                 carnival=False, carnival_doc=None, carnival_holder=None):
     """Two separate blocks, deliberately not one row (operator ruling 2026-09-25).
 
     COMPANY CREDENTIALS are registrations held by the operating entity: ASTA
@@ -214,27 +230,23 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
         personal_items.append(
             f'<span class="tb tb-romance">'
             f'<img src="{romance_img}" alt="{t["romance_alt"]}" width="350" height="350" loading="lazy"></span>')
-    if rcu and _asset_exists(rcu_badge):
+    # CRUISE LINE TRAINING MARKS ARE TEXT, NEVER LOGOS (operator ruling
+    # 2026-10-21). Completing a line's course is a real achievement and the
+    # certificate is real, but reproducing the line's own logo to say so is
+    # trademark use that reads as a partnership badge, and these pages run ads
+    # on those same brand terms. It also meant the Royal Caribbean mark landed
+    # on the Carnival ad page once this band went sitewide. So the credential
+    # renders as its own name, linked to the certificate we host: the claim and
+    # its proof survive, the borrowed mark does not. No image, no asset gate.
+    if rcu:
         rsent, rlabel = _RCU[lang]
         lines.append(rsent.format(who=rcu_holder))
-        rimg = (f'<img src="{rcu_badge}" alt="{rlabel}" height="38" loading="lazy">'
-                f'<span class="tb-cap">{rlabel}</span>')
-        if _asset_exists(rcu_doc):
-            personal_items.append(f'<a class="tb tb-rcu" href="{rcu_doc}" target="_blank" '
-                                  f'rel="noopener" title="{rlabel} ({t["verify"]})">{rimg}</a>')
-        else:
-            personal_items.append(f'<span class="tb tb-rcu">{rimg}</span>')
+        personal_items.append(_text_cred(t, rlabel, rcu_doc, _RCU_NAME))
 
-    if carnival and _asset_exists(carnival_badge):
+    if carnival:
         csent, clabel = _CARNIVAL[lang]
         lines.append(csent.format(who=carnival_holder))
-        cimg = (f'<img src="{carnival_badge}" alt="{clabel}" height="34" loading="lazy">'
-                f'<span class="tb-cap">{clabel}</span>')
-        if _asset_exists(carnival_doc):
-            personal_items.append(f'<a class="tb tb-carnival" href="{carnival_doc}" target="_blank" '
-                                  f'rel="noopener" title="{clabel} ({t["verify"]})">{cimg}</a>')
-        else:
-            personal_items.append(f'<span class="tb tb-carnival">{cimg}</span>')
+        personal_items.append(_text_cred(t, clabel, carnival_doc, _CARNIVAL_NAME))
 
     blocks = []
     if company_items:

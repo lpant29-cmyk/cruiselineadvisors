@@ -81,6 +81,16 @@ else
   echo "  ok   no /go/ URLs in sitemap"
 fi
 
+# No page may promise a better/exclusive/unpublished rate from calling us.
+# newsite/build.py runs this over the main site; it has to run again HERE
+# because the /go/ pages are generated after that build, and they are the
+# pages where this wording keeps appearing.
+if python3 "$ROOT/newsite/rate_claim_guard.py" "$ROOT/site" > /tmp/rate_claim_guard.out 2>&1; then
+  echo "  ok   no better/exclusive/unpublished rate claims"
+else
+  echo "  FAIL rate-claim guard:"; sed 's/^/       /' /tmp/rate_claim_guard.out; fail=1
+fi
+
 inbound=$( { grep -rl "/en/go/" "$ROOT/site" 2>/dev/null || true; } | { grep -v "/go/" || true; } | wc -l | tr -d ' ')
 if [ "$inbound" != "0" ]; then
   echo "  FAIL $inbound main-site file(s) link into /go/"; fail=1

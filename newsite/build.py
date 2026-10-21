@@ -213,6 +213,19 @@ def build():
         raise SystemExit("affiliation guard failed: a page names a cruise line or ship "
                          "immediately before specialist/expert/advisor/agent/representative/team")
 
+    # No page may claim our call gets a better, exclusive or unpublished rate.
+    # We do not set prices. See rate_claim_guard.py for why the factual uses of
+    # the same words (how cruise pricing works) are deliberately left alone.
+    rc = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "rate_claim_guard.py"), DIST],
+                        capture_output=True, text=True)
+    print("  " + (rc.stdout.strip().splitlines() or ["rate-claim guard: no output"])[0]
+          .replace("RATE-CLAIM GUARD: clean, no", "✓ rate-claim guard clean, no"))
+    if rc.returncode != 0:
+        for line in rc.stdout.strip().splitlines()[1:]:
+            print("   " + line.strip())
+        raise SystemExit("rate-claim guard failed: a page promises a better/exclusive/"
+                         "unpublished rate from calling us")
+
 
 if __name__ == "__main__":
     build()

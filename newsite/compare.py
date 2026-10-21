@@ -45,12 +45,12 @@ def line_compare_hero(lang, slug, line_name):
     if lang == "en":
         h = f"Compare {line_name} with any other cruise line, and see who wins on what matters."
         sub = ("No more hopping between pages. Line them up on the money-and-complexity facts, gratuities, "
-               "what's included, drink rules, cancellation, then one call gets you the best rate our partners "
+               "what's included, drink rules, cancellation, then one call gets you today's fare for your dates. "
                "can offer.")
     else:
         h = f"Compara {line_name} con cualquier otra línea, y ve quién gana en lo que importa."
         sub = ("Sin saltar entre páginas. Compáralas en los datos de dinero y complejidad, propinas, qué se "
-               "incluye, reglas de bebidas, cancelación, luego una llamada te da la mejor tarifa que nuestros "
+               "incluye, reglas de bebidas, cancelación, luego una llamada te da la tarifa de hoy para tus fechas. "
                "socios pueden ofrecer.")
     return compare_band(lang, kick, h, sub, compare_tool(lang, default_a=slug))
 

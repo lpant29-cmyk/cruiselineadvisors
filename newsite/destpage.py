@@ -331,8 +331,8 @@ def _intl_guide(lang, slug, name):
 
     call = "Call now" if en else "Llama ahora"
     out += _sec("cream", "plan", ("Plan this trip" if en else "Planea este viaje"), "📞",
-                _call(lang, (f"Tell us your dates for {name} and we'll match the ship, the itinerary and the best rate our partners can offer."
-                             if en else f"Dinos tus fechas para {name} y emparejamos el barco, el itinerario y la mejor tarifa."), "dest-intl-cta"))
+                _call(lang, (f"Tell us your dates for {name} and we'll match the ship and the itinerary, then you get today's fare on the call."
+                             if en else f"Dinos tus fechas para {name} y emparejamos el barco y el itinerario, y recibes la tarifa de hoy en la llamada."), "dest-intl-cta"))
     return out
 
 
@@ -449,9 +449,9 @@ def region_guide(lang, slug, name):
                 f'<p class="rsec-sub">{finder}</p>'
                 f'<p style="margin-top:14px"><a class="btn btn-ghost" href="/{lang}/compare/">'
                 + ("Open the cruise finder →" if en else "Abrir el buscador →") + "</a></p>"
-                + _call(lang, (f"Prefer to just ask? Tell us your dates and party for {name}, we'll match the ship and the best rate our partners can offer."
+                + _call(lang, (f"Prefer to just ask? Tell us your dates and party for {name}, we'll match the ship and you get today's fare on the call."
                                if en else
-                               f"¿Prefieres preguntar? Dinos tus fechas y con quién viajas para {name}, emparejamos el barco y la mejor tarifa."), "dest-cta"))
+                               f"¿Prefieres preguntar? Dinos tus fechas y con quién viajas para {name}, emparejamos el barco y recibes la tarifa de hoy."), "dest-cta"))
     return out
 
 

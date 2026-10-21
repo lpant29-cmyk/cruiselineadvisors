@@ -4,8 +4,8 @@ The disclaimers are legally load-bearing; edit with care."""
 from config import (PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY,
                     ASTA_MEMBER, ASTA_URL, FSOT_REF, FSOT_URL,
                     BAHAMAS_SPECIALIST, BAHAMAS_CREST, BAHAMAS_DOC,
-                    RCU_ACCOLADE, RCU_BADGE, RCU_DOC, RCU_HOLDER,
-                    CARNIVAL_LE, CARNIVAL_LE_BADGE, CARNIVAL_LE_DOC, CARNIVAL_LE_HOLDER,
+                    RCU_ACCOLADE, RCU_DOC, RCU_HOLDER,
+                    CARNIVAL_LE, CARNIVAL_LE_DOC, CARNIVAL_LE_HOLDER,
                     ROMANCE_SPECIALIST, ROMANCE_BADGE)
 from i18n import T
 from badges import verified_seal, trust_badges
@@ -35,21 +35,25 @@ _CRED_BAND = {
 }
 
 
-def credentials_band(lang):
+def credentials_band(lang, section_class="section"):
     """Full-width credential band shown on every page (before the footer). Covers all trust and
-    specialist badges at a readable size; specialist badges link to the self-hosted diploma."""
+    specialist badges at a readable size; specialist badges link to the self-hosted diploma.
+
+    section_class is the HOST surface's section-padding class, the one thing
+    about this component that is not self-contained: the main site pads
+    sections with .section, the /go/ pages with .blk. Everything else comes
+    from .credband rules in cred_css.py, so the band is identical on both."""
     c = _CRED_BAND[lang]
     trust = trust_badges(lang, COMPANY, ASTA_URL, FSOT_REF, FSOT_URL, show_asta=ASTA_MEMBER,
                          bahamas=BAHAMAS_SPECIALIST, bahamas_crest=BAHAMAS_CREST,
                          bahamas_doc=BAHAMAS_DOC, romance=ROMANCE_SPECIALIST,
                          romance_img=ROMANCE_BADGE,
-                         rcu=RCU_ACCOLADE, rcu_badge=RCU_BADGE, rcu_doc=RCU_DOC,
-                         rcu_holder=RCU_HOLDER,
-                         carnival=CARNIVAL_LE, carnival_badge=CARNIVAL_LE_BADGE,
-                         carnival_doc=CARNIVAL_LE_DOC, carnival_holder=CARNIVAL_LE_HOLDER)
+                         rcu=RCU_ACCOLADE, rcu_doc=RCU_DOC, rcu_holder=RCU_HOLDER,
+                         carnival=CARNIVAL_LE, carnival_doc=CARNIVAL_LE_DOC,
+                         carnival_holder=CARNIVAL_LE_HOLDER)
     if not trust:
         return ""
-    return (f'<section class="section credband"><div class="wrap">'
+    return (f'<section class="{section_class} credband"><div class="wrap">'
             f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
             f'<h2>{c["h"]}</h2><p>{c["sub"]}</p></div>{trust}</div></section>')
 

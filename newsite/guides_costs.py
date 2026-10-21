@@ -338,14 +338,14 @@ register("how-to-find-affordable-cruise", {
             "html": {
                 "en": "<p>The best value comes from stacking small wins: a flexible week, the right cabin type, a "
                       "smarter itinerary, and a plan for the extras. You do not need a gimmick or a countdown timer.</p>"
-                      "<p>When you are ready, a specialist does the hunting for you and quotes the best rate our "
-                      "partners can offer for your dates. Free, no pressure, and we never take payment for travel. "
+                      "<p>When you are ready, a specialist does the hunting for you and quotes today's fare for your "
+                      "dates. Free, no pressure, and we never take payment for travel. "
                       "Start by telling us how you like to travel with the " + link("/en/compare/", "cruise finder") + ".</p>",
                 "es": "<p>El mejor valor viene de sumar pequeñas victorias: una semana flexible, el camarote correcto, "
                       "un itinerario más inteligente y un plan para los extras. No necesitas un truco ni un "
                       "cronómetro.</p>"
-                      "<p>Cuando estés listo, un especialista hace la búsqueda por ti y cotiza la mejor tarifa que "
-                      "nuestros socios pueden ofrecer para tus fechas. Gratis, sin presión, y nunca cobramos por el "
+                      "<p>Cuando estés listo, un especialista hace la búsqueda por ti y cotiza la tarifa de hoy para "
+                      "tus fechas. Gratis, sin presión, y nunca cobramos por el "
                       "viaje. Empieza contándonos cómo te gusta viajar con el " + link("/es/compare/", "buscador de cruceros") + ".</p>",
             },
         },
