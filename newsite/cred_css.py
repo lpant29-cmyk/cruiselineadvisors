@@ -63,7 +63,6 @@ CRED_CSS = """/* operator credential badges (ASTA + FL Seller of Travel). The cr
    tighter padding. The badges keep their full size, because a trust mark too
    small to read is not a trust mark. */
 .credband-top{padding-top:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(127,212,208,.16)}
-.credband-top .credband-head h2{font-size:clamp(1.05rem,2.8vw,1.35rem);margin-top:.25rem}
 .credband-top .trustbadges{margin-top:1rem}
 .credband-top .tb-op{margin-bottom:.75rem;font-size:.8rem}
 .credband-top .tb-row{gap:.8rem 1.2rem}

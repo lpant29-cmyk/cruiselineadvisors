@@ -36,12 +36,6 @@ _CRED_BAND = {
                   "certificaciones oficiales de las Islas de las Bahamas. Toca un distintivo para verificarlo."},
 }
 
-# Heading for the COMPACT band under the hero. The full band's h2 says
-# "Bahamas-certified", and the Bahamas diploma sits in the personal block that
-# the compact band deliberately leaves downstairs, so reusing that h2 up here
-# would name a credential the band does not show.
-_CRED_TOP_H = {"en": "Licensed and accredited, and you can check it",
-               "es": "Con licencia y acreditados, y puedes comprobarlo"}
 
 
 # A cruise line's own training credential belongs on that line's pages and
@@ -102,9 +96,13 @@ def credentials_band(lang, section_class="section", line_slug=None, compact=Fals
     if not trust:
         return ""
     if compact:
+        # Eyebrow and badges only. The compact band carried an <h2> of its own
+        # and the operator cut it (2026-10-26): the eyebrow already labels the
+        # strip, and a second headline this close to the hero competes with the
+        # page's real one. The full band below keeps its heading.
         return (f'<section class="{section_class} credband credband-top"><div class="wrap">'
                 f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
-                f'<h2>{_CRED_TOP_H[lang]}</h2></div>{trust}</div></section>')
+                f'</div>{trust}</div></section>')
     return (f'<section class="{section_class} credband"><div class="wrap">'
             f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
             f'<h2>{c["h"]}</h2><p>{c["sub"]}</p></div>{trust}</div></section>')
