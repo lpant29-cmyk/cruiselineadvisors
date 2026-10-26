@@ -499,7 +499,14 @@ def kw_line_tokens(line_slug):
             if any(n in o or o in n for o in own):
                 continue
             other.append(n)
-    return own, sorted(set(other), key=len, reverse=True)
+    # Sort by length DESC then alphabetically. Sorting a set by length alone
+    # leaves equal-length tokens in set-iteration order, which Python varies
+    # per process because string hashing is randomised. That made the built
+    # pages differ between two builds of identical data: 16 /go/ files churned
+    # on every run, every commit carried a meaningless diff, and the scheduled
+    # job's "nothing changed, nothing to push" check could never fire, so it
+    # pushed a deploy every time whether or not a fare had moved.
+    return own, sorted(set(other), key=lambda n: (-len(n), n))
 
 
 def kw_consts(line_slug):

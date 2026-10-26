@@ -82,7 +82,14 @@ jobs:
         # It reports a page that has run out of inventory as a GAP and keeps
         # building the healthy ones, so one dead row cannot take the site down.
         if: ${{ !inputs.dry_run }}
-        run: bash lp-system/scripts/deploy.sh
+        # pipefail is set EXPLICITLY. The default shell here is `bash -e {0}`
+        # with no pipefail, so piping deploy.sh into tee would hand this step
+        # tee's exit code, every build would look like a success, and a broken
+        # site would push itself. The tee exists so the notifier can read what
+        # the build actually did rather than guess at it.
+        run: |
+          set -o pipefail
+          bash lp-system/scripts/deploy.sh | tee /tmp/build.log
 
       - name: Commit and push
         id: push
@@ -120,6 +127,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           OWNER: ${{ github.repository_owner }}
           BUILD_OUTCOME: ${{ steps.build.outcome }}
+          BUILD_LOG: /tmp/build.log
           PUSH_OUTCOME: ${{ steps.push.outcome }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python3 .github/scripts/notify_rates.py

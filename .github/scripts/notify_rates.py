@@ -108,16 +108,45 @@ def problems(rep):
         items.append(("push", "Fares were refreshed but the push failed, so the "
                               "change is not live. See the run log."))
 
+    # An empty page has two possible endings and they need different sentences.
+    # This text used to assert the page "was not rebuilt" and that "nothing we
+    # deploy can take it down", which was true before departed_redirect()
+    # existed. Since then the build DOES replace a page whose sailings have all
+    # gone, and the issue was still telling the operator the old sales copy was
+    # live when it had been a redirect for hours. Saying the wrong thing about a
+    # page that takes paid clicks is worse than saying nothing, so the build log
+    # decides which sentence gets printed.
+    build_log = pathlib.Path(os.environ.get("BUILD_LOG", "/tmp/build.log"))
+    departed = set()
+    if build_log.exists():
+        for line in build_log.read_text(errors="replace").splitlines():
+            if line.startswith("DEPARTED: "):
+                departed.add(line.split()[1].rstrip(":"))
+
     log = pathlib.Path(os.environ.get("VALIDATE_LOG", "/tmp/validate.log"))
     if log.exists():
         for line in log.read_text(errors="replace").splitlines():
             if "has 0 publishable deal rows" in line:
-                items.append(("empty-page:" + line.split()[1],
-                              line.strip() + " **This one needs ads paused.** "
-                              "The page was not rebuilt, and because the host "
-                              "never prunes, the copy already published stays "
-                              "served until the ad groups pointing at it are "
-                              "paused. Nothing we deploy can take it down."))
+                pid = line.split()[1]
+                if pid in departed:
+                    tail = (" **This one needs its ads paused.** The page itself "
+                            "is handled: the build replaced it with a redirect to "
+                            "its parent, so nobody lands on a sailing that has "
+                            "gone. But the ads still point at it, so every click "
+                            "is paid for and then bounced, and only pausing the "
+                            "ad groups stops that.")
+                elif build_log.exists():
+                    tail = (" **This one needs ads paused.** The build could not "
+                            "replace it either, so the copy already published "
+                            "stays served exactly as it was: this host publishes "
+                            "additively and never prunes. Nothing we deploy takes "
+                            "it down.")
+                else:
+                    tail = (" **This one needs ads paused.** No build log was "
+                            "available to this job, so whether the page was "
+                            "replaced with a redirect is unknown here: check the "
+                            "run log for a DEPARTED line naming it.")
+                items.append(("empty-page:" + pid, line.strip() + tail))
     return items
 
 
