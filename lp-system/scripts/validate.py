@@ -205,8 +205,14 @@ def main():
         flt = p.get("deal_filter", "").strip()
         matching = [r for r in itins if flt in targets_of(r)]
         # itinerary pages need >=1 verified priced row; ship pages likewise
-        # (structure-guard SHIP PAGES rule) — category pages need >=3
-        need = 1 if p.get("page_type") in ("itinerary", "ship") else 3
+        # (structure-guard SHIP PAGES rule) — category pages need >=3.
+        # A call-first line page needs NONE: it has no fares by design and
+        # renders from the fleet and the line's published ports. generate.py
+        # has carried this exemption since those pages were built; this file
+        # did not, so every run flagged all eight of them as empty and the
+        # eight false alarms buried the real ones in the notification issue.
+        need = 0 if p.get("page_type") == "line-call" else (
+            1 if p.get("page_type") in ("itinerary", "ship") else 3)
         clean = []
         for r in matching:
             if VERIFY_MARK in r.get("source", ""):

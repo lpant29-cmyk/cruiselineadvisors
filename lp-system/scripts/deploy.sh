@@ -51,13 +51,22 @@ echo "==> 3/4  /go/ landing pages"
 # empty inventory. Under set -e that refusal used to abort the loop, so one
 # dead page stopped every later page from being rebuilt at all. Record it and
 # carry on; the page still gets reported, loudly, at step 4.
+#
+# The match is "only N publishable deals" for ANY N, not just zero. It used to
+# be pinned to zero, and generate.py prints the number it actually found, so a
+# category page that still had one or two rows but needs three printed "only 1
+# publishable deals", missed the match, and took the whole deploy down through
+# the FAIL branch below. That is the opposite of what this loop is for, and it
+# becomes reachable exactly when a season winds down and inventory thins out,
+# which is the moment the refresh most needs to keep running. p006 sits at 1
+# row against a need of 3 today and would do it again the day it goes live.
 empty_pages=""
 for pg in "${LP_PAGES[@]}"; do
   if out=$(python3 lp-system/scripts/generate.py --page "$pg" --deploy-dir site 2>&1); then
     echo "$out"
   else
     echo "$out"
-    if echo "$out" | grep -q "SKIP: $pg: only 0 publishable deals"; then
+    if echo "$out" | grep -qE "SKIP: $pg: only [0-9]+ publishable deals"; then
       empty_pages="$empty_pages $pg"
     else
       echo "  FAIL generate.py could not build $pg"; exit 1

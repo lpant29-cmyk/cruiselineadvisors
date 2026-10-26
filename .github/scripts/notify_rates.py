@@ -76,10 +76,24 @@ def problems(rep):
         items.append((f"notable:{rid}",
                       f"**{rid}** published a large move that both queries "
                       f"confirmed to the cent: {'; '.join(r['reasons'])}."))
-    for g in rep.get("untracked_groups", []):
-        items.append((f"untracked:{g}",
-                      f"Source is offering `{g}` from this port and we do not "
-                      f"track it. Either register it or decide not to."))
+    # ONE item for the whole set, not one per code. The 2026-10-25 run listed
+    # 190 of these, each on its own line, and the four findings that actually
+    # needed a decision were buried underneath them. An untracked code is a
+    # discovery, not a fault: the source simply sells more from this port than
+    # we have chosen to publish, and that is the normal state of affairs. The
+    # full list stays in the run's JSON report for anyone who wants to mine it.
+    ug = rep.get("untracked_groups", [])
+    if ug:
+        ports = {}
+        for g in ug:
+            ports[g[4:7] if len(g) > 7 else "?"] = ports.get(g[4:7] if len(g) > 7 else "?", 0) + 1
+        where = ", ".join(f"{n} at {p}" for p, n in sorted(ports.items(), key=lambda x: -x[1]))
+        items.append(("untracked",
+                      f"Source is offering **{len(ug)} sailings we do not track** "
+                      f"({where}). This is a catalogue gap, not a fault, and it "
+                      f"needs a decision only if you want to publish more from "
+                      f"these ports. The full list is in the run artifact. "
+                      f"First few: " + ", ".join(f"`{g}`" for g in ug[:5]) + "."))
     for o in rep.get("retired_offers", []):
         items.append((f"offer:{o}",
                       f"Offer {o} passed its end date and its banner is off. A "

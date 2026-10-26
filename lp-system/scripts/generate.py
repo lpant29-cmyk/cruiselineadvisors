@@ -561,7 +561,14 @@ def all_sailings_departed(page, reg, today):
     """
     flt = page.get("deal_filter", "")
     matching = [r for r in reg["itins"] if flt in targets_of(r)]
-    return bool(matching) and not any(months_of(r, today) for r in matching)
+    if matching:
+        return not any(months_of(r, today) for r in matching)
+    # No live rows left. If this page's rows were RETIRED rather than never
+    # collected, it is still a finished page and still taking paid clicks, so
+    # it gets the redirect. Retiring a dead row used to silently downgrade the
+    # page from "replace it" to "leave it unbuilt", which on a host that never
+    # prunes means the old page keeps selling a sailing that has gone.
+    return any(flt in targets_of(r) for r in reg.get("retired_itins", []))
 
 
 def parent_page_url(page, reg):
@@ -573,6 +580,11 @@ def parent_page_url(page, reg):
     """
     flt = page.get("deal_filter", "")
     rows = [r for r in reg["itins"] if flt in targets_of(r)]
+    if not rows:
+        # Same reason as all_sailings_departed: the retired rows still carry
+        # this page's combo/line targets, which is what the parent is derived
+        # from, so a retired page can still find where to send its visitors.
+        rows = [r for r in reg.get("retired_itins", []) if flt in targets_of(r)]
     if not rows:
         return ""
     want = {t for r in rows for t in targets_of(r) if t.startswith("combo:")}
@@ -2274,8 +2286,14 @@ def bake(page, reg, today, used):
 def load_registries():
     pages = read_csv(DATA / "09_pages.csv")
     ships_rows = read_csv(DATA / "02_ships.csv")
+    retired_path = DATA / "03_itineraries_retired.csv"
     return {
         "itins": read_csv(DATA / "03_itineraries.csv"),
+        # Rows whose season ended and which were lifted out of the live sheet.
+        # Kept loadable because "this page HAD inventory" and "this page never
+        # had any" are different situations with different correct endings,
+        # and deleting the row is what otherwise erases the difference.
+        "retired_itins": read_csv(retired_path) if retired_path.exists() else [],
         "offers": read_csv(DATA / "07_offers.csv"),
         "days": read_csv(DATA / "04_itinerary_days.csv"),
         "faqs": read_csv(DATA / "08_faqs.csv"),
