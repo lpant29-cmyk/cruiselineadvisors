@@ -457,6 +457,22 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
+/* TRUE accreditation (CCRA), held by the operating entity. Treated as an IMAGE
+   badge, so it gets the white chip ASTA and the Bahamas diploma get, not the
+   dark text pill the Seller of Travel reference gets. The official mark is dark
+   navy and near-black on transparent: on the band's own #0c2735 it would be
+   invisible, so the chip supplies the white ground the artwork expects. The code
+   sits beside it in the same dark ink, because it is the thing a visitor copies
+   into the CCRA checker. */
+.tb-true img{display:block;width:auto;height:24px;max-width:100%}
+.tb-true-txt{color:#1b3340;font-size:.76rem;font-weight:800;letter-spacing:.02em;white-space:nowrap}
+.ftr .tb-true{background:rgba(255,255,255,.95);padding:.45rem .75rem;gap:.5rem}
+.credband .tb-true{background:#fff;border-radius:12px;padding:.6rem .9rem;gap:.7rem}
+.credband .tb-true img{height:42px}
+.credband .tb-true-txt{font-size:.88rem}
+@media(min-width:900px){.credband .tb-true img{height:48px}}
+@media(max-width:380px){.credband .tb-true{gap:.45rem;padding:.5rem .7rem}
+  .credband .tb-true img{height:34px}.credband .tb-true-txt{font-size:.78rem}}
 </style>
 <style>.brand-lockup{display:inline-flex;align-items:center;gap:9px}.brand-lockup .brand-txt{font-family:'Fraunces','Georgia',serif;font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--deep)}.brand-lockup .brand-txt span{color:#E0A84E}.backtop{position:fixed;right:14px;bottom:calc(104px + env(safe-area-inset-bottom));z-index:66;width:44px;height:44px;border-radius:50%;border:2px solid var(--deep);background:#fff;color:var(--deep);font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(10,37,64,.18);opacity:0;visibility:hidden;transition:opacity .2s,visibility 0s .2s}.backtop.show{opacity:1;visibility:visible;transition:opacity .2s,visibility 0s}@media(min-width:901px){.backtop{bottom:24px}}.goback{border:0;background:none;color:var(--sea-d);font:inherit;font-weight:700;font-size:14px;cursor:pointer;padding:6px 10px 6px 0;white-space:nowrap}@media(prefers-reduced-motion:reduce){.backtop{transition:none}}</style>
 </head>
@@ -663,7 +679,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   </div>
 </section>
 
-<section class="blk credband"><div class="wrap"><div class="credband-head"><span class="eyebrow">Credentials you can check</span><h2>Licensed, ASTA member and Bahamas-certified</h2><p>You are in good hands. We hold recognised travel-industry credentials and the official Islands of the Bahamas certifications. Tap a badge to verify it.</p></div><div class="trustbadges"><div class="tb-group"><p class="tb-op">Company credentials: <b>BookMeCheapest LLC</b></p><div class="tb-row"><a class="tb tb-asta" href="https://www.asta.org/content/Membership/public-member-directory.aspx" target="_blank" rel="noopener nofollow" title="Proud ASTA member (verify)"><img src="/badges/asta-member.png" alt="ASTA member, American Society of Travel Advisors" width="526" height="224" loading="lazy"><span class="tb-cap">Proud ASTA member</span></a><a class="tb tb-fsot" href="/docs/fl-seller-of-travel.pdf" target="_blank" rel="noopener nofollow" title="FL Seller of Travel Ref. ST150081 (verify)"><span class="tb-fsot-txt">FL Seller of Travel Ref. ST150081</span></a></div></div><div class="tb-group tb-group-personal"><p class="tb-op">Training and certifications</p><div class="tb-row"><a class="tb tb-bah" href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" title="Certified Bahamas Specialist diploma (verify)"><img src="/badges/bahamas-specialist.png" alt="Certified Bahamas Specialist diploma" height="34" loading="lazy"><span class="tb-cap">Certified Bahamas Specialist diploma</span></a><span class="tb tb-romance"><img src="/badges/romance.png" alt="Bahamas Romance Specialist certification" width="350" height="350" loading="lazy"></span><a class="tb tb-fsot" href="/docs/rcu-master-of-adventure-certificate.jpg" target="_blank" rel="noopener" title="Royal Caribbean University Master of Adventure certificate (verify)"><span class="tb-fsot-txt">Royal Caribbean University · Master of Adventure</span></a></div><p class="tb-note">A principal of BookMeCheapest LLC holds the Certified Bahamas Specialist diploma from The Islands of The Bahamas. Lokesh Pant has completed Royal Caribbean University's Master of Adventure certification.</p><p class="tb-note tb-disclaim">Training completed by individuals at BookMeCheapest LLC, the team that researches and publishes this site. Calls are answered by independent travel companies, not by any cruise line, and not by the people named here. These are professional development courses run by tourist boards and cruise lines for travel professionals. Completing one is a training achievement, not a partnership, appointment or endorsement. We are not affiliated with, authorised by, or an agent of any cruise line or tourist board.</p></div></div></div></section><footer>
+<section class="blk credband"><div class="wrap"><div class="credband-head"><span class="eyebrow">Credentials you can check</span><h2>Licensed, ASTA member and Bahamas-certified</h2><p>You are in good hands. We hold recognised travel-industry credentials and the official Islands of the Bahamas certifications. Tap a badge to verify it.</p></div><div class="trustbadges"><div class="tb-group"><p class="tb-op">Company credentials: <b>BookMeCheapest LLC</b></p><div class="tb-row"><a class="tb tb-asta" href="https://www.asta.org/content/Membership/public-member-directory.aspx" target="_blank" rel="noopener nofollow" title="Proud ASTA member (verify)"><img src="/badges/asta-member.png" alt="ASTA member, American Society of Travel Advisors" width="526" height="224" loading="lazy"><span class="tb-cap">Proud ASTA member</span></a><a class="tb tb-fsot" href="/docs/fl-seller-of-travel.pdf" target="_blank" rel="noopener nofollow" title="FL Seller of Travel Ref. ST150081 (verify)"><span class="tb-fsot-txt">FL Seller of Travel Ref. ST150081</span></a><a class="tb tb-true" href="https://www.ccra.com/check-true-code/" target="_blank" rel="noopener nofollow" title="TRUE Accredited · Code 99938739 (verify)"><img src="/badges/true-accredited.png" alt="TRUE Accredited Travel Agency" width="467" height="144" loading="lazy"><span class="tb-true-txt">Code 99938739</span></a></div></div><div class="tb-group tb-group-personal"><p class="tb-op">Training and certifications</p><div class="tb-row"><a class="tb tb-bah" href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" title="Certified Bahamas Specialist diploma (verify)"><img src="/badges/bahamas-specialist.png" alt="Certified Bahamas Specialist diploma" height="34" loading="lazy"><span class="tb-cap">Certified Bahamas Specialist diploma</span></a><span class="tb tb-romance"><img src="/badges/romance.png" alt="Bahamas Romance Specialist certification" width="350" height="350" loading="lazy"></span><a class="tb tb-fsot" href="/docs/rcu-master-of-adventure-certificate.jpg" target="_blank" rel="noopener" title="Royal Caribbean University Master of Adventure certificate (verify)"><span class="tb-fsot-txt">Royal Caribbean University · Master of Adventure</span></a></div><p class="tb-note">A principal of BookMeCheapest LLC holds the Certified Bahamas Specialist diploma from The Islands of The Bahamas. Lokesh Pant has completed Royal Caribbean University's Master of Adventure certification.</p><p class="tb-note tb-disclaim">Training completed by individuals at BookMeCheapest LLC, the team that researches and publishes this site. Calls are answered by independent travel companies, not by any cruise line, and not by the people named here. These are professional development courses run by tourist boards and cruise lines for travel professionals. Completing one is a training achievement, not a partnership, appointment or endorsement. We are not affiliated with, authorised by, or an agent of any cruise line or tourist board.</p></div></div></div></section><footer>
   <div class="wrap">
     <div class="legal">
       <p class="agency-line">CruiseLine Advisors: independent cruise information &amp; referral service</p>
@@ -695,7 +711,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 /* ============================================================
    PAGE PARAMS + DATA - GENERATED by generate.py, DO NOT HAND-EDIT
    ============================================================ */
-const PAGE = {"type": "combo", "filter": "royal-caribbean-galveston", "h1": "Royal Caribbean Cruises from Galveston", "line": "royal-caribbean", "port": "galveston", "lineLabel": "Royal Caribbean", "portLabel": "Galveston TX", "noFares": false};
+const PAGE = {"type": "combo", "filter": "royal-caribbean-galveston", "h1": "Royal Caribbean Cruises from Galveston", "line": "royal-caribbean", "port": "galveston", "lineLabel": "Royal Caribbean", "portLabel": "Galveston TX", "noFares": true};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
 let pricesCheckedOn = "October 20";
@@ -851,13 +867,8 @@ const ITINERARIES = [
    "2027-10"
   ],
   "featured": true,
-  "prices": {
-   "default": 1169,
-   "2027-08": 1349,
-   "2027-09": 1217,
-   "2027-10": 1169
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -925,15 +936,10 @@ const ITINERARIES = [
   "nights": 4,
   "dest": "western-caribbean",
   "destLabel": "Western Caribbean",
-  "months": [
-   "2026-10"
-  ],
+  "months": [],
   "featured": false,
-  "prices": {
-   "default": 349,
-   "2026-10": 349
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1008,28 +1014,8 @@ const ITINERARIES = [
    "2028-04"
   ],
   "featured": false,
-  "prices": {
-   "default": 360,
-   "2026-11": 403,
-   "2026-12": 403,
-   "2027-01": 360,
-   "2027-02": 420,
-   "2027-03": 474,
-   "2027-04": 470,
-   "2027-05": 644,
-   "2027-06": 831,
-   "2027-07": 814,
-   "2027-08": 510,
-   "2027-09": 502,
-   "2027-10": 495,
-   "2027-11": 472,
-   "2027-12": 472,
-   "2028-01": 475,
-   "2028-02": 598,
-   "2028-03": 668,
-   "2028-04": 622
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1111,28 +1097,8 @@ const ITINERARIES = [
    "2028-04"
   ],
   "featured": false,
-  "prices": {
-   "default": 395,
-   "2026-11": 640,
-   "2026-12": 727,
-   "2027-01": 395,
-   "2027-02": 502,
-   "2027-03": 493,
-   "2027-04": 439,
-   "2027-05": 605,
-   "2027-06": 721,
-   "2027-07": 700,
-   "2027-08": 470,
-   "2027-09": 449,
-   "2027-10": 449,
-   "2027-11": 450,
-   "2027-12": 450,
-   "2028-01": 451,
-   "2028-02": 563,
-   "2028-03": 573,
-   "2028-04": 593
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1194,15 +1160,8 @@ const ITINERARIES = [
    "2027-04"
   ],
   "featured": false,
-  "prices": {
-   "default": 607,
-   "2026-12": 1611,
-   "2027-01": 620,
-   "2027-02": 607,
-   "2027-03": 758,
-   "2027-04": 608
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1283,13 +1242,8 @@ const ITINERARIES = [
    "2027-07"
   ],
   "featured": false,
-  "prices": {
-   "default": 659,
-   "2027-05": 659,
-   "2027-06": 1012,
-   "2027-07": 1026
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1361,11 +1315,8 @@ const ITINERARIES = [
    "2028-02"
   ],
   "featured": false,
-  "prices": {
-   "default": 667,
-   "2028-02": 667
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1437,11 +1388,8 @@ const ITINERARIES = [
    "2026-12"
   ],
   "featured": false,
-  "prices": {
-   "default": 734,
-   "2026-12": 734
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1507,12 +1455,8 @@ const ITINERARIES = [
    "2028-04"
   ],
   "featured": false,
-  "prices": {
-   "default": 742,
-   "2027-12": 1097,
-   "2028-04": 742
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1584,11 +1528,8 @@ const ITINERARIES = [
    "2027-08"
   ],
   "featured": false,
-  "prices": {
-   "default": 982,
-   "2027-08": 982
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1693,16 +1634,8 @@ const ITINERARIES = [
    "2028-04"
   ],
   "featured": false,
-  "prices": {
-   "default": 1102,
-   "2027-11": 1266,
-   "2027-12": 1226,
-   "2028-01": 1102,
-   "2028-02": 1121,
-   "2028-03": 1331,
-   "2028-04": 1351
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1781,11 +1714,8 @@ const ITINERARIES = [
    "2027-08"
   ],
   "featured": false,
-  "prices": {
-   "default": 1163,
-   "2027-08": 1163
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1880,13 +1810,8 @@ const ITINERARIES = [
    "2027-07"
   ],
   "featured": false,
-  "prices": {
-   "default": 1238,
-   "2027-05": 1414,
-   "2027-06": 1410,
-   "2027-07": 1238
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -1975,14 +1900,8 @@ const ITINERARIES = [
    "2027-11"
   ],
   "featured": false,
-  "prices": {
-   "default": 1649,
-   "2027-08": 1700,
-   "2027-09": 1659,
-   "2027-10": 1649,
-   "2027-11": 1718
-  },
-  "noPrice": false,
+  "prices": {},
+  "noPrice": true,
   "stamp": "2026-10-20",
   "days": [
    {
@@ -2071,16 +1990,9 @@ const FAQS = [
   "a": "Cruise fares reprice constantly by date and cabin. We show honest recent from-fares by sail month then quote your exact dates live on the call - that number is accurate not stale."
  }
 ];
-const OFFERS = [
-  {
-    "text": "Royal Caribbean promotion, seen 2026-10-16: the line's own cruise-deals page is running a limited-time flash sale it titles the Short Caribbean Getaways Sale, with 3rd and 4th guests sail free. Royal Caribbean's own listing runs it to 2026-10-22 and starts a countdown clock on 2026-10-19. The sale also advertises a lead-in price, which we have not reproduced here because no Galveston sailing on this page is available at that figure in any cabin. Royal Caribbean sets the terms and decides which sailings and guests qualify; ask on the call.",
-    "start": "2026-10-14",
-    "end": "2026-10-22",
-    "endLabel": "Oct 22"
-  }
-];
+const OFFERS = [];
 const KW_OWN = ["royal caribbean", "rccl", "royal carribean"];
-const KW_OTHER = ["holland america", "virgin voyages", "margaritaville", "celebrity", "norwegian", "silversea", "carnival", "princess", "virgin", "cunard", "disney", "costa", "msc", "ncl", "hal"];
+const KW_OTHER = ["holland america", "virgin voyages", "margaritaville", "celebrity", "silversea", "norwegian", "carnival", "princess", "cunard", "disney", "virgin", "costa", "hal", "msc", "ncl"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the

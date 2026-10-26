@@ -58,13 +58,20 @@ CRED_CSS = """/* operator credential badges (ASTA + FL Seller of Travel). The cr
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
-/* TRUE accreditation (CCRA) — white logo + shown code, held by the operating entity */
-.tb-true img{display:block;width:auto;height:22px;max-width:100%}
-.tb-true-txt{color:#CDE7EB;font-size:.76rem;font-weight:700;letter-spacing:.01em}
-.ftr .tb-true{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
-.ftr .tb-true:hover{background:rgba(255,255,255,.14)}
-.credband .tb-true{background:#12384a;border:1px solid rgba(127,212,208,.4);border-radius:12px;padding:.7rem 1rem;gap:.55rem}
-.credband .tb-true img{height:30px}
-.credband .tb-true-txt{font-size:.9rem}
-@media(min-width:900px){.credband .tb-true img{height:34px}}
+/* TRUE accreditation (CCRA), held by the operating entity. Treated as an IMAGE
+   badge, so it gets the white chip ASTA and the Bahamas diploma get, not the
+   dark text pill the Seller of Travel reference gets. The official mark is dark
+   navy and near-black on transparent: on the band's own #0c2735 it would be
+   invisible, so the chip supplies the white ground the artwork expects. The code
+   sits beside it in the same dark ink, because it is the thing a visitor copies
+   into the CCRA checker. */
+.tb-true img{display:block;width:auto;height:24px;max-width:100%}
+.tb-true-txt{color:#1b3340;font-size:.76rem;font-weight:800;letter-spacing:.02em;white-space:nowrap}
+.ftr .tb-true{background:rgba(255,255,255,.95);padding:.45rem .75rem;gap:.5rem}
+.credband .tb-true{background:#fff;border-radius:12px;padding:.6rem .9rem;gap:.7rem}
+.credband .tb-true img{height:42px}
+.credband .tb-true-txt{font-size:.88rem}
+@media(min-width:900px){.credband .tb-true img{height:48px}}
+@media(max-width:380px){.credband .tb-true{gap:.45rem;padding:.5rem .7rem}
+  .credband .tb-true img{height:34px}.credband .tb-true-txt{font-size:.78rem}}
 """

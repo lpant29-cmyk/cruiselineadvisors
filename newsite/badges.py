@@ -95,6 +95,7 @@ _TRUST = {
            "romance_alt": "Bahamas Romance Specialist certification",
            "fsot": "FL Seller of Travel Ref.",
            "true": "TRUE Accredited · Code",
+           "true_short": "Code",
            "true_alt": "TRUE Accredited Travel Agency",
            "verify": "verify"},
     "es": {"op": "Operado por", "asta": "Miembro orgulloso de ASTA",
@@ -102,6 +103,7 @@ _TRUST = {
            "romance_alt": "Certificación de Especialista en Romance de las Bahamas",
            "fsot": "Vendedor de Viajes de Florida Ref.",
            "true": "Acreditado TRUE · Código",
+           "true_short": "Código",
            "true_alt": "Agencia de Viajes Acreditada TRUE",
            "verify": "verificar"},
 }
@@ -216,14 +218,21 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
             f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
             f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
     if true_accredited and true_code:
-        # TRUE (CCRA) accreditation, held by the operating entity. White logo for
-        # the dark credential band, with the code shown — the code is what a
-        # visitor enters at the CCRA checker (true_url) to verify us independently.
+        # TRUE (CCRA) accreditation, held by the operating entity. The official
+        # colour mark on a white chip, the same treatment ASTA and the Bahamas
+        # diploma already get in this band, because it is an image badge like
+        # them and not a text pill like the Seller of Travel reference.
+        #
+        # The code is shown on purpose: it is what a visitor types into the CCRA
+        # checker at true_url to verify us without taking our word for it. The
+        # mark already reads "Accredited Travel Agency", so the visible text is
+        # just the code and the full label lives in the title.
         company_items.append(
             f'<a class="tb tb-true" href="{true_url}" target="_blank" rel="noopener nofollow" '
             f'title="{t["true"]} {true_code} ({t["verify"]})">'
-            f'<img src="/badges/true-white.png" alt="{t["true_alt"]}" width="275" height="156" loading="lazy">'
-            f'<span class="tb-true-txt">{t["true"]} {true_code}</span></a>')
+            f'<img src="/badges/true-accredited.png" alt="{t["true_alt"]}" '
+            f'width="467" height="144" loading="lazy">'
+            f'<span class="tb-true-txt">{t["true_short"]} {true_code}</span></a>')
 
     # ── personal training ──────────────────────────────────────────────────
     personal_items, lines = [], []
