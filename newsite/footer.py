@@ -3,6 +3,7 @@
 The disclaimers are legally load-bearing; edit with care."""
 from config import (PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, COMPANY,
                     ASTA_MEMBER, ASTA_URL, FSOT_REF, FSOT_URL,
+                    TRUE_ACCREDITED, TRUE_CODE, TRUE_URL,
                     BAHAMAS_SPECIALIST, BAHAMAS_CREST, BAHAMAS_DOC,
                     RCU_ACCOLADE, RCU_DOC, RCU_HOLDER,
                     CARNIVAL_LE, CARNIVAL_LE_DOC, CARNIVAL_LE_HOLDER,
@@ -71,6 +72,7 @@ def credentials_band(lang, section_class="section", line_slug=None):
     c = _CRED_BAND[lang]
     training = _LINE_TRAINING.get(line_slug or "")
     trust = trust_badges(lang, COMPANY, ASTA_URL, FSOT_REF, FSOT_URL, show_asta=ASTA_MEMBER,
+                         true_accredited=TRUE_ACCREDITED, true_code=TRUE_CODE, true_url=TRUE_URL,
                          bahamas=BAHAMAS_SPECIALIST, bahamas_crest=BAHAMAS_CREST,
                          bahamas_doc=BAHAMAS_DOC, romance=ROMANCE_SPECIALIST,
                          romance_img=ROMANCE_BADGE,

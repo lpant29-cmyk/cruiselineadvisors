@@ -58,4 +58,13 @@ CRED_CSS = """/* operator credential badges (ASTA + FL Seller of Travel). The cr
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
+/* TRUE accreditation (CCRA) — white logo + shown code, held by the operating entity */
+.tb-true img{display:block;width:auto;height:22px;max-width:100%}
+.tb-true-txt{color:#CDE7EB;font-size:.76rem;font-weight:700;letter-spacing:.01em}
+.ftr .tb-true{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
+.ftr .tb-true:hover{background:rgba(255,255,255,.14)}
+.credband .tb-true{background:#12384a;border:1px solid rgba(127,212,208,.4);border-radius:12px;padding:.7rem 1rem;gap:.55rem}
+.credband .tb-true img{height:30px}
+.credband .tb-true-txt{font-size:.9rem}
+@media(min-width:900px){.credband .tb-true img{height:34px}}
 """

@@ -33,6 +33,16 @@ ASTA_URL        = "https://www.asta.org/content/Membership/public-member-directo
 FSOT_REF        = "ST150081"          # Florida Seller of Travel, held by COMPANY
 FSOT_URL        = "/docs/fl-seller-of-travel.pdf"
 
+# TRUE accreditation (CCRA Travel Commerce Network), held by COMPANY. A travel-
+# retailer accreditation/enumeration, same entity scope as ASTA and FSOT above:
+# it belongs to the OPERATING ENTITY, not the referral brand, and renders in the
+# company-credentials block with them. Publicly verifiable by code at the CCRA
+# checker (TRUE_URL) — the code is meant to be shown. Verified 2026-10-26:
+# BookMeCheapest LLC, code 99938739, expires 2027-10-05. Remove the day it lapses.
+TRUE_ACCREDITED = True
+TRUE_CODE       = "99938739"
+TRUE_URL        = "https://www.ccra.com/check-true-code/"
+
 # Certified Bahamas Specialist, held by a principal of COMPANY (confirmed by the
 # operator 2026-09-18). Scoped to the entity for the same reason as the two
 # above: we have no in-house travel advisors, so this must never read as "our

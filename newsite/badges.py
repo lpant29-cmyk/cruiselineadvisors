@@ -94,11 +94,15 @@ _TRUST = {
            "asta_alt": "ASTA member, American Society of Travel Advisors",
            "romance_alt": "Bahamas Romance Specialist certification",
            "fsot": "FL Seller of Travel Ref.",
+           "true": "TRUE Accredited · Code",
+           "true_alt": "TRUE Accredited Travel Agency",
            "verify": "verify"},
     "es": {"op": "Operado por", "asta": "Miembro orgulloso de ASTA",
            "asta_alt": "Miembro de ASTA, American Society of Travel Advisors",
            "romance_alt": "Certificación de Especialista en Romance de las Bahamas",
            "fsot": "Vendedor de Viajes de Florida Ref.",
+           "true": "Acreditado TRUE · Código",
+           "true_alt": "Agencia de Viajes Acreditada TRUE",
            "verify": "verificar"},
 }
 
@@ -179,6 +183,7 @@ def _text_cred(t, label, doc, name):
 
 
 def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
+                 true_accredited=False, true_code=None, true_url=None,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
                  romance=False, romance_img=None,
                  rcu=False, rcu_doc=None, rcu_holder=None,
@@ -210,6 +215,15 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
             f'<a class="tb tb-fsot" href="{fsot_url}" target="_blank" rel="noopener nofollow" '
             f'title="{t["fsot"]} {fsot_ref} ({t["verify"]})">'
             f'<span class="tb-fsot-txt">{t["fsot"]} {fsot_ref}</span></a>')
+    if true_accredited and true_code:
+        # TRUE (CCRA) accreditation, held by the operating entity. White logo for
+        # the dark credential band, with the code shown — the code is what a
+        # visitor enters at the CCRA checker (true_url) to verify us independently.
+        company_items.append(
+            f'<a class="tb tb-true" href="{true_url}" target="_blank" rel="noopener nofollow" '
+            f'title="{t["true"]} {true_code} ({t["verify"]})">'
+            f'<img src="/badges/true-white.png" alt="{t["true_alt"]}" width="275" height="156" loading="lazy">'
+            f'<span class="tb-true-txt">{t["true"]} {true_code}</span></a>')
 
     # ── personal training ──────────────────────────────────────────────────
     personal_items, lines = [], []
