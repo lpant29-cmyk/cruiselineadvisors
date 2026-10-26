@@ -203,7 +203,20 @@ def main():
     gpath = DATA / "08_group_ids.json"
     g = json.loads(gpath.read_text(encoding="utf-8"))
     g.setdefault("_ports", {})[port_slug] = code
-    g.update(groups)
+    # Into g["groups"], NOT the top level. auto_rates.py reads cfg["groups"]
+    # and nothing else, so the 24 ids this script wrote to the top level on
+    # 2026-10-21 were invisible to it: Miami and Port Canaveral were never
+    # refreshed after the day they were created, and every one of their
+    # sailings was reported as an untracked group at source, because an id the
+    # job cannot see looks exactly like an id we never registered.
+    g.setdefault("groups", {}).update(groups)
+    # Query B in auto_rates.py is per SHIP, so a new port's ships have to join
+    # _ships or none of its rows can ever be confirmed twice and every one of
+    # them is held forever. Derived from the group ids themselves, which carry
+    # the ship prefix, so this cannot drift from what was actually registered.
+    ships = {re.match(r"([A-Z]{2})", gid).group(1)
+             for gid in g["groups"].values() if re.match(r"([A-Z]{2})", gid)}
+    g["_ships"] = sorted(set(g.get("_ships") or []) | ships)
     gpath.write_text(json.dumps(g, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nwritten: {len(new_rows)} itinerary rows, {len(new_ships)} ships, "
           f"{len(groups)} group ids")
