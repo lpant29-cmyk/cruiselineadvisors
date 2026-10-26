@@ -226,29 +226,47 @@ def build():
     # No page may call anyone a cruise line's or ship's own specialist/agent/team.
     # Runs over what was actually written, so it catches wording from any
     # generator, not just the ones we remembered to check.
-    import subprocess
-    aff = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "affiliation_guard.py"), DIST],
-                         capture_output=True, text=True)
-    print("  " + (aff.stdout.strip().splitlines() or ["affiliation guard: no output"])[0]
-          .replace("AFFILIATION GUARD: clean, no", "✓ affiliation guard clean, no"))
-    if aff.returncode != 0:
-        for line in aff.stdout.strip().splitlines()[1:]:
-            print("   " + line.strip())
-        raise SystemExit("affiliation guard failed: a page names a cruise line or ship "
-                         "immediately before specialist/expert/advisor/agent/representative/team")
+    _run_guard("affiliation_guard.py", DIST, "affiliation guard",
+               "affiliation guard failed: a page names a cruise line or ship "
+               "immediately before specialist/expert/advisor/agent/representative/team")
 
     # No page may claim our call gets a better, exclusive or unpublished rate.
     # We do not set prices. See rate_claim_guard.py for why the factual uses of
     # the same words (how cruise pricing works) are deliberately left alone.
-    rc = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "rate_claim_guard.py"), DIST],
-                        capture_output=True, text=True)
-    print("  " + (rc.stdout.strip().splitlines() or ["rate-claim guard: no output"])[0]
-          .replace("RATE-CLAIM GUARD: clean, no", "✓ rate-claim guard clean, no"))
-    if rc.returncode != 0:
-        for line in rc.stdout.strip().splitlines()[1:]:
-            print("   " + line.strip())
-        raise SystemExit("rate-claim guard failed: a page promises a better/exclusive/"
+    _run_guard("rate_claim_guard.py", DIST, "rate-claim guard",
+               "rate-claim guard failed: a page promises a better/exclusive/"
                          "unpublished rate from calling us")
+
+
+def _run_guard(script, target, label, failure_msg):
+    """Run a guard and report what it ACTUALLY did.
+
+    These used to be inline, printing only stdout and discarding stderr. A
+    guard that crashes exits non-zero with nothing on stdout, which looked
+    byte-for-byte identical to a guard that found a violation and could not
+    name it: the build printed "<guard>: no output" and failed with the policy
+    message. That is what the affiliation guard did on every CI run from
+    2026-10-22, while the traceback explaining it was captured and thrown away.
+    A crash and a violation are different events and now read differently.
+    """
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), script), target],
+                       capture_output=True, text=True)
+    out = r.stdout.strip().splitlines()
+    if r.returncode != 0 and not out:
+        # Crashed. Show the real error instead of blaming the content.
+        print(f"  {label}: CRASHED, it did not check anything")
+        for line in (r.stderr.strip().splitlines() or ["(no stderr either)"])[-6:]:
+            print("   " + line)
+        raise SystemExit(f"{label} could not run. This is a bug in the guard, "
+                         f"not a finding about the site. See the traceback above.")
+    print("  " + (out or [f"{label}: no output"])[0]
+          .replace("AFFILIATION GUARD: clean, no", "✓ affiliation guard clean, no")
+          .replace("RATE-CLAIM GUARD: clean, no", "✓ rate-claim guard clean, no"))
+    if r.returncode != 0:
+        for line in out[1:]:
+            print("   " + line.strip())
+        raise SystemExit(failure_msg)
 
 
 if __name__ == "__main__":

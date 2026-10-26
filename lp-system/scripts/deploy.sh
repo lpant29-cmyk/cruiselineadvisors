@@ -77,6 +77,22 @@ done
 echo "==> 4/4  pre-deploy checks"
 fail=0
 
+# Nothing in the build may hardcode one machine's absolute paths. The
+# affiliation guard did, pointed at a Mac home directory, and so it could not
+# run on the CI runner at all: it raised before printing anything, which the
+# build then reported as a content violation. The scheduled fare refresh failed
+# on every run for five days because of it. This check costs nothing and is the
+# difference between catching that here and catching it in a red CI log.
+portable=$(grep -rln "/Users/[a-z0-9]" "$ROOT/newsite"/*.py "$ROOT/lp-system/scripts"/*.py \
+             "$ROOT/.github/scripts"/*.py 2>/dev/null || true)
+if [ -n "$portable" ]; then
+  echo "  FAIL hardcoded home-directory path, will not run off this machine:"
+  echo "$portable" | sed 's/^/       /'
+  fail=1
+else
+  echo "  ok   no hardcoded machine paths in the build scripts"
+fi
+
 # the LP layer must stay invisible to organic search
 if grep -qi "disallow: */en/go" "$ROOT/site/robots.txt" 2>/dev/null; then
   echo "  FAIL robots.txt blocks /go/ (that HIDES the noindex tag from Google)"; fail=1

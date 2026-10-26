@@ -16,7 +16,13 @@ usage: python3 affiliation_guard.py <dir> [<dir>...]   exit 1 on any hit
 """
 import json, pathlib, re, sys, html
 
-ROOT = pathlib.Path("/Users/lokesh29/cruiselineadvisors")
+# Derived from this file's own location, never hardcoded. An absolute path to
+# one developer's home directory made this guard unrunnable anywhere else: on
+# the CI runner it raised FileNotFoundError before printing a word, build.py
+# saw a non-zero exit with empty stdout and reported it as a policy violation,
+# and the scheduled fare refresh failed on every run from 2026-10-22 until this
+# was found on 2026-10-26.
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 names = set()
 doc = json.loads((ROOT/"newsite/data/cruise-lines.json").read_text(encoding="utf-8"))
 for l in doc["lines"]:
