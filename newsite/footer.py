@@ -36,6 +36,13 @@ _CRED_BAND = {
                   "certificaciones oficiales de las Islas de las Bahamas. Toca un distintivo para verificarlo."},
 }
 
+# Heading for the COMPACT band under the hero. The full band's h2 says
+# "Bahamas-certified", and the Bahamas diploma sits in the personal block that
+# the compact band deliberately leaves downstairs, so reusing that h2 up here
+# would name a credential the band does not show.
+_CRED_TOP_H = {"en": "Licensed and accredited, and you can check it",
+               "es": "Con licencia y acreditados, y puedes comprobarlo"}
+
 
 # A cruise line's own training credential belongs on that line's pages and
 # nowhere else (operator ruling 2026-10-21). Naming Royal Caribbean University
@@ -58,7 +65,7 @@ def line_of_path(page_path):
     return m.group(1) if m else None
 
 
-def credentials_band(lang, section_class="section", line_slug=None):
+def credentials_band(lang, section_class="section", line_slug=None, compact=False):
     """Full-width credential band shown on every page (before the footer). Covers all trust and
     specialist badges at a readable size; specialist badges link to the self-hosted diploma.
 
@@ -68,6 +75,16 @@ def credentials_band(lang, section_class="section", line_slug=None):
     from .credband rules in cred_css.py, so the band is identical on both.
 
     line_slug decides which cruise line training shows: that line's, or none.
+
+    compact is the band that sits directly under the hero (operator ruling
+    2026-10-26), and it carries the COMPANY registrations only: ASTA, the
+    Florida Seller of Travel licence and the TRUE accreditation. Three reasons
+    it is not simply the whole band repeated. The full band is 980px tall on a
+    375px screen, which is more than a screenful of push-down on a site whose
+    only job is a phone call. The personal block's non-affiliation disclaimer
+    is not optional, so its badges cannot travel without 243px of note. And a
+    legal disclaimer printed twice on one page is noise, not extra protection.
+    The full band, with every badge and every note, is unchanged below.
     """
     c = _CRED_BAND[lang]
     training = _LINE_TRAINING.get(line_slug or "")
@@ -80,9 +97,14 @@ def credentials_band(lang, section_class="section", line_slug=None):
                          rcu_doc=RCU_DOC, rcu_holder=RCU_HOLDER,
                          carnival=CARNIVAL_LE and training == "carnival",
                          carnival_doc=CARNIVAL_LE_DOC,
-                         carnival_holder=CARNIVAL_LE_HOLDER)
+                         carnival_holder=CARNIVAL_LE_HOLDER,
+                         company_only=compact)
     if not trust:
         return ""
+    if compact:
+        return (f'<section class="{section_class} credband credband-top"><div class="wrap">'
+                f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
+                f'<h2>{_CRED_TOP_H[lang]}</h2></div>{trust}</div></section>')
     return (f'<section class="{section_class} credband"><div class="wrap">'
             f'<div class="credband-head"><span class="eyebrow">{c["eyebrow"]}</span>'
             f'<h2>{c["h"]}</h2><p>{c["sub"]}</p></div>{trust}</div></section>')

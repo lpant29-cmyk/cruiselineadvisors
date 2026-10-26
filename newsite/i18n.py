@@ -12,7 +12,7 @@ T = {
         "free_to_call": "Toll Free",
         "hours_label": "Advisors",
         # top disclosure bar
-        "disc_top": "Independent cruise referral service, not a cruise line and not a travel agency.",
+        "disc_top": "Independent travel agency, not a cruise line and not affiliated with any cruise line.",
         # nav
         "nav_lines": "Cruise Lines", "nav_compare": "Find a Cruise", "nav_facts": "Cruise Facts",
         "nav_dest": "Destinations", "nav_guides": "Guides", "nav_updates": "Updates",
@@ -70,7 +70,7 @@ T = {
         "final_h2": "Ready to talk it through?",
         "final_sub": "Tell a specialist what you want from the trip. They'll do the comparing.",
         # footer
-        "foot_tag": "Independent cruise information & referral service.",
+        "foot_tag": "Independent travel agency and cruise information service.",
         "foot_col_lines": "Cruise Lines", "foot_col_res": "Resources",
         "foot_col_co": "Company", "foot_col_legal": "Legal",
         "foot_hours": "Coverage hours",
@@ -81,7 +81,7 @@ T = {
         "skip": "Saltar al contenido",
         "free_to_call": "Línea gratuita",
         "hours_label": "Asesores",
-        "disc_top": "Servicio independiente de referencia de cruceros, no somos una línea de crucero ni una agencia de viajes.",
+        "disc_top": "Agencia de viajes independiente, no somos una línea de crucero ni estamos afiliados a ninguna.",
         "nav_lines": "Líneas de Crucero", "nav_compare": "Buscar Crucero", "nav_facts": "Datos de Cruceros",
         "nav_dest": "Destinos", "nav_guides": "Guías", "nav_updates": "Novedades",
         "nav_menu": "Menú",
@@ -131,7 +131,7 @@ T = {
         "dest_best": "Mejor",
         "final_h2": "¿Listo para conversarlo?",
         "final_sub": "Cuéntale a un especialista qué esperas del viaje. Ellos harán la comparación.",
-        "foot_tag": "Servicio independiente de información y referencia de cruceros.",
+        "foot_tag": "Agencia de viajes independiente y servicio de información de cruceros.",
         "foot_col_lines": "Líneas de Crucero", "foot_col_res": "Recursos",
         "foot_col_co": "Empresa", "foot_col_legal": "Legal",
         "foot_hours": "Horario de atención",

@@ -97,7 +97,7 @@ GUIDES = [
 
 LEGAL = [
  ("terms","Terms of Use", [
-  ("What this website is","CruiseLine Advisors is a marketing and referral service operated by [Your Company] LLC. We are not a cruise line, travel agency, tour operator or seller of travel. We do not sell, book, reserve, ticket or take payment for travel, and we do not set prices or hold inventory."),
+  ("What this website is","CruiseLine Advisors is operated by BookMeCheapest LLC, a Florida-registered independent travel agency (Fla. Seller of Travel Reg. No. ST150081). We are not a cruise line and are not affiliated with or endorsed by any cruise line. Our own team answers calls and books cruises through the cruise lines' travel-agent portals. Some calls may be connected to partner travel companies, and we may receive a referral fee."),
   ("How referrals work","When you call us or submit a request, we may connect you with one of several independent, licensed third-party travel agencies. We may receive a marketing or referral fee for that connection. All quotes, bookings, payments, changes, cancellations and customer service are provided by that independent agency under its own terms and conditions."),
   ("No pricing on this site","This website does not advertise, display or guarantee any fare, rate, discount or saving. Any pricing you receive is quoted directly by an independent partner agency based on live availability at that time and is subject to change."),
   ("Editorial content","Destination guides, cruise line information and seasonal timing are general planning information compiled independently from published sources. They are not offers, recommendations or guarantees. Fleets, facilities, policies and entry requirements change frequently — always confirm details with the agency booking your trip and with official sources."),
@@ -146,7 +146,7 @@ def shell(title, desc, body, depth=0, extra_css=""):
 </head>
 <body style="--l1:#0a2740;--l2:#123c5a;--laccent:#D9B25A">
 <div class="disc">
-  <b>We're an independent referral service — not a cruise line and not a travel agency.</b>
+  <b>We're an independent travel agency, not a cruise line and not affiliated with any cruise line.</b>
   We connect you with licensed cruise specialists at independent partner agencies and may be paid a referral fee.
 </div>
 <header class="hdr">
@@ -167,7 +167,7 @@ def shell(title, desc, body, depth=0, extra_css=""):
 <footer class="ftr">
   <div class="wrap2">
     <p class="built">Last built {TODAY.isoformat()}</p>
-    <p><b>What we are:</b> a marketing and referral service. We are not a cruise line, travel agency, tour operator or seller of travel. We do not sell, book, ticket or take payment for travel. Calls may be connected to one of several independent, licensed third-party travel agencies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p>
+    <p><b>What we are:</b> CruiseLine Advisors is operated by BookMeCheapest LLC, a Florida-registered independent travel agency (Fla. Seller of Travel Reg. No. ST150081). We are not a cruise line and are not affiliated with or endorsed by any cruise line. Our own team answers calls and books cruises through the cruise lines' travel-agent portals. Some calls may be connected to partner travel companies, and we may receive a referral fee.</p>
     <p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used descriptively only. We are not affiliated with, sponsored by, endorsed by or an agent of any cruise line.</p>
     <p><b>Pricing:</b> This site displays no fares, rates, discounts or savings.</p>
     <p><a href="{up}legal/terms.html">Terms</a> · <a href="{up}legal/privacy.html">Privacy</a> · <a href="{up}legal/consent.html">Calling &amp; SMS Consent</a> · <a href="{up}legal/do-not-sell.html">Do Not Sell or Share</a></p>

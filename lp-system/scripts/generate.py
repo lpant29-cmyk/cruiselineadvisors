@@ -105,7 +105,7 @@ def lp_footer_html(final_tel, final_display):
     return f"""<footer>
   <div class="wrap">
     <div class="legal">
-      <p class="agency-line">{AGENCY_NAME}: independent cruise information &amp; referral service</p>
+      <p class="agency-line">{AGENCY_NAME}: independent travel agency and cruise information service</p>
       {blocks}
       <div class="legalrow" style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0">{links}</div>
       <p><a href="tel:{final_tel}" style="font-weight:800">{final_display}</a> · 8am-11pm ET, every day</p>
@@ -275,8 +275,12 @@ def lp_credentials_html(line_slug=None):
     try:
         import footer as site_footer
         import cred_css
+        import legal_partial
         band = site_footer.credentials_band("en", section_class="blk", line_slug=line_slug)
-        return "<style>" + cred_css.CRED_CSS + "</style>", band
+        top = site_footer.credentials_band("en", section_class="blk", line_slug=line_slug,
+                                           compact=True)
+        strip = legal_partial.affil_strip("en", line_slug)
+        return "<style>" + cred_css.CRED_CSS + "</style>", band, top, strip
     finally:
         sys.path.pop(0)
 
@@ -539,9 +543,8 @@ def client_fuse():
 NO_INVENTORY = "only 0 publishable deals"
 
 _DEPARTED_DISCLOSURE = (
-    "All quotes, availability, bookings and payments are handled by "
-    "independent travel companies. We do not sell, book or take "
-    "payment for travel. Cruise line and ship names are property of their "
+    "Your quote and your booking are confirmed on the call, by us or by a "
+    "partner travel company. Cruise line and ship names are property of their "
     "respective owners, used descriptively only; we are not affiliated with "
     "or endorsed by any cruise line."
 )
@@ -1712,6 +1715,12 @@ def bake(page, reg, today, used):
     if page["page_type"] == "itinerary" and deals:
         t0 = targets_of(deals[0])
         line_slug = line_slug or facet_from_targets(t0, "line:")
+        # page_targets does not always carry a line: facet, and the row's own
+        # line_id always does. Without this an itinerary page about a Royal
+        # Caribbean ship resolved to no line at all, so it showed neither the
+        # line's training credential nor its disclosure strip.
+        if not line_slug:
+            line_slug = reg["lines_by_id"].get(deals[0].get("line_id", ""), {}).get("slug", "")
         port_slug = port_slug or facet_from_targets(t0, "port:")
         dest_slug = dest_slug or facet_from_targets(t0, "dest:")
     if page["page_type"] == "ship":
@@ -2217,11 +2226,26 @@ def bake(page, reg, today, used):
 
     # shared legal footer (operator ruling): replace the template's footer
     # with the partial-sourced compact block; link the TCPA consent line
-    cred_css_tag, cred_band = lp_credentials_html(line_slug)
+    cred_css_tag, cred_band, cred_top, affil = lp_credentials_html(line_slug)
     html = re.sub(r"<footer>.*?</footer>",
                   lambda _: cred_band + lp_footer_html(final_tel, final_display),
                   html, count=1, flags=re.S)
     html = html.replace("</head>", cred_css_tag + "\n</head>", 1)
+    # Same two placements as the main site: the line disclosure directly under
+    # the site header, the compact credential band directly under the hero.
+    # These pages ARE the ad destinations, so if the strip belongs anywhere
+    # above the fold it belongs here first.
+    #
+    # The /go/ templates nest these the opposite way round from the main site:
+    # the slim site header is <nav>, and the hero is <header class="hero">
+    # BELOW it. Matching on </header> for the disclosure therefore put it under
+    # the hero, 561px down, below the fold on a 667px phone. All seven live
+    # templates share the <nav> then <header class="hero"> shape; the departed
+    # redirect stub has neither, which is what the guards are for.
+    if affil and "</nav>" in html:
+        html = html.replace("</nav>", "</nav>\n" + affil, 1)
+    if cred_top and "</header>" in html:
+        html = html.replace("</header>", "</header>\n" + cred_top, 1)
     html = html.replace(CONSENT_SENTENCE, CONSENT_LINKED)
     html = html.replace("#CALLBACK_ACTION", CALLBACK_ACTION)
 

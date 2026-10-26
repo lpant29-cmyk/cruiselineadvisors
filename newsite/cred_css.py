@@ -58,6 +58,26 @@ CRED_CSS = """/* operator credential badges (ASTA + FL Seller of Travel). The cr
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
+/* Compact band directly under the hero. Company registrations only, so it is
+   a strip rather than a second full section: smaller heading, no sub-paragraph,
+   tighter padding. The badges keep their full size, because a trust mark too
+   small to read is not a trust mark. */
+.credband-top{padding-top:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(127,212,208,.16)}
+.credband-top .credband-head h2{font-size:clamp(1.05rem,2.8vw,1.35rem);margin-top:.25rem}
+.credband-top .trustbadges{margin-top:1rem}
+.credband-top .tb-op{margin-bottom:.75rem;font-size:.8rem}
+.credband-top .tb-row{gap:.8rem 1.2rem}
+@media(min-width:900px){.credband-top{padding-top:1.8rem;padding-bottom:1.8rem}
+  .credband-top .tb-asta img{height:50px}.credband-top .tb-true img{height:40px}}
+/* Line-page disclosure strip, directly under the header. Deliberately NOT the
+   site's navy: a warm light band reads as a notice rather than as more chrome,
+   and it clears WCAG AAA against #3A2E18 at the 14px floor the ruling sets.
+   Font size never drops below 14px, including on a 320px phone, because "small
+   print nobody reads" is the failure mode this strip exists to avoid. */
+.affilstrip{background:#FFF4E2;border-bottom:1px solid #E6D3AE;color:#3A2E18}
+.affilstrip p{margin:0 auto;max-width:1180px;padding:.6rem 16px;font-size:14px;
+  line-height:1.45;text-align:center;font-weight:600;letter-spacing:.005em}
+@media(min-width:900px){.affilstrip p{font-size:15px;padding:.65rem 16px}}
 /* TRUE accreditation (CCRA), held by the operating entity. Treated as an IMAGE
    badge, so it gets the white chip ASTA and the Bahamas diploma get, not the
    dark text pill the Seller of Travel reference gets. The official mark is dark

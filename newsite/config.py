@@ -23,8 +23,8 @@ COMPANY_ADDR  = "6501 Arlington Expressway #2177, Jacksonville, FL 32211, United
 PRIVACY_EMAIL = "privacy@cruiselineadvisors.com"  # TODO: confirm this inbox exists
 
 # ── Operator credentials (2026-09-17) ───────────────────────────────────────
-# These belong to the OPERATING ENTITY (COMPANY above), not to the CruiseLine
-# Advisors referral service, and must be presented that way. Mirrored from the
+# These belong to the OPERATING ENTITY (COMPANY above), which trades as CruiseLine
+# Advisors, and must be presented that way. Mirrored from the
 # same company's bargainairticket.com, where they already run. Real, verifiable
 # registrations, never decoration: if either lapses, remove it the same day.
 # ASTA_MEMBER has no public member number, so we make no numeric claim.

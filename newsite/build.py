@@ -189,6 +189,16 @@ def build():
             write(rel, stub_html(lang, entry, PHONE_HREF, PHONE_DISPLAY, SITE_URL))
             n_retired += 1
 
+    # The pre-2026-07 flat site is still served at its old URLs, carrying the
+    # placeholder phone number and the retired legal paragraph. See
+    # newsite/legacy_urls.py: no generator writes these any more, so the only
+    # way to change what they serve is to write a replacement at each one.
+    from legacy_urls import LEGACY_URLS, legacy_stub
+    n_legacy = 0
+    for old_path, target in LEGACY_URLS:
+        write(old_path, legacy_stub(old_path, target, PHONE_HREF, PHONE_DISPLAY, SITE_URL))
+        n_legacy += 1
+
     # static assets → dist root (favicon, icons, og-image, manifest)
     assets = os.path.join(ROOT, "assets")
     n_assets = 0
@@ -207,6 +217,7 @@ def build():
     print(f"  facts verified: {done}/{total}")
     print(f"  ship rosters: {sl} lines, {sn} ships")
     print(f"  retired-ship stubs: {n_retired} (URLs kept answering, claim removed)")
+    print(f"  legacy-URL stubs:   {n_legacy} (old flat site replaced in place)")
     if hits:
         print("  ⚠ BANNED-TERM HITS:", hits)
     else:

@@ -9,8 +9,8 @@ Conversions and Google call forwarding already live.
 
 **1. No trademarks in ad text.** Cruise line and ship names may appear in
 KEYWORDS. They must never appear in headlines, descriptions, sitelink text,
-sitelink descriptions or callouts. We are an independent referral service,
-not an authorised reseller. "Galveston", "Texas", "cruise" are all fine.
+sitelink descriptions or callouts. We are an independent travel agency,
+not an authorised reseller and not affiliated with any cruise line. "Galveston", "Texas", "cruise" are all fine.
 
 **2. Every ad group's keyword is mirrored in the page heading.** One ad
 group = one keyword theme = one URL parameter = one matching H1. No keyword

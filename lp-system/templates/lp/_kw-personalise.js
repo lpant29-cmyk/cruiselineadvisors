@@ -36,7 +36,7 @@
      unmatchable at the start of a string. */
   var BAD_KW = /(\bcheap|\bcheapest|\blowest|\bfree\b|\bguarantee|\bdiscount|\bdeal of\b|\ball[\s-]inclusive|%|\$|\bsave\b|\bper person\b)/i;
 
-  /* Affiliation and identity claims. We are a referral service and say so on
+  /* Affiliation and identity claims. We are an independent agency and say so on
      every page; echoing "official site" into our own H1 contradicts that and is
      trademark exposure on brand keywords. */
   var BAD_AFFIL = /\b(official|officially|authorized|authorised|accredited|partner|direct|agent|agency|reservations?|customer (service|care)|headquarters|corporate|complaints?|refunds?)\b/i;

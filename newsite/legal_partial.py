@@ -12,15 +12,15 @@ Pricing wording per ADS-LP-BRIEF section 6b (sitewide sentence) and 6a
 clause keeps the brief's canonical wording pending the operator's
 taxes-included arbitration; that decision lands HERE when made.
 """
-from config import BRAND
+from config import BRAND, COMPANY, FSOT_REF
 
 DISC = {
     "en": [
-        ("What we are", f"{BRAND} is a marketing and referral service. We are not a cruise line, "
-         "travel agency or tour operator, and we are not an agent of any cruise line. We do not sell, "
-         "book, ticket or take payment for cruise travel, and we do not set prices or hold inventory. Calls may be connected to "
-         "one of several independent third-party travel companies, and we may receive a "
-         "referral fee. All quotes, bookings and customer service are provided by that agency under its own terms."),
+        ("What we are", f"{BRAND} is operated by {COMPANY}, a Florida-registered independent travel "
+         f"agency (Fla. Seller of Travel Reg. No. {FSOT_REF}). We are not a cruise line and are not "
+         "affiliated with or endorsed by any cruise line. Our own team answers calls and books cruises "
+         "through the cruise lines' travel-agent portals. Some calls may be connected to partner travel "
+         "companies, and we may receive a referral fee."),
         ("Trademarks", "All cruise line names, ship names and marks are the property of their respective "
          "owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, "
          "authorised by, or an agent of any cruise line."),
@@ -36,13 +36,12 @@ DISC = {
          "sailing; any private-island or venue names are for reference."),
     ],
     "es": [
-        ("Qué somos", f"{BRAND} es un servicio de marketing y referencia. No somos una línea de crucero, "
-         "agencia de viajes ni operador turístico, y no somos agentes de ninguna línea de crucero. No "
-         "vendemos, reservamos, emitimos boletos ni cobramos por viajes en crucero, y no fijamos precios "
-         "ni tenemos inventario. Las llamadas pueden "
-         "conectarse con una de varias empresas de viajes independientes, y podemos recibir "
-         "una comisión de referencia. Todas las cotizaciones, reservas y atención al cliente las proporciona "
-         "esa agencia según sus propios términos."),
+        ("Qué somos", f"{BRAND} es operado por {COMPANY}, una agencia de viajes independiente registrada "
+         f"en Florida (Vendedor de Viajes de Florida Ref. {FSOT_REF}). No somos una línea de crucero y no "
+         "estamos afiliados ni respaldados por ninguna línea de crucero. Nuestro propio equipo atiende las "
+         "llamadas y reserva cruceros a través de los portales para agentes de viajes de las líneas. "
+         "Algunas llamadas pueden conectarse con empresas de viajes asociadas, y podemos recibir una "
+         "comisión de referencia."),
         ("Marcas registradas", "Todos los nombres de líneas de crucero, nombres de barcos y marcas son "
          "propiedad de sus respectivos dueños, usados aquí solo de forma descriptiva. No estamos afiliados, "
          "patrocinados, respaldados, autorizados por, ni somos agentes de ninguna línea de crucero."),
@@ -70,15 +69,14 @@ FARES_PARA = {
            "from publicly available sources on the date stamped with each offer. What each fare covers is "
            "stated with the fare: where the source includes taxes and fees, we show that. Fares exclude "
            "gratuities, onboard spending and travel insurance, change frequently, and are not an offer to "
-           "sell travel. All quotes, availability, bookings and payments are handled by "
-           "independent travel companies. We do not sell, book or take payment for travel."),
+           "sell travel. Your quote and your booking are confirmed on the call, by us or by a "
+           "partner travel company."),
     "es": ("Tarifas mostradas", "Los precios mostrados son tarifas iniciales por persona en ocupación doble, "
            "observadas de fuentes públicas en la fecha indicada junto a cada oferta. Lo que cubre cada "
            "tarifa se indica junto a ella: cuando la fuente incluye impuestos y tasas, lo mostramos. Las "
            "tarifas excluyen propinas, gastos a bordo y seguro de viaje, cambian con frecuencia y no "
-           "constituyen una oferta de venta de viajes. Todas las cotizaciones, disponibilidad, reservas y "
-           "pagos los gestionan empresas de viajes independientes. No vendemos, reservamos ni "
-           "cobramos por viajes."),
+           "constituyen una oferta de venta de viajes. Tu cotización y tu reserva se confirman en la "
+           "llamada, por nosotros o por una empresa de viajes asociada."),
 }
 
 LEGAL = [  # (en label, es label, filename)
@@ -109,3 +107,35 @@ def legal_links_html(lang, origin=""):
     return "".join(
         f'<a href="{origin}/{lang}/legal/{f.removesuffix(".html")}/">{en if lang == "en" else es}</a>'
         for en, es, f in LEGAL)
+
+
+# ── Line-scoped disclosure strip, directly under the header ────────────────
+# Operator ruling 2026-10-26. On pages ABOUT a cruise line, the non-affiliation
+# statement has to be visible without scrolling, because that is where a visitor
+# who arrived on the line's brand keyword decides whose website they are on.
+# The footer disclaimer still carries the full version; this is the part that
+# cannot wait until the footer.
+#
+# Keyed by line slug, so extending it to another line is one line of data here
+# and nothing else. Royal Caribbean only today, by instruction.
+AFFIL_STRIP_LINES = {"royal-caribbean": "Royal Caribbean"}
+
+
+def affil_strip(lang, line_slug):
+    """The disclosure strip for a line page, or "" for every other page.
+
+    One text, built from config, so the entity name and the licence number can
+    never drift from the ones in the footer and the credentials band.
+    """
+    line = AFFIL_STRIP_LINES.get(line_slug or "")
+    if not line:
+        return ""
+    if lang == "es":
+        txt = (f"Operado por {COMPANY}, una agencia de viajes independiente &middot; "
+               f"Vendedor de Viajes de Florida Ref. {FSOT_REF} &middot; "
+               f"No afiliado ni respaldado por {line}")
+    else:
+        txt = (f"Operated by {COMPANY}, an independent travel agency &middot; "
+               f"Fla. Seller of Travel Reg. No. {FSOT_REF} &middot; "
+               f"Not affiliated with or endorsed by {line}")
+    return f'<div class="affilstrip"><p>{txt}</p></div>'

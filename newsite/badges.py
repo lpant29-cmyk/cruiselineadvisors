@@ -189,7 +189,8 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                  bahamas=False, bahamas_crest=None, bahamas_doc=None,
                  romance=False, romance_img=None,
                  rcu=False, rcu_doc=None, rcu_holder=None,
-                 carnival=False, carnival_doc=None, carnival_holder=None):
+                 carnival=False, carnival_doc=None, carnival_holder=None,
+                 company_only=False):
     """Two separate blocks, deliberately not one row (operator ruling 2026-09-25).
 
     COMPANY CREDENTIALS are registrations held by the operating entity: ASTA
@@ -201,6 +202,13 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
     implies the company is accredited by a cruise line or tourist board, which
     is exactly the affiliation our disclaimers deny. The non-affiliation note
     renders with the personal block and is not optional.
+
+    company_only drops the personal block entirely, for the compact band that
+    sits under the hero. It is NOT a way to show the training badges without
+    their disclaimer: the note is not optional, so the only honest way to
+    shorten this is to leave the whole personal block for the full band lower
+    down. Company registrations carry no affiliation risk and need no note,
+    which is exactly why they are the half that can travel.
     """
     t, sec = _TRUST[lang], _SECTIONS[lang]
 
@@ -236,7 +244,7 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
 
     # ── personal training ──────────────────────────────────────────────────
     personal_items, lines = [], []
-    if bahamas:
+    if bahamas and not company_only:
         sentence, doc_label = _BAHAMAS[lang]
         lines.append(sentence.format(co=company))
         if _asset_exists(bahamas_crest):
@@ -247,7 +255,7 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
                                       f'rel="noopener" title="{doc_label} ({t["verify"]})">{crest}</a>')
             else:
                 personal_items.append(f'<span class="tb tb-bah">{crest}</span>')
-    if romance and _asset_exists(romance_img):
+    if romance and not company_only and _asset_exists(romance_img):
         # Display-only: no romance-specific document exists, and pointing it at
         # the general Bahamas diploma would offer the wrong thing as proof.
         personal_items.append(
@@ -261,12 +269,12 @@ def trust_badges(lang, company, asta_url, fsot_ref, fsot_url, show_asta=True,
     # on the Carnival ad page once this band went sitewide. So the credential
     # renders as its own name, linked to the certificate we host: the claim and
     # its proof survive, the borrowed mark does not. No image, no asset gate.
-    if rcu:
+    if rcu and not company_only:
         rsent, rlabel = _RCU[lang]
         lines.append(rsent.format(who=rcu_holder))
         personal_items.append(_text_cred(t, rlabel, rcu_doc, _RCU_NAME))
 
-    if carnival:
+    if carnival and not company_only:
         csent, clabel = _CARNIVAL[lang]
         lines.append(csent.format(who=carnival_holder))
         personal_items.append(_text_cred(t, clabel, carnival_doc, _CARNIVAL_NAME))

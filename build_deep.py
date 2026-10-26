@@ -357,7 +357,7 @@ def build_page(L, css):
 <body style="--l1:{t.get('c1','#0a2740')};--l2:{t.get('c2','#123c5a')};--laccent:{t.get('accent','#e0a458')}">
 
 <div class="disc">
-  <b>We're an independent referral service — not a cruise line and not a travel agency.</b>
+  <b>We're an independent travel agency, not a cruise line and not affiliated with any cruise line.</b>
   We are not affiliated with or endorsed by {esc(L['legal_name'])}. We connect you with licensed cruise specialists at independent partner agencies and may be paid a referral fee.
 </div>
 
@@ -386,7 +386,7 @@ def build_page(L, css):
 <footer class="ftr">
   <div class="wrap2">
     <p class="built">Page generated from verified source data. Last built: {TODAY.isoformat()}</p>
-    <p><b>What we are:</b> a marketing and referral service. We are not a cruise line, travel agency, tour operator or seller of travel. We do not sell, book, ticket or take payment for travel, and we do not set prices or hold inventory. Calls may be connected to one of several independent, licensed third-party travel agencies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p>
+    <p><b>What we are:</b> CruiseLine Advisors is operated by BookMeCheapest LLC, a Florida-registered independent travel agency (Fla. Seller of Travel Reg. No. ST150081). We are not a cruise line and are not affiliated with or endorsed by any cruise line. Our own team answers calls and books cruises through the cruise lines' travel-agent portals. Some calls may be connected to partner travel companies, and we may receive a referral fee.</p>
     <p><b>Trademarks:</b> {esc(L['legal_name'])} and all cruise line names, ship names and marks are the property of their respective owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by, or an agent of {esc(L['legal_name'])}. This is not an official site of {esc(L['legal_name'])}.</p>
     <p><b>Pricing:</b> This page displays no fares, rates, discounts or savings. Any pricing you receive is quoted by an independent partner agency based on live availability.</p>
     <p>© {TODAY.year} [Your Company] LLC. Florida.</p>

@@ -4,13 +4,16 @@ Live site: https://cruiselineadvisors.com
 
 ## What this is
 
-A **lead-generation referral site** for cruise travel (Florida LLC, in travel since 2015).
-We publish verified cruise information. Visitors **call a phone number**. Calls route to
-licensed independent partner travel agencies who quote, book and take payment. We earn a
-**referral fee**.
+The site of a **Florida-registered independent travel agency** (operating entity
+BookMeCheapest LLC, Fla. Seller of Travel Reg. No. ST150081, in travel since 2015).
+We publish verified cruise information. Visitors **call a phone number**. Our own team
+answers and books cruises through the cruise lines' travel-agent portals. Some calls are
+connected to partner travel companies, and we may earn a **referral fee** on those.
 
-We do **not** sell travel, book travel, take payment, hold inventory, set prices, or hold
-cruise line appointments.
+CHANGED 2026-10-26 by the operator. This section used to read "we do not sell travel,
+book travel, take payment ... or hold cruise line appointments" and that is no longer
+accurate. Do not restore it. What has NOT changed: we are not a cruise line, we hold no
+cruise line appointment or endorsement, and Hard Rule 2 below is untouched.
 
 Traffic is ~100% paid search, mobile-heavy, on cruise-line brand keywords.
 **The only conversion metric is inbound phone calls.**
@@ -29,8 +32,10 @@ Full brief: `docs/BRIEF.md` — read it before starting any new task area.
    **Do not tidy these away, fill them with defaults, or hide them behind an em dash.**
 4. **Never copy prose from a cruise line site.** Facts are extractable; sentences are not.
    All descriptive copy is original.
-5. **Never fabricate people, teams, credentials or sales figures.** Advisors work for partner
-   agencies, not us. Describe the network and its standards instead.
+5. **Never fabricate people, teams, credentials or sales figures.** We do have our own team
+   and our own Seller of Travel registration, so saying we answer and book is accurate.
+   Inventing named advisors, head-counts, awards or sales numbers is still banned, and a
+   credential still renders only where it is held and verifiable.
 6. **Never claim 24/7.** Publish real coverage hours (8am–11pm ET daily).
 7. **Never present a fact past its refresh window as current.** Build flags these.
 

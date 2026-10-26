@@ -175,13 +175,13 @@ def p_line(lang, slug):
         facts_sub = ("These are the details that quietly change your final bill and vary by fare, cabin and sailing. "
                      "We verify each from its source and re-check every 30 days. Where we have not verified "
                      "something we say so and put you through to an advisor, rather than guess at it.")
-        disc = (f"We are an independent referral service. We are not affiliated with, sponsored by, endorsed by, "
+        disc = (f"We are an independent travel agency. We are not affiliated with, sponsored by, endorsed by, "
                 f"authorised by, or an agent of {L['name']}. {L['name']} and its ship names and logos are trademarks "
                 f"of their owner, used here descriptively only.")
         # NOT f"Talk to a {line} specialist": naming a line immediately before
         # "specialist" reads as that line's staff, on a site whose whole exposure
         # is implied affiliation. The guard in build.py now fails on it.
-        cta_t, cta_s = "Talk to a cruise specialist", "Free, no obligation, and we never take payment for travel."
+        cta_t, cta_s = "Talk to a cruise specialist", "Free, no obligation, and no pressure."
     else:
         intro = (f"{L['name']} se describe mejor como <b>{L['cat']['es'].lower()}</b>. {L['tag']['es']} "
                  f"A continuación, una mirada independiente y verificada a lo que realmente importa antes de reservar, "
@@ -305,7 +305,7 @@ def p_ship(lang, line_slug, sslug):
         nudge_txt = (f"Want {name} for your dates? A specialist checks live availability and holds the best cabin "
                      "for you, call now.")
         cta_t, cta_s = f"Sail on {name}?", "Free, no obligation, and we never take payment for travel."
-        disc = (f"Independent referral service, not affiliated with, sponsored by, endorsed by or an agent of "
+        disc = (f"Independent travel agency, not affiliated with, sponsored by, endorsed by or an agent of "
                 f"{L['name']}. {L['name']}, {name} and related names and logos are trademarks of their owner, used "
                 f"here descriptively only.")
     else:

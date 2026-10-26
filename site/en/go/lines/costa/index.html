@@ -457,6 +457,26 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 .tb-note{margin-top:.65rem;color:#87B0BA;font-size:.74rem;line-height:1.55;max-width:60ch}
 .tb-group + .tb-group{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
 .tb-disclaim{color:#6E96A2;font-size:.7rem;max-width:72ch}
+/* Compact band directly under the hero. Company registrations only, so it is
+   a strip rather than a second full section: smaller heading, no sub-paragraph,
+   tighter padding. The badges keep their full size, because a trust mark too
+   small to read is not a trust mark. */
+.credband-top{padding-top:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(127,212,208,.16)}
+.credband-top .credband-head h2{font-size:clamp(1.05rem,2.8vw,1.35rem);margin-top:.25rem}
+.credband-top .trustbadges{margin-top:1rem}
+.credband-top .tb-op{margin-bottom:.75rem;font-size:.8rem}
+.credband-top .tb-row{gap:.8rem 1.2rem}
+@media(min-width:900px){.credband-top{padding-top:1.8rem;padding-bottom:1.8rem}
+  .credband-top .tb-asta img{height:50px}.credband-top .tb-true img{height:40px}}
+/* Line-page disclosure strip, directly under the header. Deliberately NOT the
+   site's navy: a warm light band reads as a notice rather than as more chrome,
+   and it clears WCAG AAA against #3A2E18 at the 14px floor the ruling sets.
+   Font size never drops below 14px, including on a 320px phone, because "small
+   print nobody reads" is the failure mode this strip exists to avoid. */
+.affilstrip{background:#FFF4E2;border-bottom:1px solid #E6D3AE;color:#3A2E18}
+.affilstrip p{margin:0 auto;max-width:1180px;padding:.6rem 16px;font-size:14px;
+  line-height:1.45;text-align:center;font-weight:600;letter-spacing:.005em}
+@media(min-width:900px){.affilstrip p{font-size:15px;padding:.65rem 16px}}
 /* TRUE accreditation (CCRA), held by the operating entity. Treated as an IMAGE
    badge, so it gets the white chip ASTA and the Bahamas diploma get, not the
    dark text pill the Seller of Travel reference gets. The official mark is dark
@@ -507,7 +527,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
   <div class="content">
     <div class="wrap">
       <span class="linelogo" id="heroChip" hidden></span>
-      <p class="hero-ind" id="heroInd">Independent referral service.</p>
+      <p class="hero-ind" id="heroInd">Independent travel agency.</p>
       <h1>Costa Cruises</h1>
       <p class="tagline" id="heroTag">Search real itineraries by month and length, then one call gets your exact dates and your cabin. Ask about cruise + flight + hotel packages in the same call.</p>
       <p class="fare-line"><span class="bl-full">Today's fare for your dates and cabin, priced by phone</span><span class="bl-short">Today's fare, priced by phone</span></p>
@@ -515,6 +535,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
     </div>
   </div>
 </header>
+<section class="blk credband credband-top"><div class="wrap"><div class="credband-head"><span class="eyebrow">Credentials you can check</span><h2>Licensed and accredited, and you can check it</h2></div><div class="trustbadges"><div class="tb-group"><p class="tb-op">Company credentials: <b>BookMeCheapest LLC</b></p><div class="tb-row"><a class="tb tb-asta" href="https://www.asta.org/content/Membership/public-member-directory.aspx" target="_blank" rel="noopener nofollow" title="Proud ASTA member (verify)"><img src="/badges/asta-member.png" alt="ASTA member, American Society of Travel Advisors" width="526" height="224" loading="lazy"><span class="tb-cap">Proud ASTA member</span></a><a class="tb tb-fsot" href="/docs/fl-seller-of-travel.pdf" target="_blank" rel="noopener nofollow" title="FL Seller of Travel Ref. ST150081 (verify)"><span class="tb-fsot-txt">FL Seller of Travel Ref. ST150081</span></a><a class="tb tb-true" href="https://www.ccra.com/check-true-code/" target="_blank" rel="noopener nofollow" title="TRUE Accredited · Code 99938739 (verify)"><img src="/badges/true-accredited.png" alt="TRUE Accredited Travel Agency" width="467" height="144" loading="lazy"><span class="tb-true-txt">Code 99938739</span></a></div></div></div></div></section>
 
 <!-- FINDER: port + line locked on this page; user picks dest / month / duration -->
 <div class="finder wrap" id="finder">
@@ -682,8 +703,8 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 <section class="blk credband"><div class="wrap"><div class="credband-head"><span class="eyebrow">Credentials you can check</span><h2>Licensed, ASTA member and Bahamas-certified</h2><p>You are in good hands. We hold recognised travel-industry credentials and the official Islands of the Bahamas certifications. Tap a badge to verify it.</p></div><div class="trustbadges"><div class="tb-group"><p class="tb-op">Company credentials: <b>BookMeCheapest LLC</b></p><div class="tb-row"><a class="tb tb-asta" href="https://www.asta.org/content/Membership/public-member-directory.aspx" target="_blank" rel="noopener nofollow" title="Proud ASTA member (verify)"><img src="/badges/asta-member.png" alt="ASTA member, American Society of Travel Advisors" width="526" height="224" loading="lazy"><span class="tb-cap">Proud ASTA member</span></a><a class="tb tb-fsot" href="/docs/fl-seller-of-travel.pdf" target="_blank" rel="noopener nofollow" title="FL Seller of Travel Ref. ST150081 (verify)"><span class="tb-fsot-txt">FL Seller of Travel Ref. ST150081</span></a><a class="tb tb-true" href="https://www.ccra.com/check-true-code/" target="_blank" rel="noopener nofollow" title="TRUE Accredited · Code 99938739 (verify)"><img src="/badges/true-accredited.png" alt="TRUE Accredited Travel Agency" width="467" height="144" loading="lazy"><span class="tb-true-txt">Code 99938739</span></a></div></div><div class="tb-group tb-group-personal"><p class="tb-op">Training and certifications</p><div class="tb-row"><a class="tb tb-bah" href="/docs/bahamas-specialist-diploma.png" target="_blank" rel="noopener" title="Certified Bahamas Specialist diploma (verify)"><img src="/badges/bahamas-specialist.png" alt="Certified Bahamas Specialist diploma" height="34" loading="lazy"><span class="tb-cap">Certified Bahamas Specialist diploma</span></a><span class="tb tb-romance"><img src="/badges/romance.png" alt="Bahamas Romance Specialist certification" width="350" height="350" loading="lazy"></span></div><p class="tb-note">A principal of BookMeCheapest LLC holds the Certified Bahamas Specialist diploma from The Islands of The Bahamas.</p><p class="tb-note tb-disclaim">Training completed by individuals at BookMeCheapest LLC, the team that researches and publishes this site. Calls are answered by independent travel companies, not by any cruise line, and not by the people named here. These are professional development courses run by tourist boards and cruise lines for travel professionals. Completing one is a training achievement, not a partnership, appointment or endorsement. We are not affiliated with, authorised by, or an agent of any cruise line or tourist board.</p></div></div></div></section><footer>
   <div class="wrap">
     <div class="legal">
-      <p class="agency-line">CruiseLine Advisors: independent cruise information &amp; referral service</p>
-      <p><b>What we are:</b> CruiseLine Advisors is a marketing and referral service. We are not a cruise line, travel agency or tour operator, and we are not an agent of any cruise line. We do not sell, book, ticket or take payment for cruise travel, and we do not set prices or hold inventory. Calls may be connected to one of several independent third-party travel companies, and we may receive a referral fee. All quotes, bookings and customer service are provided by that agency under its own terms.</p><p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by, or an agent of any cruise line.</p><p><b>Pricing:</b> Fares shown anywhere on this site are indicative, observed from public sources on the date stamped, and are not an offer to sell travel; all quotes and bookings are provided by independent travel companies.</p><p><b>How we verify:</b> The facts shown on this site are gathered from each cruise line's official website and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap, never guessed. Always confirm the details that matter to you with the travel company that books your trip.</p><p><b>Photography:</b> Destination, port and ship photos are illustrative stock images from royalty-free sources (Pexels and Unsplash), used under their licenses, which permit commercial use without attribution. We credit the sources here as a courtesy. Images are representative only and may not show the exact ship, port, view or sailing; any private-island or venue names are for reference.</p><p><b>Fares shown:</b> Prices shown are per-person lead-in fares based on double occupancy, observed from publicly available sources on the date stamped with each offer. What each fare covers is stated with the fare: where the source includes taxes and fees, we show that. Fares exclude gratuities, onboard spending and travel insurance, change frequently, and are not an offer to sell travel. All quotes, availability, bookings and payments are handled by independent travel companies. We do not sell, book or take payment for travel.</p>
+      <p class="agency-line">CruiseLine Advisors: independent travel agency and cruise information service</p>
+      <p><b>What we are:</b> CruiseLine Advisors is operated by BookMeCheapest LLC, a Florida-registered independent travel agency (Fla. Seller of Travel Reg. No. ST150081). We are not a cruise line and are not affiliated with or endorsed by any cruise line. Our own team answers calls and books cruises through the cruise lines' travel-agent portals. Some calls may be connected to partner travel companies, and we may receive a referral fee.</p><p><b>Trademarks:</b> All cruise line names, ship names and marks are the property of their respective owners, used here descriptively only. We are not affiliated with, sponsored by, endorsed by, authorised by, or an agent of any cruise line.</p><p><b>Pricing:</b> Fares shown anywhere on this site are indicative, observed from public sources on the date stamped, and are not an offer to sell travel; all quotes and bookings are provided by independent travel companies.</p><p><b>How we verify:</b> The facts shown on this site are gathered from each cruise line's official website and public policies and re-checked every 30 days. Anything not yet verified is shown as a visible gap, never guessed. Always confirm the details that matter to you with the travel company that books your trip.</p><p><b>Photography:</b> Destination, port and ship photos are illustrative stock images from royalty-free sources (Pexels and Unsplash), used under their licenses, which permit commercial use without attribution. We credit the sources here as a courtesy. Images are representative only and may not show the exact ship, port, view or sailing; any private-island or venue names are for reference.</p><p><b>Fares shown:</b> Prices shown are per-person lead-in fares based on double occupancy, observed from publicly available sources on the date stamped with each offer. What each fare covers is stated with the fare: where the source includes taxes and fees, we show that. Fares exclude gratuities, onboard spending and travel insurance, change frequently, and are not an offer to sell travel. Your quote and your booking are confirmed on the call, by us or by a partner travel company.</p>
       <div class="legalrow" style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0"><a href="/en/legal/terms/">Terms</a><a href="/en/legal/privacy/">Privacy</a><a href="/en/legal/consent/">Calling & SMS Consent</a><a href="/en/legal/do-not-sell/">Do Not Sell or Share</a></div>
       <p><a href="tel:+18336844250" style="font-weight:800">+1-833-684-4250</a> · 8am-11pm ET, every day</p>
       <p style="margin-top:.6rem">© 2026 BookMeCheapest LLC. Florida, USA.</p>
@@ -852,7 +873,7 @@ const FAQS = [
 ];
 const OFFERS = [];
 const KW_OWN = ["costa"];
-const KW_OTHER = ["holland america", "royal caribbean", "royal carribean", "margaritaville", "virgin voyages", "celebrity", "norwegian", "silversea", "princess", "carnival", "cunard", "disney", "virgin", "rccl", "hal", "msc", "ncl"];
+const KW_OTHER = ["royal caribbean", "royal carribean", "holland america", "virgin voyages", "margaritaville", "silversea", "norwegian", "celebrity", "carnival", "princess", "cunard", "virgin", "disney", "rccl", "ncl", "msc", "hal"];
 /* ?kw= personalisation, shared by every /go/ template.
 
    Google ValueTrack passes the searcher's own query as ?kw=. Echoing it as the
@@ -891,7 +912,7 @@ const KW_OTHER = ["holland america", "royal caribbean", "royal carribean", "marg
      unmatchable at the start of a string. */
   var BAD_KW = /(\bcheap|\bcheapest|\blowest|\bfree\b|\bguarantee|\bdiscount|\bdeal of\b|\ball[\s-]inclusive|%|\$|\bsave\b|\bper person\b)/i;
 
-  /* Affiliation and identity claims. We are a referral service and say so on
+  /* Affiliation and identity claims. We are an independent agency and say so on
      every page; echoing "official site" into our own H1 contradicts that and is
      trademark exposure on brand keywords. */
   var BAD_AFFIL = /\b(official|officially|authorized|authorised|accredited|partner|direct|agent|agency|reservations?|customer (service|care)|headquarters|corporate|complaints?|refunds?)\b/i;
@@ -1608,7 +1629,7 @@ renderCallFirst();
   var lbl=(typeof PAGE!=='undefined'&&PAGE&&PAGE.lineLabel)?PAGE.lineLabel:'';
   var port=(typeof PAGE!=='undefined'&&PAGE&&PAGE.portLabel)?PAGE.portLabel:'';
   var ind=document.getElementById('heroInd');
-  if(ind) ind.textContent='Independent referral service'+(lbl?', not '+lbl:'')+'.';
+  if(ind) ind.textContent='Independent travel agency'+(lbl?', not '+lbl:'')+'.';
   /* The hero chip was the line and port baked into markup, so the Carnival
      page wore a "ROYAL CARIBBEAN - FROM GALVESTON" badge. */
   /* A LINE-LEVEL page names no port in its furniture. The badge read

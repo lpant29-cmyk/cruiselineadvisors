@@ -1,7 +1,7 @@
 {
   "name": "CruiseLine Advisors",
   "short_name": "CruiseLine",
-  "description": "Independent cruise information and referral service.",
+  "description": "Independent travel agency and cruise information service.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#0A2540",

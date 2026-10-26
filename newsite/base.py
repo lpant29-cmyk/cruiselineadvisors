@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """The page shell, <head> SEO, fonts, inlined CSS, header, content, footer, sticky call.
 Every page is composed through page(). Bilingual: emits canonical + hreflang alternates."""
-import html, json
+import html, json, re
 from config import (PHONE_HREF, SITE_URL, BRAND, LANGS, DEFAULT_LANG, IS_PLACEHOLDER_PHONE, HOURS,
                     GTM_ID, GA4_ID, CLARITY_ID, GSC_VERIFICATION)
 from theme import CSS
 from header import header
 from footer import footer, credentials_band, line_of_path
+from legal_partial import affil_strip
 from cta import sticky_callbar
 
 
@@ -52,9 +53,9 @@ def esc(s):
 def _org_jsonld():
     org = {
         "@context": "https://schema.org", "@type": "Organization", "name": BRAND, "url": SITE_URL,
-        "description": ("Independent cruise information and referral service that connects travellers "
-                        "with cruise specialists at independent travel companies. We are not a "
-                        "cruise line or a travel agency."),
+        "description": ("Florida-registered independent travel agency (Seller of Travel ST150081) "
+                        "that publishes verified cruise information and books cruises by phone. "
+                        "We are not a cruise line and are not affiliated with any cruise line."),
         "areaServed": {"@type": "Country", "name": "United States"},
         "knowsLanguage": ["en", "es"],
     }
@@ -70,7 +71,31 @@ def _org_jsonld():
     return '<script type="application/ld+json">' + json.dumps(org, ensure_ascii=False) + '</script>'
 
 
+def after_hero(content, band):
+    """Insert the compact credential band straight after the page's hero.
+
+    Every page type opens <main> with its hero as the first top-level section:
+    the homepage uses .hero, every other generator uses .phero. So the split
+    point is that section's own closing tag, found by counting depth rather
+    than by taking the first </section>, because a hero that ever gains a
+    nested section would otherwise be cut in half. None of the six page types
+    nests one today; the counter is what keeps that from mattering later.
+
+    If no balanced hero is found the band is simply not inserted, which costs
+    a trust strip. Guessing an offset would cost the page.
+    """
+    depth = 0
+    for m in re.finditer(r"<section\b|</section\s*>", content):
+        depth += 1 if m.group(0).startswith("<section") else -1
+        if depth == 0:
+            return content[:m.end()] + band + content[m.end():]
+    return content
+
+
 def page(lang, page_path, title, desc, content, extra_jsonld=""):
+    # Resolved once: the band renders twice on every page and both instances
+    # have to agree about which line this page is about.
+    _line = line_of_path(page_path)
     canonical = f"{SITE_URL}/{lang}/{page_path}"
     alternates = "".join(
         f'<link rel="alternate" hreflang="{l}" href="{SITE_URL}/{l}/{page_path}">' for l in LANGS
@@ -120,8 +145,9 @@ def page(lang, page_path, title, desc, content, extra_jsonld=""):
 {_analytics_body()}
 <a href="#main" class="skip">{'Skip to content' if lang=='en' else 'Saltar al contenido'}</a>
 {header(lang, page_path)}
-<main id="main">{content}</main>
-{credentials_band(lang, line_slug=line_of_path(page_path))}
+{affil_strip(lang, _line)}
+<main id="main">{after_hero(content, credentials_band(lang, line_slug=_line, compact=True))}</main>
+{credentials_band(lang, line_slug=_line)}
 {footer(lang)}
 {sticky_callbar(lang)}
 <button id="goBack" class="goback" aria-label="{'Go back to the previous page' if lang=='en' else 'Volver a la página anterior'}"><span aria-hidden="true">←</span> {'Back' if lang=='en' else 'Atrás'}</button>

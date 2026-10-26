@@ -3,7 +3,7 @@
 Bilingual. Compliance-critical: keep the disclaimers intact. Placeholders in [brackets]
 must be filled before launch ([Your Company] LLC, address, privacy email)."""
 import datetime
-from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, SITE_URL, COMPANY, COMPANY_ADDR, PRIVACY_EMAIL
+from config import PHONE_DISPLAY, PHONE_HREF, HOURS, BRAND, SITE_URL, COMPANY, COMPANY_ADDR, PRIVACY_EMAIL, FSOT_REF
 
 YEAR = datetime.date.today().year
 TODAY = datetime.date.today().isoformat()
@@ -19,17 +19,19 @@ LEGAL = {
         "title": {"en": "Terms of Use", "es": "Términos de uso"},
         "sec": [
             ({"en": "What we are", "es": "Qué somos"},
-             {"en": f"{BRAND} is a marketing and referral service. We are not a cruise line, travel agency, tour "
-                    "operator, and we are not an agent of any cruise line. We do not sell, book, ticket or take payment for cruise travel, and we do "
-                    "not set prices or hold inventory. When you call, you may be connected to one of several independent, "
-                    "independent third-party travel companies. All quotes, bookings, payments and customer service are "
-                    "provided by that agency under its own terms, and we may receive a referral fee.",
-              "es": f"{BRAND} es un servicio de marketing y referencia. No somos una línea de crucero, agencia de "
-                    "viajes ni operador turístico, y no somos agentes de ninguna línea de crucero. No vendemos, "
-                    "reservamos, emitimos boletos ni cobramos por viajes en crucero, y no fijamos precios ni tenemos inventario. Cuando llamas, puedes ser "
-                    "conectado con una de varias empresas de viajes independientes. Todas las "
-                    "cotizaciones, reservas, pagos y atención al cliente los proporciona esa agencia según sus propios "
-                    "términos, y podemos recibir una comisión de referencia."}),
+             {"en": f"{BRAND} is operated by {COMPANY}, a Florida-registered independent travel agency "
+                    f"(Fla. Seller of Travel Reg. No. {FSOT_REF}). We are not a cruise line and are not "
+                    "affiliated with or endorsed by any cruise line. Our own team answers calls and books "
+                    "cruises through the cruise lines' travel-agent portals. Some calls may be connected to "
+                    "partner travel companies, in which case that company handles the quote, the booking, the "
+                    "payment and customer service under its own terms, and we may receive a referral fee.",
+              "es": f"{BRAND} es operado por {COMPANY}, una agencia de viajes independiente registrada en "
+                    f"Florida (Vendedor de Viajes de Florida Ref. {FSOT_REF}). No somos una línea de crucero y "
+                    "no estamos afiliados ni respaldados por ninguna línea de crucero. Nuestro propio equipo "
+                    "atiende las llamadas y reserva cruceros a través de los portales para agentes de viajes de "
+                    "las líneas. Algunas llamadas pueden conectarse con empresas de viajes asociadas; en ese "
+                    "caso esa empresa gestiona la cotización, la reserva, el pago y la atención al cliente según "
+                    "sus propios términos, y podemos recibir una comisión de referencia."}),
             ({"en": "Information, not advice or offers", "es": "Información, no asesoría ni ofertas"},
              {"en": "The information on this site is general and for planning purposes only. It is not a quote, an "
                     "offer, or professional advice. Any fares shown anywhere on this site are indicative, observed "
