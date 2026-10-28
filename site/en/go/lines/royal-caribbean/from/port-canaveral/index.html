@@ -716,10 +716,10 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 const PAGE = {"type": "combo", "filter": "royal-caribbean-port-canaveral", "h1": "Royal Caribbean Cruises from Port Canaveral", "line": "royal-caribbean", "port": "port-canaveral", "lineLabel": "Royal Caribbean", "portLabel": "Port Canaveral FL", "noFares": false};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-let pricesCheckedOn = "October 26";
+let pricesCheckedOn = "October 28";
 const STAMP_MIXED = false;
-const H1_VARIANTS = {"port": "Royal Caribbean Port Canaveral Cruise Port", "outof": "Royal Caribbean Cruises Out of Port Canaveral", "schedule": "Royal Caribbean Port Canaveral Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Port Canaveral, Texas", "utopia-of-the-seas": "Utopia of the Seas Cruises from Port Canaveral", "utopia": "Utopia of the Seas Cruises from Port Canaveral", "adventure-of-the-seas": "Adventure of the Seas Cruises from Port Canaveral", "adventure": "Adventure of the Seas Cruises from Port Canaveral", "harmony-of-the-seas": "Harmony of the Seas Cruises from Port Canaveral", "harmony": "Harmony of the Seas Cruises from Port Canaveral", "star-of-the-seas": "Star of the Seas Cruises from Port Canaveral", "star": "Star of the Seas Cruises from Port Canaveral", "3night": "3-Night Royal Caribbean Cruises from Port Canaveral", "3day": "3-Day Royal Caribbean Cruises from Port Canaveral", "4night": "4-Night Royal Caribbean Cruises from Port Canaveral", "4day": "4-Day Royal Caribbean Cruises from Port Canaveral", "5night": "5-Night Royal Caribbean Cruises from Port Canaveral", "5day": "5-Day Royal Caribbean Cruises from Port Canaveral", "7night": "7-Night Royal Caribbean Cruises from Port Canaveral", "7day": "7-Day Royal Caribbean Cruises from Port Canaveral"};
-const SHIP_SLUGS = {"utopia-of-the-seas": "s002", "utopia": "s002", "adventure-of-the-seas": "s025", "adventure": "s025", "harmony-of-the-seas": "s024", "harmony": "s024", "star-of-the-seas": "s023", "star": "s023"};
+const H1_VARIANTS = {"port": "Royal Caribbean Port Canaveral Cruise Port", "outof": "Royal Caribbean Cruises Out of Port Canaveral", "schedule": "Royal Caribbean Port Canaveral Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Port Canaveral, Texas", "utopia-of-the-seas": "Utopia of the Seas Cruises from Port Canaveral", "utopia": "Utopia of the Seas Cruises from Port Canaveral", "harmony-of-the-seas": "Harmony of the Seas Cruises from Port Canaveral", "harmony": "Harmony of the Seas Cruises from Port Canaveral", "adventure-of-the-seas": "Adventure of the Seas Cruises from Port Canaveral", "adventure": "Adventure of the Seas Cruises from Port Canaveral", "star-of-the-seas": "Star of the Seas Cruises from Port Canaveral", "star": "Star of the Seas Cruises from Port Canaveral", "3night": "3-Night Royal Caribbean Cruises from Port Canaveral", "3day": "3-Day Royal Caribbean Cruises from Port Canaveral", "4night": "4-Night Royal Caribbean Cruises from Port Canaveral", "4day": "4-Day Royal Caribbean Cruises from Port Canaveral", "5night": "5-Night Royal Caribbean Cruises from Port Canaveral", "5day": "5-Day Royal Caribbean Cruises from Port Canaveral", "7night": "7-Night Royal Caribbean Cruises from Port Canaveral", "7day": "7-Day Royal Caribbean Cruises from Port Canaveral"};
+const SHIP_SLUGS = {"utopia-of-the-seas": "s002", "utopia": "s002", "harmony-of-the-seas": "s024", "harmony": "s024", "adventure-of-the-seas": "s025", "adventure": "s025", "star-of-the-seas": "s023", "star": "s023"};
 const H1_BASE = "Royal Caribbean Cruises from Port Canaveral";
 const HERO = null;
 const KNOW_IMG = null;
@@ -761,30 +761,6 @@ const SHIPS = [
   }
  },
  {
-  "id": "s025",
-  "name": "Adventure of the Seas",
-  "cls": "",
-  "tier": "",
-  "fit": [],
-  "high": [],
-  "family": "",
-  "seaLine": "A full day on board Adventure of the Seas.",
-  "ds": {
-   "year": 2001,
-   "guests": 3114,
-   "tonnage": 137276,
-   "dineInc": 2,
-   "dineExtra": 3,
-   "famLine": "Splashaway Bay children's water-play area and family-friendly pool activities."
-  },
-  "img": {
-   "src": "/img/lp/ship-generic/ship-bow-card.webp",
-   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
-   "w": 800,
-   "h": 1067
-  }
- },
- {
   "id": "s024",
   "name": "Harmony of the Seas",
   "cls": "",
@@ -800,6 +776,30 @@ const SHIPS = [
    "dineInc": 3,
    "dineExtra": 5,
    "famLine": "Adventure Ocean youth programming, Splashaway Bay aquapark, family dining options and the Ultimate Abyss and waterslides for older kids."
+  },
+  "img": {
+   "src": "/img/lp/ship-generic/ship-bow-card.webp",
+   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
+   "w": 800,
+   "h": 1067
+  }
+ },
+ {
+  "id": "s025",
+  "name": "Adventure of the Seas",
+  "cls": "",
+  "tier": "",
+  "fit": [],
+  "high": [],
+  "family": "",
+  "seaLine": "A full day on board Adventure of the Seas.",
+  "ds": {
+   "year": 2001,
+   "guests": 3114,
+   "tonnage": 137276,
+   "dineInc": 2,
+   "dineExtra": 3,
+   "famLine": "Splashaway Bay children's water-play area and family-friendly pool activities."
   },
   "img": {
    "src": "/img/lp/ship-generic/ship-lowangle-card.webp",
@@ -864,16 +864,16 @@ const ITINERARIES = [
   ],
   "featured": true,
   "prices": {
-   "default": 458,
-   "2026-11": 458,
+   "default": 316,
+   "2026-11": 316,
    "2026-12": 508,
-   "2027-01": 560,
-   "2027-02": 648,
-   "2027-03": 546,
-   "2027-04": 677,
-   "2027-05": 774,
-   "2027-06": 1090,
-   "2027-07": 964,
+   "2027-01": 509,
+   "2027-02": 589,
+   "2027-03": 609,
+   "2027-04": 649,
+   "2027-05": 744,
+   "2027-06": 1044,
+   "2027-07": 924,
    "2027-08": 836,
    "2027-09": 721,
    "2027-10": 665,
@@ -885,7 +885,7 @@ const ITINERARIES = [
    "2028-04": 739
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-hero-card.webp",
@@ -903,7 +903,6 @@ const ITINERARIES = [
   "dest": "bahamas",
   "destLabel": "Bahamas",
   "months": [
-   "2026-10",
    "2026-11",
    "2026-12",
    "2027-01",
@@ -925,14 +924,13 @@ const ITINERARIES = [
   ],
   "featured": true,
   "prices": {
-   "default": 491,
-   "2026-10": 520,
-   "2026-11": 518,
-   "2026-12": 549,
-   "2027-01": 491,
-   "2027-02": 533,
-   "2027-03": 588,
-   "2027-04": 843,
+   "default": 479,
+   "2026-11": 479,
+   "2026-12": 530,
+   "2027-01": 480,
+   "2027-02": 501,
+   "2027-03": 650,
+   "2027-04": 842,
    "2027-05": 761,
    "2027-06": 944,
    "2027-07": 919,
@@ -947,13 +945,51 @@ const ITINERARIES = [
    "2028-04": 694
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-bow-card.webp",
    "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
    "w": 800,
    "h": 1067
+  }
+ },
+ {
+  "id": "i0039",
+  "name": "7-Night Eastern Caribbean",
+  "ship": "Harmony of the Seas",
+  "shipId": "s024",
+  "nights": 7,
+  "dest": "eastern-caribbean",
+  "destLabel": "Eastern Caribbean",
+  "months": [
+   "2026-11",
+   "2026-12",
+   "2027-01",
+   "2027-03",
+   "2027-04",
+   "2027-06",
+   "2027-09"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 344,
+   "2026-11": 344,
+   "2026-12": 781,
+   "2027-01": 919,
+   "2027-03": 1047,
+   "2027-04": 916,
+   "2027-06": 1318,
+   "2027-09": 946
+  },
+  "noPrice": false,
+  "stamp": "2026-10-28",
+  "days": [],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-lowangle-card.webp",
+   "alt": "Looking up at the tiered balconies and sweeping curved decks of a cruise ship's superstructure against a bank of cloud",
+   "w": 800,
+   "h": 665
   }
  },
  {
@@ -983,13 +1019,13 @@ const ITINERARIES = [
    "2028-04": 598
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
-   "src": "/img/lp/ship-generic/ship-lowangle-card.webp",
-   "alt": "Looking up at the tiered balconies and sweeping curved decks of a cruise ship's superstructure against a bank of cloud",
+   "src": "/img/lp/ship-generic/ship-aerial-card.webp",
+   "alt": "Looking down from high on a ship at its bow and forward decks, with crew on the foredeck and deep blue open water alongside",
    "w": 800,
-   "h": 665
+   "h": 1067
   }
  },
  {
@@ -1017,13 +1053,13 @@ const ITINERARIES = [
    "2028-04": 573
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
-   "src": "/img/lp/ship-generic/ship-aerial-card.webp",
-   "alt": "Looking down from high on a ship at its bow and forward decks, with crew on the foredeck and deep blue open water alongside",
+   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
+   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
    "w": 800,
-   "h": 1067
+   "h": 450
   }
  },
  {
@@ -1059,45 +1095,7 @@ const ITINERARIES = [
    "2028-04": 658
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
-  "days": [],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-sunset-card.webp",
-   "alt": "A cruise ship lying still under a burning orange and pink sunset sky, with a small tender crossing the water beside it",
-   "w": 800,
-   "h": 450
-  }
- },
- {
-  "id": "i0039",
-  "name": "7-Night Eastern Caribbean",
-  "ship": "Harmony of the Seas",
-  "shipId": "s024",
-  "nights": 7,
-  "dest": "eastern-caribbean",
-  "destLabel": "Eastern Caribbean",
-  "months": [
-   "2026-11",
-   "2026-12",
-   "2027-01",
-   "2027-03",
-   "2027-04",
-   "2027-06",
-   "2027-09"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 662,
-   "2026-11": 662,
-   "2026-12": 781,
-   "2027-01": 919,
-   "2027-03": 1096,
-   "2027-04": 926,
-   "2027-06": 1318,
-   "2027-09": 946
-  },
-  "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
@@ -1128,9 +1126,9 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 868,
-   "2027-05": 868,
-   "2027-08": 1088,
+   "default": 848,
+   "2027-05": 848,
+   "2027-08": 988,
    "2027-09": 948,
    "2027-10": 966,
    "2027-11": 916,
@@ -1138,10 +1136,10 @@ const ITINERARIES = [
    "2028-01": 918,
    "2028-02": 928,
    "2028-03": 948,
-   "2028-04": 989
+   "2028-04": 959
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-docked-card.webp",
@@ -1168,16 +1166,76 @@ const ITINERARIES = [
   "prices": {
    "default": 888,
    "2027-05": 898,
-   "2027-06": 1094,
+   "2027-06": 1078,
    "2027-07": 1150,
    "2027-09": 888
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-balcony-card.webp",
    "alt": "Looking forward along a ship's open teak promenade deck at dusk, past the rail to calm water and a fading sunset",
+   "w": 800,
+   "h": 600
+  }
+ },
+ {
+  "id": "i0033",
+  "name": "7-Night Caribbean",
+  "ship": "Star of the Seas",
+  "shipId": "s023",
+  "nights": 7,
+  "dest": "caribbean",
+  "destLabel": "Caribbean",
+  "months": [
+   "2026-11",
+   "2026-12",
+   "2027-01",
+   "2027-02",
+   "2027-03",
+   "2027-04",
+   "2027-05",
+   "2027-06",
+   "2027-07",
+   "2027-08",
+   "2027-09",
+   "2027-10",
+   "2027-11",
+   "2027-12",
+   "2028-01",
+   "2028-02",
+   "2028-03",
+   "2028-04"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 969,
+   "2026-11": 969,
+   "2026-12": 1148,
+   "2027-01": 1391,
+   "2027-02": 1371,
+   "2027-03": 1481,
+   "2027-04": 1481,
+   "2027-05": 1794,
+   "2027-06": 1916,
+   "2027-07": 1776,
+   "2027-08": 1602,
+   "2027-09": 1460,
+   "2027-10": 1384,
+   "2027-11": 1404,
+   "2027-12": 1477,
+   "2028-01": 1237,
+   "2028-02": 1397,
+   "2028-03": 1676,
+   "2028-04": 1577
+  },
+  "noPrice": false,
+  "stamp": "2026-10-28",
+  "days": [],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-decks-card.webp",
+   "alt": "A ship's pool deck at twilight, its long pool and hot tubs lit blue beneath a floodlit funnel and strings of deck lights",
    "w": 800,
    "h": 600
   }
@@ -1213,81 +1271,21 @@ const ITINERARIES = [
    "2026-11": 1193,
    "2026-12": 1026,
    "2027-01": 1172,
-   "2027-02": 1264,
-   "2027-03": 1517,
-   "2027-04": 1364,
-   "2027-05": 1582,
-   "2027-06": 1654,
+   "2027-02": 1328,
+   "2027-03": 1508,
+   "2027-04": 1374,
+   "2027-05": 1509,
+   "2027-06": 1652,
    "2027-07": 1890,
    "2027-08": 1580,
    "2027-09": 1569,
-   "2027-10": 1480,
+   "2027-10": 1571,
    "2027-11": 2028,
    "2027-12": 1387,
    "2028-01": 1417
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
-  "days": [],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-decks-card.webp",
-   "alt": "A ship's pool deck at twilight, its long pool and hot tubs lit blue beneath a floodlit funnel and strings of deck lights",
-   "w": 800,
-   "h": 600
-  }
- },
- {
-  "id": "i0033",
-  "name": "7-Night Caribbean",
-  "ship": "Star of the Seas",
-  "shipId": "s023",
-  "nights": 7,
-  "dest": "caribbean",
-  "destLabel": "Caribbean",
-  "months": [
-   "2026-11",
-   "2026-12",
-   "2027-01",
-   "2027-02",
-   "2027-03",
-   "2027-04",
-   "2027-05",
-   "2027-06",
-   "2027-07",
-   "2027-08",
-   "2027-09",
-   "2027-10",
-   "2027-11",
-   "2027-12",
-   "2028-01",
-   "2028-02",
-   "2028-03",
-   "2028-04"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 1058,
-   "2026-11": 1058,
-   "2026-12": 1148,
-   "2027-01": 1411,
-   "2027-02": 1391,
-   "2027-03": 1441,
-   "2027-04": 1501,
-   "2027-05": 1876,
-   "2027-06": 1914,
-   "2027-07": 1776,
-   "2027-08": 1602,
-   "2027-09": 1460,
-   "2027-10": 1384,
-   "2027-11": 1404,
-   "2027-12": 1477,
-   "2028-01": 1207,
-   "2028-02": 1397,
-   "2028-03": 1676,
-   "2028-04": 1496
-  },
-  "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-foredeck-card.webp",
@@ -1314,16 +1312,16 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 1380,
-   "2027-05": 1485,
+   "default": 1392,
+   "2027-05": 1429,
    "2027-06": 1805,
    "2027-07": 1839,
-   "2027-08": 1685,
+   "2027-08": 1653,
    "2027-09": 1489,
-   "2027-10": 1380
+   "2027-10": 1392
   },
   "noPrice": false,
-  "stamp": "2026-10-26",
+  "stamp": "2026-10-28",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/deck-scene-card.webp",
