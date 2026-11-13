@@ -735,7 +735,7 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 const PAGE = {"type": "combo", "filter": "royal-caribbean-galveston", "h1": "Royal Caribbean Cruises from Galveston", "line": "royal-caribbean", "port": "galveston", "lineLabel": "Royal Caribbean", "portLabel": "Galveston TX", "noFares": false};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-let pricesCheckedOn = "November 10";
+let pricesCheckedOn = "November 13";
 const STAMP_MIXED = false;
 const H1_VARIANTS = {"port": "Royal Caribbean Galveston Cruise Port", "outof": "Royal Caribbean Cruises Out of Galveston", "schedule": "Royal Caribbean Galveston Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Galveston, Texas", "icon-of-the-seas": "Icon of the Seas Cruises from Galveston", "icon": "Icon of the Seas Cruises from Galveston", "liberty-of-the-seas": "Liberty of the Seas Cruises from Galveston", "liberty": "Liberty of the Seas Cruises from Galveston", "symphony-of-the-seas": "Symphony of the Seas Cruises from Galveston", "symphony": "Symphony of the Seas Cruises from Galveston", "4night": "4-Night Royal Caribbean Cruises from Galveston", "4day": "4-Day Royal Caribbean Cruises from Galveston", "5night": "5-Night Royal Caribbean Cruises from Galveston", "5day": "5-Day Royal Caribbean Cruises from Galveston", "6night": "6-Night Royal Caribbean Cruises from Galveston", "6day": "6-Day Royal Caribbean Cruises from Galveston", "7night": "7-Night Royal Caribbean Cruises from Galveston", "7day": "7-Day Royal Caribbean Cruises from Galveston", "8night": "8-Night Royal Caribbean Cruises from Galveston", "8day": "8-Day Royal Caribbean Cruises from Galveston", "9night": "9-Night Royal Caribbean Cruises from Galveston", "9day": "9-Day Royal Caribbean Cruises from Galveston", "10night": "10-Night Royal Caribbean Cruises from Galveston", "10day": "10-Day Royal Caribbean Cruises from Galveston"};
 const SHIP_SLUGS = {"icon-of-the-seas": "s001", "icon": "s001", "liberty-of-the-seas": "s017", "liberty": "s017", "symphony-of-the-seas": "s018", "symphony": "s018"};
@@ -864,9 +864,9 @@ const ITINERARIES = [
   ],
   "featured": true,
   "prices": {
-   "default": 948,
+   "default": 903,
    "2027-08": 1249,
-   "2027-09": 1199,
+   "2027-09": 903,
    "2027-10": 1000,
    "2028-04": 948,
    "2028-05": 998,
@@ -877,7 +877,7 @@ const ITINERARIES = [
    "2028-10": 948
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -937,11 +937,11 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0006",
-  "name": "5-Night Western Caribbean",
+  "id": "i0007",
+  "name": "4-Night Western Caribbean",
   "ship": "Liberty of the Seas",
   "shipId": "s017",
-  "nights": 5,
+  "nights": 4,
   "dest": "western-caribbean",
   "destLabel": "Western Caribbean",
   "months": [
@@ -966,16 +966,110 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 342,
-   "2026-11": 349,
-   "2026-12": 349,
-   "2027-01": 342,
-   "2027-02": 350,
-   "2027-03": 421,
-   "2027-04": 413,
-   "2027-05": 410,
-   "2027-06": 799,
-   "2027-07": 799,
+   "default": 273,
+   "2026-11": 699,
+   "2026-12": 497,
+   "2027-01": 339,
+   "2027-02": 273,
+   "2027-03": 363,
+   "2027-04": 363,
+   "2027-05": 426,
+   "2027-06": 697,
+   "2027-07": 647,
+   "2027-08": 470,
+   "2027-09": 449,
+   "2027-10": 449,
+   "2027-11": 450,
+   "2027-12": 450,
+   "2028-01": 451,
+   "2028-02": 563,
+   "2028-03": 573,
+   "2028-04": 593
+  },
+  "noPrice": false,
+  "stamp": "2026-11-13",
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "4:00 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "cozumel",
+    "arr": "7:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 4,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 5,
+    "p": "galveston",
+    "arr": "7:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-hero-card.webp",
+   "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
+   "w": 800,
+   "h": 562
+  }
+ },
+ {
+  "id": "i0006",
+  "name": "5-Night Western Caribbean",
+  "ship": "Liberty of the Seas",
+  "shipId": "s017",
+  "nights": 5,
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
+  "months": [
+   "2026-12",
+   "2027-01",
+   "2027-02",
+   "2027-03",
+   "2027-04",
+   "2027-05",
+   "2027-06",
+   "2027-07",
+   "2027-08",
+   "2027-09",
+   "2027-10",
+   "2027-11",
+   "2027-12",
+   "2028-01",
+   "2028-02",
+   "2028-03",
+   "2028-04"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 300,
+   "2026-12": 408,
+   "2027-01": 300,
+   "2027-02": 328,
+   "2027-03": 364,
+   "2027-04": 320,
+   "2027-05": 413,
+   "2027-06": 731,
+   "2027-07": 747,
    "2027-08": 510,
    "2027-09": 502,
    "2027-10": 495,
@@ -987,7 +1081,7 @@ const ITINERARIES = [
    "2028-04": 608
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1040,171 +1134,6 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0007",
-  "name": "4-Night Western Caribbean",
-  "ship": "Liberty of the Seas",
-  "shipId": "s017",
-  "nights": 4,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2026-11",
-   "2026-12",
-   "2027-01",
-   "2027-02",
-   "2027-03",
-   "2027-04",
-   "2027-05",
-   "2027-06",
-   "2027-07",
-   "2027-08",
-   "2027-09",
-   "2027-10",
-   "2027-11",
-   "2027-12",
-   "2028-01",
-   "2028-02",
-   "2028-03",
-   "2028-04"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 396,
-   "2026-11": 699,
-   "2026-12": 629,
-   "2027-01": 396,
-   "2027-02": 433,
-   "2027-03": 479,
-   "2027-04": 435,
-   "2027-05": 407,
-   "2027-06": 749,
-   "2027-07": 699,
-   "2027-08": 470,
-   "2027-09": 449,
-   "2027-10": 449,
-   "2027-11": 450,
-   "2027-12": 450,
-   "2028-01": 451,
-   "2028-02": 563,
-   "2028-03": 573,
-   "2028-04": 593
-  },
-  "noPrice": false,
-  "stamp": "2026-11-10",
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "4:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "cozumel",
-    "arr": "7:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 4,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 5,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-hero-card.webp",
-   "alt": "A large modern cruise ship under way at dusk, its tiered balconies and lit decks standing against a bank of evening cloud",
-   "w": 800,
-   "h": 562
-  }
- },
- {
-  "id": "i0014",
-  "name": "5-Night Western Caribbean Holiday",
-  "ship": "Liberty of the Seas",
-  "shipId": "s017",
-  "nights": 5,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2026-12"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 549,
-   "2026-12": 549
-  },
-  "noPrice": false,
-  "stamp": "2026-11-10",
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "4:00 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "cozumel",
-    "arr": "6:00 PM",
-    "dep": "",
-    "note": "Evening arrival - overnight in port"
-   },
-   {
-    "n": 4,
-    "p": "cozumel",
-    "arr": "",
-    "dep": "5:00 PM",
-    "note": "Overnight continues - full day in port"
-   },
-   {
-    "n": 5,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 6,
-    "p": "galveston",
-    "arr": "7:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-bow-card.webp",
-   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
-   "w": 800,
-   "h": 1067
-  }
- },
- {
   "id": "i0010",
   "name": "7-Night Western Caribbean",
   "ship": "Symphony of the Seas",
@@ -1222,16 +1151,16 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 615,
-   "2026-11": 892,
-   "2026-12": 1586,
+   "default": 550,
+   "2026-11": 550,
+   "2026-12": 1448,
    "2027-01": 649,
-   "2027-02": 633,
-   "2027-03": 633,
-   "2027-04": 615
+   "2027-02": 675,
+   "2027-03": 666,
+   "2027-04": 597
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1298,6 +1227,75 @@ const ITINERARIES = [
   }
  },
  {
+  "id": "i0014",
+  "name": "5-Night Western Caribbean Holiday",
+  "ship": "Liberty of the Seas",
+  "shipId": "s017",
+  "nights": 5,
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
+  "months": [
+   "2026-12"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 647,
+   "2026-12": 647
+  },
+  "noPrice": false,
+  "stamp": "2026-11-13",
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "4:00 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "cozumel",
+    "arr": "6:00 PM",
+    "dep": "",
+    "note": "Evening arrival - overnight in port"
+   },
+   {
+    "n": 4,
+    "p": "cozumel",
+    "arr": "",
+    "dep": "5:00 PM",
+    "note": "Overnight continues - full day in port"
+   },
+   {
+    "n": 5,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 6,
+    "p": "galveston",
+    "arr": "7:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-bow-card.webp",
+   "alt": "The bow of a cruise ship tied up at a Caribbean pier, rising head on above clear turquoise water with a green hillside behind",
+   "w": 800,
+   "h": 1067
+  }
+ },
+ {
   "id": "i0009",
   "name": "6-Night Western Caribbean",
   "ship": "Symphony of the Seas",
@@ -1314,11 +1312,11 @@ const ITINERARIES = [
   "prices": {
    "default": 666,
    "2027-05": 666,
-   "2027-06": 954,
-   "2027-07": 944
+   "2027-06": 925,
+   "2027-07": 991
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1394,7 +1392,7 @@ const ITINERARIES = [
    "2028-02": 667
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1472,7 +1470,7 @@ const ITINERARIES = [
    "2028-04": 742
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1548,7 +1546,7 @@ const ITINERARIES = [
    "2027-08": 962
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1636,101 +1634,6 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0017",
-  "name": "7-Night Western Caribbean",
-  "ship": "Icon of the Seas",
-  "shipId": "s001",
-  "nights": 7,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
-  "months": [
-   "2027-11",
-   "2027-12",
-   "2028-01",
-   "2028-02",
-   "2028-03",
-   "2028-04",
-   "2028-10"
-  ],
-  "featured": false,
-  "prices": {
-   "default": 989,
-   "2027-11": 1299,
-   "2027-12": 1085,
-   "2028-01": 1049,
-   "2028-02": 989,
-   "2028-03": 1199,
-   "2028-04": 1098,
-   "2028-10": 1099
-  },
-  "noPrice": false,
-  "stamp": "2026-11-10",
-  "days": [
-   {
-    "n": 1,
-    "p": "galveston",
-    "arr": "",
-    "dep": "4:30 PM",
-    "note": "Embarkation day"
-   },
-   {
-    "n": 2,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 3,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 4,
-    "p": "roatan",
-    "arr": "8:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 5,
-    "p": "costa-maya",
-    "arr": "8:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 6,
-    "p": "cozumel",
-    "arr": "7:00 AM",
-    "dep": "5:00 PM",
-    "note": ""
-   },
-   {
-    "n": 7,
-    "p": "at-sea",
-    "arr": "",
-    "dep": "",
-    "note": "At sea"
-   },
-   {
-    "n": 8,
-    "p": "galveston",
-    "arr": "6:00 AM",
-    "dep": "",
-    "note": "Disembarkation"
-   }
-  ],
-  "img": {
-   "src": "/img/lp/ship-generic/ship-docked-card.webp",
-   "alt": "Overhead view of a cruise ship tied up alongside a concrete pier, with its pools, funnel and lifeboat decks laid out below",
-   "w": 800,
-   "h": 600
-  }
- },
- {
   "id": "i0015",
   "name": "8-Night Perfect Day CocoCay & Caribbean",
   "ship": "Symphony of the Seas",
@@ -1748,10 +1651,10 @@ const ITINERARIES = [
    "default": 1049,
    "2027-05": 1049,
    "2027-06": 1291,
-   "2027-07": 1141
+   "2027-07": 1200
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1825,6 +1728,101 @@ const ITINERARIES = [
   }
  },
  {
+  "id": "i0017",
+  "name": "7-Night Western Caribbean",
+  "ship": "Icon of the Seas",
+  "shipId": "s001",
+  "nights": 7,
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
+  "months": [
+   "2027-11",
+   "2027-12",
+   "2028-01",
+   "2028-02",
+   "2028-03",
+   "2028-04",
+   "2028-10"
+  ],
+  "featured": false,
+  "prices": {
+   "default": 1049,
+   "2027-11": 1299,
+   "2027-12": 1117,
+   "2028-01": 1049,
+   "2028-02": 1100,
+   "2028-03": 1199,
+   "2028-04": 1098,
+   "2028-10": 1099
+  },
+  "noPrice": false,
+  "stamp": "2026-11-13",
+  "days": [
+   {
+    "n": 1,
+    "p": "galveston",
+    "arr": "",
+    "dep": "4:30 PM",
+    "note": "Embarkation day"
+   },
+   {
+    "n": 2,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 3,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 4,
+    "p": "roatan",
+    "arr": "8:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 5,
+    "p": "costa-maya",
+    "arr": "8:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 6,
+    "p": "cozumel",
+    "arr": "7:00 AM",
+    "dep": "5:00 PM",
+    "note": ""
+   },
+   {
+    "n": 7,
+    "p": "at-sea",
+    "arr": "",
+    "dep": "",
+    "note": "At sea"
+   },
+   {
+    "n": 8,
+    "p": "galveston",
+    "arr": "6:00 AM",
+    "dep": "",
+    "note": "Disembarkation"
+   }
+  ],
+  "img": {
+   "src": "/img/lp/ship-generic/ship-docked-card.webp",
+   "alt": "Overhead view of a cruise ship tied up alongside a concrete pier, with its pools, funnel and lifeboat decks laid out below",
+   "w": 800,
+   "h": 600
+  }
+ },
+ {
   "id": "i0004",
   "name": "8-Night Perfect Day CocoCay & West Caribbean",
   "ship": "Icon of the Seas",
@@ -1846,11 +1844,11 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 1299,
-   "2027-08": 1569,
-   "2027-09": 1299,
+   "default": 1329,
+   "2027-08": 1495,
+   "2027-09": 1329,
    "2027-10": 1531,
-   "2027-11": 1529,
+   "2027-11": 1493,
    "2028-05": 1498,
    "2028-06": 1798,
    "2028-07": 1798,
@@ -1859,7 +1857,7 @@ const ITINERARIES = [
    "2028-10": 1599
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
@@ -1949,7 +1947,7 @@ const ITINERARIES = [
    "2027-08": 1463
   },
   "noPrice": false,
-  "stamp": "2026-11-10",
+  "stamp": "2026-11-13",
   "days": [
    {
     "n": 1,
