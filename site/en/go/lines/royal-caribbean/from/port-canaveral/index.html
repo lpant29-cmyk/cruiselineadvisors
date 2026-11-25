@@ -716,8 +716,8 @@ footer .legal .agency-line{color:#CDE7EB;font-weight:700;margin-bottom:6px}
 const PAGE = {"type": "combo", "filter": "royal-caribbean-port-canaveral", "h1": "Royal Caribbean Cruises from Port Canaveral", "line": "royal-caribbean", "port": "port-canaveral", "lineLabel": "Royal Caribbean", "portLabel": "Port Canaveral FL", "noFares": false};
 const PHONE_TEL = "+18336844250";
 const PHONE_DISPLAY = "+1-833-684-4250";
-let pricesCheckedOn = "November 22";
-const STAMP_MIXED = true;
+let pricesCheckedOn = "November 25";
+const STAMP_MIXED = false;
 const H1_VARIANTS = {"port": "Royal Caribbean Port Canaveral Cruise Port", "outof": "Royal Caribbean Cruises Out of Port Canaveral", "schedule": "Royal Caribbean Port Canaveral Cruise Schedule", "porttx": "Royal Caribbean Cruise Port in Port Canaveral, Texas", "utopia-of-the-seas": "Utopia of the Seas Cruises from Port Canaveral", "utopia": "Utopia of the Seas Cruises from Port Canaveral", "adventure-of-the-seas": "Adventure of the Seas Cruises from Port Canaveral", "adventure": "Adventure of the Seas Cruises from Port Canaveral", "harmony-of-the-seas": "Harmony of the Seas Cruises from Port Canaveral", "harmony": "Harmony of the Seas Cruises from Port Canaveral", "star-of-the-seas": "Star of the Seas Cruises from Port Canaveral", "star": "Star of the Seas Cruises from Port Canaveral", "3night": "3-Night Royal Caribbean Cruises from Port Canaveral", "3day": "3-Day Royal Caribbean Cruises from Port Canaveral", "4night": "4-Night Royal Caribbean Cruises from Port Canaveral", "4day": "4-Day Royal Caribbean Cruises from Port Canaveral", "5night": "5-Night Royal Caribbean Cruises from Port Canaveral", "5day": "5-Day Royal Caribbean Cruises from Port Canaveral", "7night": "7-Night Royal Caribbean Cruises from Port Canaveral", "7day": "7-Day Royal Caribbean Cruises from Port Canaveral"};
 const SHIP_SLUGS = {"utopia-of-the-seas": "s002", "utopia": "s002", "adventure-of-the-seas": "s025", "adventure": "s025", "harmony-of-the-seas": "s024", "harmony": "s024", "star-of-the-seas": "s023", "star": "s023"};
 const H1_BASE = "Royal Caribbean Cruises from Port Canaveral";
@@ -863,9 +863,9 @@ const ITINERARIES = [
   ],
   "featured": true,
   "prices": {
-   "default": 458,
-   "2026-12": 572,
-   "2027-01": 478,
+   "default": 443,
+   "2026-12": 498,
+   "2027-01": 443,
    "2027-02": 458,
    "2027-03": 526,
    "2027-04": 709,
@@ -883,7 +883,7 @@ const ITINERARIES = [
    "2028-04": 694
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-hero-card.webp",
@@ -959,7 +959,7 @@ const ITINERARIES = [
    "2028-04": 598
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-lowangle-card.webp",
@@ -993,7 +993,7 @@ const ITINERARIES = [
    "2028-04": 573
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-aerial-card.webp",
@@ -1026,22 +1026,22 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 818,
-   "2027-05": 818,
+   "default": 778,
+   "2027-05": 778,
    "2027-08": 888,
    "2027-09": 908,
-   "2027-10": 908,
+   "2027-10": 898,
    "2027-11": 895,
    "2027-12": 860,
-   "2028-01": 918,
-   "2028-02": 928,
-   "2028-03": 948,
-   "2028-04": 959,
+   "2028-01": 859,
+   "2028-02": 869,
+   "2028-03": 889,
+   "2028-04": 899,
    "2028-06": 1302,
    "2028-08": 1185
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-sunset-card.webp",
@@ -1075,7 +1075,7 @@ const ITINERARIES = [
    "default": 863,
    "2027-05": 937,
    "2027-06": 1058,
-   "2027-07": 1050,
+   "2027-07": 1031,
    "2027-09": 888,
    "2028-05": 1086,
    "2028-06": 1324,
@@ -1085,7 +1085,7 @@ const ITINERARIES = [
    "2028-10": 953
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-at-sea-card.webp",
@@ -1095,15 +1095,14 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0033",
-  "name": "7-Night Caribbean",
+  "id": "i0034",
+  "name": "7-Night Western Caribbean",
   "ship": "Star of the Seas",
   "shipId": "s023",
   "nights": 7,
-  "dest": "caribbean",
-  "destLabel": "Caribbean",
+  "dest": "western-caribbean",
+  "destLabel": "Western Caribbean",
   "months": [
-   "2026-11",
    "2026-12",
    "2027-01",
    "2027-02",
@@ -1118,8 +1117,6 @@ const ITINERARIES = [
    "2027-11",
    "2027-12",
    "2028-01",
-   "2028-02",
-   "2028-03",
    "2028-04",
    "2028-05",
    "2028-06",
@@ -1130,34 +1127,31 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 1074,
-   "2026-11": 1074,
-   "2026-12": 1217,
-   "2027-01": 1174,
-   "2027-02": 1404,
-   "2027-03": 1266,
-   "2027-04": 1303,
-   "2027-05": 1666,
-   "2027-06": 2000,
-   "2027-07": 1736,
-   "2027-08": 1466,
-   "2027-09": 1365,
-   "2027-10": 1384,
-   "2027-11": 1343,
-   "2027-12": 1456,
-   "2028-01": 1419,
-   "2028-02": 1509,
-   "2028-03": 1789,
-   "2028-04": 1466,
-   "2028-05": 1516,
-   "2028-06": 1886,
-   "2028-07": 1936,
-   "2028-08": 1676,
-   "2028-09": 1326,
-   "2028-10": 1396
+   "default": 1191,
+   "2026-12": 1404,
+   "2027-01": 1191,
+   "2027-02": 1378,
+   "2027-03": 1360,
+   "2027-04": 1253,
+   "2027-05": 1432,
+   "2027-06": 1452,
+   "2027-07": 1814,
+   "2027-08": 1469,
+   "2027-09": 1569,
+   "2027-10": 1590,
+   "2027-11": 1974,
+   "2027-12": 1353,
+   "2028-01": 1417,
+   "2028-04": 1313,
+   "2028-05": 1375,
+   "2028-06": 1752,
+   "2028-07": 1783,
+   "2028-08": 1695,
+   "2028-09": 1224,
+   "2028-10": 1243
   },
   "noPrice": false,
-  "stamp": "2026-11-19",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-docked-card.webp",
@@ -1187,11 +1181,11 @@ const ITINERARIES = [
   ],
   "featured": false,
   "prices": {
-   "default": 1285,
-   "2027-05": 1285,
-   "2027-06": 1699,
-   "2027-07": 1772,
-   "2027-08": 1553,
+   "default": 1290,
+   "2027-05": 1322,
+   "2027-06": 1613,
+   "2027-07": 1683,
+   "2027-08": 1473,
    "2027-09": 1290,
    "2027-10": 1382,
    "2028-07": 1867,
@@ -1199,7 +1193,7 @@ const ITINERARIES = [
    "2028-10": 1309
   },
   "noPrice": false,
-  "stamp": "2026-11-22",
+  "stamp": "2026-11-25",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/ship-balcony-card.webp",
@@ -1266,14 +1260,15 @@ const ITINERARIES = [
   }
  },
  {
-  "id": "i0034",
-  "name": "7-Night Western Caribbean",
+  "id": "i0033",
+  "name": "7-Night Caribbean",
   "ship": "Star of the Seas",
   "shipId": "s023",
   "nights": 7,
-  "dest": "western-caribbean",
-  "destLabel": "Western Caribbean",
+  "dest": "caribbean",
+  "destLabel": "Caribbean",
   "months": [
+   "2026-11",
    "2026-12",
    "2027-01",
    "2027-02",
@@ -1288,6 +1283,8 @@ const ITINERARIES = [
    "2027-11",
    "2027-12",
    "2028-01",
+   "2028-02",
+   "2028-03",
    "2028-04",
    "2028-05",
    "2028-06",
@@ -1299,7 +1296,7 @@ const ITINERARIES = [
   "featured": false,
   "prices": {},
   "noPrice": true,
-  "stamp": "2026-11-07",
+  "stamp": "2026-11-19",
   "days": [],
   "img": {
    "src": "/img/lp/ship-generic/deck-scene-card.webp",
